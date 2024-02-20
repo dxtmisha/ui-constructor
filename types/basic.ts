@@ -13,6 +13,18 @@ export type FunctionAnyType<T = any, R = any> = (...args: T[]) => R
 
 // Item
 export type ItemList<T = any> = Record<string, T>
+export type Item<V> = {
+  index: string
+  value: V
+}
+export type ItemValue<V> = {
+  label: string
+  value: V
+}
+export type ItemName<V> = {
+  name: string | number
+  value: V
+}
 
 // Element
 export type ElementOrWindow = HTMLElement | Window

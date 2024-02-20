@@ -23,6 +23,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "classes/**/*.ts",
+    "composables/**/*.ts",
     "functions/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
