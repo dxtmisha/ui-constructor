@@ -25,7 +25,9 @@
   "include": [
     "classes/**/*.ts",
     "composables/**/*.ts",
+    "config/**/*.ts",
     "functions/**/*.ts",
+    "media/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
