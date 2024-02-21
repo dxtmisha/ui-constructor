@@ -5,7 +5,7 @@ import { toKebabCase } from '../../../functions/toKebabCase'
 import {
   type PropertyItem,
   PropertyType
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 /**
  * Class with a list of available types.<br>

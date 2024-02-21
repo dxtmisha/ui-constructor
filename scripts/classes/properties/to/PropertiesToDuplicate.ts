@@ -5,10 +5,10 @@ import { toCamelCase } from '../../../../functions/toCamelCase'
 
 import { PropertiesToAbstract } from './PropertiesToAbstract'
 
-import { PropertyKey } from '../../../../types/property'
+import { PropertyKey } from '../../../types/property.ts'
 import { type PropertiesItemsItem } from '../PropertiesItems'
 
-import { SEPARATOR } from '../../../../config/property'
+import { SEPARATOR } from '../../../config/property'
 
 type PropertiesDuplicateListItem = {
   value: string

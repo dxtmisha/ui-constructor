@@ -25,7 +25,7 @@
   "include": [
     "classes/**/*.ts",
     "composables/**/*.ts",
-    "config/**/*.ts",
+    "scripts/config/**/*.ts",
     "functions/**/*.ts",
     "media/**/*.ts",
     "scripts/**/*.ts",

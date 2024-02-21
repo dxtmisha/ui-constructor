@@ -10,7 +10,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 
 import { css } from '../../../../media/properties/css'
 import { cssSelector } from '../../../../media/properties/cssSelector'

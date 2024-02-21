@@ -2,7 +2,7 @@ import { type Item } from '../../types/basic'
 import {
   PropertyCategory,
   PropertyType
-} from '../../types/property'
+} from '../../scripts/types/property.ts'
 
 import {
   cssBackgrounds,

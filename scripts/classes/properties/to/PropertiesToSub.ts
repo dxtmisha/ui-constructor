@@ -3,7 +3,7 @@ import { PropertiesToAbstract } from './PropertiesToAbstract'
 import {
   type PropertyItem,
   PropertyKey
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 import { type PropertiesItemsItem } from '../PropertiesItems'
 
 const REG_SUB = /(?<={[^}]*?){([^{}]+)}/g

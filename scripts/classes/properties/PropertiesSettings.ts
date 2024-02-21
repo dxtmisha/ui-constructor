@@ -8,9 +8,9 @@ import { PropertiesPath } from './PropertiesPath'
 
 import { PropertiesStandard } from './PropertiesStandard'
 
-import { type PropertyList } from '../../../types/property'
+import { type PropertyList } from '../../types/property.ts'
 
-import { FILE_PROPERTY } from '../../../config/property'
+import { FILE_PROPERTY } from '../../config/property'
 
 const DIR_NAME = 'settings'
 

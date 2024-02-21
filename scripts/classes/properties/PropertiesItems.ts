@@ -13,9 +13,9 @@ import {
   PropertyKey,
   type PropertyList,
   PropertyType
-} from '../../../types/property'
+} from '../../types/property.ts'
 
-import { NAME_CONSTRUCTOR } from '../../../config/property'
+import { NAME_CONSTRUCTOR } from '../../config/property'
 
 export type PropertiesItemsParent = {
   name: string,

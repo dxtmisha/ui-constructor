@@ -3,7 +3,7 @@ import { forEach } from '../../../../functions/forEach'
 import {
   type PropertyItem,
   PropertyKey
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 import { type PropertiesItemsItem } from '../../properties/PropertiesItems'
 
 /**

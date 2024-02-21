@@ -14,9 +14,9 @@ import { PropertiesWrap } from './PropertiesWrap'
 import {
   PropertyItem,
   type PropertyList
-} from '../../../types/property'
+} from '../../types/property.ts'
 
-import { FILE_PROPERTY } from '../../../config/property'
+import { FILE_PROPERTY } from '../../config/property'
 
 const DIR_NAME = 'main'
 

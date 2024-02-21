@@ -3,7 +3,7 @@ import { toCamelCase } from '../../../functions/toCamelCase'
 import {
   DIR_CONSTRUCTOR,
   NAME_CONSTRUCTOR
-} from '../../../config/property'
+} from '../../config/property'
 
 /**
  * A class for static methods of obtaining various data.<br>

@@ -5,7 +5,7 @@ import { PropertiesTool } from '../../properties/PropertiesTool'
 import { StylesTool } from '../StylesTool'
 import { StylesToAbstract } from './StylesToAbstract'
 
-import { PropertyKey } from '../../../../types/property'
+import { PropertyKey } from '../../../types/property.ts'
 
 export const TYPES: string[] = [
   /* Flex */

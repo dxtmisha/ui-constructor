@@ -11,9 +11,9 @@ import {
 import {
   type PropertyItem,
   PropertyKey
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 
-import { SEPARATOR } from '../../../../config/property'
+import { SEPARATOR } from '../../../config/property'
 
 /**
  * Class for managing the translation of a property from one branch to another.<br>

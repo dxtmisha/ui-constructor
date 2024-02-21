@@ -15,7 +15,7 @@ import {
   PropertyKey,
   type PropertyList,
   PropertyType
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 
 const THEME_BASIC = 'basic'
 const KEY_CLASS_NAME = 'palette'

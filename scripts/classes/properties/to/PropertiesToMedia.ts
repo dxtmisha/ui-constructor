@@ -11,7 +11,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 
 /**
  * A class for transforming class.<br>

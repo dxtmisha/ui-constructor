@@ -18,7 +18,7 @@ import {
   type PropertyList,
   type PropertyListOrData,
   PropertyType
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 /**
  * Class for working with external files, which adds them to the current list of properties.<br>

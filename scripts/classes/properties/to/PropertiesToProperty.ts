@@ -3,7 +3,7 @@ import { toKebabCase } from '../../../../functions/toKebabCase'
 import { PropertiesItemsItem } from '../PropertiesItems'
 import { PropertiesToVar } from './PropertiesToVar'
 
-import { PropertyType } from '../../../../types/property'
+import { PropertyType } from '../../../types/property.ts'
 
 /**
  * Class for working with custom styles in CSS.<br>

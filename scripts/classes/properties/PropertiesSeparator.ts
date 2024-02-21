@@ -8,9 +8,9 @@ import {
   type PropertyItem,
   PropertyKey,
   type PropertyList
-} from '../../../types/property'
+} from '../../types/property.ts'
 
-import { SEPARATOR } from '../../../config/property'
+import { SEPARATOR } from '../../config/property'
 
 const BASIC = process.env.TOKEN_SEPARATOR_BASIC || 'basic'
 const LIMIT = parseInt(process.env.TOKEN_SEPARATOR_LIMIT ?? '6') || 6

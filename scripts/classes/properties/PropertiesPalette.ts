@@ -9,7 +9,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 export type PropertiesPaletteItem = {
   design: string

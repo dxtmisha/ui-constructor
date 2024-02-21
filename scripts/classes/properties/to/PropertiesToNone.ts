@@ -4,7 +4,7 @@ import { isObjectNotArray } from '../../../../functions/isObjectNotArray'
 
 import { PropertiesToAbstract } from './PropertiesToAbstract'
 
-import { PropertyType } from '../../../../types/property'
+import { PropertyType } from '../../../types/property.ts'
 
 const TYPES = [
   PropertyType.var,

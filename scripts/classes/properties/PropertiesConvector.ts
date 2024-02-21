@@ -6,7 +6,7 @@ import { convectorShadow } from './convector/convectorShadow'
 import { convectorFontFamilies } from './convector/convectorFontFamilies'
 import { convectorTypography } from './convector/convectorTypography'
 
-import type { PropertyItemInput, PropertyListOrData } from '../../../types/property'
+import type { PropertyItemInput, PropertyListOrData } from '../../types/property.ts'
 
 const LIST: Record<string, (item: PropertyItemInput) => void> = {
   boxShadow: convectorShadow,

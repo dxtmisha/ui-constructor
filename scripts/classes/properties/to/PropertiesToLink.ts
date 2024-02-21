@@ -9,7 +9,7 @@ import {
   PropertyKey,
   type PropertyList,
   PropertyType
-} from '../../../../types/property'
+} from '../../../types/property.ts'
 
 type PropertiesLinkItem = {
   name: string,

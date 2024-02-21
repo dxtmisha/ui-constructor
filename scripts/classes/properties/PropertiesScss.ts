@@ -8,7 +8,7 @@ import {
   PropertyCategory,
   type PropertyItem,
   PropertyKey
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 const NAME_DESIGNS = '$designsDesigns'
 const NAME_ROOT = '$designsRoot'

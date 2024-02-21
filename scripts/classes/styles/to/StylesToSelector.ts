@@ -1,7 +1,7 @@
 import { PropertiesTool } from '../../properties/PropertiesTool'
 import { StylesToAbstract } from './StylesToAbstract'
 
-import { PropertyKey } from '../../../../types/property'
+import { PropertyKey } from '../../../types/property.ts'
 
 /**
  * Class for generating data for sub property styles.<br>

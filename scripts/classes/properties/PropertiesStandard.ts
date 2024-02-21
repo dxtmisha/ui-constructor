@@ -14,7 +14,7 @@ import {
   PropertyKey,
   type PropertyList,
   type PropertyListOrData
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 /**
  * A class for transforming a property into a basic structure for work.<br>

@@ -13,7 +13,7 @@ import { StylesClasses } from './StylesClasses'
 import {
   EXTENSION_STYLE_FILE,
   NAME_CONSTRUCTOR
-} from '../../../config/property'
+} from '../../config/property'
 
 const FILE_VAR = 'vars'
 const FILE_CLASS = 'classes'

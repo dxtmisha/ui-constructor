@@ -1,4 +1,4 @@
-import { type PropertyItemInput } from '../../../../types/property'
+import { type PropertyItemInput } from '../../../types/property.ts'
 
 /**
  * Data conversion to standard fonts.<br>

@@ -1,5 +1,5 @@
 import { isString } from '../../../../functions/isString'
-import { type PropertyItemInput } from '../../../../types/property'
+import { type PropertyItemInput } from '../../../types/property.ts'
 
 /**
  * Conversion for working with the typography type.<br>

@@ -19,7 +19,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 const TYPE_AUXILIARY = [
   'selector',

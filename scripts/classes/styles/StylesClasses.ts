@@ -12,7 +12,7 @@ import { StylesProperties } from './StylesProperties'
 import {
   PropertyCategory,
   PropertyKey
-} from '../../../types/property'
+} from '../../types/property.ts'
 
 export type StylesClassesItem = {
   data: string[]
