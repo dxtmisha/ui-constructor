@@ -1,4 +1,4 @@
-import { ComponentsItems } from './ComponentsItems'
+import { LibraryItems } from './LibraryItems.ts'
 import { PropertiesFile } from '../properties/PropertiesFile'
 
 import {
@@ -12,14 +12,14 @@ import {
  * A class for forming a file with all functions and classes.<br>
  * Класс формирования файла со всеми функциями и классами.
  */
-export class ComponentsIndex {
+export class LibraryIndex {
   /**
    * Constructor
    * @param items object for working with the list of components /<br>объект для работы со списком компонентов
    */
   // eslint-disable-next-line no-useless-constructor
   constructor (
-    protected readonly items: ComponentsItems
+    protected readonly items: LibraryItems
   ) {
   }
 

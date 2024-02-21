@@ -18,7 +18,7 @@ import {
  * Class for working with the list of components.<br>
  * Класс для работы со списком компонентов.
  */
-export class ComponentsItems {
+export class LibraryItems {
   protected readonly items: ComponentsList
 
   /**
@@ -83,8 +83,13 @@ export class ComponentsItems {
    * Записывает данные в файле.
    * @param name file name /<br>название файла
    * @param data values for writing /<br>значения для записи
+   * @param extension file extension by default is json /<br>расширение файла по умолчанию - json
    */
-  write (name: string, data: string[]): void {
+  write (
+    name: string,
+    data: string[],
+    extension: string = 'ts'
+  ): void {
     PropertiesFile.write(
       [COMPONENTS_DIR],
       name,
@@ -95,7 +100,7 @@ export class ComponentsItems {
         ...data,
         ''
       ].join('\r\n'),
-      'ts'
+      extension
     )
   }
 

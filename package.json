@@ -13,10 +13,14 @@
     "packages/*"
   ],
   "dependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
     "sass": "^1.71.0",
     "typescript": "^5.3.3",
     "vite-node": "^1.2.2",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",

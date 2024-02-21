@@ -2,7 +2,6 @@ import { config } from 'dotenv'
 import { isFilled } from '../../../functions/isFilled'
 import { toKebabCase } from '../../../functions/toKebabCase'
 
-import { PropertiesFile } from '../properties/PropertiesFile'
 import { PropertiesCache } from '../properties/PropertiesCache'
 
 import { Styles } from '../styles/Styles'
@@ -10,18 +9,18 @@ import { DesignConstructor } from './DesignConstructor'
 import { DesignComponent } from './DesignComponent'
 import { DesignIcons } from './DesignIcons'
 
-import { ComponentsItems } from '../components/ComponentsItems'
+import { LibraryItems } from '../library/LibraryItems.ts'
 
-import { ComponentsIndex } from '../components/ComponentsIndex'
-import { ComponentsFlags } from '../components/ComponentsFlags'
-// import { ComponentsList } from '../services/components/ComponentsList'
-// import { ComponentsMedia } from '../services/components/ComponentsMedia'
+import { LibraryIndex } from '../library/LibraryIndex.ts'
+import { LibraryFlags } from '../library/LibraryFlags.ts'
+import { LibraryMedia } from '../library/LibraryMedia.ts'
 
-// import { ComponentsMain } from '../services/components/ComponentsMain'
-// import { ComponentsTypes } from '../services/components/ComponentsTypes'
-// import { ComponentsStyle } from '../services/components/ComponentsStyle'
-// import { ComponentsRegistration } from '../services/components/ComponentsRegistration'
-// import { ComponentsFileTypes } from '../services/components/ComponentsFileTypes'
+import { LibraryList } from '../library/LibraryList.ts'
+import { LibraryPlugin } from '../library/LibraryPlugin.ts'
+import { LibraryMain } from '../library/LibraryMain.ts'
+
+import { LibraryStyle } from '../library/LibraryStyle.ts'
+import { LibraryTypes } from '../library/LibraryTypes.ts'
 
 config()
 
@@ -30,16 +29,7 @@ config()
  * Класс для обновления стилей и токенов.
  */
 export class DesignUi {
-  protected readonly components: ComponentsItems
-  // protected readonly componentsList: ComponentsList
-  // protected readonly componentsFlags: ComponentsFlags
-  // protected readonly componentsMedia: ComponentsMedia
-
-  // protected readonly componentsMain: ComponentsMain
-  // protected readonly componentsTypes: ComponentsTypes
-  // protected readonly componentsFileTypes: ComponentsFileTypes
-  // protected readonly componentsStyle: ComponentsStyle
-  // protected readonly componentsRegistration: ComponentsRegistration
+  protected readonly components: LibraryItems
 
   /**
    * Constructor
@@ -49,16 +39,7 @@ export class DesignUi {
   constructor (
     protected readonly name: string = ''
   ) {
-    this.components = new ComponentsItems()
-    // this.componentsList = new ComponentsList(this.components)
-    // this.componentsFlags = new ComponentsFlags(this.components)
-    // this.componentsMedia = new ComponentsMedia(this.components)
-
-    // this.componentsRegistration = new ComponentsRegistration(this.components)
-    // this.componentsMain = new ComponentsMain(this.components)
-    // this.componentsTypes = new ComponentsTypes(this.components)
-    // this.componentsFileTypes = new ComponentsFileTypes(this.components)
-    // this.componentsStyle = new ComponentsStyle(this.components)
+    this.components = new LibraryItems()
   }
 
   /**
@@ -96,18 +77,16 @@ export class DesignUi {
 
     this.makeConstructorComponent()
 
-    new ComponentsIndex(this.components).make()
-    new ComponentsFlags(this.components).make()
+    new LibraryIndex(this.components).make()
+    new LibraryFlags(this.components).make()
+    new LibraryMedia(this.components).make()
 
-    // this.componentsList.make()
-    // this.componentsFlags.make()
-    // this.componentsMedia.make()
+    new LibraryList(this.components).make()
+    new LibraryPlugin(this.components).make()
+    new LibraryMain(this.components).make()
 
-    // this.componentsRegistration.make()
-    // this.componentsMain.make()
-    // this.componentsTypes.make()
-    // this.componentsFileTypes.make()
-    // this.componentsStyle.make()
+    new LibraryStyle(this.components).make()
+    new LibraryTypes(this.components).make()
 
     // this.makePackageJson()
   }
@@ -163,65 +142,5 @@ export class DesignUi {
     }
 
     return this
-  }
-
-  protected makePackageJson (): void {
-    const components = this.components.getComponentList()
-    const packageJson = PropertiesFile.readFile('package.json')
-    const exports: Record<string, any> = {
-      '.': {
-        import: './dist/index.js',
-        require: './dist/index.umd.cjs',
-        types: './dist/lib/index.d.ts'
-      },
-      './components-type': './dist/lib/types.d.ts',
-      './components-file': './dist/lib/file-types.d.ts',
-      './create': {
-        import: './dist/create.js',
-        require: './dist/create.umd.cjs',
-        types: './dist/lib/create.d.ts'
-      },
-      './main': {
-        import: './dist/main.js',
-        require: './dist/main.umd.cjs',
-        types: './dist/lib/main.d.ts'
-      },
-      './style-main': './lib/style.scss',
-      './style-init': './lib/style-init.scss',
-      './style-components': './dist/style.css',
-      './style.css': './dist/style.css',
-      './media': {
-        import: './dist/media.js',
-        require: './dist/media.umd.cjs',
-        types: './dist/lib/media.d.ts'
-      },
-      './dist/*': './dist/*',
-      './styles/*': './styles/*',
-      './*': './*'
-    }
-
-    this.components.getDesigns().forEach(design => {
-      exports[`./${design}/use.scss`] = `./${design}/use.scss`
-    })
-
-    components.forEach(component => {
-      exports[`./${component.codeFull}`] = {
-        import: `./${component.design}/${component.dir}/index.ts`,
-        // require: `./dist/${component.codeFull}.umd.cjs`,
-        types: `./dist/${component.design}/${component.dir}/index.d.ts`
-      }
-    })
-
-    if (packageJson) {
-      PropertiesFile.write(
-        [],
-        'package',
-        {
-          ...packageJson,
-          exports
-        },
-        'json'
-      )
-    }
   }
 }
