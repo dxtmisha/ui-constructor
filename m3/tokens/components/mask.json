@@ -1,0 +1,22 @@
+{
+  "color": "{sys.palette.onSurface}",
+  "color-opacity": "{sys.opacity.disabled}",
+  "caret-opacity": "{sys.opacity.high}",
+  "character": {
+    "item": {
+      "standard": {
+        "color-opacity": "{sys.opacity.medium}"
+      },
+      "transition": {
+        "color-opacity": "{sys.opacity.medium}"
+      },
+      "special": {
+        "color-opacity": "{sys.opacity.high}"
+      },
+      "error": {
+        "color": "{sys.palette.error}",
+        "color-opacity": "{sys.opacity.high}"
+      }
+    }
+  }
+}
