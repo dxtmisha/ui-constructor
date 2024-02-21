@@ -11,7 +11,7 @@ import {
 import {
   type PropertyItem,
   PropertyKey
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 import { SEPARATOR } from '../../../config/property'
 

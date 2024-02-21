@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
-import { isFilled } from '../../../functions/isFilled.ts'
-import { toKebabCase } from '../../../functions/toKebabCase.ts'
+import { isFilled } from '../../../functions/isFilled'
+import { toKebabCase } from '../../../functions/toKebabCase'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 import { PropertiesCache } from '../properties/PropertiesCache'
@@ -12,14 +12,14 @@ import { DesignComponent } from './DesignComponent'
 
 import { ComponentsItems } from '../components/ComponentsItems'
 // import { ComponentsList } from '../services/components/ComponentsList'
-// import { ComponentsFlags } from '../services/components/ComponentsFlags.ts'
-// import { ComponentsMedia } from '../services/components/ComponentsMedia.ts'
+// import { ComponentsFlags } from '../services/components/ComponentsFlags'
+// import { ComponentsMedia } from '../services/components/ComponentsMedia'
 
 // import { ComponentsMain } from '../services/components/ComponentsMain'
 // import { ComponentsTypes } from '../services/components/ComponentsTypes'
 // import { ComponentsStyle } from '../services/components/ComponentsStyle'
 // import { ComponentsRegistration } from '../services/components/ComponentsRegistration'
-// import { ComponentsFileTypes } from '../services/components/ComponentsFileTypes.ts'
+// import { ComponentsFileTypes } from '../services/components/ComponentsFileTypes'
 
 config()
 

@@ -1,5 +1,5 @@
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
-import { toKebabCase } from '../../../functions/toKebabCase.ts'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
+import { toKebabCase } from '../../../functions/toKebabCase'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 
@@ -8,8 +8,8 @@ import {
   type ComponentsList
 } from '../../types/components'
 
-import { FILE_PROPERTY } from '../../config/property.ts'
-import { COMPONENTS_EXCEPTIONS } from '../../config/components.ts'
+import { FILE_PROPERTY } from '../../config/property'
+import { COMPONENTS_EXCEPTIONS } from '../../config/components'
 
 /**
  * Class for working with the list of components.<br>

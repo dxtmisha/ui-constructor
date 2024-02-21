@@ -10,7 +10,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 /**
  * CSS variable converter class.<br>

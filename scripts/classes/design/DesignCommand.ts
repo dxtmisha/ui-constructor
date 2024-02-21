@@ -1,4 +1,4 @@
-import { toArray } from '../../../functions/toArray.ts'
+import { toArray } from '../../../functions/toArray'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 import { DesignStructure } from './DesignStructure'

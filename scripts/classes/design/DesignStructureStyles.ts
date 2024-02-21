@@ -1,4 +1,4 @@
-import { forEach } from '../../../functions/forEach.ts'
+import { forEach } from '../../../functions/forEach'
 
 import { StylesProperties } from '../styles/StylesProperties'
 import { DesignStructureItemAbstract } from './DesignStructureItemAbstract'

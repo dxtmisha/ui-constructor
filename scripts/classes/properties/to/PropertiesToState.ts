@@ -6,7 +6,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../types/property.ts'
+} from '../../../types/property'
 import { type PropertiesItemsItem } from '../PropertiesItems'
 
 /**

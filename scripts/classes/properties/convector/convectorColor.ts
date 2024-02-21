@@ -1,7 +1,7 @@
 import {
   type PropertyItemInput,
   PropertyKey
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 /**
  * Data conversion into colors.<br>

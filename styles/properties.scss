@@ -9,11 +9,11 @@ $designsClassName: 'class' !default;
 $designsClassIndex: 'class' !default;
 $designsInit: false !default;
 
-@import "./../rules";
-@import "./../all";
+@import "rules";
+@import "all";
 
-@import "./propertiesItem";
-@import "./propertiesTool";
+@import "properties/propertiesItem";
+@import "properties/propertiesTool";
 
 /// Generating styles for the component
 /// Генерация стилей для компонента

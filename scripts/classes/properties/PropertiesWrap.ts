@@ -4,7 +4,7 @@ import { isObjectNotArray } from '../../../functions/isObjectNotArray'
 import {
   PropertyKey,
   type PropertyList
-} from '../../types/property.ts'
+} from '../../types/property'
 
 export type PropertiesWrapItem = {
   values: Record<string, PropertyList[]>

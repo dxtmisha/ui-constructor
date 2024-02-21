@@ -1,4 +1,4 @@
-import { h, VNode } from 'vue'
+import { h, type VNode } from 'vue'
 
 import { DesignConstructorAbstract } from '../../../classes/design/DesignConstructorAbstract'
 

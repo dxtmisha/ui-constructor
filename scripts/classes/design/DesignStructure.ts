@@ -1,6 +1,6 @@
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
-import { toKebabCase } from '../../../functions/toKebabCase.ts'
+import { toCamelCase } from '../../../functions/toCamelCase'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
+import { toKebabCase } from '../../../functions/toKebabCase'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 import { PropertiesCache } from '../properties/PropertiesCache'

@@ -2,7 +2,7 @@ import { toCamelCase } from '../../../functions/toCamelCase'
 
 import { PropertiesTypes } from './PropertiesTypes'
 
-import { type PropertyItem } from '../../types/property.ts'
+import { type PropertyItem } from '../../types/property'
 
 import {
   SEPARATOR,

@@ -7,7 +7,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 const IGNORES: string[] = [
   PropertyKey.value,

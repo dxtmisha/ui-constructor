@@ -7,7 +7,7 @@ import { PropertiesCache } from './PropertiesCache'
 
 import {
   type PropertyListOrData
-} from '../../types/property.ts'
+} from '../../types/property'
 
 export type PropertiesPathItem = {
   design: string

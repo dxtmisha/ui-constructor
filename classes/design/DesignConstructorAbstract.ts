@@ -9,11 +9,11 @@ import {
   type VNode
 } from 'vue'
 
-import { forEach } from '../../functions/forEach.ts'
-import { isObject } from '../../functions/isObject.ts'
-import { isObjectNotArray } from '../../functions/isObjectNotArray.ts'
-import { toArray } from '../../functions/toArray.ts'
-import { toCamelCase } from '../../functions/toCamelCase.ts'
+import { forEach } from '../../functions/forEach'
+import { isObject } from '../../functions/isObject'
+import { isObjectNotArray } from '../../functions/isObjectNotArray'
+import { toArray } from '../../functions/toArray'
+import { toCamelCase } from '../../functions/toCamelCase'
 
 import { DesignComponents } from './DesignComponents'
 

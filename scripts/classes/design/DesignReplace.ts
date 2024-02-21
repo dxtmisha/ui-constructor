@@ -1,7 +1,7 @@
-import { forEach } from '../../../functions/forEach.ts'
-import { getColumn } from '../../../functions/getColumn.ts'
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import { forEach } from '../../../functions/forEach'
+import { getColumn } from '../../../functions/getColumn'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
 import { DesignStructure } from './DesignStructure'
 

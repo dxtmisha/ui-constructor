@@ -6,7 +6,7 @@ import {
   type PropertiesFileValue
 } from './PropertiesFile'
 
-const DIR_CACHE = ['cache']
+const DIR_CACHE = ['.cache']
 const DIR_STEP = ['step']
 const FILE_SYSTEM = 'system'
 

@@ -6,7 +6,7 @@ import {
 import { StylesTool } from './StylesTool'
 import { StylesToVar } from './to/StylesToVar'
 
-import { PropertyCategory } from '../../types/property.ts'
+import { PropertyCategory } from '../../types/property'
 
 /**
  * Class for generating base properties from tokens.<br>

@@ -1,7 +1,7 @@
-import { forEach } from '../../../functions/forEach.ts'
-import { isFilled } from '../../../functions/isFilled.ts'
-import { isObjectNotArray } from '../../../functions/isObjectNotArray.ts'
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import { forEach } from '../../../functions/forEach'
+import { isFilled } from '../../../functions/isFilled'
+import { isObjectNotArray } from '../../../functions/isObjectNotArray'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
 import { DesignStructureItemAbstract } from './DesignStructureItemAbstract'
 

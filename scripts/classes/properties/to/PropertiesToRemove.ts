@@ -3,7 +3,7 @@ import { isObjectNotArray } from '../../../../functions/isObjectNotArray'
 
 import { PropertiesToAbstract } from './PropertiesToAbstract'
 
-import { PropertyKey } from '../../../types/property.ts'
+import { PropertyKey } from '../../../types/property'
 
 /**
  * Class for removing a property.<br>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import {isNull} from "../functions/isNull";
+import { M3Image } from '../m3/Image'
 
-console.log('isNull', isNull(undefined))
+import galaxyS23p from './../packages/storybook/src/stories/assets/Galaxy_S23p.png'
 </script>
 
 <template>
@@ -14,6 +14,8 @@ console.log('isNull', isNull(undefined))
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo"/>
     </a>
   </div>
+  {{ galaxyS23p }}
+  <m3-image :value="galaxyS23p" adaptive object-width="76.2"/>
   <HelloWorld msg="Vite + Vue"/>
 </template>
 

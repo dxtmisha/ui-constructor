@@ -8,7 +8,7 @@ import {
   type PropertyItem,
   PropertyKey,
   type PropertyList
-} from '../../types/property.ts'
+} from '../../types/property'
 
 import { SEPARATOR } from '../../config/property'
 

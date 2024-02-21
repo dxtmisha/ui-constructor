@@ -14,7 +14,7 @@ import { PropertiesWrap } from './PropertiesWrap'
 import {
   PropertyItem,
   type PropertyList
-} from '../../types/property.ts'
+} from '../../types/property'
 
 import { FILE_PROPERTY } from '../../config/property'
 

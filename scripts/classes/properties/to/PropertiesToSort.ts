@@ -8,7 +8,7 @@ import {
   PropertyKey,
   type PropertyList,
   PropertyType
-} from '../../../types/property.ts'
+} from '../../../types/property'
 import { type PropertiesItemsItem } from '../PropertiesItems'
 
 import { type Item } from '../../../../types/basic'

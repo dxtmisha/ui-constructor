@@ -13,7 +13,7 @@ import {
   PropertyKey,
   type PropertyList,
   PropertyType
-} from '../../types/property.ts'
+} from '../../types/property'
 
 import { NAME_CONSTRUCTOR } from '../../config/property'
 

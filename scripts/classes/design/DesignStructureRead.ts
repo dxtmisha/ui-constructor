@@ -1,8 +1,8 @@
-import { forEach } from '../../../functions/forEach.ts'
-import { isFilled } from '../../../functions/isFilled.ts'
-import { isObjectNotArray } from '../../../functions/isObjectNotArray.ts'
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
-import { uniqueArray } from '../../../functions/uniqueArray.ts'
+import { forEach } from '../../../functions/forEach'
+import { isFilled } from '../../../functions/isFilled'
+import { isObjectNotArray } from '../../../functions/isObjectNotArray'
+import { toCamelCase } from '../../../functions/toCamelCase'
+import { uniqueArray } from '../../../functions/uniqueArray'
 
 import { DesignStructureItemAbstract } from './DesignStructureItemAbstract'
 
@@ -10,7 +10,7 @@ import {
   type PropertyItem,
   PropertyKey,
   PropertyType
-} from '../../types/property.ts'
+} from '../../types/property'
 import {
   type DesignStructureItem,
   type DesignStructureItemSub,

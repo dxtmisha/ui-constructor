@@ -67,7 +67,7 @@
 
 <style lang="scss">
 // :component.once @import "../styles/properties";
-@import "../../../styles/properties/properties";
+@import "../../../styles/properties";
 // :component.once @import "../../constructors/Component/style";
 @import "styleToken";
 

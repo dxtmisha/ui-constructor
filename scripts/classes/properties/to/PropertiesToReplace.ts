@@ -3,7 +3,7 @@ import { PropertiesToAbstract } from './PropertiesToAbstract'
 import {
   PropertyKey,
   type PropertyReplace
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 export type PropertiesReplaceValue = string | Partial<PropertyReplace>
 

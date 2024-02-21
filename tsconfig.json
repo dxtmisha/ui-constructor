@@ -23,16 +23,22 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "book/**/*.ts",
     "classes/**/*.ts",
     "composables/**/*.ts",
+    "constructors/**/*.ts",
+    "constructors/**/*.tsx",
     "scripts/config/**/*.ts",
     "functions/**/*.ts",
     "media/**/*.ts",
     "scripts/**/*.ts",
+    "types/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "types/**/*.ts"
+    "m3/**/*.ts",
+    "m3/**/*.tsx",
+    "m3/**/*.vue"
   ],
   "references": [
     {

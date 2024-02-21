@@ -5,7 +5,7 @@ import { PropertiesToAbstract } from './PropertiesToAbstract'
 import {
   PropertyKey,
   PropertyType
-} from '../../../types/property.ts'
+} from '../../../types/property'
 
 export const KEY_CUSTOM = 'custom'
 

@@ -36,7 +36,7 @@ import { PropertiesToDuplicate } from './to/PropertiesToDuplicate'
 
 import { PropertiesScss } from './PropertiesScss'
 
-import { type PropertyList } from '../../types/property.ts'
+import { type PropertyList } from '../../types/property'
 
 import { NAME_CONSTRUCTOR } from '../../config/property'
 import { replaceRecursive } from '../../../functions/replaceRecursive'

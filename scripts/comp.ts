@@ -2,7 +2,7 @@
 
 import { program } from 'commander'
 
-import { DesignUi } from './classes/design/DesignUi.ts'
+import { DesignUi } from './classes/design/DesignUi'
 
 program
   .command('component')

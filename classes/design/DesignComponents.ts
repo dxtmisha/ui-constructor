@@ -1,7 +1,7 @@
-import { forEach } from '../../functions/forEach.ts'
-import { getRef } from '../../functions/ref/getRef.ts'
-import { isObjectNotArray } from '../../functions/isObjectNotArray.ts'
-import { render } from '../../functions/ref/render.ts'
+import { forEach } from '../../functions/forEach'
+import { getRef } from '../../functions/ref/getRef'
+import { isObjectNotArray } from '../../functions/isObjectNotArray'
+import { render } from '../../functions/ref/render'
 
 import { type VNode } from 'vue'
 
