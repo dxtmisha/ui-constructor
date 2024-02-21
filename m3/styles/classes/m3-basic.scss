@@ -1,6 +1,6 @@
 @import "../../../styles/all";
 
-.m3-init {
+.m3-basic {
   font-family: var(--m3-ref-font-family-roboto);
   @include fontSize(#{var(--m3-ref-font-size-16)});
   font-weight: var(--m3-ref-font-weight-400);

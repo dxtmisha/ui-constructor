@@ -1,6 +1,7 @@
 $designsDesigns: (
   'd',
-  'm3',);
+  'm3',
+  'c2',);
 $designsRoot: (
   'm3.ref',
   'm3.sys',);
@@ -13,7 +14,7 @@ $designsMedia: (
   'm3-2xl': 1648px,);
 $designsClasses: (
   'm3.dark',
-  'm3.init',
+  'm3.basic',
   'm3.main',
   'm3.elevation',
   'm3.font',
@@ -3774,9 +3775,9 @@ $designsProperties: (
           ),
         ),
       ),
-      'init':(
-        index: 'init',
-        name: 'm3-init',
+      'basic':(
+        index: 'basic',
+        name: 'm3-basic',
         type: 'component',
         value: (
           'fontFamily':(

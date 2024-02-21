@@ -8,11 +8,13 @@ import { PropertiesCache } from '../properties/PropertiesCache'
 import { Styles } from '../styles/Styles'
 import { DesignConstructor } from './DesignConstructor'
 import { DesignComponent } from './DesignComponent'
-// import { DesignIcons } from '../services/designs/DesignIcons'
+import { DesignIcons } from './DesignIcons'
 
 import { ComponentsItems } from '../components/ComponentsItems'
+
+import { ComponentsIndex } from '../components/ComponentsIndex'
+import { ComponentsFlags } from '../components/ComponentsFlags'
 // import { ComponentsList } from '../services/components/ComponentsList'
-// import { ComponentsFlags } from '../services/components/ComponentsFlags'
 // import { ComponentsMedia } from '../services/components/ComponentsMedia'
 
 // import { ComponentsMain } from '../services/components/ComponentsMain'
@@ -94,6 +96,9 @@ export class DesignUi {
 
     this.makeConstructorComponent()
 
+    new ComponentsIndex(this.components).make()
+    new ComponentsFlags(this.components).make()
+
     // this.componentsList.make()
     // this.componentsFlags.make()
     // this.componentsMedia.make()
@@ -143,7 +148,7 @@ export class DesignUi {
     } else {
       designs.forEach(design => {
         if (this.isDesign(design.name)) {
-          // new DesignIcons(design.name).make()
+          new DesignIcons(design.name).make()
 
           design.components.forEach(component => {
             if (this.isComponent(component.name)) {

@@ -1,0 +1,144 @@
+{
+  "ot": {
+    "value": {
+      "base": {
+        "size": {
+          "px": {
+            "_replace": {
+              "pattern": "^(.*?)$",
+              "replace": "$1 * 1px"
+            }
+          }
+        }
+      },
+      "file|ot": "tokens/_init/ot.json#ot",
+      "shade": {
+        "value": {
+          "0": "0",
+          "20": "20",
+          "40": "40",
+          "60": "60",
+          "80": "80",
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "500": "500",
+          "600": "600",
+          "700": "700",
+          "800": "800",
+          "900": "900"
+        },
+        "_category": "shade"
+      },
+      "light": {
+        "semantic": {
+          "color": {
+            "value": {
+              "alpha": {
+                "_category": "palette-none"
+              }
+            },
+            "_category": "palette",
+            "_default": {
+              "basic": "300",
+              "dark": "300"
+            }
+          }
+        },
+        "asemantic": {
+          "color": {
+            "_category": "palette",
+            "_default": {
+              "basic": "300",
+              "dark": "300"
+            }
+          }
+        }
+      },
+      "dark": {
+        "semantic": {
+          "color": {
+            "_category": "palette",
+            "_theme": "dark",
+            "_default": {
+              "basic": "300",
+              "dark": "300"
+            }
+          }
+        },
+        "asemantic": {
+          "color": {
+            "_category": "palette",
+            "_theme": "dark",
+            "_default": {
+              "basic": "300",
+              "dark": "300"
+            }
+          }
+        }
+      }
+    },
+    "_type": "var",
+    "_category": "root"
+  },
+  "st": {
+    "value": {
+      "file|import-st": "tokens/_init/st.json#st",
+      "file|import-light": "tokens/_init/theme/light.json#st",
+      "web": {
+        "_type": "none"
+      }
+    },
+    "_type": "var",
+    "_category": "root"
+  },
+  "typography": {
+    "value": {
+      "file|import-web": "tokens/typography.json#typography"
+    }
+  },
+  "base": {
+    "value": {
+      "file|import-base": "tokens/base.json#base"
+    },
+    "_type": "var",
+    "_category": "root"
+  },
+  "init": {
+    "font": "{st.web.text.body.b2Regular}",
+    "color": "{st.content.fg.color.neutral.primary}",
+    "_category": "class"
+  },
+  "main": {
+    "init": "{init}",
+    "background-color": "{st.content.bg.color.default.solid.normal}",
+    "_category": "class"
+  },
+  "font": {
+    "value": {
+      "basic": "{typography.text}",
+      "extras": {
+        "caption": {
+          "_state": true
+        }
+      },
+      "font-family": {
+        "basic": "{ot.typography.fontFamily}"
+      }
+    },
+    "_category": "class"
+  },
+  "dark": {
+    "value": {
+      "st": {
+        "value": {
+          "file|sys": "tokens/_init/theme/dark.json#st"
+        },
+        "_type": "var"
+      }
+    },
+    "_category": "theme"
+  },
+  "file|components": "tokens/components"
+}

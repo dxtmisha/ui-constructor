@@ -18,6 +18,9 @@ import {
 const FILE_VAR = 'vars'
 const FILE_CLASS = 'classes'
 const FILE_PROPERTIES = 'properties'
+const FILE_BASIC = 'basic'
+const FILE_STYLE = 'style'
+const FILE_MAIN = 'main'
 
 const DIR_CLASS = 'classes'
 
@@ -47,6 +50,7 @@ export class Styles {
       this.initRoot(design, items)
       this.initClasses(design, items)
       this.initProperties(design, items)
+      this.initBasic(design)
     })
 
     return this
@@ -120,6 +124,59 @@ export class Styles {
       scss.get(),
       EXTENSION_STYLE_FILE
     )
+
+    return this
+  }
+
+  /**
+   * Creates files for connection.<br>
+   * Создает файлы для подключения.
+   * @param design design name /<br>название дизайна
+   */
+  protected initBasic (design: string): this {
+    const dir = [...StylesTool.getDir(design), '..']
+
+    PropertiesFile.write(
+      dir,
+      FILE_BASIC,
+      [
+        `@import "./styles/${FILE_VAR}";`,
+        `@import "./styles/${FILE_CLASS}";`,
+        `@import "./styles/${FILE_PROPERTIES}";`
+      ].join('\r\n'),
+      EXTENSION_STYLE_FILE
+    )
+
+    if (!PropertiesFile.is([...dir, `${FILE_STYLE}.${EXTENSION_STYLE_FILE}`])) {
+      PropertiesFile.write(
+        dir,
+        FILE_STYLE,
+        [
+          `@import "./${FILE_BASIC}";`,
+          '@import "../styles/properties";',
+          '',
+          `$designsDesign: '${design}';`,
+          `$designsDesigns: ('${design}');`
+        ].join('\r\n'),
+        EXTENSION_STYLE_FILE
+      )
+    }
+
+    if (!PropertiesFile.is([...dir, `${FILE_MAIN}.${EXTENSION_STYLE_FILE}`])) {
+      PropertiesFile.write(
+        dir,
+        FILE_MAIN,
+        [
+          `@import "./${FILE_BASIC}";`,
+          '@import "../styles/properties";',
+          '@import "../styles/init";',
+          '',
+          '@include initGlobal;',
+          `@include initDesignBody('${design}.main');`
+        ].join('\r\n'),
+        EXTENSION_STYLE_FILE
+      )
+    }
 
     return this
   }

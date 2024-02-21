@@ -1,0 +1,64 @@
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
+import { toKebabCase } from '../../../functions/toKebabCase'
+
+import { PropertiesFile } from '../properties/PropertiesFile'
+import { ComponentsItems } from './ComponentsItems'
+
+import {
+  COMPONENTS_DIR_FLAGS,
+  COMPONENTS_FLAGS
+} from '../../config/components'
+
+/**
+ * Class for generating a file to connect flags.<br>
+ * Класс для формирования файла для подключения флагов.
+ */
+export class ComponentsFlags {
+  /**
+   * Constructor
+   * @param items object for working with the list of components /<br>объект для работы со списком компонентов
+   */
+  // eslint-disable-next-line no-useless-constructor
+  constructor (
+    protected readonly items: ComponentsItems
+  ) {
+  }
+
+  /**
+   * Adds a file with flags.<br>
+   * Добавляет файл с флагами.
+   */
+  make (): void {
+    const list = this.getList()
+
+    const imports: string[] = []
+    const data: string[] = []
+
+    list.forEach(flag => {
+      const name = toCamelCaseFirst(flag.replace('.', '-'))
+      imports.push(`import ${name} from '../media/flags/${flag}'`)
+      data.push(`  Icons.add('flag-${toKebabCase(name.replace('Svg', ''))}', ${name})`)
+    })
+
+    this.items.write(
+      COMPONENTS_FLAGS,
+      [
+        'import { Icons } from \'./../classes/Icons\'',
+        '',
+        ...imports,
+        '',
+        'export const makeFlags = (): void => {',
+        ...data,
+        '}'
+      ]
+    )
+  }
+
+  /**
+   * Returns a list of flags.<br>
+   * Возвращает список флагов.
+   */
+  private getList (): string[] {
+    return PropertiesFile.readDirRecursive(COMPONENTS_DIR_FLAGS)
+  }
+}
