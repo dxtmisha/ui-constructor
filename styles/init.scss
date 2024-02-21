@@ -1,0 +1,14 @@
+@import "color";
+@import "dir";
+@import "font";
+@import "transform";
+
+@mixin initGlobal {
+  @include initDir;
+  @include initParagraphSpacing;
+
+  *, *:after, *:before {
+    @include initPalette;
+    @include initTransform;
+  }
+}
