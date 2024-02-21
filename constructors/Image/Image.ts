@@ -1,4 +1,4 @@
-import { isString } from '../../functions/isString.ts'
+import { isString } from '../../functions/isString'
 
 import { DesignAsyncAbstract } from '../../classes/design/DesignAsyncAbstract'
 

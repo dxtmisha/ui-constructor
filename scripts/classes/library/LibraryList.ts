@@ -1,8 +1,8 @@
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
-import { COMPONENTS_FILE } from '../../config/components.ts'
+import { COMPONENTS_FILE } from '../../config/components'
 
 /**
  * Class for creating a file with a list of components.<br>

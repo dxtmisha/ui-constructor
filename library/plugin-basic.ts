@@ -5,6 +5,7 @@ import { type App } from 'vue'
 
 import { uiComponentsPlugin } from './components'
 import './style-basic.scss'
+import './types.d.ts'
 
 export const uiBasicPlugin = {
   install: (app: App) => {

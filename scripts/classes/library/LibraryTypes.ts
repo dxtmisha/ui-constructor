@@ -1,5 +1,29 @@
-import { LibraryItems } from './LibraryItems.ts'
-import { COMPONENTS_TYPES } from '../../config/components.ts'
+import { LibraryItems } from './LibraryItems'
+import {
+  COMPONENTS_DIR,
+  COMPONENTS_FILE,
+  COMPONENTS_FLAGS,
+  COMPONENTS_INDEX,
+  COMPONENTS_MAIN,
+  COMPONENTS_MEDIA,
+  COMPONENTS_PLUGIN,
+  COMPONENTS_PLUGIN_BASIC,
+  COMPONENTS_STYLE,
+  COMPONENTS_STYLE_BASIC,
+  COMPONENTS_TYPES,
+  COMPONENTS_TYPES_COMPONENT
+} from '../../config/components'
+
+const LIBRARY_LIST = [
+  COMPONENTS_FILE,
+  COMPONENTS_FLAGS,
+  COMPONENTS_MEDIA,
+  COMPONENTS_PLUGIN,
+  COMPONENTS_PLUGIN_BASIC,
+  COMPONENTS_MAIN,
+  `${COMPONENTS_STYLE}.scss`,
+  `${COMPONENTS_STYLE_BASIC}.scss`
+]
 
 export class LibraryTypes {
   /**
@@ -23,7 +47,15 @@ export class LibraryTypes {
         '  export interface GlobalComponents {',
         ...this.initComponents(),
         '  }',
-        '}',
+        '}'
+      ],
+      'd.ts'
+    )
+
+    this.items.write(
+      COMPONENTS_TYPES_COMPONENT,
+      [
+        ...this.initLibrary(),
         ...this.initComponentsModule()
       ],
       'd.ts'
@@ -64,6 +96,28 @@ export class LibraryTypes {
           '}'
         )
       })
+
+    return data
+  }
+
+  protected initLibrary (): string[] {
+    const dirMain: string = this.items.getGlobalName().toLowerCase()
+    const data: string[] = [
+      `declare module '${dirMain}' {`,
+      `  export * from '${dirMain}/dist/${COMPONENTS_INDEX}.js'`,
+      '}'
+    ]
+
+    LIBRARY_LIST.forEach(name => {
+      const dir = name.match(/\.scss$/) ? COMPONENTS_DIR : 'dist'
+      const extension = name.match(/\.scss$/) ? '' : '.js'
+
+      data.push(
+        `declare module '${dirMain}/${name}' {`,
+        `  export * from '${dirMain}/${dir}/${name}${extension}'`,
+        '}'
+      )
+    })
 
     return data
   }

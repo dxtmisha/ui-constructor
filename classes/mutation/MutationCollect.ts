@@ -1,6 +1,6 @@
 import { MutationStatus } from '../../types/mutation'
 
-import { CLASS_NAME, KEY_UI } from '../../config/mutation.ts'
+import { CLASS_NAME, KEY_UI } from '../../config/mutation'
 
 /**
  * Class for working with the search of elements for processing.<br>

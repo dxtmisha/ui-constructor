@@ -1,14 +1,14 @@
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
 import {
   COMPONENTS_MEDIA,
   COMPONENTS_PLUGIN,
   COMPONENTS_PLUGIN_BASIC,
   COMPONENTS_STYLE,
-  COMPONENTS_STYLE_BASIC
-} from '../../config/components.ts'
+  COMPONENTS_STYLE_BASIC, COMPONENTS_TYPES
+} from '../../config/components'
 
 export class LibraryPlugin {
   /**
@@ -34,6 +34,7 @@ export class LibraryPlugin {
         '',
         'import { components } from \'./components\'',
         `import './${COMPONENTS_STYLE}.scss'`,
+        `import './${COMPONENTS_TYPES}.d.ts'`,
         '',
         `export const ${nameMax} = {`,
         '  install: async (app: App) => {',
@@ -54,6 +55,7 @@ export class LibraryPlugin {
         '',
         'import { uiComponentsPlugin } from \'./components\'',
         `import './${COMPONENTS_STYLE_BASIC}.scss'`,
+        `import './${COMPONENTS_TYPES}.d.ts'`,
         '',
         `export const ${nameBasic} = {`,
         '  install: (app: App) => {',

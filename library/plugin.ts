@@ -6,6 +6,7 @@ import { forEach } from '../functions/forEach'
 
 import { components } from './components'
 import './style.scss'
+import './types.d.ts'
 
 export const uiPlugin = {
   install: async (app: App) => {

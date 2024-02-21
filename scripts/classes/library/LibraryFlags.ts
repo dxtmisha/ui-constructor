@@ -2,7 +2,7 @@ import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
 import { toKebabCase } from '../../../functions/toKebabCase'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
 import {
   COMPONENTS_DIR_FLAGS,

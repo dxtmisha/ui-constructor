@@ -1,12 +1,12 @@
-import { forEach } from '../../functions/forEach.ts'
-import { getAttributes } from '../../functions/getAttributes.ts'
-import { getElementId } from '../../functions/getElementId.ts'
-import { isFilled } from '../../functions/isFilled.ts'
-import { isString } from '../../functions/isString.ts'
-import { toArray } from '../../functions/toArray.ts'
-import { toCamelCaseFirst } from '../../functions/toCamelCaseFirst.ts'
-import { toKebabCase } from '../../functions/toKebabCase.ts'
-import { transformation } from '../../functions/transformation.ts'
+import { forEach } from '../../functions/forEach'
+import { getAttributes } from '../../functions/getAttributes'
+import { getElementId } from '../../functions/getElementId'
+import { isFilled } from '../../functions/isFilled'
+import { isString } from '../../functions/isString'
+import { toArray } from '../../functions/toArray'
+import { toCamelCaseFirst } from '../../functions/toCamelCaseFirst'
+import { toKebabCase } from '../../functions/toKebabCase'
+import { transformation } from '../../functions/transformation'
 
 import { MutationCollect } from './MutationCollect'
 import { MutationGlobal } from './MutationGlobal'
@@ -19,7 +19,7 @@ import {
   MutationStatus
 } from '../../types/mutation'
 
-import { KEY_NAME } from '../../config/mutation.ts'
+import { KEY_NAME } from '../../config/mutation'
 
 /**
  * Class for managing the element.<br>

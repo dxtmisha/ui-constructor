@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./Icons-Com4Unvc.cjs"),i=require("./components.umd.cjs"),r={install:async e=>{await(await Promise.resolve().then(()=>require("./media.umd.cjs"))).makeMedia(),t.forEach(i.components,(n,o)=>{e.component(o,n)})}};exports.uiPlugin=r;

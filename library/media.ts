@@ -3,5 +3,5 @@
 
 export const makeMedia = async (): Promise<void> => {
   ;(await import('./flags')).makeFlags()
-  ;(await import('./../c2/icons.ts')).makeIconsC2()
+  ;(await import('./../c2/icons')).makeIconsC2()
 }

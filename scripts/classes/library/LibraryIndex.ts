@@ -1,11 +1,12 @@
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 import { PropertiesFile } from '../properties/PropertiesFile'
 
 import {
   COMPONENTS_DIR_CLASSES,
   COMPONENTS_DIR_COMPOSABLES,
   COMPONENTS_DIR_FUNCTIONS,
-  COMPONENTS_INDEX
+  COMPONENTS_INDEX,
+  COMPONENTS_TYPES_COMPONENT
 } from '../../config/components'
 
 /**
@@ -27,6 +28,8 @@ export class LibraryIndex {
     this.items.write(
       COMPONENTS_INDEX,
       [
+        `import './${COMPONENTS_TYPES_COMPONENT}.d.ts'`,
+        '',
         '// Functions',
         ...this.getFunctions(),
         '',

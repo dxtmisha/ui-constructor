@@ -1,4 +1,4 @@
-import { isFilled } from '../../functions/isFilled.ts'
+import { isFilled } from '../../functions/isFilled'
 
 import { ImageData } from './ImageData'
 import { ImageCoordinator } from './ImageCoordinator'

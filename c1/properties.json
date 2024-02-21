@@ -1,0 +1,56 @@
+{
+  "ref": {
+    "value": {
+      "file|ref": "tokens/ref.json",
+      "screen": {
+        "_category": "media"
+      },
+      "shade": {
+        "_category": "shade"
+      },
+      "palette": {
+        "_category": "palette",
+        "_default": {
+          "basic": "50"
+        }
+      }
+    },
+    "_type": "var",
+    "_category": "root"
+  },
+  "sys": {
+    "value": {
+      "file|sys": "tokens/sys.json"
+    },
+    "_type": "var",
+    "_category": "root"
+  },
+  "init": {
+    "font": "{font.body}",
+    "color": "{sys.palette.onSurface}",
+    "_category": "class"
+  },
+  "main": {
+    "init": "{init}",
+    "background": "{ref.background.0}",
+    "_category": "class"
+  },
+  "elevation": {
+    "value": {
+      "file|elevation": "tokens/elevation.json"
+    },
+    "_category": "class"
+  },
+  "font": {
+    "value": {
+      "file|font": "tokens/font.json"
+    },
+    "_category": "class"
+  },
+  "rounded": {
+    "value": {
+      "file|rounded": "tokens/rounded.json"
+    },
+    "_category": "class"
+  }
+}

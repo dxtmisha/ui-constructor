@@ -1,5 +1,5 @@
-import { LibraryItems } from './LibraryItems.ts'
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { LibraryItems } from './LibraryItems'
+import { PropertiesFile } from '../properties/PropertiesFile'
 
 const EXPORTS_DEFAULT = {
   '.': {
@@ -24,10 +24,13 @@ export class LibraryPackage {
   ) {
   }
 
-  protected make (): void {
-    const components = this.components.getComponentList()
-    const packageJson = PropertiesFile.readFile('package.json')
+  make (): void {
+    const components = this.items.getComponentList()
+
+    const main = PropertiesFile.readFile('package.json')
     const exports: Record<string, any> = {
+      ...EXPORTS_DEFAULT
+      /*
       './components-type': './dist/lib/types.d.ts',
       './components-file': './dist/lib/file-types.d.ts',
       './create': {
@@ -52,26 +55,27 @@ export class LibraryPackage {
       './dist/*': './dist/*',
       './styles/*': './styles/*',
       './*': './*'
+       */
     }
 
-    this.components.getDesigns().forEach(design => {
-      exports[`./${design}/use.scss`] = `./${design}/use.scss`
+    this.items.getDesigns().forEach(design => {
+      // exports[`./${design}/use.scss`] = `./${design}/use.scss`
     })
 
     components.forEach(component => {
-      exports[`./${component.codeFull}`] = {
-        import: `./${component.design}/${component.dir}/index.ts`,
-        // require: `./dist/${component.codeFull}.umd.cjs`,
-        types: `./dist/${component.design}/${component.dir}/index.d.ts`
-      }
+      // exports[`./${component.codeFull}`] = {
+      //   import: `./${component.design}/${component.dir}/index.ts`,
+      //   // require: `./dist/${component.codeFull}.umd.cjs`,
+      //   types: `./dist/${component.design}/${component.dir}/index.d.ts`
+      // }
     })
 
-    if (packageJson) {
+    if (main) {
       PropertiesFile.write(
         [],
         'package',
         {
-          ...packageJson,
+          ...main,
           exports
         },
         'json'

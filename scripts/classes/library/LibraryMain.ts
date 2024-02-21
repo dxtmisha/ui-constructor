@@ -1,10 +1,10 @@
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
 import {
   COMPONENTS_INDEX,
   COMPONENTS_MAIN,
   COMPONENTS_PLUGIN
-} from '../../config/components.ts'
+} from '../../config/components'
 
 /**
  * Class for working with the main files.<br>

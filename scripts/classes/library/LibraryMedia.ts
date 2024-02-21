@@ -1,14 +1,14 @@
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
 
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
 
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
-import { FILE_ICONS } from '../../config/property.ts'
+import { FILE_ICONS } from '../../config/property'
 import {
   COMPONENTS_FLAGS,
   COMPONENTS_MEDIA
-} from '../../config/components.ts'
+} from '../../config/components'
 
 /**
  * Class for generating a file to connect flags.<br>
@@ -45,7 +45,7 @@ export class LibraryMedia {
       const path = [design, `${FILE_ICONS}.ts`]
 
       if (PropertiesFile.is(path)) {
-        data.push(`  ;(await import('./../${PropertiesFile.joinPath(path)}')).makeIcons${toCamelCaseFirst(design)}()`)
+        data.push(`  ;(await import('./../${PropertiesFile.joinPath([design, FILE_ICONS])}')).makeIcons${toCamelCaseFirst(design)}()`)
       }
     })
 

@@ -1,0 +1,6 @@
+@import "./basic";
+@import "../styles/properties";
+@import "../styles/init";
+
+@include initGlobal;
+@include initDesignBody('m2.main');

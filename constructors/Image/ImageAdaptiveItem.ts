@@ -1,5 +1,5 @@
-import { getElementId } from '../../functions/getElementId.ts'
-import { toNumber } from '../../functions/toNumber.ts'
+import { getElementId } from '../../functions/getElementId'
+import { toNumber } from '../../functions/toNumber'
 
 import { ImageData } from './ImageData'
 import { ImageAdaptiveGroup } from './ImageAdaptiveGroup'

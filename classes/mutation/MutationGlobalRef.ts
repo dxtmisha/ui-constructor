@@ -1,16 +1,16 @@
 import { createApp } from 'vue'
 import { createRouter, type Router, type RouterOptions } from 'vue-router'
 import { createStore, Store, StoreOptions } from 'vuex'
-import { forEach } from '../../functions/forEach.ts'
-import { isFilled } from '../../functions/isFilled.ts'
-import { toCamelCaseFirst } from '../../functions/toCamelCaseFirst.ts'
+import { forEach } from '../../functions/forEach'
+import { isFilled } from '../../functions/isFilled'
+import { toCamelCaseFirst } from '../../functions/toCamelCaseFirst'
 
 import { Translate } from '../Translate'
 import { MutationGlobal } from './MutationGlobal'
 
 import { type MutationProjectItem } from '../../types/mutation'
 
-import { KEY_GLOBAL_PROJECT } from '../../config/mutation.ts'
+import { KEY_GLOBAL_PROJECT } from '../../config/mutation'
 
 /**
  * Class for working with global variables (Ref).<br>

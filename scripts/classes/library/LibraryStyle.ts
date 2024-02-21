@@ -1,4 +1,4 @@
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
 import {
   COMPONENTS_STYLE,

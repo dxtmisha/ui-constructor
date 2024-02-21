@@ -9,18 +9,20 @@ import { DesignConstructor } from './DesignConstructor'
 import { DesignComponent } from './DesignComponent'
 import { DesignIcons } from './DesignIcons'
 
-import { LibraryItems } from '../library/LibraryItems.ts'
+import { LibraryItems } from '../library/LibraryItems'
 
-import { LibraryIndex } from '../library/LibraryIndex.ts'
-import { LibraryFlags } from '../library/LibraryFlags.ts'
-import { LibraryMedia } from '../library/LibraryMedia.ts'
+import { LibraryIndex } from '../library/LibraryIndex'
+import { LibraryFlags } from '../library/LibraryFlags'
+import { LibraryMedia } from '../library/LibraryMedia'
 
-import { LibraryList } from '../library/LibraryList.ts'
-import { LibraryPlugin } from '../library/LibraryPlugin.ts'
-import { LibraryMain } from '../library/LibraryMain.ts'
+import { LibraryList } from '../library/LibraryList'
+import { LibraryPlugin } from '../library/LibraryPlugin'
+import { LibraryMain } from '../library/LibraryMain'
 
-import { LibraryStyle } from '../library/LibraryStyle.ts'
-import { LibraryTypes } from '../library/LibraryTypes.ts'
+import { LibraryStyle } from '../library/LibraryStyle'
+import { LibraryTypes } from '../library/LibraryTypes'
+
+import { LibraryPackage } from '../library/LibraryPackage.ts'
 
 config()
 
@@ -88,7 +90,7 @@ export class DesignUi {
     new LibraryStyle(this.components).make()
     new LibraryTypes(this.components).make()
 
-    // this.makePackageJson()
+    new LibraryPackage(this.components).make()
   }
 
   /**
