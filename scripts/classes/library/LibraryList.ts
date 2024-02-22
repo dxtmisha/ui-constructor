@@ -1,8 +1,10 @@
 import { toCamelCase } from '../../../functions/toCamelCase'
 
+import { PropertiesFile } from '../properties/PropertiesFile.ts'
 import { LibraryItems } from './LibraryItems'
 
-import { COMPONENTS_FILE } from '../../config/components'
+import { LIBRARY_COMPONENTS, LIBRARY_DIR } from '../../config/library'
+import { toKebabCase } from '../../../functions/toKebabCase.ts'
 
 /**
  * Class for creating a file with a list of components.<br>
@@ -38,6 +40,11 @@ export class LibraryList {
 
     const imports: string[] = []
     const list: string[] = []
+    const json = {
+      name: toKebabCase(this.items.getGlobalName()),
+      library: LIBRARY_DIR,
+      components: [] as any[]
+    }
 
     components.forEach(({
       design,
@@ -46,10 +53,14 @@ export class LibraryList {
     }) => {
       imports.push(`import { ${codeFull} } from './../${design}/${dir}'`)
       list.push(`  ${codeFull}`)
+      json.components.push({
+        name: codeFull,
+        path: `${design}/${dir}`
+      })
     })
 
     this.items.write(
-      COMPONENTS_FILE,
+      LIBRARY_COMPONENTS,
       [
         'import { type App } from \'vue\'',
         'import { forEach } from \'../functions/forEach\'',
@@ -68,6 +79,13 @@ export class LibraryList {
         '  }',
         '}'
       ]
+    )
+
+    PropertiesFile.write(
+      [LIBRARY_DIR],
+      LIBRARY_COMPONENTS,
+      json,
+      'json'
     )
 
     return this

@@ -5,43 +5,64 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dtsPlugin from 'vite-plugin-dts'
 
-const library = 'library'
+import data from './library/components.json'
+
+const name = data?.name ?? 'ui'
+const library = data?.library ?? 'library'
+const components = data?.components ?? []
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    dtsPlugin({
-      clearPureImport: false,
-      include: [
-        `${library}/**/*.ts`,
-        'classes/**/*.ts',
-        'composables/**/*.ts',
-        'config/**/*.ts',
-        'constructors/**/*.ts',
-        'functions/**/*.ts',
-        'types/**/*.ts'
-      ]
-    })
-  ],
-  build: {
-    lib: {
-      entry: {
-        components: resolve(__dirname, `${library}/components.ts`),
-        flags: resolve(__dirname, `${library}/flags.ts`),
-        index: resolve(__dirname, `${library}/index.ts`),
-        main: resolve(__dirname, `${library}/main.ts`),
-        media: resolve(__dirname, `${library}/media.ts`),
-        plugin: resolve(__dirname, `${library}/plugin.ts`),
-        'plugin-basic': resolve(__dirname, `${library}/plugin-basic.ts`)
-      },
-      name: 'ui',
-      fileName: (format, entryName) => {
-        if (format === 'es') {
-          return `${entryName}.js`
-        }
+export default defineConfig(() => {
+  return {
+    plugins: [
+      vue(),
+      dtsPlugin({
+        clearPureImport: false,
+        copyDtsFiles: true,
+        include: [
+          `${library}/**/*.ts`,
+          'classes/**/*.ts',
+          'composables/**/*.ts',
+          'config/**/*.ts',
+          'constructors/**/*.ts',
+          'functions/**/*.ts',
+          'types/**/*.ts',
+          'c1/**/*.ts',
+          'c2/**/*.ts',
+          'm2/**/*.ts',
+          'm3/**/*.ts'
+        ]
+      })
+    ],
+    build: {
+      cssCodeSplit: true,
+      lib: {
+        entry: {
+          index: resolve(__dirname, `${library}/index.ts`),
+          flags: resolve(__dirname, `${library}/flags.ts`),
+          media: resolve(__dirname, `${library}/media.ts`),
+          components: resolve(__dirname, `${library}/components.ts`),
+          plugin: resolve(__dirname, `${library}/plugin.ts`),
+          'plugin-basic': resolve(__dirname, `${library}/plugin-basic.ts`),
+          main: resolve(__dirname, `${library}/main.ts`),
+          ...(() => {
+            const data: Record<string, any> = {}
 
-        return `${entryName}.umd.${format}`
+            components.forEach(item => {
+              data[item.name] = resolve(__dirname, `${item.path}/index.ts`)
+            })
+
+            return data
+          })()
+        },
+        name,
+        fileName: (format, entryName) => {
+          if (format === 'es') {
+            return `${entryName}.js`
+          }
+
+          return `${entryName}.umd.${format}`
+        }
       }
     }
   }

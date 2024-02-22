@@ -18,16 +18,13 @@
     "composables",
     "config",
     "constructors",
+    "dist",
     "functions",
     "library",
     "media",
     "scripts",
     "styles",
-    "types",
-    "c1",
-    "c2",
-    "m2",
-    "m3"
+    "types"
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
@@ -61,5 +58,47 @@
     "vue-tsc": "^1.8.27"
   },
   "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/library/index.d.ts"
+    },
+    "./flags": {
+      "import": "./dist/flags.js",
+      "require": "./dist/flags.umd.cjs",
+      "types": "./dist/library/flags.d.ts"
+    },
+    "./plugin": {
+      "import": "./dist/plugin.js",
+      "require": "./dist/plugin.umd.cjs",
+      "types": "./dist/library/plugin.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs",
+      "types": "./dist/library/components.d.ts"
+    },
+    "./media": {
+      "import": "./dist/media.js",
+      "require": "./dist/media.umd.cjs",
+      "types": "./dist/library/media.d.ts"
+    },
+    "./plugin-basic": {
+      "import": "./dist/plugin-basic.js",
+      "require": "./dist/plugin-basic.umd.cjs",
+      "types": "./dist/library/plugin-basic.d.ts"
+    },
+    "./main": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.umd.cjs",
+      "types": "./dist/library/main.d.ts"
+    },
+    "./style.scss": "./library/style.scss",
+    "./style-basic.scss": "./library/style-basic.scss",
+    "./M3Image": {
+      "import": "./dist/M3Image.ts",
+      "require": "./dist/M3Image.umd.cjs",
+      "types": "./dist/m3/Image/index.d.ts"
+    }
   }
 }

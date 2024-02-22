@@ -1,10 +1,10 @@
 import { LibraryItems } from './LibraryItems'
 
 import {
-  COMPONENTS_INDEX,
-  COMPONENTS_MAIN,
-  COMPONENTS_PLUGIN
-} from '../../config/components'
+  LIBRARY_INDEX,
+  LIBRARY_MAIN,
+  LIBRARY_PLUGIN
+} from '../../config/library'
 
 /**
  * Class for working with the main files.<br>
@@ -29,7 +29,7 @@ export class LibraryMain {
     const name = this.items.getGlobalName()
 
     this.items.write(
-      COMPONENTS_MAIN,
+      LIBRARY_MAIN,
       [
         'import { MutationGlobal } from \'./../classes/mutation/MutationGlobal\'',
         'import { MutationGlobalRef } from \'./../classes/mutation/MutationGlobalRef\'',
@@ -51,8 +51,8 @@ export class LibraryMain {
         `;(window as any).${name}_CORE_VUEX = vuex`,
         `;(window as any).${name}_CORE_UI = ui`,
         '',
-        `export * from './${COMPONENTS_INDEX}'`,
-        `export * from './${COMPONENTS_PLUGIN}'`
+        `export * from './${LIBRARY_INDEX}'`,
+        `export * from './${LIBRARY_PLUGIN}'`
       ]
     )
 

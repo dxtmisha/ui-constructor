@@ -3,12 +3,12 @@ import { toCamelCase } from '../../../functions/toCamelCase'
 import { LibraryItems } from './LibraryItems'
 
 import {
-  COMPONENTS_MEDIA,
-  COMPONENTS_PLUGIN,
-  COMPONENTS_PLUGIN_BASIC,
-  COMPONENTS_STYLE,
-  COMPONENTS_STYLE_BASIC, COMPONENTS_TYPES
-} from '../../config/components'
+  LIBRARY_MEDIA,
+  LIBRARY_PLUGIN,
+  LIBRARY_PLUGIN_BASIC,
+  LIBRARY_STYLE,
+  LIBRARY_STYLE_BASIC, LIBRARY_TYPES
+} from '../../config/library'
 
 export class LibraryPlugin {
   /**
@@ -27,18 +27,18 @@ export class LibraryPlugin {
     const nameMax = `${name}Plugin`
 
     this.items.write(
-      COMPONENTS_PLUGIN,
+      LIBRARY_PLUGIN,
       [
         'import { type App } from \'vue\'',
         'import { forEach } from \'../functions/forEach\'',
         '',
         'import { components } from \'./components\'',
-        `import './${COMPONENTS_STYLE}.scss'`,
-        `import './${COMPONENTS_TYPES}.d.ts'`,
+        `import './${LIBRARY_STYLE}.scss'`,
+        `import './${LIBRARY_TYPES}.d.ts'`,
         '',
         `export const ${nameMax} = {`,
         '  install: async (app: App) => {',
-        `    await (await import('./${COMPONENTS_MEDIA}')).makeMedia()`,
+        `    await (await import('./${LIBRARY_MEDIA}')).makeMedia()`,
         '',
         '    forEach(components, (component, name) => {',
         '      app.component(name, component)',
@@ -49,13 +49,13 @@ export class LibraryPlugin {
     )
 
     this.items.write(
-      COMPONENTS_PLUGIN_BASIC,
+      LIBRARY_PLUGIN_BASIC,
       [
         'import { type App } from \'vue\'',
         '',
         'import { uiComponentsPlugin } from \'./components\'',
-        `import './${COMPONENTS_STYLE_BASIC}.scss'`,
-        `import './${COMPONENTS_TYPES}.d.ts'`,
+        `import './${LIBRARY_STYLE_BASIC}.scss'`,
+        `import './${LIBRARY_TYPES}.d.ts'`,
         '',
         `export const ${nameBasic} = {`,
         '  install: (app: App) => {',

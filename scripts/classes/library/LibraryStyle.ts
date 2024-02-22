@@ -1,9 +1,9 @@
 import { LibraryItems } from './LibraryItems'
 
 import {
-  COMPONENTS_STYLE,
-  COMPONENTS_STYLE_BASIC
-} from '../../config/components'
+  LIBRARY_STYLE,
+  LIBRARY_STYLE_BASIC
+} from '../../config/library'
 
 /**
  * Class for creating a connection file for the split.<br>
@@ -37,8 +37,8 @@ export class LibraryStyle {
         basic.push(`@import "./../${item}/basic";`)
       })
 
-      this.items.write(COMPONENTS_STYLE, data, 'scss')
-      this.items.write(COMPONENTS_STYLE_BASIC, [
+      this.items.write(LIBRARY_STYLE, data, 'scss')
+      this.items.write(LIBRARY_STYLE_BASIC, [
         ...basic,
         '',
         '@import "./../styles/init";',

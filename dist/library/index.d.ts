@@ -1,3 +1,4 @@
+import './types-component.d.ts';
 export * from './../functions/anyToString';
 export * from './../functions/arrFill';
 export * from './../functions/copyObject';

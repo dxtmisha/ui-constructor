@@ -6,9 +6,9 @@ import { LibraryItems } from './LibraryItems'
 
 import { FILE_ICONS } from '../../config/property'
 import {
-  COMPONENTS_FLAGS,
-  COMPONENTS_MEDIA
-} from '../../config/components'
+  LIBRARY_FLAGS,
+  LIBRARY_MEDIA
+} from '../../config/library'
 
 /**
  * Class for generating a file to connect flags.<br>
@@ -27,10 +27,10 @@ export class LibraryMedia {
 
   make (): void {
     this.items.write(
-      COMPONENTS_MEDIA,
+      LIBRARY_MEDIA,
       [
         'export const makeMedia = async (): Promise<void> => {',
-        `  ;(await import('./${COMPONENTS_FLAGS}')).makeFlags()`,
+        `  ;(await import('./${LIBRARY_FLAGS}')).makeFlags()`,
         ...this.initIcon(),
         '}'
       ]

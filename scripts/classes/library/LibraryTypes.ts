@@ -1,29 +1,11 @@
 import { LibraryItems } from './LibraryItems'
 import {
-  COMPONENTS_DIR,
-  COMPONENTS_FILE,
-  COMPONENTS_FLAGS,
-  COMPONENTS_INDEX,
-  COMPONENTS_MAIN,
-  COMPONENTS_MEDIA,
-  COMPONENTS_PLUGIN,
-  COMPONENTS_PLUGIN_BASIC,
-  COMPONENTS_STYLE,
-  COMPONENTS_STYLE_BASIC,
-  COMPONENTS_TYPES,
-  COMPONENTS_TYPES_COMPONENT
-} from '../../config/components'
-
-const LIBRARY_LIST = [
-  COMPONENTS_FILE,
-  COMPONENTS_FLAGS,
-  COMPONENTS_MEDIA,
-  COMPONENTS_PLUGIN,
-  COMPONENTS_PLUGIN_BASIC,
-  COMPONENTS_MAIN,
-  `${COMPONENTS_STYLE}.scss`,
-  `${COMPONENTS_STYLE_BASIC}.scss`
-]
+  LIBRARY_DIR,
+  LIBRARY_INDEX,
+  LIBRARY_LIST_FILES,
+  LIBRARY_TYPES,
+  LIBRARY_TYPES_COMPONENT
+} from '../../config/library'
 
 export class LibraryTypes {
   /**
@@ -38,7 +20,7 @@ export class LibraryTypes {
 
   make (): this {
     this.items.write(
-      COMPONENTS_TYPES,
+      LIBRARY_TYPES,
       [
         'import \'@vue/runtime-core\'',
         'import { components } from \'./components\'',
@@ -53,7 +35,7 @@ export class LibraryTypes {
     )
 
     this.items.write(
-      COMPONENTS_TYPES_COMPONENT,
+      LIBRARY_TYPES_COMPONENT,
       [
         ...this.initLibrary(),
         ...this.initComponentsModule()
@@ -104,12 +86,12 @@ export class LibraryTypes {
     const dirMain: string = this.items.getGlobalName().toLowerCase()
     const data: string[] = [
       `declare module '${dirMain}' {`,
-      `  export * from '${dirMain}/dist/${COMPONENTS_INDEX}.js'`,
+      `  export * from '${dirMain}/dist/${LIBRARY_INDEX}.js'`,
       '}'
     ]
 
-    LIBRARY_LIST.forEach(name => {
-      const dir = name.match(/\.scss$/) ? COMPONENTS_DIR : 'dist'
+    LIBRARY_LIST_FILES.forEach(name => {
+      const dir = name.match(/\.scss$/) ? LIBRARY_DIR : 'dist'
       const extension = name.match(/\.scss$/) ? '' : '.js'
 
       data.push(

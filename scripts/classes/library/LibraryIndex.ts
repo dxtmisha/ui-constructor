@@ -2,12 +2,12 @@ import { LibraryItems } from './LibraryItems'
 import { PropertiesFile } from '../properties/PropertiesFile'
 
 import {
-  COMPONENTS_DIR_CLASSES,
-  COMPONENTS_DIR_COMPOSABLES,
-  COMPONENTS_DIR_FUNCTIONS,
-  COMPONENTS_INDEX,
-  COMPONENTS_TYPES_COMPONENT
-} from '../../config/components'
+  LIBRARY_DIR_CLASSES,
+  LIBRARY_DIR_COMPOSABLES,
+  LIBRARY_DIR_FUNCTIONS,
+  LIBRARY_INDEX,
+  LIBRARY_TYPES_COMPONENT
+} from '../../config/library'
 
 /**
  * A class for forming a file with all functions and classes.<br>
@@ -26,9 +26,9 @@ export class LibraryIndex {
 
   make (): void {
     this.items.write(
-      COMPONENTS_INDEX,
+      LIBRARY_INDEX,
       [
-        `import './${COMPONENTS_TYPES_COMPONENT}.d.ts'`,
+        `import './${LIBRARY_TYPES_COMPONENT}.d.ts'`,
         '',
         '// Functions',
         ...this.getFunctions(),
@@ -70,8 +70,8 @@ export class LibraryIndex {
    */
   private getFunctions (): string[] {
     return this.getExport(
-      COMPONENTS_DIR_FUNCTIONS,
-      PropertiesFile.readDirRecursive(COMPONENTS_DIR_FUNCTIONS)
+      LIBRARY_DIR_FUNCTIONS,
+      PropertiesFile.readDirRecursive(LIBRARY_DIR_FUNCTIONS)
     )
   }
 
@@ -81,8 +81,8 @@ export class LibraryIndex {
    */
   private getClasses (): string[] {
     return this.getExport(
-      COMPONENTS_DIR_CLASSES,
-      PropertiesFile.readDirRecursive(COMPONENTS_DIR_CLASSES)
+      LIBRARY_DIR_CLASSES,
+      PropertiesFile.readDirRecursive(LIBRARY_DIR_CLASSES)
     )
   }
 
@@ -92,8 +92,8 @@ export class LibraryIndex {
    */
   private getComposables (): string[] {
     return this.getExport(
-      COMPONENTS_DIR_COMPOSABLES,
-      PropertiesFile.readDirRecursive(COMPONENTS_DIR_COMPOSABLES)
+      LIBRARY_DIR_COMPOSABLES,
+      PropertiesFile.readDirRecursive(LIBRARY_DIR_COMPOSABLES)
     )
   }
 }

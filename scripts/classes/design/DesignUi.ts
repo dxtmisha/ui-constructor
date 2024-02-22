@@ -22,7 +22,7 @@ import { LibraryMain } from '../library/LibraryMain'
 import { LibraryStyle } from '../library/LibraryStyle'
 import { LibraryTypes } from '../library/LibraryTypes'
 
-import { LibraryPackage } from '../library/LibraryPackage.ts'
+import { LibraryPackage } from '../library/LibraryPackage'
 
 config()
 

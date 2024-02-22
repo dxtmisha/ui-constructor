@@ -5,9 +5,9 @@ import { PropertiesFile } from '../properties/PropertiesFile'
 import { LibraryItems } from './LibraryItems'
 
 import {
-  COMPONENTS_DIR_FLAGS,
-  COMPONENTS_FLAGS
-} from '../../config/components'
+  LIBRARY_DIR_FLAGS,
+  LIBRARY_FLAGS
+} from '../../config/library'
 
 /**
  * Class for generating a file to connect flags.<br>
@@ -41,7 +41,7 @@ export class LibraryFlags {
     })
 
     this.items.write(
-      COMPONENTS_FLAGS,
+      LIBRARY_FLAGS,
       [
         'import { Icons } from \'./../classes/Icons\'',
         '',
@@ -59,6 +59,6 @@ export class LibraryFlags {
    * Возвращает список флагов.
    */
   private getList (): string[] {
-    return PropertiesFile.readDirRecursive(COMPONENTS_DIR_FLAGS)
+    return PropertiesFile.readDirRecursive(LIBRARY_DIR_FLAGS)
   }
 }
