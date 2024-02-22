@@ -51,7 +51,7 @@ export class LibraryList {
       codeFull,
       dir
     }) => {
-      imports.push(`import { ${codeFull} } from './../${design}/${dir}'`)
+      imports.push(`import ${codeFull} from './../${design}/${dir}/${codeFull}.vue'`)
       list.push(`  ${codeFull}`)
       json.components.push({
         name: codeFull,

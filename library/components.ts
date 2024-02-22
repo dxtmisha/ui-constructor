@@ -4,7 +4,7 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
-import { M3Image } from './../m3/Image'
+import M3Image from './../m3/Image/M3Image.vue'
 
 export const components = {
   M3Image

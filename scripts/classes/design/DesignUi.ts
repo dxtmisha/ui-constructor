@@ -23,6 +23,7 @@ import { LibraryStyle } from '../library/LibraryStyle'
 import { LibraryTypes } from '../library/LibraryTypes'
 
 import { LibraryPackage } from '../library/LibraryPackage'
+import { LibraryBuild } from '../library/LibraryBuild'
 
 config()
 
@@ -91,6 +92,10 @@ export class DesignUi {
     new LibraryTypes(this.components).make()
 
     new LibraryPackage(this.components).make()
+  }
+
+  makeBuild (): void {
+    new LibraryBuild().make()
   }
 
   /**

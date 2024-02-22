@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "ui": "vite-node scripts/comp.ts component"
+    "ui": "vite-node scripts/comp.ts component",
+    "build-ui": "vite-node scripts/comp.ts component && vue-tsc && vite build && vite-node scripts/comp.ts build"
   },
   "workspaces": [
     "packages/*"
@@ -54,6 +55,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.21.1",
     "vite": "^5.1.0",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
     "vite-plugin-dts": "^3.7.2",
     "vue-tsc": "^1.8.27"
   },
@@ -96,7 +98,7 @@
     "./style.scss": "./library/style.scss",
     "./style-basic.scss": "./library/style-basic.scss",
     "./M3Image": {
-      "import": "./dist/M3Image.ts",
+      "import": "./dist/M3Image.js",
       "require": "./dist/M3Image.umd.cjs",
       "types": "./dist/m3/Image/index.d.ts"
     }

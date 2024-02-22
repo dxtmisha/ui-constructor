@@ -1,3 +1,4 @@
+import './plugin.css';
 import { f as i } from "./Icons-253BbGkD.js";
 import { components as m } from "./components.js";
 const p = {

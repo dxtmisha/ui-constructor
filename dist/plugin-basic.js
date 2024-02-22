@@ -1,3 +1,4 @@
+import './plugin-basic.css';
 import { uiComponentsPlugin as n } from "./components.js";
 const s = {
   install: (i) => {

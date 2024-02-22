@@ -101,7 +101,7 @@ export class LibraryPackage {
 
     components.forEach(component => {
       data[`./${component.codeFull}`] = {
-        import: `./dist/${component.codeFull}.ts`,
+        import: `./dist/${component.codeFull}.js`,
         require: `./dist/${component.codeFull}.umd.cjs`,
         types: `./dist/${component.design}/${component.dir}/index.d.ts`
       }

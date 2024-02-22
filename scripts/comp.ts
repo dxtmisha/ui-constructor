@@ -12,4 +12,11 @@ program
     new DesignUi(name).make()
   })
 
+program
+  .command('build')
+  .description('The compiled files are being updated\r\nОбновляются собранные файлы')
+  .action(() => {
+    new DesignUi().makeBuild()
+  })
+
 program.parse(process.argv)

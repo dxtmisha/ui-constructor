@@ -24,13 +24,13 @@ export default defineConfig(() => {
           'classes/**/*.ts',
           'composables/**/*.ts',
           'config/**/*.ts',
-          'constructors/**/*.ts',
+          'constructors/**/*.{ts,tsx}',
           'functions/**/*.ts',
           'types/**/*.ts',
-          'c1/**/*.ts',
-          'c2/**/*.ts',
-          'm2/**/*.ts',
-          'm3/**/*.ts'
+          'c1/**/*.{ts,tsx,vue}',
+          'c2/**/*.{ts,tsx,vue}',
+          'm2/**/*.{ts,tsx,vue}',
+          'm3/**/*.{ts,tsx,vue}'
         ]
       })
     ],

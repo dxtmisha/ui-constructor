@@ -1,3 +1,4 @@
+import './M3Image.css';
 var k = Object.defineProperty;
 var I = (s, t, e) => t in s ? k(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
 var r = (s, t, e) => (I(s, typeof t != "symbol" ? t + "" : t, e), e);
