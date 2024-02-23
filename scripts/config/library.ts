@@ -11,6 +11,7 @@ export const LIBRARY_DIR_FLAGS = ['media', 'flags']
 export const LIBRARY_INDEX = 'index'
 export const LIBRARY_FLAGS = 'flags'
 export const LIBRARY_MEDIA = 'media'
+export const LIBRARY_TRANSLATE = 'translate'
 export const LIBRARY_COMPONENTS = 'components'
 export const LIBRARY_PLUGIN = 'plugin'
 export const LIBRARY_PLUGIN_BASIC = 'plugin-basic'
@@ -24,6 +25,7 @@ export const LIBRARY_LIST_FILES = [
   LIBRARY_COMPONENTS,
   LIBRARY_FLAGS,
   LIBRARY_MEDIA,
+  LIBRARY_TRANSLATE,
   LIBRARY_PLUGIN,
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_MAIN,

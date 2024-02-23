@@ -1,8 +1,13 @@
+import { PropertiesFile } from '../properties/PropertiesFile.ts'
 import { LibraryItems } from './LibraryItems'
+
 import {
   LIBRARY_DIR,
   LIBRARY_INDEX,
   LIBRARY_LIST_FILES,
+  LIBRARY_MAIN,
+  LIBRARY_PLUGIN,
+  LIBRARY_PLUGIN_BASIC,
   LIBRARY_TYPES,
   LIBRARY_TYPES_COMPONENT
 } from '../../config/library'
@@ -19,29 +24,51 @@ export class LibraryTypes {
   }
 
   make (): this {
+    const data = [
+      'import \'@vue/runtime-core\'',
+      'import { components } from \'./components\'',
+      '',
+      'declare module \'@vue/runtime-core\' {',
+      '  export interface GlobalComponents {',
+      ...this.initComponents(),
+      '  }',
+      '}'
+    ]
+
     this.items.write(
       LIBRARY_TYPES,
-      [
-        'import \'@vue/runtime-core\'',
-        'import { components } from \'./components\'',
-        '',
-        'declare module \'@vue/runtime-core\' {',
-        '  export interface GlobalComponents {',
-        ...this.initComponents(),
-        '  }',
-        '}'
-      ],
+      data,
       'd.ts'
     )
 
     this.items.write(
       LIBRARY_TYPES_COMPONENT,
       [
-        ...this.initLibrary(),
         ...this.initComponentsModule()
       ],
       'd.ts'
     )
+
+    return this
+  }
+
+  makePlugin (): this {
+    [
+      LIBRARY_PLUGIN,
+      LIBRARY_PLUGIN_BASIC,
+      LIBRARY_MAIN
+    ].forEach(item => {
+      PropertiesFile.write(
+        [item],
+        'index',
+        [
+          `import '../dist/${LIBRARY_DIR}/types'`,
+          `export * from '../dist/${LIBRARY_DIR}/${item}'`,
+          ''
+        ].join('\r\n'),
+        'd.ts'
+      )
+    })
 
     return this
   }
@@ -74,7 +101,7 @@ export class LibraryTypes {
         data.push(
           '',
           `declare module '${dirMain}/${codeFull}' {`,
-          `  export { ${codeFull} } from '${dirMain}/${design}/${dir}/${codeFull}.vue'`,
+          `  export { ${codeFull} } from '${dirMain}/${design}/${dir}'`,
           '}'
         )
       })
@@ -86,17 +113,17 @@ export class LibraryTypes {
     const dirMain: string = this.items.getGlobalName().toLowerCase()
     const data: string[] = [
       `declare module '${dirMain}' {`,
-      `  export * from '${dirMain}/dist/${LIBRARY_INDEX}.js'`,
+      `  export * from '${dirMain}/dist/${LIBRARY_DIR}/${LIBRARY_INDEX}'`,
       '}'
     ]
 
     LIBRARY_LIST_FILES.forEach(name => {
-      const dir = name.match(/\.scss$/) ? LIBRARY_DIR : 'dist'
-      const extension = name.match(/\.scss$/) ? '' : '.js'
+      const dir = name.match(/\.scss$/) ? 'dist' : `dist/${LIBRARY_DIR}`
+      const extension = name.match(/\.scss$/) ? '.css' : ''
 
       data.push(
-        `declare module '${dirMain}/${name}' {`,
-        `  export * from '${dirMain}/${dir}/${name}${extension}'`,
+        `declare module '${dirMain}/${name.replace(/\.scss$/, '.css')}' {`,
+        `  export * from '${dirMain}/${dir}/${name.replace(/\.scss$/, '')}${extension}'`,
         '}'
       )
     })

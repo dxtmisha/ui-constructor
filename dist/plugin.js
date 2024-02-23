@@ -1,13 +1,7 @@
 import './plugin.css';
-import { f as i } from "./Icons-253BbGkD.js";
-import { components as m } from "./components.js";
-const p = {
-  install: async (o) => {
-    await (await import("./media.js")).makeMedia(), i(m, (a, t) => {
-      o.component(t, a);
-    });
-  }
-};
+import { uiComponentsPlugin as t } from "./components.js";
+import { registrationUiTranslate as e } from "./translate.js";
+const n = async (r, a) => (await (await import("./media.js")).makeMedia(), a && a != null && a.translate && await e(a.translate), r.use(t), r);
 export {
-  p as uiPlugin
+  n as registrationUi
 };

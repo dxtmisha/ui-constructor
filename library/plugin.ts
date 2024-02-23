@@ -2,18 +2,23 @@
 // Этот файл генерируется скриптом, не редактировать.
 
 import { type App } from 'vue'
-import { forEach } from '../functions/forEach'
 
-import { components } from './components'
+import { uiComponentsPlugin } from './components'
+import { registrationUiTranslate } from './translate'
+
 import './style.scss'
 import './types.d.ts'
 
-export const uiPlugin = {
-  install: async (app: App) => {
-    await (await import('./media')).makeMedia()
+export const registrationUi = async (app: App, options?: Record<string, any>): Promise<App> => {
+  await (await import('./media')).makeMedia()
 
-    forEach(components, (component, name) => {
-      app.component(name, component)
-    })
+  if (options) {
+    if (options?.translate) {
+      await registrationUiTranslate(options.translate)
+    }
   }
+
+  app.use(uiComponentsPlugin)
+
+  return app
 }

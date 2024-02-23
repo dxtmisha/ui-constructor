@@ -1,34 +1,34 @@
-var S = Object.defineProperty;
-var E = (a, n, e) => n in a ? S(a, n, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[n] = e;
-var u = (a, n, e) => (E(a, typeof n != "symbol" ? n + "" : n, e), e);
-function P(a) {
+var z = Object.defineProperty;
+var A = (a, n, e) => n in a ? z(a, n, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[n] = e;
+var u = (a, n, e) => (A(a, typeof n != "symbol" ? n + "" : n, e), e);
+function S(a) {
   return !!(a && typeof a == "object");
 }
-function D(a) {
+function C(a) {
   return typeof a == "string";
 }
-function T(a) {
+function m(a) {
   return JSON.parse(JSON.stringify(a));
 }
-function k(a, n) {
-  if (P(a)) {
+function U(a, n) {
+  if (S(a)) {
     const e = [];
-    return a instanceof Map ? a.forEach((o, t) => e.push(n(o, t, a))) : Array.isArray(a) ? a.forEach((o, t) => e.push(n(o, t, a))) : Object.entries(a).forEach(
-      ([o, t]) => e.push(n(t, o, a))
+    return a instanceof Map ? a.forEach((o, r) => e.push(n(o, r, a))) : Array.isArray(a) ? a.forEach((o, r) => e.push(n(o, r, a))) : Object.entries(a).forEach(
+      ([o, r]) => e.push(n(r, o, a))
     ), e.filter((o) => o !== void 0);
   }
   return [];
 }
-function L(a) {
+function E(a) {
   return a instanceof Function || typeof a == "function";
 }
-function B(a) {
-  return L(a) ? a() : a;
+function P(a) {
+  return E(a) ? a() : a;
 }
-function C(a) {
+function M(a) {
   return a == null;
 }
-function I(a) {
+function T(a) {
   if (a)
     switch (typeof a) {
       case "bigint":
@@ -40,7 +40,7 @@ function I(a) {
       case "symbol":
         return !0;
       case "object":
-        return Array.isArray(a) ? a.length > 0 : Object.values(a).some((n) => !C(n));
+        return Array.isArray(a) ? a.length > 0 : Object.values(a).some((n) => !M(n));
       case "string":
         return !["", "undefined", "null", "0", "false", "[]"].includes(a);
       case "undefined":
@@ -50,13 +50,13 @@ function I(a) {
     }
   return !1;
 }
-function A() {
+function D() {
   return typeof window < "u";
 }
-function N(a, n) {
-  return C(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
+function B(a, n) {
+  return M(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
 }
-function f(a, n = !1) {
+function p(a, n = !1) {
   if (typeof a == "string") {
     const e = a.trim();
     switch (e) {
@@ -86,8 +86,8 @@ function f(a, n = !1) {
   }
   return a;
 }
-var l = { VITE_PREFIX: "__dUi", VITE_DESIGNS: "m2,m3,c1,c2", VITE_DESIGNS_MAIN: "m3", VITE_DESIGNS_GLOBAL: "UI", VITE_UI_GIT: "git+https://github.com/dxtmisha/ui-playground.git", VITE_UI_WEB: "https://ru.dev2.coralclub.app", VITE_UI_PATH: "/ui/", VITE_UI_API_TRANSLATE: "restApi/uiTranslate", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
-const d = {
+var i = { VITE_PREFIX: "__dUi", VITE_DESIGNS: "m2,m3,c1,c2", VITE_DESIGNS_MAIN: "m3", VITE_DESIGNS_GLOBAL: "UI", VITE_UI_GIT: "git+https://github.com/dxtmisha/ui-playground.git", VITE_UI_WEB: "https://ru.dev2.coralclub.app", VITE_UI_PATH: "/ui/", VITE_UI_API_TRANSLATE: "restApi/uiTranslate", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+const y = {
   api: {
     index: "UI_API_URL",
     value: "/api/"
@@ -113,7 +113,7 @@ const d = {
     value: "ui-playground-"
   }
 };
-class b {
+class L {
   /**
    * Constructor
    * @param index property name /<br>название свойства
@@ -128,19 +128,19 @@ class b {
    * @param defaultValue default property value /<br>значение свойства по умолчанию
    */
   get(n) {
-    var o, t, s;
+    var o, r, g;
     const e = this.getName();
     if (import.meta) {
-      const i = (l == null ? void 0 : l[e]) ?? (l == null ? void 0 : l[`VITE_${e}`]);
-      if (i)
-        return f(i);
+      const s = (i == null ? void 0 : i[e]) ?? (i == null ? void 0 : i[`VITE_${e}`]);
+      if (s)
+        return p(s);
     }
     if (typeof process < "u") {
-      const i = ((o = process.env) == null ? void 0 : o[e]) ?? ((t = process.env) == null ? void 0 : t[`VUE_APP_${e}`]) ?? ((s = process.env) == null ? void 0 : s[`NUXT_${e}`]);
-      if (i)
-        return f(i);
+      const s = ((o = process.env) == null ? void 0 : o[e]) ?? ((r = process.env) == null ? void 0 : r[`VUE_APP_${e}`]) ?? ((g = process.env) == null ? void 0 : g[`NUXT_${e}`]);
+      if (s)
+        return p(s);
     }
-    return f(
+    return p(
       n ?? this.getValue()
     );
   }
@@ -150,7 +150,7 @@ class b {
    * @private
    */
   getBasic() {
-    return d == null ? void 0 : d[this.index];
+    return y == null ? void 0 : y[this.index];
   }
   /**
    * Get the full key name in env.<br>
@@ -170,9 +170,9 @@ class b {
   }
 }
 function c(a, n) {
-  return new b(a).get(n);
+  return new L(a).get(n);
 }
-class _ {
+class I {
   /**
    * Constructor
    * @param name value name /<br>название значения
@@ -183,10 +183,10 @@ class _ {
     u(this, "age");
     this.name = n, this.isSession = e;
     const o = `${e ? "session" : "storage"}#${n}`;
-    if (o in M)
-      return M[o];
-    const t = this.getValue();
-    t && (this.value = t.value, this.age = t.age), M[o] = this;
+    if (o in f)
+      return f[o];
+    const r = this.getValue();
+    r && (this.value = r.value, this.age = r.age), f[o] = this;
   }
   /**
    * Getting data from local storage.<br>
@@ -207,7 +207,7 @@ class _ {
    */
   set(n) {
     var e, o;
-    return this.value = B(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
+    return this.value = P(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
       value: this.value,
       age: this.age
     })), this.value;
@@ -218,14 +218,14 @@ class _ {
    * @param cache cache time /<br>время кэширования
    */
   isCache(n) {
-    return C(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
+    return M(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
   }
   /**
    * Returns an object for working with storage.<br>
    * Возвращает объект для работы с хранилищем.
    */
   getMethod() {
-    if (A())
+    if (D())
       return this.isSession ? window == null ? void 0 : window.sessionStorage : window == null ? void 0 : window.localStorage;
   }
   /**
@@ -249,7 +249,7 @@ class _ {
       }
   }
 }
-const M = {}, v = [
+const f = {}, _ = [
   {
     country: "US",
     countryAlternative: [
@@ -2362,7 +2362,7 @@ const M = {}, v = [
     language: "es",
     firstDay: "Mo"
   }
-], G = "geo-code", r = class r {
+], N = "geo-code", t = class t {
   /**
    * Information about the current country.<br>
    * Информация об текущей стране.
@@ -2420,7 +2420,7 @@ const M = {}, v = [
    * Возвращает полный список стран.
    */
   static getList() {
-    return v;
+    return _;
   }
   /**
    * Determines the current country by its full name.<br>
@@ -2458,7 +2458,7 @@ const M = {}, v = [
    */
   static getByCode(n) {
     let e;
-    return n && (n.match(/([A-Z]{2}-[a-z]{2})|([a-z]{2}-[A-Z]{2})/) && (e = this.getByCodeFull(n)), !e && n.match(/[A-Z]{2}/) && (e = this.getByCountry(this.toCountry(n))), !e && n.match(/[a-z]{2}/) && (e = this.getByLanguage(this.toLanguage(n)))), this.toFull(T(e ?? this.getList()[0]));
+    return n && (n.match(/([A-Z]{2}-[a-z]{2})|([a-z]{2}-[A-Z]{2})/) && (e = this.getByCodeFull(n)), !e && n.match(/[A-Z]{2}/) && (e = this.getByCountry(this.toCountry(n))), !e && n.match(/[a-z]{2}/) && (e = this.getByLanguage(this.toLanguage(n)))), this.toFull(m(e ?? this.getList()[0]));
   }
   /**
    * Returns the full data by language and country.<br>
@@ -2467,7 +2467,7 @@ const M = {}, v = [
    */
   static getByCodeFull(n) {
     return this.getList().find(
-      (e) => N(n, [
+      (e) => B(n, [
         `${e.language}-${e.country}`,
         `${e.country}-${e.language}`
       ])
@@ -2481,7 +2481,7 @@ const M = {}, v = [
   static getByCountry(n) {
     return this.getList().find((e) => {
       var o;
-      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((t) => t === n));
+      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((r) => r === n));
     });
   }
   /**
@@ -2492,7 +2492,7 @@ const M = {}, v = [
   static getByLanguage(n) {
     return this.getList().find((e) => {
       var o;
-      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((t) => t === n));
+      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((r) => r === n));
     });
   }
   /**
@@ -2501,7 +2501,7 @@ const M = {}, v = [
    */
   static findLocation() {
     var n;
-    return A() && (this.storage.get() || ((n = document.querySelector("html")) == null ? void 0 : n.lang) || navigator.language || navigator.languages[0] || c("language")) || "en-GB";
+    return D() && (this.storage.get() || ((n = document.querySelector("html")) == null ? void 0 : n.lang) || navigator.language || navigator.languages[0] || c("language")) || "en-GB";
   }
   /**
    * Determines the current language.<br>
@@ -2542,10 +2542,10 @@ const M = {}, v = [
     };
   }
 };
-u(r, "storage", new _(G)), u(r, "location"), u(r, "item"), u(r, "language"), r.location = r.findLocation(), r.language = r.findLanguage(r.location), r.item = r.getByCode(r.location);
-let h = r;
-var U = /* @__PURE__ */ ((a) => (a.get = "GET", a.post = "POST", a.put = "PUT", a.delete = "DELETE", a))(U || {});
-class y {
+u(t, "storage", new I(N)), u(t, "location"), u(t, "item"), u(t, "language"), t.location = t.findLocation(), t.language = t.findLanguage(t.location), t.item = t.getByCode(t.location);
+let l = t;
+var b = /* @__PURE__ */ ((a) => (a.get = "GET", a.post = "POST", a.put = "PUT", a.delete = "DELETE", a))(b || {});
+class d {
   /**
    * Is the server local.<br>
    * Является ли сервер локальный.
@@ -2571,7 +2571,7 @@ class y {
    * @param path path to the script /<br>путь к скрипту
    */
   static getUrl(n) {
-    return `${this.isLocalhost() ? this.urlLocalhost : this.url}${n}`.replace("{locale}", h.getLocation()).replace("{country}", h.getCountry()).replace("{language}", h.getLanguage());
+    return `${this.isLocalhost() ? this.urlLocalhost : this.url}${n}`.replace("{locale}", l.getLocation()).replace("{country}", l.getCountry()).replace("{language}", l.getLanguage());
   }
   /**
    * Get access to a script by the name of the team.<br>
@@ -2587,8 +2587,8 @@ class y {
    * @param request this request /<br>данный запрос
    */
   static getBody(n) {
-    if (I(n))
-      return n instanceof FormData || D(n) ? n : JSON.stringify(n);
+    if (T(n))
+      return n instanceof FormData || C(n) ? n : JSON.stringify(n);
   }
   /**
    * To execute a request.<br>
@@ -2596,7 +2596,7 @@ class y {
    * @param pathRequest query string or list of parameters /<br>строка запроса или список параметров
    */
   static async response(n) {
-    return D(n) ? await this.fetch({
+    return C(n) ? await this.fetch({
       path: n
     }) : await this.fetch(n);
   }
@@ -2627,107 +2627,41 @@ class y {
     path: n = "",
     method: e = "GET",
     request: o = void 0,
-    headers: t = {},
-    type: s = "application/json;charset=UTF-8",
-    init: i = {}
+    headers: r = {},
+    type: g = "application/json;charset=UTF-8",
+    init: s = {}
   }) {
     try {
-      const p = this.getHeaders(t, s), m = p && e === "GET" ? "POST" : e;
+      const h = this.getHeaders(r, g), k = h && e === "GET" ? "POST" : e;
       return await (await fetch(this.getUrl(n), {
-        ...i,
-        method: m,
-        headers: p,
+        ...s,
+        method: k,
+        headers: h,
         body: this.getBody(o)
       })).json();
-    } catch (p) {
-      console.error(p);
+    } catch (h) {
+      console.error(h);
     }
     return {};
   }
 }
-u(y, "url", c("api", "/")), u(y, "urlLocalhost", `${c("BASE_URL", "/")}public/`), u(y, "urlCommand", "ui");
-const g = class g {
-  /**
-   * Checks if the given icon is in the list of connected icons.<br>
-   * Проверяет, есть ли данная иконка в списке подключенных иконок.
-   * @param index icon name /<br>название иконки
-   */
-  static is(n) {
-    return n in this.icons || this.getName(n) in this.icons;
-  }
-  /**
-   * Returns the icon by the name.<br>
-   * Возвращает иконку по названию.
-   * @param index icon name /<br>название иконки
-   * @param url path to the storage location of the icon, if the icon does not exist /<br>
-   * путь к месту хранения иконки, если иконка не существует
-   */
-  static async get(n, e = "") {
-    var t, s;
-    const o = ((t = this.icons) == null ? void 0 : t[this.getName(n)]) ?? ((s = this.icons) == null ? void 0 : s[n]) ?? `${n.replace(/^@/, e ?? this.url)}.svg`;
-    return typeof o == "string" ? o : await o;
-  }
-  /**
-   * Returns a list of names of all registered icons.<br>
-   * Возвращает список названий всех зарегистрированных иконок.
-   */
-  static getNameList() {
-    return k(this.icons, (n, e) => e.replace(/^@/, ""));
-  }
-  /**
-   * Adding custom icons.<br>
-   * Добавление пользовательских иконок.
-   * @param index icon name /<br>название иконки
-   * @param file path to the file /<br>путь к файлу
-   */
-  static add(n, e) {
-    this.icons[this.getName(n)] = e;
-  }
-  /**
-   * Adding custom global icons.<br>
-   * Добавление пользовательских глобальных иконок.
-   * @param index icon name /<br>название иконки
-   * @param file path to the file /<br>путь к файлу
-   */
-  static addGlobal(n, e) {
-    this.icons[this.getName(n)] = `${this.urlGlobal}${e}`;
-  }
-  /**
-   * Adding an icon by the list.<br>
-   * Добавление иконки по списку.
-   * @param list list of icons /<br>список иконки
-   */
-  static addByList(n) {
-    k(n, (e, o) => this.add(o, e));
-  }
-  /**
-   * Returns the icon name.<br>
-   * Возвращает название иконки.
-   * @param index icon name /<br>название иконки
-   */
-  static getName(n) {
-    return `@${n}`;
-  }
-};
-u(g, "icons", {}), u(g, "url", c("UI_PATH") ?? "/icons/"), u(g, "urlGlobal", `${y.isLocalhost(), ""}${g.url}`);
-let z = g;
+u(d, "url", c("api", "/")), u(d, "urlLocalhost", `${c("BASE_URL", "/")}public/`), u(d, "urlCommand", "ui");
 export {
-  U as A,
-  _ as D,
-  b as E,
-  h as G,
-  z as I,
-  I as a,
-  L as b,
-  T as c,
-  C as d,
-  B as e,
-  k as f,
-  P as g,
-  N as h,
-  A as i,
-  D as j,
-  y as k,
-  f as t,
+  b as A,
+  I as D,
+  L as E,
+  l as G,
+  T as a,
+  E as b,
+  m as c,
+  M as d,
+  P as e,
+  U as f,
+  S as g,
+  B as h,
+  D as i,
+  C as j,
+  d as k,
+  p as t,
   c as u
 };

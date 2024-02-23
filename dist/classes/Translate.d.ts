@@ -38,6 +38,18 @@ export declare class Translate {
      */
     static add(names: string | string[]): Promise<void>;
     /**
+     * Adds texts in sync mode.<br>
+     * Добавляет тексты в режиме синхронизации.
+     * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+     */
+    static addSync(data: Record<string, string>): void;
+    /**
+     * Adding data in the form of a query or directly, depending on the execution environment.<br>
+     * Добавление данных в виде запроса или напрямую, в зависимости от среды выполнения.
+     * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+     */
+    static addNormalOrSync(data: Record<string, string>): Promise<void>;
+    /**
      * Getting the full title for translation.<br>
      * Получение полного названия для перевода.
      * @param name code name /<br>название кода

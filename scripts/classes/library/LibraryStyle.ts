@@ -33,8 +33,8 @@ export class LibraryStyle {
       const basic: string[] = []
 
       designs.forEach(item => {
-        data.push(`@import "./../${item}/${item === main ? 'main' : 'basic'}";`)
-        basic.push(`@import "./../${item}/basic";`)
+        data.push(`@import "./../${item}/styles/${item === main ? 'main' : 'basic'}";`)
+        basic.push(`@import "./../${item}/styles/basic";`)
       })
 
       this.items.write(LIBRARY_STYLE, data, 'scss')

@@ -22,8 +22,8 @@ import { LibraryMain } from '../library/LibraryMain'
 import { LibraryStyle } from '../library/LibraryStyle'
 import { LibraryTypes } from '../library/LibraryTypes'
 
-import { LibraryPackage } from '../library/LibraryPackage'
 import { LibraryBuild } from '../library/LibraryBuild'
+import { LibraryPackage } from '../library/LibraryPackage'
 
 config()
 
@@ -90,12 +90,13 @@ export class DesignUi {
 
     new LibraryStyle(this.components).make()
     new LibraryTypes(this.components).make()
-
-    new LibraryPackage(this.components).make()
   }
 
   makeBuild (): void {
     new LibraryBuild().make()
+
+    new LibraryTypes(this.components).makePlugin()
+    new LibraryPackage(this.components).make()
   }
 
   /**

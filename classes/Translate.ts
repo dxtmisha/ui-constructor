@@ -1,3 +1,6 @@
+import { forEach } from '../functions/forEach'
+import { isFilled } from '../functions/isFilled'
+import { isString } from '../functions/isString'
 import { toArray } from '../functions/toArray'
 
 import { Geo } from './Geo'
@@ -99,6 +102,41 @@ export class Translate {
         })
       }, 160)
     })
+  }
+
+  /**
+   * Adds texts in sync mode.<br>
+   * Добавляет тексты в режиме синхронизации.
+   * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+   */
+  static addSync (data: Record<string, string>): void {
+    forEach(data, (text, key) => {
+      if (
+        isString(text) &&
+        isFilled(text)
+      ) {
+        this.data[key] = text
+      }
+    })
+  }
+
+  /**
+   * Adding data in the form of a query or directly, depending on the execution environment.<br>
+   * Добавление данных в виде запроса или напрямую, в зависимости от среды выполнения.
+   * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+   */
+  static async addNormalOrSync (data: Record<string, string>): Promise<void> {
+    if (isFilled(data)) {
+      if (Api.isLocalhost()) {
+        this.addSync(data)
+      } else {
+        const names = Object.keys(data)
+
+        if (names.length > 0) {
+          await this.add(names)
+        }
+      }
+    }
   }
 
   /**

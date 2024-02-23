@@ -1,15 +1,15 @@
-import { f as s } from "./Icons-253BbGkD.js";
-import { M3Image as t } from "./M3Image.js";
-const a = {
-  M3Image: t
-}, i = {
+import { f as m } from "./Api-BN9TTpr9.js";
+import { M3Image as s } from "./M3Image.js";
+const c = {
+  M3Image: s
+}, a = {
   install: async (o) => {
-    s(a, (n, m) => {
-      o.component(m, n);
+    m(c, (n, t) => {
+      o.component(t, n);
     });
   }
 };
 export {
-  a as components,
-  i as uiComponentsPlugin
+  c as components,
+  a as uiComponentsPlugin
 };

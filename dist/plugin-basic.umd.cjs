@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./components.umd.cjs"),n={install:i=>{i.use(e.uiComponentsPlugin)}};exports.uiBasicPlugin=n;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const i=require("./components.umd.cjs"),n=require("./translate.umd.cjs"),r={install:t=>t.use(i.uiComponentsPlugin)},a=async(t,e)=>(e&&e!=null&&e.translate&&await n.registrationUiTranslate(e.translate),t.use(i.uiComponentsPlugin),t);exports.registrationUiBasic=a;exports.uiPlugin=r;

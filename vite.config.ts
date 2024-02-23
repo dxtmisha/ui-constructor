@@ -27,10 +27,10 @@ export default defineConfig(() => {
           'constructors/**/*.{ts,tsx}',
           'functions/**/*.ts',
           'types/**/*.ts',
-          'c1/**/*.{ts,tsx,vue}',
-          'c2/**/*.{ts,tsx,vue}',
-          'm2/**/*.{ts,tsx,vue}',
-          'm3/**/*.{ts,tsx,vue}'
+          'c1/**/index.ts',
+          'c2/**/*.ts',
+          'm2/**/*.ts',
+          'm3/**/index.ts'
         ]
       })
     ],
@@ -41,6 +41,7 @@ export default defineConfig(() => {
           index: resolve(__dirname, `${library}/index.ts`),
           flags: resolve(__dirname, `${library}/flags.ts`),
           media: resolve(__dirname, `${library}/media.ts`),
+          translate: resolve(__dirname, `${library}/translate.ts`),
           components: resolve(__dirname, `${library}/components.ts`),
           plugin: resolve(__dirname, `${library}/plugin.ts`),
           'plugin-basic': resolve(__dirname, `${library}/plugin-basic.ts`),

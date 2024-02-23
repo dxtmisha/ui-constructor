@@ -134,15 +134,15 @@ export class Styles {
    * @param design design name /<br>название дизайна
    */
   protected initBasic (design: string): this {
-    const dir = [...StylesTool.getDir(design), '..']
+    const dir = StylesTool.getDir(design)
 
     PropertiesFile.write(
       dir,
       FILE_BASIC,
       [
-        `@import "./styles/${FILE_VAR}";`,
-        `@import "./styles/${FILE_CLASS}";`,
-        `@import "./styles/${FILE_PROPERTIES}";`
+        `@import "./${FILE_VAR}";`,
+        `@import "./${FILE_CLASS}";`,
+        `@import "./${FILE_PROPERTIES}";`
       ].join('\r\n'),
       EXTENSION_STYLE_FILE
     )
@@ -153,7 +153,7 @@ export class Styles {
         FILE_STYLE,
         [
           `@import "./${FILE_BASIC}";`,
-          '@import "../styles/properties";',
+          '@import "../../styles/properties";',
           '',
           `$designsDesign: '${design}';`,
           `$designsDesigns: ('${design}');`
@@ -168,8 +168,8 @@ export class Styles {
         FILE_MAIN,
         [
           `@import "./${FILE_BASIC}";`,
-          '@import "../styles/properties";',
-          '@import "../styles/init";',
+          '@import "../../styles/properties";',
+          '@import "../../styles/init";',
           '',
           '@include initGlobal;',
           `@include initDesignBody('${design}.main');`

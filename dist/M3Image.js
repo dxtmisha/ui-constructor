@@ -2,8 +2,9 @@ import './M3Image.css';
 var k = Object.defineProperty;
 var I = (s, t, e) => t in s ? k(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
 var r = (s, t, e) => (I(s, typeof t != "symbol" ? t + "" : t, e), e);
-import { C as S, G as x, q as b, i as z, E as C, a as H, n as m, x as g, H as f, F as p, w as B, I as j, Q as W, O as A, M as E, W as F, X as M, L as O } from "./DesignConstructorAbstract-Dn9vNsVi.js";
-import { I as w, j as d, a as $ } from "./Icons-253BbGkD.js";
+import { C as S, G as x, p as b, i as z, E as C, a as B, m, w as g, F as f, B as p, u as H, H as j, P as W, N as A, L as E, V as F, W as M, K as O } from "./DesignConstructorAbstract-B06z4uE_.js";
+import { j as d, a as $ } from "./Api-BN9TTpr9.js";
+import { I as w } from "./Icons-DxBXy78v.js";
 var n = /* @__PURE__ */ ((s) => (s.file = "file", s.image = "image", s.color = "color", s.public = "public", s.filled = "filled", s.outlined = "outlined", s.round = "round", s.sharp = "sharp", s.twoTone = "two-tone", s.material = "material", s.icon = "icon", s))(n || {});
 class R extends S {
   /**
@@ -116,7 +117,7 @@ class G {
     });
   }
 }
-class D extends b {
+class N extends b {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -191,7 +192,7 @@ class D extends b {
       }
   }
 }
-class N {
+class P {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -268,7 +269,7 @@ class N {
     };
   }
 }
-class P {
+class D {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -600,8 +601,8 @@ class c {
   }
 }
 r(c, "objects", []), r(c, "objectsAdaptive", []), r(c, "cache", []), r(c, "event"), r(c, "time");
-const X = "main", v = 256;
-class U {
+const U = "main", v = 256;
+class X {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -656,14 +657,14 @@ class U {
    */
   getGroup() {
     var t;
-    return ((t = this.props) == null ? void 0 : t.adaptiveGroup) ?? X;
+    return ((t = this.props) == null ? void 0 : t.adaptiveGroup) ?? U;
   }
   /**
    * Returns the identifier of the element.<br>
    * Возвращает идентификатор элемента.
    */
   getId() {
-    return H(this.element.value);
+    return B(this.element.value);
   }
   /**
    * Returns the current element.<br>
@@ -884,9 +885,9 @@ let T = class extends b {
     r(this, "position");
     r(this, "adaptiveItem");
     r(this, "background");
-    this.props = e, this.callback = a, this.type = new R(e), this.data = new D(e, this.type, () => {
+    this.props = e, this.callback = a, this.type = new R(e), this.data = new N(e, this.type, () => {
       this.adaptiveItem.is() ? this.adaptiveItem.reset() : this.make(!0);
-    }), this.coordinator = new N(e), this.position = new P(e, this.coordinator), this.adaptiveItem = new U(
+    }), this.coordinator = new P(e), this.position = new D(e, this.coordinator), this.adaptiveItem = new X(
       e,
       this.data,
       i,
@@ -1013,7 +1014,7 @@ let T = class extends b {
     return {};
   }
 };
-class q {
+class K {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -1041,7 +1042,7 @@ class q {
     this.item.destructor();
   }
 }
-class Q extends B {
+class Z extends H {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -1055,7 +1056,7 @@ class Q extends B {
       a
     );
     r(this, "image");
-    this.image = new q(
+    this.image = new K(
       this.props,
       this.element
     ), this.init(), j(() => this.image.destructor()), W(
@@ -1132,7 +1133,7 @@ class Q extends B {
     }, e.text.value);
   }
 }
-const Z = {
+const q = {
   adaptiveGroup: "basic"
 }, J = {
   // Values
@@ -1144,7 +1145,7 @@ const Z = {
   // Adaptive
   adaptiveGroup: {
     type: String,
-    default: Z.adaptiveGroup
+    default: q.adaptiveGroup
   },
   adaptiveAlways: Boolean,
   objectWidth: [String, Number],
@@ -1156,17 +1157,17 @@ const Z = {
   disabled: Boolean,
   hide: Boolean,
   adaptive: Boolean
-}, K = {
+}, Q = {
   ...J,
   // :prop [!] System label / Системная метка
   turn: Boolean,
   disabled: Boolean,
   hide: Boolean,
   adaptive: Boolean
-}, rt = /* @__PURE__ */ E({
+}, V = /* @__PURE__ */ E({
   name: "M3Image",
   __name: "M3Image",
-  props: { ...K },
+  props: { ...Q },
   emits: ["load"],
   setup(s, { expose: t, emit: e }) {
     const i = e, a = s, h = g(() => ({
@@ -1185,7 +1186,7 @@ const Z = {
       // TODO: User styles / Пользовательские стили
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), l = new Q(
+    })), l = new Z(
       "m3.image",
       a,
       {
@@ -1194,9 +1195,9 @@ const Z = {
         styles: o
       }
     ), y = l.render();
-    return t(l.expose()), (V, tt) => (F(), M(O(y)));
+    return t(l.expose()), (tt, et) => (F(), M(O(y)));
   }
-});
+}), ht = V;
 export {
-  rt as M3Image
+  ht as M3Image
 };
