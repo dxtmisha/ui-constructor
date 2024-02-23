@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import M3Image from 'ui/m3/Image/M3Image.vue'
+import { M3Image } from 'ui/M3Image'
 
 import {
-  imageArgs,
-  imageDescription,
-  imageDescriptionAdaptive,
-  imageValues
-} from 'ui/book/m3/image'
+  m3ImageArgs,
+  m3ImageDescription,
+  m3ImageDescriptionAdaptive,
+  m3ImageValues
+} from 'ui/book/m3/image.ts'
 
 import galaxyZFold5 from '../assets/Galaxy_Z_Fold5.png'
 import galaxyZFlip5 from '../assets/Galaxy_Z_Flip5.png'
@@ -21,11 +21,11 @@ const meta = {
   parameters: {
     design: 'm3',
     docs: {
-      description: { component: imageDescription }
+      description: { component: m3ImageDescription }
     }
   },
-  argTypes: imageArgs,
-  args: imageValues
+  argTypes: m3ImageArgs,
+  args: m3ImageValues
 } satisfies Meta<typeof M3Image>
 
 export default meta
@@ -39,7 +39,7 @@ export const ImageAdaptive: Story = {
   parameters: {
     docs: {
       description: {
-        story: imageDescriptionAdaptive
+        story: m3ImageDescriptionAdaptive
       }
     }
   },

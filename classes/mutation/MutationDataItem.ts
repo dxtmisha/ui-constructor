@@ -106,7 +106,7 @@ export class MutationDataItem {
    * Возвращает название главного класса.
    */
   getClassMain (): string {
-    return `${this.getDesign()}-init`
+    return `${this.getDesign()}-system`
   }
 
   /**

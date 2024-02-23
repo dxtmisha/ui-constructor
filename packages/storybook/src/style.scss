@@ -1,0 +1,13 @@
+.sb-preview {
+  border-radius: 4px;
+  padding: 24px 32px;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    min-height: 64px;
+  }
+}

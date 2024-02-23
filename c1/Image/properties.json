@@ -1,0 +1,6 @@
+{
+  "main": "{d.image}",
+  "disabled": {
+    "color": "{sys.palette.onDisabled}"
+  }
+}

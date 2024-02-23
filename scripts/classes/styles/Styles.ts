@@ -147,20 +147,18 @@ export class Styles {
       EXTENSION_STYLE_FILE
     )
 
-    if (!PropertiesFile.is([...dir, `${FILE_STYLE}.${EXTENSION_STYLE_FILE}`])) {
-      PropertiesFile.write(
-        dir,
-        FILE_STYLE,
-        [
-          `@import "./${FILE_BASIC}";`,
-          '@import "../../styles/properties";',
-          '',
-          `$designsDesign: '${design}';`,
-          `$designsDesigns: ('${design}');`
-        ].join('\r\n'),
-        EXTENSION_STYLE_FILE
-      )
-    }
+    PropertiesFile.write(
+      dir,
+      FILE_STYLE,
+      [
+        `@import "../styles/${FILE_PROPERTIES}";`,
+        `@import "../../styles/${FILE_PROPERTIES}";`,
+        '',
+        `$designsDesign: '${design}';`,
+        `$designsDesigns: ('${design}');`
+      ].join('\r\n'),
+      EXTENSION_STYLE_FILE
+    )
 
     if (!PropertiesFile.is([...dir, `${FILE_MAIN}.${EXTENSION_STYLE_FILE}`])) {
       PropertiesFile.write(

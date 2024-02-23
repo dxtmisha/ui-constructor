@@ -85,10 +85,7 @@
   "st": {
     "value": {
       "file|import-st": "tokens/_init/st.json#st",
-      "file|import-light": "tokens/_init/theme/light.json#st",
-      "web": {
-        "_type": "none"
-      }
+      "file|import-light": "tokens/_init/theme/light.json#st"
     },
     "_type": "var",
     "_category": "root"
@@ -105,14 +102,15 @@
     "_type": "var",
     "_category": "root"
   },
-  "init": {
-    "font": "{st.web.text.body.b2Regular}",
-    "color": "{st.content.fg.color.neutral.primary}",
+  "system": {
+    "font": "{typography.text.body.md}",
+    "color": "{st.content.foreground.color.neutral.primary}",
     "_category": "class"
   },
   "main": {
-    "init": "{init}",
-    "background-color": "{st.content.bg.color.default.solid.normal}",
+    "font": "{typography.text.body.md}",
+    "color": "{st.content.foreground.color.neutral.primary}",
+    "background-color": "{st.content.background.color.default.solid.normal}",
     "_category": "class"
   },
   "font": {

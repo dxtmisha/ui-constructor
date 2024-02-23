@@ -1,3 +1,5 @@
+/* @jsxImportSource vue */
+
 import { PropertiesFile } from '../properties/PropertiesFile'
 
 import { DesignCommand } from './DesignCommand'

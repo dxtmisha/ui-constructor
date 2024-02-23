@@ -63,7 +63,7 @@ export class Translate {
    * Получение списка переводов по массиву кодов текста.
    * @param names list of codes to get translations /<br>список кодов для получения переводов
    */
-  static async getList<T extends string[]> (names: T): Promise<TranslateList<T>> {
+  static getList<T extends string[]> (names: T): Promise<TranslateList<T>> {
     return new Promise(resolve => {
       const list: Record<string, string> = {}
       let end = 0
@@ -78,6 +78,21 @@ export class Translate {
         })
       }
     })
+  }
+
+  /**
+   * Getting a list of translations by an array of text codes.<br>
+   * Получение списка переводов по массиву кодов текста.
+   * @param names list of codes to get translations /<br>список кодов для получения переводов
+   */
+  static getListSync<T extends string[]> (names: T): TranslateList<T> {
+    const list: Record<string, string> = {}
+
+    for (const name of names) {
+      list[name] = this.getSync(name)
+    }
+
+    return list as TranslateList<T>
   }
 
   /**
@@ -115,7 +130,7 @@ export class Translate {
         isString(text) &&
         isFilled(text)
       ) {
-        this.data[key] = text
+        this.data[this.getName(key)] = text
       }
     })
   }

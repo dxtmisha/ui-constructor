@@ -1,4 +1,4 @@
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
 import { LibraryItems } from './LibraryItems'
 
 import {

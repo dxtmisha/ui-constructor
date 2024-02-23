@@ -20,11 +20,11 @@ export function useTranslateRef<
 > (
   names: T
 ): ShallowRef<TranslateList<T>> {
-  const translate = shallowRef<TranslateList<T>>({} as TranslateList<T>)
+  const translate = shallowRef<TranslateList<T>>(Translate.getListSync(names))
 
   watchEffect(async () => {
     if (GeoRef.getLanguage()) {
-      translate.value = await Translate.getList(names)
+      translate.value = { ...await Translate.getList(names) }
     }
   })
 

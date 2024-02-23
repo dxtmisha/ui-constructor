@@ -4,10 +4,16 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
+import { M2Image } from '../m2/Image'
 import { M3Image } from '../m3/Image'
+import { C1Image } from '../c1/Image'
+import { C2Image } from '../c2/Image'
 
 export const components = {
-  M3Image
+  M2Image,
+  M3Image,
+  C1Image,
+  C2Image
 }
 
 export const uiComponentsPlugin = {

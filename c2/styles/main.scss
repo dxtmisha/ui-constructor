@@ -2,5 +2,7 @@
 @import "../../styles/properties";
 @import "../../styles/init";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Armenian:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
 @include initGlobal;
 @include initDesignBody('c2.main');

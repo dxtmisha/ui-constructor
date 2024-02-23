@@ -1,7 +1,5 @@
 import { computed, ref, watchEffect } from 'vue'
-import { getRef } from 'ui/functions/ref/getRef'
-
-import { GeoRef } from 'ui/classes/ref/GeoRef'
+import { getRef, GeoRef } from 'ui'
 
 import { globalTypes } from './config/globalTypes'
 
@@ -23,7 +21,7 @@ export const decorators = (story: any, {
       const isIL = computed(() => GeoRef.getCountry().value === 'IL')
       const classes = computed(() => {
         return {
-          [`${design.value}-init`]: design.value,
+          [`${design.value}-main`]: design.value,
           [`${design.value}-${theme.value}`]: design.value && theme.value,
           'dir-rtl': isIL.value,
           'sb-preview': true

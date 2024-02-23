@@ -1,0 +1,6 @@
+{
+  "main": "{d.image}",
+  "disabled": {
+    "color": "{st.content.foreground.color.neutral.disable}"
+  }
+}

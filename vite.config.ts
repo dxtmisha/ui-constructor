@@ -38,14 +38,29 @@ export default defineConfig(() => {
       cssCodeSplit: true,
       lib: {
         entry: {
-          index: resolve(__dirname, `${library}/index.ts`),
-          flags: resolve(__dirname, `${library}/flags.ts`),
-          media: resolve(__dirname, `${library}/media.ts`),
-          translate: resolve(__dirname, `${library}/translate.ts`),
-          components: resolve(__dirname, `${library}/components.ts`),
-          plugin: resolve(__dirname, `${library}/plugin.ts`),
-          'plugin-basic': resolve(__dirname, `${library}/plugin-basic.ts`),
-          main: resolve(__dirname, `${library}/main.ts`),
+          ...(() => {
+            const data: Record<string, any> = {}
+            const list = [
+              'index',
+              'flags',
+              'media',
+              'translate',
+              'components',
+              'components-m2',
+              'components-m3',
+              'plugin',
+              'plugin-m2',
+              'plugin-m3',
+              'plugin-basic',
+              'main'
+            ]
+
+            list.forEach(item => {
+              data[item] = resolve(__dirname, `${library}/${item}.ts`)
+            })
+
+            return data
+          })(),
           ...(() => {
             const data: Record<string, any> = {}
 
@@ -63,6 +78,17 @@ export default defineConfig(() => {
           }
 
           return `${entryName}.umd.${format}`
+        }
+      },
+      rollupOptions: {
+        external: ['vue', 'vue-router', 'ui'],
+        output: {
+          globals: {
+            vue: 'UI_CORE_VUE',
+            'vue-router': 'UI_CORE_VUE_ROUTER',
+            vuex: 'UI_CORE_VUEX',
+            ui: 'UI_CORE_UI'
+          }
         }
       }
     }

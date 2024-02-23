@@ -1,1 +1,1 @@
-{"name":"ui","library":"library","components":[{"name":"M3Image","path":"m3/Image"}]}
+{"name":"ui","library":"library","components":[{"name":"M2Image","path":"m2/Image"},{"name":"M3Image","path":"m3/Image"},{"name":"C1Image","path":"c1/Image"},{"name":"C2Image","path":"c2/Image"}]}

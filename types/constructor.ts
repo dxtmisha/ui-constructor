@@ -53,3 +53,7 @@ export type ConstrSetup<
   classes: RefType<CLASSES>
   styles: RefType<ConstrStyles>
 } & SETUP
+
+export type ConstrRegistration = {
+  translate: Record<string, string>
+}

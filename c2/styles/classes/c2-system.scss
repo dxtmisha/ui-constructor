@@ -1,0 +1,14 @@
+@import "../../../styles/all";
+
+.c2-system {
+  font-family: var(--c2-ot-typography-fontFamily-base);
+  @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-100)});
+  font-weight: var(--c2-ot-typography-fontWeight-400);
+  @include lineHeight(#{var(--c2-ot-typography-lineHeight-150)});
+  letter-spacing: var(--c2-ot-typography-tracking-lg);
+  @include textCase(#{var(--c2-ot-typography-textCase-none)});
+  text-decoration: var(--c2-ot-typography-textDecoration-none);
+  @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+  
+  @include color(#{var(--c2-st-content-foreground-color-neutral-primary)});
+}

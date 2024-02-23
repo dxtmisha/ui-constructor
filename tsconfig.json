@@ -16,6 +16,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -43,6 +44,9 @@
     "m3/**/*.ts",
     "m3/**/*.tsx",
     "m3/**/*.vue"
+  ],
+  "exclude": [
+    "scripts/templates/**/*.ts"
   ],
   "references": [
     {

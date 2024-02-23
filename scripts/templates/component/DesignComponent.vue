@@ -62,7 +62,7 @@
 </script>
 
 <template>
-  <render/>
+  <component :is="render"/>
 </template>
 
 <style lang="scss">

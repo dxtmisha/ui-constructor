@@ -4,7 +4,7 @@ import { computed } from 'vue'
 // import { isFilled } from '../../functions/isFilled'
 // import { inArray } from '../../functions/inArray'
 
-import { ImageDesign } from '../../constructors/Image/ImageDesign'
+import { ImageDesign } from '../../constructors/Image/ImageDesign.tsx'
 
 import {
   type ConstrClasses,
@@ -67,7 +67,7 @@ defineExpose(design.expose())
 </script>
 
 <template>
-  <render/>
+  <component :is="render"/>
 </template>
 
 <style lang="scss">

@@ -1,16 +1,14 @@
 import { createApp, type Plugin } from 'vue'
-import { isFilled, Translate } from 'ui'
-import { registrationUiComponents } from 'ui/create'
+import { isFilled } from 'ui'
+import { registrationUi } from 'ui/plugin'
 
-import 'ui/style-main'
-import 'ui/style-components'
 import '../src/style.scss'
 
 import App from './../src/App.vue'
 
 import './../src/tailwind.css'
 
-import { init, translate } from './../src/init'
+import { init } from './../src/init'
 
 import { createRouter } from 'vue-router'
 import { router } from './../src/router'
@@ -18,17 +16,19 @@ import { router } from './../src/router'
 import { createStore } from 'vuex'
 import { store } from './../src/store'
 
-Translate.add(translate).then(async () => {
-  const app = createApp(App)
+import { translate } from '../src/translate.ts'
 
-  if (isFilled(router.routes)) {
-    app.use(createRouter(router) as Plugin<[]>)
-  }
+const app = createApp(App)
 
-  app.use(createStore(store))
+app.use(createStore(store))
 
-  await registrationUiComponents(app)
+if (isFilled(router.routes)) {
+  app.use(createRouter(router) as Plugin<[]>)
+}
+
+;(async () => {
   await init(app)
-
-  app.mount('#app')
-})
+  await registrationUi(app, {
+    translate
+  })
+})().then(() => app.mount('#app'))

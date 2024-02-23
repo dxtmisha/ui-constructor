@@ -1,15 +1,19 @@
 import { toCamelCase } from '../../../functions/toCamelCase'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
 
 import { LibraryItems } from './LibraryItems'
 
 import {
+  LIBRARY_DIR,
   LIBRARY_MEDIA,
   LIBRARY_PLUGIN,
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_STYLE,
-  LIBRARY_STYLE_BASIC, LIBRARY_TRANSLATE, LIBRARY_TYPES
+  LIBRARY_STYLE_BASIC,
+  LIBRARY_TRANSLATE,
+  LIBRARY_TYPES
 } from '../../config/library'
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
+import { PropertiesFile } from '../properties/PropertiesFile.ts'
 
 export class LibraryPlugin {
   /**
@@ -50,35 +54,49 @@ export class LibraryPlugin {
 
   private makePlugin (): void {
     const ui = this.items.getGlobalName()
-    const name = `registration${toCamelCaseFirst(ui)}`
     const translate = this.getNameTranslate()
 
-    this.items.write(
-      LIBRARY_PLUGIN,
-      [
-        'import { type App } from \'vue\'',
-        '',
-        `import { ${toCamelCase(ui)}ComponentsPlugin } from './components'`,
-        `import { ${translate} } from './${LIBRARY_TRANSLATE}'`,
-        '',
-        `import './${LIBRARY_STYLE}.scss'`,
-        `import './${LIBRARY_TYPES}.d.ts'`,
-        '',
-        `export const ${name} = async (app: App, options?: Record<string, any>): Promise<App> => {`,
-        `  await (await import('./${LIBRARY_MEDIA}')).makeMedia()`,
-        '',
-        '  if (options) {',
-        '    if (options?.translate) {',
-        `      await ${translate}(options.translate)`,
-        '    }',
-        '  }',
-        '',
-        '  app.use(uiComponentsPlugin)',
-        '',
-        '  return app',
-        '}'
-      ]
-    )
+    ;([
+      'main',
+      ...this.items.getDesigns()
+    ]).forEach(design => {
+      const suffix = design === 'main' ? '' : `-${design}`
+      const components = `${toCamelCase(`${ui}${suffix}`)}ComponentsPlugin`
+      const path = `components${suffix}`
+      const name = `registration${toCamelCaseFirst(`${this.items.getGlobalName()}${suffix}`)}`
+      const style = design === 'main' ? `./${LIBRARY_STYLE}` : `../${design}/styles/main`
+
+      if (PropertiesFile.is([LIBRARY_DIR, `${path}.ts`])) {
+        this.items.write(
+          `${LIBRARY_PLUGIN}${suffix}`,
+          [
+            'import { type App } from \'vue\'',
+            '',
+            `import { ${components} } from './${path}'`,
+            `import { ${translate} } from './${LIBRARY_TRANSLATE}'`,
+            '',
+            'import { type ConstrRegistration } from \'../types/constructor\'',
+            '',
+            `import '${style}.scss'`,
+            `import './${LIBRARY_TYPES}.d.ts'`,
+            '',
+            `export const ${name} = async (app: App, options?: ConstrRegistration): Promise<App> => {`,
+            `  await (await import('./${LIBRARY_MEDIA}')).makeMedia()`,
+            '',
+            '  if (options) {',
+            '    if (options?.translate) {',
+            `      await ${translate}(options.translate)`,
+            '    }',
+            '  }',
+            '',
+            `  app.use(${components})`,
+            '',
+            '  return app',
+            '}'
+          ]
+        )
+      }
+    })
   }
 
   private makePluginBasic (): void {
@@ -95,6 +113,8 @@ export class LibraryPlugin {
         `import { ${toCamelCase(ui)}ComponentsPlugin } from './components'`,
         `import { ${translate} } from './${LIBRARY_TRANSLATE}'`,
         '',
+        'import { type ConstrRegistration } from \'../types/constructor\'',
+        '',
         `import './${LIBRARY_STYLE_BASIC}.scss'`,
         `import './${LIBRARY_TYPES}.d.ts'`,
         '',
@@ -102,7 +122,7 @@ export class LibraryPlugin {
         '  install: (app: App) => app.use(uiComponentsPlugin)',
         '}',
         '',
-        `export const ${registration} = async (app: App, options?: Record<string, any>): Promise<App> => {`,
+        `export const ${registration} = async (app: App, options?: ConstrRegistration): Promise<App> => {`,
         '  if (options) {',
         '    if (options?.translate) {',
         `      await ${translate}(options.translate)`,

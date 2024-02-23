@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const s=require("./Api-DvXcc5GL.cjs"),i=require("./M2Image.vue_vue_type_style_index_0_lang-jpm8Hcgj.cjs"),e={M2Image:i._sfc_main},c={install:async n=>{s.forEach(e,(o,t)=>{n.component(t,o)})}};exports.components=e;exports.uiM2ComponentsPlugin=c;

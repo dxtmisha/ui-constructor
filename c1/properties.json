@@ -25,13 +25,14 @@
     "_type": "var",
     "_category": "root"
   },
-  "init": {
+  "system": {
     "font": "{font.body}",
     "color": "{sys.palette.onSurface}",
     "_category": "class"
   },
   "main": {
-    "init": "{init}",
+    "font": "{font.body}",
+    "color": "{sys.palette.onSurface}",
     "background": "{ref.background.0}",
     "_category": "class"
   },

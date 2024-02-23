@@ -6,10 +6,12 @@ import { type App } from 'vue'
 import { uiComponentsPlugin } from './components'
 import { registrationUiTranslate } from './translate'
 
+import { type ConstrRegistration } from '../types/constructor'
+
 import './style.scss'
 import './types.d.ts'
 
-export const registrationUi = async (app: App, options?: Record<string, any>): Promise<App> => {
+export const registrationUi = async (app: App, options?: ConstrRegistration): Promise<App> => {
   await (await import('./media')).makeMedia()
 
   if (options) {

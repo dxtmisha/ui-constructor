@@ -1,0 +1,9 @@
+@import "../../styles/all";
+
+@mixin mixinImageToken {
+  // :style [!] System label / Системная метка
+  &--disabled {
+    --c1-image-color: var(--c1-sys-palette-onDisabled);
+  }
+  // :style [!] System label / Системная метка
+}

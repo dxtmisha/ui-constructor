@@ -32,6 +32,12 @@ export declare class Translate {
      */
     static getList<T extends string[]>(names: T): Promise<TranslateList<T>>;
     /**
+     * Getting a list of translations by an array of text codes.<br>
+     * Получение списка переводов по массиву кодов текста.
+     * @param names list of codes to get translations /<br>список кодов для получения переводов
+     */
+    static getListSync<T extends string[]>(names: T): TranslateList<T>;
+    /**
      * Added a list of translated texts.<br>
      * Добавлен список переведенных текстов.
      * @param names list of codes to get translations /<br>список кодов для получения переводов

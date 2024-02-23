@@ -2,6 +2,18 @@
 // Этот файл генерируется скриптом, не редактировать.
 
 
+declare module 'ui/M2Image' {
+  export { M2Image } from 'ui/m2/Image'
+}
+
 declare module 'ui/M3Image' {
   export { M3Image } from 'ui/m3/Image'
+}
+
+declare module 'ui/C1Image' {
+  export { C1Image } from 'ui/c1/Image'
+}
+
+declare module 'ui/C2Image' {
+  export { C2Image } from 'ui/c2/Image'
 }

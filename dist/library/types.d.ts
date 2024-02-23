@@ -6,6 +6,9 @@ import { components } from './components'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    M2Image: typeof components.M2Image
     M3Image: typeof components.M3Image
+    C1Image: typeof components.C1Image
+    C2Image: typeof components.C2Image
   }
 }
