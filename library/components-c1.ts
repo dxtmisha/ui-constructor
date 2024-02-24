@@ -7,11 +7,13 @@ import { forEach } from '../functions/forEach'
 import { C1Icon } from '../c1/Icon'
 import { C1Image } from '../c1/Image'
 import { C1Progress } from '../c1/Progress'
+import { C1Ripple } from '../c1/Ripple'
 
 export const components = {
   C1Icon,
   C1Image,
-  C1Progress
+  C1Progress,
+  C1Ripple
 }
 
 export const uiC1ComponentsPlugin = {

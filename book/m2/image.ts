@@ -4,13 +4,13 @@ import {
 } from '../../types/storybook'
 
 import {
-  m3ImageArgs,
-  m3ImageDescription,
-  m3ImageValues
-} from '../m3/image'
+  imageArgs,
+  imageDescription,
+  imageValues
+} from '../components/image'
 
-export const m2ImageDescription: string = m3ImageDescription
+export const m2ImageDescription: string = imageDescription
 
-export const m2ImageArgs: StorybookArgs = m3ImageArgs
+export const m2ImageArgs: StorybookArgs = imageArgs
 
-export const m2ImageValues: StorybookArgsValue = m3ImageValues
+export const m2ImageValues: StorybookArgsValue = imageValues

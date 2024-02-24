@@ -1,0 +1,5 @@
+{
+  "disabled": {
+    "color": "{st.content.fg.color.neutral.disable}"
+  }
+}

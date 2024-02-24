@@ -25,13 +25,13 @@ $designsClasses: (
   'm2.rounded',
   'm2.palette',);
 $designsPalette: (
-  '--m2-sys-palette-primary': ('--m2-palette-basic-500', '--m2-palette-dark-200'),
-  '--m2-sys-palette-primaryVariant': ('--m2-palette-basic-700', '--m2-palette-dark-700'),
-  '--m2-sys-palette-secondary': ('--m2-palette-basic-200', '--m2-palette-dark-200'),
-  '--m2-sys-palette-secondaryVariant': ('--m2-palette-basic-700', '--m2-palette-dark-200'),
-  '--m2-sys-palette-success': ('--m2-palette-basic-700', '--m2-palette-dark-700'),
-  '--m2-sys-palette-warning': ('--m2-palette-basic-700', '--m2-palette-dark-700'),
-  '--m2-sys-palette-error': ('--m2-palette-basic-700', '--m2-palette-dark-700'),);
+  '--m2-sys-palette-primary': ('--m2-palette-basic500', '--m2-palette-dark200'),
+  '--m2-sys-palette-primaryVariant': ('--m2-palette-basic700', '--m2-palette-dark700'),
+  '--m2-sys-palette-secondary': ('--m2-palette-basic200', '--m2-palette-dark200'),
+  '--m2-sys-palette-secondaryVariant': ('--m2-palette-basic700', '--m2-palette-dark200'),
+  '--m2-sys-palette-success': ('--m2-palette-basic700', '--m2-palette-dark700'),
+  '--m2-sys-palette-warning': ('--m2-palette-basic700', '--m2-palette-dark700'),
+  '--m2-sys-palette-error': ('--m2-palette-basic700', '--m2-palette-dark700'),);
 $designsShade: (
   'm2': (50,100,200,300,400,500,600,700,800,900),);
 $designsProperties: (
@@ -296,6 +296,157 @@ $designsProperties: (
           ),
         ),
       ),
+      'button':(
+        index: 'button',
+        name: 'd-button',
+        type: 'component',
+        value: (
+          'transitionFunction':(
+            index: 'transitionFunction',
+            name: '--d-button-transitionFunction',
+            type: 'var',
+            value: 'var(--d-sys-transitionFunction-standard)',
+          ),
+          'transitionDuration':(
+            index: 'transitionDuration',
+            name: 'transition-duration',
+            type: 'property',
+            value: 'var(--d-sys-transitionDuration-lg-close)',
+          ),
+          'transitionProperty':(
+            index: 'transitionProperty',
+            name: 'transition-property',
+            type: 'property',
+            value: 'background-color, background-image, border, box-shadow',
+          ),
+          'label':(
+            index: 'label',
+            name: '&__label',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'icon':(
+            index: 'icon',
+            name: '&__icon',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'trailing':(
+            index: 'trailing',
+            name: '&__trailing',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'hover':(
+            index: 'hover',
+            name: 'hover',
+            type: 'selector',
+            value: (
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'active':(
+            index: 'active',
+            name: 'active',
+            type: 'selector',
+            value: (
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'disabled':(
+            index: 'disabled',
+            name: 'disabled',
+            type: 'selector',
+            value: (
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'selected':(
+            index: 'selected',
+            name: '&--selected',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&--loading',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'readonly':(
+            index: 'readonly',
+            name: '&--readonly',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'adaptive':(
+            index: 'adaptive',
+            name: '&--adaptive',
+            type: 'state',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&--icon',
+                type: 'state',
+                value: (
+                  'padding':(
+                    index: 'padding',
+                    name: '--d-button-padding',
+                    type: 'var',
+                    value: 0,
+                  ),
+                  'justifyContent':(
+                    index: 'justifyContent',
+                    name: 'justify-content',
+                    type: 'property',
+                    value: 'flex-start',
+                  ),
+                  '& .??__label':(
+                    index: '& .??__label',
+                    name: '& .d-button__label',
+                    type: 'scss',
+                    value: (
+                      'display':(
+                        index: 'display',
+                        name: 'display',
+                        type: 'property',
+                        value: 'none',
+                      ),
+                      'paddingX':(
+                        index: 'paddingX',
+                        name: 'padding-x',
+                        type: 'property',
+                        value: 0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       'icon':(
         index: 'icon',
         name: 'd-icon',
@@ -522,6 +673,20 @@ $designsProperties: (
             index: 'inverse',
             name: '&--inverse',
             type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'ripple':(
+        index: 'ripple',
+        name: 'd-ripple',
+        type: 'component',
+        value: (
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
             value: (
             ),
           ),
@@ -8287,6 +8452,32 @@ $designsProperties: (
             index: 'inverse',
             name: '&--inverse',
             type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'ripple':(
+        index: 'ripple',
+        name: 'm2-ripple',
+        type: 'component',
+        value: (
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--m2-ripple-backgroundColor',
+            type: 'var',
+            value: 'var(--m2-sys-palette-overlay)',
+          ),
+          'backgroundOpacity':(
+            index: 'backgroundOpacity',
+            name: '--m2-ripple-backgroundOpacity',
+            type: 'var',
+            value: 'var(--m2-sys-opacity-pressed)',
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
             value: (
             ),
           ),

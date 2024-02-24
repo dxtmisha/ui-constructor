@@ -1,0 +1,8 @@
+@import "../../styles/all";
+
+@mixin mixinRippleToken {
+  // :style [!] System label / Системная метка
+  --c1-ripple-backgroundColor: var(--c1-ref-palette-webText-50);
+  --c1-ripple-backgroundOpacity: var(--c1-sys-opacity-pressed);
+  // :style [!] System label / Системная метка
+}

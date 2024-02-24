@@ -1,0 +1,4 @@
+{
+  "background-color": "{sys.palette.overlay}",
+  "background-opacity": "{sys.opacity.pressed}"
+}

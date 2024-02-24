@@ -4,13 +4,15 @@ import {
 } from '../../types/storybook'
 
 import {
-  m3ProgressArgs,
-  m3ProgressDescription,
-  m3ProgressValues
-} from '../m3/progress.ts'
+  progressArgs,
+  progressDescription,
+  progressValues
+} from '../components/progress'
 
-export const m2ProgressDescription: string = m3ProgressDescription
+import { defaults, propsValues } from '../../m2/Progress/props'
 
-export const m2ProgressArgs: StorybookArgs = m3ProgressArgs
+export const m2ProgressDescription: string = progressDescription
 
-export const m2ProgressValues: StorybookArgsValue = m3ProgressValues
+export const m2ProgressArgs: StorybookArgs = progressArgs(propsValues, defaults)
+
+export const m2ProgressValues: StorybookArgsValue = progressValues

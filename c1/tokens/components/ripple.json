@@ -1,0 +1,4 @@
+{
+  "background-color": "{ref.palette.webText.50}",
+  "background-opacity": "{sys.opacity.pressed}"
+}

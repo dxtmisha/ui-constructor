@@ -1,5 +1,5 @@
 const a = async () => {
-  (await import("./flags.js")).makeFlags(), (await import("./icons-B1GTRUa_.js")).makeIconsC2();
+  (await import("./flags.js")).makeFlags(), (await import("./icons-BxHCQ5Ys.js")).makeIconsC2();
 };
 export {
   a as makeMedia

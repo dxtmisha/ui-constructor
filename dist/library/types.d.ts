@@ -9,14 +9,19 @@ declare module '@vue/runtime-core' {
     M2Icon: typeof components.M2Icon
     M2Image: typeof components.M2Image
     M2Progress: typeof components.M2Progress
+    M2Ripple: typeof components.M2Ripple
+    M3Button: typeof components.M3Button
     M3Icon: typeof components.M3Icon
     M3Image: typeof components.M3Image
     M3Progress: typeof components.M3Progress
+    M3Ripple: typeof components.M3Ripple
     C1Icon: typeof components.C1Icon
     C1Image: typeof components.C1Image
     C1Progress: typeof components.C1Progress
+    C1Ripple: typeof components.C1Ripple
     C2Icon: typeof components.C2Icon
     C2Image: typeof components.C2Image
     C2Progress: typeof components.C2Progress
+    C2Ripple: typeof components.C2Ripple
   }
 }

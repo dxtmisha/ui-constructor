@@ -1,0 +1,46 @@
+{
+  "gap": {
+    "_type": "var"
+  },
+  "padding": {
+    "_type": "var"
+  },
+  "transition-property": "background-color, background-image, border, box-shadow",
+  "transition-duration": "{d.sys.transitionDuration.lg.close}",
+  "transition-function": "{d.sys.transitionFunction.standard}",
+  "#label": {},
+  "#icon": {},
+  "#trailing": {},
+  "hover": {
+    "transition-duration": "{d.sys.transitionDuration.sm}"
+  },
+  "active": {
+    "transition-duration": "{d.sys.transitionDuration.sm}"
+  },
+  "selected": {
+    "_type": "state"
+  },
+  "loading": {
+    "color-opacity": {
+      "_type": "var"
+    },
+    "_type": "state",
+    "_subclass": true
+  },
+  "readonly": {
+    "_type": "state"
+  },
+  "disabled": {
+    "transition-duration": "{d.sys.transitionDuration.sm}"
+  },
+  "adaptive": {
+    "~icon": {
+      "justify-content": "flex-start",
+      "padding": "0",
+      "& .??__label": {
+        "display": "none",
+        "padding-x": "0"
+      }
+    }
+  }
+}

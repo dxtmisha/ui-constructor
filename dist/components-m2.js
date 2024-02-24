@@ -1,19 +1,21 @@
-import { f as r } from "./forEach-B1ZDH1yu.js";
+import { f as n } from "./forEach-B1ZDH1yu.js";
 import { M2Icon as t } from "./M2Icon.js";
-import { M2Image as s } from "./M2Image.js";
-import { M2Progress as p } from "./M2Progress.js";
+import { M2Image as p } from "./M2Image.js";
+import { M2Progress as i } from "./M2Progress.js";
+import { M2Ripple as s } from "./M2Ripple.js";
 const c = {
   M2Icon: t,
-  M2Image: s,
-  M2Progress: p
-}, M = {
+  M2Image: p,
+  M2Progress: i,
+  M2Ripple: s
+}, g = {
   install: async (o) => {
-    r(c, (m, n) => {
-      o.component(n, m);
+    n(c, (m, r) => {
+      o.component(r, m);
     });
   }
 };
 export {
   c as components,
-  M as uiM2ComponentsPlugin
+  g as uiM2ComponentsPlugin
 };

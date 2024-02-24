@@ -53,5 +53,6 @@
       "file|rounded": "tokens/rounded.json"
     },
     "_category": "class"
-  }
+  },
+  "file|components": "tokens/components"
 }

@@ -1,0 +1,73 @@
+@import "../../styles/properties";
+
+@mixin mixinButton {
+  @include initByCustom('padding', 0);
+  @include initByCustom('iconPadding', v('??padding'));
+
+  @include flexInlineCenter;
+  box-sizing: border-box;
+  position: relative;
+
+  padding: 0;
+
+  min-width: var(--sys-height, 0);
+
+  text-decoration: none;
+
+  background: transparent;
+
+  border-radius: 0;
+  border: none;
+
+  cursor: pointer;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+  @include disabled {
+    cursor: default;
+  }
+
+  @include readonly {
+    cursor: default;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: v('??gap');
+
+    order: 4;
+    padding: 0 v('??iconPadding');
+    transition: opacity #{v('d.sys.transitionDuration.standard')} linear;
+  }
+
+  &__icon,
+  &__trailing {
+    @include initByCustom('margin', #{calc((var(--sys-height) - v('?icon._width')) / 2)});
+    @include marginLeft(v('??margin'));
+    @include marginRight(v('??margin'));
+  }
+
+  &__label ~ &__icon {
+    @include marginRight(#{calc(v('??margin') - v('??iconPadding'))});
+  }
+
+  &__label ~ &__trailing {
+    @include marginLeft(#{calc(v('??margin') - v('??iconPadding'))});
+  }
+
+  &--icon {
+    @include initByCustom('iconPadding', #{calc(var(--sys-height) / 2)});
+  }
+
+  &--loading {
+    cursor: default;
+  }
+
+  &__loading#{'.'}#{n('?progress--visible')} ~ * {
+    opacity: v('??colorOpacity', 0);
+  }
+}

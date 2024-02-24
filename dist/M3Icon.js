@@ -1,7 +1,7 @@
 import './M3Icon.css';
 import { defineComponent as y, computed as t, openBlock as u, createBlock as h, resolveDynamicComponent as g, unref as B } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
-import { p as T, d as f, I } from "./props--Zfp7cBb.js";
+import { p as T, d as f, I } from "./props-u_uuiqHZ.js";
 import { M3Image as x } from "./M3Image.js";
 const e = {
   // :values [!] System label / Системная метка

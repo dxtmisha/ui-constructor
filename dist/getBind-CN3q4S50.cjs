@@ -1,0 +1,1 @@
+"use strict";const o=require("./DesignConstructorAbstract-BWdw5G97.cjs");function e(t,n={},c="value"){const r=typeof n=="string",i=r?n:c,s=r?{}:n;return t?t&&o.isObjectNotArray(t)&&i in t?{...s,...t}:{...s,[i]:t}:{}}exports.getBind=e;

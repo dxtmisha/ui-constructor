@@ -14,6 +14,14 @@ declare module 'ui/M2Progress' {
   export { M2Progress } from 'ui/m2/Progress'
 }
 
+declare module 'ui/M2Ripple' {
+  export { M2Ripple } from 'ui/m2/Ripple'
+}
+
+declare module 'ui/M3Button' {
+  export { M3Button } from 'ui/m3/Button'
+}
+
 declare module 'ui/M3Icon' {
   export { M3Icon } from 'ui/m3/Icon'
 }
@@ -24,6 +32,10 @@ declare module 'ui/M3Image' {
 
 declare module 'ui/M3Progress' {
   export { M3Progress } from 'ui/m3/Progress'
+}
+
+declare module 'ui/M3Ripple' {
+  export { M3Ripple } from 'ui/m3/Ripple'
 }
 
 declare module 'ui/C1Icon' {
@@ -38,6 +50,10 @@ declare module 'ui/C1Progress' {
   export { C1Progress } from 'ui/c1/Progress'
 }
 
+declare module 'ui/C1Ripple' {
+  export { C1Ripple } from 'ui/c1/Ripple'
+}
+
 declare module 'ui/C2Icon' {
   export { C2Icon } from 'ui/c2/Icon'
 }
@@ -48,4 +64,8 @@ declare module 'ui/C2Image' {
 
 declare module 'ui/C2Progress' {
   export { C2Progress } from 'ui/c2/Progress'
+}
+
+declare module 'ui/C2Ripple' {
+  export { C2Ripple } from 'ui/c2/Ripple'
 }

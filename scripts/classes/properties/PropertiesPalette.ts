@@ -10,6 +10,7 @@ import {
   PropertyKey,
   PropertyType
 } from '../../types/property'
+import { toCamelCase } from '../../../functions/toCamelCase.ts'
 
 export type PropertiesPaletteItem = {
   design: string
@@ -85,7 +86,7 @@ export class PropertiesPalette {
         const name = item[PropertyKey.name]
         const code = data.find(code => code.name === name)
         const theme = parents.find(parent => parent.item[PropertyKey.category] === 'theme')?.name || 'basic'
-        const color = `--${design}-palette-${theme}-${value.match(/\.([^.{}]+)}/)?.[1]}`
+        const color = `--${design}-palette-${toCamelCase(`${theme}-${value.match(/\.([^.{}]+)}/)?.[1]}`)}`
 
         if (code) {
           code.value.push(color)

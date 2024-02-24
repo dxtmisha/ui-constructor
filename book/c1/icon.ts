@@ -1,41 +1,30 @@
 import {
   type StorybookArgs,
-  type StorybookArgsValue,
-  StorybookControl
+  type StorybookArgsValue
 } from '../../types/storybook'
-import { StorybookCategory } from '../category'
 
 import {
-  m3IconArgs,
-  m3IconDescription,
-  m3IconValues
-} from '../m3/icon'
-import { propsValues } from '../../c1/Icon/props'
+  iconArgs,
+  iconArgsOverlay,
+  iconArgsRounded,
+  iconArgsSize,
+  iconDescription,
+  iconValues
+} from '../components/icon'
 
-export const c1IconDescription: string = m3IconDescription
+import { defaults, propsValues } from '../../c1/Icon/props'
+
+export const c1IconDescription: string = iconDescription
 
 export const c1IconArgs: StorybookArgs = {
-  ...m3IconArgs,
+  ...iconArgs(propsValues, defaults),
+
+  // Styles
+  overlay: iconArgsOverlay,
 
   // Tokens
-  size: {
-    control: StorybookControl.select,
-    options: propsValues.size,
-    table: {
-      category: StorybookCategory.token,
-      type: { summary: propsValues.size.join(' | ') }
-    }
-  },
-  rounded: {
-    control: StorybookControl.select,
-    options: propsValues.rounded,
-    table: {
-      category: StorybookCategory.token,
-      type: { summary: propsValues.rounded.join(' | ') }
-    }
-  }
+  size: iconArgsSize(propsValues, defaults),
+  rounded: iconArgsRounded(propsValues, defaults)
 }
 
-delete c1IconArgs.dynamic
-
-export const c1IconValues: StorybookArgsValue = m3IconValues
+export const c1IconValues: StorybookArgsValue = iconValues
