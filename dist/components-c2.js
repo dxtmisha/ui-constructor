@@ -1,17 +1,19 @@
-import { f as t } from "./Api-DYbVHTIo.js";
-import { C2Icon as r } from "./C2Icon.js";
-import { C2Image as c } from "./C2Image.js";
-const p = {
-  C2Icon: r,
-  C2Image: c
-}, e = {
+import { f as r } from "./forEach-B1ZDH1yu.js";
+import { C2Icon as t } from "./C2Icon.js";
+import { C2Image as s } from "./C2Image.js";
+import { C2Progress as p } from "./C2Progress.js";
+const c = {
+  C2Icon: t,
+  C2Image: s,
+  C2Progress: p
+}, C = {
   install: async (o) => {
-    t(p, (n, m) => {
-      o.component(m, n);
+    r(c, (m, n) => {
+      o.component(n, m);
     });
   }
 };
 export {
-  p as components,
-  e as uiC2ComponentsPlugin
+  c as components,
+  C as uiC2ComponentsPlugin
 };

@@ -1,0 +1,10 @@
+{
+  "main": "{d.progress}",
+  "height": "{ref.spacing.1}",
+  "background-color": "{sys.palette.primary}",
+  "opacity": "{sys.opacity.012}",
+  "circular": {
+    "inset": "{ref.spacing.1}",
+    "width": "{ref.spacing.12}"
+  }
+}

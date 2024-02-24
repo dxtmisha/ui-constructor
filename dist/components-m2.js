@@ -1,17 +1,19 @@
-import { f as t } from "./Api-DYbVHTIo.js";
-import { M2Icon as r } from "./M2Icon.js";
-import { M2Image as c } from "./M2Image.js";
-const p = {
-  M2Icon: r,
-  M2Image: c
-}, e = {
+import { f as r } from "./forEach-B1ZDH1yu.js";
+import { M2Icon as t } from "./M2Icon.js";
+import { M2Image as s } from "./M2Image.js";
+import { M2Progress as p } from "./M2Progress.js";
+const c = {
+  M2Icon: t,
+  M2Image: s,
+  M2Progress: p
+}, M = {
   install: async (o) => {
-    t(p, (n, m) => {
-      o.component(m, n);
+    r(c, (m, n) => {
+      o.component(n, m);
     });
   }
 };
 export {
-  p as components,
-  e as uiM2ComponentsPlugin
+  c as components,
+  M as uiM2ComponentsPlugin
 };

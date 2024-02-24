@@ -597,6 +597,111 @@ $designsProperties: (
           ),
         ),
       ),
+      'progress':(
+        index: 'progress',
+        name: 'd-progress',
+        type: 'component',
+        value: (
+          'circle':(
+            index: 'circle',
+            name: '&__circle',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'circleSub':(
+            index: 'circleSub',
+            name: '&__circleSub',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'linear':(
+            index: 'linear',
+            name: '&--linear',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'circular':(
+            index: 'circular',
+            name: '&--circular',
+            type: 'state',
+            value: (
+              'inset':(
+                index: 'inset',
+                name: 'inset',
+                type: 'property',
+                value: 0px,
+                var: true,
+              ),
+            ),
+          ),
+          'indeterminate':(
+            index: 'indeterminate',
+            name: '&--indeterminate',
+            type: 'state',
+            value: (
+              'type1':(
+                index: 'type1',
+                name: '&--type1',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type2':(
+                index: 'type2',
+                name: '&--type2',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type3':(
+                index: 'type3',
+                name: '&--type3',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'position':(
+            index: 'position',
+            name: '&--position',
+            type: 'state',
+            value: (
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
     ),
   ),
   'c2':(
@@ -16550,6 +16655,135 @@ $designsProperties: (
           ),
         ),
       ),
+      'progress':(
+        index: 'progress',
+        name: 'c2-progress',
+        type: 'component',
+        value: (
+          'height':(
+            index: 'height',
+            name: '--c2-progress-height',
+            type: 'var',
+            value: 'var(--c2-st-global-distance-space-inline-xs)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--c2-progress-backgroundColor',
+            type: 'var',
+            value: 'var(--c2-st-action-bg-color-primary-solid-normal)',
+          ),
+          'opacity':(
+            index: 'opacity',
+            name: '--c2-progress-opacity',
+            type: 'var',
+            value: 'var(--c2-ot-opacity-25)',
+          ),
+          'circle':(
+            index: 'circle',
+            name: '&__circle',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'circleSub':(
+            index: 'circleSub',
+            name: '&__circleSub',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'linear':(
+            index: 'linear',
+            name: '&--linear',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'circular':(
+            index: 'circular',
+            name: '&--circular',
+            type: 'state',
+            value: (
+              'width':(
+                index: 'width',
+                name: '--c2-progress-width',
+                type: 'var',
+                value: 'var(--c2-ot-dimension-300)',
+              ),
+              'inset':(
+                index: 'inset',
+                name: 'inset',
+                type: 'property',
+                value: 'var(--c2-st-global-distance-space-inline-md)',
+                var: true,
+              ),
+            ),
+          ),
+          'indeterminate':(
+            index: 'indeterminate',
+            name: '&--indeterminate',
+            type: 'state',
+            value: (
+              'type1':(
+                index: 'type1',
+                name: '&--type1',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type2':(
+                index: 'type2',
+                name: '&--type2',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type3':(
+                index: 'type3',
+                name: '&--type3',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'position':(
+            index: 'position',
+            name: '&--position',
+            type: 'state',
+            value: (
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'typography':(
         index: 'typography',
         name: 'c2-typography',
@@ -29130,50 +29364,6 @@ $designsProperties: (
                     ),
                   ),
                 ),
-              ),
-            ),
-          ),
-        ),
-      ),
-      'progress':(
-        index: 'progress',
-        name: 'c2-progress',
-        type: 'component',
-        value: (
-          'height':(
-            index: 'height',
-            name: 'height',
-            type: 'property',
-            value: 'var(--c2-st-global-distance-space-inline-xs)',
-          ),
-          'opacity':(
-            index: 'opacity',
-            name: 'opacity',
-            type: 'property',
-            value: 'var(--c2-ot-opacity-25)',
-          ),
-          'backgroundColor':(
-            index: 'backgroundColor',
-            name: 'background-color',
-            type: 'property',
-            value: 'var(--c2-st-action-bg-color-primary-solid-normal)',
-          ),
-          'circular':(
-            index: 'circular',
-            name: '&--circular',
-            type: 'state',
-            value: (
-              'inset':(
-                index: 'inset',
-                name: 'inset',
-                type: 'property',
-                value: 'var(--c2-st-global-distance-space-inline-md)',
-              ),
-              'width':(
-                index: 'width',
-                name: 'width',
-                type: 'property',
-                value: 'var(--c2-ot-dimension-300)',
               ),
             ),
           ),

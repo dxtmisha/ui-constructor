@@ -6,10 +6,12 @@ import { forEach } from '../functions/forEach'
 
 import { C2Icon } from '../c2/Icon'
 import { C2Image } from '../c2/Image'
+import { C2Progress } from '../c2/Progress'
 
 export const components = {
   C2Icon,
-  C2Image
+  C2Image,
+  C2Progress
 }
 
 export const uiC2ComponentsPlugin = {

@@ -1,0 +1,1 @@
+"use strict";function n(r){return!!(r&&typeof r=="object")}function s(r,i){if(n(r)){const f=[];return r instanceof Map?r.forEach((e,o)=>f.push(i(e,o,r))):Array.isArray(r)?r.forEach((e,o)=>f.push(i(e,o,r))):Object.entries(r).forEach(([e,o])=>f.push(i(o,e,r))),f.filter(e=>e!==void 0)}return[]}exports.forEach=s;exports.isObject=n;

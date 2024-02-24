@@ -6,10 +6,12 @@ import { forEach } from '../functions/forEach'
 
 import { M2Icon } from '../m2/Icon'
 import { M2Image } from '../m2/Image'
+import { M2Progress } from '../m2/Progress'
 
 export const components = {
   M2Icon,
-  M2Image
+  M2Image,
+  M2Progress
 }
 
 export const uiM2ComponentsPlugin = {

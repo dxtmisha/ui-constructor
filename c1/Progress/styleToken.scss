@@ -1,0 +1,16 @@
+@import "../../styles/all";
+
+@mixin mixinProgressToken {
+  // :style [!] System label / Системная метка
+  --c1-progress-height: var(--c1-ref-spacing-1);
+  --c1-progress-backgroundColor: var(--c1-sys-palette-primary);
+  --c1-progress-opacity: var(--c1-sys-opacity-pressed);
+  
+  &--circular {
+    --c1-progress-width: var(--c1-ref-spacing-12);
+    
+    --c1-progress-inset: var(--c1-ref-spacing-1);
+    @include inset(#{var(--c1-ref-spacing-1)});
+  }
+  // :style [!] System label / Системная метка
+}

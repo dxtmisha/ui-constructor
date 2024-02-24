@@ -1,17 +1,19 @@
-import { f as t } from "./Api-DYbVHTIo.js";
-import { M3Icon as r } from "./M3Icon.js";
-import { M3Image as c } from "./M3Image.js";
-const p = {
-  M3Icon: r,
-  M3Image: c
-}, e = {
+import { f as r } from "./forEach-B1ZDH1yu.js";
+import { M3Icon as t } from "./M3Icon.js";
+import { M3Image as s } from "./M3Image.js";
+import { M3Progress as p } from "./M3Progress.js";
+const c = {
+  M3Icon: t,
+  M3Image: s,
+  M3Progress: p
+}, M = {
   install: async (o) => {
-    t(p, (n, m) => {
-      o.component(m, n);
+    r(c, (m, n) => {
+      o.component(n, m);
     });
   }
 };
 export {
-  p as components,
-  e as uiM3ComponentsPlugin
+  c as components,
+  M as uiM3ComponentsPlugin
 };

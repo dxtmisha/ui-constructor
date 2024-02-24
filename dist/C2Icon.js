@@ -1,7 +1,7 @@
 import './C2Icon.css';
 import { defineComponent as h, computed as t, openBlock as d, createBlock as v, resolveDynamicComponent as g, unref as B } from "vue";
-import { i } from "./getBind-BlxhXjR2.js";
-import { p as u, d as T, I } from "./props-DvKvgJvH.js";
+import { i } from "./inArray-BLmbg9f_.js";
+import { p as u, d as T, I } from "./props--Zfp7cBb.js";
 import { C2Image as z } from "./C2Image.js";
 const e = {
   // :values [!] System label / Системная метка

@@ -1,9 +1,0 @@
-{
-  "height": "{st.global.distance.space.inline.xs}",
-  "background-color": "{st.action.bg.color.primary.solid.normal}",
-  "opacity": "{ot.opacity.25}",
-  "circular": {
-    "inset": "{st.global.distance.space.inline.md}",
-    "width": "{ot.dimension.300}"
-  }
-}

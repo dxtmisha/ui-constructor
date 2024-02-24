@@ -10,12 +10,20 @@ declare module 'ui/M2Image' {
   export { M2Image } from 'ui/m2/Image'
 }
 
+declare module 'ui/M2Progress' {
+  export { M2Progress } from 'ui/m2/Progress'
+}
+
 declare module 'ui/M3Icon' {
   export { M3Icon } from 'ui/m3/Icon'
 }
 
 declare module 'ui/M3Image' {
   export { M3Image } from 'ui/m3/Image'
+}
+
+declare module 'ui/M3Progress' {
+  export { M3Progress } from 'ui/m3/Progress'
 }
 
 declare module 'ui/C1Icon' {
@@ -26,10 +34,18 @@ declare module 'ui/C1Image' {
   export { C1Image } from 'ui/c1/Image'
 }
 
+declare module 'ui/C1Progress' {
+  export { C1Progress } from 'ui/c1/Progress'
+}
+
 declare module 'ui/C2Icon' {
   export { C2Icon } from 'ui/c2/Icon'
 }
 
 declare module 'ui/C2Image' {
   export { C2Image } from 'ui/c2/Image'
+}
+
+declare module 'ui/C2Progress' {
+  export { C2Progress } from 'ui/c2/Progress'
 }

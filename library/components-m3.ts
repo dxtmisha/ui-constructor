@@ -6,10 +6,12 @@ import { forEach } from '../functions/forEach'
 
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
+import { M3Progress } from '../m3/Progress'
 
 export const components = {
   M3Icon,
-  M3Image
+  M3Image,
+  M3Progress
 }
 
 export const uiM3ComponentsPlugin = {

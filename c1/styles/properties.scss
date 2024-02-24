@@ -23,6 +23,7 @@ $designsClasses: (
   'c1.rounded',
   'c1.palette',);
 $designsPalette: (
+  '--c1-sys-palette-primary': ('--c1-palette-basic-50'),
   '--c1-sys-palette-onSurface': ('--c1-palette-basic-50'),
   '--c1-sys-palette-onDisabled': ('--c1-palette-basic-50'),
   '--c1-sys-palette-overlay': ('--c1-palette-basic-50'),);
@@ -416,6 +417,111 @@ $designsProperties: (
           ),
         ),
       ),
+      'progress':(
+        index: 'progress',
+        name: 'd-progress',
+        type: 'component',
+        value: (
+          'circle':(
+            index: 'circle',
+            name: '&__circle',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'circleSub':(
+            index: 'circleSub',
+            name: '&__circleSub',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'linear':(
+            index: 'linear',
+            name: '&--linear',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'circular':(
+            index: 'circular',
+            name: '&--circular',
+            type: 'state',
+            value: (
+              'inset':(
+                index: 'inset',
+                name: 'inset',
+                type: 'property',
+                value: 0px,
+                var: true,
+              ),
+            ),
+          ),
+          'indeterminate':(
+            index: 'indeterminate',
+            name: '&--indeterminate',
+            type: 'state',
+            value: (
+              'type1':(
+                index: 'type1',
+                name: '&--type1',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type2':(
+                index: 'type2',
+                name: '&--type2',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type3':(
+                index: 'type3',
+                name: '&--type3',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'position':(
+            index: 'position',
+            name: '&--position',
+            type: 'state',
+            value: (
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
     ),
   ),
   'c1':(
@@ -600,6 +706,123 @@ $designsProperties: (
                 name: '--c1-ref-lineHeight-48',
                 type: 'var',
                 value: 'calc(var(--c1-ref-spacing-px)*48)',
+              ),
+            ),
+          ),
+          'opacity':(
+            index: 'opacity',
+            name: 'opacity',
+            type: 'var',
+            value: (
+              '0':(
+                index: '0',
+                name: '--c1-ref-opacity-0',
+                type: 'var',
+                value: 0,
+              ),
+              '2':(
+                index: '2',
+                name: '--c1-ref-opacity-2',
+                type: 'var',
+                value: 0.02,
+              ),
+              '4':(
+                index: '4',
+                name: '--c1-ref-opacity-4',
+                type: 'var',
+                value: 0.04,
+              ),
+              '8':(
+                index: '8',
+                name: '--c1-ref-opacity-8',
+                type: 'var',
+                value: 0.08,
+              ),
+              '10':(
+                index: '10',
+                name: '--c1-ref-opacity-10',
+                type: 'var',
+                value: 0.10,
+              ),
+              '12':(
+                index: '12',
+                name: '--c1-ref-opacity-12',
+                type: 'var',
+                value: 0.12,
+              ),
+              '16':(
+                index: '16',
+                name: '--c1-ref-opacity-16',
+                type: 'var',
+                value: 0.16,
+              ),
+              '24':(
+                index: '24',
+                name: '--c1-ref-opacity-24',
+                type: 'var',
+                value: 0.24,
+              ),
+              '32':(
+                index: '32',
+                name: '--c1-ref-opacity-32',
+                type: 'var',
+                value: 0.32,
+              ),
+              '100':(
+                index: '100',
+                name: '--c1-ref-opacity-100',
+                type: 'var',
+                value: 1,
+              ),
+              'primary':(
+                index: 'primary',
+                name: 'primary',
+                type: 'var',
+                value: (
+                  'high':(
+                    index: 'high',
+                    name: '--c1-ref-opacity-primary-high',
+                    type: 'var',
+                    value: 1,
+                  ),
+                  'medium':(
+                    index: 'medium',
+                    name: '--c1-ref-opacity-primary-medium',
+                    type: 'var',
+                    value: 0.74,
+                  ),
+                  'disabled':(
+                    index: 'disabled',
+                    name: '--c1-ref-opacity-primary-disabled',
+                    type: 'var',
+                    value: 0.38,
+                  ),
+                ),
+              ),
+              'surface':(
+                index: 'surface',
+                name: 'surface',
+                type: 'var',
+                value: (
+                  'high':(
+                    index: 'high',
+                    name: '--c1-ref-opacity-surface-high',
+                    type: 'var',
+                    value: 0.87,
+                  ),
+                  'medium':(
+                    index: 'medium',
+                    name: '--c1-ref-opacity-surface-medium',
+                    type: 'var',
+                    value: 0.60,
+                  ),
+                  'disabled':(
+                    index: 'disabled',
+                    name: '--c1-ref-opacity-surface-disabled',
+                    type: 'var',
+                    value: 0.38,
+                  ),
+                ),
               ),
             ),
           ),
@@ -1677,11 +1900,128 @@ $designsProperties: (
         name: 'sys',
         type: 'var',
         value: (
+          'opacity':(
+            index: 'opacity',
+            name: 'opacity',
+            type: 'var',
+            value: (
+              'hover':(
+                index: 'hover',
+                name: '--c1-sys-opacity-hover',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-4)',
+              ),
+              'focus':(
+                index: 'focus',
+                name: '--c1-sys-opacity-focus',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-12)',
+              ),
+              'pressed':(
+                index: 'pressed',
+                name: '--c1-sys-opacity-pressed',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-10)',
+              ),
+              'dragged':(
+                index: 'dragged',
+                name: '--c1-sys-opacity-dragged',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-8)',
+              ),
+              'overlay':(
+                index: 'overlay',
+                name: '--c1-sys-opacity-overlay',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-8)',
+              ),
+              'selected':(
+                index: 'selected',
+                name: '--c1-sys-opacity-selected',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-8)',
+              ),
+              'disabled':(
+                index: 'disabled',
+                name: '--c1-sys-opacity-disabled',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-12)',
+              ),
+              'outline':(
+                index: 'outline',
+                name: '--c1-sys-opacity-outline',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-12)',
+              ),
+              'scrim':(
+                index: 'scrim',
+                name: '--c1-sys-opacity-scrim',
+                type: 'var',
+                value: 'var(--c1-ref-opacity-32)',
+              ),
+              'primary':(
+                index: 'primary',
+                name: 'primary',
+                type: 'var',
+                value: (
+                  'high':(
+                    index: 'high',
+                    name: '--c1-sys-opacity-primary-high',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-primary-high)',
+                  ),
+                  'medium':(
+                    index: 'medium',
+                    name: '--c1-sys-opacity-primary-medium',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-primary-medium)',
+                  ),
+                  'disabled':(
+                    index: 'disabled',
+                    name: '--c1-sys-opacity-primary-disabled',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-primary-disabled)',
+                  ),
+                ),
+              ),
+              'surface':(
+                index: 'surface',
+                name: 'surface',
+                type: 'var',
+                value: (
+                  'high':(
+                    index: 'high',
+                    name: '--c1-sys-opacity-surface-high',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-surface-high)',
+                  ),
+                  'medium':(
+                    index: 'medium',
+                    name: '--c1-sys-opacity-surface-medium',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-surface-medium)',
+                  ),
+                  'disabled':(
+                    index: 'disabled',
+                    name: '--c1-sys-opacity-surface-disabled',
+                    type: 'var',
+                    value: 'var(--c1-ref-opacity-surface-disabled)',
+                  ),
+                ),
+              ),
+            ),
+          ),
           'palette':(
             index: 'palette',
             name: 'palette',
             type: 'var',
             value: (
+              'primary':(
+                index: 'primary',
+                name: '--c1-sys-palette-primary',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webAccent-50)',
+              ),
               'onSurface':(
                 index: 'onSurface',
                 name: '--c1-sys-palette-onSurface',
@@ -3721,6 +4061,135 @@ $designsProperties: (
           'adaptive':(
             index: 'adaptive',
             name: '&--adaptive',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'progress':(
+        index: 'progress',
+        name: 'c1-progress',
+        type: 'component',
+        value: (
+          'height':(
+            index: 'height',
+            name: '--c1-progress-height',
+            type: 'var',
+            value: 'var(--c1-ref-spacing-1)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--c1-progress-backgroundColor',
+            type: 'var',
+            value: 'var(--c1-sys-palette-primary)',
+          ),
+          'opacity':(
+            index: 'opacity',
+            name: '--c1-progress-opacity',
+            type: 'var',
+            value: 'var(--c1-sys-opacity-pressed)',
+          ),
+          'circle':(
+            index: 'circle',
+            name: '&__circle',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'circleSub':(
+            index: 'circleSub',
+            name: '&__circleSub',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'linear':(
+            index: 'linear',
+            name: '&--linear',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'circular':(
+            index: 'circular',
+            name: '&--circular',
+            type: 'state',
+            value: (
+              'width':(
+                index: 'width',
+                name: '--c1-progress-width',
+                type: 'var',
+                value: 'var(--c1-ref-spacing-12)',
+              ),
+              'inset':(
+                index: 'inset',
+                name: 'inset',
+                type: 'property',
+                value: 'var(--c1-ref-spacing-1)',
+                var: true,
+              ),
+            ),
+          ),
+          'indeterminate':(
+            index: 'indeterminate',
+            name: '&--indeterminate',
+            type: 'state',
+            value: (
+              'type1':(
+                index: 'type1',
+                name: '&--type1',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type2':(
+                index: 'type2',
+                name: '&--type2',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'type3':(
+                index: 'type3',
+                name: '&--type3',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'position':(
+            index: 'position',
+            name: '&--position',
+            type: 'state',
+            value: (
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
             type: 'state',
             value: (
             ),

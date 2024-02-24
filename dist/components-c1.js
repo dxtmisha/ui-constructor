@@ -1,17 +1,19 @@
-import { f as t } from "./Api-DYbVHTIo.js";
-import { C1Icon as r } from "./C1Icon.js";
-import { C1Image as c } from "./C1Image.js";
-const p = {
-  C1Icon: r,
-  C1Image: c
-}, e = {
+import { f as r } from "./forEach-B1ZDH1yu.js";
+import { C1Icon as t } from "./C1Icon.js";
+import { C1Image as s } from "./C1Image.js";
+import { C1Progress as p } from "./C1Progress.js";
+const c = {
+  C1Icon: t,
+  C1Image: s,
+  C1Progress: p
+}, C = {
   install: async (o) => {
-    t(p, (n, m) => {
-      o.component(m, n);
+    r(c, (m, n) => {
+      o.component(n, m);
     });
   }
 };
 export {
-  p as components,
-  e as uiC1ComponentsPlugin
+  c as components,
+  C as uiC1ComponentsPlugin
 };

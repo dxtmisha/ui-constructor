@@ -6,22 +6,30 @@ import { forEach } from '../functions/forEach'
 
 import { M2Icon } from '../m2/Icon'
 import { M2Image } from '../m2/Image'
+import { M2Progress } from '../m2/Progress'
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
+import { M3Progress } from '../m3/Progress'
 import { C1Icon } from '../c1/Icon'
 import { C1Image } from '../c1/Image'
+import { C1Progress } from '../c1/Progress'
 import { C2Icon } from '../c2/Icon'
 import { C2Image } from '../c2/Image'
+import { C2Progress } from '../c2/Progress'
 
 export const components = {
   M2Icon,
   M2Image,
+  M2Progress,
   M3Icon,
   M3Image,
+  M3Progress,
   C1Icon,
   C1Image,
+  C1Progress,
   C2Icon,
-  C2Image
+  C2Image,
+  C2Progress
 }
 
 export const uiComponentsPlugin = {
