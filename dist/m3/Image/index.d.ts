@@ -51,11 +51,11 @@ export declare const M3Image: {
     }>> & {
         onLoad?: ((image: import("../../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
     }, {
-        adaptiveGroup: string;
-        adaptiveAlways: boolean;
         turn: boolean;
         disabled: boolean;
         hide: boolean;
+        adaptiveGroup: string;
+        adaptiveAlways: boolean;
         adaptive: boolean;
     }, true, {}, {}, {
         P: {};
@@ -91,11 +91,11 @@ export declare const M3Image: {
         type: import("vue").ComputedRef<import("../../constructors/Image/typesBasic").ImageTypeItem>;
         data: import("vue").ComputedRef<import("../../constructors/Image/typesBasic").ImageEventItem>;
     }, {}, {}, {}, {
-        adaptiveGroup: string;
-        adaptiveAlways: boolean;
         turn: boolean;
         disabled: boolean;
         hide: boolean;
+        adaptiveGroup: string;
+        adaptiveAlways: boolean;
         adaptive: boolean;
     }>;
     __isFragment?: undefined;
@@ -130,11 +130,11 @@ export declare const M3Image: {
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     load: (image: import("../../constructors/Image/typesBasic").ImageEventData) => void;
 }, string, {
-    adaptiveGroup: string;
-    adaptiveAlways: boolean;
     turn: boolean;
     disabled: boolean;
     hide: boolean;
+    adaptiveGroup: string;
+    adaptiveAlways: boolean;
     adaptive: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Readonly<import("../../constructors/Image/types").ImageSlots>;

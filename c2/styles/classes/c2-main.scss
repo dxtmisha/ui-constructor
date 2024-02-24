@@ -10,7 +10,7 @@
   text-decoration: var(--c2-ot-typography-textDecoration-none);
   @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
   
-  @include color(#{var(--c2-st-content-foreground-color-neutral-primary)});
+  @include color(#{var(--c2-st-content-fg-color-neutral-primary)});
   
-  @include backgroundColor(#{var(--c2-st-content-background-color-default-solid-normal)});
+  @include backgroundColor(#{var(--c2-st-content-bg-color-default-solid-normal)});
 }

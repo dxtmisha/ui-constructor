@@ -11,9 +11,19 @@ export type IconsItem = string | Promise<string | any>
  * Класс для управления иконками.
  */
 export class Icons {
-  protected static readonly icons: Record<string, IconsItem> = {}
+  protected static icons: Record<string, IconsItem> = {}
   protected static readonly url: string = useEnv('UI_PATH') ?? '/icons/'
   protected static readonly urlGlobal = `${Api.isLocalhost() ? '' : ''}${this.url}`
+
+  static {
+    if (typeof window !== 'undefined') {
+      if (!('__UI__ICON' in window)) {
+        (window as any).__UI__ICON = {}
+      }
+
+      this.icons = (window as any).__UI__ICON
+    }
+  }
 
   /**
    * Checks if the given icon is in the list of connected icons.<br>

@@ -1,0 +1,1 @@
+"use strict";const c=require("./EventItem-BoIWNSxP.cjs");function o(n,t){return n.indexOf(t)!==-1}function f(n,t={},s="value"){const r=typeof t=="string",i=r?t:s,e=r?{}:t;return n?n&&c.isObjectNotArray(n)&&i in n?{...e,...n}:{...e,[i]:n}:{}}exports.getBind=f;exports.inArray=o;

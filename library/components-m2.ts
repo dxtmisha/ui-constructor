@@ -4,9 +4,11 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
+import { M2Icon } from '../m2/Icon'
 import { M2Image } from '../m2/Image'
 
 export const components = {
+  M2Icon,
   M2Image
 }
 

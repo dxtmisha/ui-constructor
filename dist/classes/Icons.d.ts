@@ -4,7 +4,7 @@ export type IconsItem = string | Promise<string | any>;
  * Класс для управления иконками.
  */
 export declare class Icons {
-    protected static readonly icons: Record<string, IconsItem>;
+    protected static icons: Record<string, IconsItem>;
     protected static readonly url: string;
     protected static readonly urlGlobal: string;
     /**

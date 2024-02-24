@@ -1,5 +1,150 @@
 import { type App } from 'vue';
 export declare const components: {
+    M3Icon: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            turn: BooleanConstructor;
+            disabled: BooleanConstructor;
+            hide: BooleanConstructor;
+            animationType: {
+                type: import("vue").PropType<"type1" | "type2" | undefined>;
+                default: "type1" | "type2" | undefined;
+            };
+            animationShow: BooleanConstructor;
+            overlay: BooleanConstructor;
+            dynamic: BooleanConstructor;
+            start: BooleanConstructor;
+            end: BooleanConstructor;
+            high: BooleanConstructor;
+            rounded: import("vue").PropType<"full" | "sm" | "standard" | "none" | "md" | "lg" | "xl" | "2xl" | undefined>;
+            size: import("vue").PropType<"sm" | "md" | "lg" | "xl" | "xs" | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            iconActive: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            active: BooleanConstructor;
+        }>> & {
+            onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
+        }, {
+            isActive: import("vue").ComputedRef<boolean>;
+        }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
+        }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            turn: BooleanConstructor;
+            disabled: BooleanConstructor;
+            hide: BooleanConstructor;
+            animationType: {
+                type: import("vue").PropType<"type1" | "type2" | undefined>;
+                default: "type1" | "type2" | undefined;
+            };
+            animationShow: BooleanConstructor;
+            overlay: BooleanConstructor;
+            dynamic: BooleanConstructor;
+            start: BooleanConstructor;
+            end: BooleanConstructor;
+            high: BooleanConstructor;
+            rounded: import("vue").PropType<"full" | "sm" | "standard" | "none" | "md" | "lg" | "xl" | "2xl" | undefined>;
+            size: import("vue").PropType<"sm" | "md" | "lg" | "xl" | "xs" | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            iconActive: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            active: BooleanConstructor;
+        }>> & {
+            onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
+        }, {
+            animationType: "type1" | "type2" | undefined;
+            turn: boolean;
+            disabled: boolean;
+            hide: boolean;
+            active: boolean;
+            animationShow: boolean;
+            overlay: boolean;
+            dynamic: boolean;
+            start: boolean;
+            end: boolean;
+            high: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            turn: BooleanConstructor;
+            disabled: BooleanConstructor;
+            hide: BooleanConstructor;
+            animationType: {
+                type: import("vue").PropType<"type1" | "type2" | undefined>;
+                default: "type1" | "type2" | undefined;
+            };
+            animationShow: BooleanConstructor;
+            overlay: BooleanConstructor;
+            dynamic: BooleanConstructor;
+            start: BooleanConstructor;
+            end: BooleanConstructor;
+            high: BooleanConstructor;
+            rounded: import("vue").PropType<"full" | "sm" | "standard" | "none" | "md" | "lg" | "xl" | "2xl" | undefined>;
+            size: import("vue").PropType<"sm" | "md" | "lg" | "xl" | "xs" | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            iconActive: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+            active: BooleanConstructor;
+        }>> & {
+            onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
+        }, {
+            isActive: import("vue").ComputedRef<boolean>;
+        }, {}, {}, {}, {
+            animationType: "type1" | "type2" | undefined;
+            turn: boolean;
+            disabled: boolean;
+            hide: boolean;
+            active: boolean;
+            animationShow: boolean;
+            overlay: boolean;
+            dynamic: boolean;
+            start: boolean;
+            end: boolean;
+            high: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        turn: BooleanConstructor;
+        disabled: BooleanConstructor;
+        hide: BooleanConstructor;
+        animationType: {
+            type: import("vue").PropType<"type1" | "type2" | undefined>;
+            default: "type1" | "type2" | undefined;
+        };
+        animationShow: BooleanConstructor;
+        overlay: BooleanConstructor;
+        dynamic: BooleanConstructor;
+        start: BooleanConstructor;
+        end: BooleanConstructor;
+        high: BooleanConstructor;
+        rounded: import("vue").PropType<"full" | "sm" | "standard" | "none" | "md" | "lg" | "xl" | "2xl" | undefined>;
+        size: import("vue").PropType<"sm" | "md" | "lg" | "xl" | "xs" | undefined>;
+        icon: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+        iconActive: import("vue").PropType<string | import("../constructors/Image/props").ImageProps | undefined>;
+        active: BooleanConstructor;
+    }>> & {
+        onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
+    }, {
+        isActive: import("vue").ComputedRef<boolean>;
+    }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
+    }, string, {
+        animationType: "type1" | "type2" | undefined;
+        turn: boolean;
+        disabled: boolean;
+        hide: boolean;
+        active: boolean;
+        animationShow: boolean;
+        overlay: boolean;
+        dynamic: boolean;
+        start: boolean;
+        end: boolean;
+        high: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/Icon/types").IconSlots> & import("../constructors/Icon/types").IconSlots;
+    });
     M3Image: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             turn: BooleanConstructor;
@@ -53,11 +198,11 @@ export declare const components: {
         }>> & {
             onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
         }, {
-            adaptiveGroup: string;
-            adaptiveAlways: boolean;
             turn: boolean;
             disabled: boolean;
             hide: boolean;
+            adaptiveGroup: string;
+            adaptiveAlways: boolean;
             adaptive: boolean;
         }, true, {}, {}, {
             P: {};
@@ -93,11 +238,11 @@ export declare const components: {
             type: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageTypeItem>;
             data: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageEventItem>;
         }, {}, {}, {}, {
-            adaptiveGroup: string;
-            adaptiveAlways: boolean;
             turn: boolean;
             disabled: boolean;
             hide: boolean;
+            adaptiveGroup: string;
+            adaptiveAlways: boolean;
             adaptive: boolean;
         }>;
         __isFragment?: undefined;
@@ -132,11 +277,11 @@ export declare const components: {
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
     }, string, {
-        adaptiveGroup: string;
-        adaptiveAlways: boolean;
         turn: boolean;
         disabled: boolean;
         hide: boolean;
+        adaptiveGroup: string;
+        adaptiveAlways: boolean;
         adaptive: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Image/types").ImageSlots>;

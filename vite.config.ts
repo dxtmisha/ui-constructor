@@ -40,15 +40,28 @@ export default defineConfig(() => {
         entry: {
           ...(() => {
             const data: Record<string, any> = {}
+
+            components.forEach(item => {
+              data[item.name] = resolve(__dirname, `${item.path}/index.ts`)
+            })
+
+            return data
+          })(),
+          ...(() => {
+            const data: Record<string, any> = {}
             const list = [
               'index',
               'flags',
               'media',
               'translate',
               'components',
+              'components-c1',
+              'components-c2',
               'components-m2',
               'components-m3',
               'plugin',
+              'plugin-c1',
+              'plugin-c2',
               'plugin-m2',
               'plugin-m3',
               'plugin-basic',
@@ -57,15 +70,6 @@ export default defineConfig(() => {
 
             list.forEach(item => {
               data[item] = resolve(__dirname, `${library}/${item}.ts`)
-            })
-
-            return data
-          })(),
-          ...(() => {
-            const data: Record<string, any> = {}
-
-            components.forEach(item => {
-              data[item.name] = resolve(__dirname, `${item.path}/index.ts`)
             })
 
             return data

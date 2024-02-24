@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=async()=>{(await Promise.resolve().then(()=>require("./flags.umd.cjs"))).makeFlags(),(await Promise.resolve().then(()=>require("./icons-rxtKqKoa.cjs"))).makeIconsC2()};exports.makeMedia=e;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=async()=>{(await Promise.resolve().then(()=>require("./flags.umd.cjs"))).makeFlags(),(await Promise.resolve().then(()=>require("./icons-DkVgIEaz.cjs"))).makeIconsC2()};exports.makeMedia=e;

@@ -29,14 +29,11 @@
 
 // :component.once const classesToken = computed<ConstrClasses>(() => ({
 // :component.once   main: {
-// :component.once     // TODO: User state classes / Пользовательские классы состояния
 // :component.once     // :classes-values [!] System label / Системная метка
 // :component.once     // :classes-values [!] System label / Системная метка
 // :component.once   }
-// :component.once   // TODO: User subclasses / Пользовательские подклассы
 // :component.once }))
 // :component.once const stylesToken = computed<ConstrStyles>(() => ({
-// :component.once   // TODO: User styles / Пользовательские стили
 // :component.once   // :styles-values [!] System label / Системная метка
 // :component.once   // :styles-values [!] System label / Системная метка
 // :component.once }))

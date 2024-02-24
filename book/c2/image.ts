@@ -8,7 +8,7 @@ import {
   m3ImageDescription,
   m3ImageDescriptionAdaptive,
   m3ImageValues
-} from '../m3/image.ts'
+} from '../m3/image'
 
 export const c2ImageDescription: string = m3ImageDescription
 

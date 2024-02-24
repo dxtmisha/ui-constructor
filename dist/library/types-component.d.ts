@@ -2,16 +2,32 @@
 // Этот файл генерируется скриптом, не редактировать.
 
 
+declare module 'ui/M2Icon' {
+  export { M2Icon } from 'ui/m2/Icon'
+}
+
 declare module 'ui/M2Image' {
   export { M2Image } from 'ui/m2/Image'
+}
+
+declare module 'ui/M3Icon' {
+  export { M3Icon } from 'ui/m3/Icon'
 }
 
 declare module 'ui/M3Image' {
   export { M3Image } from 'ui/m3/Image'
 }
 
+declare module 'ui/C1Icon' {
+  export { C1Icon } from 'ui/c1/Icon'
+}
+
 declare module 'ui/C1Image' {
   export { C1Image } from 'ui/c1/Image'
+}
+
+declare module 'ui/C2Icon' {
+  export { C2Icon } from 'ui/c2/Icon'
 }
 
 declare module 'ui/C2Image' {

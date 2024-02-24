@@ -5,7 +5,7 @@ const t = useTranslateRef(['a'] as const)
 </script>
 
 <template>
-  <div>{{ t.a }}<m3-image value="home"/></div>
+  <div>{{ t.a }}<c2-image value="message-dots-02"/></div>
 </template>
 
 <style lang="scss"></style>

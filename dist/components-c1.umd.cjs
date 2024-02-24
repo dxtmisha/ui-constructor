@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const c=require("./Api-BEaPTMKA.cjs"),s=require("./C1Icon.umd.cjs"),i=require("./C1Image.umd.cjs"),n={C1Icon:s.C1Icon,C1Image:i.C1Image},r={install:async o=>{c.forEach(n,(e,t)=>{o.component(t,e)})}};exports.components=n;exports.uiC1ComponentsPlugin=r;
