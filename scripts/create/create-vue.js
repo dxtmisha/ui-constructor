@@ -19,8 +19,8 @@ const filePackageData = {
   private: false,
   version: '0.0.0-dev',
   type: 'module',
-  "scripts": {
-    "ui-project": `vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND}`,
+  scripts: {
+    'ui-project': `vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND}`
   },
   devDependencies: {
     commander: '^11.1.0',
@@ -63,8 +63,8 @@ const initProject = () => {
   console.log('Project...')
 
   requireFs.writeFileSync(
-      fileVite,
-      JSON.stringify(fileViteData)
+    fileVite,
+    JSON.stringify(fileViteData)
   )
 
   exec(`cd ${PROJECT_TEMP};npx vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
@@ -102,7 +102,7 @@ const initUnlink = () => {
     console.log(`Unlink: ${fileVite}`)
   })
 
-  requireFs.unlink(fileVite, error => {
+  requireFs.unlink(fileViteLock, error => {
     if (error) {
       console.error('[E_L] Error: ', error)
       return
