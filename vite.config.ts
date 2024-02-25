@@ -86,7 +86,13 @@ export default defineConfig(() => {
         }
       },
       rollupOptions: {
-        external: ['vue', 'vue-router', 'ui'],
+        external: [
+          'commander',
+          'dotenv',
+          'vue',
+          'vue-router',
+          'ui'
+        ],
         output: {
           globals: {
             vue: 'UI_CORE_VUE',
