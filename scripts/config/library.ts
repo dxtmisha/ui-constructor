@@ -21,13 +21,6 @@ export const LIBRARY_STYLE_BASIC = 'style-basic'
 export const LIBRARY_TYPES = 'types'
 export const LIBRARY_TYPES_COMPONENT = 'types-component'
 
-export const LIBRARY_MODULES: Record<string, string> = {
-  vue: 'UI_CORE_VUE',
-  'vue-router': 'UI_CORE_VUE_ROUTER',
-  vuex: 'UI_CORE_VUEX',
-  ui: 'UI_CORE_UI'
-}
-
 export const LIBRARY_LIST_FILES = [
   LIBRARY_COMPONENTS,
   `${LIBRARY_COMPONENTS}-c1`,

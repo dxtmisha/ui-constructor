@@ -31,6 +31,7 @@
     "functions/transformation.ts",
     "scripts/classes/design/DesignProject.ts",
     "scripts/classes/design/DesignProjectModule.ts",
+    "scripts/classes/properties/PropertiesFile.ts",
     "scripts/project.ts"
   ],
   "main": "./dist/index.umd.cjs",

@@ -1,6 +1,11 @@
 import { PropertiesFile } from '../properties/PropertiesFile.ts'
 
-import { LIBRARY_MODULES } from '../../config/library.ts'
+export const LIBRARY_MODULES: Record<string, string> = {
+  vue: 'UI_CORE_VUE',
+  'vue-router': 'UI_CORE_VUE_ROUTER',
+  vuex: 'UI_CORE_VUEX',
+  ui: 'UI_CORE_UI'
+}
 
 /**
  * Class for changing the path of module connection.<br>

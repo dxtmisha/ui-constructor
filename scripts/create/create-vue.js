@@ -20,51 +20,84 @@ const filePackageData = {
   devDependencies: {
     commander: '^11.1.0',
     dotenv: '^16.4.1',
+    'vite-node': '^1.2.2',
+    typescript: '^5.3.3',
     ui: PROJECT_GIT
   }
 }
 
-if (
-  requireFs.existsSync(PROJECT_TEMP) ||
-  requireFs.existsSync(PROJECT_NAME)
-) {
-  console.warn('-- Проект существует!')
-} else {
+const fileVite = requirePath.join(FILE_PACKAGE)
+const fileViteData = {
+  name: '@cc/coral-design-create',
+  private: false,
+  version: '0.0.0-create',
+  type: 'module'
+}
+
+const initTemp = () => {
+  console.log('Start...')
+
   requireFs.mkdirSync(PROJECT_TEMP)
   requireFs.writeFileSync(
     filePackage,
     JSON.stringify(filePackageData)
   )
-
-  console.log('Start...')
+  requireFs.writeFileSync(
+    fileVite,
+    JSON.stringify(fileViteData)
+  )
 
   exec(`cd ${PROJECT_TEMP};npm install`, (error) => {
     if (error) {
       console.error('[T] Error: ', error)
-      return
     }
 
-    exec(`cd ${PROJECT_TEMP};npx node ${PROJECT_COMMAND_SCRIPT} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
-      if (error) {
-        console.error('[P] Error: ', error)
-        return
-      }
-
-      exec(`cd ${PROJECT_NAME};npm install`, (error) => {
-        if (error) {
-          console.error('[I] Error: ', error)
-          return
-        }
-
-        requireFs.unlink(__filename, error => {
-          if (error) {
-            console.error('[E] Error: ', error)
-            return
-          }
-
-          console.log('...End')
-        })
-      })
-    })
+    initProject()
   })
+}
+
+const initProject = () => {
+  console.log('Project...')
+
+  exec(`cd ${PROJECT_TEMP};vite-node ${PROJECT_COMMAND_SCRIPT} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
+    if (error) {
+      console.error('[P] Error: ', error)
+    }
+
+    initInstall()
+  })
+}
+
+const initInstall = () => {
+  console.log('Install...')
+
+  exec(`cd ${PROJECT_NAME};npm install`, (error) => {
+    if (error) {
+      console.error('[I] Error: ', error)
+    }
+
+    // initUnlink()
+  })
+}
+
+const initUnlink = () => {
+  console.log('Unlink...')
+
+  requireFs.unlink(__filename, error => {
+    if (error) {
+      console.error('[E] Error: ', error)
+    }
+  })
+}
+
+if (requireFs.existsSync(PROJECT_NAME)) {
+  console.warn('The project exists!')
+} else {
+  if (requireFs.existsSync(PROJECT_TEMP)) {
+    initProject()
+  } else {
+    initTemp()
+  }
+
+  console.log('...End')
 }
