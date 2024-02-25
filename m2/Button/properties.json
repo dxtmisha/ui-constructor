@@ -1,0 +1,50 @@
+{
+  "main": "{d.button}",
+  "height": {
+    "_default": "md"
+  },
+  "color": {
+    "_rename": "palette-color"
+  },
+  "gradient": {
+    "_rename": "palette-gradient"
+  },
+  "contained": {
+    "color": {
+      "_rename": "color"
+    },
+    "background-color": {
+      "_rename": "palette-background"
+    },
+    "gradient": {
+      "_rename": "gradient"
+    },
+    "_category": "appearance",
+    "_default": true
+  },
+  "outlined": {
+    "_category": "appearance"
+  },
+  "text": {
+    "_category": "appearance"
+  },
+  "adaptive": {
+    "sm": {
+      "media-max|sm": {
+        "basic": {
+          "value": "{??adaptive.icon}",
+          "_type": "link"
+        }
+      }
+    },
+    "md": {
+      "media-max|md": {
+        "basic": {
+          "value": "{??adaptive.icon}",
+          "_type": "link"
+        }
+      }
+    }
+  },
+  "@@palette": "{palette}"
+}

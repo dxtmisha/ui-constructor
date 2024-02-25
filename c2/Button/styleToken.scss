@@ -1,0 +1,709 @@
+@import "../../styles/all";
+
+@mixin mixinButtonToken {
+  // :style [!] System label / Системная метка
+  --c2-button-transitionFunction: var(--d-sys-transitionFunction-standard);
+  
+  gap: var(--c2-st-global-distance-space-inline-md);
+  
+  padding: var(--c2-st-global-distance-space-inset-2xl);
+  
+  font: var(--c2-st-web-text-body-b1medium);
+  
+  @include paletteColor(#{var(--c2-st-action-fg-color-primary-normal)});
+  
+  border-radius: var(--c2-st-selectable-borderRadius-size-xl);
+  
+  transition-duration: var(--d-sys-transitionDuration-lg-close);
+  transition-property: background-color, background-image, border, box-shadow;
+  
+  @include hover {
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include active {
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include disabled {
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  &--selected {
+    @include paletteColor(#{var(--c2-st-action-fg-color-primary-select)});
+  }
+  
+  &--adaptive {
+    &--icon {
+      @include justifyContent(#{flex-start});
+      
+      padding: 0;
+      
+      & .c2-button__label {
+        display: none;
+        
+        @include paddingX(#{0});
+      }
+    }
+  }
+  
+  &--size {
+    &--lg {
+      gap: var(--c2-st-global-distance-space-inline-sm);
+      
+      padding: var(--c2-st-global-distance-space-inset-xl);
+      
+      font: var(--c2-st-web-text-body-b2medium);
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-lg);
+    }
+    
+    &--md {
+      gap: var(--c2-st-global-distance-space-inline-xs);
+      
+      padding: var(--c2-st-global-distance-space-inset-lg);
+      
+      font: var(--c2-st-web-text-body-b2medium);
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-md);
+    }
+    
+    &--sm {
+      gap: var(--c2-st-global-distance-space-inline-xs);
+      
+      padding: var(--c2-st-global-distance-space-inset-lg);
+      
+      font: var(--c2-st-web-text-caption-c1medium);
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
+    }
+    
+    &--xs {
+      gap: var(--c2-st-global-distance-space-inline-xs);
+      
+      padding: var(--c2-st-global-distance-space-inset-md);
+      
+      font: var(--c2-st-web-text-caption-c1medium);
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
+    }
+    
+    &--x {
+      gap: var(--c2-st-global-distance-space-inline-xs);
+      
+      padding: var(--c2-st-global-distance-space-inset-sm);
+      
+      font: var(--c2-st-web-text-caption-c1medium);
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-xs);
+    }
+  }
+  
+  &--outline {
+    --c2-button-borderWidth: 1px;
+    --c2-button-borderStyle: solid;
+    
+    @include paletteColor(#{var(--c2-st-action-fg-color-neutral-normal)});
+    
+    @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-invert-normal)});
+    
+    @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-normal)});
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border: var(--c2-button-borderWidth) var(--c2-button-borderStyle);
+      @include borderColor(#{inherit});
+    }
+    
+    @include focus('.c2-button') {
+      box-shadow: var(--c2-st-elevation-onLight-focus-md);
+    }
+    
+    @include hover('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+      
+      @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-invert-hover)});
+      
+      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-neutral-active)});
+      
+      @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-invert-active)});
+      
+      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-active)});
+    }
+    
+    @include disabled('.c2-button') {
+      opacity: 0.5;
+    }
+    
+    &.c2-button--selected {
+      @include paletteColor(#{var(--c2-st-action-fg-color-neutral-select)});
+      
+      @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-invert-select)});
+      
+      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-select)});
+    }
+    
+    &.c2-button--intent {
+      &--positive {
+        @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-normal)});
+        
+        @include borderColor(#{var(--c2-st-action-fg-color-positive-normal)});
+        
+        @include focus('.c2-button') {
+          @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-invert-focus)});
+        }
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-hover)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-positive-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-active)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-positive-active)});
+        }
+        
+        &.c2-button--selected {
+          @include borderColor(#{var(--c2-st-action-fg-color-positive-select)});
+        }
+      }
+      
+      &--informative {
+        @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-normal)});
+        
+        @include borderColor(#{var(--c2-st-action-bg-color-informative-normal)});
+        
+        @include focus('.c2-button') {
+          @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-invert-focus)});
+        }
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-hover)});
+          
+          @include borderColor(#{var(--c2-st-action-bg-color-informative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-active)});
+          
+          @include borderColor(#{var(--c2-st-action-bg-color-informative-active)});
+        }
+        
+        &.c2-button--selected {
+          @include borderColor(#{var(--c2-st-action-bg-color-informative-select)});
+        }
+      }
+      
+      &--negative {
+        @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-normal)});
+        
+        @include borderColor(#{var(--c2-st-action-fg-color-negative-normal)});
+        
+        @include focus('.c2-button') {
+          @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-invert-focus)});
+        }
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-hover)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-negative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-active)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-negative-active)});
+        }
+        
+        &.c2-button--selected {
+          @include borderColor(#{var(--c2-st-action-fg-color-negative-select)});
+        }
+      }
+      
+      &--neutral {
+        @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-normal)});
+        
+        @include borderColor(#{var(--c2-st-action-fg-color-neutral-normal)});
+        
+        @include focus('.c2-button') {
+          @include backgroundColor(#{var(--c2-st-action-bg-color-neutral-ghost-invert-focus)});
+        }
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-active)});
+          
+          @include borderColor(#{var(--c2-st-action-fg-color-neutral-active)});
+        }
+        
+        &.c2-button--selected {
+          @include borderColor(#{var(--c2-st-action-fg-color-neutral-select)});
+        }
+      }
+    }
+  }
+  
+  &--link {
+    padding: 0;
+    
+    font: var(--c2-st-web-text-body-b1medium);
+    
+    @include paletteColor(#{var(--c2-st-action-fg-color-primary-normal)});
+    
+    border-radius: unset;
+    
+    & .c2-button__label {
+      border-bottom: 1px dashed;
+    }
+    
+    @include focus('.c2-button') {
+      @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-focus)});
+      
+      box-shadow: var(--c2-st-elevation-onLight-focus-sm);
+    }
+    
+    @include hover('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-active)});
+    }
+    
+    @include disabled('.c2-button') {
+      opacity: 0.5;
+    }
+    
+    &.c2-button--intent {
+      &--neutral {
+        @include paletteColor(#{var(--c2-st-action-fg-color-neutral-normal)});
+        
+        @include focus('.c2-button') {
+          box-shadow: var(--c2-st-elevation-onLight-focus-xs);
+        }
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-select)});
+        }
+      }
+      
+      &--positive {
+        @include paletteColor(#{var(--c2-st-action-fg-color-positive-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-select)});
+        }
+      }
+      
+      &--informative {
+        @include paletteColor(#{var(--c2-st-action-bg-color-informative-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-select)});
+        }
+      }
+      
+      &--negative {
+        @include paletteColor(#{var(--c2-st-action-fg-color-negative-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-active)});
+        }
+      }
+    }
+    
+    &.c2-button--selected {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-select)});
+    }
+    
+    &.c2-button--size {
+      &--lg {
+        font: var(--c2-st-web-text-body-b2medium);
+      }
+      
+      &--md {
+        font: var(--c2-st-web-text-body-b2medium);
+      }
+      
+      &--sm {
+        font: var(--c2-st-web-text-caption-c1medium);
+      }
+      
+      &--xs {
+        font: var(--c2-st-web-text-caption-c1medium);
+      }
+      
+      &--x {
+        font: var(--c2-st-web-text-caption-c1medium);
+      }
+    }
+  }
+  
+  &--intent {
+    &--positive {
+      @include paletteColor(#{var(--c2-st-action-fg-color-positive-normal)});
+      
+      &.c2-button--selected {
+        @include paletteColor(#{var(--c2-st-action-fg-color-positive-select)});
+      }
+    }
+    
+    &--negative {
+      @include paletteColor(#{var(--c2-st-action-fg-color-negative-normal)});
+      
+      &.c2-button--selected {
+        @include paletteColor(#{var(--c2-st-action-fg-color-negative-select)});
+      }
+    }
+    
+    &--neutral {
+      @include paletteColor(#{var(--c2-st-action-fg-color-neutral-normal)});
+      
+      &.c2-button--selected {
+        @include paletteColor(#{var(--c2-st-action-fg-color-neutral-select)});
+      }
+    }
+    
+    &--informative {
+      @include paletteColor(#{var(--c2-st-action-bg-color-informative-normal)});
+      
+      &.c2-button--selected {
+        @include paletteColor(#{var(--c2-st-action-bg-color-informative-select)});
+      }
+    }
+  }
+  
+  &--primary {
+    @include color(#{var(--c2-st-action-fg-color-onprimary-normal)});
+    
+    @include paletteBackground(#{var(--c2-st-action-bg-color-primary-solid-normal)});
+    
+    @include focus('.c2-button') {
+      box-shadow: var(--c2-st-elevation-onLight-focus-md);
+    }
+    
+    @include hover('.c2-button') {
+      @include color(#{var(--c2-st-action-fg-color-onprimary-hover)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-solid-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include color(#{var(--c2-st-action-fg-color-onprimary-active)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-solid-active)});
+    }
+    
+    @include disabled('.c2-button') {
+      opacity: 0.5;
+    }
+    
+    &.c2-button--selected {
+      @include color(#{var(--c2-st-action-fg-color-onprimary-select)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-solid-select)});
+    }
+    
+    &.c2-button--intent {
+      &--positive {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-positive-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-select)});
+        }
+      }
+      
+      &--informative {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-informative-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-select)});
+        }
+      }
+      
+      &--negative {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-negative-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-select)});
+        }
+      }
+      
+      &--neutral {
+        @include color(#{var(--c2-st-action-bg-color-neutral-invert-normal)});
+        
+        @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-solid-normal)});
+        
+        @include hover('.c2-button') {
+          @include color(#{var(--c2-st-action-bg-color-neutral-invert-hover)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-solid-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include color(#{var(--c2-st-action-bg-color-neutral-invert-active)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-solid-active)});
+        }
+        
+        &.c2-button--selected {
+          @include color(#{var(--c2-st-action-bg-color-neutral-invert-select)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-solid-select)});
+        }
+      }
+    }
+  }
+  
+  &--secondary {
+    @include paletteBackground(#{var(--c2-st-action-bg-color-primary-subtle-normal)});
+    
+    @include focus('.c2-button') {
+      box-shadow: var(--c2-st-elevation-onLight-focus-md);
+    }
+    
+    @include hover('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-hover)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-subtle-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-active)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-subtle-active)});
+    }
+    
+    @include disabled('.c2-button') {
+      opacity: 0.5;
+    }
+    
+    &.c2-button--selected {
+      @include paletteBackground(#{var(--c2-st-action-bg-color-primary-subtle-select)});
+    }
+    
+    &.c2-button--intent {
+      &--positive {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-positive-subtle-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-hover)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-subtle-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-active)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-subtle-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-positive-subtle-select)});
+        }
+      }
+      
+      &--informative {
+        @include paletteColor(#{var(--c2-st-action-fg-color-informative-normal)});
+        
+        @include paletteBackground(#{var(--c2-st-action-bg-color-informative-subtle-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-informative-hover)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-subtle-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-informative-active)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-subtle-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-informative-subtle-select)});
+        }
+      }
+      
+      &--negative {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-negative-subtle-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-hover)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-subtle-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-active)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-subtle-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-negative-subtle-select)});
+        }
+      }
+      
+      &--neutral {
+        @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-subtle-normal)});
+        
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-subtle-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-active)});
+          
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-subtle-active)});
+        }
+        
+        &.c2-button--selected {
+          @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-subtle-select)});
+        }
+      }
+    }
+  }
+  
+  &--ghost {
+    @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-normal)});
+    
+    @include focus('.c2-button') {
+      @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-focus)});
+      
+      box-shadow: var(--c2-st-elevation-onLight-focus-md);
+    }
+    
+    @include hover('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-hover)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-fg-color-primary-active)});
+      
+      @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-active)});
+    }
+    
+    @include disabled('.c2-button') {
+      opacity: 0.5;
+    }
+    
+    &.c2-button--selected {
+      @include paletteBackground(#{var(--c2-st-action-bg-color-neutral-ghost-select)});
+    }
+    
+    &.c2-button--intent {
+      &--neutral {
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-neutral-active)});
+        }
+      }
+      
+      &--positive {
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-positive-active)});
+        }
+      }
+      
+      &--informative {
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-bg-color-informative-active)});
+        }
+      }
+      
+      &--negative {
+        @include hover('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-hover)});
+        }
+        
+        @include active('.c2-button') {
+          @include paletteColor(#{var(--c2-st-action-fg-color-negative-active)});
+        }
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

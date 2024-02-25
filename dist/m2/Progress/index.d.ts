@@ -56,8 +56,8 @@ export declare const M2Progress: {
     }>>, {
         indeterminate: "type1" | "type2" | "type3" | undefined;
         position: "top" | "bottom" | undefined;
-        visible: boolean;
         max: string | number;
+        visible: boolean;
         delay: string | number;
         linear: boolean;
         circular: boolean;
@@ -100,8 +100,8 @@ export declare const M2Progress: {
     }>>, {}, {}, {}, {}, {
         indeterminate: "type1" | "type2" | "type3" | undefined;
         position: "top" | "bottom" | undefined;
-        visible: boolean;
         max: string | number;
+        visible: boolean;
         delay: string | number;
         linear: boolean;
         circular: boolean;
@@ -141,8 +141,8 @@ export declare const M2Progress: {
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
     indeterminate: "type1" | "type2" | "type3" | undefined;
     position: "top" | "bottom" | undefined;
-    visible: boolean;
     max: string | number;
+    visible: boolean;
     delay: string | number;
     linear: boolean;
     circular: boolean;

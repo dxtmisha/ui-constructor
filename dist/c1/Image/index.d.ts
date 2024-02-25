@@ -51,9 +51,9 @@ export declare const C1Image: {
     }>> & {
         onLoad?: ((image: import("../../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
     }, {
+        hide: boolean;
         turn: boolean;
         disabled: boolean;
-        hide: boolean;
         adaptiveGroup: string;
         adaptiveAlways: boolean;
         adaptive: boolean;
@@ -91,9 +91,9 @@ export declare const C1Image: {
         type: import("vue").ComputedRef<import("../../constructors/Image/typesBasic").ImageTypeItem>;
         data: import("vue").ComputedRef<import("../../constructors/Image/typesBasic").ImageEventItem>;
     }, {}, {}, {}, {
+        hide: boolean;
         turn: boolean;
         disabled: boolean;
-        hide: boolean;
         adaptiveGroup: string;
         adaptiveAlways: boolean;
         adaptive: boolean;
@@ -130,9 +130,9 @@ export declare const C1Image: {
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     load: (image: import("../../constructors/Image/typesBasic").ImageEventData) => void;
 }, string, {
+    hide: boolean;
     turn: boolean;
     disabled: boolean;
-    hide: boolean;
     adaptiveGroup: string;
     adaptiveAlways: boolean;
     adaptive: boolean;

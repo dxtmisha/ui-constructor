@@ -8,7 +8,7 @@
   @include initParagraphSpacing;
 
   *, *:after, *:before {
-    @include initPalette;
+    // @include initPalette;
     @include initTransform;
   }
 }

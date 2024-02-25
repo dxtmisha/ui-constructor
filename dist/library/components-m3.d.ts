@@ -20,7 +20,7 @@ export declare const components: {
             text: BooleanConstructor;
             elevated: BooleanConstructor;
             tonal: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+            palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -65,7 +65,7 @@ export declare const components: {
             text: BooleanConstructor;
             elevated: BooleanConstructor;
             tonal: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+            palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -87,17 +87,17 @@ export declare const components: {
             }) => any) | undefined;
         }, {
             focus: boolean;
-            disabled: boolean;
-            filled: boolean;
-            outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
-            text: boolean;
             selected: boolean;
             iconTurn: boolean;
             iconHide: boolean;
             loading: boolean;
+            text: boolean;
             tag: string | undefined;
             readonly: boolean;
+            disabled: boolean;
+            filled: boolean;
+            outlined: boolean;
+            height: "sm" | "md" | "lg" | undefined;
             elevated: boolean;
             tonal: boolean;
         }, true, {}, {}, {
@@ -126,7 +126,7 @@ export declare const components: {
             text: BooleanConstructor;
             elevated: BooleanConstructor;
             tonal: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+            palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -148,17 +148,17 @@ export declare const components: {
             }) => any) | undefined;
         }, {}, {}, {}, {}, {
             focus: boolean;
-            disabled: boolean;
-            filled: boolean;
-            outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
-            text: boolean;
             selected: boolean;
             iconTurn: boolean;
             iconHide: boolean;
             loading: boolean;
+            text: boolean;
             tag: string | undefined;
             readonly: boolean;
+            disabled: boolean;
+            filled: boolean;
+            outlined: boolean;
+            height: "sm" | "md" | "lg" | undefined;
             elevated: boolean;
             tonal: boolean;
         }>;
@@ -184,7 +184,7 @@ export declare const components: {
         text: BooleanConstructor;
         elevated: BooleanConstructor;
         tonal: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+        palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -212,17 +212,17 @@ export declare const components: {
         }) => void;
     }, string, {
         focus: boolean;
-        disabled: boolean;
-        filled: boolean;
-        outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
-        text: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;
         loading: boolean;
+        text: boolean;
         tag: string | undefined;
         readonly: boolean;
+        disabled: boolean;
+        filled: boolean;
+        outlined: boolean;
+        height: "sm" | "md" | "lg" | undefined;
         elevated: boolean;
         tonal: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
@@ -277,16 +277,16 @@ export declare const components: {
             onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
         }, {
             animationType: "type1" | "type2" | undefined;
-            turn: boolean;
-            disabled: boolean;
-            hide: boolean;
             active: boolean;
+            hide: boolean;
+            start: boolean;
+            turn: boolean;
+            end: boolean;
+            high: boolean;
+            disabled: boolean;
             animationShow: boolean;
             overlay: boolean;
             dynamic: boolean;
-            start: boolean;
-            end: boolean;
-            high: boolean;
         }, true, {}, {}, {
             P: {};
             B: {};
@@ -319,16 +319,16 @@ export declare const components: {
             isActive: import("vue").ComputedRef<boolean>;
         }, {}, {}, {}, {
             animationType: "type1" | "type2" | undefined;
-            turn: boolean;
-            disabled: boolean;
-            hide: boolean;
             active: boolean;
+            hide: boolean;
+            start: boolean;
+            turn: boolean;
+            end: boolean;
+            high: boolean;
+            disabled: boolean;
             animationShow: boolean;
             overlay: boolean;
             dynamic: boolean;
-            start: boolean;
-            end: boolean;
-            high: boolean;
         }>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
@@ -360,16 +360,16 @@ export declare const components: {
         load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
     }, string, {
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Icon/types").IconSlots> & import("../constructors/Icon/types").IconSlots;
     });
@@ -426,9 +426,9 @@ export declare const components: {
         }>> & {
             onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
         }, {
+            hide: boolean;
             turn: boolean;
             disabled: boolean;
-            hide: boolean;
             adaptiveGroup: string;
             adaptiveAlways: boolean;
             adaptive: boolean;
@@ -466,9 +466,9 @@ export declare const components: {
             type: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageTypeItem>;
             data: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageEventItem>;
         }, {}, {}, {}, {
+            hide: boolean;
             turn: boolean;
             disabled: boolean;
-            hide: boolean;
             adaptiveGroup: string;
             adaptiveAlways: boolean;
             adaptive: boolean;
@@ -505,9 +505,9 @@ export declare const components: {
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
     }, string, {
+        hide: boolean;
         turn: boolean;
         disabled: boolean;
-        hide: boolean;
         adaptiveGroup: string;
         adaptiveAlways: boolean;
         adaptive: boolean;
@@ -572,8 +572,8 @@ export declare const components: {
         }>>, {
             indeterminate: "type1" | "type2" | "type3" | undefined;
             position: "top" | "bottom" | undefined;
-            visible: boolean;
             max: string | number;
+            visible: boolean;
             delay: string | number;
             linear: boolean;
             circular: boolean;
@@ -616,8 +616,8 @@ export declare const components: {
         }>>, {}, {}, {}, {}, {
             indeterminate: "type1" | "type2" | "type3" | undefined;
             position: "top" | "bottom" | undefined;
-            visible: boolean;
             max: string | number;
+            visible: boolean;
             delay: string | number;
             linear: boolean;
             circular: boolean;
@@ -657,8 +657,8 @@ export declare const components: {
     }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
         indeterminate: "type1" | "type2" | "type3" | undefined;
         position: "top" | "bottom" | undefined;
-        visible: boolean;
         max: string | number;
+        visible: boolean;
         delay: string | number;
         linear: boolean;
         circular: boolean;

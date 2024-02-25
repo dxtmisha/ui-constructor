@@ -142,6 +142,8 @@
   --c1-ref-screen-xl: 1280px;
   --c1-ref-screen-2xl: 1536px;
   --c1-ref-shade-50: 50;
+  --c1-ref-shadow-0: none;
+  --c1-ref-shadow-2: 0 2px 8px 0px rgba(0, 16, 48, 0.08);
   --c1-ref-spacing-1: .25rem;
   --c1-ref-spacing-2: calc(var(--c1-ref-spacing-1)*2);
   --c1-ref-spacing-3: calc(var(--c1-ref-spacing-1)*3);
@@ -198,7 +200,24 @@
   --c1-sys-opacity-surface-medium: var(--c1-ref-opacity-surface-medium);
   --c1-sys-opacity-surface-disabled: var(--c1-ref-opacity-surface-disabled);
   --c1-sys-palette-primary: var(--c1-ref-palette-webAccent-50);
+  --c1-sys-palette-primaryVariant: var(--c1-ref-palette-extra2-50);
+  --c1-sys-palette-surface: var(--c1-ref-palette-webWhite-50);
+  --c1-sys-palette-disabled: var(--c1-ref-palette-webGray4-50);
+  --c1-sys-palette-onPrimary: var(--c1-ref-palette-webWhite-50);
+  --c1-sys-palette-onSecondary: var(--c1-ref-palette-webGray1-50);
+  --c1-sys-palette-onSecondary-opacity: #{toColorOpacity(var(--c1-ref-palette-webGray1-50))};
   --c1-sys-palette-onSurface: var(--c1-ref-palette-webText-50);
+  --c1-sys-palette-onSurfaceSecondary: var(--c1-ref-palette-webGray1-50);
+  --c1-sys-palette-onSurfaceSecondary-opacity: #{toColorOpacity(var(--c1-ref-palette-webGray1-50))};
   --c1-sys-palette-onDisabled: var(--c1-ref-palette-webGray3-50);
+  --c1-sys-palette-outline: var(--c1-ref-palette-webGray1-50);
+  --c1-sys-palette-outline-opacity: #{toColorOpacity(var(--c1-ref-palette-webGray1-50))};
   --c1-sys-palette-overlay: var(--c1-ref-palette-backgroundImage-50);
+  --c1-sys-rounded-none: var(--c1-ref-rounded-0);
+  --c1-sys-rounded-standard: var(--c1-ref-rounded-1);
+  --c1-sys-rounded-sm: var(--c1-ref-rounded-1);
+  --c1-sys-rounded-md: var(--c1-ref-rounded-2);
+  --c1-sys-rounded-lg: var(--c1-ref-rounded-4);
+  --c1-sys-rounded-xl: var(--c1-ref-rounded-8);
+  --c1-sys-rounded-full: var(--c1-ref-rounded-full);
 }

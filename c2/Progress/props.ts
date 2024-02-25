@@ -44,7 +44,7 @@ export const defaults: Props = {
   ...{
     // :default [!] System label / Системная метка
     linear: true,
-    indeterminate: 'type1',
+    indeterminate: 'type3',
     position: 'top'
     // :default [!] System label / Системная метка
   }

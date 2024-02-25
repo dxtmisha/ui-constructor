@@ -1,0 +1,223 @@
+@import "../../styles/all";
+
+@mixin mixinButtonToken {
+  // :style [!] System label / Системная метка
+  --m2-button-gap: var(--m2-ref-spacing-2);
+  --m2-button-padding: var(--m2-ref-spacing-4);
+  --m2-button-transitionFunction: var(--d-sys-transitionFunction-standard);
+  
+  font-family: var(--m2-ref-font-family-roboto);
+  @include fontSize(#{var(--m2-ref-font-size-md)});
+  font-weight: var(--m2-ref-font-weight-bold);
+  @include lineHeight(#{var(--m2-ref-lineHeight-sm)});
+  letter-spacing: var(--m2-ref-letterSpacing-2xl);
+  text-transform: uppercase;
+  
+  @include colorOpacity(#{var(--m2-sys-opacity-surface-high)});
+  @include paletteColor(#{var(--m2-sys-palette-primary)});
+  
+  @include backgroundColor(#{transparent});
+  @include gradientOpacity(#{0});
+  @include paletteGradient(#{var(--m2-sys-palette-primary)});
+  
+  border-radius: var(--m2-sys-rounded-standard);
+  
+  box-shadow: none;
+  
+  transition-duration: var(--d-sys-transitionDuration-lg-close);
+  transition-property: background-color, background-image, border, box-shadow;
+  
+  &__label {
+    @include textOverflow(#{truncate});
+  }
+  
+  @include focus {
+    @include gradientOpacity(#{var(--m2-sys-opacity-focus)});
+  }
+  
+  @include hover {
+    @include gradientOpacity(#{var(--m2-sys-opacity-hover)});
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include active {
+    @include gradientOpacity(#{var(--m2-sys-opacity-pressed)});
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include disabled {
+    @include colorOpacity(#{var(--m2-sys-opacity-surface-disabled)});
+    @include paletteColor(#{var(--m2-sys-palette-disabled)});
+    
+    box-shadow: none;
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  &--selected {
+    @include paletteColor(#{var(--m2-sys-palette-primaryVariant)});
+    
+    @include paletteGradient(#{var(--m2-sys-palette-primaryVariant)});
+  }
+  
+  &--adaptive {
+    &--icon {
+      --m2-button-padding: 0;
+      
+      @include justifyContent(#{flex-start});
+      
+      & .m2-button__label {
+        display: none;
+        
+        @include paddingX(#{0});
+      }
+    }
+    
+    &--sm {
+      @media screen and (max-width: calc(600px - 1px)) {
+        --m2-button-padding: 0;
+        
+        @include justifyContent(#{flex-start});
+        
+        & .m2-button__label {
+          display: none;
+          
+          @include paddingX(#{0});
+        }
+      }
+    }
+    
+    &--md {
+      @media screen and (max-width: calc(905px - 1px)) {
+        --m2-button-padding: 0;
+        
+        @include justifyContent(#{flex-start});
+        
+        & .m2-button__label {
+          display: none;
+          
+          @include paddingX(#{0});
+        }
+      }
+    }
+  }
+  
+  &--height {
+    &--sm {
+      @include height(#{var(--m2-ref-spacing-7)});
+    }
+    
+    &--md {
+      @include height(#{var(--m2-ref-spacing-9)});
+    }
+    
+    &--lg {
+      @include height(#{var(--m2-ref-spacing-12)});
+    }
+  }
+  
+  &--contained {
+    @include color(#{var(--m2-sys-palette-onPrimary)});
+    @include colorOpacity(#{var(--m2-sys-opacity-primary-high)});
+    
+    @include paletteBackground(#{var(--m2-sys-palette-primary)});
+    @include gradient(#{var(--m2-sys-palette-onPrimary)});
+    
+    box-shadow: var(--m2-ref-shadow-2);
+    
+    @include active('.m2-button') {
+      box-shadow: var(--m2-ref-shadow-8);
+    }
+    
+    @include disabled('.m2-button') {
+      @include color(#{var(--m2-sys-palette-disabled)});
+      @include colorOpacity(#{var(--m2-sys-opacity-surface-disabled)});
+      
+      @include backgroundOpacity(#{var(--m2-sys-opacity-disabled)});
+      @include paletteBackground(#{var(--m2-sys-palette-disabled)});
+      
+      box-shadow: none;
+    }
+    
+    &.m2-button--selected {
+      @include paletteBackground(#{var(--m2-sys-palette-primaryVariant)});
+    }
+  }
+  
+  &--outlined {
+    &::before {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border-width: var(--m2-ref-spacing-px);
+      border-style: solid;
+      @include borderColor(#{var(--m2-sys-palette-outline)});
+      @include borderOpacity(#{var(--m2-sys-opacity-outline)});
+    }
+    
+    &::after {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border-width: var(--m2-ref-spacing-px);
+      border-style: solid;
+      @include borderColor(#{var(--m2-sys-palette-outline)});
+      @include borderOpacity(#{0});
+      
+      transition: inherit;
+    }
+    
+    @include hover('.m2-button') {
+      &::after {
+        content: ' ';
+        transition-duration: var(--d-sys-transitionDuration-lg-close);
+      }
+    }
+    
+    @include active('.m2-button') {
+      &::after {
+        content: ' ';
+        @include borderOpacity(#{var(--m2-sys-opacity-scrim)});
+      }
+    }
+  }
+  
+  &--text {
+    --m2-button-padding: var(--m2-ref-spacing-2);
+    
+    &::after {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border-width: var(--m2-ref-spacing-px);
+      border-style: solid;
+      @include borderColor(#{var(--m2-sys-palette-outline)});
+      @include borderOpacity(#{0});
+      
+      transition: inherit;
+    }
+    
+    @include hover('.m2-button') {
+      &::after {
+        content: ' ';
+        transition-duration: var(--d-sys-transitionDuration-lg-close);
+      }
+    }
+    
+    @include active('.m2-button') {
+      &::after {
+        content: ' ';
+        @include borderOpacity(#{var(--m2-sys-opacity-scrim)});
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

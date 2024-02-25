@@ -91,7 +91,7 @@
     },
     "hover": {
       "after": {
-      "transition-duration": "{d.sys.transitionDuration.lg.close}"
+        "transition-duration": "{d.sys.transitionDuration.lg.close}"
       }
     },
     "active": {

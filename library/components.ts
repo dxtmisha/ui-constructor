@@ -4,6 +4,7 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
+import { M2Button } from '../m2/Button'
 import { M2Icon } from '../m2/Icon'
 import { M2Image } from '../m2/Image'
 import { M2Progress } from '../m2/Progress'
@@ -13,16 +14,19 @@ import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
 import { M3Progress } from '../m3/Progress'
 import { M3Ripple } from '../m3/Ripple'
+import { C1Button } from '../c1/Button'
 import { C1Icon } from '../c1/Icon'
 import { C1Image } from '../c1/Image'
 import { C1Progress } from '../c1/Progress'
 import { C1Ripple } from '../c1/Ripple'
+import { C2Button } from '../c2/Button'
 import { C2Icon } from '../c2/Icon'
 import { C2Image } from '../c2/Image'
 import { C2Progress } from '../c2/Progress'
 import { C2Ripple } from '../c2/Ripple'
 
 export const components = {
+  M2Button,
   M2Icon,
   M2Image,
   M2Progress,
@@ -32,10 +36,12 @@ export const components = {
   M3Image,
   M3Progress,
   M3Ripple,
+  C1Button,
   C1Icon,
   C1Image,
   C1Progress,
   C1Ripple,
+  C2Button,
   C2Icon,
   C2Image,
   C2Progress,

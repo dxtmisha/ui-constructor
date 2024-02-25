@@ -1,0 +1,90 @@
+{
+  "main": "{d.button}",
+  "gap": {
+    "_type": "property"
+  },
+  "padding": {
+    "_type": "property"
+  },
+  "color": {
+    "_rename": "palette-color"
+  },
+  "background-color": {
+    "_rename": "palette-background"
+  },
+  "container": {
+    "content": {
+      "label": {
+        "_drag": "../../.."
+      },
+      "_drag": "../.."
+    },
+    "_type": "none",
+    "_settingClone": true
+  },
+  "icon": {
+    "left": {
+      "_remove": true
+    },
+    "right": {
+      "_remove": true
+    },
+    "only": {
+      "_remove": true
+    },
+    "_type": "subclass",
+    "_settingClone": true
+  },
+  "normal": {
+    "_remove": true,
+    "_settingClone": true
+  },
+  "skeleton": {
+    "_remove": true,
+    "_settingClone": true
+  },
+  "size": {
+    "_default": "md"
+  },
+  "outline": {
+    "background-color": {
+      "_rename": "background-color"
+    },
+    "border-width": {
+      "_type": "var"
+    },
+    "border-style": {
+      "_type": "var"
+    },
+    "before": {
+      "position": "absolute",
+      "inset": "0px",
+      "border-radius": "inherit",
+      "border": "{??borderWidth} {??borderStyle}",
+      "border-color": "inherit"
+    }
+  },
+  "link": {
+    "container": {
+      "content": {
+        "_remove": true
+      },
+      "label": {
+        "_drag": "../.."
+      },
+      "_settingClone": true
+    },
+    "#label": {
+      "border-bottom": "1px dashed"
+    }
+  },
+  "intent": {
+    "_settingClone": true
+  },
+  "primary": {
+    "color": {
+      "_rename": "color"
+    }
+  },
+  "@@palette": "{palette}"
+}

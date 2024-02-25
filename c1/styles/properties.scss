@@ -24,8 +24,15 @@ $designsClasses: (
   'c1.palette',);
 $designsPalette: (
   '--c1-sys-palette-primary': ('--c1-palette-basic50'),
+  '--c1-sys-palette-primaryVariant': ('--c1-palette-basic50'),
+  '--c1-sys-palette-surface': ('--c1-palette-basic50'),
+  '--c1-sys-palette-disabled': ('--c1-palette-basic50'),
+  '--c1-sys-palette-onPrimary': ('--c1-palette-basic50'),
+  '--c1-sys-palette-onSecondary': ('--c1-palette-basic50'),
   '--c1-sys-palette-onSurface': ('--c1-palette-basic50'),
+  '--c1-sys-palette-onSurfaceSecondary': ('--c1-palette-basic50'),
   '--c1-sys-palette-onDisabled': ('--c1-palette-basic50'),
+  '--c1-sys-palette-outline': ('--c1-palette-basic50'),
   '--c1-sys-palette-overlay': ('--c1-palette-basic50'),
   '--c1-ripple-backgroundColor': ('--c1-palette-basic50'),);
 $designsShade: (
@@ -1812,6 +1819,25 @@ $designsProperties: (
               ),
             ),
           ),
+          'shadow':(
+            index: 'shadow',
+            name: 'shadow',
+            type: 'var',
+            value: (
+              '0':(
+                index: '0',
+                name: '--c1-ref-shadow-0',
+                type: 'var',
+                value: 'none',
+              ),
+              '2':(
+                index: '2',
+                name: '--c1-ref-shadow-2',
+                type: 'var',
+                value: '0 2px 8px 0px rgba(0, 16, 48, 0.08)',
+              ),
+            ),
+          ),
           'spacing':(
             index: 'spacing',
             name: 'spacing',
@@ -2188,11 +2214,47 @@ $designsProperties: (
                 type: 'var',
                 value: 'var(--c1-ref-palette-webAccent-50)',
               ),
+              'primaryVariant':(
+                index: 'primaryVariant',
+                name: '--c1-sys-palette-primaryVariant',
+                type: 'var',
+                value: 'var(--c1-ref-palette-extra2-50)',
+              ),
+              'surface':(
+                index: 'surface',
+                name: '--c1-sys-palette-surface',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webWhite-50)',
+              ),
+              'disabled':(
+                index: 'disabled',
+                name: '--c1-sys-palette-disabled',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webGray4-50)',
+              ),
+              'onPrimary':(
+                index: 'onPrimary',
+                name: '--c1-sys-palette-onPrimary',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webWhite-50)',
+              ),
+              'onSecondary':(
+                index: 'onSecondary',
+                name: '--c1-sys-palette-onSecondary',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webGray1-50)',
+              ),
               'onSurface':(
                 index: 'onSurface',
                 name: '--c1-sys-palette-onSurface',
                 type: 'var',
                 value: 'var(--c1-ref-palette-webText-50)',
+              ),
+              'onSurfaceSecondary':(
+                index: 'onSurfaceSecondary',
+                name: '--c1-sys-palette-onSurfaceSecondary',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webGray1-50)',
               ),
               'onDisabled':(
                 index: 'onDisabled',
@@ -2200,11 +2262,66 @@ $designsProperties: (
                 type: 'var',
                 value: 'var(--c1-ref-palette-webGray3-50)',
               ),
+              'outline':(
+                index: 'outline',
+                name: '--c1-sys-palette-outline',
+                type: 'var',
+                value: 'var(--c1-ref-palette-webGray1-50)',
+              ),
               'overlay':(
                 index: 'overlay',
                 name: '--c1-sys-palette-overlay',
                 type: 'var',
                 value: 'var(--c1-ref-palette-backgroundImage-50)',
+              ),
+            ),
+          ),
+          'rounded':(
+            index: 'rounded',
+            name: 'rounded',
+            type: 'var',
+            value: (
+              'none':(
+                index: 'none',
+                name: '--c1-sys-rounded-none',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-0)',
+              ),
+              'standard':(
+                index: 'standard',
+                name: '--c1-sys-rounded-standard',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-1)',
+              ),
+              'sm':(
+                index: 'sm',
+                name: '--c1-sys-rounded-sm',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-1)',
+              ),
+              'md':(
+                index: 'md',
+                name: '--c1-sys-rounded-md',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-2)',
+              ),
+              'lg':(
+                index: 'lg',
+                name: '--c1-sys-rounded-lg',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-4)',
+              ),
+              'xl':(
+                index: 'xl',
+                name: '--c1-sys-rounded-xl',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-8)',
+              ),
+              'full':(
+                index: 'full',
+                name: '--c1-sys-rounded-full',
+                type: 'var',
+                value: 'var(--c1-ref-rounded-full)',
               ),
             ),
           ),
@@ -3912,6 +4029,785 @@ $designsProperties: (
                 value: 'var(--c1-ref-palette-extra19-50)',
               ),
             ),
+          ),
+        ),
+      ),
+      'button':(
+        index: 'button',
+        name: 'c1-button',
+        type: 'component',
+        value: (
+          'gap':(
+            index: 'gap',
+            name: '--c1-button-gap',
+            type: 'var',
+            value: 'var(--c1-ref-spacing-2)',
+          ),
+          'padding':(
+            index: 'padding',
+            name: '--c1-button-padding',
+            type: 'var',
+            value: 'var(--c1-ref-spacing-4)',
+          ),
+          'transitionFunction':(
+            index: 'transitionFunction',
+            name: '--c1-button-transitionFunction',
+            type: 'var',
+            value: 'var(--d-sys-transitionFunction-standard)',
+          ),
+          'fontFamily':(
+            index: 'fontFamily',
+            name: 'font-family',
+            type: 'property',
+            value: 'var(--c1-ref-font-family-rubik)',
+          ),
+          'fontSize':(
+            index: 'fontSize',
+            name: 'font-size',
+            type: 'property',
+            value: 'var(--c1-ref-font-size-14)',
+          ),
+          'fontWeight':(
+            index: 'fontWeight',
+            name: 'font-weight',
+            type: 'property',
+            value: 'var(--c1-ref-font-weight-500)',
+          ),
+          'lineHeight':(
+            index: 'lineHeight',
+            name: 'line-height',
+            type: 'property',
+            value: 'var(--c1-ref-lineHeight-17)',
+          ),
+          'letterSpacing':(
+            index: 'letterSpacing',
+            name: 'letter-spacing',
+            type: 'property',
+            value: 'var(--c1-ref-letterSpacing-none)',
+          ),
+          'color':(
+            index: 'color',
+            name: 'palette-color',
+            type: 'property',
+            value: 'var(--c1-sys-palette-onSurfaceSecondary)',
+          ),
+          'gradientOpacity':(
+            index: 'gradientOpacity',
+            name: 'gradient-opacity',
+            type: 'property',
+            value: 0,
+          ),
+          'gradient':(
+            index: 'gradient',
+            name: 'palette-gradient',
+            type: 'property',
+            value: 'var(--c1-sys-palette-onSurfaceSecondary)',
+          ),
+          'borderRadius':(
+            index: 'borderRadius',
+            name: 'border-radius',
+            type: 'property',
+            value: 'var(--c1-sys-rounded-standard)',
+          ),
+          'boxShadow':(
+            index: 'boxShadow',
+            name: 'box-shadow',
+            type: 'property',
+            value: 'none',
+          ),
+          'transitionDuration':(
+            index: 'transitionDuration',
+            name: 'transition-duration',
+            type: 'property',
+            value: 'var(--d-sys-transitionDuration-lg-close)',
+          ),
+          'transitionProperty':(
+            index: 'transitionProperty',
+            name: 'transition-property',
+            type: 'property',
+            value: 'background-color, background-image, border, box-shadow',
+          ),
+          'label':(
+            index: 'label',
+            name: '&__label',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'icon':(
+            index: 'icon',
+            name: '&__icon',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'trailing':(
+            index: 'trailing',
+            name: '&__trailing',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'focus':(
+            index: 'focus',
+            name: 'focus',
+            type: 'selector',
+            value: (
+              'gradientOpacity':(
+                index: 'gradientOpacity',
+                name: 'gradient-opacity',
+                type: 'property',
+                value: 'var(--c1-sys-opacity-focus)',
+              ),
+            ),
+          ),
+          'hover':(
+            index: 'hover',
+            name: 'hover',
+            type: 'selector',
+            value: (
+              'gradientOpacity':(
+                index: 'gradientOpacity',
+                name: 'gradient-opacity',
+                type: 'property',
+                value: 'var(--c1-sys-opacity-hover)',
+              ),
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'active':(
+            index: 'active',
+            name: 'active',
+            type: 'selector',
+            value: (
+              'gradientOpacity':(
+                index: 'gradientOpacity',
+                name: 'gradient-opacity',
+                type: 'property',
+                value: 'var(--c1-sys-opacity-pressed)',
+              ),
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'disabled':(
+            index: 'disabled',
+            name: 'disabled',
+            type: 'selector',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-onDisabled)',
+              ),
+              'transitionDuration':(
+                index: 'transitionDuration',
+                name: 'transition-duration',
+                type: 'property',
+                value: 'var(--d-sys-transitionDuration-sm)',
+              ),
+            ),
+          ),
+          'selected':(
+            index: 'selected',
+            name: '&--selected',
+            type: 'state',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-primaryVariant)',
+              ),
+              'gradient':(
+                index: 'gradient',
+                name: 'palette-gradient',
+                type: 'property',
+                value: 'var(--c1-sys-palette-primaryVariant)',
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&--loading',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'readonly':(
+            index: 'readonly',
+            name: '&--readonly',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'adaptive':(
+            index: 'adaptive',
+            name: '&--adaptive',
+            type: 'state',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&--icon',
+                type: 'state',
+                value: (
+                  'padding':(
+                    index: 'padding',
+                    name: '--c1-button-padding',
+                    type: 'var',
+                    value: 0,
+                  ),
+                  'justifyContent':(
+                    index: 'justifyContent',
+                    name: 'justify-content',
+                    type: 'property',
+                    value: 'flex-start',
+                  ),
+                  '& .??__label':(
+                    index: '& .??__label',
+                    name: '& .c1-button__label',
+                    type: 'scss',
+                    value: (
+                      'display':(
+                        index: 'display',
+                        name: 'display',
+                        type: 'property',
+                        value: 'none',
+                      ),
+                      'paddingX':(
+                        index: 'paddingX',
+                        name: 'padding-x',
+                        type: 'property',
+                        value: 0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'size':(
+            index: 'size',
+            name: '&--size',
+            type: 'state',
+            value: (
+              'sm':(
+                index: 'sm',
+                name: '&--sm',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: 'height',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-8)',
+                  ),
+                ),
+              ),
+              'md':(
+                index: 'md',
+                name: '&--md',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: 'height',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-10)',
+                  ),
+                ),
+              ),
+              'lg':(
+                index: 'lg',
+                name: '&--lg',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: 'height',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-12)',
+                  ),
+                  'fontFamily':(
+                    index: 'fontFamily',
+                    name: 'font-family',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-family-rubik)',
+                  ),
+                  'fontSize':(
+                    index: 'fontSize',
+                    name: 'font-size',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-size-16)',
+                  ),
+                  'fontWeight':(
+                    index: 'fontWeight',
+                    name: 'font-weight',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-weight-500)',
+                  ),
+                  'lineHeight':(
+                    index: 'lineHeight',
+                    name: 'line-height',
+                    type: 'property',
+                    value: 'var(--c1-ref-lineHeight-20)',
+                  ),
+                  'letterSpacing':(
+                    index: 'letterSpacing',
+                    name: 'letter-spacing',
+                    type: 'property',
+                    value: 'var(--c1-ref-letterSpacing-none)',
+                  ),
+                ),
+              ),
+              'xl':(
+                index: 'xl',
+                name: '&--xl',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: 'height',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-16)',
+                  ),
+                  'fontFamily':(
+                    index: 'fontFamily',
+                    name: 'font-family',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-family-rubik)',
+                  ),
+                  'fontSize':(
+                    index: 'fontSize',
+                    name: 'font-size',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-size-24)',
+                  ),
+                  'fontWeight':(
+                    index: 'fontWeight',
+                    name: 'font-weight',
+                    type: 'property',
+                    value: 'var(--c1-ref-font-weight-500)',
+                  ),
+                  'lineHeight':(
+                    index: 'lineHeight',
+                    name: 'line-height',
+                    type: 'property',
+                    value: 'var(--c1-ref-lineHeight-32)',
+                  ),
+                  'letterSpacing':(
+                    index: 'letterSpacing',
+                    name: 'letter-spacing',
+                    type: 'property',
+                    value: 'var(--c1-ref-letterSpacing-none)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'contained':(
+            index: 'contained',
+            name: '&--contained',
+            type: 'state',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-onPrimary)',
+              ),
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'palette-background',
+                type: 'property',
+                value: 'var(--c1-sys-palette-primary)',
+              ),
+              'gradient':(
+                index: 'gradient',
+                name: 'gradient',
+                type: 'property',
+                value: 'var(--c1-sys-palette-onPrimary)',
+              ),
+              'disabled':(
+                index: 'disabled',
+                name: 'disabled',
+                type: 'selector',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: 'color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-onDisabled)',
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'palette-background',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-disabled)',
+                  ),
+                  'before':(
+                    index: 'before',
+                    name: 'before',
+                    type: 'virtual',
+                    value: (
+                      'position':(
+                        index: 'position',
+                        name: 'position',
+                        type: 'property',
+                        value: 'absolute',
+                      ),
+                      'inset':(
+                        index: 'inset',
+                        name: 'inset',
+                        type: 'property',
+                        value: 0px,
+                      ),
+                      'borderRadius':(
+                        index: 'borderRadius',
+                        name: 'border-radius',
+                        type: 'property',
+                        value: 'inherit',
+                      ),
+                      'borderWidth':(
+                        index: 'borderWidth',
+                        name: 'border-width',
+                        type: 'property',
+                        value: 'var(--c1-ref-spacing-px)',
+                      ),
+                      'borderStyle':(
+                        index: 'borderStyle',
+                        name: 'border-style',
+                        type: 'property',
+                        value: 'solid',
+                      ),
+                      'borderColor':(
+                        index: 'borderColor',
+                        name: 'border-color',
+                        type: 'property',
+                        value: 'var(--c1-sys-palette-onDisabled)',
+                      ),
+                      'transition':(
+                        index: 'transition',
+                        name: 'transition',
+                        type: 'property',
+                        value: 'inherit',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'selected':(
+                index: 'selected',
+                name: '&.c1-button--selected',
+                type: 'state',
+                value: (
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'palette-background',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-primaryVariant)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'outlined':(
+            index: 'outlined',
+            name: '&--outlined',
+            type: 'state',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-onSecondary)',
+              ),
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'background-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-surface)',
+              ),
+              'before':(
+                index: 'before',
+                name: 'before',
+                type: 'virtual',
+                value: (
+                  'position':(
+                    index: 'position',
+                    name: 'position',
+                    type: 'property',
+                    value: 'absolute',
+                  ),
+                  'inset':(
+                    index: 'inset',
+                    name: 'inset',
+                    type: 'property',
+                    value: 0px,
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'inherit',
+                  ),
+                  'borderWidth':(
+                    index: 'borderWidth',
+                    name: 'border-width',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-px)',
+                  ),
+                  'borderStyle':(
+                    index: 'borderStyle',
+                    name: 'border-style',
+                    type: 'property',
+                    value: 'solid',
+                  ),
+                  'borderColor':(
+                    index: 'borderColor',
+                    name: 'border-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-outline)',
+                  ),
+                ),
+              ),
+              'disabled':(
+                index: 'disabled',
+                name: 'disabled',
+                type: 'selector',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: 'palette-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-onDisabled)',
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-disabled)',
+                  ),
+                  'before':(
+                    index: 'before',
+                    name: 'before',
+                    type: 'virtual',
+                    value: (
+                      'position':(
+                        index: 'position',
+                        name: 'position',
+                        type: 'property',
+                        value: 'absolute',
+                      ),
+                      'inset':(
+                        index: 'inset',
+                        name: 'inset',
+                        type: 'property',
+                        value: 0px,
+                      ),
+                      'borderRadius':(
+                        index: 'borderRadius',
+                        name: 'border-radius',
+                        type: 'property',
+                        value: 'inherit',
+                      ),
+                      'borderWidth':(
+                        index: 'borderWidth',
+                        name: 'border-width',
+                        type: 'property',
+                        value: 'var(--c1-ref-spacing-px)',
+                      ),
+                      'borderStyle':(
+                        index: 'borderStyle',
+                        name: 'border-style',
+                        type: 'property',
+                        value: 'solid',
+                      ),
+                      'borderColor':(
+                        index: 'borderColor',
+                        name: 'border-color',
+                        type: 'property',
+                        value: 'var(--c1-sys-palette-onDisabled)',
+                      ),
+                      'transition':(
+                        index: 'transition',
+                        name: 'transition',
+                        type: 'property',
+                        value: 'inherit',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'white':(
+            index: 'white',
+            name: '&--white',
+            type: 'state',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-onSurface)',
+              ),
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'background-color',
+                type: 'property',
+                value: 'var(--c1-sys-palette-surface)',
+              ),
+              'boxShadow':(
+                index: 'boxShadow',
+                name: 'box-shadow',
+                type: 'property',
+                value: 'var(--c1-ref-shadow-2)',
+              ),
+              'disabled':(
+                index: 'disabled',
+                name: 'disabled',
+                type: 'selector',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: 'palette-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-onDisabled)',
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-disabled)',
+                  ),
+                  'boxShadow':(
+                    index: 'boxShadow',
+                    name: 'box-shadow',
+                    type: 'property',
+                    value: 'none',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'text':(
+            index: 'text',
+            name: '&--text',
+            type: 'state',
+            value: (
+              'after':(
+                index: 'after',
+                name: 'after',
+                type: 'virtual',
+                value: (
+                  'position':(
+                    index: 'position',
+                    name: 'position',
+                    type: 'property',
+                    value: 'absolute',
+                  ),
+                  'inset':(
+                    index: 'inset',
+                    name: 'inset',
+                    type: 'property',
+                    value: 0px,
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'inherit',
+                  ),
+                  'borderWidth':(
+                    index: 'borderWidth',
+                    name: 'border-width',
+                    type: 'property',
+                    value: 'var(--c1-ref-spacing-px)',
+                  ),
+                  'borderStyle':(
+                    index: 'borderStyle',
+                    name: 'border-style',
+                    type: 'property',
+                    value: 'solid',
+                  ),
+                  'borderColor':(
+                    index: 'borderColor',
+                    name: 'border-color',
+                    type: 'property',
+                    value: 'var(--c1-sys-palette-outline)',
+                  ),
+                  'borderOpacity':(
+                    index: 'borderOpacity',
+                    name: 'border-opacity',
+                    type: 'property',
+                    value: 0,
+                  ),
+                  'transition':(
+                    index: 'transition',
+                    name: 'transition',
+                    type: 'property',
+                    value: 'inherit',
+                  ),
+                ),
+              ),
+              'hover':(
+                index: 'hover',
+                name: 'hover',
+                type: 'selector',
+                value: (
+                  'after':(
+                    index: 'after',
+                    name: 'after',
+                    type: 'virtual',
+                    value: (
+                      'transitionDuration':(
+                        index: 'transitionDuration',
+                        name: 'transition-duration',
+                        type: 'property',
+                        value: 'var(--d-sys-transitionDuration-lg-close)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'active':(
+                index: 'active',
+                name: 'active',
+                type: 'selector',
+                value: (
+                  'after':(
+                    index: 'after',
+                    name: 'after',
+                    type: 'virtual',
+                    value: (
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: 'border-opacity',
+                        type: 'property',
+                        value: 'var(--c1-sys-opacity-scrim)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'palette':(
+            index: 'palette',
+            name: 'palette',
+            type: 'link-class',
+            value: '{c1.palette}',
           ),
         ),
       ),

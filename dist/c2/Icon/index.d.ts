@@ -68,16 +68,16 @@ export declare const C2Icon: {
     }, {
         size: "12" | "24" | "32" | "20" | "16" | undefined;
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
         variation: "icon" | "country" | "payment" | "avatar" | undefined;
         shape: "circle" | "rect" | "box" | undefined;
     }, true, {}, {}, {
@@ -123,16 +123,16 @@ export declare const C2Icon: {
     }, {}, {}, {}, {
         size: "12" | "24" | "32" | "20" | "16" | undefined;
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
         variation: "icon" | "country" | "payment" | "avatar" | undefined;
         shape: "circle" | "rect" | "box" | undefined;
     }>;
@@ -177,16 +177,16 @@ export declare const C2Icon: {
 }, string, {
     size: "12" | "24" | "32" | "20" | "16" | undefined;
     animationType: "type1" | "type2" | undefined;
-    turn: boolean;
-    disabled: boolean;
-    hide: boolean;
     active: boolean;
+    hide: boolean;
+    start: boolean;
+    turn: boolean;
+    end: boolean;
+    high: boolean;
+    disabled: boolean;
     animationShow: boolean;
     overlay: boolean;
     dynamic: boolean;
-    start: boolean;
-    end: boolean;
-    high: boolean;
     variation: "icon" | "country" | "payment" | "avatar" | undefined;
     shape: "circle" | "rect" | "box" | undefined;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

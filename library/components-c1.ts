@@ -4,12 +4,14 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
+import { C1Button } from '../c1/Button'
 import { C1Icon } from '../c1/Icon'
 import { C1Image } from '../c1/Image'
 import { C1Progress } from '../c1/Progress'
 import { C1Ripple } from '../c1/Ripple'
 
 export const components = {
+  C1Button,
   C1Icon,
   C1Image,
   C1Progress,

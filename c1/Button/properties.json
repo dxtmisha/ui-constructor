@@ -1,0 +1,35 @@
+{
+  "main": "{d.button}",
+  "color": {
+    "_rename": "palette-color"
+  },
+  "gradient": {
+    "_rename": "palette-gradient"
+  },
+  "size": {
+    "_default": "md"
+  },
+  "contained": {
+    "color": {
+      "_rename": "color"
+    },
+    "background-color": {
+      "_rename": "palette-background"
+    },
+    "gradient": {
+      "_rename": "gradient"
+    },
+    "_category": "appearance",
+    "_default": true
+  },
+  "outlined": {
+    "_category": "appearance"
+  },
+  "white": {
+    "_category": "appearance"
+  },
+  "text": {
+    "_category": "appearance"
+  },
+  "@@palette": "{palette}"
+}

@@ -11,7 +11,7 @@ const t = {
   ...f,
   // :default [!] System label / Системная метка
   linear: !0,
-  indeterminate: "type1",
+  indeterminate: "type3",
   position: "top"
 }, k = {
   ..._,

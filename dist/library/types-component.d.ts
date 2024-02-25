@@ -2,6 +2,10 @@
 // Этот файл генерируется скриптом, не редактировать.
 
 
+declare module 'ui/M2Button' {
+  export { M2Button } from 'ui/m2/Button'
+}
+
 declare module 'ui/M2Icon' {
   export { M2Icon } from 'ui/m2/Icon'
 }
@@ -38,6 +42,10 @@ declare module 'ui/M3Ripple' {
   export { M3Ripple } from 'ui/m3/Ripple'
 }
 
+declare module 'ui/C1Button' {
+  export { C1Button } from 'ui/c1/Button'
+}
+
 declare module 'ui/C1Icon' {
   export { C1Icon } from 'ui/c1/Icon'
 }
@@ -52,6 +60,10 @@ declare module 'ui/C1Progress' {
 
 declare module 'ui/C1Ripple' {
   export { C1Ripple } from 'ui/c1/Ripple'
+}
+
+declare module 'ui/C2Button' {
+  export { C2Button } from 'ui/c2/Button'
 }
 
 declare module 'ui/C2Icon' {

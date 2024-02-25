@@ -12,7 +12,7 @@ import {
   iconArgsTurn
 } from './icon'
 
-export const iconDescription: string = 'Общие кнопки позволяют выполнять большинство действий в пользовательском интерфейсе.'
+export const buttonDescription: string = 'Общие кнопки позволяют выполнять большинство действий в пользовательском интерфейсе.'
 
 export const buttonArgs = (
   propsValues: Record<string, (string | boolean)[]>,
@@ -87,6 +87,60 @@ export const buttonArgs = (
       type: { summary: propsValues?.adaptive.join(' | ') }
     },
     description: 'Адаптивное скрытие текста кнопки в зависимости от ширины экрана'
+  }
+})
+
+export const buttonArgsContained = {
+  control: StorybookControl.boolean,
+  table: {
+    category: StorybookCategory.token,
+    defaultValue: { summary: 'true' },
+    type: { summary: 'boolean' }
+  },
+  description: 'Содержащаяся кнопка'
+}
+
+export const buttonArgsOutlined = {
+  control: StorybookControl.boolean,
+  table: {
+    category: StorybookCategory.token,
+    type: { summary: 'boolean' }
+  },
+  description: 'Контурная кнопка'
+}
+
+export const buttonArgsText = {
+  control: StorybookControl.boolean,
+  table: {
+    category: StorybookCategory.token,
+    type: { summary: 'boolean' }
+  },
+  description: 'Кнопка текст'
+}
+
+export const buttonArgsHeight = (
+  propsValues: Record<string, (string | boolean)[]>,
+  defaults: Record<string, any>
+): StorybookArgsItem => ({
+  control: StorybookControl.select,
+  options: propsValues?.height,
+  table: {
+    category: StorybookCategory.token,
+    defaultValue: { summary: defaults?.height },
+    type: { summary: propsValues?.height.join(' | ') }
+  }
+})
+
+export const buttonArgsSize = (
+  propsValues: Record<string, (string | boolean)[]>,
+  defaults: Record<string, any>
+): StorybookArgsItem => ({
+  control: StorybookControl.select,
+  options: propsValues?.size,
+  table: {
+    category: StorybookCategory.token,
+    defaultValue: { summary: defaults?.size },
+    type: { summary: propsValues?.size.join(' | ') }
   }
 })
 

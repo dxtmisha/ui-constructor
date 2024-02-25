@@ -5,7 +5,7 @@ import { M3Button } from 'ui/M3Button'
 import {
   m3ButtonArgs,
   m3ButtonValues,
-  m3iconDescription
+  m3ButtonDescription
 } from 'ui/book/m3/button.ts'
 
 const meta = {
@@ -16,7 +16,7 @@ const meta = {
     design: 'm3',
     docs: {
       description: {
-        component: m3iconDescription
+        component: m3ButtonDescription
       }
     }
   },

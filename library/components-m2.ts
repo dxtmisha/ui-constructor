@@ -4,12 +4,14 @@
 import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
+import { M2Button } from '../m2/Button'
 import { M2Icon } from '../m2/Icon'
 import { M2Image } from '../m2/Image'
 import { M2Progress } from '../m2/Progress'
 import { M2Ripple } from '../m2/Ripple'
 
 export const components = {
+  M2Button,
   M2Icon,
   M2Image,
   M2Progress,

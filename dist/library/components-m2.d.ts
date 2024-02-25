@@ -1,5 +1,219 @@
 import { type App } from 'vue';
 export declare const components: {
+    M2Button: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            focus: BooleanConstructor;
+            disabled: BooleanConstructor;
+            selected: BooleanConstructor;
+            loading: BooleanConstructor;
+            readonly: BooleanConstructor;
+            adaptive: import("vue").PropType<"icon" | "sm" | "md" | undefined>;
+            height: {
+                type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
+                default: "sm" | "md" | "lg" | undefined;
+            };
+            contained: {
+                type: BooleanConstructor;
+                default: boolean | undefined;
+            };
+            outlined: BooleanConstructor;
+            text: BooleanConstructor;
+            palette: import("vue").PropType<"red" | "pink" | "purple" | "deepPurple" | "indigo" | "blue" | "lightBlue" | "cyan" | "teal" | "green" | "lightGreen" | "lime" | "yellow" | "amber" | "orange" | "deepOrange" | "brown" | "grey" | "greyBlue" | "white" | "black" | "blackLight" | undefined>;
+            tag: {
+                type: import("vue").PropType<string | undefined>;
+                default: string | undefined;
+            };
+            to: StringConstructor;
+            value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
+            detail: ObjectConstructor[];
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            iconTrailing: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            iconTurn: BooleanConstructor;
+            iconHide: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onClick?: ((event: MouseEvent, value: {
+                type: string;
+                value: any;
+                detail: Record<string, any> | undefined;
+            }) => any) | undefined;
+        }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            click: (event: MouseEvent, value: {
+                type: string;
+                value: any;
+                detail: Record<string, any> | undefined;
+            }) => void;
+        }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            focus: BooleanConstructor;
+            disabled: BooleanConstructor;
+            selected: BooleanConstructor;
+            loading: BooleanConstructor;
+            readonly: BooleanConstructor;
+            adaptive: import("vue").PropType<"icon" | "sm" | "md" | undefined>;
+            height: {
+                type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
+                default: "sm" | "md" | "lg" | undefined;
+            };
+            contained: {
+                type: BooleanConstructor;
+                default: boolean | undefined;
+            };
+            outlined: BooleanConstructor;
+            text: BooleanConstructor;
+            palette: import("vue").PropType<"red" | "pink" | "purple" | "deepPurple" | "indigo" | "blue" | "lightBlue" | "cyan" | "teal" | "green" | "lightGreen" | "lime" | "yellow" | "amber" | "orange" | "deepOrange" | "brown" | "grey" | "greyBlue" | "white" | "black" | "blackLight" | undefined>;
+            tag: {
+                type: import("vue").PropType<string | undefined>;
+                default: string | undefined;
+            };
+            to: StringConstructor;
+            value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
+            detail: ObjectConstructor[];
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            iconTrailing: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            iconTurn: BooleanConstructor;
+            iconHide: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onClick?: ((event: MouseEvent, value: {
+                type: string;
+                value: any;
+                detail: Record<string, any> | undefined;
+            }) => any) | undefined;
+        }, {
+            focus: boolean;
+            selected: boolean;
+            iconTurn: boolean;
+            iconHide: boolean;
+            loading: boolean;
+            text: boolean;
+            tag: string | undefined;
+            readonly: boolean;
+            disabled: boolean;
+            outlined: boolean;
+            height: "sm" | "md" | "lg" | undefined;
+            contained: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            focus: BooleanConstructor;
+            disabled: BooleanConstructor;
+            selected: BooleanConstructor;
+            loading: BooleanConstructor;
+            readonly: BooleanConstructor;
+            adaptive: import("vue").PropType<"icon" | "sm" | "md" | undefined>;
+            height: {
+                type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
+                default: "sm" | "md" | "lg" | undefined;
+            };
+            contained: {
+                type: BooleanConstructor;
+                default: boolean | undefined;
+            };
+            outlined: BooleanConstructor;
+            text: BooleanConstructor;
+            palette: import("vue").PropType<"red" | "pink" | "purple" | "deepPurple" | "indigo" | "blue" | "lightBlue" | "cyan" | "teal" | "green" | "lightGreen" | "lime" | "yellow" | "amber" | "orange" | "deepOrange" | "brown" | "grey" | "greyBlue" | "white" | "black" | "blackLight" | undefined>;
+            tag: {
+                type: import("vue").PropType<string | undefined>;
+                default: string | undefined;
+            };
+            to: StringConstructor;
+            value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
+            detail: ObjectConstructor[];
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            iconTrailing: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            icon: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+            iconTurn: BooleanConstructor;
+            iconHide: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onClick?: ((event: MouseEvent, value: {
+                type: string;
+                value: any;
+                detail: Record<string, any> | undefined;
+            }) => any) | undefined;
+        }, {}, {}, {}, {}, {
+            focus: boolean;
+            selected: boolean;
+            iconTurn: boolean;
+            iconHide: boolean;
+            loading: boolean;
+            text: boolean;
+            tag: string | undefined;
+            readonly: boolean;
+            disabled: boolean;
+            outlined: boolean;
+            height: "sm" | "md" | "lg" | undefined;
+            contained: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        focus: BooleanConstructor;
+        disabled: BooleanConstructor;
+        selected: BooleanConstructor;
+        loading: BooleanConstructor;
+        readonly: BooleanConstructor;
+        adaptive: import("vue").PropType<"icon" | "sm" | "md" | undefined>;
+        height: {
+            type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
+            default: "sm" | "md" | "lg" | undefined;
+        };
+        contained: {
+            type: BooleanConstructor;
+            default: boolean | undefined;
+        };
+        outlined: BooleanConstructor;
+        text: BooleanConstructor;
+        palette: import("vue").PropType<"red" | "pink" | "purple" | "deepPurple" | "indigo" | "blue" | "lightBlue" | "cyan" | "teal" | "green" | "lightGreen" | "lime" | "yellow" | "amber" | "orange" | "deepOrange" | "brown" | "grey" | "greyBlue" | "white" | "black" | "blackLight" | undefined>;
+        tag: {
+            type: import("vue").PropType<string | undefined>;
+            default: string | undefined;
+        };
+        to: StringConstructor;
+        value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
+        detail: ObjectConstructor[];
+        progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+        iconTrailing: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+        icon: import("vue").PropType<string | import("../constructors/Icon/props").IconProps | undefined>;
+        iconTurn: BooleanConstructor;
+        iconHide: BooleanConstructor;
+        label: (StringConstructor | NumberConstructor)[];
+    }>> & {
+        onClick?: ((event: MouseEvent, value: {
+            type: string;
+            value: any;
+            detail: Record<string, any> | undefined;
+        }) => any) | undefined;
+    }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        click: (event: MouseEvent, value: {
+            type: string;
+            value: any;
+            detail: Record<string, any> | undefined;
+        }) => void;
+    }, string, {
+        focus: boolean;
+        selected: boolean;
+        iconTurn: boolean;
+        iconHide: boolean;
+        loading: boolean;
+        text: boolean;
+        tag: string | undefined;
+        readonly: boolean;
+        disabled: boolean;
+        outlined: boolean;
+        height: "sm" | "md" | "lg" | undefined;
+        contained: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;
+    });
     M2Icon: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             turn: BooleanConstructor;
@@ -49,16 +263,16 @@ export declare const components: {
             onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
         }, {
             animationType: "type1" | "type2" | undefined;
-            turn: boolean;
-            disabled: boolean;
-            hide: boolean;
             active: boolean;
+            hide: boolean;
+            start: boolean;
+            turn: boolean;
+            end: boolean;
+            high: boolean;
+            disabled: boolean;
             animationShow: boolean;
             overlay: boolean;
             dynamic: boolean;
-            start: boolean;
-            end: boolean;
-            high: boolean;
         }, true, {}, {}, {
             P: {};
             B: {};
@@ -91,16 +305,16 @@ export declare const components: {
             isActive: import("vue").ComputedRef<boolean>;
         }, {}, {}, {}, {
             animationType: "type1" | "type2" | undefined;
-            turn: boolean;
-            disabled: boolean;
-            hide: boolean;
             active: boolean;
+            hide: boolean;
+            start: boolean;
+            turn: boolean;
+            end: boolean;
+            high: boolean;
+            disabled: boolean;
             animationShow: boolean;
             overlay: boolean;
             dynamic: boolean;
-            start: boolean;
-            end: boolean;
-            high: boolean;
         }>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
@@ -132,16 +346,16 @@ export declare const components: {
         load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
     }, string, {
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Icon/types").IconSlots> & import("../constructors/Icon/types").IconSlots;
     });
@@ -198,9 +412,9 @@ export declare const components: {
         }>> & {
             onLoad?: ((image: import("../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
         }, {
+            hide: boolean;
             turn: boolean;
             disabled: boolean;
-            hide: boolean;
             adaptiveGroup: string;
             adaptiveAlways: boolean;
             adaptive: boolean;
@@ -238,9 +452,9 @@ export declare const components: {
             type: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageTypeItem>;
             data: import("vue").ComputedRef<import("../constructors/Image/typesBasic").ImageEventItem>;
         }, {}, {}, {}, {
+            hide: boolean;
             turn: boolean;
             disabled: boolean;
-            hide: boolean;
             adaptiveGroup: string;
             adaptiveAlways: boolean;
             adaptive: boolean;
@@ -277,9 +491,9 @@ export declare const components: {
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         load: (image: import("../constructors/Image/typesBasic").ImageEventData) => void;
     }, string, {
+        hide: boolean;
         turn: boolean;
         disabled: boolean;
-        hide: boolean;
         adaptiveGroup: string;
         adaptiveAlways: boolean;
         adaptive: boolean;
@@ -344,8 +558,8 @@ export declare const components: {
         }>>, {
             indeterminate: "type1" | "type2" | "type3" | undefined;
             position: "top" | "bottom" | undefined;
-            visible: boolean;
             max: string | number;
+            visible: boolean;
             delay: string | number;
             linear: boolean;
             circular: boolean;
@@ -388,8 +602,8 @@ export declare const components: {
         }>>, {}, {}, {}, {}, {
             indeterminate: "type1" | "type2" | "type3" | undefined;
             position: "top" | "bottom" | undefined;
-            visible: boolean;
             max: string | number;
+            visible: boolean;
             delay: string | number;
             linear: boolean;
             circular: boolean;
@@ -429,8 +643,8 @@ export declare const components: {
     }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
         indeterminate: "type1" | "type2" | "type3" | undefined;
         position: "top" | "bottom" | undefined;
-        visible: boolean;
         max: string | number;
+        visible: boolean;
         delay: string | number;
         linear: boolean;
         circular: boolean;

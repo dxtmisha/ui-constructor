@@ -1,0 +1,211 @@
+@import "../../styles/all";
+
+@mixin mixinButtonToken {
+  // :style [!] System label / Системная метка
+  --c1-button-gap: var(--c1-ref-spacing-2);
+  --c1-button-padding: var(--c1-ref-spacing-4);
+  --c1-button-transitionFunction: var(--d-sys-transitionFunction-standard);
+  
+  font-family: var(--c1-ref-font-family-rubik);
+  @include fontSize(#{var(--c1-ref-font-size-14)});
+  font-weight: var(--c1-ref-font-weight-500);
+  @include lineHeight(#{var(--c1-ref-lineHeight-17)});
+  letter-spacing: var(--c1-ref-letterSpacing-none);
+  
+  @include paletteColor(#{var(--c1-sys-palette-onSurfaceSecondary)});
+  
+  @include gradientOpacity(#{0});
+  @include paletteGradient(#{var(--c1-sys-palette-onSurfaceSecondary)});
+  
+  border-radius: var(--c1-sys-rounded-standard);
+  
+  box-shadow: none;
+  
+  transition-duration: var(--d-sys-transitionDuration-lg-close);
+  transition-property: background-color, background-image, border, box-shadow;
+  
+  @include focus {
+    @include gradientOpacity(#{var(--c1-sys-opacity-focus)});
+  }
+  
+  @include hover {
+    @include gradientOpacity(#{var(--c1-sys-opacity-hover)});
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include active {
+    @include gradientOpacity(#{var(--c1-sys-opacity-pressed)});
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  @include disabled {
+    @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
+    
+    transition-duration: var(--d-sys-transitionDuration-sm);
+  }
+  
+  &--selected {
+    @include paletteColor(#{var(--c1-sys-palette-primaryVariant)});
+    
+    @include paletteGradient(#{var(--c1-sys-palette-primaryVariant)});
+  }
+  
+  &--adaptive {
+    &--icon {
+      --c1-button-padding: 0;
+      
+      @include justifyContent(#{flex-start});
+      
+      & .c1-button__label {
+        display: none;
+        
+        @include paddingX(#{0});
+      }
+    }
+  }
+  
+  &--size {
+    &--sm {
+      @include height(#{var(--c1-ref-spacing-8)});
+    }
+    
+    &--md {
+      @include height(#{var(--c1-ref-spacing-10)});
+    }
+    
+    &--lg {
+      @include height(#{var(--c1-ref-spacing-12)});
+      
+      font-family: var(--c1-ref-font-family-rubik);
+      @include fontSize(#{var(--c1-ref-font-size-16)});
+      font-weight: var(--c1-ref-font-weight-500);
+      @include lineHeight(#{var(--c1-ref-lineHeight-20)});
+      letter-spacing: var(--c1-ref-letterSpacing-none);
+    }
+    
+    &--xl {
+      @include height(#{var(--c1-ref-spacing-16)});
+      
+      font-family: var(--c1-ref-font-family-rubik);
+      @include fontSize(#{var(--c1-ref-font-size-24)});
+      font-weight: var(--c1-ref-font-weight-500);
+      @include lineHeight(#{var(--c1-ref-lineHeight-32)});
+      letter-spacing: var(--c1-ref-letterSpacing-none);
+    }
+  }
+  
+  &--contained {
+    @include color(#{var(--c1-sys-palette-onPrimary)});
+    
+    @include paletteBackground(#{var(--c1-sys-palette-primary)});
+    @include gradient(#{var(--c1-sys-palette-onPrimary)});
+    
+    @include disabled('.c1-button') {
+      @include color(#{var(--c1-sys-palette-onDisabled)});
+      
+      @include paletteBackground(#{var(--c1-sys-palette-disabled)});
+      
+      &::before {
+        content: ' ';
+        position: absolute;
+        @include inset(#{0px});
+        
+        border-radius: inherit;
+        border-width: var(--c1-ref-spacing-px);
+        border-style: solid;
+        @include borderColor(#{var(--c1-sys-palette-onDisabled)});
+        
+        transition: inherit;
+      }
+    }
+    
+    &.c1-button--selected {
+      @include paletteBackground(#{var(--c1-sys-palette-primaryVariant)});
+    }
+  }
+  
+  &--outlined {
+    @include paletteColor(#{var(--c1-sys-palette-onSecondary)});
+    
+    @include backgroundColor(#{var(--c1-sys-palette-surface)});
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border-width: var(--c1-ref-spacing-px);
+      border-style: solid;
+      @include borderColor(#{var(--c1-sys-palette-outline)});
+    }
+    
+    @include disabled('.c1-button') {
+      @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
+      
+      @include backgroundColor(#{var(--c1-sys-palette-disabled)});
+      
+      &::before {
+        content: ' ';
+        position: absolute;
+        @include inset(#{0px});
+        
+        border-radius: inherit;
+        border-width: var(--c1-ref-spacing-px);
+        border-style: solid;
+        @include borderColor(#{var(--c1-sys-palette-onDisabled)});
+        
+        transition: inherit;
+      }
+    }
+  }
+  
+  &--white {
+    @include paletteColor(#{var(--c1-sys-palette-onSurface)});
+    
+    @include backgroundColor(#{var(--c1-sys-palette-surface)});
+    
+    box-shadow: var(--c1-ref-shadow-2);
+    
+    @include disabled('.c1-button') {
+      @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
+      
+      @include backgroundColor(#{var(--c1-sys-palette-disabled)});
+      
+      box-shadow: none;
+    }
+  }
+  
+  &--text {
+    &::after {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border-width: var(--c1-ref-spacing-px);
+      border-style: solid;
+      @include borderColor(#{var(--c1-sys-palette-outline)});
+      @include borderOpacity(#{0});
+      
+      transition: inherit;
+    }
+    
+    @include hover('.c1-button') {
+      &::after {
+        content: ' ';
+        transition-duration: var(--d-sys-transitionDuration-lg-close);
+      }
+    }
+    
+    @include active('.c1-button') {
+      &::after {
+        content: ' ';
+        @include borderOpacity(#{var(--c1-sys-opacity-scrim)});
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

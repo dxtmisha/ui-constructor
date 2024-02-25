@@ -60,16 +60,16 @@ export declare const C1Icon: {
     }, {
         size: "sm" | "md" | "lg" | "xs" | undefined;
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
         rounded: "full" | "sm" | "standard" | "none" | "md" | "lg" | undefined;
     }, true, {}, {}, {
         P: {};
@@ -110,16 +110,16 @@ export declare const C1Icon: {
     }, {}, {}, {}, {
         size: "sm" | "md" | "lg" | "xs" | undefined;
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
         rounded: "full" | "sm" | "standard" | "none" | "md" | "lg" | undefined;
     }>;
     __isFragment?: undefined;
@@ -159,16 +159,16 @@ export declare const C1Icon: {
 }, string, {
     size: "sm" | "md" | "lg" | "xs" | undefined;
     animationType: "type1" | "type2" | undefined;
-    turn: boolean;
-    disabled: boolean;
-    hide: boolean;
     active: boolean;
+    hide: boolean;
+    start: boolean;
+    turn: boolean;
+    end: boolean;
+    high: boolean;
+    disabled: boolean;
     animationShow: boolean;
     overlay: boolean;
     dynamic: boolean;
-    start: boolean;
-    end: boolean;
-    high: boolean;
     rounded: "full" | "sm" | "standard" | "none" | "md" | "lg" | undefined;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Readonly<import("../../constructors/Icon/types").IconSlots> & import("../../constructors/Icon/types").IconSlots;

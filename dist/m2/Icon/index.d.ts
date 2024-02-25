@@ -47,16 +47,16 @@ export declare const M2Icon: {
         onLoad?: ((image: import("../../constructors/Image/typesBasic").ImageEventData) => any) | undefined;
     }, {
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -89,16 +89,16 @@ export declare const M2Icon: {
         isActive: import("vue").ComputedRef<boolean>;
     }, {}, {}, {}, {
         animationType: "type1" | "type2" | undefined;
-        turn: boolean;
-        disabled: boolean;
-        hide: boolean;
         active: boolean;
+        hide: boolean;
+        start: boolean;
+        turn: boolean;
+        end: boolean;
+        high: boolean;
+        disabled: boolean;
         animationShow: boolean;
         overlay: boolean;
         dynamic: boolean;
-        start: boolean;
-        end: boolean;
-        high: boolean;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -130,16 +130,16 @@ export declare const M2Icon: {
     load: (image: import("../../constructors/Image/typesBasic").ImageEventData) => void;
 }, string, {
     animationType: "type1" | "type2" | undefined;
-    turn: boolean;
-    disabled: boolean;
-    hide: boolean;
     active: boolean;
+    hide: boolean;
+    start: boolean;
+    turn: boolean;
+    end: boolean;
+    high: boolean;
+    disabled: boolean;
     animationShow: boolean;
     overlay: boolean;
     dynamic: boolean;
-    start: boolean;
-    end: boolean;
-    high: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Readonly<import("../../constructors/Icon/types").IconSlots> & import("../../constructors/Icon/types").IconSlots;
 });

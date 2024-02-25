@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
+import { registrationUi } from '../library/plugin.ts'
+
 import './style.css'
 import App from './App.vue'
-import { registrationUi } from '../library/plugin.ts'
 
 const app = createApp(App)
 

@@ -1,6 +1,13 @@
 {
   "primary": "{ref.palette.webAccent.50}",
+  "primaryVariant": "{ref.palette.extra2.50}",
+  "surface": "{ref.palette.webWhite.50}",
+  "disabled": "{ref.palette.webGray4.50}",
+  "onPrimary": "{ref.palette.webWhite.50}",
+  "onSecondary": "{ref.palette.webGray1.50}",
   "onSurface": "{ref.palette.webText.50}",
+  "onSurfaceSecondary": "{ref.palette.webGray1.50}",
   "onDisabled": "{ref.palette.webGray3.50}",
+  "outline": "{ref.palette.webGray1.50}",
   "overlay": "{ref.palette.backgroundImage.50}"
 }

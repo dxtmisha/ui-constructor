@@ -2,7 +2,6 @@
 
 @mixin mixinButton {
   @include initByCustom('padding', 0);
-  @include initByCustom('iconPadding', v('??padding'));
 
   @include flexInlineCenter;
   box-sizing: border-box;
@@ -25,6 +24,10 @@
     text-decoration: none;
   }
 
+  @include focus {
+    outline: none;
+  }
+
   @include disabled {
     cursor: default;
   }
@@ -40,7 +43,7 @@
     gap: v('??gap');
 
     order: 4;
-    padding: 0 v('??iconPadding');
+    padding: 0 v('??padding');
     transition: opacity #{v('d.sys.transitionDuration.standard')} linear;
   }
 
@@ -52,15 +55,15 @@
   }
 
   &__label ~ &__icon {
-    @include marginRight(#{calc(v('??margin') - v('??iconPadding'))});
+    @include marginRight(#{calc(v('??margin') - v('??padding'))});
   }
 
   &__label ~ &__trailing {
-    @include marginLeft(#{calc(v('??margin') - v('??iconPadding'))});
+    @include marginLeft(#{calc(v('??margin') - v('??padding'))});
   }
 
   &--icon {
-    @include initByCustom('iconPadding', #{calc(var(--sys-height) / 2)});
+    @include initByCustom('padding', #{calc(var(--sys-height) / 2)});
   }
 
   &--loading {

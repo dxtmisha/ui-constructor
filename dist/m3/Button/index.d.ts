@@ -18,7 +18,7 @@ export declare const M3Button: {
         text: BooleanConstructor;
         elevated: BooleanConstructor;
         tonal: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+        palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -63,7 +63,7 @@ export declare const M3Button: {
         text: BooleanConstructor;
         elevated: BooleanConstructor;
         tonal: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+        palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -85,17 +85,17 @@ export declare const M3Button: {
         }) => any) | undefined;
     }, {
         focus: boolean;
-        disabled: boolean;
-        filled: boolean;
-        outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
-        text: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;
         loading: boolean;
+        text: boolean;
         tag: string | undefined;
         readonly: boolean;
+        disabled: boolean;
+        filled: boolean;
+        outlined: boolean;
+        height: "sm" | "md" | "lg" | undefined;
         elevated: boolean;
         tonal: boolean;
     }, true, {}, {}, {
@@ -124,7 +124,7 @@ export declare const M3Button: {
         text: BooleanConstructor;
         elevated: BooleanConstructor;
         tonal: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+        palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -146,17 +146,17 @@ export declare const M3Button: {
         }) => any) | undefined;
     }, {}, {}, {}, {}, {
         focus: boolean;
-        disabled: boolean;
-        filled: boolean;
-        outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
-        text: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;
         loading: boolean;
+        text: boolean;
         tag: string | undefined;
         readonly: boolean;
+        disabled: boolean;
+        filled: boolean;
+        outlined: boolean;
+        height: "sm" | "md" | "lg" | undefined;
         elevated: boolean;
         tonal: boolean;
     }>;
@@ -182,7 +182,7 @@ export declare const M3Button: {
     text: BooleanConstructor;
     elevated: BooleanConstructor;
     tonal: BooleanConstructor;
-    palette: import("vue").PropType<"error" | "primary" | "secondary" | "tertiary" | "red" | "green" | "neutral" | "neutralVariant" | undefined>;
+    palette: import("vue").PropType<"error" | "red" | "green" | "primary" | "secondary" | "tertiary" | "neutral" | "neutralVariant" | undefined>;
     tag: {
         type: import("vue").PropType<string | undefined>;
         default: string | undefined;
@@ -210,17 +210,17 @@ export declare const M3Button: {
     }) => void;
 }, string, {
     focus: boolean;
-    disabled: boolean;
-    filled: boolean;
-    outlined: boolean;
-    height: "sm" | "md" | "lg" | undefined;
-    text: boolean;
     selected: boolean;
     iconTurn: boolean;
     iconHide: boolean;
     loading: boolean;
+    text: boolean;
     tag: string | undefined;
     readonly: boolean;
+    disabled: boolean;
+    filled: boolean;
+    outlined: boolean;
+    height: "sm" | "md" | "lg" | undefined;
     elevated: boolean;
     tonal: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
