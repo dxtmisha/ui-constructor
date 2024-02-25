@@ -34,6 +34,14 @@ declare module 'ui/M3Image' {
   export { M3Image } from 'ui/m3/Image'
 }
 
+declare module 'ui/M3Mutation' {
+  export { M3Mutation } from 'ui/m3/Mutation'
+}
+
+declare module 'ui/M3MutationItem' {
+  export { M3MutationItem } from 'ui/m3/MutationItem'
+}
+
 declare module 'ui/M3Progress' {
   export { M3Progress } from 'ui/m3/Progress'
 }
@@ -72,6 +80,14 @@ declare module 'ui/C2Icon' {
 
 declare module 'ui/C2Image' {
   export { C2Image } from 'ui/c2/Image'
+}
+
+declare module 'ui/C2Mutation' {
+  export { C2Mutation } from 'ui/c2/Mutation'
+}
+
+declare module 'ui/C2MutationItem' {
+  export { C2MutationItem } from 'ui/c2/MutationItem'
 }
 
 declare module 'ui/C2Progress' {

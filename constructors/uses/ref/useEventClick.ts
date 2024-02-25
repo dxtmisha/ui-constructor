@@ -1,4 +1,4 @@
-import { eventStopPropagation } from '../../../functions/eventStopPropagation.ts'
+import { eventStopPropagation } from '../../../functions/eventStopPropagation'
 
 import { type ConstrEmit } from '../../../types/constructor'
 import { type UseEnabledSetup } from './useEnabled'

@@ -30,7 +30,6 @@ export class DesignProject {
    * Инициализация файлов для проекта.
    */
   make (): void {
-    console.log('__dirname', __dirname)
     if (this.paths.length > 0) {
       this.paths.forEach(path => {
         const data = this.read(path)

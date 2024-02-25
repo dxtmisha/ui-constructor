@@ -1,5 +1,5 @@
 import { computed, type ComputedRef, type VNode } from 'vue'
-import { render } from '../../../functions/ref/render.ts'
+import { render } from '../../../functions/ref/render'
 
 export type UseLabelSetup = {
   isLabel: ComputedRef<boolean>

@@ -4,7 +4,7 @@ import {
   type PropType,
   type VNode
 } from 'vue'
-import { getBind } from '../../functions/render/getBind.ts'
+import { getBind } from '../../functions/render/getBind'
 
 import { DesignComponents } from '../../classes/design/DesignComponents'
 

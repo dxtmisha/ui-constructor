@@ -14,6 +14,8 @@ declare module '@vue/runtime-core' {
     M3Button: typeof components.M3Button
     M3Icon: typeof components.M3Icon
     M3Image: typeof components.M3Image
+    M3Mutation: typeof components.M3Mutation
+    M3MutationItem: typeof components.M3MutationItem
     M3Progress: typeof components.M3Progress
     M3Ripple: typeof components.M3Ripple
     C1Button: typeof components.C1Button
@@ -24,6 +26,8 @@ declare module '@vue/runtime-core' {
     C2Button: typeof components.C2Button
     C2Icon: typeof components.C2Icon
     C2Image: typeof components.C2Image
+    C2Mutation: typeof components.C2Mutation
+    C2MutationItem: typeof components.C2MutationItem
     C2Progress: typeof components.C2Progress
     C2Ripple: typeof components.C2Ripple
   }

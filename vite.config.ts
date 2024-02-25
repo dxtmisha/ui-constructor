@@ -86,8 +86,6 @@ export default defineConfig(() => {
       },
       rollupOptions: {
         external: [
-          'commander',
-          'dotenv',
           'vue',
           'vue-router',
           'ui'
