@@ -1,4 +1,3 @@
-import { isFilled } from '../../../functions/isFilled'
 import { toArray } from '../../../functions/toArray'
 import { toKebabCase } from '../../../functions/toKebabCase'
 import { transformation } from '../../../functions/transformation'
@@ -97,7 +96,7 @@ export class PropertiesFile {
     name: string,
     extension = 'json'
   ): string {
-    if (isFilled(extension)) {
+    if (extension && extension !== '') {
       return `${toKebabCase(name)}.${extension}`
     } else {
       return name
