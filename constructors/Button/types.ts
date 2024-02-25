@@ -67,6 +67,7 @@ export type ButtonClasses = {
   main: ConstrClass
   // :classes [!] System label / Системная метка
   label: string
+  paddingSpacer: string
   icon: string
   trailing: string
   loading: string

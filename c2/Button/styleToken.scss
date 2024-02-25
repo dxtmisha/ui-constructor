@@ -3,6 +3,8 @@
 @mixin mixinButtonToken {
   // :style [!] System label / Системная метка
   --c2-button-transitionFunction: var(--d-sys-transitionFunction-standard);
+  --c2-button-spacer-padding: calc(3px * 2);
+  --c2-button-spacer-lineContainer-width: 2px;
   
   gap: var(--c2-st-global-distance-space-inline-md);
   
@@ -16,6 +18,10 @@
   
   transition-duration: var(--d-sys-transitionDuration-lg-close);
   transition-property: background-color, background-image, border, box-shadow;
+  
+  &__paddingSpacer {
+    @include width(#{calc(var(--c2-button-spacer-padding) + var(--c2-button-spacer-lineContainer-width))});
+  }
   
   @include hover {
     transition-duration: var(--d-sys-transitionDuration-sm);
@@ -43,6 +49,10 @@
         display: none;
         
         @include paddingX(#{0});
+      }
+      
+      & .c2-button__paddingSpacer {
+        display: none;
       }
     }
   }

@@ -1,7 +1,7 @@
 import './M3Button.css';
 import { defineComponent as c, computed as l, openBlock as g, createBlock as B, resolveDynamicComponent as b, unref as h } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
-import { p as f, d as y, B as v } from "./props-DivFRTM3.js";
+import { p as f, d as y, B as v } from "./props-FIZ5m0Po.js";
 import { M3Icon as x } from "./M3Icon.js";
 import { M3Progress as _ } from "./M3Progress.js";
 const n = {

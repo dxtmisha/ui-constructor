@@ -1,15 +1,15 @@
-var h = Object.defineProperty;
-var f = (e, n, i) => n in e ? h(e, n, { enumerable: !0, configurable: !0, writable: !0, value: i }) : e[n] = i;
-var b = (e, n, i) => (f(e, typeof n != "symbol" ? n + "" : n, i), i);
-import { computed as c, h as v } from "vue";
-import { r as B, D as y } from "./DesignConstructorAbstract-ZQD6lBiI.js";
+var v = Object.defineProperty;
+var f = (e, i, n) => i in e ? v(e, i, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[i] = n;
+var h = (e, i, n) => (f(e, typeof i != "symbol" ? i + "" : i, n), n);
+import { computed as c, h as u } from "vue";
+import { r as B, D as S } from "./DesignConstructorAbstract-ZQD6lBiI.js";
 import { g as o } from "./getBind-BTtwgl8A.js";
-import { e as S } from "./eventStopPropagation-fHm2p5BF.js";
-const m = {
+import { e as y } from "./eventStopPropagation-fHm2p5BF.js";
+const C = {
   label: [String, Number]
-}, C = function(e, n, i = "is-label") {
+}, m = function(e, i, n = "is-label") {
   const l = c(
-    () => !!(e != null && e.label || n && "default" in n)
+    () => !!(e != null && e.label || i && "default" in i)
   );
   return {
     isLabel: l,
@@ -18,9 +18,9 @@ const m = {
       const t = [];
       if (l.value) {
         const d = [];
-        e != null && e.label && d.push(e.label), n && (n != null && n.default) && d.push((a = n.default) == null ? void 0 : a.call(n, {})), d.length > 0 && t.push(B(
+        e != null && e.label && d.push(e.label), i && (i != null && i.default) && d.push((a = i.default) == null ? void 0 : a.call(i, {})), d.length > 0 && t.push(B(
           "span",
-          { class: i || "label" },
+          { class: n || "label" },
           d
         ));
       }
@@ -37,11 +37,11 @@ const m = {
 }, P = {
   ...T,
   iconTrailing: [String, Object]
-}, k = function(e, n, i = "is-icon", l = "is-icon-trailing") {
+}, k = function(e, i, n = "is-icon", l = "is-icon-trailing") {
   const t = c(() => o(
     e == null ? void 0 : e.icon,
     {
-      class: i,
+      class: n,
       active: e == null ? void 0 : e.selected,
       turn: !(e != null && e.iconTrailing) && (e == null ? void 0 : e.iconTurn),
       hide: e == null ? void 0 : e.iconHide,
@@ -66,29 +66,29 @@ const m = {
     trailingBind: a,
     isIcon: d,
     renderIcon() {
-      const u = [];
-      return n && (e != null && e.icon && n.renderAdd(
-        u,
+      const s = [];
+      return i && (e != null && e.icon && i.renderAdd(
+        s,
         "icon",
         t.value,
         void 0,
         "icon"
-      ), a && (e != null && e.iconTrailing) && n.renderAdd(
-        u,
+      ), a && (e != null && e.iconTrailing) && i.renderAdd(
+        s,
         "icon",
         a.value,
         void 0,
         "iconTrailing"
-      )), u;
+      )), s;
     }
   };
 }, E = {
   progress: [Boolean, Object]
-}, O = function(e, n, i = "is-progress", l) {
+}, O = function(e, i, n = "is-progress", l) {
   const t = c(() => o(
     e.loading,
     {
-      class: i,
+      class: n,
       ...l
     },
     "visible"
@@ -97,7 +97,7 @@ const m = {
     progressBind: t,
     renderProgress() {
       const a = [];
-      return n && (e != null && e.loading) && n.renderAdd(
+      return i && (e != null && e.loading) && i.renderAdd(
         a,
         "progress",
         t.value
@@ -109,49 +109,49 @@ const m = {
   readonly: Boolean,
   disabled: Boolean
 }, j = function(e) {
-  const n = () => !!(e != null && e.disabled);
+  const i = () => !!(e != null && e.disabled);
   return {
-    disabledBind: c(() => n() || void 0),
+    disabledBind: c(() => i() || void 0),
     isEnabled: c(
       () => !(e != null && e.disabled) && !(e != null && e.readonly) && !(e != null && e.loading)
     ),
     isReadonly: c(() => !!(e != null && e.readonly)),
-    isDisabled: c(() => n()),
+    isDisabled: c(() => i()),
     isProgress: c(() => !!(e != null && e.loading))
   };
 }, A = {
   to: String,
   value: [String, Number, Object],
   detail: [Object]
-}, D = function(e, n, i) {
+}, D = function(e, i, n) {
   const l = (a) => {
-    var u, g, r;
+    var s, r, b;
     return {
-      type: ((r = (g = (u = a.target) == null ? void 0 : u.closest("[data-event-type]")) == null ? void 0 : g.dataset) == null ? void 0 : r.eventType) ?? "click",
+      type: ((b = (r = (s = a.target) == null ? void 0 : s.closest("[data-event-type]")) == null ? void 0 : r.dataset) == null ? void 0 : b.eventType) ?? "click",
       value: e == null ? void 0 : e.value,
       detail: e == null ? void 0 : e.detail
     };
   }, t = () => !1;
   return {
     onClick(a) {
-      n.isEnabled.value && !t() ? i == null || i("click", a, l(a)) : S(a);
+      i.isEnabled.value && !t() ? n == null || n("click", a, l(a)) : y(a);
     }
   };
 };
-class q extends y {
+class q extends S {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(i, l, t) {
+  constructor(n, l, t) {
     super(
-      i,
+      n,
       l,
       t
     );
-    b(this, "icons");
+    h(this, "icons");
     this.icons = k(
       this.props,
       this.components,
@@ -171,9 +171,9 @@ class q extends y {
    * Инициализация всех необходимых свойств для работы.
    */
   initSetup() {
-    const i = j(this.props);
+    const n = j(this.props);
     return {
-      ...C(
+      ...m(
         this.props,
         this.slots,
         this.getSubClass("label")
@@ -188,10 +188,10 @@ class q extends y {
           inverse: !0
         }
       ),
-      ...i,
+      ...n,
       ...D(
         this.props,
-        i,
+        n,
         this.emits
       )
     };
@@ -214,6 +214,7 @@ class q extends y {
       },
       // :classes [!] System label / Системная метка
       label: this.getSubClass("label"),
+      paddingSpacer: this.getSubClass("paddingSpacer"),
       icon: this.getSubClass("icon"),
       trailing: this.getSubClass("trailing"),
       loading: this.getSubClass("loading")
@@ -232,25 +233,27 @@ class q extends y {
    */
   initRender() {
     var t;
-    const i = this.setup(), l = [
-      ...i.renderProgress(),
-      ...i.renderLabel(),
-      ...i.renderIcon()
+    const n = this.setup(), l = [
+      ...n.renderProgress(),
+      u("div", { class: n.classes.value.paddingSpacer }),
+      ...n.renderLabel(),
+      ...n.renderIcon(),
+      u("div", { class: n.classes.value.paddingSpacer })
     ];
-    return i.isEnabled.value && this.components.renderAdd(l, "ripple"), v(((t = this.props) == null ? void 0 : t.tag) || "button", {
+    return n.isEnabled.value && this.components.renderAdd(l, "ripple"), u(((t = this.props) == null ? void 0 : t.tag) || "button", {
       ...this.getAttrs(),
       ref: this.element,
-      class: i.classes.value.main,
-      style: i.styles.value,
-      disabled: i.disabledBind.value,
-      onClick: i.onClick
+      class: n.classes.value.main,
+      style: n.styles.value,
+      disabled: n.disabledBind.value,
+      onClick: n.onClick
     }, l);
   }
 }
-const s = {
+const g = {
   tag: "button"
 }, w = {
-  ...m,
+  ...C,
   ...P,
   ...E,
   ...I,
@@ -258,7 +261,7 @@ const s = {
   // Options
   tag: {
     type: String,
-    default: s == null ? void 0 : s.tag
+    default: g == null ? void 0 : g.tag
   },
   // :prop [!] System label / Системная метка
   disabled: Boolean,
@@ -268,6 +271,6 @@ const s = {
 };
 export {
   q as B,
-  s as d,
+  g as d,
   w as p
 };

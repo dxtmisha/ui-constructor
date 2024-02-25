@@ -47,6 +47,14 @@
     transition: opacity #{v('d.sys.transitionDuration.standard')} linear;
   }
 
+  &__paddingSpacer {
+    order: 1;
+  }
+
+  &__paddingSpacer ~ &__paddingSpacer {
+    order: 24;
+  }
+
   &__icon,
   &__trailing {
     @include initByCustom('margin', #{calc((var(--sys-height) - v('?icon._width')) / 2)});
@@ -64,6 +72,9 @@
 
   &--icon {
     @include initByCustom('padding', #{calc(var(--sys-height) / 2)});
+    @include subclass('paddingSpacer') {
+      display: none;
+    }
   }
 
   &--loading {

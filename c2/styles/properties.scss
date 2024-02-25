@@ -501,6 +501,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'paddingSpacer':(
+            index: 'paddingSpacer',
+            name: '&__paddingSpacer',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'icon':(
             index: 'icon',
             name: '&__icon',
@@ -613,6 +620,19 @@ $designsProperties: (
                         name: 'padding-x',
                         type: 'property',
                         value: 0,
+                      ),
+                    ),
+                  ),
+                  '& .??__paddingSpacer':(
+                    index: '& .??__paddingSpacer',
+                    name: '& .d-button__paddingSpacer',
+                    type: 'scss',
+                    value: (
+                      'display':(
+                        index: 'display',
+                        name: 'display',
+                        type: 'property',
+                        value: 'none',
                       ),
                     ),
                   ),
@@ -15763,6 +15783,32 @@ $designsProperties: (
             type: 'var',
             value: 'var(--d-sys-transitionFunction-standard)',
           ),
+          'spacer':(
+            index: 'spacer',
+            name: 'spacer',
+            type: 'var',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: '--c2-button-spacer-padding',
+                type: 'var',
+                value: 'calc(3px * 2)',
+              ),
+              'lineContainer':(
+                index: 'lineContainer',
+                name: 'lineContainer',
+                type: 'var',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-button-spacer-lineContainer-width',
+                    type: 'var',
+                    value: 2px,
+                  ),
+                ),
+              ),
+            ),
+          ),
           'gap':(
             index: 'gap',
             name: 'gap',
@@ -15810,6 +15856,19 @@ $designsProperties: (
             name: '&__label',
             type: 'subclass',
             value: (
+            ),
+          ),
+          'paddingSpacer':(
+            index: 'paddingSpacer',
+            name: '&__paddingSpacer',
+            type: 'subclass',
+            value: (
+              'width':(
+                index: 'width',
+                name: 'width',
+                type: 'property',
+                value: 'calc(var(--c2-button-spacer-padding) + var(--c2-button-spacer-lineContainer-width))',
+              ),
             ),
           ),
           'icon':(
@@ -15944,6 +16003,19 @@ $designsProperties: (
                         name: 'padding-x',
                         type: 'property',
                         value: 0,
+                      ),
+                    ),
+                  ),
+                  '& .??__paddingSpacer':(
+                    index: '& .??__paddingSpacer',
+                    name: '& .c2-button__paddingSpacer',
+                    type: 'scss',
+                    value: (
+                      'display':(
+                        index: 'display',
+                        name: 'display',
+                        type: 'property',
+                        value: 'none',
                       ),
                     ),
                   ),

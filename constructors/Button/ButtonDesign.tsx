@@ -138,6 +138,7 @@ export class ButtonDesign<
       ...{
         // :classes [!] System label / Системная метка
         label: this.getSubClass('label'),
+        paddingSpacer: this.getSubClass('paddingSpacer'),
         icon: this.getSubClass('icon'),
         trailing: this.getSubClass('trailing'),
         loading: this.getSubClass('loading')
@@ -162,8 +163,10 @@ export class ButtonDesign<
     const setup = this.setup()
     const children: any[] = [
       ...setup.renderProgress(),
+      h('div', { class: setup.classes.value.paddingSpacer }),
       ...setup.renderLabel(),
-      ...setup.renderIcon()
+      ...setup.renderIcon(),
+      h('div', { class: setup.classes.value.paddingSpacer })
     ]
 
     if (setup.isEnabled.value) {

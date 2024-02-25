@@ -38,6 +38,7 @@ export type ButtonSlots = UseLabelSlots;
 export type ButtonClasses = {
     main: ConstrClass;
     label: string;
+    paddingSpacer: string;
     icon: string;
     trailing: string;
     loading: string;

@@ -63,6 +63,10 @@
         
         @include paddingX(#{0});
       }
+      
+      & .c1-button__paddingSpacer {
+        display: none;
+      }
     }
   }
   

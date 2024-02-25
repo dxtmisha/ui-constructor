@@ -9,6 +9,7 @@
   "transition-duration": "{d.sys.transitionDuration.lg.close}",
   "transition-function": "{d.sys.transitionFunction.standard}",
   "#label": {},
+  "#padding-spacer": {},
   "#icon": {},
   "#trailing": {},
   "hover": {
@@ -40,6 +41,9 @@
       "& .??__label": {
         "display": "none",
         "padding-x": "0"
+      },
+      "& .??__paddingSpacer": {
+        "display": "none"
       }
     }
   }

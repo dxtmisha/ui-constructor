@@ -73,6 +73,10 @@
         
         @include paddingX(#{0});
       }
+      
+      & .m2-button__paddingSpacer {
+        display: none;
+      }
     }
     
     &--sm {
@@ -85,6 +89,10 @@
           display: none;
           
           @include paddingX(#{0});
+        }
+        
+        & .m2-button__paddingSpacer {
+          display: none;
         }
       }
     }
@@ -99,6 +107,10 @@
           display: none;
           
           @include paddingX(#{0});
+        }
+        
+        & .m2-button__paddingSpacer {
+          display: none;
         }
       }
     }
