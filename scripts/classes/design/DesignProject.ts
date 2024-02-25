@@ -3,7 +3,7 @@
 import { PropertiesFile, type PropertiesFilePath } from '../properties/PropertiesFile'
 import { DesignProjectModule } from './DesignProjectModule'
 
-export const DIR_TEMPLATE = [__dirname, '..', 'packages']
+export const DIR_TEMPLATE = [__dirname, '..', '..', '..', 'packages']
 export const DIR_PROJECT = ['..']
 export const DIR_TEMP = 'temp'
 

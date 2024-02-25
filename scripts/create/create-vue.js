@@ -8,15 +8,20 @@ const PROJECT_GIT = 'git+https://github.com/dxtmisha/ui-constructor.git'
 const PROJECT_NAME = 'vue'
 const PROJECT_TEMP = 'temp'
 const PROJECT_COMMAND = 'project'
-const PROJECT_COMMAND_SCRIPT = './node_modules/ui/dist/project.js'
+const PROJECT_COMMAND_SCRIPT = 'scripts/project.ts'
+const PROJECT_COMMAND_PATH = `./node_modules/ui/${PROJECT_COMMAND_SCRIPT}`
 const FILE_PACKAGE = 'package.json'
+const FILE_PACKAGE_LOCK = 'package-lock.json'
 
 const filePackage = requirePath.join(PROJECT_TEMP, FILE_PACKAGE)
 const filePackageData = {
   name: '@cc/coral-design-temp',
   private: false,
   version: '0.0.0-dev',
-  type: 'commonjs',
+  type: 'module',
+  "scripts": {
+    "ui-project": `vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND}`,
+  },
   devDependencies: {
     commander: '^11.1.0',
     dotenv: '^16.4.1',
@@ -27,6 +32,7 @@ const filePackageData = {
 }
 
 const fileVite = requirePath.join(FILE_PACKAGE)
+const fileViteLock = requirePath.join(FILE_PACKAGE_LOCK)
 const fileViteData = {
   name: '@cc/coral-design-create',
   private: false,
@@ -42,14 +48,11 @@ const initTemp = () => {
     filePackage,
     JSON.stringify(filePackageData)
   )
-  requireFs.writeFileSync(
-    fileVite,
-    JSON.stringify(fileViteData)
-  )
 
   exec(`cd ${PROJECT_TEMP};npm install`, (error) => {
     if (error) {
       console.error('[T] Error: ', error)
+      return
     }
 
     initProject()
@@ -59,9 +62,15 @@ const initTemp = () => {
 const initProject = () => {
   console.log('Project...')
 
-  exec(`cd ${PROJECT_TEMP};vite-node ${PROJECT_COMMAND_SCRIPT} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
+  requireFs.writeFileSync(
+      fileVite,
+      JSON.stringify(fileViteData)
+  )
+
+  exec(`cd ${PROJECT_TEMP};npx vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
     if (error) {
       console.error('[P] Error: ', error)
+      return
     }
 
     initInstall()
@@ -74,19 +83,41 @@ const initInstall = () => {
   exec(`cd ${PROJECT_NAME};npm install`, (error) => {
     if (error) {
       console.error('[I] Error: ', error)
+      return
     }
 
-    // initUnlink()
+    initUnlink()
   })
 }
 
 const initUnlink = () => {
   console.log('Unlink...')
 
+  requireFs.unlink(fileVite, error => {
+    if (error) {
+      console.error('[E_P] Error: ', error)
+      return
+    }
+
+    console.log(`Unlink: ${fileVite}`)
+  })
+
+  requireFs.unlink(fileVite, error => {
+    if (error) {
+      console.error('[E_L] Error: ', error)
+      return
+    }
+
+    console.log(`Unlink: ${fileViteLock}`)
+  })
+
   requireFs.unlink(__filename, error => {
     if (error) {
       console.error('[E] Error: ', error)
+      return
     }
+
+    console.log('...End')
   })
 }
 
@@ -98,6 +129,4 @@ if (requireFs.existsSync(PROJECT_NAME)) {
   } else {
     initTemp()
   }
-
-  console.log('...End')
 }
