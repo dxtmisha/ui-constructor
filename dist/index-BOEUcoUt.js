@@ -1,34 +1,36 @@
-var Oe = Object.defineProperty;
-var Ne = (i, t, e) => t in i ? Oe(i, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : i[t] = e;
+var Se = Object.defineProperty;
+var Ne = (i, t, e) => t in i ? Se(i, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : i[t] = e;
 var h = (i, t, e) => (Ne(i, typeof t != "symbol" ? t + "" : t, e), e);
 import { i as b, f as p } from "./forEach-B1ZDH1yu.js";
-import { i as Ct, c as pt, d as V, D as z, u as J, e as K, a as N, t as X, G as k, A as Ae, f as Ie, E as Me, b as Le } from "./Api-6wgpqJNV.js";
-import { c as ke, g as xe, s as $e } from "./createElement-C7okUM5s.js";
+import { i as Et, a as pt, c as V, D as J, u as X, b as K, G as k, A as Ae, d as Ie, E as Me } from "./Api-Bb5FA4L1.js";
+import { c as Le, g as ke, s as xe } from "./createElement-C7okUM5s.js";
 import { e as Te } from "./eventStopPropagation-fHm2p5BF.js";
-import { e as tt, i as je } from "./executeFunction-B6By_8Og.js";
-import { g as Rt, i as Fe } from "./getElement-BhVCn14C.js";
-import { C as Wt, t as B, a as Et, g as Ut, E as Ht, b as Kt, G as Ve, c as Pe, i as Be, r as Ge } from "./EventItem-CT0twIVD.js";
-import { i as Re } from "./inArray-BLmbg9f_.js";
-import { a as We, D as Ue, b as He, i as Ke, t as Ye } from "./toNumber-BeBr0lVX.js";
-import { g as v, t as Yt, a as Ze, D as qe, b as Qe, c as ze, i as Je, r as Xe } from "./DesignConstructorAbstract-ZQD6lBiI.js";
-import { computed as d, isRef as ti, ref as wt, inject as ei, watch as C, effectScope as ii, reactive as ri, createApp as si, triggerRef as ni, shallowRef as R, watchEffect as oi } from "vue";
-import { g as Zt } from "./getBind-BTtwgl8A.js";
-import { t as qt } from "./toArray-rswbj5Xf.js";
-import { I as ai } from "./Icons-CqlWFogF.js";
-import { T as Y } from "./Translate-XciraImL.js";
+import { e as Z, i as $e } from "./executeFunction-B6By_8Og.js";
+import { g as Rt, i as je } from "./getElement-BhVCn14C.js";
+import { C as Wt, t as B, a as Ct, g as Ut, E as Ht, b as Kt, G as Fe, c as Ve, i as Pe, r as Be } from "./EventItem-D-yvmy93.js";
+import { i as Ge } from "./inArray-BLmbg9f_.js";
+import { a as Re, D as We, b as Ue, i as He, t as Ke } from "./toNumber-BeBr0lVX.js";
+import { i as N, t as tt, a as Ye } from "./transformation-DBtDP1gm.js";
+import { g as v, t as Yt, a as qe, D as Qe, b as ze, c as Je, i as Xe, r as Ze } from "./DesignConstructorAbstract-ZQD6lBiI.js";
+import { computed as d, isRef as ti, ref as wt, inject as ei, watch as E, effectScope as ii, reactive as ri, createApp as si, triggerRef as ni, shallowRef as R, watchEffect as oi } from "vue";
+import { g as qt } from "./getBind-BTtwgl8A.js";
+import { t as Qt } from "./toArray-rswbj5Xf.js";
+import { t as et } from "./toKebabCase-ARz5evzf.js";
+import { I as ai } from "./Icons-D5ulKNQM.js";
+import { T as Y } from "./Translate-BWEv4act.js";
 import { createRouter as ci } from "vue-router";
 function ui(i) {
-  return Ct(i) ? i : b(i) ? JSON.stringify(i) : (i == null ? void 0 : i.toString()) ?? "";
+  return Et(i) ? i : b(i) ? JSON.stringify(i) : (i == null ? void 0 : i.toString()) ?? "";
 }
-function Qt(i, t) {
+function zt(i, t) {
   return Array(t).fill(i);
 }
-function zt(i, t, e) {
+function Jt(i, t, e) {
   requestAnimationFrame(() => {
-    i(), t != null && t() ? zt(i, t, e) : e == null || e();
+    i(), t != null && t() ? Jt(i, t, e) : e == null || e();
   });
 }
-function Jt(i) {
+function Xt(i) {
   const t = {}, e = Rt(i);
   if (e)
     for (const r of e.attributes)
@@ -42,7 +44,7 @@ async function hi(i) {
 function li(i, t) {
   return p(i, (e) => e == null ? void 0 : e[t]);
 }
-function Xt(i, t = "ig", e = ":value") {
+function Zt(i, t = "ig", e = ":value") {
   const r = i.replace(/([[\]\\^$.?*+()])/g, "\\$1");
   return new RegExp(e.replaceAll(":value", r), t);
 }
@@ -93,7 +95,7 @@ function bi(i, t) {
   return Array.isArray(i) ? i.every((e) => pt(e, t)) : pt(i, t);
 }
 function _i(i, t = {}, e = "value") {
-  return d(() => Zt(i == null ? void 0 : i.value, v(t), e));
+  return d(() => qt(i == null ? void 0 : i.value, v(t), e));
 }
 function A(i) {
   return ti(i) ? i : wt(i);
@@ -115,13 +117,13 @@ function F(i, t, e = !0) {
     }
   ), r;
 }
-function Ci(i, t) {
+function Ei(i, t) {
   let e = i;
   return p(t, (r, s) => {
-    e = e.replace(Xt(`[${s}]`), tt(r));
+    e = e.replace(Zt(`[${s}]`), Z(r));
   }), e;
 }
-function Ei(i, t, e) {
+function Ci(i, t, e) {
   if (b(i) && b(t)) {
     if (e) {
       let r = {}, s = !1;
@@ -135,13 +137,10 @@ function Ei(i, t, e) {
   return V(i);
 }
 function wi(i, t) {
-  return Qt(i, t).join("");
+  return zt(i, t).join("");
 }
-function Z(i) {
+function q(i) {
   return Yt(i).replace(/^([a-z])/, (t) => `${t.toUpperCase()}`);
-}
-function et(i) {
-  return i.toString().trim().replace(/[^\w- ]+/g, "").replace(/ +/g, "-").replace(new RegExp("(?<=[A-Z])([A-Z])", "g"), (t) => `${t.toLowerCase()}`).replace(/^[A-Z]/, (t) => t.toLowerCase()).replace(new RegExp("(?<=[\\w ])[A-Z]", "g"), (t) => `-${t.toLowerCase()}`).replace(/[A-Z]/g, (t) => t.toLowerCase());
 }
 class re {
   constructor() {
@@ -177,7 +176,7 @@ class re {
     return t in this.cache || (this.cache[t] = new Wt(e)), this.cache[t];
   }
 }
-const Q = class Q {
+const z = class z {
   /**
    * Getting data for the cache, and if there is no cache, it performs a function to save the cache.<br>
    * Получение данных для кэша, и если нет кэша, выполняет функцию для сохранения кэша.
@@ -189,10 +188,10 @@ const Q = class Q {
     return this.cache.get(t, e, r);
   }
 };
-h(Q, "cache"), Q.cache = new re();
-let vt = Q;
+h(z, "cache"), z.cache = new re();
+let vt = z;
 const Di = "cookie-block";
-class St {
+class Ot {
   /**
    * Obtaining status.<br>
    * Получение статуса.
@@ -209,7 +208,7 @@ class St {
     this.storage.set(t);
   }
 }
-h(St, "storage", new z(Di));
+h(Ot, "storage", new J(Di));
 const U = {};
 class se {
   constructor(t) {
@@ -235,7 +234,7 @@ class se {
    * @param options additional parameters /<br>дополнительные параметры
    */
   set(t, e) {
-    this.value = tt(t), Object.assign(this.options, e), this.update();
+    this.value = Z(t), Object.assign(this.options, e), this.update();
   }
   /**
    * Delete cookie data.<br>
@@ -250,7 +249,7 @@ class se {
    */
   getAge() {
     var t;
-    return ((t = this.options) == null ? void 0 : t.age) ?? J("cache") ?? 7 * 24 * 60 * 60;
+    return ((t = this.options) == null ? void 0 : t.age) ?? X("cache") ?? 7 * 24 * 60 * 60;
   }
   /**
    * Update cookie data.<br>
@@ -258,7 +257,7 @@ class se {
    */
   update() {
     var t, e;
-    if (K() && !St.get()) {
+    if (K() && !Ot.get()) {
       const r = String(this.value ?? "");
       document.cookie = [
         `${encodeURIComponent(this.name)}=${encodeURIComponent(r)}`,
@@ -273,7 +272,7 @@ class se {
   if (K())
     for (const t of document.cookie.split(";")) {
       const [e, r] = t.trim().split("=");
-      e && N(r) && (U[e] = X(r));
+      e && N(r) && (U[e] = tt(r));
     }
 })();
 const ht = {};
@@ -295,7 +294,7 @@ class it {
    * Возвращает объект для работы с форматированием.
    */
   getIntl() {
-    return new Et(this.code);
+    return new Ct(this.code);
   }
   /**
    * Returns a Date object.<br>
@@ -877,7 +876,7 @@ const M = class M {
    */
   static set(t, e) {
     var s;
-    const r = tt(e);
+    const r = Z(e);
     r !== ((s = this.hash) == null ? void 0 : s[t]) && (this.hash[t] = r, this.update());
   }
   /**
@@ -897,7 +896,7 @@ const M = class M {
     const t = {};
     return location.hash.replace(
       /([\w-]+)[:=]([^;]+)/ig,
-      (...e) => (t[e[1]] = X(e[2]), "")
+      (...e) => (t[e[1]] = tt(e[2]), "")
     ), t;
   }
   /**
@@ -939,14 +938,14 @@ const M = class M {
 h(M, "hash", {}), h(M, "watch", {}), h(M, "block", !1), K() && (M.reload(), addEventListener("hashchange", () => M.reload()));
 let P = M;
 var D = /* @__PURE__ */ ((i) => (i.new = "new", i.init = "init", i.end = "end", i))(D || {});
-const $t = "d-mutation", Si = et(J("DESIGNS_MAIN", "design")), Oi = et(J("DESIGNS_GLOBAL", "ui")), L = "__UI_PROJECT";
+const Tt = "d-mutation", Oi = et(X("DESIGNS_MAIN", "design")), Si = et(X("DESIGNS_GLOBAL", "ui")), L = "__UI_PROJECT";
 class w {
   /**
    * Returns the names of keys indicating the design name.<br>
    * Возвращает названия ключей, обозначающих название дизайна.
    */
   static getKeyUi() {
-    return Oi;
+    return Si;
   }
   /**
    * Returns the names of keys indicating that the element is being processed.<br>
@@ -974,14 +973,14 @@ class w {
    * Возвращает названия атрибутов, обозначающих, что элемент находится в обработке.
    */
   static getClassInit() {
-    return `${$t}--${this.getKeyInit()}`;
+    return `${Tt}--${this.getKeyInit()}`;
   }
   /**
    * Returns the names of attributes indicating that the element is being processed.<br>
    * Возвращает названия атрибутов, обозначающих, что элемент уже обработан.
    */
   static getClassEnd() {
-    return `${$t}--${this.getKeyEnd()}`;
+    return `${Tt}--${this.getKeyEnd()}`;
   }
   /**
    * Initial stage, start of searching for all unprocessed elements.<br>
@@ -1246,8 +1245,8 @@ class ne {
   getComponentName() {
     if (this.isLink())
       return this.componentName;
-    const t = Z(this.componentName);
-    return _.isComponent(t) ? t : Z(`${Si}-${this.componentName}`);
+    const t = q(this.componentName);
+    return _.isComponent(t) ? t : q(`${Oi}-${this.componentName}`);
   }
   /**
    * Returns the name of the design.<br>
@@ -1351,7 +1350,7 @@ class ne {
   getDataset() {
     const t = {};
     return p(this.element.dataset, (e, r) => {
-      r !== w.getKeyUi() && (t[r] = X(e));
+      r !== w.getKeyUi() && (t[r] = tt(e));
     }), t;
   }
   /**
@@ -1371,7 +1370,7 @@ class ne {
    */
   setSlots(t) {
     return N(t) && p(t, (e, r) => {
-      this.slots[r] = this.initChildrenList(qt(e));
+      this.slots[r] = this.initChildrenList(Qt(e));
     }), this;
   }
   /**
@@ -1418,14 +1417,14 @@ class ne {
       return {
         tag: t.nodeName,
         attributes: {
-          ...Jt(t),
+          ...Xt(t),
           innerHTML: (t == null ? void 0 : t.innerHTML) ?? ""
         }
       };
     const e = (s = (r = t == null ? void 0 : t.textContent) == null ? void 0 : r.trim) == null ? void 0 : s.call(r);
     if (N(e))
       return e;
-    if (Ct(t) && N(t))
+    if (Et(t) && N(t))
       return t;
   }
   /**
@@ -1665,15 +1664,15 @@ function ue() {
   return typeof navigator < "u" && typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : {};
 }
 const Ii = typeof Proxy == "function", Mi = "devtools-plugin:setup", Li = "plugin:settings:set";
-let T, yt;
+let $, yt;
 function ki() {
   var i;
-  return T !== void 0 || (typeof window < "u" && window.performance ? (T = !0, yt = window.performance) : typeof globalThis < "u" && (!((i = globalThis.perf_hooks) === null || i === void 0) && i.performance) ? (T = !0, yt = globalThis.perf_hooks.performance) : T = !1), T;
+  return $ !== void 0 || (typeof window < "u" && window.performance ? ($ = !0, yt = window.performance) : typeof globalThis < "u" && (!((i = globalThis.perf_hooks) === null || i === void 0) && i.performance) ? ($ = !0, yt = globalThis.perf_hooks.performance) : $ = !1), $;
 }
 function xi() {
   return ki() ? yt.now() : Date.now();
 }
-class $i {
+class Ti {
   constructor(t, e) {
     this.target = null, this.targetQueue = [], this.onQueue = [], this.plugin = t, this.hook = e;
     const r = {};
@@ -1735,12 +1734,12 @@ class $i {
       e.resolve(await this.target[e.method](...e.args));
   }
 }
-function Ti(i, t) {
+function $i(i, t) {
   const e = i, r = ue(), s = Ai(), n = Ii && e.enableEarlyProxy;
   if (s && (r.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !n))
     s.emit(Mi, i, t);
   else {
-    const o = n ? new $i(e, s) : null;
+    const o = n ? new Ti(e, s) : null;
     (r.__VUE_DEVTOOLS_PLUGINS__ = r.__VUE_DEVTOOLS_PLUGINS__ || []).push({
       pluginDescriptor: e,
       setupFn: t,
@@ -1787,7 +1786,7 @@ function le(i) {
 function Fi(i) {
   return i && typeof i.then == "function";
 }
-function S(i, t) {
+function O(i, t) {
   if (!i)
     throw new Error("[vuex] " + t);
 }
@@ -1805,9 +1804,9 @@ function de(i, t, e) {
 function fe(i, t) {
   i._actions = /* @__PURE__ */ Object.create(null), i._mutations = /* @__PURE__ */ Object.create(null), i._wrappedGetters = /* @__PURE__ */ Object.create(null), i._modulesNamespaceMap = /* @__PURE__ */ Object.create(null);
   var e = i.state;
-  st(i, e, [], i._modules.root, !0), Ot(i, e, t);
+  st(i, e, [], i._modules.root, !0), St(i, e, t);
 }
-function Ot(i, t, e) {
+function St(i, t, e) {
   var r = i._state, s = i._scope;
   i.getters = {}, i._makeLocalGettersCache = /* @__PURE__ */ Object.create(null);
   var n = i._wrappedGetters, o = {}, a = {}, c = ii(!0);
@@ -1856,7 +1855,7 @@ function st(i, t, e, r, s) {
 function Pi(i, t, e) {
   var r = t === "", s = {
     dispatch: r ? i.dispatch : function(n, o, a) {
-      var c = q(n, o, a), l = c.payload, u = c.options, f = c.type;
+      var c = Q(n, o, a), l = c.payload, u = c.options, f = c.type;
       if ((!u || !u.root) && (f = t + f, process.env.NODE_ENV !== "production" && !i._actions[f])) {
         console.error("[vuex] unknown local action type: " + c.type + ", global type: " + f);
         return;
@@ -1864,7 +1863,7 @@ function Pi(i, t, e) {
       return i.dispatch(f, l);
     },
     commit: r ? i.commit : function(n, o, a) {
-      var c = q(n, o, a), l = c.payload, u = c.options, f = c.type;
+      var c = Q(n, o, a), l = c.payload, u = c.options, f = c.type;
       if ((!u || !u.root) && (f = t + f, process.env.NODE_ENV !== "production" && !i._mutations[f])) {
         console.error("[vuex] unknown local mutation type: " + c.type + ", global type: " + f);
         return;
@@ -1945,10 +1944,10 @@ function Ri(i, t, e, r) {
   };
 }
 function Wi(i) {
-  C(function() {
+  E(function() {
     return i._state.data;
   }, function() {
-    process.env.NODE_ENV !== "production" && S(i._committing, "do not mutate vuex store state outside mutation handlers.");
+    process.env.NODE_ENV !== "production" && O(i._committing, "do not mutate vuex store state outside mutation handlers.");
   }, { deep: !0, flush: "sync" });
 }
 function Nt(i, t) {
@@ -1956,12 +1955,12 @@ function Nt(i, t) {
     return e[r];
   }, i);
 }
-function q(i, t, e) {
-  return le(i) && i.type && (e = t, t = i, i = i.type), process.env.NODE_ENV !== "production" && S(typeof i == "string", "expects string as the type, but found " + typeof i + "."), { type: i, payload: t, options: e };
+function Q(i, t, e) {
+  return le(i) && i.type && (e = t, t = i, i = i.type), process.env.NODE_ENV !== "production" && O(typeof i == "string", "expects string as the type, but found " + typeof i + "."), { type: i, payload: t, options: e };
 }
-var Ui = "vuex bindings", Tt = "vuex:mutations", lt = "vuex:actions", j = "vuex", Hi = 0;
+var Ui = "vuex bindings", $t = "vuex:mutations", lt = "vuex:actions", j = "vuex", Hi = 0;
 function Ki(i, t) {
-  Ti(
+  $i(
     {
       id: "org.vuejs.vuex",
       app: i,
@@ -1973,7 +1972,7 @@ function Ki(i, t) {
     },
     function(e) {
       e.addTimelineLayer({
-        id: Tt,
+        id: $t,
         label: "Vuex Mutations",
         color: jt
       }), e.addTimelineLayer({
@@ -1997,8 +1996,8 @@ function Ki(i, t) {
       }), e.on.getInspectorState(function(r) {
         if (r.app === i && r.inspectorId === j) {
           var s = r.nodeId;
-          ge(t, s), r.state = qi(
-            zi(t._modules, s),
+          ge(t, s), r.state = Qi(
+            Ji(t._modules, s),
             s === "root" ? t.getters : t._makeLocalGettersCache,
             s
           );
@@ -2013,7 +2012,7 @@ function Ki(i, t) {
       }), t.subscribe(function(r, s) {
         var n = {};
         r.payload && (n.payload = r.payload), n.state = s, e.notifyComponentUpdate(), e.sendInspectorTree(j), e.sendInspectorState(j), e.addTimelineEvent({
-          layerId: Tt,
+          layerId: $t,
           event: {
             time: Date.now(),
             title: r.type,
@@ -2058,9 +2057,9 @@ function Ki(i, t) {
     }
   );
 }
-var jt = 8702998, Yi = 6710886, Zi = 16777215, me = {
+var jt = 8702998, Yi = 6710886, qi = 16777215, me = {
   label: "namespaced",
-  textColor: Zi,
+  textColor: qi,
   backgroundColor: Yi
 };
 function pe(i) {
@@ -2093,7 +2092,7 @@ function ye(i, t, e, r) {
     ye(i, t._children[s], e, r + s + "/");
   });
 }
-function qi(i, t, e) {
+function Qi(i, t, e) {
   t = e === "root" ? t : t[e];
   var r = Object.keys(t), s = {
     state: Object.keys(i.state).map(function(o) {
@@ -2105,7 +2104,7 @@ function qi(i, t, e) {
     })
   };
   if (r.length) {
-    var n = Qi(t);
+    var n = zi(t);
     s.getters = Object.keys(n).map(function(o) {
       return {
         key: o.endsWith("/") ? pe(o) : o,
@@ -2118,7 +2117,7 @@ function qi(i, t, e) {
   }
   return s;
 }
-function Qi(i) {
+function zi(i) {
   var t = {};
   return Object.keys(i).forEach(function(e) {
     var r = e.split("/");
@@ -2142,7 +2141,7 @@ function Qi(i) {
       });
   }), t;
 }
-function zi(i, t) {
+function Ji(i, t) {
   var e = t.split("/").filter(function(r) {
     return r;
   });
@@ -2163,7 +2162,7 @@ function _t(i) {
     return t;
   }
 }
-var O = function(t, e) {
+var S = function(t, e) {
   this.runtime = e, this._children = /* @__PURE__ */ Object.create(null), this._rawModule = t;
   var r = t.state;
   this.state = (typeof r == "function" ? r() : r) || {};
@@ -2171,55 +2170,55 @@ var O = function(t, e) {
 be.namespaced.get = function() {
   return !!this._rawModule.namespaced;
 };
-O.prototype.addChild = function(t, e) {
+S.prototype.addChild = function(t, e) {
   this._children[t] = e;
 };
-O.prototype.removeChild = function(t) {
+S.prototype.removeChild = function(t) {
   delete this._children[t];
 };
-O.prototype.getChild = function(t) {
+S.prototype.getChild = function(t) {
   return this._children[t];
 };
-O.prototype.hasChild = function(t) {
+S.prototype.hasChild = function(t) {
   return t in this._children;
 };
-O.prototype.update = function(t) {
+S.prototype.update = function(t) {
   this._rawModule.namespaced = t.namespaced, t.actions && (this._rawModule.actions = t.actions), t.mutations && (this._rawModule.mutations = t.mutations), t.getters && (this._rawModule.getters = t.getters);
 };
-O.prototype.forEachChild = function(t) {
+S.prototype.forEachChild = function(t) {
   x(this._children, t);
 };
-O.prototype.forEachGetter = function(t) {
+S.prototype.forEachGetter = function(t) {
   this._rawModule.getters && x(this._rawModule.getters, t);
 };
-O.prototype.forEachAction = function(t) {
+S.prototype.forEachAction = function(t) {
   this._rawModule.actions && x(this._rawModule.actions, t);
 };
-O.prototype.forEachMutation = function(t) {
+S.prototype.forEachMutation = function(t) {
   this._rawModule.mutations && x(this._rawModule.mutations, t);
 };
-Object.defineProperties(O.prototype, be);
-var $ = function(t) {
+Object.defineProperties(S.prototype, be);
+var T = function(t) {
   this.register([], t, !1);
 };
-$.prototype.get = function(t) {
+T.prototype.get = function(t) {
   return t.reduce(function(e, r) {
     return e.getChild(r);
   }, this.root);
 };
-$.prototype.getNamespace = function(t) {
+T.prototype.getNamespace = function(t) {
   var e = this.root;
   return t.reduce(function(r, s) {
     return e = e.getChild(s), r + (e.namespaced ? s + "/" : "");
   }, "");
 };
-$.prototype.update = function(t) {
+T.prototype.update = function(t) {
   _e([], this.root, t);
 };
-$.prototype.register = function(t, e, r) {
+T.prototype.register = function(t, e, r) {
   var s = this;
-  r === void 0 && (r = !0), process.env.NODE_ENV !== "production" && Ce(t, e);
-  var n = new O(e, r);
+  r === void 0 && (r = !0), process.env.NODE_ENV !== "production" && Ee(t, e);
+  var n = new S(e, r);
   if (t.length === 0)
     this.root = n;
   else {
@@ -2230,7 +2229,7 @@ $.prototype.register = function(t, e, r) {
     s.register(t.concat(c), a, r);
   });
 };
-$.prototype.unregister = function(t) {
+T.prototype.unregister = function(t) {
   var e = this.get(t.slice(0, -1)), r = t[t.length - 1], s = e.getChild(r);
   if (!s) {
     process.env.NODE_ENV !== "production" && console.warn(
@@ -2240,12 +2239,12 @@ $.prototype.unregister = function(t) {
   }
   s.runtime && e.removeChild(r);
 };
-$.prototype.isRegistered = function(t) {
+T.prototype.isRegistered = function(t) {
   var e = this.get(t.slice(0, -1)), r = t[t.length - 1];
   return e ? e.hasChild(r) : !1;
 };
 function _e(i, t, e) {
-  if (process.env.NODE_ENV !== "production" && Ce(i, e), t.update(e), e.modules)
+  if (process.env.NODE_ENV !== "production" && Ee(i, e), t.update(e), e.modules)
     for (var r in e.modules) {
       if (!t.getChild(r)) {
         process.env.NODE_ENV !== "production" && console.warn(
@@ -2265,7 +2264,7 @@ var Ft = {
     return typeof i == "function";
   },
   expected: "function"
-}, Ji = {
+}, Xi = {
   assert: function(i) {
     return typeof i == "function" || typeof i == "object" && typeof i.handler == "function";
   },
@@ -2273,22 +2272,22 @@ var Ft = {
 }, Vt = {
   getters: Ft,
   mutations: Ft,
-  actions: Ji
+  actions: Xi
 };
-function Ce(i, t) {
+function Ee(i, t) {
   Object.keys(Vt).forEach(function(e) {
     if (t[e]) {
       var r = Vt[e];
       x(t[e], function(s, n) {
-        S(
+        O(
           r.assert(s),
-          Xi(i, e, n, s, r.expected)
+          Zi(i, e, n, s, r.expected)
         );
       });
     }
   });
 }
-function Xi(i, t, e, r, s) {
+function Zi(i, t, e, r, s) {
   var n = t + " should be " + s + ' but "' + t + "." + e + '"';
   return i.length > 0 && (n += ' in module "' + i.join(".") + '"'), n += " is " + JSON.stringify(r) + ".", n;
 }
@@ -2297,13 +2296,13 @@ function At(i) {
 }
 var y = function i(t) {
   var e = this;
-  t === void 0 && (t = {}), process.env.NODE_ENV !== "production" && (S(typeof Promise < "u", "vuex requires a Promise polyfill in this browser."), S(this instanceof i, "store must be called with the new operator."));
+  t === void 0 && (t = {}), process.env.NODE_ENV !== "production" && (O(typeof Promise < "u", "vuex requires a Promise polyfill in this browser."), O(this instanceof i, "store must be called with the new operator."));
   var r = t.plugins;
   r === void 0 && (r = []);
   var s = t.strict;
   s === void 0 && (s = !1);
   var n = t.devtools;
-  this._committing = !1, this._actions = /* @__PURE__ */ Object.create(null), this._actionSubscribers = [], this._mutations = /* @__PURE__ */ Object.create(null), this._wrappedGetters = /* @__PURE__ */ Object.create(null), this._modules = new $(t), this._modulesNamespaceMap = /* @__PURE__ */ Object.create(null), this._subscribers = [], this._makeLocalGettersCache = /* @__PURE__ */ Object.create(null), this._scope = null, this._devtools = n;
+  this._committing = !1, this._actions = /* @__PURE__ */ Object.create(null), this._actionSubscribers = [], this._mutations = /* @__PURE__ */ Object.create(null), this._wrappedGetters = /* @__PURE__ */ Object.create(null), this._modules = new T(t), this._modulesNamespaceMap = /* @__PURE__ */ Object.create(null), this._subscribers = [], this._makeLocalGettersCache = /* @__PURE__ */ Object.create(null), this._scope = null, this._devtools = n;
   var o = this, a = this, c = a.dispatch, l = a.commit;
   this.dispatch = function(g, m) {
     return c.call(o, g, m);
@@ -2311,7 +2310,7 @@ var y = function i(t) {
     return l.call(o, g, m, I);
   }, this.strict = s;
   var u = this._modules.root.state;
-  st(this, u, [], this._modules.root), Ot(this, u), r.forEach(function(f) {
+  st(this, u, [], this._modules.root), St(this, u), r.forEach(function(f) {
     return f(e);
   });
 }, It = { state: { configurable: !0 } };
@@ -2324,10 +2323,10 @@ It.state.get = function() {
   return this._state.data;
 };
 It.state.set = function(i) {
-  process.env.NODE_ENV !== "production" && S(!1, "use store.replaceState() to explicit replace store state.");
+  process.env.NODE_ENV !== "production" && O(!1, "use store.replaceState() to explicit replace store state.");
 };
 y.prototype.commit = function(t, e, r) {
-  var s = this, n = q(t, e, r), o = n.type, a = n.payload, c = n.options, l = { type: o, payload: a }, u = this._mutations[o];
+  var s = this, n = Q(t, e, r), o = n.type, a = n.payload, c = n.options, l = { type: o, payload: a }, u = this._mutations[o];
   if (!u) {
     process.env.NODE_ENV !== "production" && console.error("[vuex] unknown mutation type: " + o);
     return;
@@ -2343,7 +2342,7 @@ y.prototype.commit = function(t, e, r) {
   );
 };
 y.prototype.dispatch = function(t, e) {
-  var r = this, s = q(t, e), n = s.type, o = s.payload, a = { type: n, payload: o }, c = this._actions[n];
+  var r = this, s = Q(t, e), n = s.type, o = s.payload, a = { type: n, payload: o }, c = this._actions[n];
   if (!c) {
     process.env.NODE_ENV !== "production" && console.error("[vuex] unknown action type: " + n);
     return;
@@ -2395,7 +2394,7 @@ y.prototype.subscribeAction = function(t, e) {
 };
 y.prototype.watch = function(t, e, r) {
   var s = this;
-  return process.env.NODE_ENV !== "production" && S(typeof t == "function", "store.watch only accepts a function."), C(function() {
+  return process.env.NODE_ENV !== "production" && O(typeof t == "function", "store.watch only accepts a function."), E(function() {
     return t(s.state, s.getters);
   }, e, Object.assign({}, r));
 };
@@ -2406,17 +2405,17 @@ y.prototype.replaceState = function(t) {
   });
 };
 y.prototype.registerModule = function(t, e, r) {
-  r === void 0 && (r = {}), typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && (S(Array.isArray(t), "module path must be a string or an Array."), S(t.length > 0, "cannot register the root module by using registerModule.")), this._modules.register(t, e), st(this, this.state, t, this._modules.get(t), r.preserveState), Ot(this, this.state);
+  r === void 0 && (r = {}), typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && (O(Array.isArray(t), "module path must be a string or an Array."), O(t.length > 0, "cannot register the root module by using registerModule.")), this._modules.register(t, e), st(this, this.state, t, this._modules.get(t), r.preserveState), St(this, this.state);
 };
 y.prototype.unregisterModule = function(t) {
   var e = this;
-  typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && S(Array.isArray(t), "module path must be a string or an Array."), this._modules.unregister(t), this._withCommit(function() {
+  typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && O(Array.isArray(t), "module path must be a string or an Array."), this._modules.unregister(t), this._withCommit(function() {
     var r = Nt(e.state, t.slice(0, -1));
     delete r[t[t.length - 1]];
   }), fe(this);
 };
 y.prototype.hasModule = function(t) {
-  return typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && S(Array.isArray(t), "module path must be a string or an Array."), this._modules.isRegistered(t);
+  return typeof t == "string" && (t = [t]), process.env.NODE_ENV !== "production" && O(Array.isArray(t), "module path must be a string or an Array."), this._modules.isRegistered(t);
 };
 y.prototype.hotUpdate = function(t) {
   this._modules.update(t), fe(this, !0);
@@ -2489,7 +2488,7 @@ var Mt = ot(function(i, t) {
       return typeof n == "function" ? n.apply(this, [l].concat(a)) : l.apply(this.$store, [n].concat(a));
     };
   }), e;
-}), Ee = function(i) {
+}), Ce = function(i) {
   return {
     mapState: Mt.bind(null, i),
     mapGetters: kt.bind(null, i),
@@ -2550,8 +2549,8 @@ function we(i) {
     typeof l > "u" || (a && u.subscribe(function(g, m) {
       var I = bt(m);
       if (e(g, f, I)) {
-        var ct = Gt(), ut = s(g), Se = "mutation " + g.type + ct;
-        Pt(l, Se, t), l.log("%c prev state", "color: #9E9E9E; font-weight: bold", r(f)), l.log("%c mutation", "color: #03A9F4; font-weight: bold", ut), l.log("%c next state", "color: #4CAF50; font-weight: bold", r(I)), Bt(l);
+        var ct = Gt(), ut = s(g), Oe = "mutation " + g.type + ct;
+        Pt(l, Oe, t), l.log("%c prev state", "color: #9E9E9E; font-weight: bold", r(f)), l.log("%c mutation", "color: #03A9F4; font-weight: bold", ut), l.log("%c next state", "color: #4CAF50; font-weight: bold", r(I)), Bt(l);
       }
       f = I;
     }), c && u.subscribeAction(function(g, m) {
@@ -2597,14 +2596,14 @@ var er = {
   mapMutations: Lt,
   mapGetters: kt,
   mapActions: xt,
-  createNamespacedHelpers: Ee,
+  createNamespacedHelpers: Ce,
   createLogger: we
 };
-const Ir = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Lr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Store: y,
   createLogger: we,
-  createNamespacedHelpers: Ee,
+  createNamespacedHelpers: Ce,
   createStore: At,
   default: er,
   mapActions: xt,
@@ -2645,7 +2644,7 @@ class ir {
   static createComponent(t) {
     const e = _.getComponentGlobalItem(t);
     e && _.addComponent(
-      Z(t.replace(/\//g, "-")),
+      q(t.replace(/\//g, "-")),
       e.item
     );
   }
@@ -2708,9 +2707,9 @@ class rr {
       this.date.value,
       this.type.value,
       this.code.value
-    ), C(this.item, (s) => {
+    ), E(this.item, (s) => {
       this.date.value = B(s);
-    }), C(this.type, (s) => this.datetime.setType(s)), C(this.code, (s) => this.datetime.setCode(s)), C(this.date, (s) => this.datetime.setDate(s)), this.datetime.setWatch(() => ni(this.date));
+    }), E(this.type, (s) => this.datetime.setType(s)), E(this.code, (s) => this.datetime.setCode(s)), E(this.date, (s) => this.datetime.setDate(s)), this.datetime.setWatch(() => ni(this.date));
   }
   /**
    * Returns the basic data for the date.<br>
@@ -2837,7 +2836,7 @@ class sr extends Ht {
       s,
       n,
       o
-    ), c.value && this.setElementControl(c.value), C(a, (l) => this.setElement(l)), C(c, (l) => this.setElementControl(l));
+    ), c.value && this.setElementControl(c.value), E(a, (l) => this.setElement(l)), E(c, (l) => this.setElementControl(l));
   }
 }
 class nr {
@@ -2848,7 +2847,7 @@ class nr {
   constructor(t = k.getLocation()) {
     h(this, "code");
     h(this, "flag");
-    this.code = A(t), this.flag = new Kt(this.code.value), C(this.code, (e) => this.flag.setCode(e));
+    this.code = A(t), this.flag = new Kt(this.code.value), E(this.code, (e) => this.flag.setCode(e));
   }
   /**
    * Obtaining a reactive object with the country code.<br>
@@ -2893,7 +2892,7 @@ class nr {
     return d(() => this.flag.getNational(t));
   }
 }
-const E = class E {
+const C = class C {
   /**
    * Information about the current country.<br>
    * Информация об текущей стране.
@@ -2939,8 +2938,8 @@ const E = class E {
     k.set(t, !0), this.item.value = k.getItem();
   }
 };
-h(E, "item", R(k.get())), h(E, "country", d(() => E.item.value.country)), h(E, "language", d(() => E.item.value.language)), h(E, "standard", d(() => E.item.value.standard)), h(E, "firstDay", d(() => E.item.value.firstDay));
-let G = E;
+h(C, "item", R(k.get())), h(C, "country", d(() => C.item.value.country)), h(C, "language", d(() => C.item.value.language)), h(C, "standard", d(() => C.item.value.standard)), h(C, "firstDay", d(() => C.item.value.firstDay));
+let G = C;
 class or {
   /**
    * Constructor
@@ -2950,7 +2949,7 @@ class or {
   constructor(t) {
     h(this, "location");
     h(this, "intl");
-    this.location = A(t), this.intl = d(() => new Et(this.location.value ?? G.getLanguage().value));
+    this.location = A(t), this.intl = d(() => new Ct(this.location.value ?? G.getLanguage().value));
   }
   /**
    * The consistent translation of language, region and script display names.<br>
@@ -3135,7 +3134,7 @@ function ar(i, t, e) {
   if (i in dt)
     return dt[i];
   const r = new se(i), s = wt(r.get(t, e));
-  return C(s, (n) => {
+  return E(s, (n) => {
     r.set(n, e);
   }), dt[i] = s, s;
 }
@@ -3144,7 +3143,7 @@ function cr(i, t) {
   if (i in ft)
     return ft[i];
   const e = R(P.get(i, t));
-  return C(e, (r) => P.set(i, r)), P.addWatch(i, (r) => {
+  return E(e, (r) => P.set(i, r)), P.addWatch(i, (r) => {
     e.value = r;
   }), ft[i] = e, e;
 }
@@ -3152,15 +3151,15 @@ const ft = {};
 function ur(i, t) {
   if (i in gt)
     return gt[i];
-  const e = new z(i, !0), r = R(e.get(t));
-  return C(r, (s) => e.set(s)), gt[i] = r, r;
+  const e = new J(i, !0), r = R(e.get(t));
+  return E(r, (s) => e.set(s)), gt[i] = r, r;
 }
 const gt = {};
 function hr(i, t, e) {
   if (i in mt)
     return mt[i];
-  const r = new z(i), s = R(r.get(t, e));
-  return C(s, (n) => r.set(n)), mt[i] = s, s;
+  const r = new J(i), s = R(r.get(t, e));
+  return E(s, (n) => r.set(n)), mt[i] = s, s;
 }
 const mt = {};
 function De(i) {
@@ -3169,7 +3168,7 @@ function De(i) {
     G.getLanguage() && (t.value = { ...await Y.getList(i) });
   }), t;
 }
-const lr = (i) => De(i), Mr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const lr = (i) => De(i), kr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Api: Ae,
   ApiMethodItem: Ie,
@@ -3177,23 +3176,23 @@ const lr = (i) => De(i), Mr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   CacheItem: Wt,
   CacheStatic: vt,
   Cookie: se,
-  CookieBlock: St,
-  DataStorage: z,
+  CookieBlock: Ot,
+  DataStorage: J,
   Datetime: it,
   DatetimeRef: rr,
-  DesignAbstract: We,
-  DesignAsyncAbstract: Ue,
-  DesignChanged: He,
-  DesignComponents: Ze,
-  DesignConstructorAbstract: qe,
+  DesignAbstract: Re,
+  DesignAsyncAbstract: We,
+  DesignChanged: Ue,
+  DesignComponents: qe,
+  DesignConstructorAbstract: Qe,
   Env: Me,
   EventItem: Ht,
   EventRef: sr,
-  GEO_FLAG_ICON_NAME: Ve,
+  GEO_FLAG_ICON_NAME: Fe,
   Geo: k,
   GeoFlag: Kt,
   GeoFlagRef: nr,
-  GeoIntl: Et,
+  GeoIntl: Ct,
   GeoIntlRef: or,
   GeoRef: G,
   Hash: P,
@@ -3208,25 +3207,25 @@ const lr = (i) => De(i), Mr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   MutationObserverItems: ce,
   Translate: Y,
   anyToString: ui,
-  arrFill: Qt,
+  arrFill: zt,
   copyObject: V,
-  createElement: ke,
+  createElement: Le,
   eventStopPropagation: Te,
-  executeFunction: tt,
+  executeFunction: Z,
   forEach: p,
-  frame: zt,
-  getAttributes: Jt,
-  getBind: Zt,
+  frame: Jt,
+  getAttributes: Xt,
+  getBind: qt,
   getBindRef: _i,
-  getClassName: Qe,
+  getClassName: ze,
   getClipboardData: hi,
   getColumn: li,
   getElement: Rt,
   getElementId: Ut,
-  getElementItem: xe,
-  getElementOrWindow: Pe,
-  getExp: Xt,
-  getIndexForRender: ze,
+  getElementItem: ke,
+  getElementOrWindow: Ve,
+  getExp: Zt,
+  getIndexForRender: Je,
   getKey: di,
   getLengthOfAllArray: Dt,
   getMaxLengthAllArray: fi,
@@ -3235,83 +3234,82 @@ const lr = (i) => De(i), Mr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   getMouseClientX: te,
   getMouseClientY: ee,
   getRef: v,
-  inArray: Re,
+  inArray: Ge,
   intersectKey: pi,
-  isArray: Ke,
+  isArray: He,
   isDifferent: vi,
   isDomRuntime: K,
   isFilled: N,
-  isFunction: je,
-  isInDom: Be,
+  isFunction: $e,
+  isInDom: Pe,
   isIntegerBetween: yi,
-  isNull: Le,
+  isNull: Ye,
   isObject: b,
-  isObjectNotArray: Je,
+  isObjectNotArray: Xe,
   isSelected: pt,
   isSelectedByList: bi,
-  isString: Ct,
-  isWindow: Fe,
-  random: Ge,
-  render: Xe,
+  isString: Et,
+  isWindow: je,
+  random: Be,
+  render: Ze,
   replaceRecursive: F,
-  replaceTemplate: Ci,
-  setElementItem: $e,
-  splice: Ei,
+  replaceTemplate: Ei,
+  setElementItem: xe,
+  splice: Ci,
   strFill: wi,
   t: lr,
-  toArray: qt,
+  toArray: Qt,
   toCamelCase: Yt,
-  toCamelCaseFirst: Z,
+  toCamelCaseFirst: q,
   toDate: B,
   toKebabCase: et,
-  toNumber: Ye,
+  toNumber: Ke,
   toRefItem: A,
-  transformation: X,
+  transformation: tt,
   uniqueArray: ie,
   useCookieRef: ar,
-  useEnv: J,
+  useEnv: X,
   useHashRef: cr,
   useSessionRef: ur,
   useStorageRef: hr,
   useTranslateRef: De
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  lr as $,
   wi as A,
-  Z as B,
-  et as C,
-  ie as D,
-  re as E,
-  vt as F,
-  se as G,
-  St as H,
-  it as I,
-  P as J,
-  Ni as K,
-  w as L,
+  q as B,
+  ie as C,
+  re as D,
+  vt as E,
+  se as F,
+  Ot as G,
+  it as H,
+  P as I,
+  Ni as J,
+  w as K,
+  oe as L,
   _ as M,
-  oe as N,
-  ne as O,
-  ae as P,
-  ce as Q,
-  rr as R,
-  sr as S,
-  nr as T,
-  or as U,
-  G as V,
-  ar as W,
-  cr as X,
-  ur as Y,
-  hr as Z,
-  De as _,
+  ne as N,
+  ae as O,
+  ce as P,
+  rr as Q,
+  sr as R,
+  nr as S,
+  or as T,
+  G as U,
+  ar as V,
+  cr as W,
+  ur as X,
+  hr as Y,
+  De as Z,
+  lr as _,
   ir as a,
   ui as b,
-  Qt as c,
+  zt as c,
   hi as d,
   li as e,
-  zt as f,
-  Jt as g,
-  Xt as h,
+  Jt as f,
+  Xt as g,
+  Zt as h,
   di as i,
   Dt as j,
   fi as k,
@@ -3324,10 +3322,10 @@ export {
   yi as r,
   bi as s,
   _i as t,
-  Mr as u,
-  Ir as v,
+  kr as u,
+  Lr as v,
   A as w,
   F as x,
-  Ci as y,
-  Ei as z
+  Ei as y,
+  Ci as z
 };

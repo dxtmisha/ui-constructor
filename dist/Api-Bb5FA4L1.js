@@ -1,34 +1,10 @@
 var z = Object.defineProperty;
 var A = (a, n, e) => n in a ? z(a, n, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[n] = e;
 var u = (a, n, e) => (A(a, typeof n != "symbol" ? n + "" : n, e), e);
-import { e as S } from "./executeFunction-B6By_8Og.js";
-function C(a) {
-  return typeof a == "string";
-}
+import { a as C, t as c, i as S } from "./transformation-DBtDP1gm.js";
+import { e as m } from "./executeFunction-B6By_8Og.js";
 function M(a) {
-  return a == null;
-}
-function m(a) {
-  if (a)
-    switch (typeof a) {
-      case "bigint":
-      case "number":
-        return a !== 0;
-      case "boolean":
-        return a;
-      case "function":
-      case "symbol":
-        return !0;
-      case "object":
-        return Array.isArray(a) ? a.length > 0 : Object.values(a).some((n) => !M(n));
-      case "string":
-        return !["", "undefined", "null", "0", "false", "[]"].includes(a);
-      case "undefined":
-        return !1;
-      default:
-        return !!a;
-    }
-  return !1;
+  return typeof a == "string";
 }
 function E(a) {
   return JSON.parse(JSON.stringify(a));
@@ -37,37 +13,7 @@ function D() {
   return typeof window < "u";
 }
 function P(a, n) {
-  return M(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
-}
-function c(a, n = !1) {
-  if (typeof a == "string") {
-    const e = a.trim();
-    switch (e) {
-      case "undefined":
-        return;
-      case "null":
-        return null;
-      case "true":
-        return !0;
-      case "false":
-        return !1;
-      default:
-        if (/^[{[]/.exec(e))
-          try {
-            return JSON.parse(e);
-          } catch {
-          }
-        else {
-          if (/^[0-9]+\.[0-9.]+$/.exec(e))
-            return parseFloat(e);
-          if (/^[0-9]+$/.exec(e))
-            return parseInt(e, 10);
-          if (n && window && e in window && typeof window[e] == "function")
-            return window[e];
-        }
-    }
-  }
-  return a;
+  return C(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
 }
 var i = { VITE_PREFIX: "__dUi", VITE_DESIGNS: "m2,m3,c1,c2", VITE_DESIGNS_MAIN: "m3", VITE_DESIGNS_GLOBAL: "UI", VITE_UI_GIT: "git+https://github.com/dxtmisha/ui-playground.git", VITE_UI_WEB: "https://ru.dev2.coralclub.app", VITE_UI_PATH: "/ui/", VITE_UI_API_TRANSLATE: "restApi/uiTranslate", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
 const y = {
@@ -111,7 +57,7 @@ class T {
    * @param defaultValue default property value /<br>значение свойства по умолчанию
    */
   get(n) {
-    var o, t, g;
+    var o, r, g;
     const e = this.getName();
     if (import.meta) {
       const s = (i == null ? void 0 : i[e]) ?? (i == null ? void 0 : i[`VITE_${e}`]);
@@ -119,7 +65,7 @@ class T {
         return c(s);
     }
     if (typeof process < "u") {
-      const s = ((o = process.env) == null ? void 0 : o[e]) ?? ((t = process.env) == null ? void 0 : t[`VUE_APP_${e}`]) ?? ((g = process.env) == null ? void 0 : g[`NUXT_${e}`]);
+      const s = ((o = process.env) == null ? void 0 : o[e]) ?? ((r = process.env) == null ? void 0 : r[`VUE_APP_${e}`]) ?? ((g = process.env) == null ? void 0 : g[`NUXT_${e}`]);
       if (s)
         return c(s);
     }
@@ -155,7 +101,7 @@ class T {
 function p(a, n) {
   return new T(a).get(n);
 }
-class B {
+class L {
   /**
    * Constructor
    * @param name value name /<br>название значения
@@ -168,8 +114,8 @@ class B {
     const o = `${e ? "session" : "storage"}#${n}`;
     if (o in f)
       return f[o];
-    const t = this.getValue();
-    t && (this.value = t.value, this.age = t.age), f[o] = this;
+    const r = this.getValue();
+    r && (this.value = r.value, this.age = r.age), f[o] = this;
   }
   /**
    * Getting data from local storage.<br>
@@ -190,7 +136,7 @@ class B {
    */
   set(n) {
     var e, o;
-    return this.value = S(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
+    return this.value = m(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
       value: this.value,
       age: this.age
     })), this.value;
@@ -201,7 +147,7 @@ class B {
    * @param cache cache time /<br>время кэширования
    */
   isCache(n) {
-    return M(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
+    return C(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
   }
   /**
    * Returns an object for working with storage.<br>
@@ -232,7 +178,7 @@ class B {
       }
   }
 }
-const f = {}, L = [
+const f = {}, B = [
   {
     country: "US",
     countryAlternative: [
@@ -2345,7 +2291,7 @@ const f = {}, L = [
     language: "es",
     firstDay: "Mo"
   }
-], I = "geo-code", r = class r {
+], I = "geo-code", t = class t {
   /**
    * Information about the current country.<br>
    * Информация об текущей стране.
@@ -2403,7 +2349,7 @@ const f = {}, L = [
    * Возвращает полный список стран.
    */
   static getList() {
-    return L;
+    return B;
   }
   /**
    * Determines the current country by its full name.<br>
@@ -2464,7 +2410,7 @@ const f = {}, L = [
   static getByCountry(n) {
     return this.getList().find((e) => {
       var o;
-      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((t) => t === n));
+      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((r) => r === n));
     });
   }
   /**
@@ -2475,7 +2421,7 @@ const f = {}, L = [
   static getByLanguage(n) {
     return this.getList().find((e) => {
       var o;
-      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((t) => t === n));
+      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((r) => r === n));
     });
   }
   /**
@@ -2525,8 +2471,8 @@ const f = {}, L = [
     };
   }
 };
-u(r, "storage", new B(I)), u(r, "location"), u(r, "item"), u(r, "language"), r.location = r.findLocation(), r.language = r.findLanguage(r.location), r.item = r.getByCode(r.location);
-let l = r;
+u(t, "storage", new L(I)), u(t, "location"), u(t, "item"), u(t, "language"), t.location = t.findLocation(), t.language = t.findLanguage(t.location), t.item = t.getByCode(t.location);
+let l = t;
 var _ = /* @__PURE__ */ ((a) => (a.get = "GET", a.post = "POST", a.put = "PUT", a.delete = "DELETE", a))(_ || {});
 class d {
   /**
@@ -2570,8 +2516,8 @@ class d {
    * @param request this request /<br>данный запрос
    */
   static getBody(n) {
-    if (m(n))
-      return n instanceof FormData || C(n) ? n : JSON.stringify(n);
+    if (S(n))
+      return n instanceof FormData || M(n) ? n : JSON.stringify(n);
   }
   /**
    * To execute a request.<br>
@@ -2579,7 +2525,7 @@ class d {
    * @param pathRequest query string or list of parameters /<br>строка запроса или список параметров
    */
   static async response(n) {
-    return C(n) ? await this.fetch({
+    return M(n) ? await this.fetch({
       path: n
     }) : await this.fetch(n);
   }
@@ -2610,12 +2556,12 @@ class d {
     path: n = "",
     method: e = "GET",
     request: o = void 0,
-    headers: t = {},
+    headers: r = {},
     type: g = "application/json;charset=UTF-8",
     init: s = {}
   }) {
     try {
-      const h = this.getHeaders(t, g), k = h && e === "GET" ? "POST" : e;
+      const h = this.getHeaders(r, g), k = h && e === "GET" ? "POST" : e;
       return await (await fetch(this.getUrl(n), {
         ...s,
         method: k,
@@ -2631,16 +2577,13 @@ class d {
 u(d, "url", p("api", "/")), u(d, "urlLocalhost", `${p("BASE_URL", "/")}public/`), u(d, "urlCommand", "ui");
 export {
   d as A,
-  B as D,
+  L as D,
   T as E,
   l as G,
-  m as a,
-  M as b,
-  P as c,
-  E as d,
-  D as e,
-  _ as f,
-  C as i,
-  c as t,
+  P as a,
+  D as b,
+  E as c,
+  _ as d,
+  M as i,
   p as u
 };

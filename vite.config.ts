@@ -38,6 +38,7 @@ export default defineConfig(() => {
       cssCodeSplit: true,
       lib: {
         entry: {
+          project: resolve(__dirname, 'scripts/project.ts'),
           ...(() => {
             const data: Record<string, any> = {}
 

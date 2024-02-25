@@ -2,11 +2,12 @@ var T = Object.defineProperty;
 var I = (r, e, i) => e in r ? T(r, e, { enumerable: !0, configurable: !0, writable: !0, value: i }) : r[e] = i;
 var l = (r, e, i) => (I(r, typeof e != "symbol" ? e + "" : e, i), i);
 import { f as C, i as w } from "./forEach-B1ZDH1yu.js";
-import { b as E, G as g, a as A } from "./Api-6wgpqJNV.js";
+import { G as g } from "./Api-Bb5FA4L1.js";
+import { a as E, i as A } from "./transformation-DBtDP1gm.js";
 import { t as f } from "./toNumber-BeBr0lVX.js";
 import { g as h, i as S } from "./getElement-BhVCn14C.js";
 import { t as L } from "./toArray-rswbj5Xf.js";
-class K {
+class U {
   /**
    * Constructor
    * @param callback function for the cache /<br>функция для кэша
@@ -745,7 +746,7 @@ function G(r, e) {
   return Math.floor(Math.random() * (e - r + 1) + r);
 }
 let M = G(1e5, 9e5);
-function U(r, e) {
+function x(r, e) {
   const i = h(r);
   return i ? (A(i.id) || i.setAttribute("id", `id-${M++}`), e ? `#${i.id}${e}`.trim() : i.id) : `id-${M++}`;
 }
@@ -756,7 +757,7 @@ function k(r) {
   var e;
   return !!((e = h(r)) != null && e.closest("html"));
 }
-class x {
+class j {
   /**
    * Classes Constructor
    * @param elementSelector element /<br>элемент
@@ -977,13 +978,13 @@ class x {
   }
 }
 export {
-  K as C,
-  x as E,
+  U as C,
+  j as E,
   t as G,
   N as a,
   v as b,
   D as c,
-  U as g,
+  x as g,
   k as i,
   G as r,
   d as t

@@ -1,6 +1,6 @@
 import './M3Image.css';
 import { defineComponent as c, computed as n, openBlock as d, createBlock as l, resolveDynamicComponent as g, unref as u } from "vue";
-import { p as I, I as B } from "./props-Cwuc9rqS.js";
+import { p as I, I as B } from "./props-6vp-GwXa.js";
 const _ = {
   ...I,
   // :prop [!] System label / Системная метка

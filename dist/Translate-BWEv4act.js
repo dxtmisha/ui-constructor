@@ -2,9 +2,10 @@ var l = Object.defineProperty;
 var m = (e, t, s) => t in e ? l(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
 var a = (e, t, s) => (m(e, typeof t != "symbol" ? t + "" : t, s), s);
 import { f } from "./forEach-B1ZDH1yu.js";
-import { u as d, A as o, a as r, G as g, i as p } from "./Api-6wgpqJNV.js";
+import { i as r } from "./transformation-DBtDP1gm.js";
+import { u as d, A as c, G as g, i as p } from "./Api-Bb5FA4L1.js";
 import { t as y } from "./toArray-rswbj5Xf.js";
-class c {
+class o {
   /**
    * Getting the translation text by its code.<br>
    * Получение текста перевода по его коду.
@@ -13,7 +14,7 @@ class c {
   static async get(t) {
     var i;
     const s = this.getName(t);
-    return s in this.data ? this.data[s] : (o.isLocalhost() || await this.add(t), ((i = this.data) == null ? void 0 : i[s]) ?? t);
+    return s in this.data ? this.data[s] : (c.isLocalhost() || await this.add(t), ((i = this.data) == null ? void 0 : i[s]) ?? t);
   }
   /**
    * Getting the translation text by its code (Sync).<br>
@@ -81,7 +82,7 @@ class c {
    */
   static async addNormalOrSync(t) {
     if (r(t))
-      if (o.isLocalhost())
+      if (c.isLocalhost())
         this.addSync(t);
       else {
         const s = Object.keys(t);
@@ -101,7 +102,7 @@ class c {
    * Получение списка переводов с сервера.
    */
   static async getResponse() {
-    const t = o.isLocalhost() ? this.urlLocalhost : this.url, s = await o.response({
+    const t = c.isLocalhost() ? this.urlLocalhost : this.url, s = await c.response({
       path: t,
       request: {
         list: this.cache
@@ -120,7 +121,7 @@ class c {
     }), this.cache = [];
   }
 }
-a(c, "url", d("apiTranslate")), a(c, "urlLocalhost", "translate.json"), a(c, "data", {}), a(c, "cache", []), a(c, "resolveList", []), a(c, "timeout");
+a(o, "url", d("apiTranslate")), a(o, "urlLocalhost", "translate.json"), a(o, "data", {}), a(o, "cache", []), a(o, "resolveList", []), a(o, "timeout");
 export {
-  c as T
+  o as T
 };

@@ -3,12 +3,13 @@ var y = (s, t, e) => t in s ? w(s, t, { enumerable: !0, configurable: !0, writab
 var a = (s, t, e) => (y(s, typeof t != "symbol" ? t + "" : t, e), e);
 import { computed as g, shallowRef as l, watchEffect as f, onUnmounted as k, watch as I, h as S } from "vue";
 import { D as z } from "./DesignConstructorAbstract-ZQD6lBiI.js";
-import { i as d, a as x } from "./Api-6wgpqJNV.js";
-import { D as v, i as C, t as m } from "./toNumber-BeBr0lVX.js";
-import { C as H, G as j, E as W, g as A } from "./EventItem-CT0twIVD.js";
-import { I as b } from "./Icons-CqlWFogF.js";
+import { i as d } from "./Api-Bb5FA4L1.js";
+import { D as v, i as x, t as m } from "./toNumber-BeBr0lVX.js";
+import { C, G as H, E as j, g as W } from "./EventItem-D-yvmy93.js";
+import { I as b } from "./Icons-D5ulKNQM.js";
+import { i as A } from "./transformation-DBtDP1gm.js";
 var n = /* @__PURE__ */ ((s) => (s.file = "file", s.image = "image", s.color = "color", s.public = "public", s.filled = "filled", s.outlined = "outlined", s.round = "round", s.sharp = "sharp", s.twoTone = "two-tone", s.material = "material", s.icon = "icon", s))(n || {});
-class E extends H {
+class E extends C {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -37,7 +38,7 @@ class E extends H {
         return n.file;
       if (t.match(/\//))
         return n.image;
-      if (t.match(j))
+      if (t.match(H))
         return n.icon;
       if (t.match(/^#/))
         return n.color;
@@ -210,7 +211,7 @@ class O {
   is() {
     var e;
     const t = (e = this.props) == null ? void 0 : e.coordinator;
-    return C(t) && t.length > 0 && t.length < 5;
+    return x(t) && t.length > 0 && t.length < 5;
   }
   /**
    * Returns the sizes for the background-position property by coordinates.<br>
@@ -500,7 +501,7 @@ class h {
    * Запускает процесс вычисления или отключает его, если в списке нет активных элементов.
    */
   static make() {
-    this.event && this.objects.length < 1 ? (this.event.stop(), this.event = void 0) : this.objects.length > 0 && (this.event = new W(window, ["scroll-sync"], () => this.start()).start(), this.start());
+    this.event && this.objects.length < 1 ? (this.event.stop(), this.event = void 0) : this.objects.length > 0 && (this.event = new j(window, ["scroll-sync"], () => this.start()).start(), this.start());
   }
   /**
    * Returns a list of elements that are visible or constantly being calculated.<br>
@@ -666,7 +667,7 @@ class G {
    * Возвращает идентификатор элемента.
    */
   getId() {
-    return A(this.element.value);
+    return W(this.element.value);
   }
   /**
    * Returns the current element.<br>
@@ -868,7 +869,7 @@ class N {
   getSizeForItem() {
     var e;
     const t = (e = this.props) == null ? void 0 : e.size;
-    return t && x(t) ? t.toString().match(/%$/) ? this.getSize(t, t) : t.toString() : null;
+    return t && A(t) ? t.toString().match(/%$/) ? this.getSize(t, t) : t.toString() : null;
   }
 }
 let P = class extends v {
@@ -1044,7 +1045,7 @@ class _ {
     this.item.destructor();
   }
 }
-class T extends z {
+class V extends z {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -1137,7 +1138,7 @@ class T extends z {
 }
 const L = {
   adaptiveGroup: "basic"
-}, V = {
+}, tt = {
   // Values
   value: [String, File],
   coordinator: Array,
@@ -1161,6 +1162,6 @@ const L = {
   adaptive: Boolean
 };
 export {
-  T as I,
-  V as p
+  V as I,
+  tt as p
 };
