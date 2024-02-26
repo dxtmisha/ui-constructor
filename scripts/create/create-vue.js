@@ -102,14 +102,16 @@ const initUnlink = () => {
     console.log(`Unlink: ${fileVite}`)
   })
 
-  requireFs.unlink(fileViteLock, error => {
-    if (error) {
-      console.error('[E_L] Error: ', error)
-      return
-    }
+  if (requireFs.existsSync(fileViteLock)) {
+    requireFs.unlink(fileViteLock, error => {
+      if (error) {
+        console.error('[E_L] Error: ', error)
+        return
+      }
 
-    console.log(`Unlink: ${fileViteLock}`)
-  })
+      console.log(`Unlink: ${fileViteLock}`)
+    })
+  }
 
   requireFs.unlink(__filename, error => {
     if (error) {
