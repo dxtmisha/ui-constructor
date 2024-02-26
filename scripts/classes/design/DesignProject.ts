@@ -109,19 +109,20 @@ export class DesignProject {
   private getProjectName (): string {
     const paths = PropertiesFile.splitForDir(__dirname)
     const name = []
+    const root = __dirname.match(/^[a-z]+:\\/i) ? [] : [PropertiesFile.sep()]
     let isName = false
 
     while (paths.length > 0) {
       if (isName) {
         name.unshift(paths.pop())
-      } else if (PropertiesFile.is([PropertiesFile.sep(), ...paths, 'index.php'])) {
+      } else if (PropertiesFile.is([...root, ...paths, 'index.php'])) {
         isName = true
         name.unshift(paths.pop())
       } else {
         paths.pop()
       }
 
-      if (PropertiesFile.is([PropertiesFile.sep(), ...paths, 'ui', 'index.html'])) {
+      if (PropertiesFile.is([...root, ...paths, 'ui', 'index.html'])) {
         break
       }
     }
