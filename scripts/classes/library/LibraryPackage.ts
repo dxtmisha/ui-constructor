@@ -63,7 +63,7 @@ export class LibraryPackage {
     LIBRARY_LIST_FILES.forEach(file => {
       if (file.match(/\.scss$/)) {
         const name = PropertiesFile.parse(file)?.name
-        data[`./${name}.css`] = `./${LIBRARY_DIR}/${name === LIBRARY_STYLE ? LIBRARY_PLUGIN : LIBRARY_PLUGIN_BASIC}.css`
+        data[`./${name}.css`] = `./dist/${name === LIBRARY_STYLE ? LIBRARY_PLUGIN : LIBRARY_PLUGIN_BASIC}.css`
       } else {
         data[`./${file}`] = {
           import: `./dist/${file}.js`,
