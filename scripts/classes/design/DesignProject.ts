@@ -95,6 +95,8 @@ export class DesignProject {
 
     if (paths[length].match('gitignore.txt')) {
       paths[length] = paths[length].replace('gitignore.txt', '.gitignore')
+    } else if (paths[length].match('htaccess.txt')) {
+      paths[length] = paths[length].replace('htaccess.txt', '.htaccess')
     }
 
     return paths
@@ -227,6 +229,16 @@ export class DesignProject {
       PropertiesFile.writeByPath(
         pathIndex,
         fileIndex.replace(/componentName = '[^']+'/, `componentName = '${name}'`)
+      )
+    }
+
+    const pathHtaccess = this.getProjectPath(['htaccess.txt'])
+    const fileHtaccess = PropertiesFile.readFile<string>(pathHtaccess)
+
+    if (fileHtaccess) {
+      PropertiesFile.writeByPath(
+        pathHtaccess,
+        fileHtaccess.replace(/RewriteBase [^ ]+/, `RewriteBase ${name}`)
       )
     }
 

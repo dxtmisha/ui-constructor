@@ -5,7 +5,7 @@ use CCI\Ui\Ui;
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 // Название компонента, не редактировать
-$componentName = '/uiTest/vue/';
+$componentName = 'url';
 
 // Регистрация компонента
 Ui::active();
