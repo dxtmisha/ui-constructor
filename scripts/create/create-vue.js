@@ -116,7 +116,10 @@ const initUnlink = () => {
   }
 
   if (requireFs.existsSync(PROJECT_TEMP)) {
-    requireFs.rmSync(PROJECT_TEMP)
+    requireFs.rmSync(requirePath.resolve(PROJECT_TEMP), {
+      recursive: true,
+      force: true
+    })
   }
 
   requireFs.unlink(__filename, error => {
