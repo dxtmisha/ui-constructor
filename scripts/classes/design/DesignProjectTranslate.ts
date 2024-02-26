@@ -29,7 +29,7 @@ export class DesignProjectTranslate {
         PropertiesFile.writeByPath(
           path,
           read.replace(
-            /(?<=__TRANSLATE_START__)([а-я]+)(?=__TRANSLATE_END__)/ig,
+            /(?<=__TRANSLATE_START__[\s\S]+)([а-я]+)(?=[\s\S]+__TRANSLATE_END__)/ig,
             '-'
           )
         )
