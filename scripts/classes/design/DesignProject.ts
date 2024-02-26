@@ -2,6 +2,7 @@
 
 import { PropertiesFile, type PropertiesFilePath } from '../properties/PropertiesFile'
 import { DesignProjectModule } from './DesignProjectModule'
+import { DesignProjectTranslate } from './DesignProjectTranslate'
 
 export const DIR_TEMPLATE = [__dirname, '..', '..', '..', 'packages']
 export const DIR_PROJECT = ['..']
@@ -56,6 +57,7 @@ export class DesignProject {
       const pathBuild = ['.', '..']
 
       new DesignProjectModule(pathDist).make()
+      new DesignProjectTranslate(pathDist).make()
 
       this.copyBuild(pathDist, pathBuild)
     }
