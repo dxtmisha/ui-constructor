@@ -116,14 +116,7 @@ const initUnlink = () => {
   }
 
   if (requireFs.existsSync(PROJECT_TEMP)) {
-    requireFs.rmSync(PROJECT_TEMP, error => {
-      if (error) {
-        console.error('[E_T] Error: ', error)
-        return
-      }
-
-      console.log(`Unlink: ${PROJECT_TEMP}`)
-    })
+    requireFs.rmSync(PROJECT_TEMP)
   }
 
   requireFs.unlink(__filename, error => {
