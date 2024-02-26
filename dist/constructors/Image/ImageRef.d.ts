@@ -1,6 +1,6 @@
 import { Image } from './Image';
 import { type RefUndefined } from '../../types/ref';
-import { type ConstrStyles } from '../../types/constructor';
+import { ConstrClassObject, type ConstrStyles } from '../../types/constructor';
 import { type ImageProps } from './props';
 import { type ImageElement, type ImageEventItem } from './typesBasic';
 /**
@@ -12,7 +12,7 @@ export declare class ImageRef {
     readonly type: import("vue").ComputedRef<import("./typesBasic").ImageTypeItem>;
     readonly data: import("vue").ShallowRef<ImageEventItem>;
     readonly text: import("vue").ComputedRef<string | undefined>;
-    readonly classes: import("vue").ComputedRef<import("../../types/constructor").ConstrClassObject>;
+    readonly classes: import("vue").ShallowRef<ConstrClassObject | undefined>;
     readonly styles: import("vue").ShallowRef<ConstrStyles | undefined>;
     /**
      * Constructor

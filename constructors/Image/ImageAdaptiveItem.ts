@@ -27,7 +27,7 @@ const GROUP_BASIC = 'main'
  * Значение в пикселях, указывающее, когда элемент считается еще активным,
  * даже если он ушел за экран.
  */
-export const MAX_BEYOND = 256
+export const MAX_BEYOND = 512
 
 /**
  * A class for managing the adapted scaling of a specific element.<br>

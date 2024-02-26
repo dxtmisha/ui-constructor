@@ -33,11 +33,15 @@ export class LibraryFlags {
 
     const imports: string[] = []
     const data: string[] = []
+    const json: string[] = []
 
     list.forEach(flag => {
       const name = toCamelCaseFirst(flag.replace('.', '-'))
+      const key = `flag-${toKebabCase(name.replace('Svg', ''))}`
+
       imports.push(`import ${name} from '../media/flags/${flag}'`)
-      data.push(`  Icons.add('flag-${toKebabCase(name.replace('Svg', ''))}', ${name})`)
+      data.push(`  Icons.add('${key}', ${name})`)
+      json.push(key)
     })
 
     this.items.write(
@@ -51,6 +55,12 @@ export class LibraryFlags {
         ...data,
         '}'
       ]
+    )
+
+    this.items.write(
+      LIBRARY_FLAGS,
+      [JSON.stringify(json)],
+      'json'
     )
   }
 

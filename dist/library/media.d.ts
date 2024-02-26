@@ -1,1 +1,1 @@
-export declare const makeMedia: () => Promise<void>;
+export declare const makeMedia: () => void;

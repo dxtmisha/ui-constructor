@@ -13,7 +13,7 @@ import {
   LIBRARY_TRANSLATE,
   LIBRARY_TYPES
 } from '../../config/library'
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
 
 export class LibraryPlugin {
   /**
@@ -73,6 +73,7 @@ export class LibraryPlugin {
             'import { type App } from \'vue\'',
             '',
             `import { ${components} } from './${path}'`,
+            `import { makeMedia } from './${LIBRARY_MEDIA}'`,
             `import { ${translate} } from './${LIBRARY_TRANSLATE}'`,
             '',
             'import { type ConstrRegistration } from \'../types/constructor\'',
@@ -81,7 +82,7 @@ export class LibraryPlugin {
             `import './${LIBRARY_TYPES}.d.ts'`,
             '',
             `export const ${name} = async (app: App, options?: ConstrRegistration): Promise<App> => {`,
-            `  await (await import('./${LIBRARY_MEDIA}')).makeMedia()`,
+            '  makeMedia()',
             '',
             '  if (options) {',
             '    if (options?.translate) {',

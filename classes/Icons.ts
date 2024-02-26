@@ -6,6 +6,9 @@ import { useEnv } from '../composables/useEnv'
 
 export type IconsItem = string | Promise<string | any>
 
+export const ICONS_WAIT = 320
+export const ICONS_LOAD = '--LOAD--'
+
 /**
  * Class for managing icons.<br>
  * Класс для управления иконками.
@@ -40,13 +43,26 @@ export class Icons {
    * @param index icon name /<br>название иконки
    * @param url path to the storage location of the icon, if the icon does not exist /<br>
    * путь к месту хранения иконки, если иконка не существует
+   * @param wait waiting time for picture loading <br>время ожидания загрузки картинки
    */
-  static async get (index: string, url = ''): Promise<string> {
+  static async get (
+    index: string,
+    url = '',
+    wait: number = 1000 * 60 * 3
+  ): Promise<string> {
     const icon = this.icons?.[this.getName(index)] ??
       this.icons?.[index] ??
       `${index.replace(/^@/, url ?? this.url)}.svg`
 
     if (typeof icon === 'string') {
+      if (
+        icon === ICONS_LOAD &&
+        wait > 0
+      ) {
+        await this.wait()
+        return this.get(index, url, wait - ICONS_WAIT)
+      }
+
       return icon
     }
 
@@ -71,6 +87,15 @@ export class Icons {
    */
   static add (index: string, file: IconsItem): void {
     this.icons[this.getName(index)] = file
+  }
+
+  /**
+   * Adding custom icons in loading mode.<br>
+   * Добавление пользовательских иконок в режиме загрузки.
+   * @param index icon name /<br>название иконки
+   */
+  static addLoad (index: string): void {
+    this.icons[this.getName(index)] = ICONS_LOAD
   }
 
   /**
@@ -99,5 +124,9 @@ export class Icons {
    */
   protected static getName (index: string): string {
     return `@${index}`
+  }
+
+  protected static wait (): Promise<void> {
+    return new Promise(resolve => setTimeout(() => resolve(), ICONS_WAIT))
   }
 }

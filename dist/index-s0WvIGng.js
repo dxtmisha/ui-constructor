@@ -7,7 +7,7 @@ import { i as ct, c as T, D as Y, a as R, G as A, A as ve, b as ye } from "./Api
 import { c as _e, g as be, s as Ee } from "./createElement-C7okUM5s.js";
 import { e as De } from "./eventStopPropagation-fHm2p5BF.js";
 import { e as K, i as Oe } from "./executeFunction-B6By_8Og.js";
-import { K as rt, c as j, t as Ft, M as we, a as Me, g as Ce, d as Ae } from "./MutationDataItem-CCjAUy7V.js";
+import { K as rt, c as j, t as Ft, M as we, a as Ce, g as Me, d as Ae } from "./MutationDataItem-CCjAUy7V.js";
 import { g as Ne, i as Se } from "./getElement-BhVCn14C.js";
 import { g as xe, r as Ie } from "./getElementId-Dv5cOpg7.js";
 import { C as Vt, t as $, a as mt, E as Gt, b as Pt, G as Le, g as Te, i as ke } from "./EventItem-BiWzkDiN.js";
@@ -17,11 +17,11 @@ import { g as m, a as Be, D as Re, b as We, c as He, i as Ue, r as Ye, t as Ke }
 import { computed as h, isRef as Qe, ref as vt, inject as ze, watch as _, effectScope as Je, reactive as qe, createApp as Xe, triggerRef as Ze, shallowRef as V, watchEffect as tr } from "vue";
 import { g as Bt } from "./getBind-BTtwgl8A.js";
 import { t as er } from "./toArray-rswbj5Xf.js";
-import { I as rr } from "./Icons-BOdC4Ie-.js";
+import { a as rr, b as ir, I as nr } from "./Icons-0QBibBHo.js";
 import { T as W } from "./Translate-Brfdat4q.js";
-import { M as ir, a as nr, b as sr, c as or } from "./Mutation-BwhPgSpu.js";
-import { createRouter as ar } from "vue-router";
-function ur(e) {
+import { M as sr, a as or, b as ar, c as ur } from "./Mutation-BwhPgSpu.js";
+import { createRouter as cr } from "vue-router";
+function lr(e) {
   return jt(e) ? e : y(e) ? JSON.stringify(e) : (e == null ? void 0 : e.toString()) ?? "";
 }
 function Rt(e, t) {
@@ -32,28 +32,28 @@ function Wt(e, t, r) {
     e(), t != null && t() ? Wt(e, t, r) : r == null || r();
   });
 }
-async function cr(e) {
+async function hr(e) {
   var t;
   return ((t = e == null ? void 0 : e.clipboardData) == null ? void 0 : t.getData("text")) ?? (await navigator.clipboard.readText() || "");
 }
-function lr(e, t) {
+function fr(e, t) {
   return E(e, (r) => r == null ? void 0 : r[t]);
 }
 function Ht(e, t = "ig", r = ":value") {
   const i = e.replace(/([[\]\\^$.?*+()])/g, "\\$1");
   return new RegExp(r.replaceAll(":value", i), t);
 }
-function hr(e) {
+function dr(e) {
   var t;
   return (e == null ? void 0 : e.key) ?? (e == null ? void 0 : e.code) ?? ((t = e == null ? void 0 : e.keyCode) == null ? void 0 : t.toString());
 }
 function yt(e) {
   return E(e, (t) => t.length);
 }
-function fr(e) {
+function gr(e) {
   return Math.max(...yt(e));
 }
-function dr(e) {
+function pr(e) {
   return Math.min(...yt(e));
 }
 function Ut(e) {
@@ -64,32 +64,32 @@ function Yt(e) {
   var t, r;
   return (e == null ? void 0 : e.clientY) || ((t = e == null ? void 0 : e.targetTouches) == null ? void 0 : t[0].clientY) || ((r = e == null ? void 0 : e.touches) == null ? void 0 : r[0].clientY) || 0;
 }
-function gr(e) {
+function mr(e) {
   return {
     x: Ut(e),
     y: Yt(e)
   };
 }
-function pr(e, t) {
+function vr(e, t) {
   const r = {};
   return y(e) && y(t) && E(e, (i, n) => {
     n in t && (r[n] = i);
   }), r;
 }
-function mr(e, t) {
+function yr(e, t) {
   let r = Object.keys(e).length !== Object.keys(t).length;
   return r || E(e, (i, n) => {
     i !== (t == null ? void 0 : t[n]) && (r = !0);
   }), r;
 }
-function vr(e, t) {
+function _r(e, t) {
   const r = Math.floor(t);
   return e >= r && e < r + 1;
 }
-function yr(e, t) {
+function br(e, t) {
   return Array.isArray(e) ? e.every((r) => ct(r, t)) : ct(e, t);
 }
-function _r(e, t = {}, r = "value") {
+function Er(e, t = {}, r = "value") {
   return h(() => Bt(e == null ? void 0 : e.value, m(t), r));
 }
 function w(e) {
@@ -112,13 +112,13 @@ function L(e, t, r = !0) {
     }
   ), i;
 }
-function br(e, t) {
+function Dr(e, t) {
   let r = e;
   return E(t, (i, n) => {
     r = r.replace(Ht(`[${n}]`), K(i));
   }), r;
 }
-function Er(e, t, r) {
+function Or(e, t, r) {
   if (y(e) && y(t)) {
     if (r) {
       let i = {}, n = !1;
@@ -131,7 +131,7 @@ function Er(e, t, r) {
   }
   return T(e);
 }
-function Dr(e, t) {
+function wr(e, t) {
   return Rt(e, t).join("");
 }
 class Qt {
@@ -182,7 +182,7 @@ const U = class U {
 };
 d(U, "cache"), U.cache = new Qt();
 let lt = U;
-const Or = "cookie-block";
+const Cr = "cookie-block";
 class _t {
   /**
    * Obtaining status.<br>
@@ -200,7 +200,7 @@ class _t {
     this.storage.set(t);
   }
 }
-d(_t, "storage", new Y(Or));
+d(_t, "storage", new Y(Cr));
 const P = {};
 class zt {
   constructor(t) {
@@ -850,7 +850,7 @@ class Q {
     ), this;
   }
 }
-const C = class C {
+const M = class M {
   /**
    * Get data from hash.<br>
    * Получение данных из хэша.
@@ -927,24 +927,24 @@ const C = class C {
     });
   }
 };
-d(C, "hash", {}), d(C, "watch", {}), d(C, "block", !1), R() && (C.reload(), addEventListener("hashchange", () => C.reload()));
-let k = C;
-function wr() {
+d(M, "hash", {}), d(M, "watch", {}), d(M, "block", !1), R() && (M.reload(), addEventListener("hashchange", () => M.reload()));
+let k = M;
+function Mr() {
   return Jt().__VUE_DEVTOOLS_GLOBAL_HOOK__;
 }
 function Jt() {
   return typeof navigator < "u" && typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : {};
 }
-const Mr = typeof Proxy == "function", Cr = "devtools-plugin:setup", Ar = "plugin:settings:set";
+const Ar = typeof Proxy == "function", Nr = "devtools-plugin:setup", Sr = "plugin:settings:set";
 let x, ht;
-function Nr() {
+function xr() {
   var e;
   return x !== void 0 || (typeof window < "u" && window.performance ? (x = !0, ht = window.performance) : typeof globalThis < "u" && (!((e = globalThis.perf_hooks) === null || e === void 0) && e.performance) ? (x = !0, ht = globalThis.perf_hooks.performance) : x = !1), x;
 }
-function Sr() {
-  return Nr() ? ht.now() : Date.now();
+function Ir() {
+  return xr() ? ht.now() : Date.now();
 }
-class xr {
+class Lr {
   constructor(t, r) {
     this.target = null, this.targetQueue = [], this.onQueue = [], this.plugin = t, this.hook = r;
     const i = {};
@@ -972,9 +972,9 @@ class xr {
         s = o;
       },
       now() {
-        return Sr();
+        return Ir();
       }
-    }, r && r.on(Ar, (o, a) => {
+    }, r && r.on(Sr, (o, a) => {
       o === this.plugin.id && this.fallbacks.setSettings(a);
     }), this.proxiedOn = new Proxy({}, {
       get: (o, a) => this.target ? this.target.on[a] : (...u) => {
@@ -1006,12 +1006,12 @@ class xr {
       r.resolve(await this.target[r.method](...r.args));
   }
 }
-function Ir(e, t) {
-  const r = e, i = Jt(), n = wr(), s = Mr && r.enableEarlyProxy;
+function Tr(e, t) {
+  const r = e, i = Jt(), n = Mr(), s = Ar && r.enableEarlyProxy;
   if (n && (i.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !s))
-    n.emit(Cr, e, t);
+    n.emit(Nr, e, t);
   else {
-    const o = s ? new xr(r, n) : null;
+    const o = s ? new Lr(r, n) : null;
     (i.__VUE_DEVTOOLS_PLUGINS__ = i.__VUE_DEVTOOLS_PLUGINS__ || []).push({
       pluginDescriptor: r,
       setupFn: t,
@@ -1028,13 +1028,13 @@ var z = "store";
 function qt(e) {
   return e === void 0 && (e = null), ze(e !== null ? e : z);
 }
-function Lr(e, t) {
+function kr(e, t) {
   return e.filter(t)[0];
 }
 function ft(e, t) {
   if (t === void 0 && (t = []), e === null || typeof e != "object")
     return e;
-  var r = Lr(t, function(n) {
+  var r = kr(t, function(n) {
     return n.original === e;
   });
   if (r)
@@ -1055,14 +1055,14 @@ function N(e, t) {
 function Xt(e) {
   return e !== null && typeof e == "object";
 }
-function Tr(e) {
+function jr(e) {
   return e && typeof e.then == "function";
 }
 function D(e, t) {
   if (!e)
     throw new Error("[vuex] " + t);
 }
-function kr(e, t) {
+function $r(e, t) {
   return function() {
     return e(t);
   };
@@ -1084,7 +1084,7 @@ function bt(e, t, r) {
   var s = e._wrappedGetters, o = {}, a = {}, u = Je(!0);
   u.run(function() {
     N(s, function(l, c) {
-      o[c] = kr(l, e), a[c] = h(function() {
+      o[c] = $r(l, e), a[c] = h(function() {
         return o[c]();
       }), Object.defineProperty(e.getters, c, {
         get: function() {
@@ -1096,7 +1096,7 @@ function bt(e, t, r) {
     });
   }), e._state = qe({
     data: t
-  }), e._scope = u, e.strict && Gr(e), i && r && e._withCommit(function() {
+  }), e._scope = u, e.strict && Br(e), i && r && e._withCommit(function() {
     i.data = null;
   }), n && n.stop();
 }
@@ -1110,21 +1110,21 @@ function J(e, t, r, i, n) {
       ), a[u] = i.state;
     });
   }
-  var l = i.context = jr(e, o, r);
+  var l = i.context = Fr(e, o, r);
   i.forEachMutation(function(c, f) {
     var g = o + f;
-    $r(e, g, c, l);
+    Vr(e, g, c, l);
   }), i.forEachAction(function(c, f) {
     var g = c.root ? f : o + f, p = c.handler || c;
-    Fr(e, g, p, l);
+    Gr(e, g, p, l);
   }), i.forEachGetter(function(c, f) {
     var g = o + f;
-    Vr(e, g, c, l);
+    Pr(e, g, c, l);
   }), i.forEachChild(function(c, f) {
     J(e, t, r.concat(f), c, n);
   });
 }
-function jr(e, t, r) {
+function Fr(e, t, r) {
   var i = t === "", n = {
     dispatch: i ? e.dispatch : function(s, o, a) {
       var u = H(s, o, a), l = u.payload, c = u.options, f = u.type;
@@ -1175,13 +1175,13 @@ function ee(e, t) {
   }
   return e._makeLocalGettersCache[t];
 }
-function $r(e, t, r, i) {
+function Vr(e, t, r, i) {
   var n = e._mutations[t] || (e._mutations[t] = []);
   n.push(function(o) {
     r.call(e, i.state, o);
   });
 }
-function Fr(e, t, r, i) {
+function Gr(e, t, r, i) {
   var n = e._actions[t] || (e._actions[t] = []);
   n.push(function(o) {
     var a = r.call(e, {
@@ -1192,12 +1192,12 @@ function Fr(e, t, r, i) {
       rootGetters: e.getters,
       rootState: e.state
     }, o);
-    return Tr(a) || (a = Promise.resolve(a)), e._devtoolHook ? a.catch(function(u) {
+    return jr(a) || (a = Promise.resolve(a)), e._devtoolHook ? a.catch(function(u) {
       throw e._devtoolHook.emit("vuex:error", u), u;
     }) : a;
   });
 }
-function Vr(e, t, r, i) {
+function Pr(e, t, r, i) {
   if (e._wrappedGetters[t]) {
     process.env.NODE_ENV !== "production" && console.error("[vuex] duplicate getter key: " + t);
     return;
@@ -1215,7 +1215,7 @@ function Vr(e, t, r, i) {
     );
   };
 }
-function Gr(e) {
+function Br(e) {
   _(function() {
     return e._state.data;
   }, function() {
@@ -1230,9 +1230,9 @@ function Et(e, t) {
 function H(e, t, r) {
   return Xt(e) && e.type && (r = t, t = e, e = e.type), process.env.NODE_ENV !== "production" && D(typeof e == "string", "expects string as the type, but found " + typeof e + "."), { type: e, payload: t, options: r };
 }
-var Pr = "vuex bindings", Nt = "vuex:mutations", nt = "vuex:actions", I = "vuex", Br = 0;
-function Rr(e, t) {
-  Ir(
+var Rr = "vuex bindings", Nt = "vuex:mutations", nt = "vuex:actions", I = "vuex", Wr = 0;
+function Hr(e, t) {
+  Tr(
     {
       id: "org.vuejs.vuex",
       app: e,
@@ -1240,7 +1240,7 @@ function Rr(e, t) {
       homepage: "https://next.vuex.vuejs.org/",
       logo: "https://vuejs.org/images/icons/favicon-96x96.png",
       packageName: "vuex",
-      componentStateTypes: [Pr]
+      componentStateTypes: [Rr]
     },
     function(r) {
       r.addTimelineLayer({
@@ -1268,8 +1268,8 @@ function Rr(e, t) {
       }), r.on.getInspectorState(function(i) {
         if (i.app === e && i.inspectorId === I) {
           var n = i.nodeId;
-          ee(t, n), i.state = Ur(
-            Kr(t._modules, n),
+          ee(t, n), i.state = Kr(
+            zr(t._modules, n),
             n === "root" ? t.getters : t._makeLocalGettersCache,
             n
           );
@@ -1294,7 +1294,7 @@ function Rr(e, t) {
       }), t.subscribeAction({
         before: function(i, n) {
           var s = {};
-          i.payload && (s.payload = i.payload), i._id = Br++, i._time = Date.now(), s.state = n, r.addTimelineEvent({
+          i.payload && (s.payload = i.payload), i._id = Wr++, i._time = Date.now(), s.state = n, r.addTimelineEvent({
             layerId: nt,
             event: {
               time: i._time,
@@ -1329,10 +1329,10 @@ function Rr(e, t) {
     }
   );
 }
-var St = 8702998, Wr = 6710886, Hr = 16777215, re = {
+var St = 8702998, Ur = 6710886, Yr = 16777215, re = {
   label: "namespaced",
-  textColor: Hr,
-  backgroundColor: Wr
+  textColor: Yr,
+  backgroundColor: Ur
 };
 function ie(e) {
   return e && e !== "root" ? e.split("/").slice(-2, -1)[0] : "Root";
@@ -1364,7 +1364,7 @@ function se(e, t, r, i) {
     se(e, t._children[n], r, i + n + "/");
   });
 }
-function Ur(e, t, r) {
+function Kr(e, t, r) {
   t = r === "root" ? t : t[r];
   var i = Object.keys(t), n = {
     state: Object.keys(e.state).map(function(o) {
@@ -1376,7 +1376,7 @@ function Ur(e, t, r) {
     })
   };
   if (i.length) {
-    var s = Yr(t);
+    var s = Qr(t);
     n.getters = Object.keys(s).map(function(o) {
       return {
         key: o.endsWith("/") ? ie(o) : o,
@@ -1389,7 +1389,7 @@ function Ur(e, t, r) {
   }
   return n;
 }
-function Yr(e) {
+function Qr(e) {
   var t = {};
   return Object.keys(e).forEach(function(r) {
     var i = r.split("/");
@@ -1413,7 +1413,7 @@ function Yr(e) {
       });
   }), t;
 }
-function Kr(e, t) {
+function zr(e, t) {
   var r = t.split("/").filter(function(i) {
     return i;
   });
@@ -1536,7 +1536,7 @@ var xt = {
     return typeof e == "function";
   },
   expected: "function"
-}, Qr = {
+}, Jr = {
   assert: function(e) {
     return typeof e == "function" || typeof e == "object" && typeof e.handler == "function";
   },
@@ -1544,7 +1544,7 @@ var xt = {
 }, It = {
   getters: xt,
   mutations: xt,
-  actions: Qr
+  actions: Jr
 };
 function ue(e, t) {
   Object.keys(It).forEach(function(r) {
@@ -1553,13 +1553,13 @@ function ue(e, t) {
       N(t[r], function(n, s) {
         D(
           i.assert(n),
-          zr(e, r, s, n, i.expected)
+          qr(e, r, s, n, i.expected)
         );
       });
     }
   });
 }
-function zr(e, t, r, i, n) {
+function qr(e, t, r, i, n) {
   var s = t + " should be " + n + ' but "' + t + "." + r + '"';
   return e.length > 0 && (s += ' in module "' + e.join(".") + '"'), s += " is " + JSON.stringify(i) + ".", s;
 }
@@ -1578,8 +1578,8 @@ var v = function e(t) {
   var o = this, a = this, u = a.dispatch, l = a.commit;
   this.dispatch = function(g, p) {
     return u.call(o, g, p);
-  }, this.commit = function(g, p, M) {
-    return l.call(o, g, p, M);
+  }, this.commit = function(g, p, C) {
+    return l.call(o, g, p, C);
   }, this.strict = n;
   var c = this._modules.root.state;
   J(this, c, [], this._modules.root), bt(this, c), i.forEach(function(f) {
@@ -1589,7 +1589,7 @@ var v = function e(t) {
 v.prototype.install = function(t, r) {
   t.provide(r || z, this), t.config.globalProperties.$store = this;
   var i = this._devtools !== void 0 ? this._devtools : process.env.NODE_ENV !== "production" || !1;
-  i && Rr(t, this);
+  i && Hr(t, this);
 };
 Ot.state.get = function() {
   return this._state.data;
@@ -1712,7 +1712,7 @@ var wt = X(function(e, t) {
       return typeof s == "function" ? s.call(this, a, u) : a[s];
     }, r[n].vuex = !0;
   }), r;
-}), Mt = X(function(e, t) {
+}), Ct = X(function(e, t) {
   var r = {};
   return process.env.NODE_ENV !== "production" && !G(t) && console.error("[vuex] mapMutations: mapper parameter must be either an Array or an Object"), q(t).forEach(function(i) {
     var n = i.key, s = i.val;
@@ -1729,7 +1729,7 @@ var wt = X(function(e, t) {
       return typeof s == "function" ? s.apply(this, [l].concat(a)) : l.apply(this.$store, [s].concat(a));
     };
   }), r;
-}), Ct = X(function(e, t) {
+}), Mt = X(function(e, t) {
   var r = {};
   return process.env.NODE_ENV !== "production" && !G(t) && console.error("[vuex] mapGetters: mapper parameter must be either an Array or an Object"), q(t).forEach(function(i) {
     var n = i.key, s = i.val;
@@ -1763,8 +1763,8 @@ var wt = X(function(e, t) {
 }), ce = function(e) {
   return {
     mapState: wt.bind(null, e),
-    mapGetters: Ct.bind(null, e),
-    mapMutations: Mt.bind(null, e),
+    mapGetters: Mt.bind(null, e),
+    mapMutations: Ct.bind(null, e),
     mapActions: At.bind(null, e)
   };
 };
@@ -1819,15 +1819,15 @@ function le(e) {
   return l === void 0 && (l = console), function(c) {
     var f = ft(c.state);
     typeof l > "u" || (a && c.subscribe(function(g, p) {
-      var M = ft(p);
-      if (r(g, f, M)) {
+      var C = ft(p);
+      if (r(g, f, C)) {
         var tt = kt(), et = n(g), fe = "mutation " + g.type + tt;
-        Lt(l, fe, t), l.log("%c prev state", "color: #9E9E9E; font-weight: bold", i(f)), l.log("%c mutation", "color: #03A9F4; font-weight: bold", et), l.log("%c next state", "color: #4CAF50; font-weight: bold", i(M)), Tt(l);
+        Lt(l, fe, t), l.log("%c prev state", "color: #9E9E9E; font-weight: bold", i(f)), l.log("%c mutation", "color: #03A9F4; font-weight: bold", et), l.log("%c next state", "color: #4CAF50; font-weight: bold", i(C)), Tt(l);
       }
-      f = M;
+      f = C;
     }), u && c.subscribeAction(function(g, p) {
       if (s(g, p)) {
-        var M = kt(), tt = o(g), et = "action " + g.type + M;
+        var C = kt(), tt = o(g), et = "action " + g.type + C;
         Lt(l, et, t), l.log("%c action", "color: #03A9F4; font-weight: bold", tt), Tt(l);
       }
     }));
@@ -1852,40 +1852,40 @@ function kt() {
   var e = /* @__PURE__ */ new Date();
   return " @ " + B(e.getHours(), 2) + ":" + B(e.getMinutes(), 2) + ":" + B(e.getSeconds(), 2) + "." + B(e.getMilliseconds(), 3);
 }
-function Jr(e, t) {
+function Xr(e, t) {
   return new Array(t + 1).join(e);
 }
 function B(e, t) {
-  return Jr("0", t - e.toString().length) + e;
+  return Xr("0", t - e.toString().length) + e;
 }
-var qr = {
+var Zr = {
   version: "4.1.0",
   Store: v,
   storeKey: z,
   createStore: Dt,
   useStore: qt,
   mapState: wt,
-  mapMutations: Mt,
-  mapGetters: Ct,
+  mapMutations: Ct,
+  mapGetters: Mt,
   mapActions: At,
   createNamespacedHelpers: ce,
   createLogger: le
 };
-const Si = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Ii = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Store: v,
   createLogger: le,
   createNamespacedHelpers: ce,
   createStore: Dt,
-  default: qr,
+  default: Zr,
   mapActions: At,
-  mapGetters: Ct,
-  mapMutations: Mt,
+  mapGetters: Mt,
+  mapMutations: Ct,
   mapState: wt,
   storeKey: z,
   useStore: qt
 }, Symbol.toStringTag, { value: "Module" }));
-class Xr {
+class ti {
   /**
    * Adding a new component or project to the cache.<br>
    * Добавление в кеш нового компонента или проекта.
@@ -1945,7 +1945,7 @@ class Xr {
    * @param router data for Router /<br>данные для Router
    */
   static createRouter(t) {
-    return ar(t);
+    return cr(t);
   }
   /**
    * Creates data for Store.<br>
@@ -1956,7 +1956,7 @@ class Xr {
     return Dt(t);
   }
 }
-class Zr {
+class ei {
   /**
    * Constructor
    * @param date date for processing /<br>дата для обработки
@@ -2087,7 +2087,7 @@ class Zr {
     return h(() => this.date.value && this.datetime.standard(t));
   }
 }
-class ti extends Gt {
+class ri extends Gt {
   /**
    * Classes Constructor
    * @param elementSelector element /<br>элемент
@@ -2111,7 +2111,7 @@ class ti extends Gt {
     ), u.value && this.setElementControl(u.value), _(a, (l) => this.setElement(l)), _(u, (l) => this.setElementControl(l));
   }
 }
-class ei {
+class ii {
   /**
    * Constructor
    * @param code country and language code /<br>код страны и языка
@@ -2212,7 +2212,7 @@ const b = class b {
 };
 d(b, "item", V(A.get())), d(b, "country", h(() => b.item.value.country)), d(b, "language", h(() => b.item.value.language)), d(b, "standard", h(() => b.item.value.standard)), d(b, "firstDay", h(() => b.item.value.firstDay));
 let F = b;
-class ri {
+class ni {
   /**
    * Constructor
    * @param code country code, full form language-country or one of them /<br>
@@ -2402,7 +2402,7 @@ class ri {
     return h(() => this.intl.value.time(m(t)));
   }
 }
-function ii(e, t, r) {
+function si(e, t, r) {
   if (e in st)
     return st[e];
   const i = new zt(e), n = vt(i.get(t, r));
@@ -2411,7 +2411,7 @@ function ii(e, t, r) {
   }), st[e] = n, n;
 }
 const st = {};
-function ni(e, t) {
+function oi(e, t) {
   if (e in ot)
     return ot[e];
   const r = V(k.get(e, t));
@@ -2420,14 +2420,14 @@ function ni(e, t) {
   }), ot[e] = r, r;
 }
 const ot = {};
-function si(e, t) {
+function ai(e, t) {
   if (e in at)
     return at[e];
   const r = new Y(e, !0), i = V(r.get(t));
   return _(i, (n) => r.set(n)), at[e] = i, i;
 }
 const at = {};
-function oi(e, t, r) {
+function ui(e, t, r) {
   if (e in ut)
     return ut[e];
   const i = new Y(e), n = V(i.get(t, r));
@@ -2440,7 +2440,7 @@ function he(e) {
     F.getLanguage() && (t.value = { ...await W.getList(e) });
   }), t;
 }
-const ai = (e) => he(e), xi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const ci = (e) => he(e), Li = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Api: ve,
   ApiMethodItem: ye,
@@ -2451,7 +2451,7 @@ const ai = (e) => he(e), xi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   CookieBlock: _t,
   DataStorage: Y,
   Datetime: Q,
-  DatetimeRef: Zr,
+  DatetimeRef: ei,
   DesignAbstract: $e,
   DesignAsyncAbstract: Fe,
   DesignChanged: Ve,
@@ -2459,26 +2459,28 @@ const ai = (e) => he(e), xi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   DesignConstructorAbstract: Re,
   Env: pe,
   EventItem: Gt,
-  EventRef: ti,
+  EventRef: ri,
   GEO_FLAG_ICON_NAME: Le,
   Geo: A,
   GeoFlag: Pt,
-  GeoFlagRef: ei,
+  GeoFlagRef: ii,
   GeoIntl: mt,
-  GeoIntlRef: ri,
+  GeoIntlRef: ni,
   GeoRef: F,
   Hash: k,
-  Icons: rr,
-  Mutation: ir,
+  ICONS_LOAD: rr,
+  ICONS_WAIT: ir,
+  Icons: nr,
+  Mutation: sr,
   MutationCollect: we,
-  MutationData: nr,
-  MutationDataItem: Me,
+  MutationData: or,
+  MutationDataItem: Ce,
   MutationGlobal: j,
-  MutationGlobalRef: Xr,
-  MutationObserverGlobal: sr,
-  MutationObserverItems: or,
+  MutationGlobalRef: ti,
+  MutationObserverGlobal: ar,
+  MutationObserverItems: ur,
   Translate: W,
-  anyToString: ur,
+  anyToString: lr,
   arrFill: Rt,
   copyObject: T,
   createElement: _e,
@@ -2486,50 +2488,50 @@ const ai = (e) => he(e), xi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   executeFunction: K,
   forEach: E,
   frame: Wt,
-  getAttributes: Ce,
+  getAttributes: Me,
   getBind: Bt,
-  getBindRef: _r,
+  getBindRef: Er,
   getClassName: We,
-  getClipboardData: cr,
-  getColumn: lr,
+  getClipboardData: hr,
+  getColumn: fr,
   getElement: Ne,
   getElementId: xe,
   getElementItem: be,
   getElementOrWindow: Te,
   getExp: Ht,
   getIndexForRender: He,
-  getKey: hr,
+  getKey: dr,
   getLengthOfAllArray: yt,
-  getMaxLengthAllArray: fr,
-  getMinLengthAllArray: dr,
-  getMouseClient: gr,
+  getMaxLengthAllArray: gr,
+  getMinLengthAllArray: pr,
+  getMouseClient: mr,
   getMouseClientX: Ut,
   getMouseClientY: Yt,
   getRef: m,
   inArray: je,
-  intersectKey: pr,
+  intersectKey: vr,
   isArray: Ge,
-  isDifferent: mr,
+  isDifferent: yr,
   isDomRuntime: R,
   isFilled: gt,
   isFunction: Oe,
   isInDom: ke,
-  isIntegerBetween: vr,
+  isIntegerBetween: _r,
   isNull: me,
   isObject: y,
   isObjectNotArray: Ue,
   isSelected: ct,
-  isSelectedByList: yr,
+  isSelectedByList: br,
   isString: jt,
   isWindow: Se,
   random: Ie,
   render: Ye,
   replaceRecursive: L,
-  replaceTemplate: br,
+  replaceTemplate: Dr,
   setElementItem: Ee,
-  splice: Er,
-  strFill: Dr,
-  t: ai,
+  splice: Or,
+  strFill: wr,
+  t: ci,
   toArray: er,
   toCamelCase: Ke,
   toCamelCaseFirst: Ft,
@@ -2539,11 +2541,11 @@ const ai = (e) => he(e), xi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obje
   toRefItem: w,
   transformation: pt,
   uniqueArray: Kt,
-  useCookieRef: ii,
+  useCookieRef: si,
   useEnv: $t,
-  useHashRef: ni,
-  useSessionRef: si,
-  useStorageRef: oi,
+  useHashRef: oi,
+  useSessionRef: ai,
+  useStorageRef: ui,
   useTranslateRef: he
 }, Symbol.toStringTag, { value: "Module" }));
 export {
@@ -2552,43 +2554,43 @@ export {
   Qt as C,
   _t as D,
   Q as E,
-  Zr as F,
-  ti as G,
+  ei as F,
+  ri as G,
   k as H,
-  ei as I,
-  ri as J,
+  ii as I,
+  ni as J,
   F as K,
-  ii as L,
-  Xr as M,
-  ni as N,
-  si as O,
-  oi as P,
+  si as L,
+  ti as M,
+  oi as N,
+  ai as O,
+  ui as P,
   he as Q,
-  ai as R,
-  ur as a,
+  ci as R,
+  lr as a,
   Rt as b,
-  lr as c,
+  fr as c,
   Ht as d,
-  hr as e,
+  dr as e,
   Wt as f,
-  cr as g,
+  hr as g,
   yt as h,
-  fr as i,
-  dr as j,
-  gr as k,
+  gr as i,
+  pr as j,
+  mr as k,
   Ut as l,
   Yt as m,
-  pr as n,
-  mr as o,
-  vr as p,
-  yr as q,
-  _r as r,
+  vr as n,
+  yr as o,
+  _r as p,
+  br as q,
+  Er as r,
   L as s,
   w as t,
-  xi as u,
-  Si as v,
-  br as w,
-  Er as x,
-  Dr as y,
+  Li as u,
+  Ii as v,
+  Dr as w,
+  Or as x,
+  wr as y,
   Kt as z
 };

@@ -1,9 +1,12 @@
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
+
 import { LibraryItems } from './LibraryItems'
 
 import {
   LIBRARY_INDEX,
   LIBRARY_MAIN,
-  LIBRARY_PLUGIN
+  LIBRARY_MEDIA,
+  LIBRARY_PLUGIN_BASIC
 } from '../../config/library'
 
 /**
@@ -27,6 +30,8 @@ export class LibraryMain {
    */
   make (): this {
     const name = this.items.getGlobalName()
+    const registrationName = `registration${toCamelCaseFirst(name)}${toCamelCaseFirst(LIBRARY_MAIN)}`
+    const registrationBasic = `registration${toCamelCaseFirst(name)}Basic`
 
     this.items.write(
       LIBRARY_MAIN,
@@ -35,6 +40,8 @@ export class LibraryMain {
         'import { MutationGlobalRef } from \'./../classes/mutation/MutationGlobalRef\'',
         '',
         'import { components } from \'./components\'',
+        `import { makeMedia } from './${LIBRARY_MEDIA}'`,
+        `import { ${registrationBasic} } from './${LIBRARY_PLUGIN_BASIC}'`,
         '',
         'import * as vue from \'vue\'',
         'import * as vueRouter from \'vue-router\'',
@@ -51,8 +58,10 @@ export class LibraryMain {
         `;(window as any).${name}_CORE_VUEX = vuex`,
         `;(window as any).${name}_CORE_UI = ui`,
         '',
+        'makeMedia()',
+        '',
         `export * from './${LIBRARY_INDEX}'`,
-        `export * from './${LIBRARY_PLUGIN}'`
+        `export const ${registrationName} = ${registrationBasic}`
       ]
     )
 

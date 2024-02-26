@@ -4,6 +4,7 @@ import { Image } from './Image'
 
 import { type RefUndefined } from '../../types/ref'
 import {
+  ConstrClassObject,
   type ConstrStyles
 } from '../../types/constructor'
 import { type ImageProps } from './props'
@@ -24,7 +25,7 @@ export class ImageRef {
   readonly data = shallowRef<ImageEventItem>()
 
   readonly text = computed(() => this.item.getText())
-  readonly classes = computed(() => this.item.getClasses())
+  readonly classes = shallowRef<ConstrClassObject>()
   readonly styles = shallowRef<ConstrStyles>()
 
   /**
@@ -41,9 +42,12 @@ export class ImageRef {
       element,
       (event: ImageEventLoad) => {
         this.data.value = event.image
+        this.classes.value = this.item.getClasses()
         this.styles.value = event.styles
       }
     )
+
+    this.classes.value = this.item.getClasses()
 
     watchEffect(() => this.item.data.make(true))
     watchEffect(() => this.item.updateAdaptive())

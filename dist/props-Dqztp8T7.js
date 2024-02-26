@@ -1,15 +1,15 @@
 var w = Object.defineProperty;
 var y = (s, t, e) => t in s ? w(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
 var a = (s, t, e) => (y(s, typeof t != "symbol" ? t + "" : t, e), e);
-import { computed as g, shallowRef as l, watchEffect as f, onUnmounted as k, watch as I, h as S } from "vue";
+import { computed as l, shallowRef as g, watchEffect as f, onUnmounted as k, watch as I, h as S } from "vue";
 import { D as z } from "./DesignConstructorAbstract-ZQD6lBiI.js";
-import { i as d, a as x } from "./useEnv-CFVj6p9U.js";
-import { D as v, i as C, t as m } from "./toNumber-BeBr0lVX.js";
-import { C as H, G as j, E as W } from "./EventItem-BiWzkDiN.js";
-import { I as b } from "./Icons-BOdC4Ie-.js";
-import { g as A } from "./getElementId-Dv5cOpg7.js";
+import { i as d, a as C } from "./useEnv-CFVj6p9U.js";
+import { D as v, i as x, t as m } from "./toNumber-BeBr0lVX.js";
+import { C as H, G as j, E as B } from "./EventItem-BiWzkDiN.js";
+import { I as b } from "./Icons-0QBibBHo.js";
+import { g as W } from "./getElementId-Dv5cOpg7.js";
 var n = /* @__PURE__ */ ((s) => (s.file = "file", s.image = "image", s.color = "color", s.public = "public", s.filled = "filled", s.outlined = "outlined", s.round = "round", s.sharp = "sharp", s.twoTone = "two-tone", s.material = "material", s.icon = "icon", s))(n || {});
-class E extends H {
+class A extends H {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -51,7 +51,7 @@ class E extends H {
     }
   }
 }
-const B = 720;
+const E = 720;
 class F {
   /**
    * Checks if the file is an image.<br>
@@ -97,7 +97,7 @@ class F {
    * @param src link to image /<br>ссылка на изображение
    * @param maxSize maximum allowable image size /<br>максимальный допустимый размер изображения
    */
-  static getSRC(t, e, i = B) {
+  static getSRC(t, e, i = E) {
     var r;
     if ((e instanceof File || e === void 0) && (t.naturalHeight > i || t.naturalWidth > i)) {
       const o = t.naturalWidth >= t.naturalHeight, c = (r = document.createElement("canvas")) == null ? void 0 : r.getContext("2d");
@@ -211,7 +211,7 @@ class O {
   is() {
     var e;
     const t = (e = this.props) == null ? void 0 : e.coordinator;
-    return C(t) && t.length > 0 && t.length < 5;
+    return x(t) && t.length > 0 && t.length < 5;
   }
   /**
    * Returns the sizes for the background-position property by coordinates.<br>
@@ -501,7 +501,7 @@ class h {
    * Запускает процесс вычисления или отключает его, если в списке нет активных элементов.
    */
   static make() {
-    this.event && this.objects.length < 1 ? (this.event.stop(), this.event = void 0) : this.objects.length > 0 && (this.event = new W(window, ["scroll-sync"], () => this.start()).start(), this.start());
+    this.event && this.objects.length < 1 ? (this.event.stop(), this.event = void 0) : this.objects.length > 0 && (this.event = new B(window, ["scroll-sync"], () => this.start()).start(), this.start());
   }
   /**
    * Returns a list of elements that are visible or constantly being calculated.<br>
@@ -510,7 +510,7 @@ class h {
   static getItemIdByVisible() {
     const t = [];
     return this.objectsAdaptive.forEach((e) => {
-      e.isVisible() && t.push(e.getId());
+      e.isBeyond() && t.push(e.getId());
     }), t;
   }
   /**
@@ -546,7 +546,7 @@ class h {
   static makeSize() {
     u.reset(), this.objectsAdaptive.forEach((t) => {
       const e = t.getElement();
-      e && t.isVisible() && u.get(t.getGroup()).makeWidth(t.getWidth()).makeHeight(t.getHeight()).makeOffsetWidth(e.offsetWidth).makeOffsetHeight(e.offsetHeight);
+      e && t.isBeyond() && u.get(t.getGroup()).makeWidth(t.getWidth()).makeHeight(t.getHeight()).makeOffsetWidth(e.offsetWidth).makeOffsetHeight(e.offsetHeight);
     });
   }
   /**
@@ -583,9 +583,7 @@ class h {
    * Вызывает функцию обратного вызова.
    */
   static makeCallback() {
-    this.objectsAdaptive.forEach((t) => {
-      t.makeCallback();
-    });
+    this.objectsAdaptive.forEach((t) => t.makeCallback());
   }
   /**
    * Checks if there is an active element at the moment.<br>
@@ -604,7 +602,7 @@ class h {
   }
 }
 a(h, "objects", []), a(h, "objectsAdaptive", []), a(h, "cache", []), a(h, "event"), a(h, "time");
-const D = "main", p = 256;
+const D = "main", p = 512;
 class G {
   /**
    * Constructor
@@ -667,7 +665,7 @@ class G {
    * Возвращает идентификатор элемента.
    */
   getId() {
-    return A(this.element.value);
+    return W(this.element.value);
   }
   /**
    * Returns the current element.<br>
@@ -869,7 +867,7 @@ class N {
   getSizeForItem() {
     var e;
     const t = (e = this.props) == null ? void 0 : e.size;
-    return t && x(t) ? t.toString().match(/%$/) ? this.getSize(t, t) : t.toString() : null;
+    return t && C(t) ? t.toString().match(/%$/) ? this.getSize(t, t) : t.toString() : null;
   }
 }
 let P = class extends v {
@@ -888,8 +886,8 @@ let P = class extends v {
     a(this, "position");
     a(this, "adaptiveItem");
     a(this, "background");
-    this.props = e, this.callback = r, this.type = new E(e), this.data = new M(e, this.type, () => {
-      this.adaptiveItem.is() ? this.adaptiveItem.reset() : this.make(!0);
+    this.props = e, this.callback = r, this.type = new A(e), this.data = new M(e, this.type, () => {
+      this.adaptiveItem.is() && this.adaptiveItem.reset(), this.make(!0);
     }), this.coordinator = new O(e), this.position = new $(e, this.coordinator), this.adaptiveItem = new G(
       e,
       this.data,
@@ -953,6 +951,7 @@ let P = class extends v {
   getClasses() {
     const e = this.type.get(), i = {
       [`??--type--${e}`]: e !== void 0,
+      "??--background": !!this.background.getImage(),
       notranslate: !0
     };
     switch (e) {
@@ -1025,18 +1024,18 @@ class _ {
    */
   constructor(t, e) {
     a(this, "item");
-    a(this, "type", g(() => this.item.getType()));
-    a(this, "data", l());
-    a(this, "text", g(() => this.item.getText()));
-    a(this, "classes", g(() => this.item.getClasses()));
-    a(this, "styles", l());
+    a(this, "type", l(() => this.item.getType()));
+    a(this, "data", g());
+    a(this, "text", l(() => this.item.getText()));
+    a(this, "classes", g());
+    a(this, "styles", g());
     this.item = new P(
       t,
       e,
       (i) => {
-        this.data.value = i.image, this.styles.value = i.styles;
+        this.data.value = i.image, this.classes.value = this.item.getClasses(), this.styles.value = i.styles;
       }
-    ), f(() => this.item.data.make(!0)), f(() => this.item.updateAdaptive());
+    ), this.classes.value = this.item.getClasses(), f(() => this.item.data.make(!0)), f(() => this.item.updateAdaptive());
   }
   /**
    * Destructor

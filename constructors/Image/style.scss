@@ -16,13 +16,16 @@
 
   &--type {
     &--public {
-      @include backgroundAsColor;
       -webkit-mask-position: center;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: contain;
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain;
+
+      @include state('background') {
+        @include backgroundAsColor;
+      }
     }
 
     &--icon {

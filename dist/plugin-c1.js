@@ -1,7 +1,8 @@
 import './plugin-c1.css';
-import { uiC1ComponentsPlugin as t } from "./components-c1.js";
-import { registrationUiTranslate as e } from "./translate.js";
-const n = async (r, a) => (await (await import("./media.js")).makeMedia(), a && a != null && a.translate && await e(a.translate), r.use(t), r);
+import { uiC1ComponentsPlugin as e } from "./components-c1.js";
+import { makeMedia as t } from "./media.js";
+import { registrationUiTranslate as i } from "./translate.js";
+const l = async (a, r) => (t(), r && r != null && r.translate && await i(r.translate), a.use(e), a);
 export {
-  n as registrationUiC1
+  l as registrationUiC1
 };

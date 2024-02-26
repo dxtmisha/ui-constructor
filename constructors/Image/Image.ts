@@ -54,9 +54,9 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
     this.data = new ImageData(props, this.type, () => {
       if (this.adaptiveItem.is()) {
         this.adaptiveItem.reset()
-      } else {
-        this.make(true)
       }
+
+      this.make(true)
     })
 
     this.coordinator = new ImageCoordinator(props)
@@ -142,6 +142,7 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
     const type = this.type.get()
     const data = {
       [`??--type--${type}`]: type !== undefined,
+      '??--background': Boolean(this.background.getImage()),
       notranslate: true
     }
 

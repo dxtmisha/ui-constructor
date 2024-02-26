@@ -1,7 +1,8 @@
 import './plugin-m3.css';
-import { uiM3ComponentsPlugin as t } from "./components-m3.js";
-import { registrationUiTranslate as e } from "./translate.js";
-const n = async (r, a) => (await (await import("./media.js")).makeMedia(), a && a != null && a.translate && await e(a.translate), r.use(t), r);
+import { uiM3ComponentsPlugin as e } from "./components-m3.js";
+import { makeMedia as t } from "./media.js";
+import { registrationUiTranslate as i } from "./translate.js";
+const l = async (a, r) => (t(), r && r != null && r.translate && await i(r.translate), a.use(e), a);
 export {
-  n as registrationUiM3
+  l as registrationUiM3
 };

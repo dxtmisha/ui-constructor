@@ -259,7 +259,7 @@ export class PropertiesFile {
    * @param path path to the file /<br>путь к файлу
    * @param name file name /<br>название файла
    * @param value values for storage /<br>значения для хранения
-   * @param extension file extension by default is json /<br>расширение файла по умолчанию - json
+   * @param extension file extension by default is ts /<br>расширение файла по умолчанию - ts
    */
   static write<T extends PropertiesFileValue> (
     path: PropertiesFilePath,

@@ -5,6 +5,8 @@ import { MutationGlobal } from './../classes/mutation/MutationGlobal'
 import { MutationGlobalRef } from './../classes/mutation/MutationGlobalRef'
 
 import { components } from './components'
+import { makeMedia } from './media'
+import { registrationUiBasic } from './plugin-basic'
 
 import * as vue from 'vue'
 import * as vueRouter from 'vue-router'
@@ -21,5 +23,7 @@ MutationGlobal.addComponentList(components)
 ;(window as any).UI_CORE_VUEX = vuex
 ;(window as any).UI_CORE_UI = ui
 
+makeMedia()
+
 export * from './index'
-export * from './plugin'
+export const registrationUiMain = registrationUiBasic

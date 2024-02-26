@@ -1,8 +1,11 @@
+import { toCamelCase } from '../../../functions/toCamelCase'
 import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 
 import { LibraryItems } from './LibraryItems'
+
+import { type Item } from '../../../types/basic'
 
 import { FILE_ICONS } from '../../config/property'
 import {
@@ -29,24 +32,71 @@ export class LibraryMedia {
     this.items.write(
       LIBRARY_MEDIA,
       [
-        'export const makeMedia = async (): Promise<void> => {',
-        `  ;(await import('./${LIBRARY_FLAGS}')).makeFlags()`,
+        'import { Icons } from \'../classes/Icons.ts\'',
+        '',
+        `import ${LIBRARY_FLAGS} from './${LIBRARY_FLAGS}.json'`,
+        ...this.initIconJsonImport(),
+        '',
+        'export const makeMedia = (): void => {',
+        '  [',
+        [
+          `    ...${LIBRARY_FLAGS}`,
+          ...this.initIconJson()
+        ].join(',\r\n'),
+        '  ].forEach(key => {',
+        '    Icons.addLoad(key)',
+        '  })',
+        '',
+        `  import('./${LIBRARY_FLAGS}').then(item => item.makeFlags())`,
         ...this.initIcon(),
         '}'
       ]
     )
   }
 
-  initIcon (): string[] {
+  private getIconImport () {
     const designs = this.items.getDesigns()
-    const data: string[] = []
+    const data: Item<string>[] = []
 
     designs.forEach(design => {
       const path = [design, `${FILE_ICONS}.ts`]
 
       if (PropertiesFile.is(path)) {
-        data.push(`  ;(await import('./../${PropertiesFile.joinPath([design, FILE_ICONS])}')).makeIcons${toCamelCaseFirst(design)}()`)
+        data.push({
+          index: toCamelCaseFirst(design),
+          value: `./../${PropertiesFile.joinPath([design, FILE_ICONS])}`
+        })
       }
+    })
+
+    return data
+  }
+
+  private initIcon (): string[] {
+    const data: string[] = []
+
+    this.getIconImport().forEach(item => {
+      data.push(`  import('${item.value}').then(item => item.makeIcons${item.index}())`)
+    })
+
+    return data
+  }
+
+  private initIconJson (): string[] {
+    const data: string[] = []
+
+    this.getIconImport().forEach(item => {
+      data.push(`    ...${toCamelCase(item.index)}`)
+    })
+
+    return data
+  }
+
+  private initIconJsonImport (): string[] {
+    const data: string[] = []
+
+    this.getIconImport().forEach(item => {
+      data.push(`import ${toCamelCase(item.index)} from '${item.value}.json'`)
     })
 
     return data

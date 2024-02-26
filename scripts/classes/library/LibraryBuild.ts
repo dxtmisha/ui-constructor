@@ -1,4 +1,4 @@
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
 
 /**
  * A class for adding a link to styles in style files.<br>

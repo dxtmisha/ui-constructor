@@ -1,4 +1,4 @@
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
 
 export const LIBRARY_MODULES: Record<string, string> = {
   vue: 'UI_CORE_VUE',

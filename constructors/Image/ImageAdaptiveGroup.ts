@@ -89,7 +89,7 @@ export class ImageAdaptiveGroup {
     const visible: string[] = []
 
     this.objectsAdaptive.forEach(item => {
-      if (item.isVisible()) {
+      if (item.isBeyond()) {
         visible.push(item.getId())
       }
     })
@@ -151,7 +151,7 @@ export class ImageAdaptiveGroup {
 
       if (
         element &&
-        item.isVisible()
+        item.isBeyond()
       ) {
         ImageCalculationList.get(item.getGroup())
           .makeWidth(item.getWidth())
@@ -209,9 +209,7 @@ export class ImageAdaptiveGroup {
    * Вызывает функцию обратного вызова.
    */
   protected static makeCallback (): void {
-    this.objectsAdaptive.forEach(item => {
-      item.makeCallback()
-    })
+    this.objectsAdaptive.forEach(item => item.makeCallback())
   }
 
   /**
@@ -219,7 +217,7 @@ export class ImageAdaptiveGroup {
    * Проверяет, есть ли в текущий момент активный элемент.
    */
   private static isAdaptive (): boolean {
-    return !!this.objects.find(item => item.is())
+    return Boolean(this.objects.find(item => item.is()))
   }
 
   /**

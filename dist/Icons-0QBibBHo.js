@@ -1,10 +1,10 @@
-var l = Object.defineProperty;
-var u = (a, t, i) => t in a ? l(a, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : a[t] = i;
-var e = (a, t, i) => (u(a, typeof t != "symbol" ? t + "" : t, i), i);
-import { f as n } from "./forEach-B1ZDH1yu.js";
-import { A as m } from "./Api-xb9Hb97W.js";
-import { u as d } from "./useEnv-CFVj6p9U.js";
-const s = class s {
+var d = Object.defineProperty;
+var f = (a, t, i) => t in a ? d(a, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : a[t] = i;
+var o = (a, t, i) => (f(a, typeof t != "symbol" ? t + "" : t, i), i);
+import { f as h } from "./forEach-B1ZDH1yu.js";
+import { A as w } from "./Api-xb9Hb97W.js";
+import { u as N } from "./useEnv-CFVj6p9U.js";
+const u = 320, m = "--LOAD--", s = class s {
   /**
    * Checks if the given icon is in the list of connected icons.<br>
    * Проверяет, есть ли данная иконка в списке подключенных иконок.
@@ -19,18 +19,19 @@ const s = class s {
    * @param index icon name /<br>название иконки
    * @param url path to the storage location of the icon, if the icon does not exist /<br>
    * путь к месту хранения иконки, если иконка не существует
+   * @param wait waiting time for picture loading <br>время ожидания загрузки картинки
    */
-  static async get(t, i = "") {
-    var o, c;
-    const r = ((o = this.icons) == null ? void 0 : o[this.getName(t)]) ?? ((c = this.icons) == null ? void 0 : c[t]) ?? `${t.replace(/^@/, i ?? this.url)}.svg`;
-    return typeof r == "string" ? r : await r;
+  static async get(t, i = "", e = 1e3 * 60 * 3) {
+    var c, n;
+    const r = ((c = this.icons) == null ? void 0 : c[this.getName(t)]) ?? ((n = this.icons) == null ? void 0 : n[t]) ?? `${t.replace(/^@/, i ?? this.url)}.svg`;
+    return typeof r == "string" ? r === m && e > 0 ? (await this.wait(), this.get(t, i, e - u)) : r : await r;
   }
   /**
    * Returns a list of names of all registered icons.<br>
    * Возвращает список названий всех зарегистрированных иконок.
    */
   static getNameList() {
-    return n(this.icons, (t, i) => i.replace(/^@/, ""));
+    return h(this.icons, (t, i) => i.replace(/^@/, ""));
   }
   /**
    * Adding custom icons.<br>
@@ -40,6 +41,14 @@ const s = class s {
    */
   static add(t, i) {
     this.icons[this.getName(t)] = i;
+  }
+  /**
+   * Adding custom icons in loading mode.<br>
+   * Добавление пользовательских иконок в режиме загрузки.
+   * @param index icon name /<br>название иконки
+   */
+  static addLoad(t) {
+    this.icons[this.getName(t)] = m;
   }
   /**
    * Adding custom global icons.<br>
@@ -56,7 +65,7 @@ const s = class s {
    * @param list list of icons /<br>список иконки
    */
   static addByList(t) {
-    n(t, (i, r) => this.add(r, i));
+    h(t, (i, e) => this.add(e, i));
   }
   /**
    * Returns the icon name.<br>
@@ -66,9 +75,14 @@ const s = class s {
   static getName(t) {
     return `@${t}`;
   }
+  static wait() {
+    return new Promise((t) => setTimeout(() => t(), u));
+  }
 };
-e(s, "icons", {}), e(s, "url", d("UI_PATH") ?? "/icons/"), e(s, "urlGlobal", `${m.isLocalhost(), ""}${s.url}`), typeof window < "u" && ("__UI__ICON" in window || (window.__UI__ICON = {}), s.icons = window.__UI__ICON);
-let h = s;
+o(s, "icons", {}), o(s, "url", N("UI_PATH") ?? "/icons/"), o(s, "urlGlobal", `${w.isLocalhost(), ""}${s.url}`), typeof window < "u" && ("__UI__ICON" in window || (window.__UI__ICON = {}), s.icons = window.__UI__ICON);
+let l = s;
 export {
-  h as I
+  l as I,
+  m as a,
+  u as b
 };

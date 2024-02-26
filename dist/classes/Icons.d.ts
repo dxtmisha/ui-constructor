@@ -1,4 +1,6 @@
 export type IconsItem = string | Promise<string | any>;
+export declare const ICONS_WAIT = 320;
+export declare const ICONS_LOAD = "--LOAD--";
 /**
  * Class for managing icons.<br>
  * Класс для управления иконками.
@@ -19,8 +21,9 @@ export declare class Icons {
      * @param index icon name /<br>название иконки
      * @param url path to the storage location of the icon, if the icon does not exist /<br>
      * путь к месту хранения иконки, если иконка не существует
+     * @param wait waiting time for picture loading <br>время ожидания загрузки картинки
      */
-    static get(index: string, url?: string): Promise<string>;
+    static get(index: string, url?: string, wait?: number): Promise<string>;
     /**
      * Returns a list of names of all registered icons.<br>
      * Возвращает список названий всех зарегистрированных иконок.
@@ -33,6 +36,12 @@ export declare class Icons {
      * @param file path to the file /<br>путь к файлу
      */
     static add(index: string, file: IconsItem): void;
+    /**
+     * Adding custom icons in loading mode.<br>
+     * Добавление пользовательских иконок в режиме загрузки.
+     * @param index icon name /<br>название иконки
+     */
+    static addLoad(index: string): void;
     /**
      * Adding custom global icons.<br>
      * Добавление пользовательских глобальных иконок.
@@ -52,4 +61,5 @@ export declare class Icons {
      * @param index icon name /<br>название иконки
      */
     protected static getName(index: string): string;
+    protected static wait(): Promise<void>;
 }

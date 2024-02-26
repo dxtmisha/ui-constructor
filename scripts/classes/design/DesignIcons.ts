@@ -35,14 +35,17 @@ export class DesignIcons {
     if (list) {
       const imports: string[] = []
       const icons: string[] = []
+      const json: string[] = []
 
       list.forEach(icon => {
         const name = toCamelCase(icon.name)
 
         imports.push(`import ${name} from './${icon.path}'`)
         icons.push(`  Icons.add('${icon.name}', ${name})`)
+        json.push(icon.name)
       })
 
+      this.write([JSON.stringify(json)], 'json')
       this.write([
         'import { Icons } from \'../classes/Icons\'',
         '',
@@ -103,13 +106,14 @@ export class DesignIcons {
    * Saves the file.<br>
    * Сохраняет файл.
    * @param file data for writing /<br>данные для записи
+   * @param extension file extension by default is ts /<br>расширение файла по умолчанию - ts
    */
-  protected write (file: string[]): this {
+  protected write (file: string[], extension: string = 'ts'): this {
     PropertiesFile.write(
       [this.design],
       FILE_ICONS,
       file.join('\r\n'),
-      'ts'
+      extension
     )
 
     return this

@@ -4,6 +4,7 @@
 import { type App } from 'vue'
 
 import { uiM3ComponentsPlugin } from './components-m3'
+import { makeMedia } from './media'
 import { registrationUiTranslate } from './translate'
 
 import { type ConstrRegistration } from '../types/constructor'
@@ -12,7 +13,7 @@ import '../m3/styles/main.scss'
 import './types.d.ts'
 
 export const registrationUiM3 = async (app: App, options?: ConstrRegistration): Promise<App> => {
-  await (await import('./media')).makeMedia()
+  makeMedia()
 
   if (options) {
     if (options?.translate) {

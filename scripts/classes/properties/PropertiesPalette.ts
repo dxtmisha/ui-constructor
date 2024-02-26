@@ -10,7 +10,7 @@ import {
   PropertyKey,
   PropertyType
 } from '../../types/property'
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
 export type PropertiesPaletteItem = {
   design: string

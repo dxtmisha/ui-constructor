@@ -1,2 +1,3 @@
+import * as vue from 'vue';
 export * from './index';
-export * from './plugin';
+export declare const registrationUiMain: (app: vue.App<any>, options?: import("../types/constructor").ConstrRegistration | undefined) => Promise<vue.App<any>>;
