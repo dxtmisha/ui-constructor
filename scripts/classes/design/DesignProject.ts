@@ -238,7 +238,7 @@ export class DesignProject {
     if (fileHtaccess) {
       PropertiesFile.writeByPath(
         pathHtaccess,
-        fileHtaccess.replace(/RewriteBase [^ ]+/, `RewriteBase ${name}`)
+        fileHtaccess.replace(/RewriteBase [^ \r\n]+/, `RewriteBase ${name}`)
       )
     }
 
