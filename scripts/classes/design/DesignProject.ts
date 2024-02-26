@@ -47,7 +47,7 @@ export class DesignProject {
       // this.makeUpdatePackage()
       this.makeUpdateLink()
 
-      this.removeTempDir()
+      // this.removeTempDir()
     }
   }
 
@@ -265,6 +265,7 @@ export class DesignProject {
    * Deleting temporary files, if they exist.<br>
    * Удаление временных файлов, если они есть.
    */
+  /*
   private removeTempDir (): this {
     const path = this.getProjectPath([DIR_TEMP])
 
@@ -274,4 +275,5 @@ export class DesignProject {
 
     return this
   }
+   */
 }

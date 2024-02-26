@@ -8,8 +8,10 @@ const PROJECT_GIT = 'git+https://github.com/dxtmisha/ui-constructor.git'
 const PROJECT_NAME = 'vue'
 const PROJECT_TEMP = 'temp'
 const PROJECT_COMMAND = 'project'
-const PROJECT_COMMAND_SCRIPT = 'scripts/project.ts'
-const PROJECT_COMMAND_PATH = `./node_modules/ui/${PROJECT_COMMAND_SCRIPT}`
+// const PROJECT_COMMAND_SCRIPT = 'scripts/project.ts'
+// const PROJECT_COMMAND_PATH = `./node_modules/ui/${PROJECT_COMMAND_SCRIPT}`
+const PROJECT_COMMAND_SCRIPT = requirePath.join('scripts', 'project.ts')
+const PROJECT_COMMAND_PATH = requirePath.join('.', 'node_modules', 'ui', PROJECT_COMMAND_SCRIPT)
 const FILE_PACKAGE = 'package.json'
 const FILE_PACKAGE_LOCK = 'package-lock.json'
 
@@ -49,7 +51,7 @@ const initTemp = () => {
     JSON.stringify(filePackageData)
   )
 
-  exec(`cd ${PROJECT_TEMP};npm install`, (error) => {
+  exec('npm install', { cwd: PROJECT_TEMP }, (error) => {
     if (error) {
       console.error('[T] Error: ', error)
       return
@@ -67,7 +69,7 @@ const initProject = () => {
     JSON.stringify(fileViteData)
   )
 
-  exec(`cd ${PROJECT_TEMP};npx vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND} ${PROJECT_NAME}`, (error) => {
+  exec(`npx vite-node ${PROJECT_COMMAND_PATH} ${PROJECT_COMMAND} ${PROJECT_NAME}`, { cwd: PROJECT_TEMP }, (error) => {
     if (error) {
       console.error('[P] Error: ', error)
       return
@@ -80,7 +82,7 @@ const initProject = () => {
 const initInstall = () => {
   console.log('Install...')
 
-  exec(`cd ${PROJECT_NAME};npm install`, (error) => {
+  exec('npm install', { cwd: PROJECT_NAME }, (error) => {
     if (error) {
       console.error('[I] Error: ', error)
       return
@@ -110,6 +112,17 @@ const initUnlink = () => {
       }
 
       console.log(`Unlink: ${fileViteLock}`)
+    })
+  }
+
+  if (requireFs.existsSync(PROJECT_TEMP)) {
+    requireFs.rmSync(PROJECT_TEMP, error => {
+      if (error) {
+        console.error('[E_T] Error: ', error)
+        return
+      }
+
+      console.log(`Unlink: ${PROJECT_TEMP}`)
     })
   }
 
