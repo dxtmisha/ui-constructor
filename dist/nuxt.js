@@ -35,6 +35,12 @@ const s = t({
       name: "M3Image",
       filePath: "ui/dist/M3Image.vue"
     }), await i({
+      name: "M3Input",
+      filePath: "ui/dist/M3Input.vue"
+    }), await i({
+      name: "M3Mask",
+      filePath: "ui/dist/M3Mask.vue"
+    }), await i({
       name: "M3Mutation",
       filePath: "ui/dist/M3Mutation.vue"
     }), await i({

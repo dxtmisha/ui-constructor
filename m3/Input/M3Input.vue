@@ -1,0 +1,84 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+
+// import { isFilled } from '../../functions/isFilled'
+// import { inArray } from '../../functions/inArray'
+
+import { InputDesign } from '../../constructors/Input/InputDesign'
+
+import {
+  type ConstrClasses,
+  type ConstrStyles
+} from '../../types/constructor'
+import {
+  type InputEmits,
+  type InputSlots
+} from '../../constructors/Input/types'
+
+import {
+  propsInstruction //,
+  // propsValues
+} from './props'
+
+defineOptions({
+  name: 'M3Input'
+})
+
+const emits = defineEmits<InputEmits>()
+const props = defineProps({ ...propsInstruction })
+
+const classesToken = computed<ConstrClasses>(() => ({
+  main: {
+    // :classes-values [!] System label / Системная метка
+    'm3-input': true
+    // :classes-values [!] System label / Системная метка
+  }
+}))
+const stylesToken = computed<ConstrStyles>(() => ({
+  // :styles-values [!] System label / Системная метка
+  // :styles-values [!] System label / Системная метка
+}))
+
+const design = new InputDesign(
+  'm3.input',
+  props,
+  {
+    emits,
+    classes: classesToken,
+    styles: stylesToken
+  }
+)
+
+// const {
+//   classes,
+//   styles
+// } = design.setup()
+const render = design.render()
+
+defineSlots<InputSlots>()
+defineExpose(design.expose())
+</script>
+
+<template>
+  <component :is="render"/>
+</template>
+
+<style lang="scss">
+@import "../styles/properties";
+@import "../../styles/properties";
+@import "../../constructors/Input/style";
+@import "styleToken";
+
+@include initDesignBasic('m3.input') {
+  // Basic styles for a component
+  // Базовый стили для компонента
+  @include mixinInput;
+
+  // Styles from tokens
+  // Стили из токенов
+  @include mixinInputToken;
+
+  // Here are the user styles
+  // Здесь пользовательские стили
+}
+</style>

@@ -52,6 +52,14 @@ export default defineNuxtModule({
       filePath: 'ui/dist/M3Image.vue'
     })
     await addComponent({
+      name: 'M3Input',
+      filePath: 'ui/dist/M3Input.vue'
+    })
+    await addComponent({
+      name: 'M3Mask',
+      filePath: 'ui/dist/M3Mask.vue'
+    })
+    await addComponent({
       name: 'M3Mutation',
       filePath: 'ui/dist/M3Mutation.vue'
     })

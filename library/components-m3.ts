@@ -7,6 +7,8 @@ import { forEach } from '../functions/forEach'
 import { M3Button } from '../m3/Button'
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
+import { M3Input } from '../m3/Input'
+import { M3Mask } from '../m3/Mask'
 import { M3Mutation } from '../m3/Mutation'
 import { M3MutationItem } from '../m3/MutationItem'
 import { M3Progress } from '../m3/Progress'
@@ -18,6 +20,8 @@ export const components = {
   M3Button,
   M3Icon,
   M3Image,
+  M3Input,
+  M3Mask,
   M3Mutation,
   M3MutationItem,
   M3Progress,

@@ -34,6 +34,14 @@ declare module 'ui/M3Image' {
   export { M3Image } from 'ui/m3/Image'
 }
 
+declare module 'ui/M3Input' {
+  export { M3Input } from 'ui/m3/Input'
+}
+
+declare module 'ui/M3Mask' {
+  export { M3Mask } from 'ui/m3/Mask'
+}
+
 declare module 'ui/M3Mutation' {
   export { M3Mutation } from 'ui/m3/Mutation'
 }

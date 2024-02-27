@@ -1,0 +1,30 @@
+@import "../../styles/all";
+
+@mixin mixinMaskToken {
+  // :style [!] System label / Системная метка
+  --m3-mask-color: var(--m3-sys-palette-onSurface);
+  --m3-mask-colorOpacity: var(--m3-sys-opacity-disabled);
+  --m3-mask-caretOpacity: var(--m3-sys-opacity-high);
+  
+  &__character {
+    &__item {
+      &--standard {
+        @include colorOpacity(#{var(--m3-sys-opacity-medium)});
+      }
+      
+      &--transition {
+        @include colorOpacity(#{var(--m3-sys-opacity-medium)});
+      }
+      
+      &--special {
+        @include colorOpacity(#{var(--m3-sys-opacity-high)});
+      }
+      
+      &--error {
+        @include color(#{var(--m3-sys-palette-error)});
+        @include colorOpacity(#{var(--m3-sys-opacity-high)});
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

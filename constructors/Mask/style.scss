@@ -1,0 +1,66 @@
+@import "../../styles/properties";
+
+@mixin mixinMask {
+  @include initByCustom('sys.align', left);
+  @include initByCustom('sys.color', v('??color', var(--sys-color, inherit)));
+  @include initByCustom('sys.opacity', 1);
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  position: relative;
+
+  text-align: v('??sys.align');
+
+  &__input {
+    box-sizing: border-box;
+    position: absolute;
+    @include inset(0);
+    z-index: 4;
+
+    padding: inherit;
+
+    width: 100%;
+
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: transparent;
+    @include color(v('??sys.color'), v('??caretOpacity', 1), 'caret-color');
+    text-align: v('??sys.align');
+
+    background: transparent;
+    border: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__character {
+    opacity: v('??sys.opacity');
+
+    &__item {
+      @include color(v('??sys.color'), v('??colorOpacity', 1));
+    }
+  }
+
+  &--visible {
+    @include initByCustom('colorOpacity', 0);
+  }
+
+  &--visible:not(&--value, &:focus-within) {
+    @include initByCustom('sys.opacity', 0);
+  }
+
+  &--right,
+  &--end {
+    @include initByCustom('sys.align', right);
+  }
+}

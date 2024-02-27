@@ -1196,6 +1196,440 @@ export declare const components: {
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Image/types").ImageSlots>;
     });
+    M3Input: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            name: StringConstructor;
+            value: StringConstructor;
+            modelValue: StringConstructor;
+            detail: import("vue").PropType<Record<string, any> | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
+                default: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+            };
+            inputmode: import("vue").PropType<import("../constructors/Input/typesBasic").InputMode | undefined>;
+            spellcheck: BooleanConstructor;
+            required: BooleanConstructor;
+            pattern: StringConstructor;
+            match: import("vue").PropType<import("../constructors/Input/typesBasic").InputMatch | undefined>;
+            arrow: BooleanConstructor;
+            step: (StringConstructor | NumberConstructor)[];
+            min: (StringConstructor | NumberConstructor)[];
+            max: (StringConstructor | NumberConstructor)[];
+            minlength: (StringConstructor | NumberConstructor)[];
+            maxlength: (StringConstructor | NumberConstructor)[];
+            autofocus: BooleanConstructor;
+            autocomplete: {
+                type: import("vue").PropType<AutoFill | undefined>;
+                default: AutoFill | undefined;
+            };
+            input: import("vue").PropType<Record<string, any> | undefined>;
+            placeholder: StringConstructor;
+            helperMessage: StringConstructor;
+            validationMessage: StringConstructor;
+            validationCode: import("vue").PropType<import("../constructors/Input/typesBasic").InputValidityCode | undefined>;
+            on: ObjectConstructor;
+            'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
+            'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            readonly: BooleanConstructor;
+            disabled: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onChange?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            onInput?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            "onUpdate:value"?: ((value: any) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: any) => any) | undefined;
+        }, {
+            value: import("vue").ShallowRef<string | undefined>;
+        }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            change: (event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => void;
+            input: (event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => void;
+            "update:value": (value: any) => void;
+            "update:modelValue": (value: any) => void;
+        }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            name: StringConstructor;
+            value: StringConstructor;
+            modelValue: StringConstructor;
+            detail: import("vue").PropType<Record<string, any> | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
+                default: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+            };
+            inputmode: import("vue").PropType<import("../constructors/Input/typesBasic").InputMode | undefined>;
+            spellcheck: BooleanConstructor;
+            required: BooleanConstructor;
+            pattern: StringConstructor;
+            match: import("vue").PropType<import("../constructors/Input/typesBasic").InputMatch | undefined>;
+            arrow: BooleanConstructor;
+            step: (StringConstructor | NumberConstructor)[];
+            min: (StringConstructor | NumberConstructor)[];
+            max: (StringConstructor | NumberConstructor)[];
+            minlength: (StringConstructor | NumberConstructor)[];
+            maxlength: (StringConstructor | NumberConstructor)[];
+            autofocus: BooleanConstructor;
+            autocomplete: {
+                type: import("vue").PropType<AutoFill | undefined>;
+                default: AutoFill | undefined;
+            };
+            input: import("vue").PropType<Record<string, any> | undefined>;
+            placeholder: StringConstructor;
+            helperMessage: StringConstructor;
+            validationMessage: StringConstructor;
+            validationCode: import("vue").PropType<import("../constructors/Input/typesBasic").InputValidityCode | undefined>;
+            on: ObjectConstructor;
+            'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
+            'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            readonly: BooleanConstructor;
+            disabled: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onChange?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            onInput?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            "onUpdate:value"?: ((value: any) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: any) => any) | undefined;
+        }, {
+            readonly: boolean;
+            disabled: boolean;
+            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+            spellcheck: boolean;
+            autofocus: boolean;
+            autocomplete: AutoFill | undefined;
+            required: boolean;
+            arrow: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            name: StringConstructor;
+            value: StringConstructor;
+            modelValue: StringConstructor;
+            detail: import("vue").PropType<Record<string, any> | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
+                default: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+            };
+            inputmode: import("vue").PropType<import("../constructors/Input/typesBasic").InputMode | undefined>;
+            spellcheck: BooleanConstructor;
+            required: BooleanConstructor;
+            pattern: StringConstructor;
+            match: import("vue").PropType<import("../constructors/Input/typesBasic").InputMatch | undefined>;
+            arrow: BooleanConstructor;
+            step: (StringConstructor | NumberConstructor)[];
+            min: (StringConstructor | NumberConstructor)[];
+            max: (StringConstructor | NumberConstructor)[];
+            minlength: (StringConstructor | NumberConstructor)[];
+            maxlength: (StringConstructor | NumberConstructor)[];
+            autofocus: BooleanConstructor;
+            autocomplete: {
+                type: import("vue").PropType<AutoFill | undefined>;
+                default: AutoFill | undefined;
+            };
+            input: import("vue").PropType<Record<string, any> | undefined>;
+            placeholder: StringConstructor;
+            helperMessage: StringConstructor;
+            validationMessage: StringConstructor;
+            validationCode: import("vue").PropType<import("../constructors/Input/typesBasic").InputValidityCode | undefined>;
+            on: ObjectConstructor;
+            'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
+            'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
+            progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+            readonly: BooleanConstructor;
+            disabled: BooleanConstructor;
+            label: (StringConstructor | NumberConstructor)[];
+        }>> & {
+            onChange?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            onInput?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+            "onUpdate:value"?: ((value: any) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: any) => any) | undefined;
+        }, {
+            value: import("vue").ShallowRef<string | undefined>;
+        }, {}, {}, {}, {
+            readonly: boolean;
+            disabled: boolean;
+            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+            spellcheck: boolean;
+            autofocus: boolean;
+            autocomplete: AutoFill | undefined;
+            required: boolean;
+            arrow: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        name: StringConstructor;
+        value: StringConstructor;
+        modelValue: StringConstructor;
+        detail: import("vue").PropType<Record<string, any> | undefined>;
+        type: {
+            type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
+            default: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+        };
+        inputmode: import("vue").PropType<import("../constructors/Input/typesBasic").InputMode | undefined>;
+        spellcheck: BooleanConstructor;
+        required: BooleanConstructor;
+        pattern: StringConstructor;
+        match: import("vue").PropType<import("../constructors/Input/typesBasic").InputMatch | undefined>;
+        arrow: BooleanConstructor;
+        step: (StringConstructor | NumberConstructor)[];
+        min: (StringConstructor | NumberConstructor)[];
+        max: (StringConstructor | NumberConstructor)[];
+        minlength: (StringConstructor | NumberConstructor)[];
+        maxlength: (StringConstructor | NumberConstructor)[];
+        autofocus: BooleanConstructor;
+        autocomplete: {
+            type: import("vue").PropType<AutoFill | undefined>;
+            default: AutoFill | undefined;
+        };
+        input: import("vue").PropType<Record<string, any> | undefined>;
+        placeholder: StringConstructor;
+        helperMessage: StringConstructor;
+        validationMessage: StringConstructor;
+        validationCode: import("vue").PropType<import("../constructors/Input/typesBasic").InputValidityCode | undefined>;
+        on: ObjectConstructor;
+        'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
+        'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
+        progress: import("vue").PropType<boolean | import("../constructors/Progress/props").ProgressProps | undefined>;
+        readonly: BooleanConstructor;
+        disabled: BooleanConstructor;
+        label: (StringConstructor | NumberConstructor)[];
+    }>> & {
+        onChange?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+        onInput?: ((event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => any) | undefined;
+        "onUpdate:value"?: ((value: any) => any) | undefined;
+        "onUpdate:modelValue"?: ((value: any) => any) | undefined;
+    }, {
+        value: import("vue").ShallowRef<string | undefined>;
+    }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        change: (event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => void;
+        input: (event: Event | InputEvent, value: import("../constructors/Input/typesBasic").InputValidationItem) => void;
+        "update:value": (value: any) => void;
+        "update:modelValue": (value: any) => void;
+    }, string, {
+        readonly: boolean;
+        disabled: boolean;
+        type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
+        spellcheck: boolean;
+        autofocus: boolean;
+        autocomplete: AutoFill | undefined;
+        required: boolean;
+        arrow: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;
+    });
+    M3Mask: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            visible: BooleanConstructor;
+            right: BooleanConstructor;
+            dir: import("vue").PropType<"ltr" | "rtl" | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskTypeItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+            };
+            name: StringConstructor;
+            value: (StringConstructor | NumberConstructor)[];
+            mask: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskList | undefined>;
+            special: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+            };
+            match: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskMatchItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+            };
+            pattern: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            check: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            fraction: (BooleanConstructor | StringConstructor | NumberConstructor)[];
+            currency: StringConstructor;
+            language: StringConstructor;
+            view: {
+                type: StringConstructor;
+                default: string | undefined;
+            };
+        }>> & {
+            onBeforeinput?: ((event: InputEvent) => any) | undefined;
+            onBlur?: ((event: FocusEvent) => any) | undefined;
+            onChange?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onFocus?: ((event: FocusEvent) => any) | undefined;
+            onInput?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onKeydown?: ((event: KeyboardEvent) => any) | undefined;
+            onKeyup?: ((event: KeyboardEvent) => any) | undefined;
+            onPaste?: ((event: ClipboardEvent) => any) | undefined;
+            onReset?: ((event: Event) => any) | undefined;
+        }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            beforeinput: (event: InputEvent) => void;
+            blur: (event: FocusEvent) => void;
+            change: (event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => void;
+            focus: (event: FocusEvent) => void;
+            input: (event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => void;
+            keydown: (event: KeyboardEvent) => void;
+            keyup: (event: KeyboardEvent) => void;
+            paste: (event: ClipboardEvent) => void;
+            reset: (event: Event) => void;
+        }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            visible: BooleanConstructor;
+            right: BooleanConstructor;
+            dir: import("vue").PropType<"ltr" | "rtl" | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskTypeItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+            };
+            name: StringConstructor;
+            value: (StringConstructor | NumberConstructor)[];
+            mask: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskList | undefined>;
+            special: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+            };
+            match: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskMatchItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+            };
+            pattern: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            check: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            fraction: (BooleanConstructor | StringConstructor | NumberConstructor)[];
+            currency: StringConstructor;
+            language: StringConstructor;
+            view: {
+                type: StringConstructor;
+                default: string | undefined;
+            };
+        }>> & {
+            onBeforeinput?: ((event: InputEvent) => any) | undefined;
+            onBlur?: ((event: FocusEvent) => any) | undefined;
+            onChange?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onFocus?: ((event: FocusEvent) => any) | undefined;
+            onInput?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onKeydown?: ((event: KeyboardEvent) => any) | undefined;
+            onKeyup?: ((event: KeyboardEvent) => any) | undefined;
+            onPaste?: ((event: ClipboardEvent) => any) | undefined;
+            onReset?: ((event: Event) => any) | undefined;
+        }, {
+            match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+            visible: boolean;
+            view: string;
+            type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+            special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+            right: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            visible: BooleanConstructor;
+            right: BooleanConstructor;
+            dir: import("vue").PropType<"ltr" | "rtl" | undefined>;
+            type: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskTypeItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+            };
+            name: StringConstructor;
+            value: (StringConstructor | NumberConstructor)[];
+            mask: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskList | undefined>;
+            special: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+            };
+            match: {
+                type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskMatchItem | undefined>;
+                default: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+            };
+            pattern: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            check: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+            fraction: (BooleanConstructor | StringConstructor | NumberConstructor)[];
+            currency: StringConstructor;
+            language: StringConstructor;
+            view: {
+                type: StringConstructor;
+                default: string | undefined;
+            };
+        }>> & {
+            onBeforeinput?: ((event: InputEvent) => any) | undefined;
+            onBlur?: ((event: FocusEvent) => any) | undefined;
+            onChange?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onFocus?: ((event: FocusEvent) => any) | undefined;
+            onInput?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+            onKeydown?: ((event: KeyboardEvent) => any) | undefined;
+            onKeyup?: ((event: KeyboardEvent) => any) | undefined;
+            onPaste?: ((event: ClipboardEvent) => any) | undefined;
+            onReset?: ((event: Event) => any) | undefined;
+        }, {}, {}, {}, {}, {
+            match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+            visible: boolean;
+            view: string;
+            type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+            special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+            right: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        visible: BooleanConstructor;
+        right: BooleanConstructor;
+        dir: import("vue").PropType<"ltr" | "rtl" | undefined>;
+        type: {
+            type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskTypeItem | undefined>;
+            default: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+        };
+        name: StringConstructor;
+        value: (StringConstructor | NumberConstructor)[];
+        mask: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskList | undefined>;
+        special: {
+            type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined>;
+            default: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+        };
+        match: {
+            type: import("vue").PropType<import("../constructors/Mask/typesBasic").MaskMatchItem | undefined>;
+            default: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+        };
+        pattern: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+        check: import("vue").PropType<import("../constructors/Input/typesBasic").InputPatternItemOrFunction | undefined>;
+        fraction: (BooleanConstructor | StringConstructor | NumberConstructor)[];
+        currency: StringConstructor;
+        language: StringConstructor;
+        view: {
+            type: StringConstructor;
+            default: string | undefined;
+        };
+    }>> & {
+        onBeforeinput?: ((event: InputEvent) => any) | undefined;
+        onBlur?: ((event: FocusEvent) => any) | undefined;
+        onChange?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+        onFocus?: ((event: FocusEvent) => any) | undefined;
+        onInput?: ((event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => any) | undefined;
+        onKeydown?: ((event: KeyboardEvent) => any) | undefined;
+        onKeyup?: ((event: KeyboardEvent) => any) | undefined;
+        onPaste?: ((event: ClipboardEvent) => any) | undefined;
+        onReset?: ((event: Event) => any) | undefined;
+    }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        beforeinput: (event: InputEvent) => void;
+        blur: (event: FocusEvent) => void;
+        change: (event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => void;
+        focus: (event: FocusEvent) => void;
+        input: (event: InputEvent, value: import("../constructors/Mask/typesBasic").MaskEventData) => void;
+        keydown: (event: KeyboardEvent) => void;
+        keyup: (event: KeyboardEvent) => void;
+        paste: (event: ClipboardEvent) => void;
+        reset: (event: Event) => void;
+    }, string, {
+        match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
+        visible: boolean;
+        view: string;
+        type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
+        special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
+        right: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/Mask/types").MaskSlots>;
+    });
     M3Mutation: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             disabled: BooleanConstructor;
