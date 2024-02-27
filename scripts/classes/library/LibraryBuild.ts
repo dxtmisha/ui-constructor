@@ -1,4 +1,5 @@
 import { PropertiesFile } from '../properties/PropertiesFile'
+import { LibraryItems } from './LibraryItems.ts'
 
 /**
  * A class for adding a link to styles in style files.<br>
@@ -7,24 +8,39 @@ import { PropertiesFile } from '../properties/PropertiesFile'
 export class LibraryBuild {
   private readonly paths = PropertiesFile.readDir(['dist'])
 
+  /**
+   * Constructor
+   * @param items object for working with the list of components /<br>объект для работы со списком компонентов
+   */
+  // eslint-disable-next-line no-useless-constructor
+  constructor (
+    protected readonly items: LibraryItems
+  ) {
+  }
+
   make () {
     const reg = /import([^;]+);/g
+    const regComponent = new RegExp(`^(${this.items.getDesigns().join('|')})`, 'i')
 
     this.paths.forEach(path => {
       if (path.match(/\.css$/)) {
-        // const name = PropertiesFile.parse(path)?.name
         const pathJs = this.getPath(path)
         const read = PropertiesFile.readFile<string>(pathJs)
 
         if (read) {
-          const imports = read.match(reg)
-          const file = [
-            imports?.join('') ?? '',
-            this.getStyle(path),
-            read.replace(reg, '')
-          ]
+          if (path.match(regComponent)) {
+            const imports = read.match(reg)
+            const file = [
+              imports?.join('') ?? '',
+              this.getStyle(path),
+              read.replace(reg, '')
+            ]
 
-          PropertiesFile.writeByPath(pathJs, file.join(''))
+            PropertiesFile.writeByPath(pathJs, file.join(''))
+          } else {
+            const name = PropertiesFile.parse(path)?.name
+            PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\n${read}`)
+          }
         }
       }
     })
@@ -54,11 +70,13 @@ export class LibraryBuild {
 
       data.push(
         '(function(){',
-        'if(typeof document !== undefined){',
+        'try {',
+        'if(typeof document !== undefined && document && \'createElement\' in document){',
         'let s=document.createElement(\'style\');',
         `s.appendChild(document.createTextNode('${file}'));`,
         'document.head.appendChild(s);',
         '}',
+        '}const (_){}',
         '})()'
       )
     }

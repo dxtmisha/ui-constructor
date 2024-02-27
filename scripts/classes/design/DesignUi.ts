@@ -96,7 +96,7 @@ export class DesignUi {
   }
 
   makeBuild (): void {
-    new LibraryBuild().make()
+    new LibraryBuild(this.components).make()
 
     new LibraryTypes(this.components).makePlugin()
     new LibraryPackage(this.components).make()

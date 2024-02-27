@@ -1,4 +1,4 @@
-import { defineComponent as a, computed as o, openBlock as u, createBlock as M, resolveDynamicComponent as l, unref as d } from "vue";import { p as f, M as _ } from "./props-C42LuSxJ.js";import { M3MutationItem as k } from "./M3MutationItem.js";(function(){if(typeof document !== undefined){let s=document.createElement('style');s.appendChild(document.createTextNode('.m3-mutation{display:none}*[data-ui]:not(.d-mutation--end){display:none}*[data-ui].d-mutation--end{display:unset!important}'));document.head.appendChild(s);}})()
+import { defineComponent as a, computed as o, openBlock as u, createBlock as M, resolveDynamicComponent as l, unref as d } from "vue";import { p as f, M as _ } from "./props-C42LuSxJ.js";import { M3MutationItem as k } from "./M3MutationItem.js";(function(){try {if(typeof document !== undefined && document && 'createElement' in document){let s=document.createElement('style');s.appendChild(document.createTextNode('.m3-mutation{display:none}*[data-ui]:not(.d-mutation--end){display:none}*[data-ui].d-mutation--end{display:unset!important}'));document.head.appendChild(s);}}const (_){}})()
 
 
 const x = {
