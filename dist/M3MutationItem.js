@@ -1,5 +1,6 @@
-import { defineComponent as p, computed as e, openBlock as u, createBlock as M, resolveDynamicComponent as l, unref as I } from "vue";import { p as d, M as _ } from "./props-Cbi6M5Ad.js";(function(){try {if(typeof document !== undefined && document && 'createElement' in document){let s=document.createElement('style');s.appendChild(document.createTextNode('.m3-mutationItem{--m3-mutationItem-main: var(--d-mutationItem)}'));document.head.appendChild(s);}}catch (_){}})()
-
+import './M3MutationItem.css';
+import { defineComponent as p, computed as e, openBlock as u, createBlock as M, resolveDynamicComponent as l, unref as I } from "vue";
+import { p as d, M as _ } from "./props-Cbi6M5Ad.js";
 const f = {
   ...d
 }, k = /* @__PURE__ */ p({

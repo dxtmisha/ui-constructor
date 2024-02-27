@@ -20,7 +20,7 @@ export class LibraryBuild {
 
   make () {
     const reg = /import([^;]+);/g
-    const regComponent = new RegExp(`^(${this.items.getDesigns().join('|')})`, 'i')
+    const regComponent = new RegExp(`^NONE-(${this.items.getDesigns().join('|')})`, 'i')
 
     this.paths.forEach(path => {
       if (path.match(/\.css$/)) {

@@ -45,7 +45,8 @@ export class LibraryNuxt {
           '    await addComponent({',
           `      name: '${component.codeFull}',`,
           `      export: '${component.codeFull}',`,
-          `      filePath: '${main.name}/${component.codeFull}'`,
+          `      filePath: '${main.name}/${component.codeFull}',`,
+          '      global: true',
           '    })'
         )
       })
@@ -68,8 +69,7 @@ export class LibraryNuxt {
           '',
           '    addImports({',
           `      name: '${toCamelCase(`${main.name}-${LIBRARY_PLUGIN_BASIC}`)}',`,
-          `      from: '${main.name}/${LIBRARY_PLUGIN_BASIC}',`,
-          '      type: true',
+          `      from: '${main.name}/${LIBRARY_PLUGIN_BASIC}'`,
           '    })',
           '',
           ...data,
