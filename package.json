@@ -39,6 +39,7 @@
   "module": "./dist/index.js",
   "types": "./dist/library/index.d.ts",
   "dependencies": {
+    "@nuxt/kit": "^3.10.3",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "sass": "^1.71.0",
@@ -150,6 +151,16 @@
       "import": "./dist/main.js",
       "require": "./dist/main.umd.cjs",
       "types": "./dist/library/main.d.ts"
+    },
+    "./nuxt": {
+      "import": "./dist/nuxt.js",
+      "require": "./dist/nuxt.umd.cjs",
+      "types": "./dist/library/nuxt.d.ts"
+    },
+    "./nuxt-plugin": {
+      "import": "./dist/nuxt-plugin.js",
+      "require": "./dist/nuxt-plugin.umd.cjs",
+      "types": "./dist/library/nuxt-plugin.d.ts"
     },
     "./style.css": "./dist/plugin.css",
     "./style-basic.css": "./dist/plugin-basic.css",

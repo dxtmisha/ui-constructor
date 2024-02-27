@@ -24,6 +24,7 @@ import { LibraryTypes } from '../library/LibraryTypes'
 
 import { LibraryBuild } from '../library/LibraryBuild'
 import { LibraryPackage } from '../library/LibraryPackage'
+import { LibraryNuxt } from '../library/LibraryNuxt.ts'
 
 config()
 
@@ -90,6 +91,8 @@ export class DesignUi {
 
     new LibraryStyle(this.components).make()
     new LibraryTypes(this.components).make()
+
+    new LibraryNuxt(this.components).make()
   }
 
   makeBuild (): void {

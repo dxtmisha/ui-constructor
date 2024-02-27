@@ -65,7 +65,9 @@ export default defineConfig(() => {
               'plugin-m2',
               'plugin-m3',
               'plugin-basic',
-              'main'
+              'main',
+              'nuxt',
+              'nuxt-plugin'
             ]
 
             list.forEach(item => {
@@ -86,6 +88,7 @@ export default defineConfig(() => {
       },
       rollupOptions: {
         external: [
+          '@nuxt/kit',
           'vue',
           'vue-router',
           'ui'

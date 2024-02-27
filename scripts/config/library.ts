@@ -16,6 +16,8 @@ export const LIBRARY_COMPONENTS = 'components'
 export const LIBRARY_PLUGIN = 'plugin'
 export const LIBRARY_PLUGIN_BASIC = 'plugin-basic'
 export const LIBRARY_MAIN = 'main'
+export const LIBRARY_NUXT = 'nuxt'
+export const LIBRARY_NUXT_PLUGIN = 'nuxt-plugin'
 export const LIBRARY_STYLE = 'style'
 export const LIBRARY_STYLE_BASIC = 'style-basic'
 export const LIBRARY_TYPES = 'types'
@@ -37,6 +39,8 @@ export const LIBRARY_LIST_FILES = [
   `${LIBRARY_PLUGIN}-m3`,
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_MAIN,
+  LIBRARY_NUXT,
+  LIBRARY_NUXT_PLUGIN,
   `${LIBRARY_STYLE}.scss`,
   `${LIBRARY_STYLE_BASIC}.scss`
 ]
