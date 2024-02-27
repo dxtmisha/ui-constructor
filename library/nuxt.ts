@@ -10,10 +10,14 @@ export default defineNuxtModule({
   },
   async setup (_, nuxt) {
     nuxt.options.css.push('ui/style.css')
+    nuxt.options.build.transpile = [
+      /ui\/dist\/(m2|m3|c1|c2)/i
+    ]
 
     addImports({
       name: 'uiPluginBasic',
-      from: 'ui/plugin-basic'
+      from: 'ui/plugin-basic',
+      type: true
     })
 
     await addComponent({

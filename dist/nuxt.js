@@ -5,9 +5,12 @@ const u = e({
     version: "0.0.0-dev.3"
   },
   async setup(o, a) {
-    a.options.css.push("ui/style.css"), i({
+    a.options.css.push("ui/style.css"), a.options.build.transpile = [
+      /ui\/dist\/(m2|m3|c1|c2)/i
+    ], i({
       name: "uiPluginBasic",
-      from: "ui/plugin-basic"
+      from: "ui/plugin-basic",
+      type: !0
     }), await t({
       name: "M2Button",
       export: "M2Button",
