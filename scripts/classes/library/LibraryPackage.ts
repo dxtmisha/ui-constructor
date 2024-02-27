@@ -16,6 +16,7 @@ const EXPORTS_DEFAULT = {
     types: `./dist/${LIBRARY_DIR}/index.d.ts`
   },
   './styles/*': './styles/*',
+  './dist/*': './dist/*',
   './book/*': './book/*',
   './*': './*'
 }
@@ -84,6 +85,7 @@ export class LibraryPackage {
       data[`./${component.codeFull}`] = {
         import: `./dist/${component.codeFull}.js`,
         require: `./dist/${component.codeFull}.umd.cjs`,
+        style: `./dist/${component.codeFull}.css`,
         types: `./dist/${component.design}/${component.dir}/index.d.ts`
       }
     })

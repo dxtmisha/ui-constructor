@@ -21,6 +21,7 @@ export class LibraryBuild {
   make () {
     const reg = /import([^;]+);/g
     const regComponent = new RegExp(`^NONE-(${this.items.getDesigns().join('|')})`, 'i')
+    const regVue = new RegExp(`^(${this.items.getDesigns().join('|')})`, 'i')
 
     this.paths.forEach(path => {
       if (path.match(/\.css$/)) {
@@ -28,6 +29,8 @@ export class LibraryBuild {
         const read = PropertiesFile.readFile<string>(pathJs)
 
         if (read) {
+          const name = PropertiesFile.parse(path)?.name
+
           if (path.match(regComponent)) {
             const imports = read.match(reg)
             const file = [
@@ -37,8 +40,21 @@ export class LibraryBuild {
             ]
 
             PropertiesFile.writeByPath(pathJs, file.join(''))
+          } else if (regVue) {
+            const pathVue = ['dist', `${name}.vue`]
+            PropertiesFile.writeByPath(['dist', `${name}-script.js`], read)
+            PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\nexport {${name}} from './${name}-script.js';`)
+            PropertiesFile.writeByPath(pathVue, [
+              '<script lang="js">',
+              `import {${name}} from './${name}-script.js';`,
+              `export default ${name};`,
+              '</script>',
+              '<style lang="css">',
+              `@import './${name}.css';`,
+              '</style>',
+              '\r\n'
+            ].join(''))
           } else {
-            const name = PropertiesFile.parse(path)?.name
             PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\n${read}`)
           }
         }

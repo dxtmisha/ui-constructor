@@ -1,114 +1,90 @@
-import { defineNuxtModule as e, addImports as i, addComponent as t } from "@nuxt/kit";
-const u = e({
+import { defineNuxtModule as t, addImports as e, addComponent as i } from "@nuxt/kit";
+const s = t({
   meta: {
     name: "ui",
     version: "0.0.0-dev.3"
   },
-  async setup(o, a) {
+  async setup(u, a) {
     a.options.css.push("ui/style.css"), a.options.build.transpile = [
       /ui\/dist\/(m2|m3|c1|c2)/i
-    ], i({
+    ], e({
       name: "uiPluginBasic",
       from: "ui/plugin-basic"
-    }), await t({
+    }), await i({
       name: "M2Button",
-      export: "M2Button",
-      filePath: "ui/M2Button"
-    }), await t({
+      filePath: "ui/dist/M2Button.vue"
+    }), await i({
       name: "M2Icon",
-      export: "M2Icon",
-      filePath: "ui/M2Icon"
-    }), await t({
+      filePath: "ui/dist/M2Icon.vue"
+    }), await i({
       name: "M2Image",
-      export: "M2Image",
-      filePath: "ui/M2Image"
-    }), await t({
+      filePath: "ui/dist/M2Image.vue"
+    }), await i({
       name: "M2Progress",
-      export: "M2Progress",
-      filePath: "ui/M2Progress"
-    }), await t({
+      filePath: "ui/dist/M2Progress.vue"
+    }), await i({
       name: "M2Ripple",
-      export: "M2Ripple",
-      filePath: "ui/M2Ripple"
-    }), await t({
+      filePath: "ui/dist/M2Ripple.vue"
+    }), await i({
       name: "M3Button",
-      export: "M3Button",
-      filePath: "ui/M3Button"
-    }), await t({
+      filePath: "ui/dist/M3Button.vue"
+    }), await i({
       name: "M3Icon",
-      export: "M3Icon",
-      filePath: "ui/M3Icon"
-    }), await t({
+      filePath: "ui/dist/M3Icon.vue"
+    }), await i({
       name: "M3Image",
-      export: "M3Image",
-      filePath: "ui/M3Image"
-    }), await t({
+      filePath: "ui/dist/M3Image.vue"
+    }), await i({
       name: "M3Mutation",
-      export: "M3Mutation",
-      filePath: "ui/M3Mutation"
-    }), await t({
+      filePath: "ui/dist/M3Mutation.vue"
+    }), await i({
       name: "M3MutationItem",
-      export: "M3MutationItem",
-      filePath: "ui/M3MutationItem"
-    }), await t({
+      filePath: "ui/dist/M3MutationItem.vue"
+    }), await i({
       name: "M3Progress",
-      export: "M3Progress",
-      filePath: "ui/M3Progress"
-    }), await t({
+      filePath: "ui/dist/M3Progress.vue"
+    }), await i({
       name: "M3Ripple",
-      export: "M3Ripple",
-      filePath: "ui/M3Ripple"
-    }), await t({
+      filePath: "ui/dist/M3Ripple.vue"
+    }), await i({
       name: "C1Button",
-      export: "C1Button",
-      filePath: "ui/C1Button"
-    }), await t({
+      filePath: "ui/dist/C1Button.vue"
+    }), await i({
       name: "C1Icon",
-      export: "C1Icon",
-      filePath: "ui/C1Icon"
-    }), await t({
+      filePath: "ui/dist/C1Icon.vue"
+    }), await i({
       name: "C1Image",
-      export: "C1Image",
-      filePath: "ui/C1Image"
-    }), await t({
+      filePath: "ui/dist/C1Image.vue"
+    }), await i({
       name: "C1Progress",
-      export: "C1Progress",
-      filePath: "ui/C1Progress"
-    }), await t({
+      filePath: "ui/dist/C1Progress.vue"
+    }), await i({
       name: "C1Ripple",
-      export: "C1Ripple",
-      filePath: "ui/C1Ripple"
-    }), await t({
+      filePath: "ui/dist/C1Ripple.vue"
+    }), await i({
       name: "C2Button",
-      export: "C2Button",
-      filePath: "ui/C2Button"
-    }), await t({
+      filePath: "ui/dist/C2Button.vue"
+    }), await i({
       name: "C2Icon",
-      export: "C2Icon",
-      filePath: "ui/C2Icon"
-    }), await t({
+      filePath: "ui/dist/C2Icon.vue"
+    }), await i({
       name: "C2Image",
-      export: "C2Image",
-      filePath: "ui/C2Image"
-    }), await t({
+      filePath: "ui/dist/C2Image.vue"
+    }), await i({
       name: "C2Mutation",
-      export: "C2Mutation",
-      filePath: "ui/C2Mutation"
-    }), await t({
+      filePath: "ui/dist/C2Mutation.vue"
+    }), await i({
       name: "C2MutationItem",
-      export: "C2MutationItem",
-      filePath: "ui/C2MutationItem"
-    }), await t({
+      filePath: "ui/dist/C2MutationItem.vue"
+    }), await i({
       name: "C2Progress",
-      export: "C2Progress",
-      filePath: "ui/C2Progress"
-    }), await t({
+      filePath: "ui/dist/C2Progress.vue"
+    }), await i({
       name: "C2Ripple",
-      export: "C2Ripple",
-      filePath: "ui/C2Ripple"
+      filePath: "ui/dist/C2Ripple.vue"
     });
   }
 });
 export {
-  u as default
+  s as default
 };
