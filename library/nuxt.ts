@@ -21,123 +21,123 @@ export default defineNuxtModule({
 
     await addComponent({
       name: 'M2Button',
-      filePath: 'ui/M2Button',
-      global: true
+      export: 'M2Button',
+      filePath: 'ui/M2Button'
     })
     await addComponent({
       name: 'M2Icon',
-      filePath: 'ui/M2Icon',
-      global: true
+      export: 'M2Icon',
+      filePath: 'ui/M2Icon'
     })
     await addComponent({
       name: 'M2Image',
-      filePath: 'ui/M2Image',
-      global: true
+      export: 'M2Image',
+      filePath: 'ui/M2Image'
     })
     await addComponent({
       name: 'M2Progress',
-      filePath: 'ui/M2Progress',
-      global: true
+      export: 'M2Progress',
+      filePath: 'ui/M2Progress'
     })
     await addComponent({
       name: 'M2Ripple',
-      filePath: 'ui/M2Ripple',
-      global: true
+      export: 'M2Ripple',
+      filePath: 'ui/M2Ripple'
     })
     await addComponent({
       name: 'M3Button',
-      filePath: 'ui/M3Button',
-      global: true
+      export: 'M3Button',
+      filePath: 'ui/M3Button'
     })
     await addComponent({
       name: 'M3Icon',
-      filePath: 'ui/M3Icon',
-      global: true
+      export: 'M3Icon',
+      filePath: 'ui/M3Icon'
     })
     await addComponent({
       name: 'M3Image',
-      filePath: 'ui/M3Image',
-      global: true
+      export: 'M3Image',
+      filePath: 'ui/M3Image'
     })
     await addComponent({
       name: 'M3Mutation',
-      filePath: 'ui/M3Mutation',
-      global: true
+      export: 'M3Mutation',
+      filePath: 'ui/M3Mutation'
     })
     await addComponent({
       name: 'M3MutationItem',
-      filePath: 'ui/M3MutationItem',
-      global: true
+      export: 'M3MutationItem',
+      filePath: 'ui/M3MutationItem'
     })
     await addComponent({
       name: 'M3Progress',
-      filePath: 'ui/M3Progress',
-      global: true
+      export: 'M3Progress',
+      filePath: 'ui/M3Progress'
     })
     await addComponent({
       name: 'M3Ripple',
-      filePath: 'ui/M3Ripple',
-      global: true
+      export: 'M3Ripple',
+      filePath: 'ui/M3Ripple'
     })
     await addComponent({
       name: 'C1Button',
-      filePath: 'ui/C1Button',
-      global: true
+      export: 'C1Button',
+      filePath: 'ui/C1Button'
     })
     await addComponent({
       name: 'C1Icon',
-      filePath: 'ui/C1Icon',
-      global: true
+      export: 'C1Icon',
+      filePath: 'ui/C1Icon'
     })
     await addComponent({
       name: 'C1Image',
-      filePath: 'ui/C1Image',
-      global: true
+      export: 'C1Image',
+      filePath: 'ui/C1Image'
     })
     await addComponent({
       name: 'C1Progress',
-      filePath: 'ui/C1Progress',
-      global: true
+      export: 'C1Progress',
+      filePath: 'ui/C1Progress'
     })
     await addComponent({
       name: 'C1Ripple',
-      filePath: 'ui/C1Ripple',
-      global: true
+      export: 'C1Ripple',
+      filePath: 'ui/C1Ripple'
     })
     await addComponent({
       name: 'C2Button',
-      filePath: 'ui/C2Button',
-      global: true
+      export: 'C2Button',
+      filePath: 'ui/C2Button'
     })
     await addComponent({
       name: 'C2Icon',
-      filePath: 'ui/C2Icon',
-      global: true
+      export: 'C2Icon',
+      filePath: 'ui/C2Icon'
     })
     await addComponent({
       name: 'C2Image',
-      filePath: 'ui/C2Image',
-      global: true
+      export: 'C2Image',
+      filePath: 'ui/C2Image'
     })
     await addComponent({
       name: 'C2Mutation',
-      filePath: 'ui/C2Mutation',
-      global: true
+      export: 'C2Mutation',
+      filePath: 'ui/C2Mutation'
     })
     await addComponent({
       name: 'C2MutationItem',
-      filePath: 'ui/C2MutationItem',
-      global: true
+      export: 'C2MutationItem',
+      filePath: 'ui/C2MutationItem'
     })
     await addComponent({
       name: 'C2Progress',
-      filePath: 'ui/C2Progress',
-      global: true
+      export: 'C2Progress',
+      filePath: 'ui/C2Progress'
     })
     await addComponent({
       name: 'C2Ripple',
-      filePath: 'ui/C2Ripple',
-      global: true
+      export: 'C2Ripple',
+      filePath: 'ui/C2Ripple'
     })
   }
 })
