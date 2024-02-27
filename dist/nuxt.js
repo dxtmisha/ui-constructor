@@ -47,6 +47,12 @@ const s = t({
       name: "M3Ripple",
       filePath: "ui/dist/M3Ripple.vue"
     }), await i({
+      name: "M3Scrollbar",
+      filePath: "ui/dist/M3Scrollbar.vue"
+    }), await i({
+      name: "M3Window",
+      filePath: "ui/dist/M3Window.vue"
+    }), await i({
       name: "C1Button",
       filePath: "ui/dist/C1Button.vue"
     }), await i({

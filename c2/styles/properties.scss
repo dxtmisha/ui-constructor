@@ -900,6 +900,476 @@ $designsProperties: (
           ),
         ),
       ),
+      'scrollbar':(
+        index: 'scrollbar',
+        name: 'd-scrollbar',
+        type: 'component',
+        value: (
+          'thumb':(
+            index: 'thumb',
+            name: 'thumb',
+            type: 'var',
+            value: (
+              'hover':(
+                index: 'hover',
+                name: 'hover',
+                type: 'var',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'outline':(
+            index: 'outline',
+            name: 'outline',
+            type: 'var',
+            value: (
+            ),
+          ),
+          'visible':(
+            index: 'visible',
+            name: '&--visible',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'window':(
+        index: 'window',
+        name: 'd-window',
+        type: 'component',
+        value: (
+          'menuSizeMultiplier':(
+            index: 'menuSizeMultiplier',
+            name: '--d-window-menuSizeMultiplier',
+            type: 'var',
+            value: 1,
+          ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+              'context':(
+                index: 'context',
+                name: '&__context',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'control':(
+            index: 'control',
+            name: '&__control',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'width':(
+            index: 'width',
+            name: '&--width',
+            type: 'state',
+            value: (
+              'auto':(
+                index: 'auto',
+                name: '&--auto',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--d-window-width',
+                    type: 'var',
+                    value: 'auto',
+                  ),
+                ),
+              ),
+              'max':(
+                index: 'max',
+                name: '&--max',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--d-window-width',
+                    type: 'var',
+                    value: 100%,
+                  ),
+                ),
+              ),
+              'custom':(
+                index: 'custom',
+                name: '&--custom',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--d-window-width',
+                    type: 'var',
+                    value: 'var(--d-window-sys-width)',
+                  ),
+                ),
+              ),
+            ),
+            var: true,
+          ),
+          'height':(
+            index: 'height',
+            name: '&--height',
+            type: 'state',
+            value: (
+              'auto':(
+                index: 'auto',
+                name: '&--auto',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--d-window-height',
+                    type: 'var',
+                    value: 'auto',
+                  ),
+                ),
+              ),
+              'max':(
+                index: 'max',
+                name: '&--max',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--d-window-height',
+                    type: 'var',
+                    value: 100%,
+                  ),
+                ),
+              ),
+              'custom':(
+                index: 'custom',
+                name: '&--custom',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--d-window-height',
+                    type: 'var',
+                    value: 'var(--d-window-sys-height)',
+                  ),
+                ),
+              ),
+            ),
+            var: true,
+          ),
+          'adaptive':(
+            index: 'adaptive',
+            name: '&--adaptive',
+            type: 'state',
+            value: (
+              'menu':(
+                index: 'menu',
+                name: '&--menu',
+                type: 'state',
+                value: (
+                  'menuSizeMultiplier':(
+                    index: 'menuSizeMultiplier',
+                    name: '--d-window-menuSizeMultiplier',
+                    type: 'var',
+                    value: 0.5,
+                  ),
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: '--d-window-backgroundOpacity',
+                    type: 'var',
+                    value: 0,
+                  ),
+                  'transformOrigin':(
+                    index: 'transformOrigin',
+                    name: '--d-window-transformOrigin',
+                    type: 'var',
+                    value: 'var(--d-window-origin-x) var(--d-window-origin-y)',
+                  ),
+                  'top':(
+                    index: 'top',
+                    name: 'top',
+                    type: 'property',
+                    value: 'var(--d-window-sys-inset-y)',
+                  ),
+                  'right':(
+                    index: 'right',
+                    name: 'right',
+                    type: 'property',
+                    value: 'auto',
+                  ),
+                  'bottom':(
+                    index: 'bottom',
+                    name: 'bottom',
+                    type: 'property',
+                    value: 'auto',
+                  ),
+                  'left':(
+                    index: 'left',
+                    name: 'left',
+                    type: 'property',
+                    value: 'var(--d-window-sys-inset-x)',
+                  ),
+                  'padding':(
+                    index: 'padding',
+                    name: 'padding',
+                    type: 'property',
+                    value: 0,
+                  ),
+                  'content':(
+                    index: 'content',
+                    name: 'content',
+                    type: 'property',
+                    value: ''--MENU--'',
+                  ),
+                  'body':(
+                    index: 'body',
+                    name: '& .d-window__body',
+                    type: 'subclass',
+                    value: (
+                      'top':(
+                        index: 'top',
+                        name: 'top',
+                        type: 'property',
+                        value: 'auto',
+                      ),
+                      'maxWidth':(
+                        index: 'maxWidth',
+                        name: 'max-width',
+                        type: 'property',
+                        value: 'calc(100dvw - (var(--d-window-padding) * 2))',
+                      ),
+                      'maxHeight':(
+                        index: 'maxHeight',
+                        name: 'max-height',
+                        type: 'property',
+                        value: 'calc(100dvh - (var(--d-window-padding) * 2))',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'modal':(
+                index: 'modal',
+                name: '&--modal',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'modalDynamic':(
+                index: 'modalDynamic',
+                name: '&--modalDynamic',
+                type: 'state',
+                value: (
+                  '&.??--location':(
+                    index: '&.??--location',
+                    name: '&.d-window--location',
+                    type: 'scss',
+                    value: (
+                      'center':(
+                        index: 'center',
+                        name: '&--center',
+                        type: 'state',
+                        value: (
+                        ),
+                      ),
+                      'top':(
+                        index: 'top',
+                        name: '&--top',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-start',
+                          ),
+                        ),
+                      ),
+                      'bottom':(
+                        index: 'bottom',
+                        name: '&--bottom',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-end',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'static':(
+                index: 'static',
+                name: '&--static',
+                type: 'state',
+                value: (
+                  'content':(
+                    index: 'content',
+                    name: 'content',
+                    type: 'property',
+                    value: ''--STATIC--'',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'overscroll':(
+            index: 'overscroll',
+            name: '&--overscroll',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'fullscreen':(
+            index: 'fullscreen',
+            name: '&--fullscreen',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'alignment':(
+            index: 'alignment',
+            name: '&--alignment',
+            type: 'state',
+            value: (
+              'center':(
+                index: 'center',
+                name: '&--center',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'right':(
+                index: 'right',
+                name: '&--right',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'left':(
+                index: 'left',
+                name: '&--left',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'origin':(
+            index: 'origin',
+            name: '&--origin',
+            type: 'state',
+            value: (
+              'center':(
+                index: 'center',
+                name: '&--center',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'right':(
+                index: 'right',
+                name: '&--right',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'left':(
+                index: 'left',
+                name: '&--left',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'topToBottom':(
+                index: 'topToBottom',
+                name: '&--topToBottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'rightToLeft':(
+                index: 'rightToLeft',
+                name: '&--rightToLeft',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottomToTop':(
+                index: 'bottomToTop',
+                name: '&--bottomToTop',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'leftToRight':(
+                index: 'leftToRight',
+                name: '&--leftToRight',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     ),
   ),
   'c2':(

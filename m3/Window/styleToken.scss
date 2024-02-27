@@ -1,0 +1,183 @@
+@import "../../styles/all";
+
+@mixin mixinWindowToken {
+  // :style [!] System label / Системная метка
+  --m3-window-menuSizeMultiplier: 1;
+  --m3-window-padding: var(--m3-ref-spacing-4);
+  --m3-window-backgroundColor: var(--m3-sys-palette-scrim);
+  --m3-window-backgroundOpacity: var(--m3-sys-opacity-scrim);
+  
+  z-index: var(--m3-ref-index-4);
+  
+  &__body {
+    z-index: var(--m3-ref-index-4);
+    
+    background: var(--m3-ref-background-4);
+    
+    border-radius: var(--m3-sys-rounded-2xl);
+    
+    box-shadow: var(--m3-ref-shadow-4);
+  }
+  
+  &--width {
+    &--auto {
+      --m3-window-width: auto;
+    }
+    
+    &--max {
+      --m3-window-width: 100%;
+    }
+    
+    &--sm {
+      --m3-window-width: calc(var(--m3-ref-spacing-px) * 512);
+    }
+    
+    &--md {
+      --m3-window-width: calc(var(--m3-ref-spacing-px) * 768);
+    }
+    
+    &--lg {
+      --m3-window-width: calc(var(--m3-ref-spacing-px) * 1024);
+    }
+    
+    &--custom {
+      --m3-window-width: var(--m3-window-sys-width);
+    }
+  }
+  
+  &--height {
+    &--auto {
+      --m3-window-height: auto;
+    }
+    
+    &--max {
+      --m3-window-height: 100%;
+    }
+    
+    &--sm {
+      --m3-window-height: calc(var(--m3-ref-spacing-px) * 256);
+    }
+    
+    &--md {
+      --m3-window-height: calc(var(--m3-ref-spacing-px) * 384);
+    }
+    
+    &--lg {
+      --m3-window-height: calc(var(--m3-ref-spacing-px) * 512);
+    }
+    
+    &--custom {
+      --m3-window-height: var(--m3-window-sys-height);
+    }
+  }
+  
+  &--adaptive {
+    &--menu {
+      --m3-window-menuSizeMultiplier: 0.5;
+      --m3-window-backgroundOpacity: 0;
+      --m3-window-transformOrigin: var(--m3-window-origin-x) var(--m3-window-origin-y);
+      
+      top: var(--m3-window-sys-inset-y);
+      @include right(#{auto});
+      bottom: auto;
+      @include left(#{var(--m3-window-sys-inset-x)});
+      
+      padding: 0;
+      
+      content: '--MENU--';
+      
+      & .m3-window__body {
+        z-index: var(--m3-ref-index-2);
+        top: auto;
+        
+        max-width: calc(100dvw - (var(--m3-window-padding) * 2));
+        max-height: calc(100dvh - (var(--m3-window-padding) * 2));
+        
+        background: var(--m3-ref-background-2);
+        
+        border-radius: var(--m3-sys-rounded-sm);
+        
+        box-shadow: var(--m3-ref-shadow-2);
+      }
+    }
+    
+    &--modalDynamic {
+      &.m3-window--location {
+        &--top {
+          align-items: flex-start;
+        }
+        
+        &--bottom {
+          align-items: flex-end;
+        }
+      }
+    }
+    
+    &--static {
+      content: '--STATIC--';
+    }
+    
+    &--auto {
+      padding-top: var(--m3-ref-spacing-12);
+      padding-bottom: var(--m3-ref-spacing-12);
+      
+      &.m3-window--location {
+        &--top {
+          align-items: flex-start;
+        }
+        
+        &--bottom {
+          align-items: flex-end;
+        }
+      }
+      
+      @media screen and (min-width: 600px) {
+        --m3-window-menuSizeMultiplier: 0.5;
+        --m3-window-backgroundOpacity: 0;
+        --m3-window-transformOrigin: var(--m3-window-origin-x) var(--m3-window-origin-y);
+        
+        top: var(--m3-window-sys-inset-y);
+        @include right(#{auto});
+        bottom: auto;
+        @include left(#{var(--m3-window-sys-inset-x)});
+        
+        padding: 0;
+        
+        content: '--MENU--';
+        
+        & .m3-window__body {
+          z-index: var(--m3-ref-index-2);
+          top: auto;
+          
+          max-width: calc(100dvw - (var(--m3-window-padding) * 2));
+          max-height: calc(100dvh - (var(--m3-window-padding) * 2));
+          
+          background: var(--m3-ref-background-2);
+          
+          border-radius: var(--m3-sys-rounded-sm);
+          
+          box-shadow: var(--m3-ref-shadow-2);
+        }
+      }
+    }
+    
+    &--staticSm {
+      @media screen and (min-width: 600px) {
+        content: '--STATIC--';
+      }
+    }
+    
+    &--staticMd {
+      @media screen and (min-width: 905px) {
+        content: '--STATIC--';
+      }
+    }
+    
+    &--staticLg {
+      @media screen and (min-width: 1280px) {
+        content: '--STATIC--';
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

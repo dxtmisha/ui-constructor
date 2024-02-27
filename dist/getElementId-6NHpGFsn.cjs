@@ -1,1 +1,0 @@
-"use strict";const d=require("./getElement-BOMHgffA.cjs"),o=require("./Api-BZYZ3fW3.cjs");function r(e,i){return Math.floor(Math.random()*(i-e+1)+e)}let n=r(1e5,9e5);function u(e,i){const t=d.getElement(e);return t?(o.isFilled(t.id)||t.setAttribute("id",`id-${n++}`),i?`#${t.id}${i}`.trim():t.id):`id-${n++}`}exports.getElementId=u;exports.random=r;

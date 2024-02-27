@@ -11,6 +11,8 @@ import { M3Mutation } from '../m3/Mutation'
 import { M3MutationItem } from '../m3/MutationItem'
 import { M3Progress } from '../m3/Progress'
 import { M3Ripple } from '../m3/Ripple'
+import { M3Scrollbar } from '../m3/Scrollbar'
+import { M3Window } from '../m3/Window'
 
 export const components = {
   M3Button,
@@ -19,7 +21,9 @@ export const components = {
   M3Mutation,
   M3MutationItem,
   M3Progress,
-  M3Ripple
+  M3Ripple,
+  M3Scrollbar,
+  M3Window
 }
 
 export const uiM3ComponentsPlugin = {

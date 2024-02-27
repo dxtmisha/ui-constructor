@@ -50,6 +50,14 @@ declare module 'ui/M3Ripple' {
   export { M3Ripple } from 'ui/m3/Ripple'
 }
 
+declare module 'ui/M3Scrollbar' {
+  export { M3Scrollbar } from 'ui/m3/Scrollbar'
+}
+
+declare module 'ui/M3Window' {
+  export { M3Window } from 'ui/m3/Window'
+}
+
 declare module 'ui/C1Button' {
   export { C1Button } from 'ui/c1/Button'
 }

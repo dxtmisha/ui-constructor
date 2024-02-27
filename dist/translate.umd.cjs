@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./Translate-BDuzHUXT.cjs"),r=async a=>{await t.Translate.addNormalOrSync(a)};exports.registrationUiTranslate=r;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./Translate-CGVHNNfm.cjs"),r=async a=>{await t.Translate.addNormalOrSync(a)};exports.registrationUiTranslate=r;

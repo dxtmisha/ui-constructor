@@ -68,6 +68,14 @@ export default defineNuxtModule({
       filePath: 'ui/dist/M3Ripple.vue'
     })
     await addComponent({
+      name: 'M3Scrollbar',
+      filePath: 'ui/dist/M3Scrollbar.vue'
+    })
+    await addComponent({
+      name: 'M3Window',
+      filePath: 'ui/dist/M3Window.vue'
+    })
+    await addComponent({
       name: 'C1Button',
       filePath: 'ui/dist/C1Button.vue'
     })
