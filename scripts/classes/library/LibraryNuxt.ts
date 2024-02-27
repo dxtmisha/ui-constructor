@@ -44,7 +44,7 @@ export class LibraryNuxt {
         data.push(
           '    await addComponent({',
           `      name: '${component.codeFull}',`,
-          `      export: '${component.codeFull}',`,
+          // `      export: '${component.codeFull}',`,
           `      filePath: '${main.name}/${component.codeFull}',`,
           '      global: true',
           '    })'
