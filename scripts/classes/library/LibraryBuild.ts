@@ -8,14 +8,23 @@ export class LibraryBuild {
   private readonly paths = PropertiesFile.readDir(['dist'])
 
   make () {
+    const reg = /import([^;]+);/g
+
     this.paths.forEach(path => {
       if (path.match(/\.css$/)) {
-        const name = PropertiesFile.parse(path)?.name
+        // const name = PropertiesFile.parse(path)?.name
         const pathJs = this.getPath(path)
-        const read = PropertiesFile.readFile(pathJs)
+        const read = PropertiesFile.readFile<string>(pathJs)
 
         if (read) {
-          PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\n${read}`)
+          const imports = read.match(reg)
+          const file = [
+            imports?.join('') ?? '',
+            this.getStyle(path),
+            read.replace(reg, '')
+          ]
+
+          PropertiesFile.writeByPath(pathJs, file.join(''))
         }
       }
     })
@@ -31,5 +40,29 @@ export class LibraryBuild {
     }
 
     return ['dist', path.replace(/\.css$/, '.js')]
+  }
+
+  private getStyle (path: string): string {
+    const read = PropertiesFile.readFile<string>(['dist', path])
+    const data = []
+
+    if (read) {
+      const file = read
+        .replace(/(?<!\\)'/g, '\\\'')
+        .replace(/\r\n/, ';')
+        .trim()
+
+      data.push(
+        '(function(){',
+        'if(typeof document !== undefined){',
+        'let s=document.createElement(\'style\');',
+        `s.appendChild(document.createTextNode('${file}'));`,
+        'document.head.appendChild(s);',
+        '}',
+        '})()'
+      )
+    }
+
+    return data.join('')
   }
 }

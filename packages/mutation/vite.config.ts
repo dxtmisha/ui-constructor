@@ -11,8 +11,5 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11']
     })
   ],
-  base: '/ui/',
-  build: {
-    assetsInlineLimit: 0
-  }
+  base: '/ui/'
 })

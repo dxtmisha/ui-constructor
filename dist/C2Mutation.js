@@ -1,7 +1,6 @@
-import './C2Mutation.css';
-import { defineComponent as a, computed as o, openBlock as u, createBlock as l, resolveDynamicComponent as M, unref as d } from "vue";
-import { p as f, M as C } from "./props-C42LuSxJ.js";
-import { C2MutationItem as _ } from "./C2MutationItem.js";
+import { defineComponent as a, computed as o, openBlock as u, createBlock as l, resolveDynamicComponent as M, unref as d } from "vue";import { p as f, M as C } from "./props-C42LuSxJ.js";import { C2MutationItem as _ } from "./C2MutationItem.js";(function(){if(typeof document !== undefined){let s=document.createElement('style');s.appendChild(document.createTextNode('.c2-mutation{display:none}*[data-ui]:not(.d-mutation--end){display:none}*[data-ui].d-mutation--end{display:unset!important}'));document.head.appendChild(s);}})()
+
+
 const k = {
   ...f
 }, x = /* @__PURE__ */ a({
