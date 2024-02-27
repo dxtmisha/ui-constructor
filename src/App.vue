@@ -1,16 +1,20 @@
 <script setup lang="ts">
+import { useTranslateRef } from '../composables/ref/useTranslateRef.ts'
+import { watch } from 'vue'
+
+const translate = useTranslateRef([
+  'TITLE_MAIN',
+  'TITLE_COMPANY',
+  'BASKET_EMPTY_LINK',
+  'HEADER_MENU_TITLE'
+] as const)
+
+watch(translate, () => console.log('[] translate', translate.value))
 </script>
 
 <template>
   <div style="display: flex; gap: 16px; padding: 16px 24px;">
-    <c1-button label="Label"/>
-    <c1-button label="Label" disabled/>
-    <c1-button outlined label="Label"/>
-    <c1-button outlined label="Label" disabled/>
-    <c1-button white label="Label"/>
-    <c1-button white label="Label" disabled/>
-    <c1-button text label="Label"/>
-    <c1-button text label="Label" disabled/>
+    {{ translate.TITLE_COMPANY }}
   </div>
 </template>
 

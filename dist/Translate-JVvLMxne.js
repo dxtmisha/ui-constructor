@@ -1,10 +1,9 @@
-var l = Object.defineProperty;
-var m = (e, t, s) => t in e ? l(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
-var a = (e, t, s) => (m(e, typeof t != "symbol" ? t + "" : t, s), s);
-import { f } from "./forEach-B1ZDH1yu.js";
-import { u as d, a as r, i as g } from "./useEnv-CFVj6p9U.js";
-import { t as p } from "./toArray-rswbj5Xf.js";
-import { A as c, G as y } from "./Api-xb9Hb97W.js";
+var u = Object.defineProperty;
+var f = (e, t, s) => t in e ? u(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
+var a = (e, t, s) => (f(e, typeof t != "symbol" ? t + "" : t, s), s);
+import { f as d } from "./forEach-B1ZDH1yu.js";
+import { u as m, A as h, a as n, G as g, i as N } from "./Api-6wgpqJNV.js";
+import { t as L } from "./toArray-rswbj5Xf.js";
 class o {
   /**
    * Getting the translation text by its code.<br>
@@ -14,16 +13,18 @@ class o {
   static async get(t) {
     var i;
     const s = this.getName(t);
-    return s in this.data ? this.data[s] : (c.isLocalhost() || await this.add(t), ((i = this.data) == null ? void 0 : i[s]) ?? t);
+    return s in this.data ? this.data[s] : (h.isLocalhost() || await this.add(t), ((i = this.data) == null ? void 0 : i[s]) ?? t);
   }
   /**
    * Getting the translation text by its code (Sync).<br>
    * Получение текста перевода по его коду (Sync).
    * @param name code name /<br>название кода
+   * @param first If set to false, returns an empty string if there is no text /<br>
+   * если установлено false, возвращает пустую строку, если нет текста
    */
-  static getSync(t) {
-    const s = this.getName(t);
-    return s in this.data ? this.data[s] : t;
+  static getSync(t, s = !1) {
+    const i = this.getName(t);
+    return i in this.data ? this.data[i] : s ? " " : t;
   }
   /**
    * Getting a list of translations by an array of text codes.<br>
@@ -33,10 +34,10 @@ class o {
   static getList(t) {
     return new Promise((s) => {
       const i = {};
-      let n = 0;
-      for (const h of t)
-        this.get(h).then((u) => {
-          i[h] = u, ++n >= t.length && s(i);
+      let c = 0;
+      for (const r of t)
+        this.get(r).then((l) => {
+          i[r] = l, ++c >= t.length && s(i);
         });
     });
   }
@@ -44,12 +45,14 @@ class o {
    * Getting a list of translations by an array of text codes.<br>
    * Получение списка переводов по массиву кодов текста.
    * @param names list of codes to get translations /<br>список кодов для получения переводов
+   * @param first If set to false, returns an empty string if there is no text /<br>
+   * если установлено false, возвращает пустую строку, если нет текста
    */
-  static getListSync(t) {
-    const s = {};
-    for (const i of t)
-      s[i] = this.getSync(i);
-    return s;
+  static getListSync(t, s = !1) {
+    const i = {};
+    for (const c of t)
+      i[c] = this.getSync(c, s);
+    return i;
   }
   /**
    * Added a list of translated texts.<br>
@@ -58,11 +61,11 @@ class o {
    */
   static add(t) {
     return new Promise((s) => {
-      this.cache.push(...p(t)), this.resolveList.push(s), this.timeout && clearTimeout(this.timeout), this.timeout = setTimeout(() => {
+      this.getNamesNone(t).length > 0 ? (this.cache.push(...this.getNamesNone(t)), this.resolveList.push(s), this.timeout && clearTimeout(this.timeout), this.timeout = setTimeout(() => {
         this.timeout = void 0, this.make().then(() => {
-          this.resolveList.forEach((i) => i()), this.resolveList = [];
+          this.resolveList.forEach((c) => c()), this.resolveList = [];
         });
-      }, 160);
+      }, 160)) : s();
     });
   }
   /**
@@ -71,8 +74,8 @@ class o {
    * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
    */
   static addSync(t) {
-    f(t, (s, i) => {
-      g(s) && r(s) && (this.data[this.getName(i)] = s);
+    d(t, (s, i) => {
+      N(s) && n(s) && (this.data[this.getName(i)] = s);
     });
   }
   /**
@@ -81,8 +84,8 @@ class o {
    * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
    */
   static async addNormalOrSync(t) {
-    if (r(t))
-      if (c.isLocalhost())
+    if (n(t))
+      if (h.isLocalhost())
         this.addSync(t);
       else {
         const s = Object.keys(t);
@@ -95,14 +98,25 @@ class o {
    * @param name code name /<br>название кода
    */
   static getName(t) {
-    return `${y.getLocation()}-${t}`;
+    return `${g.getLocation()}-${t}`;
+  }
+  /**
+   * Returns a list of names that are not yet in the list.<br>
+   * Возвращает список имен, которых еще нет в списке.
+   * @param names list of codes to get translations /<br>список кодов для получения переводов
+   */
+  static getNamesNone(t) {
+    const s = [];
+    return L(t).forEach((i) => {
+      i !== "__TRANSLATE_START__" && i !== "__TRANSLATE_END__" && !(this.getName(i) in this.data) && s.push(i);
+    }), s;
   }
   /**
    * Getting the list of translations from the server.<br>
    * Получение списка переводов с сервера.
    */
   static async getResponse() {
-    const t = c.isLocalhost() ? this.urlLocalhost : this.url, s = await c.response({
+    const t = h.isLocalhost() ? this.urlLocalhost : this.url, s = await h.response({
       path: t,
       request: {
         list: this.cache
@@ -121,7 +135,7 @@ class o {
     }), this.cache = [];
   }
 }
-a(o, "url", d("apiTranslate")), a(o, "urlLocalhost", "translate.json"), a(o, "data", {}), a(o, "cache", []), a(o, "resolveList", []), a(o, "timeout");
+a(o, "url", m("apiTranslate")), a(o, "urlLocalhost", "translate.json"), a(o, "data", {}), a(o, "cache", []), a(o, "resolveList", []), a(o, "timeout");
 export {
   o as T
 };

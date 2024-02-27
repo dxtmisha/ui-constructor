@@ -4,7 +4,7 @@ var m = (i, t, e) => (g(i, typeof t != "symbol" ? t + "" : t, e), e);
 import { shallowRef as p, resolveComponent as I, computed as v, h as c, Teleport as C } from "vue";
 import { f as E } from "./forEach-B1ZDH1yu.js";
 import { D as N, i as S } from "./DesignConstructorAbstract-ZQD6lBiI.js";
-import { b as w, c as M, a as y } from "./MutationDataItem-CCjAUy7V.js";
+import { b as w, c as M, a as y } from "./MutationDataItem-CdjHbRK8.js";
 class G {
   /**
    * Constructor

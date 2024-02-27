@@ -26,6 +26,8 @@ export class DesignProjectTranslate {
         read &&
         read.match('__TRANSLATE_START__')
       ) {
+        const keys = read.match(/(?<=__TRANSLATE_START__[\s\S]+)(.*)(?=[\s\S]+__TRANSLATE_END__)/ig)
+
         PropertiesFile.writeByPath(
           path,
           read.replace(
@@ -33,7 +35,33 @@ export class DesignProjectTranslate {
             '-'
           )
         )
+
+        if (keys) {
+          this.makeJson(keys)
+        }
       }
     })
+  }
+
+  private makeJson (
+    list: string[]
+  ): void {
+    const data = list[0]
+      .match(/(?<=[,$])[^:]+(?=:)/g)
+    const keys: string[] = []
+
+    if (data) {
+      data.forEach(item => {
+        keys.push(
+          item
+            .trim()
+            .replace(/^['"[]+/, '')
+            .replace(/['"\]]+$/, '')
+            .trim()
+        )
+      })
+
+      PropertiesFile.writeByPath(['.', '..', 'translate.json'], keys)
+    }
   }
 }

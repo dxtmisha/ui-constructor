@@ -1,5 +1,5 @@
 import { g as d } from "./getElement-BhVCn14C.js";
-import { a as n } from "./useEnv-CFVj6p9U.js";
+import { a as n } from "./Api-6wgpqJNV.js";
 function o(i, r) {
   return Math.floor(Math.random() * (r - i + 1) + i);
 }

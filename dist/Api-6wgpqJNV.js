@@ -1,32 +1,175 @@
-var C = Object.defineProperty;
-var D = (a, n, e) => n in a ? C(a, n, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[n] = e;
-var t = (a, n, e) => (D(a, typeof n != "symbol" ? n + "" : n, e), e);
-import { b as y, u as l, a as k, i as p } from "./useEnv-CFVj6p9U.js";
-import { e as z } from "./executeFunction-B6By_8Og.js";
-function A(a) {
+var z = Object.defineProperty;
+var A = (a, n, e) => n in a ? z(a, n, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[n] = e;
+var u = (a, n, e) => (A(a, typeof n != "symbol" ? n + "" : n, e), e);
+import { e as S } from "./executeFunction-B6By_8Og.js";
+function C(a) {
+  return typeof a == "string";
+}
+function M(a) {
+  return a == null;
+}
+function m(a) {
+  if (a)
+    switch (typeof a) {
+      case "bigint":
+      case "number":
+        return a !== 0;
+      case "boolean":
+        return a;
+      case "function":
+      case "symbol":
+        return !0;
+      case "object":
+        return Array.isArray(a) ? a.length > 0 : Object.values(a).some((n) => !M(n));
+      case "string":
+        return !["", "undefined", "null", "0", "false", "[]"].includes(a);
+      case "undefined":
+        return !1;
+      default:
+        return !!a;
+    }
+  return !1;
+}
+function E(a) {
   return JSON.parse(JSON.stringify(a));
 }
-function c() {
+function D() {
   return typeof window < "u";
 }
-function S(a, n) {
-  return y(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
+function P(a, n) {
+  return M(a) ? !1 : Array.isArray(n) ? n.includes(a) : a === n;
 }
-class m {
+function c(a, n = !1) {
+  if (typeof a == "string") {
+    const e = a.trim();
+    switch (e) {
+      case "undefined":
+        return;
+      case "null":
+        return null;
+      case "true":
+        return !0;
+      case "false":
+        return !1;
+      default:
+        if (/^[{[]/.exec(e))
+          try {
+            return JSON.parse(e);
+          } catch {
+          }
+        else {
+          if (/^[0-9]+\.[0-9.]+$/.exec(e))
+            return parseFloat(e);
+          if (/^[0-9]+$/.exec(e))
+            return parseInt(e, 10);
+          if (n && window && e in window && typeof window[e] == "function")
+            return window[e];
+        }
+    }
+  }
+  return a;
+}
+var i = { VITE_PREFIX: "__dUi", VITE_DESIGNS: "m2,m3,c1,c2", VITE_DESIGNS_MAIN: "m3", VITE_DESIGNS_GLOBAL: "UI", VITE_UI_GIT: "git+https://github.com/dxtmisha/ui-playground.git", VITE_UI_WEB: "https://ru.dev2.coralclub.app", VITE_UI_PATH: "/ui/", VITE_UI_API_TRANSLATE: "restApi/uiTranslate", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+const y = {
+  api: {
+    index: "UI_API_URL",
+    value: "/api/"
+  },
+  apiTranslate: {
+    index: "UI_API_TRANSLATE",
+    value: "ui/?command=translate"
+  },
+  cache: {
+    index: "UI_CACHE",
+    value: 7 * 24 * 60 * 60
+  },
+  iconPath: {
+    index: "UI_ICON_PATH",
+    value: "/icons/"
+  },
+  language: {
+    index: "UI_LANGUAGE",
+    value: "en-GB"
+  },
+  prefix: {
+    index: "UI_PREFIX",
+    value: "ui-playground-"
+  }
+};
+class T {
+  /**
+   * Constructor
+   * @param index property name /<br>название свойства
+   */
+  // eslint-disable-next-line no-useless-constructor
+  constructor(n) {
+    this.index = n;
+  }
+  /**
+   * Returns the values from the env environment.<br>
+   * Возвращает значения из окружения env.
+   * @param defaultValue default property value /<br>значение свойства по умолчанию
+   */
+  get(n) {
+    var o, t, g;
+    const e = this.getName();
+    if (import.meta) {
+      const s = (i == null ? void 0 : i[e]) ?? (i == null ? void 0 : i[`VITE_${e}`]);
+      if (s)
+        return c(s);
+    }
+    if (typeof process < "u") {
+      const s = ((o = process.env) == null ? void 0 : o[e]) ?? ((t = process.env) == null ? void 0 : t[`VUE_APP_${e}`]) ?? ((g = process.env) == null ? void 0 : g[`NUXT_${e}`]);
+      if (s)
+        return c(s);
+    }
+    return c(
+      n ?? this.getValue()
+    );
+  }
+  /**
+   * Getting a basic object with a key name and a default value.<br>
+   * Получение базового объекта с названием ключа и значения по умолчанию.
+   * @private
+   */
+  getBasic() {
+    return y == null ? void 0 : y[this.index];
+  }
+  /**
+   * Get the full key name in env.<br>
+   * Получаем полное название ключа в env.
+   */
+  getName() {
+    var n;
+    return ((n = this.getBasic()) == null ? void 0 : n.index) ?? this.index;
+  }
+  /**
+   * Gets values by its keys.<br>
+   * Получает значения по его ключам.
+   */
+  getValue() {
+    var n;
+    return (n = this.getBasic()) == null ? void 0 : n.value;
+  }
+}
+function p(a, n) {
+  return new T(a).get(n);
+}
+class B {
   /**
    * Constructor
    * @param name value name /<br>название значения
    * @param isSession should we use a session? /<br>использовать ли сессию?
    */
   constructor(n, e = !1) {
-    t(this, "value");
-    t(this, "age");
+    u(this, "value");
+    u(this, "age");
     this.name = n, this.isSession = e;
     const o = `${e ? "session" : "storage"}#${n}`;
-    if (o in g)
-      return g[o];
-    const u = this.getValue();
-    u && (this.value = u.value, this.age = u.age), g[o] = this;
+    if (o in f)
+      return f[o];
+    const t = this.getValue();
+    t && (this.value = t.value, this.age = t.age), f[o] = this;
   }
   /**
    * Getting data from local storage.<br>
@@ -47,7 +190,7 @@ class m {
    */
   set(n) {
     var e, o;
-    return this.value = z(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
+    return this.value = S(n), this.age = (/* @__PURE__ */ new Date()).getTime(), this.value === void 0 ? (e = this.getMethod()) == null || e.removeItem(this.getIndex()) : (o = this.getMethod()) == null || o.setItem(this.getIndex(), JSON.stringify({
       value: this.value,
       age: this.age
     })), this.value;
@@ -58,14 +201,14 @@ class m {
    * @param cache cache time /<br>время кэширования
    */
   isCache(n) {
-    return y(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
+    return M(n) || this.age && this.age + n * 1e3 >= (/* @__PURE__ */ new Date()).getTime();
   }
   /**
    * Returns an object for working with storage.<br>
    * Возвращает объект для работы с хранилищем.
    */
   getMethod() {
-    if (c())
+    if (D())
       return this.isSession ? window == null ? void 0 : window.sessionStorage : window == null ? void 0 : window.localStorage;
   }
   /**
@@ -73,7 +216,7 @@ class m {
    * Получение имени пользователя в хранилище.
    */
   getIndex() {
-    return `${l("prefix", "")}${this.name}`;
+    return `${p("prefix", "")}${this.name}`;
   }
   /**
    * Getting data from storage.<br>
@@ -89,7 +232,7 @@ class m {
       }
   }
 }
-const g = {}, E = [
+const f = {}, L = [
   {
     country: "US",
     countryAlternative: [
@@ -2202,7 +2345,7 @@ const g = {}, E = [
     language: "es",
     firstDay: "Mo"
   }
-], P = "geo-code", r = class r {
+], I = "geo-code", r = class r {
   /**
    * Information about the current country.<br>
    * Информация об текущей стране.
@@ -2260,7 +2403,7 @@ const g = {}, E = [
    * Возвращает полный список стран.
    */
   static getList() {
-    return E;
+    return L;
   }
   /**
    * Determines the current country by its full name.<br>
@@ -2298,7 +2441,7 @@ const g = {}, E = [
    */
   static getByCode(n) {
     let e;
-    return n && (n.match(/([A-Z]{2}-[a-z]{2})|([a-z]{2}-[A-Z]{2})/) && (e = this.getByCodeFull(n)), !e && n.match(/[A-Z]{2}/) && (e = this.getByCountry(this.toCountry(n))), !e && n.match(/[a-z]{2}/) && (e = this.getByLanguage(this.toLanguage(n)))), this.toFull(A(e ?? this.getList()[0]));
+    return n && (n.match(/([A-Z]{2}-[a-z]{2})|([a-z]{2}-[A-Z]{2})/) && (e = this.getByCodeFull(n)), !e && n.match(/[A-Z]{2}/) && (e = this.getByCountry(this.toCountry(n))), !e && n.match(/[a-z]{2}/) && (e = this.getByLanguage(this.toLanguage(n)))), this.toFull(E(e ?? this.getList()[0]));
   }
   /**
    * Returns the full data by language and country.<br>
@@ -2307,7 +2450,7 @@ const g = {}, E = [
    */
   static getByCodeFull(n) {
     return this.getList().find(
-      (e) => S(n, [
+      (e) => P(n, [
         `${e.language}-${e.country}`,
         `${e.country}-${e.language}`
       ])
@@ -2321,7 +2464,7 @@ const g = {}, E = [
   static getByCountry(n) {
     return this.getList().find((e) => {
       var o;
-      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((u) => u === n));
+      return e.country === n || ((o = e == null ? void 0 : e.countryAlternative) == null ? void 0 : o.find((t) => t === n));
     });
   }
   /**
@@ -2332,7 +2475,7 @@ const g = {}, E = [
   static getByLanguage(n) {
     return this.getList().find((e) => {
       var o;
-      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((u) => u === n));
+      return e.language === n || ((o = e == null ? void 0 : e.languageAlternative) == null ? void 0 : o.find((t) => t === n));
     });
   }
   /**
@@ -2341,7 +2484,7 @@ const g = {}, E = [
    */
   static findLocation() {
     var n;
-    return c() && (this.storage.get() || ((n = document.querySelector("html")) == null ? void 0 : n.lang) || navigator.language || navigator.languages[0] || l("language")) || "en-GB";
+    return D() && (this.storage.get() || ((n = document.querySelector("html")) == null ? void 0 : n.lang) || navigator.language || navigator.languages[0] || p("language")) || "en-GB";
   }
   /**
    * Determines the current language.<br>
@@ -2382,10 +2525,10 @@ const g = {}, E = [
     };
   }
 };
-t(r, "storage", new m(P)), t(r, "location"), t(r, "item"), t(r, "language"), r.location = r.findLocation(), r.language = r.findLanguage(r.location), r.item = r.getByCode(r.location);
-let s = r;
-var B = /* @__PURE__ */ ((a) => (a.get = "GET", a.post = "POST", a.put = "PUT", a.delete = "DELETE", a))(B || {});
-class h {
+u(r, "storage", new B(I)), u(r, "location"), u(r, "item"), u(r, "language"), r.location = r.findLocation(), r.language = r.findLanguage(r.location), r.item = r.getByCode(r.location);
+let l = r;
+var _ = /* @__PURE__ */ ((a) => (a.get = "GET", a.post = "POST", a.put = "PUT", a.delete = "DELETE", a))(_ || {});
+class d {
   /**
    * Is the server local.<br>
    * Является ли сервер локальный.
@@ -2411,7 +2554,7 @@ class h {
    * @param path path to the script /<br>путь к скрипту
    */
   static getUrl(n) {
-    return `${this.isLocalhost() ? this.urlLocalhost : this.url}${n}`.replace("{locale}", s.getLocation()).replace("{country}", s.getCountry()).replace("{language}", s.getLanguage());
+    return `${this.isLocalhost() ? this.urlLocalhost : this.url}${n}`.replace("{locale}", l.getLocation()).replace("{country}", l.getCountry()).replace("{language}", l.getLanguage());
   }
   /**
    * Get access to a script by the name of the team.<br>
@@ -2427,8 +2570,8 @@ class h {
    * @param request this request /<br>данный запрос
    */
   static getBody(n) {
-    if (k(n))
-      return n instanceof FormData || p(n) ? n : JSON.stringify(n);
+    if (m(n))
+      return n instanceof FormData || C(n) ? n : JSON.stringify(n);
   }
   /**
    * To execute a request.<br>
@@ -2436,7 +2579,7 @@ class h {
    * @param pathRequest query string or list of parameters /<br>строка запроса или список параметров
    */
   static async response(n) {
-    return p(n) ? await this.fetch({
+    return C(n) ? await this.fetch({
       path: n
     }) : await this.fetch(n);
   }
@@ -2467,31 +2610,37 @@ class h {
     path: n = "",
     method: e = "GET",
     request: o = void 0,
-    headers: u = {},
-    type: f = "application/json;charset=UTF-8",
-    init: d = {}
+    headers: t = {},
+    type: g = "application/json;charset=UTF-8",
+    init: s = {}
   }) {
     try {
-      const i = this.getHeaders(u, f), M = i && e === "GET" ? "POST" : e;
+      const h = this.getHeaders(t, g), k = h && e === "GET" ? "POST" : e;
       return await (await fetch(this.getUrl(n), {
-        ...d,
-        method: M,
-        headers: i,
+        ...s,
+        method: k,
+        headers: h,
         body: this.getBody(o)
       })).json();
-    } catch (i) {
-      console.error(i);
+    } catch (h) {
+      console.error(h);
     }
     return {};
   }
 }
-t(h, "url", l("api", "/")), t(h, "urlLocalhost", `${l("BASE_URL", "/")}public/`), t(h, "urlCommand", "ui");
+u(d, "url", p("api", "/")), u(d, "urlLocalhost", `${p("BASE_URL", "/")}public/`), u(d, "urlCommand", "ui");
 export {
-  h as A,
-  m as D,
-  s as G,
-  c as a,
-  B as b,
-  A as c,
-  S as i
+  d as A,
+  B as D,
+  T as E,
+  l as G,
+  m as a,
+  M as b,
+  P as c,
+  E as d,
+  D as e,
+  _ as f,
+  C as i,
+  c as t,
+  p as u
 };

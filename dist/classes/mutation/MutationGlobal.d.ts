@@ -95,6 +95,12 @@ export declare class MutationGlobal {
      */
     static addComponentList(components: Record<string, any>): void;
     /**
+     * Adds texts in sync mode.<br>
+     * Добавляет тексты в режиме синхронизации.
+     * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+     */
+    static addTranslate(data: Record<string, string>): void;
+    /**
      * Registers a component to track parameter changes.<br>
      * Регистрирует компонент для слежения за изменением параметра.
      * @param name component identifier /<br>идентификатор компонента

@@ -2,12 +2,11 @@ var E = Object.defineProperty;
 var T = (a, e, i) => e in a ? E(a, e, { enumerable: !0, configurable: !0, writable: !0, value: i }) : a[e] = i;
 var h = (a, e, i) => (T(a, typeof e != "symbol" ? e + "" : e, i), i);
 import { f as C, i as I } from "./forEach-B1ZDH1yu.js";
-import { G as g } from "./Api-xb9Hb97W.js";
-import { b as M } from "./useEnv-CFVj6p9U.js";
+import { b as M, G as g } from "./Api-6wgpqJNV.js";
 import { t as f } from "./toNumber-BeBr0lVX.js";
 import { i as w, g as m } from "./getElement-BhVCn14C.js";
 import { t as L } from "./toArray-rswbj5Xf.js";
-class F {
+class z {
   /**
    * Constructor
    * @param callback function for the cache /<br>функция для кэша
@@ -749,7 +748,7 @@ function A(a) {
   var e;
   return !!((e = m(a)) != null && e.closest("html"));
 }
-class P {
+class F {
   /**
    * Classes Constructor
    * @param elementSelector element /<br>элемент
@@ -970,8 +969,8 @@ class P {
   }
 }
 export {
-  F as C,
-  P as E,
+  z as C,
+  F as E,
   t as G,
   S as a,
   v as b,

@@ -23,8 +23,10 @@ export declare class Translate {
      * Getting the translation text by its code (Sync).<br>
      * Получение текста перевода по его коду (Sync).
      * @param name code name /<br>название кода
+     * @param first If set to false, returns an empty string if there is no text /<br>
+     * если установлено false, возвращает пустую строку, если нет текста
      */
-    static getSync(name: string): string;
+    static getSync(name: string, first?: boolean): string;
     /**
      * Getting a list of translations by an array of text codes.<br>
      * Получение списка переводов по массиву кодов текста.
@@ -35,8 +37,10 @@ export declare class Translate {
      * Getting a list of translations by an array of text codes.<br>
      * Получение списка переводов по массиву кодов текста.
      * @param names list of codes to get translations /<br>список кодов для получения переводов
+     * @param first If set to false, returns an empty string if there is no text /<br>
+     * если установлено false, возвращает пустую строку, если нет текста
      */
-    static getListSync<T extends string[]>(names: T): TranslateList<T>;
+    static getListSync<T extends string[]>(names: T, first?: boolean): TranslateList<T>;
     /**
      * Added a list of translated texts.<br>
      * Добавлен список переведенных текстов.
@@ -61,6 +65,12 @@ export declare class Translate {
      * @param name code name /<br>название кода
      */
     protected static getName(name: string): string;
+    /**
+     * Returns a list of names that are not yet in the list.<br>
+     * Возвращает список имен, которых еще нет в списке.
+     * @param names list of codes to get translations /<br>список кодов для получения переводов
+     */
+    protected static getNamesNone(names: string | string[]): string[];
     /**
      * Getting the list of translations from the server.<br>
      * Получение списка переводов с сервера.

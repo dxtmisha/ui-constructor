@@ -10,6 +10,7 @@ import {
 } from '../../types/mutation'
 
 import { KEY_GLOBAL_PROJECT } from '../../config/mutation'
+import { Translate } from '../Translate.ts'
 
 /**
  * Class for working with global variables.<br>
@@ -176,6 +177,15 @@ export class MutationGlobal {
     forEach(components, (component, name) => {
       this.addComponent(name, component)
     })
+  }
+
+  /**
+   * Adds texts in sync mode.<br>
+   * Добавляет тексты в режиме синхронизации.
+   * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+   */
+  static addTranslate (data: Record<string, string>): void {
+    Translate.addSync(data)
   }
 
   /**

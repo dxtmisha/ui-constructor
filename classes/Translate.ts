@@ -47,15 +47,17 @@ export class Translate {
    * Getting the translation text by its code (Sync).<br>
    * Получение текста перевода по его коду (Sync).
    * @param name code name /<br>название кода
+   * @param first If set to false, returns an empty string if there is no text /<br>
+   * если установлено false, возвращает пустую строку, если нет текста
    */
-  static getSync (name: string): string {
+  static getSync (name: string, first: boolean = false): string {
     const fullName = this.getName(name)
 
     if (fullName in this.data) {
       return this.data[fullName]
     }
 
-    return name
+    return first ? ' ' : name
   }
 
   /**
@@ -84,12 +86,14 @@ export class Translate {
    * Getting a list of translations by an array of text codes.<br>
    * Получение списка переводов по массиву кодов текста.
    * @param names list of codes to get translations /<br>список кодов для получения переводов
+   * @param first If set to false, returns an empty string if there is no text /<br>
+   * если установлено false, возвращает пустую строку, если нет текста
    */
-  static getListSync<T extends string[]> (names: T): TranslateList<T> {
+  static getListSync<T extends string[]> (names: T, first: boolean = false): TranslateList<T> {
     const list: Record<string, string> = {}
 
     for (const name of names) {
-      list[name] = this.getSync(name)
+      list[name] = this.getSync(name, first)
     }
 
     return list as TranslateList<T>
@@ -102,20 +106,26 @@ export class Translate {
    */
   static add (names: string | string[]): Promise<void> {
     return new Promise(resolve => {
-      this.cache.push(...toArray(names))
-      this.resolveList.push(resolve)
+      const list = this.getNamesNone(names)
 
-      if (this.timeout) {
-        clearTimeout(this.timeout)
+      if (list.length > 0) {
+        this.cache.push(...this.getNamesNone(names))
+        this.resolveList.push(resolve)
+
+        if (this.timeout) {
+          clearTimeout(this.timeout)
+        }
+
+        this.timeout = setTimeout(() => {
+          this.timeout = undefined
+          this.make().then(() => {
+            this.resolveList.forEach(resolve => resolve())
+            this.resolveList = []
+          })
+        }, 160)
+      } else {
+        resolve()
       }
-
-      this.timeout = setTimeout(() => {
-        this.timeout = undefined
-        this.make().then(() => {
-          this.resolveList.forEach(resolve => resolve())
-          this.resolveList = []
-        })
-      }, 160)
     })
   }
 
@@ -161,6 +171,27 @@ export class Translate {
    */
   protected static getName (name: string): string {
     return `${Geo.getLocation()}-${name}`
+  }
+
+  /**
+   * Returns a list of names that are not yet in the list.<br>
+   * Возвращает список имен, которых еще нет в списке.
+   * @param names list of codes to get translations /<br>список кодов для получения переводов
+   */
+  protected static getNamesNone (names: string | string[]): string[] {
+    const data: string[] = []
+
+    toArray(names).forEach(name => {
+      if (
+        name !== '__TRANSLATE_START__' &&
+        name !== '__TRANSLATE_END__' &&
+        !(this.getName(name) in this.data)
+      ) {
+        data.push(name)
+      }
+    })
+
+    return data
   }
 
   /**

@@ -3,10 +3,11 @@ var I = (e, t, s) => t in e ? f(e, t, { enumerable: !0, configurable: !0, writab
 var o = (e, t, s) => (I(e, typeof t != "symbol" ? t + "" : t, s), s);
 import { f as h } from "./forEach-B1ZDH1yu.js";
 import { g as S } from "./getElement-BhVCn14C.js";
-import { g as L } from "./getElementId-Dv5cOpg7.js";
-import { u as C, a as d, t as E, i as w } from "./useEnv-CFVj6p9U.js";
+import { g as L } from "./getElementId-9zfqjRVU.js";
+import { u as C, a as u, t as E, i as w } from "./Api-6wgpqJNV.js";
 import { t as $ } from "./toArray-rswbj5Xf.js";
 import { t as A } from "./DesignConstructorAbstract-ZQD6lBiI.js";
+import { T as y } from "./Translate-JVvLMxne.js";
 var r = /* @__PURE__ */ ((e) => (e.new = "new", e.init = "init", e.end = "end", e))(r || {});
 function g(e) {
   return e.toString().trim().replace(/[^\w- ]+/g, "").replace(/ +/g, "-").replace(new RegExp("(?<=[A-Z])([A-Z])", "g"), (t) => `${t.toLowerCase()}`).replace(/^[A-Z]/, (t) => t.toLowerCase()).replace(new RegExp("(?<=[\\w ])[A-Z]", "g"), (t) => `-${t.toLowerCase()}`).replace(/[A-Z]/g, (t) => t.toLowerCase());
@@ -65,7 +66,7 @@ class c {
     const i = [];
     if ("querySelector" in t) {
       const n = this.getSelectorByStatus(s);
-      t.querySelector(n) && t.querySelectorAll(n).forEach((u) => i.push(u));
+      t.querySelector(n) && t.querySelectorAll(n).forEach((d) => i.push(d));
     }
     return i;
   }
@@ -115,7 +116,7 @@ class c {
     }
   }
 }
-function y(e) {
+function b(e) {
   const t = {}, s = S(e);
   if (s)
     for (const i of s.attributes)
@@ -250,6 +251,14 @@ class a {
     });
   }
   /**
+   * Adds texts in sync mode.<br>
+   * Добавляет тексты в режиме синхронизации.
+   * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
+   */
+  static addTranslate(t) {
+    y.addSync(t);
+  }
+  /**
    * Registers a component to track parameter changes.<br>
    * Регистрирует компонент для слежения за изменением параметра.
    * @param name component identifier /<br>идентификатор компонента
@@ -284,7 +293,7 @@ class a {
   }
 }
 o(a, "functions", {}), o(a, "classes", {}), o(a, "components", {}), o(a, "compItems", {}), o(a, "compCaching", {});
-class P {
+class B {
   /**
    * Constructor
    * @param element tracking element /<br>элемент слежения
@@ -403,7 +412,7 @@ class P {
       this.getId(),
       t,
       (n) => {
-        d(n) && this.setProps(n).update();
+        u(n) && this.setProps(n).update();
       }
     );
     return i && this.setProps(i), this.callback = s, this;
@@ -442,7 +451,7 @@ class P {
    * @param props property values /<br>значения свойство
    */
   setProps(t) {
-    return d(t) && h(t, (s, i) => {
+    return u(t) && h(t, (s, i) => {
       i === "slots" ? this.setSlots(s) : this.props[i] = s;
     }), this;
   }
@@ -452,7 +461,7 @@ class P {
    * @param slots list of slots for update /<br>список слотов для обновления
    */
   setSlots(t) {
-    return d(t) && h(t, (s, i) => {
+    return u(t) && h(t, (s, i) => {
       this.slots[i] = this.initChildrenList($(s));
     }), this;
   }
@@ -467,8 +476,8 @@ class P {
       if (n)
         t[n] = this.initChildrenList(i.childNodes);
       else {
-        const u = this.initChildren(i);
-        u && ("default" in t ? t.default.push(u) : t.default = [u]);
+        const d = this.initChildren(i);
+        d && ("default" in t ? t.default.push(d) : t.default = [d]);
       }
       s.push(i);
     }
@@ -500,14 +509,14 @@ class P {
       return {
         tag: t.nodeName,
         attributes: {
-          ...y(t),
+          ...b(t),
           innerHTML: (t == null ? void 0 : t.innerHTML) ?? ""
         }
       };
     const s = (n = (i = t == null ? void 0 : t.textContent) == null ? void 0 : i.trim) == null ? void 0 : n.call(i);
-    if (d(s))
+    if (u(s))
       return s;
-    if (w(t) && d(t))
+    if (w(t) && u(t))
       return t;
   }
   /**
@@ -521,10 +530,10 @@ class P {
 export {
   l as K,
   c as M,
-  P as a,
+  B as a,
   r as b,
   a as c,
   g as d,
-  y as g,
+  b as g,
   m as t
 };

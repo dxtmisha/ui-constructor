@@ -1,10 +1,9 @@
-var d = Object.defineProperty;
-var f = (a, t, i) => t in a ? d(a, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : a[t] = i;
-var o = (a, t, i) => (f(a, typeof t != "symbol" ? t + "" : t, i), i);
+var m = Object.defineProperty;
+var w = (a, t, i) => t in a ? m(a, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : a[t] = i;
+var o = (a, t, i) => (w(a, typeof t != "symbol" ? t + "" : t, i), i);
 import { f as h } from "./forEach-B1ZDH1yu.js";
-import { A as w } from "./Api-xb9Hb97W.js";
-import { u as N } from "./useEnv-CFVj6p9U.js";
-const u = 320, m = "--LOAD--", s = class s {
+import { u as N, A as f } from "./Api-6wgpqJNV.js";
+const u = 320, l = "--LOAD--", s = class s {
   /**
    * Checks if the given icon is in the list of connected icons.<br>
    * Проверяет, есть ли данная иконка в списке подключенных иконок.
@@ -24,7 +23,7 @@ const u = 320, m = "--LOAD--", s = class s {
   static async get(t, i = "", e = 1e3 * 60 * 3) {
     var c, n;
     const r = ((c = this.icons) == null ? void 0 : c[this.getName(t)]) ?? ((n = this.icons) == null ? void 0 : n[t]) ?? `${t.replace(/^@/, i ?? this.url)}.svg`;
-    return typeof r == "string" ? r === m && e > 0 ? (await this.wait(), this.get(t, i, e - u)) : r : await r;
+    return typeof r == "string" ? r === l && e > 0 ? (await this.wait(), this.get(t, i, e - u)) : r : await r;
   }
   /**
    * Returns a list of names of all registered icons.<br>
@@ -48,7 +47,7 @@ const u = 320, m = "--LOAD--", s = class s {
    * @param index icon name /<br>название иконки
    */
   static addLoad(t) {
-    this.icons[this.getName(t)] = m;
+    this.icons[this.getName(t)] = l;
   }
   /**
    * Adding custom global icons.<br>
@@ -79,10 +78,10 @@ const u = 320, m = "--LOAD--", s = class s {
     return new Promise((t) => setTimeout(() => t(), u));
   }
 };
-o(s, "icons", {}), o(s, "url", N("UI_PATH") ?? "/icons/"), o(s, "urlGlobal", `${w.isLocalhost(), ""}${s.url}`), typeof window < "u" && ("__UI__ICON" in window || (window.__UI__ICON = {}), s.icons = window.__UI__ICON);
-let l = s;
+o(s, "icons", {}), o(s, "url", N("UI_PATH") ?? "/icons/"), o(s, "urlGlobal", `${f.isLocalhost(), ""}${s.url}`), typeof window < "u" && ("__UI__ICON" in window || (window.__UI__ICON = {}), s.icons = window.__UI__ICON);
+let d = s;
 export {
-  l as I,
-  m as a,
+  d as I,
+  l as a,
   u as b
 };
