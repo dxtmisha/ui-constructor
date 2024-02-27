@@ -76,7 +76,7 @@ export class LibraryBuild {
         `s.appendChild(document.createTextNode('${file}'));`,
         'document.head.appendChild(s);',
         '}',
-        '}const (_){}',
+        '}catch (_){}',
         '})()'
       )
     }
