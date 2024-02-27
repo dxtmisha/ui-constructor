@@ -40,20 +40,8 @@ export class LibraryBuild {
             ]
 
             PropertiesFile.writeByPath(pathJs, file.join(''))
-          } else if (regVue) {
-            const pathVue = ['dist', `${name}.vue`]
-            PropertiesFile.writeByPath(['dist', `${name}-script.js`], read)
-            PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\nexport {${name}} from './${name}-script.js';`)
-            PropertiesFile.writeByPath(pathVue, [
-              '<script lang="js">',
-              `import {${name}} from './${name}-script.js';`,
-              `export default ${name};`,
-              '</script>',
-              '<style lang="css">',
-              `@import './${name}.css';`,
-              '</style>',
-              '\r\n'
-            ].join(''))
+          } else if (path.match(regVue)) {
+            this.makeVue(name, pathJs, read)
           } else {
             PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\n${read}`)
           }
@@ -98,5 +86,28 @@ export class LibraryBuild {
     }
 
     return data.join('')
+  }
+
+  private makeVue (
+    name: string,
+    pathJs: string[],
+    read: string
+  ): void {
+    const pathVue = ['dist', `${name}.vue`]
+
+    console.log(`Add VUE: ${name}`)
+
+    PropertiesFile.writeByPath(['dist', `${name}-script.js`], read)
+    PropertiesFile.writeByPath(pathJs, `import './${name}.css';\r\nexport {${name}} from './${name}-script.js';`)
+    PropertiesFile.writeByPath(pathVue, [
+      '<script lang="js">',
+      `import {${name}} from './${name}-script.js';`,
+      `export default ${name};`,
+      '</script>',
+      '<style lang="css">',
+      `@import './${name}.css';`,
+      '</style>',
+      '\r\n'
+    ].join(''))
   }
 }
