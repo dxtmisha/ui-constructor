@@ -1,5 +1,5 @@
 import { defineComponent as c, computed as n, openBlock as d, createBlock as l, resolveDynamicComponent as g, unref as u } from "vue";
-import { p as I, I as B } from "./props-CDUqm5aI.js";
+import { p as I, I as B } from "./props-DctYvy8K.js";
 const _ = {
   ...I,
   // :prop [!] System label / Системная метка
@@ -15,7 +15,6 @@ const _ = {
   setup(s, { expose: a, emit: t }) {
     const m = t, e = s, i = n(() => ({
       main: {
-        // TODO: User state classes / Пользовательские классы состояния
         // :classes-values [!] System label / Системная метка
         "m3-image": !0,
         "m3-image--turn": e.turn,
@@ -24,9 +23,7 @@ const _ = {
         "m3-image--adaptive": e.adaptive
         // :classes-values [!] System label / Системная метка
       }
-      // TODO: User subclasses / Пользовательские подклассы
     })), r = n(() => ({
-      // TODO: User styles / Пользовательские стили
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
     })), o = new B(

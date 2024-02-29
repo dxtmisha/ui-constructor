@@ -1,6 +1,4 @@
 export type IconsItem = string | Promise<string | any>;
-export declare const ICONS_WAIT = 320;
-export declare const ICONS_LOAD = "--LOAD--";
 /**
  * Class for managing icons.<br>
  * Класс для управления иконками.

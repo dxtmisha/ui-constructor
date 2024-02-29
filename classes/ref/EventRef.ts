@@ -34,7 +34,7 @@ export class EventRef<
    */
   constructor (
     elementSelector?: RefOrNormal<ElementOrString<E>>,
-    elementSelectorControl?: RefOrNormal<ElementOrString<E>>,
+    elementSelectorControl?: RefOrNormal<ElementOrString<HTMLElement>>,
     type: string | string[] = ['click'],
     listener?: EventListenerDetail<O, D>,
     options?: EventOptions,
@@ -56,6 +56,6 @@ export class EventRef<
     }
 
     watch(item, (element?: ElementOrString<E>) => this.setElement(element))
-    watch(itemControl, (element?: ElementOrString<E>) => this.setElementControl(element))
+    watch(itemControl, (element?: ElementOrString<HTMLElement>) => this.setElementControl(element))
   }
 }

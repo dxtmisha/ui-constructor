@@ -70,7 +70,7 @@ export declare class EventItem<E extends ElementOrWindow, O extends Event, D ext
      * Модифицирует объект, который получает уведомление.
      * @param elementSelector element /<br>элемент
      */
-    setElementControl(elementSelector?: ElementOrString<E>): this;
+    setElementControl<EC extends HTMLElement>(elementSelector?: ElementOrString<EC>): this;
     /**
      * Changes the type of the handled event.<br>
      * Изменяет тип обрабатываемого события.

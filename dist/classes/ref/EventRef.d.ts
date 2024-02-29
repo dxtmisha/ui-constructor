@@ -18,5 +18,5 @@ export declare class EventRef<E extends ElementOrWindow, O extends Event, D exte
      * @param detail an event-dependent value associated with the event /<br>зависимое от события
      * значение, связанное с событием
      */
-    constructor(elementSelector?: RefOrNormal<ElementOrString<E>>, elementSelectorControl?: RefOrNormal<ElementOrString<E>>, type?: string | string[], listener?: EventListenerDetail<O, D>, options?: EventOptions, detail?: D);
+    constructor(elementSelector?: RefOrNormal<ElementOrString<E>>, elementSelectorControl?: RefOrNormal<ElementOrString<HTMLElement>>, type?: string | string[], listener?: EventListenerDetail<O, D>, options?: EventOptions, detail?: D);
 }
