@@ -1,4 +1,5 @@
 import { forEach } from '../functions/forEach'
+import { isDomRuntime } from '../functions/isDomRuntime'
 
 import { Api } from './Api'
 
@@ -6,8 +7,9 @@ import { useEnv } from '../composables/useEnv'
 
 export type IconsItem = string | Promise<string | any>
 
-export const ICONS_WAIT = 320
-export const ICONS_LOAD = '--LOAD--'
+const ICONS_KEY = '__UI_ICON'
+const ICONS_WAIT = 320
+const ICONS_LOAD = '--LOAD--'
 
 /**
  * Class for managing icons.<br>
@@ -19,12 +21,12 @@ export class Icons {
   protected static readonly urlGlobal = `${Api.isLocalhost() ? '' : ''}${this.url}`
 
   static {
-    if (typeof window !== 'undefined') {
-      if (!('__UI__ICON' in window)) {
-        (window as any).__UI__ICON = {}
+    if (isDomRuntime()) {
+      if (!(ICONS_KEY in window)) {
+        (window as any)[ICONS_KEY] = {}
       }
 
-      this.icons = (window as any).__UI__ICON
+      this.icons = (window as any)[ICONS_KEY]
     }
   }
 

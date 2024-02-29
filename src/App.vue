@@ -1,20 +1,22 @@
 <script setup lang="ts">
-import { useTranslateRef } from '../composables/ref/useTranslateRef.ts'
-import { watch } from 'vue'
+import { useLoadingRef } from '../composables/ref/useLoadingRef.ts'
+import { Loading } from '../classes/Loading.ts'
 
-const translate = useTranslateRef([
-  'TITLE_MAIN',
-  'TITLE_COMPANY',
-  'BASKET_EMPTY_LINK',
-  'HEADER_MENU_TITLE'
-] as const)
+const loading = useLoadingRef()
 
-watch(translate, () => console.log('[] translate', translate.value))
+const onShow = () => Loading.show()
+const onHide = () => Loading.hide()
 </script>
 
 <template>
+  <m3-progress
+    :delay-hide="480"
+    :visible="loading"
+  />
   <div style="display: flex; gap: 16px; padding: 16px 24px;">
-    {{ translate.TITLE_COMPANY }}
+    {{ loading }}
+    <m3-button label="show" @click="onShow"/>
+    <m3-button label="hide" @click="onHide"/>
   </div>
 </template>
 

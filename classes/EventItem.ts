@@ -129,7 +129,7 @@ export class EventItem<
    * Модифицирует объект, который получает уведомление.
    * @param elementSelector element /<br>элемент
    */
-  setElementControl (elementSelector?: ElementOrString<E>): this {
+  setElementControl<EC extends HTMLElement> (elementSelector?: ElementOrString<EC>): this {
     this.elementControl = getElement(elementSelector)
     this.elementControlEdit = !isNull(this.elementControl)
 

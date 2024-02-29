@@ -29,7 +29,6 @@ const props = defineProps({ ...propsInstruction })
 
 const classesToken = computed<ConstrClasses>(() => ({
   main: {
-    // TODO: User state classes / Пользовательские классы состояния
     // :classes-values [!] System label / Системная метка
     'm3-image': true,
     'm3-image--turn': props.turn,
@@ -38,10 +37,8 @@ const classesToken = computed<ConstrClasses>(() => ({
     'm3-image--adaptive': props.adaptive
     // :classes-values [!] System label / Системная метка
   }
-  // TODO: User subclasses / Пользовательские подклассы
 }))
 const stylesToken = computed<ConstrStyles>(() => ({
-  // TODO: User styles / Пользовательские стили
   // :styles-values [!] System label / Системная метка
   // :styles-values [!] System label / Системная метка
 }))
