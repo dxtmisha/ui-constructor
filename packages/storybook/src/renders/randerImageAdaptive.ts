@@ -2,10 +2,28 @@ import { h } from 'vue'
 
 import galaxyS23p from '../stories/assets/Galaxy_S23p.png'
 import galaxyZFlip5 from '../stories/assets/Galaxy_Z_Flip5.png'
-import galaxyZFold5 from '../stories/assets/Galaxy_Z_Fold5.png'
-import pad from '../stories/assets/pad.png'
+import galaxyZFold5 from '../assets/Galaxy_Z_Fold5.png'
+import pad from '../assets/pad.png'
 
 export function renderImageAdaptive (component: any) {
+  return (args: any) => ({
+    components: {
+      CImage: component
+    },
+    setup () {
+      return {
+        args,
+        galaxyZFold5,
+        galaxyZFlip5,
+        galaxyS23p,
+        pad
+      }
+    },
+    template: `
+      <div style="display: flex; gap: 16px;">
+      </div>`
+  })
+
   return (args: any) => {
     const styleItem = {
       position: 'relative',

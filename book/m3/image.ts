@@ -7,8 +7,11 @@ import {
   imageArgs,
   imageDescription,
   imageDescriptionAdaptive,
+  imageTitleAdaptive,
   imageValues
 } from '../components/image'
+
+export const m3ImageTitleAdaptive: string = imageTitleAdaptive
 
 export const m3ImageDescription: string = imageDescription
 

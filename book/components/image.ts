@@ -7,6 +7,9 @@ import { StorybookCategory } from '../category'
 
 import { image, percent } from '../values'
 
+export const imageTitle: string = 'Title'
+export const imageTitleAdaptive: string = 'Adaptive'
+
 export const imageDescription: string =
   'Компонент для отображения графических материалов. ' +
   'Компонент используется для работы с SVG файлами, графическими файлами (загруженными через input или по url) и иконками.'

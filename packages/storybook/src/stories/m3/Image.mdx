@@ -1,0 +1,22 @@
+import { Canvas, Controls, Meta, Subtitle, Title } from '@storybook/blocks'
+
+import * as Image from './Image.stories';
+
+import {
+  m3ImageDescription,
+  m3ImageDescriptionAdaptive,
+  m3ImageTitleAdaptive
+} from 'ui/book/m3/image'
+
+<Meta of={Image}/>
+
+### Button
+<Subtitle children={m3ImageDescription}/>
+
+<Canvas of={Image.Image}/>
+<Controls of={Image.Image}/>
+
+<Title children={m3ImageTitleAdaptive}/>
+<div children={m3ImageDescriptionAdaptive}/>
+
+<Canvas of={Image.Adaptive}/>
