@@ -16,8 +16,7 @@ export type TranslateItemOrList<T extends string | string[]> = T extends string[
  * Класс для получения переведенного текста.
  */
 export class Translate {
-  protected static readonly url = useEnv<string>('apiTranslate')
-  protected static readonly urlLocalhost = 'translate.json'
+  protected static url = useEnv<string>('apiTranslate')
   protected static readonly data: Record<string, string> = {}
 
   protected static cache: string[] = []
@@ -165,6 +164,16 @@ export class Translate {
   }
 
   /**
+   * Change the path to the script for obtaining the translation.<br>
+   * Изменить путь к скрипту для получения перевода.
+   * @param url path to the script /<br>путь к скрипту
+   */
+  static setUrl (url: string): Translate {
+    this.url = url
+    return Translate
+  }
+
+  /**
    * Getting the full title for translation.<br>
    * Получение полного названия для перевода.
    * @param name code name /<br>название кода
@@ -199,9 +208,8 @@ export class Translate {
    * Получение списка переводов с сервера.
    */
   protected static async getResponse (): Promise<Record<string, string>> {
-    const path = Api.isLocalhost() ? this.urlLocalhost : this.url
     const data = (await Api.response<{ data: Record<string, string> }>({
-      path,
+      path: this.url,
       request: {
         list: this.cache
       }

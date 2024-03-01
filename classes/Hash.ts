@@ -1,5 +1,6 @@
 import { executeFunction } from '../functions/executeFunction'
 import { forEach } from '../functions/forEach'
+import { getRequestString } from '../functions/getRequestString'
 import { isDomRuntime } from '../functions/isDomRuntime'
 import { transformation } from '../functions/transformation'
 
@@ -91,13 +92,7 @@ export class Hash {
    */
   private static update (): void {
     this.block = true
-
-    const hash: string[] = forEach(this.hash,
-      (item, name) => `${name}=${encodeURIComponent(String(item))}`
-    )
-
-    hash.sort()
-    history.replaceState(null, '', `#${hash.join(';')}`)
+    history.replaceState(null, '', `#${getRequestString(this.hash, '=', ';')}`)
 
     requestAnimationFrame(() => {
       this.block = false

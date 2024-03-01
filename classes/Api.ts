@@ -1,9 +1,13 @@
+import { getRequestString } from '../functions/getRequestString'
 import { isFilled } from '../functions/isFilled'
 import { isString } from '../functions/isString'
 
 import { Geo } from './Geo'
 
 import { useEnv } from '../composables/useEnv'
+import { toArray } from '../functions/toArray.ts'
+import { isObjectNotArray } from '../functions/isObjectNotArray.ts'
+import { executeFunction } from '../functions/executeFunction.ts'
 
 export enum ApiMethodItem {
   get = 'GET',
@@ -14,7 +18,8 @@ export enum ApiMethodItem {
 
 export type ApiMethod = string & ApiMethodItem
 export type ApiFetch = {
-  path: string
+  path?: string
+  pathFull?: string
   method?: ApiMethod
   request?: FormData | Record<string, any> | string
   auth?: boolean
@@ -22,15 +27,21 @@ export type ApiFetch = {
   type?: string
   init?: RequestInit
 }
+export type ApiResponse = {
+  path: string
+  method: ApiMethod
+  request?: ApiFetch['request']
+  response: any | ((request?: ApiFetch['request']) => any)
+  disable?: boolean
+}
 
 /**
  * Class for working with requests.<br>
  * Класс для работы с запросами.
  */
 export class Api {
-  protected static readonly url = useEnv<string>('api', '/')
-  protected static readonly urlLocalhost = `${useEnv<string>('BASE_URL', '/')}public/`
-  protected static urlCommand: string = 'ui'
+  protected static url = useEnv<string>('api', '/')
+  protected static response: ApiResponse[] = []
 
   /**
    * Is the server local.<br>
@@ -69,34 +80,26 @@ export class Api {
    * @param path path to the script /<br>путь к скрипту
    */
   static getUrl (path: string): string {
-    const url = this.isLocalhost() ? this.urlLocalhost : this.url
-
-    return `${url}${path}`
+    return `${this.url}${path}`
       .replace('{locale}', Geo.getLocation())
       .replace('{country}', Geo.getCountry())
       .replace('{language}', Geo.getLanguage())
   }
 
   /**
-   * Get access to a script by the name of the team.<br>
-   * Получение к скрипту по названию команды.
-   * @param command name of the team /<br>название команды
-   */
-  static getUrlByCommand (command: string): string {
-    if (this.isLocalhost()) {
-      return `${this.urlCommand}/${command}.json`
-    }
-
-    return `${this.urlCommand}/?command=${command}`
-  }
-
-  /**
    * Getting data for the body.<br>
    * Получение данных для тела.
    * @param request this request /<br>данный запрос
+   * @param method method for request /<br>метод запрос
    */
-  static getBody (request: ApiFetch['request']): string | FormData | undefined {
-    if (isFilled(request)) {
+  static getBody (
+    request: ApiFetch['request'] = {},
+    method = ApiMethodItem.get
+  ): string | FormData | undefined {
+    if (
+      method !== ApiMethodItem.get &&
+      isFilled(request)
+    ) {
       if (
         request instanceof FormData ||
         isString(request)
@@ -111,11 +114,45 @@ export class Api {
   }
 
   /**
+   * Getting data for the body of the get method.<br>
+   * Получение данных для тела метода get.
+   * @param request this request /<br>данный запрос
+   * @param path path to request /<br>путь к запрос
+   * @param method method for request /<br>метод запрос
+   */
+  static getBodyForGet (
+    request: ApiFetch['request'],
+    path: string = '',
+    method = ApiMethodItem.get
+  ): string {
+    if (method === ApiMethodItem.get) {
+      const type = path.match(/\?/) ? '&' : '?'
+      const body = typeof request === 'object' ? getRequestString(request) : request
+
+      if (isFilled(body)) {
+        return `${type}${body}`
+      }
+    }
+
+    return ''
+  }
+
+  /**
+   * Change the base path to the script.<br>
+   * Изменить базовый путь к скрипту.
+   * @param url path to the script /<br>путь к скрипту
+   */
+  static setUrl (url: string): Api {
+    this.url = url
+    return Api
+  }
+
+  /**
    * To execute a request.<br>
    * Выполнить запрос.
    * @param pathRequest query string or list of parameters /<br>строка запроса или список параметров
    */
-  static async response<T> (pathRequest: string | ApiFetch): Promise<T> {
+  static async request<T> (pathRequest: string | ApiFetch): Promise<T> {
     if (isString(pathRequest)) {
       return await this.fetch<T>({
         path: pathRequest
@@ -126,18 +163,92 @@ export class Api {
   }
 
   /**
-   * Execute a query by the name of the team.<br>
-   * Выполнить запрос по названию команды.
-   * @param command name of the team /<br>название команды
-   * @param request query string or list of parameters /<br>строка запроса или список параметров
+   * Sends a get method request.<br>
+   * Отправляет запрос метода get.
+   * @param request list of parameters /<br>список параметров
    */
-  static async responseByCommand<T> (
-    command: string,
-    request?: ApiFetch
-  ): Promise<T> {
-    return await this.fetch<T>({
-      path: this.getUrlByCommand(command),
-      ...(request ?? {})
+  static get<T> (request: ApiFetch): Promise<T> {
+    return this.request({
+      ...request,
+      method: ApiMethodItem.get
+    })
+  }
+
+  /**
+   * Sends a post method request.<br>
+   * Отправляет запрос метода post.
+   * @param request list of parameters /<br>список параметров
+   */
+  static post<T> (request: ApiFetch): Promise<T> {
+    return this.request({
+      ...request,
+      method: ApiMethodItem.post
+    })
+  }
+
+  /**
+   * Sends a put method request.<br>
+   * Отправляет запрос метода put.
+   * @param request list of parameters /<br>список параметров
+   */
+  static put<T> (request: ApiFetch): Promise<T> {
+    return this.request({
+      ...request,
+      method: ApiMethodItem.put
+    })
+  }
+
+  /**
+   * Sends a delete method request.<br>
+   * Отправляет запрос метода delete.
+   * @param request list of parameters /<br>список параметров
+   */
+  static delete<T> (request: ApiFetch): Promise<T> {
+    return this.request({
+      ...request,
+      method: ApiMethodItem.delete
+    })
+  }
+
+  static addResponse (
+    response: ApiResponse | ApiResponse[]
+  ): Api {
+    this.response.push(...toArray(response))
+    return Api
+  }
+
+  protected static getResponse (
+    path: string = '',
+    method: ApiMethod,
+    request?: ApiFetch['request']
+  ): ApiResponse | undefined {
+    return this.response.find(item => {
+      if (
+        item?.disable !== true &&
+        path === item.path &&
+        method === item.method
+      ) {
+        if (request === item?.request) {
+          return true
+        }
+
+        if (
+          isFilled(request) &&
+          isFilled(item.request) &&
+          isObjectNotArray(request) &&
+          isObjectNotArray(item.request) &&
+          !(request instanceof FormData) &&
+          !(item.request instanceof FormData) &&
+          Object.values(request).length === Object.values(item.request).length
+        ) {
+          return Object.entries(item.request).reduce(
+            (accum, [key, value]) => (accum && value === request?.[key]),
+            true
+          )
+        }
+      }
+
+      return false
     })
   }
 
@@ -154,21 +265,28 @@ export class Api {
    */
   protected static async fetch<T> ({
     path = '',
+    pathFull = undefined,
     method = ApiMethodItem.get,
     request = undefined,
     headers = {},
     type = 'application/json;charset=UTF-8',
     init = {}
   }: ApiFetch): Promise<T> {
-    try {
-      const dataHeaders = this.getHeaders(headers, type)
-      const dataMethod = dataHeaders && method === ApiMethodItem.get ? ApiMethodItem.post : method
+    const response = this.getResponse(path, method, request)
 
-      return await (await fetch(this.getUrl(path), {
+    if (response) {
+      return executeFunction(response.response)
+    }
+
+    try {
+      const pathFinal = pathFull ?? this.getUrl(path)
+      const url = `${pathFinal}${this.getBodyForGet(request, pathFinal, method)}`
+
+      return await (await fetch(url, {
         ...init,
-        method: dataMethod,
-        headers: dataHeaders,
-        body: this.getBody(request)
+        method,
+        headers: this.getHeaders(headers, type),
+        body: this.getBody(request, method)
       })).json()
     } catch (e) {
       console.error(e)
