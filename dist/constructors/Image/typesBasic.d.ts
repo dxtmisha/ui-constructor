@@ -1,6 +1,7 @@
 import { type NumberOrString, type Undefined } from '../../types/basic';
 import { type ConstrStyles } from '../../types/constructor';
 export declare enum ImageTypeValue {
+    pdf = "pdf",
     file = "file",
     image = "image",
     color = "color",

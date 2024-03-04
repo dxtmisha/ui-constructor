@@ -22,6 +22,7 @@ export * from './../functions/getMinLengthAllArray';
 export * from './../functions/getMouseClient';
 export * from './../functions/getMouseClientX';
 export * from './../functions/getMouseClientY';
+export * from './../functions/getRequestString';
 export * from './../functions/inArray';
 export * from './../functions/intersectKey';
 export * from './../functions/isArray';

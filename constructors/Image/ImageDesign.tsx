@@ -3,13 +3,8 @@ import { h, onUnmounted, type VNode, watch } from 'vue'
 import { DesignConstructorAbstract } from '../../classes/design/DesignConstructorAbstract'
 import { ImageRef } from './ImageRef'
 
-import {
-  type ConstrOptions,
-  type ConstrStyles
-} from '../../types/constructor'
-import {
-  type ImageProps
-} from './props'
+import { type ConstrOptions, type ConstrStyles } from '../../types/constructor'
+import { type ImageProps } from './props'
 import {
   type ImageClasses,
   type ImageComponents,
@@ -18,6 +13,7 @@ import {
   type ImageSetup,
   type ImageSlots
 } from './types'
+import { ImageTypeValue } from './typesBasic'
 
 /**
  * Constructor class for the image component.<br>
@@ -93,7 +89,8 @@ export class ImageDesign<
       type: this.image.type,
       data: this.image.data,
 
-      text: this.image.text
+      text: this.image.text,
+      renderValue: () => this.renderValue()
     } as SETUP
   }
 
@@ -148,6 +145,20 @@ export class ImageDesign<
       class: setup.classes.value.main,
       style: setup.styles.value,
       translate: 'no'
-    }, setup.text.value)
+    }, setup.renderValue())
+  }
+
+  /**
+   * Rendering the value for the component.<br>
+   * Рендеринг значения для компонента.
+   */
+  protected renderValue (): string | VNode[] | undefined {
+    const setup = this.setup()
+
+    if (setup.type.value === ImageTypeValue.pdf) {
+      return [h('object', { data: setup.data.value })]
+    }
+
+    return setup.text.value
   }
 }

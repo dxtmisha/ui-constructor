@@ -47,4 +47,9 @@ export declare class ImageDesign<COMP extends ImageComponents, SETUP extends Ima
      * Метод для рендеринга.
      */
     protected initRender(): VNode;
+    /**
+     * Rendering the value for the component.<br>
+     * Рендеринг значения для компонента.
+     */
+    protected renderValue(): string | VNode[] | undefined;
 }

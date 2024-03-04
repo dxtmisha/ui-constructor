@@ -7,18 +7,38 @@ import { StorybookCategory } from '../category'
 
 import { image, percent } from '../values'
 
-export const imageTitle: string = 'Title'
+export const imageTitle: string = 'Image'
+export const imageTitleValue: string = 'Value'
 export const imageTitleAdaptive: string = 'Adaptive'
 
 export const imageDescription: string =
   'Компонент для отображения графических материалов. ' +
   'Компонент используется для работы с SVG файлами, графическими файлами (загруженными через input или по url) и иконками.'
 
+export const imageDescriptionValue: string =
+  'Компонент изображения может отображать встроенные иконки, картины, SVG-файлы и PDF.'
+
+export const imageDescriptionValueIcon: string =
+  'Можно подключить дополнительные иконки через метод Icons.add. ' +
+  'Подключенная иконка может быть любым изображением или SVG-файлом. ' +
+  'При этом цвет изображения будет залит цветом шрифта'
+
 export const imageDescriptionAdaptive: string =
   'Для изображения с продуктами можно выравнивать размеры элементов между собой, ' +
   'чтобы продукты на изображении были в одном масштабе. ' +
   'Для работы необходимо указать размер продукта, и у изображения не должно быть пустых отступов. ' +
   'Сам размер изображения может быть любым и не равен другим.'
+
+export const imageDescriptionAdaptiveBasic: string =
+  'Для активации адаптивности необходимо включить свойство adaptive и один из размеров (высота или ширина) object-width/ object-height. ' +
+  'После этого все компоненты с включенным adaptive будут выравнивать размер изображения между собой.'
+
+export const imageDescriptionAdaptiveGroup: string =
+  'Адаптация можно разделить на группы черед свойство adaptive-group.'
+
+export const imageDescriptionAdaptiveAlways: string =
+  'По умолчанию адаптив останавливается при выходе элемента за пределы экрана. ' +
+  'Для постоянного отслеживания размера используется свойство adaptive-always.'
 
 export const imageArgs: StorybookArgs = {
   // Status

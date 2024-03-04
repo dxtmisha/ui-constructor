@@ -1,6 +1,6 @@
 import { CacheItem } from '../../classes/CacheItem';
-import { type ImageProps } from './props';
 import { type ImageTypeItem } from './typesBasic';
+import { type ImageProps } from './props';
 /**
  * Class for working with the image type.<br>
  * Класс для работы с типом изображения.

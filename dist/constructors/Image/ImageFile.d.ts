@@ -28,6 +28,18 @@ export declare class ImageFile {
      */
     static getPath(src: string | File): Promise<string>;
     /**
+     * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
+     * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
+     * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
+     */
+    static getFileResult(file: File): Promise<string>;
+    /**
+     * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
+     * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
+     * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
+     */
+    static getFileReader(file: File): Promise<string>;
+    /**
      * Image size adaptation. Checks if the image size is larger than maxSize, reduces it to maxSize.<br>
      * Адаптация размера изображения. Проверяет, если размер изображения больше maxSize, уменьшает его до maxSize.
      * @param image image element /<br>элемент изображения
@@ -35,10 +47,4 @@ export declare class ImageFile {
      * @param maxSize maximum allowable image size /<br>максимальный допустимый размер изображения
      */
     protected static getSRC(image: HTMLImageElement, src?: string | File, maxSize?: number): string;
-    /**
-     * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
-     * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
-     * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
-     */
-    protected static getFileResult(file: File): Promise<string>;
 }

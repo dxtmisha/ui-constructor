@@ -1,11 +1,10 @@
 import { CacheItem } from '../../classes/CacheItem'
 
-import { type ImageProps } from './props'
-import {
-  type ImageTypeItem,
-  ImageTypeValue
-} from './typesBasic'
 import { Icons } from '../../classes/Icons'
+import { ImagePdf } from './ImagePdf'
+
+import { type ImageTypeItem, ImageTypeValue } from './typesBasic'
+import { type ImageProps } from './props'
 
 import { GEO_FLAG_ICON_NAME } from '../../classes/GeoFlag'
 
@@ -41,6 +40,10 @@ export class ImageType extends CacheItem<ImageTypeItem> {
     const image = this.props?.value
 
     if (image) {
+      if (ImagePdf.isPdf(image)) {
+        return ImageTypeValue.pdf
+      }
+
       if (image instanceof File) {
         return ImageTypeValue.file
       }

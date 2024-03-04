@@ -16,6 +16,7 @@ import {
   type ImageItem,
   ImageTypeValue
 } from './typesBasic'
+import { ImagePdf } from './ImagePdf'
 
 /**
  * A class for obtaining image or icon data.<br>
@@ -94,6 +95,8 @@ export class ImageData extends DesignAsyncAbstract<ImageProps, ImageEventData> {
 
     if (image) {
       switch (this.type.get()) {
+        case ImageTypeValue.pdf:
+          return await ImagePdf.get(image)
         case ImageTypeValue.image:
         case ImageTypeValue.file:
           try {

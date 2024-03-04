@@ -4,7 +4,7 @@ import { type ImageItem } from './typesBasic'
  * Maximum size allowed without conversion.<br>
  * Максимальный размер, допустимый без преобразования.
  */
-export const MAX_SIZE: number = 720
+export const MAX_SIZE: number = 1280
 
 /**
  * Class for working with uploaded images.<br>
@@ -59,6 +59,34 @@ export class ImageFile {
   }
 
   /**
+   * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
+   * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
+   * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
+   */
+  static getFileResult (file: File): Promise<string> {
+    return new Promise(resolve => {
+      if (this.isImage(file)) {
+        this.getFileReader(file).then(result => resolve(result))
+      } else {
+        resolve('')
+      }
+    })
+  }
+
+  /**
+   * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
+   * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
+   * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
+   */
+  static getFileReader (file: File): Promise<string> {
+    return new Promise(resolve => {
+      const reader = new FileReader()
+      reader.onload = () => resolve(typeof reader.result === 'string' ? reader.result : '')
+      reader.readAsDataURL(file)
+    })
+  }
+
+  /**
    * Image size adaptation. Checks if the image size is larger than maxSize, reduces it to maxSize.<br>
    * Адаптация размера изображения. Проверяет, если размер изображения больше maxSize, уменьшает его до maxSize.
    * @param image image element /<br>элемент изображения
@@ -94,22 +122,5 @@ export class ImageFile {
     } else {
       return image.src
     }
-  }
-
-  /**
-   * Applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer.<br>
-   * Асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя.
-   * @param file the Blob or File from which to read /<br>Blob или File которые следует прочитать
-   */
-  protected static getFileResult (file: File): Promise<string> {
-    return new Promise(resolve => {
-      if (this.isImage(file)) {
-        const reader = new FileReader()
-        reader.onload = () => resolve(typeof reader.result === 'string' ? reader.result : '')
-        reader.readAsDataURL(file)
-      } else {
-        resolve('')
-      }
-    })
   }
 }

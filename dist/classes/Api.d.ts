@@ -6,7 +6,8 @@ export declare enum ApiMethodItem {
 }
 export type ApiMethod = string & ApiMethodItem;
 export type ApiFetch = {
-    path: string;
+    path?: string;
+    pathFull?: string;
     method?: ApiMethod;
     request?: FormData | Record<string, any> | string;
     auth?: boolean;
@@ -14,14 +15,20 @@ export type ApiFetch = {
     type?: string;
     init?: RequestInit;
 };
+export type ApiResponse = {
+    path: string;
+    method: ApiMethod;
+    request?: ApiFetch['request'];
+    response: any | ((request?: ApiFetch['request']) => any);
+    disable?: boolean;
+};
 /**
  * Class for working with requests.<br>
  * Класс для работы с запросами.
  */
 export declare class Api {
-    protected static readonly url: string;
-    protected static readonly urlLocalhost: string;
-    protected static urlCommand: string;
+    protected static url: string;
+    protected static response: ApiResponse[];
     /**
      * Is the server local.<br>
      * Является ли сервер локальный.
@@ -41,30 +48,58 @@ export declare class Api {
      */
     static getUrl(path: string): string;
     /**
-     * Get access to a script by the name of the team.<br>
-     * Получение к скрипту по названию команды.
-     * @param command name of the team /<br>название команды
-     */
-    static getUrlByCommand(command: string): string;
-    /**
      * Getting data for the body.<br>
      * Получение данных для тела.
      * @param request this request /<br>данный запрос
+     * @param method method for request /<br>метод запрос
      */
-    static getBody(request: ApiFetch['request']): string | FormData | undefined;
+    static getBody(request?: ApiFetch['request'], method?: ApiMethodItem): string | FormData | undefined;
+    /**
+     * Getting data for the body of the get method.<br>
+     * Получение данных для тела метода get.
+     * @param request this request /<br>данный запрос
+     * @param path path to request /<br>путь к запрос
+     * @param method method for request /<br>метод запрос
+     */
+    static getBodyForGet(request: ApiFetch['request'], path?: string, method?: ApiMethodItem): string;
+    /**
+     * Change the base path to the script.<br>
+     * Изменить базовый путь к скрипту.
+     * @param url path to the script /<br>путь к скрипту
+     */
+    static setUrl(url: string): Api;
     /**
      * To execute a request.<br>
      * Выполнить запрос.
      * @param pathRequest query string or list of parameters /<br>строка запроса или список параметров
      */
-    static response<T>(pathRequest: string | ApiFetch): Promise<T>;
+    static request<T>(pathRequest: string | ApiFetch): Promise<T>;
     /**
-     * Execute a query by the name of the team.<br>
-     * Выполнить запрос по названию команды.
-     * @param command name of the team /<br>название команды
-     * @param request query string or list of parameters /<br>строка запроса или список параметров
+     * Sends a get method request.<br>
+     * Отправляет запрос метода get.
+     * @param request list of parameters /<br>список параметров
      */
-    static responseByCommand<T>(command: string, request?: ApiFetch): Promise<T>;
+    static get<T>(request: ApiFetch): Promise<T>;
+    /**
+     * Sends a post method request.<br>
+     * Отправляет запрос метода post.
+     * @param request list of parameters /<br>список параметров
+     */
+    static post<T>(request: ApiFetch): Promise<T>;
+    /**
+     * Sends a put method request.<br>
+     * Отправляет запрос метода put.
+     * @param request list of parameters /<br>список параметров
+     */
+    static put<T>(request: ApiFetch): Promise<T>;
+    /**
+     * Sends a delete method request.<br>
+     * Отправляет запрос метода delete.
+     * @param request list of parameters /<br>список параметров
+     */
+    static delete<T>(request: ApiFetch): Promise<T>;
+    static addResponse(response: ApiResponse | ApiResponse[]): Api;
+    protected static getResponse(path: string | undefined, method: ApiMethod, request?: ApiFetch['request']): ApiResponse | undefined;
     /**
      * To execute a request.<br>
      * Выполнить запрос.
@@ -76,5 +111,5 @@ export declare class Api {
      * @param type type of request /<br>тип запроса
      * @param init additional parameters /<br>дополнительных параметров
      */
-    protected static fetch<T>({ path, method, request, headers, type, init }: ApiFetch): Promise<T>;
+    protected static fetch<T>({ path, pathFull, method, request, headers, type, init }: ApiFetch): Promise<T>;
 }

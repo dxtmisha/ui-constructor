@@ -7,8 +7,7 @@ export type TranslateItemOrList<T extends string | string[]> = T extends string[
  * Класс для получения переведенного текста.
  */
 export declare class Translate {
-    protected static readonly url: string;
-    protected static readonly urlLocalhost = "translate.json";
+    protected static url: string;
     protected static readonly data: Record<string, string>;
     protected static cache: string[];
     protected static resolveList: (() => void)[];
@@ -59,6 +58,12 @@ export declare class Translate {
      * @param data list of texts in the form of key-value /<br>список текстов в виде ключ-значение
      */
     static addNormalOrSync(data: Record<string, string>): Promise<void>;
+    /**
+     * Change the path to the script for obtaining the translation.<br>
+     * Изменить путь к скрипту для получения перевода.
+     * @param url path to the script /<br>путь к скрипту
+     */
+    static setUrl(url: string): Translate;
     /**
      * Getting the full title for translation.<br>
      * Получение полного названия для перевода.

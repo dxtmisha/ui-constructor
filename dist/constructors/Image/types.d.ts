@@ -1,4 +1,4 @@
-import { type ComputedRef, type ShallowRef } from 'vue';
+import { type ComputedRef, type ShallowRef, type VNode } from 'vue';
 import { type ConstrClass } from '../../types/constructor';
 import { type ImageEventData, type ImageEventItem, type ImageTypeItem } from './typesBasic';
 /**
@@ -21,6 +21,7 @@ export type ImageSetup = {
     type: ComputedRef<ImageTypeItem>;
     data: ShallowRef<ImageEventItem>;
     text: ComputedRef<string | undefined>;
+    renderValue(): string | VNode[] | undefined;
 };
 /**
  * Type describing available properties.<br>

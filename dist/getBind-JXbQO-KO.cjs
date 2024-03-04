@@ -1,0 +1,1 @@
+"use strict";const c=require("./toArray-h-YFi-Q9.cjs");function e(t,r={},o="value"){const i=typeof r=="string",n=i?r:o,s=i?{}:r;return t?t&&c.isObjectNotArray(t)&&n in t?{...s,...t}:{...s,[n]:t}:{}}exports.getBind=e;

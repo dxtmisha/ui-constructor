@@ -11,17 +11,9 @@ import { ImageAdaptiveItem } from './ImageAdaptiveItem'
 
 import { ImageBackground } from './ImageBackground'
 
-import {
-  type ConstrClassObject,
-  type ConstrStyles,
-  type ConstrValue
-} from '../../types/constructor'
+import { type ConstrClassObject, type ConstrStyles, type ConstrValue } from '../../types/constructor'
 import { type ImageProps } from './props'
-import {
-  type ImageElement,
-  type ImageEventLoad,
-  type ImageTypeItem
-} from './typesBasic'
+import { type ImageElement, type ImageEventLoad, type ImageTypeItem, ImageTypeValue } from './typesBasic'
 
 /**
  * Base class for working with images and icons.<br>
@@ -114,6 +106,15 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
    */
   getText (): string | undefined {
     const type = this.type.get()
+
+    if (type === ImageTypeValue.pdf) {
+      const image = this.data.getImage()
+
+      if (isString(image)) {
+        return image
+      }
+    }
+
     const value = this.getValue()
 
     if (
@@ -184,7 +185,10 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
    * Функция, которая вызывается каждый раз, когда изменяются входные значения.
    */
   protected async initEvent (): Promise<void> {
-    if (this.isChanged('image', ['value', 'url'])) {
+    if (
+      !this.event.image ||
+      this.isChanged('image', ['value', 'url'])
+    ) {
       this.event.image = this.getData().getImage()
     }
 
@@ -200,19 +204,19 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
 
     if (value) {
       switch (this.type.get()) {
-        case 'file':
-        case 'image':
+        case ImageTypeValue.file:
+        case ImageTypeValue.image:
           return {
             'background-image': this.background.getImage(),
             'background-size': this.background.get(),
             'background-position-x': this.position?.getX(),
             'background-position-y': this.position?.getY()
           }
-        case 'icon':
+        case ImageTypeValue.icon:
           return { 'background-image': this.background.getImage() }
-        case 'public':
+        case ImageTypeValue.public:
           return { 'mask-image': this.background.getImage() }
-        case 'color':
+        case ImageTypeValue.color:
           if (isString(value)) {
             return { 'background-color': value }
           }

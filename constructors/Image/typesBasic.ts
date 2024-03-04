@@ -7,6 +7,7 @@ import {
 } from '../../types/constructor'
 
 export enum ImageTypeValue {
+  pdf = 'pdf',
   file = 'file',
   image = 'image',
   color = 'color',

@@ -208,7 +208,7 @@ export class Translate {
    * Получение списка переводов с сервера.
    */
   protected static async getResponse (): Promise<Record<string, string>> {
-    const data = (await Api.response<{ data: Record<string, string> }>({
+    const data = (await Api.get<{ data: Record<string, string> }>({
       path: this.url,
       request: {
         list: this.cache

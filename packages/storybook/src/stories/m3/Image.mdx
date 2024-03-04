@@ -5,18 +5,84 @@ import * as Image from './Image.stories';
 import {
   m3ImageDescription,
   m3ImageDescriptionAdaptive,
-  m3ImageTitleAdaptive
+  m3ImageDescriptionAdaptiveAlways,
+  m3ImageDescriptionAdaptiveBasic,
+  m3ImageDescriptionAdaptiveGroup,
+  m3ImageDescriptionValue,
+  m3ImageDescriptionValueIcon,
+  m3ImageTitle,
+  m3ImageTitleAdaptive,
+  m3ImageTitleValue
 } from 'ui/book/m3/image'
 
 <Meta of={Image}/>
 
-### Button
+# {m3ImageTitle}
 <Subtitle children={m3ImageDescription}/>
+
+```js
+import { M3Image } from 'ui/M3Image'
+```
 
 <Canvas of={Image.Image}/>
 <Controls of={Image.Image}/>
 
-<Title children={m3ImageTitleAdaptive}/>
-<div children={m3ImageDescriptionAdaptive}/>
+## {m3ImageTitleValue}
+<p children={m3ImageDescriptionValue}/>
+<Canvas of={Image.Value}/>
+
+<p children={m3ImageDescriptionValueIcon}/>
+
+```js
+// component.vue
+<script setup lang="ts">
+import { Icons } from 'ui'
+
+Icons.add('name-icon', 'path')
+</script>
+
+<template>
+  <m3-image value="name-icon"/>
+</template>
+```
+
+<Canvas of={Image.ValueIcon}/>
+
+## {m3ImageTitleAdaptive}
+<p children={m3ImageDescriptionAdaptive}/>
+<p children={m3ImageDescriptionAdaptiveBasic}/>
+
+```html
+<m3-image
+  adaptive
+  :value="[string]"
+  :object-width="[number]"
+  :object-height="[number]"
+/>
+```
 
 <Canvas of={Image.Adaptive}/>
+
+<p children={m3ImageDescriptionAdaptiveGroup}/>
+
+```html
+<m3-image
+  ...
+  :adaptive-group="[string]"
+  ...
+/>
+```
+
+<Canvas of={Image.AdaptiveGroup}/>
+
+<p children={m3ImageDescriptionAdaptiveAlways}/>
+
+```html
+<m3-image
+  ...
+  :adaptive-always="[boolean]"
+  ...
+/>
+```
+
+<Canvas of={Image.AdaptiveAlways}/>

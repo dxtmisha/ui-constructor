@@ -1,6 +1,7 @@
 import {
   type ComputedRef,
-  type ShallowRef
+  type ShallowRef,
+  type VNode
 } from 'vue'
 
 import {
@@ -37,6 +38,7 @@ export type ImageSetup = {
   data: ShallowRef<ImageEventItem>
 
   text: ComputedRef<string | undefined>
+  renderValue (): string | VNode[] | undefined
 }
 
 /**
