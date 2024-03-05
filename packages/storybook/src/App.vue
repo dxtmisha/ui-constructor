@@ -4,4 +4,4 @@
   <div></div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">*{position: static}</style>

@@ -1,0 +1,108 @@
+import { Canvas, Controls, Meta, Subtitle } from '@storybook/blocks'
+
+import * as Image from './Image.stories';
+
+import { c2ImageText } from 'ui/book/c2/image'
+
+<Meta of={Image}/>
+
+# {c2ImageText.main.title}
+
+<Subtitle children={c2ImageText.main.description.main}/>
+
+```js
+import { c2Image } from 'ui/c2Image'
+```
+
+<Canvas of={Image.Image}/>
+<Controls of={Image.Image}/>
+<p children={c2ImageText.main.description.use}/>
+
+## {c2ImageText.value.title.main}
+
+<p children={c2ImageText.value.description.main}/>
+
+```html
+<c2-image value="[string | File]"/>
+```
+
+<Canvas of={Image.Value}/>
+
+### {c2ImageText.value.title.icon}
+
+<p children={c2ImageText.value.description.icon}/>
+
+```js
+// component.vue
+<script setup lang="ts">
+import { Icons } from 'ui'
+
+Icons.add('name-icon', 'path')
+</script>
+
+<template>
+  <c2-image value="name-icon"/>
+</template>
+```
+
+<Canvas of={Image.ValueIcon}/>
+
+### {c2ImageText.value.title.unloaded}
+
+<p children={c2ImageText.value.description.unloaded.main}/>
+<Canvas of={Image.ValueUnloaded}/>
+<p><b children={c2ImageText.value.description.unloaded.attention}></b></p>
+
+## {c2ImageText.coordinator.title}
+<p children={c2ImageText.coordinator.description.main}/>
+<p children={c2ImageText.coordinator.description.value}/>
+
+```html
+<c2-image
+  ...
+  :coordinator="[Array<[number, number, number, number]>]"
+  ...
+/>
+```
+
+<Canvas of={Image.Coordinator}/>
+
+## {c2ImageText.adaptive.title.main}
+<p children={c2ImageText.adaptive.description.main}/>
+<p children={c2ImageText.adaptive.description.value}/>
+
+```html
+<c2-image
+  adaptive
+  :value="[string]"
+  :object-width="[number]"
+  :object-height="[number]"
+/>
+```
+
+<Canvas of={Image.Adaptive}/>
+
+<p children={c2ImageText.adaptive.description.always}/>
+
+```html
+<c2-image
+  ...
+  :adaptive-always="[boolean]"
+  ...
+/>
+```
+
+<Canvas of={Image.AdaptiveAlways}/>
+
+### {c2ImageText.adaptive.title.group}
+<p children={c2ImageText.adaptive.description.group}/>
+
+```html
+<c2-image
+  ...
+  :adaptive-group="[string]"
+  ...
+/>
+```
+
+<Canvas of={Image.AdaptiveGroup}/>

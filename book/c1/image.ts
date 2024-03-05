@@ -5,11 +5,12 @@ import {
 
 import {
   imageArgs,
+  imageText,
   imageValues
 } from '../components/image'
-
-export const c1ImageDescription: string = 'imageDescription'
 
 export const c1ImageArgs: StorybookArgs = imageArgs
 
 export const c1ImageValues: StorybookArgsValue = imageValues
+
+export const c1ImageText = imageText

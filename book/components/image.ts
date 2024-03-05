@@ -64,7 +64,7 @@ export const imageArgs: StorybookArgs = {
       defaultValue: { summary: 'cover' },
       type: { summary: 'auto | contain | cover | percent' }
     },
-    description: 'Можно ввести тип масштабирования или значение в процентах'
+    description: 'Можно ввести тип масштабирования или значение в процентах. Не работает с coordinates'
   },
   x: {
     control: StorybookControl.select,
@@ -73,7 +73,7 @@ export const imageArgs: StorybookArgs = {
       category: 'Image',
       type: { summary: 'percent' }
     },
-    description: 'Сдвиг изображения по x-плоскости. Не работает с coordinates/size'
+    description: 'Сдвиг изображения по x-плоскости. Не работает с coordinates'
   },
   y: {
     control: StorybookControl.select,
@@ -82,7 +82,7 @@ export const imageArgs: StorybookArgs = {
       category: 'Image',
       type: { summary: 'percent' }
     },
-    description: 'Сдвиг изображения по y-плоскости. Не работает с coordinates/size'
+    description: 'Сдвиг изображения по y-плоскости. Не работает с coordinates'
   },
 
   // Image/ Adaptive
@@ -139,8 +139,12 @@ export const imageValues: StorybookArgsValue = {
 export const imageText = {
   main: {
     title: 'Image',
-    description: 'Компонент для отображения графических материалов. ' +
-      'Компонент используется для работы с SVG файлами, графическими файлами (загруженными через input или по url) и иконками.'
+    description: {
+      main: 'Компонент для отображения графических материалов. ' +
+        'Компонент используется для работы с SVG файлами, графическими файлами (загруженными через input или по url) и иконками.',
+      use: 'Компонент представляет собой span с абсолютным позиционированием. ' +
+        'Поэтому его нужно обернуть в элемент со стилем position, не равным static.'
+    }
   },
   value: {
     title: {

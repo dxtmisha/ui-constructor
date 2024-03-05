@@ -4,7 +4,7 @@ import { C1Image } from 'ui/C1Image'
 
 import {
   c1ImageArgs,
-  c1ImageDescription,
+  c1ImageText,
   c1ImageValues
 } from 'ui/book/c1/image.ts'
 
@@ -16,7 +16,7 @@ const meta = {
     design: 'c1',
     docs: {
       description: {
-        component: c1ImageDescription
+        component: c1ImageText.main.description.main
       }
     }
   },
