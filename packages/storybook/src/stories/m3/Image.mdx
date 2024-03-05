@@ -1,24 +1,14 @@
-import { Canvas, Controls, Meta, Subtitle, Title } from '@storybook/blocks'
+import { Canvas, Controls, Meta, Subtitle } from '@storybook/blocks'
 
 import * as Image from './Image.stories';
 
-import {
-  m3ImageDescription,
-  m3ImageDescriptionAdaptive,
-  m3ImageDescriptionAdaptiveAlways,
-  m3ImageDescriptionAdaptiveBasic,
-  m3ImageDescriptionAdaptiveGroup,
-  m3ImageDescriptionValue,
-  m3ImageDescriptionValueIcon,
-  m3ImageTitle,
-  m3ImageTitleAdaptive,
-  m3ImageTitleValue
-} from 'ui/book/m3/image'
+import { m3ImageText } from 'ui/book/m3/image'
 
 <Meta of={Image}/>
 
-# {m3ImageTitle}
-<Subtitle children={m3ImageDescription}/>
+# {m3ImageText.main.title}
+
+<Subtitle children={m3ImageText.main.description}/>
 
 ```js
 import { M3Image } from 'ui/M3Image'
@@ -27,11 +17,19 @@ import { M3Image } from 'ui/M3Image'
 <Canvas of={Image.Image}/>
 <Controls of={Image.Image}/>
 
-## {m3ImageTitleValue}
-<p children={m3ImageDescriptionValue}/>
+## {m3ImageText.value.title.main}
+
+<p children={m3ImageText.value.description.main}/>
+
+```html
+<m3-image value="[string | File]"/>
+```
+
 <Canvas of={Image.Value}/>
 
-<p children={m3ImageDescriptionValueIcon}/>
+### {m3ImageText.value.title.icon}
+
+<p children={m3ImageText.value.description.icon}/>
 
 ```js
 // component.vue
@@ -48,9 +46,29 @@ Icons.add('name-icon', 'path')
 
 <Canvas of={Image.ValueIcon}/>
 
-## {m3ImageTitleAdaptive}
-<p children={m3ImageDescriptionAdaptive}/>
-<p children={m3ImageDescriptionAdaptiveBasic}/>
+### {m3ImageText.value.title.unloaded}
+
+<p children={m3ImageText.value.description.unloaded.main}/>
+<Canvas of={Image.ValueUnloaded}/>
+<p><b children={m3ImageText.value.description.unloaded.attention}></b></p>
+
+## {m3ImageText.coordinator.title}
+<p children={m3ImageText.coordinator.description.main}/>
+<p children={m3ImageText.coordinator.description.value}/>
+
+```html
+<m3-image
+  ...
+  :coordinator="[Array<[number, number, number, number]>]"
+  ...
+/>
+```
+
+<Canvas of={Image.Coordinator}/>
+
+## {m3ImageText.adaptive.title.main}
+<p children={m3ImageText.adaptive.description.main}/>
+<p children={m3ImageText.adaptive.description.value}/>
 
 ```html
 <m3-image
@@ -63,19 +81,7 @@ Icons.add('name-icon', 'path')
 
 <Canvas of={Image.Adaptive}/>
 
-<p children={m3ImageDescriptionAdaptiveGroup}/>
-
-```html
-<m3-image
-  ...
-  :adaptive-group="[string]"
-  ...
-/>
-```
-
-<Canvas of={Image.AdaptiveGroup}/>
-
-<p children={m3ImageDescriptionAdaptiveAlways}/>
+<p children={m3ImageText.adaptive.description.always}/>
 
 ```html
 <m3-image
@@ -86,3 +92,16 @@ Icons.add('name-icon', 'path')
 ```
 
 <Canvas of={Image.AdaptiveAlways}/>
+
+### {m3ImageText.adaptive.title.group}
+<p children={m3ImageText.adaptive.description.group}/>
+
+```html
+<m3-image
+  ...
+  :adaptive-group="[string]"
+  ...
+/>
+```
+
+<Canvas of={Image.AdaptiveGroup}/>

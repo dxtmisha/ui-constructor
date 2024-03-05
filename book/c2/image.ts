@@ -5,12 +5,11 @@ import {
 
 import {
   imageArgs,
-  imageDescription,
   imageDescriptionAdaptive,
   imageValues
 } from '../components/image'
 
-export const c2ImageDescription: string = imageDescription
+export const c2ImageDescription: string = 'imageDescription'
 
 export const c2ImageDescriptionAdaptive: string = imageDescriptionAdaptive
 
