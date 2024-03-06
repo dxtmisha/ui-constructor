@@ -5,7 +5,7 @@ import { EventItem } from './EventItem'
 import {
   type ElementOrString,
   type EventListenerDetail
-} from '../types/basic.ts'
+} from '../types/basic'
 
 type LoadingDetail = {
   loading: boolean

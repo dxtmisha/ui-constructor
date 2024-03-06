@@ -10,7 +10,7 @@ import {
 } from '../../types/mutation'
 
 import { KEY_GLOBAL_PROJECT } from '../../config/mutation'
-import { Translate } from '../Translate.ts'
+import { Translate } from '../Translate'
 
 /**
  * Class for working with global variables.<br>

@@ -4,4 +4,8 @@
   <div></div>
 </template>
 
-<style lang="scss">*{position: static}</style>
+<style lang="scss">
+@container  {
+
+}
+</style>

@@ -5,9 +5,9 @@ import { isString } from '../functions/isString'
 import { Geo } from './Geo'
 
 import { useEnv } from '../composables/useEnv'
-import { toArray } from '../functions/toArray.ts'
-import { isObjectNotArray } from '../functions/isObjectNotArray.ts'
-import { executeFunction } from '../functions/executeFunction.ts'
+import { toArray } from '../functions/toArray'
+import { isObjectNotArray } from '../functions/isObjectNotArray'
+import { executeFunction } from '../functions/executeFunction'
 
 export enum ApiMethodItem {
   get = 'GET',

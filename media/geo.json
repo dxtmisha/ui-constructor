@@ -165,7 +165,8 @@
     "zone": "Europe/Vienna",
     "phoneCode": "43",
     "phoneMask": [
-      "+43-***-***-****"
+      "+43-***-***-****",
+      "+43-***-***-*****"
     ]
   },
   {
@@ -655,7 +656,10 @@
     "zone": "Europe/Helsinki",
     "language": "fi",
     "firstDay": "Mo",
-    "phoneMask": "+358-***-***-**-**"
+    "phoneMask": [
+      "+358-***-***-**-*",
+      "+358-***-***-**-**"
+    ]
   },
   {
     "country": "FR",
@@ -1751,7 +1755,10 @@
     "zone": "Asia/Seoul",
     "language": "ko",
     "firstDay": "Su",
-    "phoneMask": "+82-**-***-****"
+    "phoneMask": [
+      "+82-**-***-****",
+      "+82-**-***-****-**"
+    ]
   },
   {
     "country": "SS",
