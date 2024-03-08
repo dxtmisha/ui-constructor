@@ -1,6 +1,6 @@
 import { createApp, type Plugin } from 'vue'
 import { isFilled } from 'ui'
-import { registrationUi } from 'ui/plugin'
+import { registrationUi } from 'ui/registration'
 
 import '../src/style.scss'
 

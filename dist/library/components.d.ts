@@ -82,6 +82,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -92,7 +93,6 @@ export declare const components: {
             readonly: boolean;
             disabled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             contained: boolean;
         }, true, {}, {}, {
             P: {};
@@ -139,6 +139,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {}, {}, {}, {}, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -149,7 +150,6 @@ export declare const components: {
             readonly: boolean;
             disabled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             contained: boolean;
         }>;
         __isFragment?: undefined;
@@ -199,6 +199,7 @@ export declare const components: {
             detail: Record<string, any> | undefined;
         }) => void;
     }, string, {
+        height: "sm" | "md" | "lg" | undefined;
         focus: boolean;
         selected: boolean;
         iconTurn: boolean;
@@ -209,7 +210,6 @@ export declare const components: {
         readonly: boolean;
         disabled: boolean;
         outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
         contained: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;
@@ -768,6 +768,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -779,7 +780,6 @@ export declare const components: {
             disabled: boolean;
             filled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             elevated: boolean;
             tonal: boolean;
         }, true, {}, {}, {
@@ -829,6 +829,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {}, {}, {}, {}, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -840,7 +841,6 @@ export declare const components: {
             disabled: boolean;
             filled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             elevated: boolean;
             tonal: boolean;
         }>;
@@ -893,6 +893,7 @@ export declare const components: {
             detail: Record<string, any> | undefined;
         }) => void;
     }, string, {
+        height: "sm" | "md" | "lg" | undefined;
         focus: boolean;
         selected: boolean;
         iconTurn: boolean;
@@ -904,7 +905,6 @@ export declare const components: {
         disabled: boolean;
         filled: boolean;
         outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
         elevated: boolean;
         tonal: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
@@ -1510,12 +1510,12 @@ export declare const components: {
             onPaste?: ((event: ClipboardEvent) => any) | undefined;
             onReset?: ((event: Event) => any) | undefined;
         }, {
+            right: boolean;
             match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
             visible: boolean;
             view: string;
             type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
             special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-            right: boolean;
         }, true, {}, {}, {
             P: {};
             B: {};
@@ -1562,12 +1562,12 @@ export declare const components: {
             onPaste?: ((event: ClipboardEvent) => any) | undefined;
             onReset?: ((event: Event) => any) | undefined;
         }, {}, {}, {}, {}, {
+            right: boolean;
             match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
             visible: boolean;
             view: string;
             type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
             special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-            right: boolean;
         }>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
@@ -1621,12 +1621,12 @@ export declare const components: {
         paste: (event: ClipboardEvent) => void;
         reset: (event: Event) => void;
     }, string, {
+        right: boolean;
         match: import("../constructors/Mask/typesBasic").MaskMatchItem | undefined;
         visible: boolean;
         view: string;
         type: import("../constructors/Mask/typesBasic").MaskTypeItem | undefined;
         special: import("../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-        right: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Mask/types").MaskSlots>;
     });
@@ -1970,8 +1970,8 @@ export declare const components: {
             };
             dense: BooleanConstructor;
             fullscreen: BooleanConstructor;
-            alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-            origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+            alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+            origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
             open: BooleanConstructor;
             disabled: BooleanConstructor;
             preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -2014,8 +2014,8 @@ export declare const components: {
             };
             dense: BooleanConstructor;
             fullscreen: BooleanConstructor;
-            alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-            origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+            alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+            origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
             open: BooleanConstructor;
             disabled: BooleanConstructor;
             preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -2073,8 +2073,8 @@ export declare const components: {
             };
             dense: BooleanConstructor;
             fullscreen: BooleanConstructor;
-            alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-            origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+            alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+            origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
             open: BooleanConstructor;
             disabled: BooleanConstructor;
             preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -2134,8 +2134,8 @@ export declare const components: {
         };
         dense: BooleanConstructor;
         fullscreen: BooleanConstructor;
-        alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-        origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+        alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+        origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
         open: BooleanConstructor;
         disabled: BooleanConstructor;
         preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;

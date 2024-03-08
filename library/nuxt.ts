@@ -15,8 +15,8 @@ export default defineNuxtModule({
     ]
 
     addImports({
-      name: 'uiPluginBasic',
-      from: 'ui/plugin-basic'
+      name: 'uiRegistrationBasic',
+      from: 'ui/registration-basic'
     })
 
     await addComponent({

@@ -8,8 +8,8 @@ const s = t({
     a.options.css.push("ui/style.css"), a.options.build.transpile = [
       /ui\/dist\/(m2|m3|c1|c2)/i
     ], e({
-      name: "uiPluginBasic",
-      from: "ui/plugin-basic"
+      name: "uiRegistrationBasic",
+      from: "ui/registration-basic"
     }), await i({
       name: "M2Button",
       filePath: "ui/dist/M2Button.vue"

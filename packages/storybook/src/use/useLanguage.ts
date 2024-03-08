@@ -1,4 +1,4 @@
-import { GeoRef } from 'ui/classes/ref/GeoRef'
+import { GeoRef } from 'ui'
 
 /**
  * We get the settings object for language selection.<br>

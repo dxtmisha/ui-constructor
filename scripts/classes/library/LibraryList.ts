@@ -9,6 +9,7 @@ import {
   LIBRARY_COMPONENTS,
   LIBRARY_DIR
 } from '../../config/library'
+import { STYLE_TYPES } from '../../config/style'
 
 type LibraryListItem = {
   imports: string[]
@@ -91,6 +92,10 @@ export class LibraryList {
     return this
   }
 
+  /**
+   * Returns a list of components.<br>
+   * Возвращает список компонентов.
+   */
   private getList (): LibraryListList {
     const components = this.items.getComponentList()
     const data: LibraryListList = {
@@ -125,11 +130,19 @@ export class LibraryList {
     return data
   }
 
+  /**
+   * Returns a list of data for the json file.<br>
+   * Возвращает список данных для файла json.
+   */
   private getListForJson () {
     const data = {
       name: toKebabCase(this.items.getGlobalName()),
       library: LIBRARY_DIR,
-      components: [] as any[]
+      designs: this.items.getDesigns(),
+      designMain: this.items.getDesignMain(),
+      components: [] as any[],
+      vars: this.getListVars(),
+      modificationProperties: this.getModificationProperties()
     }
 
     this.items.getComponentList().forEach(({
@@ -138,8 +151,58 @@ export class LibraryList {
       dir
     }) => data.components.push({
       name: codeFull,
+      design,
+      code: toKebabCase(codeFull),
       path: `${design}/${dir}`
     }))
+
+    return data
+  }
+
+  /**
+   * Returns a list of available style properties.<br>
+   * Возвращает список доступных свойств стилей.
+   */
+  private getListVars () {
+    const data: Record<string, string[]> = {}
+
+    this.items.getDesigns().forEach(design => {
+      const file = PropertiesFile.readFile<string>(['.', design, 'styles', 'vars.scss'])
+
+      data[design] = []
+
+      if (file) {
+        const vars = file.match(/(?<=--)[^: ]+(?=:)/g)
+        const name = toCamelCase(design)
+
+        if (vars) {
+          vars.forEach(varName => {
+            const value = varName.match(/^([^-]+)-(.*?)$/)
+
+            if (
+              value &&
+              value[1] === name
+            ) {
+              data[design].push(value[2])
+            }
+          })
+        }
+      }
+    })
+
+    return data
+  }
+
+  /**
+   * Returns all properties that need to be transformed.<br>
+   * Возвращает все свойства, которые нужно преобразовать.
+   */
+  private getModificationProperties (): Record<string, string> {
+    const data: Record<string, string> = {}
+
+    STYLE_TYPES.forEach(name => {
+      data[toKebabCase(name)] = toCamelCase(name)
+    })
 
     return data
   }

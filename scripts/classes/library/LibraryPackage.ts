@@ -15,6 +15,11 @@ const EXPORTS_DEFAULT = {
     require: './dist/index.umd.cjs',
     types: `./dist/${LIBRARY_DIR}/index.d.ts`
   },
+  './vite-plugin-vue-ui': {
+    import: './dist/vite-plugin-vue-ui.js',
+    require: './dist/vite-plugin-vue-ui.umd.cjs',
+    types: './dist/plugins/vite-plugin-vue-ui.d.ts'
+  },
   './styles/*': './styles/*',
   './dist/*': './dist/*',
   './book/*': './book/*',
@@ -97,7 +102,8 @@ export class LibraryPackage {
     const data: Record<string, any> = {}
 
     this.items.getDesigns().forEach(design => {
-      data[`./${design}/style.scss`] = `./${design}/styles/style.scss`
+      data[`./${design}/style`] = `./dist/${LIBRARY_PLUGIN}-${design}.css`
+      data[`./${design}/properties`] = `./${design}/styles/style.scss`
     })
 
     return data

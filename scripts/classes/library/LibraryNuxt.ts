@@ -1,9 +1,14 @@
-import { LibraryItems } from './LibraryItems.ts'
+import { toCamelCase } from '../../../functions/toCamelCase'
 
-import { PropertiesFile } from '../properties/PropertiesFile.ts'
+import { PropertiesFile } from '../properties/PropertiesFile'
+import { LibraryItems } from './LibraryItems'
 
-import { LIBRARY_NUXT, LIBRARY_NUXT_PLUGIN, LIBRARY_PLUGIN_BASIC, LIBRARY_STYLE } from '../../config/library.ts'
-import { toCamelCase } from '../../../functions/toCamelCase.ts'
+import {
+  LIBRARY_NUXT,
+  LIBRARY_NUXT_PLUGIN,
+  LIBRARY_PLUGIN_BASIC,
+  LIBRARY_STYLE
+} from '../../config/library'
 
 export class LibraryNuxt {
   /**

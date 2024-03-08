@@ -86,12 +86,12 @@ export declare const M3Mask: {
         onPaste?: ((event: ClipboardEvent) => any) | undefined;
         onReset?: ((event: Event) => any) | undefined;
     }, {
+        right: boolean;
         match: import("../../constructors/Mask/typesBasic").MaskMatchItem | undefined;
         visible: boolean;
         view: string;
         type: import("../../constructors/Mask/typesBasic").MaskTypeItem | undefined;
         special: import("../../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-        right: boolean;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -138,12 +138,12 @@ export declare const M3Mask: {
         onPaste?: ((event: ClipboardEvent) => any) | undefined;
         onReset?: ((event: Event) => any) | undefined;
     }, {}, {}, {}, {}, {
+        right: boolean;
         match: import("../../constructors/Mask/typesBasic").MaskMatchItem | undefined;
         visible: boolean;
         view: string;
         type: import("../../constructors/Mask/typesBasic").MaskTypeItem | undefined;
         special: import("../../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-        right: boolean;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -197,12 +197,12 @@ export declare const M3Mask: {
     paste: (event: ClipboardEvent) => void;
     reset: (event: Event) => void;
 }, string, {
+    right: boolean;
     match: import("../../constructors/Mask/typesBasic").MaskMatchItem | undefined;
     visible: boolean;
     view: string;
     type: import("../../constructors/Mask/typesBasic").MaskTypeItem | undefined;
     special: import("../../constructors/Mask/typesBasic").MaskSpecialProp | undefined;
-    right: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Readonly<import("../../constructors/Mask/types").MaskSlots>;
 });

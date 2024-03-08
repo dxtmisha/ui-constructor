@@ -1,5 +1,5 @@
 import { EventItem } from './EventItem';
-import { type ElementOrString, type EventListenerDetail } from '../types/basic.ts';
+import { type ElementOrString, type EventListenerDetail } from '../types/basic';
 type LoadingDetail = {
     loading: boolean;
 };

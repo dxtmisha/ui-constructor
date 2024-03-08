@@ -1,5 +1,5 @@
 import { PropertiesFile } from '../properties/PropertiesFile'
-import { LibraryItems } from './LibraryItems.ts'
+import { LibraryItems } from './LibraryItems'
 
 /**
  * A class for adding a link to styles in style files.<br>

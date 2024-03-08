@@ -7,6 +7,10 @@
   border-radius: 4px;
   padding: 24px 32px;
 
+  color: var(--st-action-bg-color-primary-solid-normal, #F36355);
+  border-color: var(--st-action-bg-color-primary-solid-normal, rgb(123, 123, 123));
+  background-color: #F36355;
+
   &__body {
     display: flex;
     align-items: center;

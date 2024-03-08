@@ -24,7 +24,7 @@ import { LibraryTypes } from '../library/LibraryTypes'
 
 import { LibraryBuild } from '../library/LibraryBuild'
 import { LibraryPackage } from '../library/LibraryPackage'
-import { LibraryNuxt } from '../library/LibraryNuxt.ts'
+import { LibraryNuxt } from '../library/LibraryNuxt'
 
 config()
 

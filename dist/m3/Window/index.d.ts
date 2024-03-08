@@ -12,8 +12,8 @@ export declare const M3Window: {
         };
         dense: BooleanConstructor;
         fullscreen: BooleanConstructor;
-        alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-        origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+        alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+        origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
         open: BooleanConstructor;
         disabled: BooleanConstructor;
         preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -56,8 +56,8 @@ export declare const M3Window: {
         };
         dense: BooleanConstructor;
         fullscreen: BooleanConstructor;
-        alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-        origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+        alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+        origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
         open: BooleanConstructor;
         disabled: BooleanConstructor;
         preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -115,8 +115,8 @@ export declare const M3Window: {
         };
         dense: BooleanConstructor;
         fullscreen: BooleanConstructor;
-        alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-        origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+        alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+        origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
         open: BooleanConstructor;
         disabled: BooleanConstructor;
         preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;
@@ -176,8 +176,8 @@ export declare const M3Window: {
     };
     dense: BooleanConstructor;
     fullscreen: BooleanConstructor;
-    alignment: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | undefined>;
-    origin: import("vue").PropType<"top" | "bottom" | "center" | "right" | "left" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
+    alignment: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | undefined>;
+    origin: import("vue").PropType<"left" | "right" | "top" | "bottom" | "center" | "topToBottom" | "rightToLeft" | "bottomToTop" | "leftToRight" | undefined>;
     open: BooleanConstructor;
     disabled: BooleanConstructor;
     preparation: import("vue").PropType<((open: boolean) => Promise<boolean>) | undefined>;

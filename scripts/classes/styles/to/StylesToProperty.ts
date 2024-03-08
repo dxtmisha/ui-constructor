@@ -7,82 +7,7 @@ import { StylesToAbstract } from './StylesToAbstract'
 
 import { PropertyKey } from '../../../types/property'
 
-export const TYPES: string[] = [
-  /* Flex */
-  'flex-position',
-  'flex-dynamic',
-  'justify-content',
-
-  /* Position */
-  'inset',
-  'horizon',
-  'vertically',
-  'left',
-  'right',
-  'absolute',
-  'absoluteAfter',
-
-  /* Padding */
-  'padding-x',
-  'padding-y',
-  'padding-left',
-  'padding-right',
-
-  /* Margin */
-  'margin-x',
-  'margin-y',
-  'margin-left',
-  'margin-right',
-
-  /* Dimension */
-  'width',
-  'height',
-  'width-basis',
-  'height-basis',
-  'aspect-ratio',
-  'aspect-ratio-width',
-  'aspect-ratio-height',
-  'squared',
-  'circle',
-
-  /* Font */
-  'font-size',
-  'line-height',
-  'text-align',
-  'text-overflow',
-  'clamp',
-  'text-select-none',
-  'text-case',
-  'paragraph-spacing',
-
-  /* Color */
-  'palette',
-  'palette-color',
-  'palette-stroke',
-  'palette-background',
-  'palette-fill',
-  'palette-gradient',
-  'palette-border',
-  'color',
-  'color-opacity',
-  'stroke',
-  'stroke-opacity',
-  'background-color',
-  'background-opacity',
-  'background-size',
-  'fill',
-  'fill-opacity',
-  'gradient',
-  'gradient-opacity',
-  'border-color',
-  'border-opacity',
-
-  /* Transform */
-  'translate-x',
-  'translate-y',
-  'scale',
-  'rotate'
-]
+import { STYLE_TYPES } from '../../../config/style'
 
 /**
  * CSS class for converting to CSS property.<br>
@@ -137,7 +62,7 @@ export class StylesToProperty extends StylesToAbstract {
 
     if (
       this.item?.[PropertyKey.modification] !== false &&
-      TYPES.indexOf(name) !== -1
+      STYLE_TYPES.indexOf(name) !== -1
     ) {
       return `@include ${toCamelCase(name)}(#{${value}});`
     }

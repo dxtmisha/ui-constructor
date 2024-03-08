@@ -82,6 +82,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -92,7 +93,6 @@ export declare const components: {
             readonly: boolean;
             disabled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             contained: boolean;
         }, true, {}, {}, {
             P: {};
@@ -139,6 +139,7 @@ export declare const components: {
                 detail: Record<string, any> | undefined;
             }) => any) | undefined;
         }, {}, {}, {}, {}, {
+            height: "sm" | "md" | "lg" | undefined;
             focus: boolean;
             selected: boolean;
             iconTurn: boolean;
@@ -149,7 +150,6 @@ export declare const components: {
             readonly: boolean;
             disabled: boolean;
             outlined: boolean;
-            height: "sm" | "md" | "lg" | undefined;
             contained: boolean;
         }>;
         __isFragment?: undefined;
@@ -199,6 +199,7 @@ export declare const components: {
             detail: Record<string, any> | undefined;
         }) => void;
     }, string, {
+        height: "sm" | "md" | "lg" | undefined;
         focus: boolean;
         selected: boolean;
         iconTurn: boolean;
@@ -209,7 +210,6 @@ export declare const components: {
         readonly: boolean;
         disabled: boolean;
         outlined: boolean;
-        height: "sm" | "md" | "lg" | undefined;
         contained: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;

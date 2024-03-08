@@ -6,7 +6,7 @@ import { MutationGlobalRef } from './../classes/mutation/MutationGlobalRef'
 
 import { components } from './components'
 import { makeMedia } from './media'
-import { registrationUiBasic } from './plugin-basic'
+import { registrationUiBasic } from './registration-basic'
 
 import * as vue from 'vue'
 import * as vueRouter from 'vue-router'

@@ -26,6 +26,7 @@ export default defineConfig(() => {
           'config/**/*.ts',
           'constructors/**/*.{ts,tsx}',
           'functions/**/*.ts',
+          'plugins/**/*.ts',
           'types/**/*.ts',
           'c1/**/index.ts',
           'c2/**/*.ts',
@@ -38,6 +39,7 @@ export default defineConfig(() => {
       cssCodeSplit: true,
       lib: {
         entry: {
+          'vite-plugin-vue-ui': resolve(__dirname, 'plugins/vite-plugin-vue-ui.ts'),
           ...(() => {
             const data: Record<string, any> = {}
 
@@ -59,12 +61,12 @@ export default defineConfig(() => {
               'components-c2',
               'components-m2',
               'components-m3',
-              'plugin',
-              'plugin-c1',
-              'plugin-c2',
-              'plugin-m2',
-              'plugin-m3',
-              'plugin-basic',
+              'registration',
+              'registration-c1',
+              'registration-c2',
+              'registration-m2',
+              'registration-m3',
+              'registration-basic',
               'main',
               'nuxt',
               'nuxt-plugin'
