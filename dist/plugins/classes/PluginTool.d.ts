@@ -10,6 +10,12 @@ export declare class PluginTool {
      */
     static isSrc(id: string): boolean;
     /**
+     * Checks if the id is a JS user’s file.<br>
+     * Проверяет, является ли id файлом JS пользователя.
+     * @param id file identification /<br>идентификация файла
+     */
+    static isJs(id: string): boolean;
+    /**
      * Checks if the id is a Vue user’s file.<br>
      * Проверяет, является ли id файлом vue пользователя.
      * @param id file identification /<br>идентификация файла

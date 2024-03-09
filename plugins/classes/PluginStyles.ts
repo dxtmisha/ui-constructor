@@ -35,7 +35,6 @@ export class PluginStyles {
       code = this.initColors(code)
       code = this.initVars(code)
       code = this.initProperties(code)
-      console.log(this.id, code)
 
       return code
     }

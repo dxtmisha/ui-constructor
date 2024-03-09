@@ -6,6 +6,7 @@ export declare enum ApiMethodItem {
 }
 export type ApiMethod = string & ApiMethodItem;
 export type ApiFetch = {
+    api?: boolean;
     path?: string;
     pathFull?: string;
     method?: ApiMethod;
@@ -13,6 +14,7 @@ export type ApiFetch = {
     auth?: boolean;
     headers?: Record<string, string>;
     type?: string;
+    global?: boolean;
     init?: RequestInit;
 };
 export type ApiResponse = {
@@ -45,8 +47,9 @@ export declare class Api {
      * Getting the full path to the request script.<br>
      * Получение полного пути к скрипту запроса.
      * @param path path to the script /<br>путь к скрипту
+     * @param api adding a path to the site’s API /<br>добавление пути к API сайта
      */
-    static getUrl(path: string): string;
+    static getUrl(path: string, api?: boolean): string;
     /**
      * Getting data for the body.<br>
      * Получение данных для тела.
@@ -98,7 +101,19 @@ export declare class Api {
      * @param request list of parameters /<br>список параметров
      */
     static delete<T>(request: ApiFetch): Promise<T>;
+    /**
+     * Adding cached requests.<br>
+     * Добавление кешированных запросов.
+     * @param response data for caching /<br>данные для кеширования
+     */
     static addResponse(response: ApiResponse | ApiResponse[]): Api;
+    /**
+     * Checks if there is a global cached request, if there is, returns it.<br>
+     * Проверяет, есть ли глобальный кешированный запрос, если есть, возвращает его.
+     * @param path link to the request /<br>ссылка на запрос
+     * @param method request method /<br>метод запроса
+     * @param request data for the request /<br>данные для запроса
+     */
     protected static getResponse(path: string | undefined, method: ApiMethod, request?: ApiFetch['request']): ApiResponse | undefined;
     /**
      * To execute a request.<br>
@@ -111,5 +126,5 @@ export declare class Api {
      * @param type type of request /<br>тип запроса
      * @param init additional parameters /<br>дополнительных параметров
      */
-    protected static fetch<T>({ path, pathFull, method, request, headers, type, init }: ApiFetch): Promise<T>;
+    protected static fetch<T>({ api, path, pathFull, method, request, headers, type, global, init }: ApiFetch): Promise<T>;
 }

@@ -16,6 +16,15 @@ export class PluginTool {
   }
 
   /**
+   * Checks if the id is a JS user’s file.<br>
+   * Проверяет, является ли id файлом JS пользователя.
+   * @param id file identification /<br>идентификация файла
+   */
+  static isJs (id: string): boolean {
+    return this.isSrc(id) && Boolean(id.match(/\.ts|js|tsx/))
+  }
+
+  /**
    * Checks if the id is a Vue user’s file.<br>
    * Проверяет, является ли id файлом vue пользователя.
    * @param id file identification /<br>идентификация файла

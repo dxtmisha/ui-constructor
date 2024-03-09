@@ -209,10 +209,12 @@ export class Translate {
    */
   protected static async getResponse (): Promise<Record<string, string>> {
     const data = (await Api.get<{ data: Record<string, string> }>({
+      api: false,
       path: this.url,
       request: {
         list: this.cache
-      }
+      },
+      global: true
     }))
 
     return data?.data ?? {}

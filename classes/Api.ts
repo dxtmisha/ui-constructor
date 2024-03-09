@@ -1,13 +1,13 @@
+import { executeFunction } from '../functions/executeFunction'
 import { getRequestString } from '../functions/getRequestString'
 import { isFilled } from '../functions/isFilled'
+import { isObjectNotArray } from '../functions/isObjectNotArray'
 import { isString } from '../functions/isString'
+import { toArray } from '../functions/toArray'
 
 import { Geo } from './Geo'
 
 import { useEnv } from '../composables/useEnv'
-import { toArray } from '../functions/toArray'
-import { isObjectNotArray } from '../functions/isObjectNotArray'
-import { executeFunction } from '../functions/executeFunction'
 
 export enum ApiMethodItem {
   get = 'GET',
@@ -18,6 +18,7 @@ export enum ApiMethodItem {
 
 export type ApiMethod = string & ApiMethodItem
 export type ApiFetch = {
+  api?: boolean
   path?: string
   pathFull?: string
   method?: ApiMethod
@@ -25,6 +26,7 @@ export type ApiFetch = {
   auth?: boolean
   headers?: Record<string, string>
   type?: string
+  global?: boolean
   init?: RequestInit
 }
 export type ApiResponse = {
@@ -34,6 +36,8 @@ export type ApiResponse = {
   response: any | ((request?: ApiFetch['request']) => any)
   disable?: boolean
 }
+
+const apiFirst: ApiResponse[] = []
 
 /**
  * Class for working with requests.<br>
@@ -78,9 +82,10 @@ export class Api {
    * Getting the full path to the request script.<br>
    * Получение полного пути к скрипту запроса.
    * @param path path to the script /<br>путь к скрипту
+   * @param api adding a path to the site’s API /<br>добавление пути к API сайта
    */
-  static getUrl (path: string): string {
-    return `${this.url}${path}`
+  static getUrl (path: string, api: boolean = true): string {
+    return `${api ? this.url : ''}${path}`
       .replace('{locale}', Geo.getLocation())
       .replace('{country}', Geo.getCountry())
       .replace('{language}', Geo.getLanguage())
@@ -210,6 +215,11 @@ export class Api {
     })
   }
 
+  /**
+   * Adding cached requests.<br>
+   * Добавление кешированных запросов.
+   * @param response data for caching /<br>данные для кеширования
+   */
   static addResponse (
     response: ApiResponse | ApiResponse[]
   ): Api {
@@ -217,6 +227,13 @@ export class Api {
     return Api
   }
 
+  /**
+   * Checks if there is a global cached request, if there is, returns it.<br>
+   * Проверяет, есть ли глобальный кешированный запрос, если есть, возвращает его.
+   * @param path link to the request /<br>ссылка на запрос
+   * @param method request method /<br>метод запроса
+   * @param request data for the request /<br>данные для запроса
+   */
   protected static getResponse (
     path: string = '',
     method: ApiMethod,
@@ -226,10 +243,13 @@ export class Api {
       if (
         item?.disable !== true &&
         path === item.path &&
-        method === item.method
+        method === item.method &&
+        apiFirst.indexOf(item) === -1
       ) {
+        let response = false
+
         if (request === item?.request) {
-          return true
+          response = true
         }
 
         if (
@@ -241,10 +261,15 @@ export class Api {
           !(item.request instanceof FormData) &&
           Object.values(request).length === Object.values(item.request).length
         ) {
-          return Object.entries(item.request).reduce(
+          response = Object.entries(item.request).reduce(
             (accum, [key, value]) => (accum && value === request?.[key]),
             true
           )
+        }
+
+        if (response) {
+          apiFirst.push(item)
+          return true
         }
       }
 
@@ -264,22 +289,26 @@ export class Api {
    * @param init additional parameters /<br>дополнительных параметров
    */
   protected static async fetch<T> ({
+    api = true,
     path = '',
     pathFull = undefined,
     method = ApiMethodItem.get,
     request = undefined,
     headers = {},
     type = 'application/json;charset=UTF-8',
+    global = method === ApiMethodItem.get,
     init = {}
   }: ApiFetch): Promise<T> {
-    const response = this.getResponse(path, method, request)
+    if (global) {
+      const response = this.getResponse(path, method, request)
 
-    if (response) {
-      return executeFunction(response.response)
+      if (response) {
+        return executeFunction(response.response)
+      }
     }
 
     try {
-      const pathFinal = pathFull ?? this.getUrl(path)
+      const pathFinal = pathFull ?? this.getUrl(path, api)
       const url = `${pathFinal}${this.getBodyForGet(request, pathFinal, method)}`
 
       return await (await fetch(url, {

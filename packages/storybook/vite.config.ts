@@ -8,7 +8,9 @@ export default defineConfig({
   plugins: [
     vue(),
     uiVitePlugin({
-      style: 'c2'
+      style: 'c2',
+      translate: './translate',
+      translateApi: '/test/t'
     })
   ]
 })
