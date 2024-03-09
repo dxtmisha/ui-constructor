@@ -2,16 +2,19 @@ import * as rollup from 'rollup'
 import * as vite from 'vite'
 
 import { PluginTool } from './classes/PluginTool'
+import { PluginApi } from './classes/PluginApi'
+import { PluginTranslate } from './classes/PluginTranslate'
 import { PluginImport } from './classes/PluginImport'
 import { PluginImportStyles } from './classes/PluginImportStyles'
 import { PluginStyles } from './classes/PluginStyles'
-import { PluginTranslate } from './classes/PluginTranslate'
 
 type UiPluginsOptions = {
   importComponents?: boolean
   style?: string | false
+  api?: string
+  apiUrl?: string
   translate?: string
-  translateApi?: string
+  translateUrl?: string
 }
 
 /**
@@ -40,7 +43,15 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
           code,
           mode,
           options?.translate,
-          options?.translateApi
+          options?.translateUrl
+        ).init()
+
+        code = new PluginApi(
+          id,
+          code,
+          mode,
+          options?.api,
+          options?.apiUrl
         ).init()
 
         console.log('code', code)

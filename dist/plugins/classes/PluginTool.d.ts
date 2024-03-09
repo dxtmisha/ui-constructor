@@ -27,4 +27,10 @@ export declare class PluginTool {
      * @param id file identification /<br>идентификация файла
      */
     static isCss(id: string): boolean;
+    /**
+     * Checks if it is development mode.<br>
+     * Проверяет, является ли режим разработка.
+     * @param mode current mode /<br>текущий режим
+     */
+    static isDev(mode: string): boolean;
 }

@@ -31,13 +31,21 @@ class s {
   static isCss(t) {
     return this.isSrc(t) && !!t.match(/\.(css|sass|scss)/);
   }
+  /**
+   * Checks if it is development mode.<br>
+   * Проверяет, является ли режим разработка.
+   * @param mode current mode /<br>текущий режим
+   */
+  static isDev(t) {
+    return t === "development";
+  }
 }
-const h = "ui", y = "library", d = [
+const y = "ui", d = "library", m = [
   "m2",
   "m3",
   "c1",
   "c2"
-], m = "m3", f = [
+], f = "m3", u = [
   {
     name: "M2Button",
     design: "m2",
@@ -206,7 +214,7 @@ const h = "ui", y = "library", d = [
     code: "c2-ripple",
     path: "c2/Ripple"
   }
-], u = {
+], b = {
   m2: [
     "ref-background-0",
     "ref-background-1",
@@ -2442,7 +2450,7 @@ const h = "ui", y = "library", d = [
     "st-asemantic-bg-color-cerise-surface-opacity",
     "base-size-icons-lg"
   ]
-}, b = {
+}, k = {
   "flex-position": "flexPosition",
   "flex-dynamic": "flexDynamic",
   "justify-content": "justifyContent",
@@ -2503,16 +2511,80 @@ const h = "ui", y = "library", d = [
   scale: "scale",
   rotate: "rotate"
 }, i = {
-  name: h,
-  library: y,
-  designs: d,
-  designMain: m,
-  components: f,
-  vars: u,
-  modificationProperties: b
-}, n = `(?<=<)(${i.designs.join("|")})([A-Z0-9-])([^ >\r
-]+)`, k = new RegExp(n, "i"), x = new RegExp(n, "ig");
-class v {
+  name: y,
+  library: d,
+  designs: m,
+  designMain: f,
+  components: u,
+  vars: b,
+  modificationProperties: k
+};
+class n {
+  /**
+   * Constructor
+   * @param id file identification /<br>идентификация файла
+   * @param code file content /<br>содержимое файла
+   * @param mode code execution mode /<br>режим выполнения кода
+   * @param path link to the file with data /<br>ссылка к файлу с данными
+   * @param url link to the site for the request /<br>ссылка на сайт для запроса
+   */
+  // eslint-disable-next-line no-useless-constructor
+  constructor(t, e, r, o, l) {
+    this.id = t, this.code = e, this.mode = r, this.path = o, this.url = l, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
+  }
+  /**
+   * Initialization of data transformation.<br>
+   * Инициализация преобразования данных.
+   */
+  init() {
+    return this.is() ? this.importApi(this.code) : this.code;
+  }
+  /**
+   * Checks if the conditions are suitable for working with this file.<br>
+   * Проверяет, подходят ли условия для работы с этим файлом.
+   */
+  is() {
+    return s.isJs(this.id) && !!(this.isPath() || this.url);
+  }
+  /**
+   * Checks if there is a file with data for developers.<br>
+   * Проверяет, есть ли файл с данными для разработчиков.
+   */
+  isPath() {
+    return !!(this.path && s.isDev(this.mode));
+  }
+  /**
+   * Returns the path for connecting files.<br>
+   * Возвращает путь для подключения файлов.
+   * @param path path to the file /<br>путь к файлу
+   */
+  getUrl(t) {
+    return t.replace(/'/, "\\'");
+  }
+  /**
+   * Connecting files for work.<br>
+   * Подключение файлов для работы.
+   * @param code file content /<br>содержимое файла
+   */
+  importApi(t) {
+    const e = `dev${this.className}User`, r = [
+      `import { ${this.className} } from '${i.name}';`
+    ];
+    return this.path && this.isPath() && r.push(
+      `import ${e} from '${this.getUrl(this.path)}';`,
+      `${this.className}.${this.methodAdd}(${e});`
+    ), this.url && r.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), r.push(t), r.join(`\r
+`);
+  }
+}
+class x extends n {
+  constructor() {
+    super(...arguments), this.className = "Translate", this.methodAdd = "addSync";
+  }
+}
+const p = `(?<=<)(${i.designs.join("|")})([A-Z0-9-])([^ >\r
+]+)`, v = new RegExp(p, "i"), S = new RegExp(p, "ig");
+class z {
   /**
    * Constructor
    * @param styles object for working with style connection /<br>объект для работы с подключением стилей
@@ -2533,8 +2605,8 @@ class v {
       if (t) {
         let e = this.getCode();
         return t.forEach((r) => {
-          const a = this.findComponent(r);
-          a && !this.isImport(a) && (e = this.importComponent(e, a), e = this.importStyle(e, a));
+          const o = this.findComponent(r);
+          o && !this.isImport(o) && (e = this.importComponent(e, o), e = this.importStyle(e, o));
         }), e;
       }
     }
@@ -2545,7 +2617,7 @@ class v {
    * Проверяет, подходит ли файл для преобразования.
    */
   is() {
-    return s.isVue(this.id) && !!this.code.match(k);
+    return s.isVue(this.id) && !!this.code.match(v);
   }
   /**
    * Checks if the component was connected.<br>
@@ -2567,7 +2639,7 @@ class v {
    * Находит список компонентов и возвращает их.
    */
   getList() {
-    return this.code.match(x);
+    return this.code.match(S);
   }
   /**
    * Returns the file code, adding a script if it’s not there.<br>
@@ -2607,7 +2679,7 @@ import {${e.name}} from'${i.name}/${e.name}';`);
 ${this.styles.getCodeAndPush(e.design)}`);
   }
 }
-class S {
+class w {
   constructor() {
     this.items = [];
   }
@@ -2644,8 +2716,8 @@ class S {
     return this.items.push(t), this;
   }
 }
-const z = `// ${i.name}-none`, w = `// ${i.name}-mode-none`;
-class H {
+const H = `// ${i.name}-none`, C = `// ${i.name}-mode-none`;
+class j {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2672,7 +2744,7 @@ class H {
    * Проверяет, нужно ли преобразовывать этот файл.
    */
   is() {
-    return s.isCss(this.id) && !this.code.match(z);
+    return s.isCss(this.id) && !this.code.match(H);
   }
   /**
    * Connects a list of tokens to work with values.<br>
@@ -2700,7 +2772,7 @@ ${t}`;
   initVars(t) {
     var r;
     const e = (r = i.vars) == null ? void 0 : r[this.design];
-    return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (a) => e.indexOf(a) !== -1 ? `${this.design}-${a}` : a) : t;
+    return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (o) => e.indexOf(o) !== -1 ? `${this.design}-${o}` : o) : t;
   }
   /**
    * Transformation of all properties into non-standard ones used through mixins.<br>
@@ -2710,71 +2782,41 @@ ${t}`;
   initProperties(t) {
     const e = i.modificationProperties, r = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
-]*${w})`, "igm");
-    return t.match(new RegExp(r, "im")) ? t.replace(r, (a, l, p, g) => {
-      const c = p.trim();
-      return `@include ${e == null ? void 0 : e[l.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${g}`;
+]*${C})`, "igm");
+    return t.match(new RegExp(r, "im")) ? t.replace(r, (o, l, g, h) => {
+      const c = g.trim();
+      return `@include ${e == null ? void 0 : e[l.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${h}`;
     }) : t;
   }
 }
-class C {
-  /**
-   * Constructor
-   * @param id file identification /<br>идентификация файла
-   * @param code file content /<br>содержимое файла
-   * @param mode code execution mode /<br>режим выполнения кода
-   * @param path link to the file with data /<br>ссылка к файлу с данными
-   * @param api link to the site for the request /<br>ссылка на сайт для запроса
-   */
-  // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, r, a, l) {
-    this.id = t, this.code = e, this.mode = r, this.path = a, this.api = l;
-  }
-  init() {
-    return this.is() ? this.importText(this.code) : this.code;
-  }
-  is() {
-    return s.isJs(this.id) && !!(this.isPath() || this.api);
-  }
-  isPath() {
-    return !!(this.path && this.mode === "development");
-  }
-  getUrl(t) {
-    return t.replace(/'/, "\\'");
-  }
-  importText(t) {
-    const e = [
-      `import { Translate } from '${i.name}';`
-    ];
-    return this.path && this.isPath() && e.push(
-      `import translateUser from '${this.getUrl(this.path)}';`,
-      "Translate.addSync(translateUser);"
-    ), this.api && e.push(`Translate.setUrl('${this.getUrl(this.api)}');`), e.push(t), e.join(`\r
-`);
-  }
-}
-function j(o = {}) {
-  const t = new S(), e = { value: !0 };
+function P(a = {}) {
+  const t = new w(), e = { value: !0 };
   let r = "production";
   return {
     name: "vite-plugin-vue-ui",
     enforce: "pre",
-    apply(a, l) {
+    apply(o, l) {
       return r = l.mode, !0;
     },
-    transform(a, l) {
-      return e.value && s.isJs(l) && (a = new C(
+    transform(o, l) {
+      return e.value && s.isJs(l) && (o = new n(
         l,
-        a,
+        o,
         r,
-        o == null ? void 0 : o.translate,
-        o == null ? void 0 : o.translateApi
-      ).init(), console.log("code", a), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (a = new v(t, l, a).init()), (o == null ? void 0 : o.style) !== !1 && (a = new H(l, a, o == null ? void 0 : o.style).init()), {
-        code: a
+        a == null ? void 0 : a.api,
+        a == null ? void 0 : a.apiUrl
+      ).init(), o = new x(
+        l,
+        o,
+        r,
+        a == null ? void 0 : a.translate,
+        a == null ? void 0 : a.translateUrl
+      ).init(), console.log("code", o), e.value = !1), ((a == null ? void 0 : a.importComponents) ?? !0) && (o = new z(t, l, o).init()), (a == null ? void 0 : a.style) !== !1 && (o = new j(l, o, a == null ? void 0 : a.style).init()), {
+        code: o
       };
     }
   };
 }
 export {
-  j as default
+  P as default
 };

@@ -9,8 +9,10 @@ export default defineConfig({
     vue(),
     uiVitePlugin({
       style: 'c2',
+      api: './api/',
+      apiUrl: '/api/',
       translate: './translate',
-      translateApi: '/test/t'
+      translateUrl: '/test/t'
     })
   ]
 })

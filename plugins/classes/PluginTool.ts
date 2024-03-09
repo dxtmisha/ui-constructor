@@ -41,4 +41,13 @@ export class PluginTool {
   static isCss (id: string): boolean {
     return this.isSrc(id) && Boolean(id.match(/\.(css|sass|scss)/))
   }
+
+  /**
+   * Checks if it is development mode.<br>
+   * Проверяет, является ли режим разработка.
+   * @param mode current mode /<br>текущий режим
+   */
+  static isDev (mode: string): boolean {
+    return mode === 'development'
+  }
 }

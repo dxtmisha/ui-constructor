@@ -1,7 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useTranslateRef } from 'ui'
+
+const t = useTranslateRef([
+  'TITLE_COMPANY'
+] as const)
+</script>
 
 <template>
   <div>
+    {{ t.TITLE_COMPANY }}
     <m3-button label="asd"/>
     <m3-icon label="home"/>
     <a class="c2-link">is A</a>
