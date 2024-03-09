@@ -42,20 +42,10 @@ const onClick = () => router.push('/')
 </template>
 
 <style lang="scss">
-// Для использования токен надо подключить 1 из скрипт ниже, в зависимости какой версия дизайна надо
-// @import "ui/c1/properties";
-// @import 'ui/c2/properties';
-
-// ВНИМАНМЯ: при копировании свойства из Figma, где используется токен, нужно заменить функцию var на t или tColor, если это цвет
-// пример:
-// border-radius: var(--st-...-xl, 12px); => border-radius: t(--st-...-xl, 12px);
-// background: var(--st-...-normal, #F36355); => background: tColor(--st-...-normal, #F36355);
-
 .c2-link {
-  color: tColor(--st-action-bg-color-primary-solid-normal, #F36355);
+  color: var(--st-action-bg-color-primary-solid-normal, #F36355);
 
   &:hover {
-    --asd: v('asd');
     text-decoration: underline;
   }
 }

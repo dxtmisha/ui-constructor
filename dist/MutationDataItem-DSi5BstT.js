@@ -8,7 +8,7 @@ import { i as u } from "./isFilled-C9CTZZIi.js";
 import { i as w } from "./Geo-BWOHrzQ1.js";
 import { t as $ } from "./DesignConstructorAbstract-_dNu1bTO.js";
 import { u as C, t as A } from "./DataStorage-D-GdtGQf.js";
-import { T as y } from "./Translate-DSM-n0U-.js";
+import { T as y } from "./Translate-DdLqx11G.js";
 var r = /* @__PURE__ */ ((e) => (e.new = "new", e.init = "init", e.end = "end", e))(r || {});
 function g(e) {
   return e.toString().trim().replace(/[^\w- ]+/g, "").replace(/ +/g, "-").replace(new RegExp("(?<=[A-Z])([A-Z])", "g"), (t) => `${t.toLowerCase()}`).replace(/^[A-Z]/, (t) => t.toLowerCase()).replace(new RegExp("(?<=[\\w ])[A-Z]", "g"), (t) => `-${t.toLowerCase()}`).replace(/[A-Z]/g, (t) => t.toLowerCase());

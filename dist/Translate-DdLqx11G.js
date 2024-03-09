@@ -1,6 +1,6 @@
 var l = Object.defineProperty;
-var m = (o, t, s) => t in o ? l(o, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : o[t] = s;
-var c = (o, t, s) => (m(o, typeof t != "symbol" ? t + "" : t, s), s);
+var m = (c, t, s) => t in c ? l(c, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : c[t] = s;
+var o = (c, t, s) => (m(c, typeof t != "symbol" ? t + "" : t, s), s);
 import { f as g, t as d } from "./toArray-J4lAhJG7.js";
 import { i as n } from "./isFilled-C9CTZZIi.js";
 import { G as N, i as p } from "./Geo-BWOHrzQ1.js";
@@ -63,7 +63,8 @@ const e = class e {
    */
   static add(t) {
     return new Promise((s) => {
-      this.getNamesNone(t).length > 0 ? (this.cache.push(...this.getNamesNone(t)), this.resolveList.push(s), this.timeout && clearTimeout(this.timeout), this.timeout = setTimeout(() => {
+      const i = this.getNamesNone(t);
+      console.log("t", this.data, i), i.length > 0 ? (this.cache.push(...this.getNamesNone(t)), this.resolveList.push(s), this.timeout && clearTimeout(this.timeout), this.timeout = setTimeout(() => {
         this.timeout = void 0, this.make().then(() => {
           this.resolveList.forEach((a) => a()), this.resolveList = [];
         });
@@ -147,7 +148,7 @@ const e = class e {
     }), this.cache = [];
   }
 };
-c(e, "url", y("apiTranslate")), c(e, "data", {}), c(e, "cache", []), c(e, "resolveList", []), c(e, "timeout");
+o(e, "url", y("apiTranslate")), o(e, "data", {}), o(e, "cache", []), o(e, "resolveList", []), o(e, "timeout");
 let f = e;
 export {
   f as T

@@ -19,7 +19,8 @@ export default defineConfig(({ mode }) => {
       uiVitePlugin({
         importComponents: false,
         icon: false,
-        flag: false
+        flag: false,
+        style: 'c2'
       }),
       vue(),
       legacy({

@@ -1,5 +1,5 @@
 import { createApp, type Plugin } from 'vue'
-import { isFilled } from 'ui'
+import { Api, isFilled } from 'ui'
 import { registrationUi } from 'ui/registration'
 
 import '../src/style.scss'
@@ -16,6 +16,7 @@ import { router } from './../src/router'
 import { createStore } from 'vuex'
 import { store } from './../src/store'
 
+import api from '../src/response'
 import translate from '../src/translate'
 
 const app = createApp(App)
@@ -27,6 +28,8 @@ if (isFilled(router.routes)) {
 }
 
 ;(async () => {
+  Api.addResponse(api)
+
   await init(app)
   await registrationUi(app, {
     translate
