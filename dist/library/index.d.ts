@@ -96,6 +96,7 @@ export * from './../classes/ref/EventRef';
 export * from './../classes/ref/GeoFlagRef';
 export * from './../classes/ref/GeoIntlRef';
 export * from './../classes/ref/GeoRef';
+export * from './../composables/ref/useApiRef';
 export * from './../composables/ref/useCookieRef';
 export * from './../composables/ref/useHashRef';
 export * from './../composables/ref/useLoadingRef';

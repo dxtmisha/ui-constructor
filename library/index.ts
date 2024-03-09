@@ -105,6 +105,7 @@ export * from './../classes/ref/GeoIntlRef'
 export * from './../classes/ref/GeoRef'
 
 // Composables
+export * from './../composables/ref/useApiRef'
 export * from './../composables/ref/useCookieRef'
 export * from './../composables/ref/useHashRef'
 export * from './../composables/ref/useLoadingRef'

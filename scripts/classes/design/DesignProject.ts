@@ -46,6 +46,7 @@ export class DesignProject {
 
       // this.makeUpdatePackage()
       this.makeUpdateLink()
+      this.makeRemovePackage()
 
       // this.removeTempDir()
     }
@@ -252,6 +253,21 @@ export class DesignProject {
         fileVue.replace(/BASE_URL = '[^']+'/, `BASE_URL = '${name}'`)
       )
     }
+  }
+
+  private makeRemovePackage (): void {
+    const dirs = PropertiesFile.readDir(['.'])
+    console.log('dirs', dirs)
+    dirs.forEach(dir => {
+      if (PropertiesFile.isDir([dir, 'node_modules'])) {
+        console.log([dir, 'node_modules'])
+      }
+
+      if (PropertiesFile.is([dir, 'package-lock.json'])) {
+        console.log([dir, 'package-lock.json'])
+        // PropertiesFile.removeFile([dir, 'package-lock.json'])
+      }
+    })
   }
 
   /**
