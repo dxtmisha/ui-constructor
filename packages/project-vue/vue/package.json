@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build-ui": "vue-tsc && vite build && vite-node ./node_modules/ui/scripts/project.ts build",
-    "update-ui": "vite-node ./node_modules/ui/scripts/project.ts project"
+    "update-ui": "vite-node ./node_modules/ui/scripts/project.ts project && npm install"
   },
   "dependencies": {
     "autoprefixer": "^10.4.17",

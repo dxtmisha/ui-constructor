@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
-import { uiVitePlugin } from 'ui/vite-plugin-vue-ui'
+import uiVitePlugin from 'ui/vite-plugin-vue-ui'
 
 const BASE_URL = 'url'
 
