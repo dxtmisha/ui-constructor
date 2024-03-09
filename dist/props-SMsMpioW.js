@@ -107,7 +107,7 @@ class I {
     return g(t) ? `${t}${v}` : this.isPdf(t) ? `${await k.getFileReader(t)}${v}` : "";
   }
 }
-var n = /* @__PURE__ */ ((s) => (s.pdf = "pdf", s.file = "file", s.image = "image", s.color = "color", s.public = "public", s.filled = "filled", s.outlined = "outlined", s.round = "round", s.sharp = "sharp", s.twoTone = "two-tone", s.material = "material", s.icon = "icon", s))(n || {});
+var n = /* @__PURE__ */ ((s) => (s.pdf = "pdf", s.file = "file", s.image = "image", s.flag = "flag", s.color = "color", s.public = "public", s.filled = "filled", s.outlined = "outlined", s.round = "round", s.sharp = "sharp", s.twoTone = "two-tone", s.material = "material", s.icon = "icon", s))(n || {});
 class M extends H {
   /**
    * Constructor
@@ -147,6 +147,8 @@ class M extends H {
         return n.public;
       if (t.match(/^\$/))
         return n.material;
+      if (t.match(/^flag-[a-z]{2}$/))
+        return n.flag;
       const i = t.match(/^(filled|outlined|round|sharp|two-tone)-/);
       return i ? i[1] : y.is(t) ? n.public : n.material;
     }
@@ -223,6 +225,7 @@ class O extends w {
           break;
         case n.public:
         case n.icon:
+        case n.flag:
           if (g(e))
             return await y.get(e, (r = this.props) == null ? void 0 : r.url);
           break;
@@ -1046,6 +1049,7 @@ let L = class extends w {
             "background-position-y": (r = this.position) == null ? void 0 : r.getY()
           };
         case n.icon:
+        case n.flag:
           return { "background-image": this.background.getImage() };
         case n.public:
           return { "mask-image": this.background.getImage() };

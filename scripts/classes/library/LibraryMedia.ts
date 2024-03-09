@@ -29,6 +29,8 @@ export class LibraryMedia {
   }
 
   make (): void {
+    const name = toCamelCaseFirst(this.items.getGlobalName())
+
     this.items.write(
       LIBRARY_MEDIA,
       [
@@ -37,18 +39,25 @@ export class LibraryMedia {
         `import ${LIBRARY_FLAGS} from './${LIBRARY_FLAGS}.json'`,
         ...this.initIconJsonImport(),
         '',
-        'export const makeMedia = (): void => {',
+        `export const make${name}Flags = (): void => {`,
         '  [',
-        [
-          `    ...${LIBRARY_FLAGS}`,
-          ...this.initIconJson()
-        ].join(',\r\n'),
-        '  ].forEach(key => {',
-        '    Icons.addLoad(key)',
-        '  })',
+        `    ...${LIBRARY_FLAGS}`,
+        '  ].forEach(key => Icons.addLoad(key))',
         '',
         `  import('./${LIBRARY_FLAGS}').then(item => item.makeFlags())`,
+        '}',
+        '',
+        `export const make${name}Icons = (): void => {`,
+        '  [',
+        [...this.initIconJson()].join(',\r\n'),
+        '  ].forEach(key => Icons.addLoad(key))',
+        '',
         ...this.initIcon(),
+        '}',
+        '',
+        `export const make${name}Media = (): void => {`,
+        `  make${name}Flags()`,
+        `  make${name}Icons()`,
         '}'
       ]
     )

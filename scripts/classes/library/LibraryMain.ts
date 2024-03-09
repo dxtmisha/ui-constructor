@@ -30,8 +30,9 @@ export class LibraryMain {
    */
   make (): this {
     const name = this.items.getGlobalName()
-    const registrationName = `registration${toCamelCaseFirst(name)}${toCamelCaseFirst(LIBRARY_MAIN)}`
-    const registrationBasic = `registration${toCamelCaseFirst(name)}Basic`
+    const nameCamelCase = toCamelCaseFirst(name)
+    const registrationName = `registration${nameCamelCase}${toCamelCaseFirst(LIBRARY_MAIN)}`
+    const registrationBasic = `registration${nameCamelCase}Basic`
 
     this.items.write(
       LIBRARY_MAIN,
@@ -40,7 +41,7 @@ export class LibraryMain {
         'import { MutationGlobalRef } from \'./../classes/mutation/MutationGlobalRef\'',
         '',
         'import { components } from \'./components\'',
-        `import { makeMedia } from './${LIBRARY_MEDIA}'`,
+        `import { make${nameCamelCase}Media } from './${LIBRARY_MEDIA}'`,
         `import { ${registrationBasic} } from './${LIBRARY_PLUGIN_BASIC}'`,
         '',
         'import * as vue from \'vue\'',
@@ -58,7 +59,7 @@ export class LibraryMain {
         `;(window as any).${name}_CORE_VUEX = vuex`,
         `;(window as any).${name}_CORE_UI = ui`,
         '',
-        'makeMedia()',
+        `make${nameCamelCase}Media()`,
         '',
         `export * from './${LIBRARY_INDEX}'`,
         `export const ${registrationName} = ${registrationBasic}`

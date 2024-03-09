@@ -55,5 +55,6 @@ export type ConstrSetup<
 } & SETUP
 
 export type ConstrRegistration = {
-  translate: Record<string, string>
+  flag?: boolean
+  translate?: Record<string, string>
 }

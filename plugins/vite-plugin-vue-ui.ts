@@ -4,12 +4,17 @@ import * as vite from 'vite'
 import { PluginTool } from './classes/PluginTool'
 import { PluginApi } from './classes/PluginApi'
 import { PluginTranslate } from './classes/PluginTranslate'
+import { PluginMedia } from './classes/PluginMedia'
 import { PluginImport } from './classes/PluginImport'
 import { PluginImportStyles } from './classes/PluginImportStyles'
 import { PluginStyles } from './classes/PluginStyles'
 
+import '../library/types.d.ts'
+
 type UiPluginsOptions = {
   importComponents?: boolean
+  icon?: boolean
+  flag?: boolean
   style?: string | false
   api?: string
   apiUrl?: string
@@ -38,6 +43,12 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
         first.value &&
         PluginTool.isJs(id)
       ) {
+        code = new PluginMedia(
+          id,
+          code,
+          options?.flag
+        ).init()
+
         code = new PluginTranslate(
           id,
           code,
@@ -54,7 +65,6 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
           options?.apiUrl
         ).init()
 
-        console.log('code', code)
         first.value = false
       }
 

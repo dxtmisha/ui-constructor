@@ -5,15 +5,49 @@ import data from '../../library/components.json'
  * Класс для работы с подключением стилей.
  */
 export class PluginImportStyles {
-  protected readonly items: string[] = []
+  protected readonly items: Record<string, {
+    id: string
+    component: string
+  }> = {}
+
+  /**
+   * Adds a design and returns the design connection code.<br>
+   * Добавляет дизайн и возвращает код подключения дизайна.
+   * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
+   */
+  get (
+    design: string,
+    id: string,
+    component: string
+  ): string | undefined {
+    if (this.isNone(design, id, component)) {
+      this.push(design, id, component)
+      return this.getCode(design)
+    }
+
+    return undefined
+  }
 
   /**
    * Checks if the styles are already connected.<br>
    * Проверяет, если уже подключены стили.
    * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
    */
-  is (design: string): boolean {
-    return this.items.indexOf(design) !== -1
+  protected isNone (
+    design: string,
+    id: string,
+    component: string
+  ): boolean {
+    return !(
+      design in this.items && (
+        id !== this.items[design].id ||
+        component !== this.items[design].component
+      )
+    )
   }
 
   /**
@@ -21,27 +55,27 @@ export class PluginImportStyles {
    * Возвращает код подключения стиля.
    * @param design design name /<br>название дизайна
    */
-  getCode (design: string): string {
+  protected getCode (design: string): string {
     return `import '${data.name}/${design}/style';`
-  }
-
-  /**
-   * Adds a design and returns the design connection code.<br>
-   * Добавляет дизайн и возвращает код подключения дизайна.
-   * @param design design name /<br>название дизайна
-   */
-  getCodeAndPush (design: string): string {
-    this.push(design)
-    return this.getCode(design)
   }
 
   /**
    * Adding a design to the list of connected ones.<br>
    * Добавление дизайна в список подключенных.
    * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
    */
-  push (design: string): this {
-    this.items.push(design)
+  protected push (
+    design: string,
+    id: string,
+    component: string
+  ): this {
+    this.items[design] = {
+      id,
+      component
+    }
+
     return this
   }
 }

@@ -4,7 +4,7 @@
 import { type App } from 'vue'
 
 import { uiC1ComponentsPlugin } from './components-c1'
-import { makeMedia } from './media'
+import { makeUiFlags, makeUiIcons } from './media'
 import { registrationUiTranslate } from './translate'
 
 import { type ConstrRegistration } from '../types/constructor'
@@ -12,13 +12,15 @@ import { type ConstrRegistration } from '../types/constructor'
 import '../c1/styles/main.scss'
 import './types.d.ts'
 
-export const registrationUiC1 = async (app: App, options?: ConstrRegistration): Promise<App> => {
-  makeMedia()
+export const registrationUiC1 = async (app: App, options: ConstrRegistration = {}): Promise<App> => {
+  makeUiIcons()
 
-  if (options) {
-    if (options?.translate) {
-      await registrationUiTranslate(options.translate)
-    }
+  if (options?.flag) {
+    makeUiFlags()
+  }
+
+  if (options?.translate) {
+    await registrationUiTranslate(options.translate)
   }
 
   app.use(uiC1ComponentsPlugin)

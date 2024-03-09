@@ -1,5 +1,6 @@
 import { forEach } from '../../../functions/forEach'
 import { toCamelCase } from '../../../functions/toCamelCase'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
 import { toKebabCase } from '../../../functions/toKebabCase'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
@@ -137,6 +138,7 @@ export class LibraryList {
   private getListForJson () {
     const data = {
       name: toKebabCase(this.items.getGlobalName()),
+      nameFirst: toCamelCaseFirst(this.items.getGlobalName()),
       library: LIBRARY_DIR,
       designs: this.items.getDesigns(),
       designMain: this.items.getDesignMain(),

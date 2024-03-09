@@ -426,14 +426,19 @@ const g = [
   "x-clear",
   "x-md",
   "x-sm"
-], o = () => {
+], e = () => {
   [
-    ...g,
+    ...g
+  ].forEach((a) => l.addLoad(a)), import("./flags.js").then((a) => a.makeFlags());
+}, o = () => {
+  [
     ...f
-  ].forEach((a) => {
-    l.addLoad(a);
-  }), import("./flags.js").then((a) => a.makeFlags()), import("./icons-1IqzMC_i.js").then((a) => a.makeIconsC2());
+  ].forEach((a) => l.addLoad(a)), import("./icons-1IqzMC_i.js").then((a) => a.makeIconsC2());
+}, t = () => {
+  e(), o();
 };
 export {
-  o as makeMedia
+  e as makeUiFlags,
+  o as makeUiIcons,
+  t as makeUiMedia
 };

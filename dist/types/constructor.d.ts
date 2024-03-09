@@ -36,5 +36,6 @@ export type ConstrSetup<E extends Element, CLASSES extends ConstrClasses, SETUP 
     styles: RefType<ConstrStyles>;
 } & SETUP;
 export type ConstrRegistration = {
-    translate: Record<string, string>;
+    flag?: boolean;
+    translate?: Record<string, string>;
 };

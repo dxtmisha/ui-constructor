@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
+import { uiVitePlugin } from 'ui/vite-plugin-vue-ui'
 
 const BASE_URL = 'url'
 
@@ -15,6 +16,11 @@ export default defineConfig(({ mode }) => {
     base,
     publicDir: `${root}/public`,
     plugins: [
+      uiVitePlugin({
+        importComponents: false,
+        icon: false,
+        flag: false
+      }),
       vue(),
       legacy({
         targets: ['defaults', 'not IE 11']

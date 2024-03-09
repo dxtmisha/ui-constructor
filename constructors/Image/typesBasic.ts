@@ -10,6 +10,7 @@ export enum ImageTypeValue {
   pdf = 'pdf',
   file = 'file',
   image = 'image',
+  flag = 'flag',
   color = 'color',
   public = 'public',
   filled = 'filled',

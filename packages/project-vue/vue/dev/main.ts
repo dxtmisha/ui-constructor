@@ -16,7 +16,7 @@ import { router } from './../src/router'
 import { createStore } from 'vuex'
 import { store } from './../src/store'
 
-import { translate } from '../src/translate.ts'
+import translate from '../src/translate'
 
 const app = createApp(App)
 

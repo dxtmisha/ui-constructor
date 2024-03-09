@@ -9,6 +9,7 @@ import {
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_STYLE
 } from '../../config/library'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
 
 export class LibraryNuxt {
   /**
@@ -27,13 +28,15 @@ export class LibraryNuxt {
   }
 
   private makePlugin (): void {
+    const name = toCamelCaseFirst(this.items.getGlobalName())
+
     this.items.write(
       LIBRARY_NUXT_PLUGIN,
       [
-        'import { makeMedia } from \'./media\'',
+        `import { make${name}Media } from './media'`,
         '',
-        'makeMedia()',
-        'console.log(\'makeMedia\')',
+        `make${name}Media()`,
+        `console.log('make${name}Media')`,
         'export default {}'
       ]
     )

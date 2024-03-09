@@ -42,12 +42,19 @@ export class PluginImport {
       const list = this.getList()
 
       if (list) {
+        const newImport: string[] = []
         let code = this.getCode()
 
         list.forEach(component => {
           const item = this.findComponent(component)
 
-          if (item && !this.isImport(item)) {
+          if (
+            item &&
+            newImport.indexOf(item.name) === -1 &&
+            !this.isImport(item)
+          ) {
+            newImport.push(item.name)
+
             code = this.importComponent(code, item)
             code = this.importStyle(code, item)
           }
@@ -141,8 +148,14 @@ export class PluginImport {
     code: string,
     item: PluginComponentItem
   ): string {
-    if (!this.styles.is(item.design)) {
-      return code.replace(/(<script[^>]*>)/, `$1\r\n${this.styles.getCodeAndPush(item.design)}`)
+    const style = this.styles.get(
+      item.design,
+      this.id,
+      item.name
+    )
+
+    if (style) {
+      return code.replace(/(<script[^>]*>)/, `$1\r\n${style}`)
     }
 
     return code

@@ -213,6 +213,7 @@ export class Image extends DesignAsyncAbstract<ImageProps, ImageEventLoad> {
             'background-position-y': this.position?.getY()
           }
         case ImageTypeValue.icon:
+        case ImageTypeValue.flag:
           return { 'background-image': this.background.getImage() }
         case ImageTypeValue.public:
           return { 'mask-image': this.background.getImage() }

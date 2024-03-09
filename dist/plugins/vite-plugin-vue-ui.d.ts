@@ -1,6 +1,9 @@
 import * as vite from 'vite';
+import '../library/types.d.ts';
 type UiPluginsOptions = {
     importComponents?: boolean;
+    icon?: boolean;
+    flag?: boolean;
     style?: string | false;
     api?: string;
     apiUrl?: string;

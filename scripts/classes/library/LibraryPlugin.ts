@@ -64,6 +64,7 @@ export class LibraryPlugin {
       const components = `${toCamelCase(`${ui}${suffix}`)}ComponentsPlugin`
       const path = `components${suffix}`
       const name = `registration${toCamelCaseFirst(`${this.items.getGlobalName()}${suffix}`)}`
+      const nameGlobal = toCamelCaseFirst(this.items.getGlobalName())
       const style = design === 'main' ? `./${LIBRARY_STYLE}` : `../${design}/styles/main`
 
       if (PropertiesFile.is([LIBRARY_DIR, `${path}.ts`])) {
@@ -73,7 +74,7 @@ export class LibraryPlugin {
             'import { type App } from \'vue\'',
             '',
             `import { ${components} } from './${path}'`,
-            `import { makeMedia } from './${LIBRARY_MEDIA}'`,
+            `import { make${nameGlobal}Flags, make${nameGlobal}Icons } from './${LIBRARY_MEDIA}'`,
             `import { ${translate} } from './${LIBRARY_TRANSLATE}'`,
             '',
             'import { type ConstrRegistration } from \'../types/constructor\'',
@@ -81,13 +82,15 @@ export class LibraryPlugin {
             `import '${style}.scss'`,
             `import './${LIBRARY_TYPES}.d.ts'`,
             '',
-            `export const ${name} = async (app: App, options?: ConstrRegistration): Promise<App> => {`,
-            '  makeMedia()',
+            `export const ${name} = async (app: App, options: ConstrRegistration = {}): Promise<App> => {`,
+            `  make${nameGlobal}Icons()`,
             '',
-            '  if (options) {',
-            '    if (options?.translate) {',
-            `      await ${translate}(options.translate)`,
-            '    }',
+            '  if (options?.flag) {',
+            `    make${nameGlobal}Flags()`,
+            '  }',
+            '',
+            '  if (options?.translate) {',
+            `    await ${translate}(options.translate)`,
             '  }',
             '',
             `  app.use(${components})`,

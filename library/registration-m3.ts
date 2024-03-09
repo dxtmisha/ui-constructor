@@ -4,7 +4,7 @@
 import { type App } from 'vue'
 
 import { uiM3ComponentsPlugin } from './components-m3'
-import { makeMedia } from './media'
+import { makeUiFlags, makeUiIcons } from './media'
 import { registrationUiTranslate } from './translate'
 
 import { type ConstrRegistration } from '../types/constructor'
@@ -12,13 +12,15 @@ import { type ConstrRegistration } from '../types/constructor'
 import '../m3/styles/main.scss'
 import './types.d.ts'
 
-export const registrationUiM3 = async (app: App, options?: ConstrRegistration): Promise<App> => {
-  makeMedia()
+export const registrationUiM3 = async (app: App, options: ConstrRegistration = {}): Promise<App> => {
+  makeUiIcons()
 
-  if (options) {
-    if (options?.translate) {
-      await registrationUiTranslate(options.translate)
-    }
+  if (options?.flag) {
+    makeUiFlags()
+  }
+
+  if (options?.translate) {
+    await registrationUiTranslate(options.translate)
   }
 
   app.use(uiM3ComponentsPlugin)

@@ -1,4 +1,4 @@
-export const translate: Record<string, string> = {
+export default {
   // НЕ УДАЛЯТЬ
   __TRANSLATE_START__: '',
   // TODO: список ключей переводов, которые надо получить перед инициализацией компонента

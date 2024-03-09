@@ -91,7 +91,7 @@ export class PluginApi {
       list.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`)
     }
 
-    list.push(code)
+    list.push('', code)
 
     return list.join('\r\n')
   }

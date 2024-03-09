@@ -40,12 +40,12 @@ class s {
     return t === "development";
   }
 }
-const y = "ui", d = "library", m = [
+const y = "ui", d = "Ui", m = "library", f = [
   "m2",
   "m3",
   "c1",
   "c2"
-], f = "m3", u = [
+], u = "m3", b = [
   {
     name: "M2Button",
     design: "m2",
@@ -214,7 +214,7 @@ const y = "ui", d = "library", m = [
     code: "c2-ripple",
     path: "c2/Ripple"
   }
-], b = {
+], k = {
   m2: [
     "ref-background-0",
     "ref-background-1",
@@ -2450,7 +2450,7 @@ const y = "ui", d = "library", m = [
     "st-asemantic-bg-color-cerise-surface-opacity",
     "base-size-icons-lg"
   ]
-}, k = {
+}, x = {
   "flex-position": "flexPosition",
   "flex-dynamic": "flexDynamic",
   "justify-content": "justifyContent",
@@ -2510,14 +2510,15 @@ const y = "ui", d = "library", m = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, i = {
+}, l = {
   name: y,
-  library: d,
-  designs: m,
-  designMain: f,
-  components: u,
-  vars: b,
-  modificationProperties: k
+  nameFirst: d,
+  library: m,
+  designs: f,
+  designMain: u,
+  components: b,
+  vars: k,
+  modificationProperties: x
 };
 class n {
   /**
@@ -2529,8 +2530,8 @@ class n {
    * @param url link to the site for the request /<br>ссылка на сайт для запроса
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, r, o, l) {
-    this.id = t, this.code = e, this.mode = r, this.path = o, this.url = l, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
+  constructor(t, e, a, r, i) {
+    this.id = t, this.code = e, this.mode = a, this.path = r, this.url = i, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
   }
   /**
    * Initialization of data transformation.<br>
@@ -2567,24 +2568,83 @@ class n {
    * @param code file content /<br>содержимое файла
    */
   importApi(t) {
-    const e = `dev${this.className}User`, r = [
-      `import { ${this.className} } from '${i.name}';`
+    const e = `dev${this.className}User`, a = [
+      `import { ${this.className} } from '${l.name}';`
     ];
-    return this.path && this.isPath() && r.push(
+    return this.path && this.isPath() && a.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
       `${this.className}.${this.methodAdd}(${e});`
-    ), this.url && r.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), r.push(t), r.join(`\r
+    ), this.url && a.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), a.push("", t), a.join(`\r
 `);
   }
 }
-class x extends n {
+class v extends n {
   constructor() {
     super(...arguments), this.className = "Translate", this.methodAdd = "addSync";
   }
 }
-const p = `(?<=<)(${i.designs.join("|")})([A-Z0-9-])([^ >\r
-]+)`, v = new RegExp(p, "i"), S = new RegExp(p, "ig");
-class z {
+class S {
+  /**
+   * Constructor
+   * @param id file identification /<br>идентификация файла
+   * @param code file content /<br>содержимое файла
+   * @param icon should the icons be enabled /<br>включить ли иконки
+   * @param flag should the flag be enabled /<br>включить ли флаг
+   */
+  // eslint-disable-next-line no-useless-constructor
+  constructor(t, e, a, r) {
+    this.id = t, this.code = e, this.icon = a, this.flag = r;
+  }
+  /**
+   * Initialization of data transformation.<br>
+   * Инициализация преобразования данных.
+   */
+  init() {
+    if (this.is()) {
+      const t = [
+        `import { ${this.getImports().join(", ")} } from '${l.name}/media';`
+      ];
+      return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
+        "",
+        this.code
+      ), t.join(`\r
+`);
+    }
+    return this.code;
+  }
+  /**
+   * Checks if the conditions are suitable for working with this file.<br>
+   * Проверяет, подходят ли условия для работы с этим файлом.
+   */
+  is() {
+    return s.isJs(this.id) && !!(this.icon || this.flag);
+  }
+  /**
+   * Returns the name of the flag function.<br>
+   * Возвращает название функции флага.
+   */
+  getNameFlag() {
+    return `make${l.nameFirst}Flags`;
+  }
+  /**
+   * Returns the name of the icon function.<br>
+   * Возвращает название функции иконки.
+   */
+  getNameIcon() {
+    return `make${l.nameFirst}Icons`;
+  }
+  /**
+   * Returns data for connecting data.<br>
+   * Возвращает данные для подключения данных.
+   */
+  getImports() {
+    const t = [];
+    return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
+  }
+}
+const p = `(?<=<)(${l.designs.join("|")})([A-Z0-9-])([^ >\r
+]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
+class H {
   /**
    * Constructor
    * @param styles object for working with style connection /<br>объект для работы с подключением стилей
@@ -2592,8 +2652,8 @@ class z {
    * @param code file content /<br>содержимое файла
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, r) {
-    this.styles = t, this.id = e, this.code = r;
+  constructor(t, e, a) {
+    this.styles = t, this.id = e, this.code = a;
   }
   /**
    * Initializes the data.<br>
@@ -2603,11 +2663,12 @@ class z {
     if (this.is()) {
       const t = this.getList();
       if (t) {
-        let e = this.getCode();
+        const e = [];
+        let a = this.getCode();
         return t.forEach((r) => {
-          const o = this.findComponent(r);
-          o && !this.isImport(o) && (e = this.importComponent(e, o), e = this.importStyle(e, o));
-        }), e;
+          const i = this.findComponent(r);
+          i && e.indexOf(i.name) === -1 && !this.isImport(i) && (e.push(i.name), a = this.importComponent(a, i), a = this.importStyle(a, i));
+        }), a;
       }
     }
     return this.code;
@@ -2617,7 +2678,7 @@ class z {
    * Проверяет, подходит ли файл для преобразования.
    */
   is() {
-    return s.isVue(this.id) && !!this.code.match(v);
+    return s.isVue(this.id) && !!this.code.match(z);
   }
   /**
    * Checks if the component was connected.<br>
@@ -2625,7 +2686,7 @@ class z {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${i.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${l.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -2639,7 +2700,7 @@ class z {
    * Находит список компонентов и возвращает их.
    */
   getList() {
-    return this.code.match(S);
+    return this.code.match(w);
   }
   /**
    * Returns the file code, adding a script if it’s not there.<br>
@@ -2654,7 +2715,7 @@ class z {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return i.components.find(
+    return l.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -2666,7 +2727,7 @@ class z {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${i.name}/${e.name}';`);
+import {${e.name}} from'${l.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -2675,21 +2736,39 @@ import {${e.name}} from'${i.name}/${e.name}';`);
    * @param item data on the component /<br>данные по компоненту
    */
   importStyle(t, e) {
-    return this.styles.is(e.design) ? t : t.replace(/(<script[^>]*>)/, `$1\r
-${this.styles.getCodeAndPush(e.design)}`);
+    const a = this.styles.get(
+      e.design,
+      this.id,
+      e.name
+    );
+    return a ? t.replace(/(<script[^>]*>)/, `$1\r
+${a}`) : t;
   }
 }
-class w {
+class C {
   constructor() {
-    this.items = [];
+    this.items = {};
+  }
+  /**
+   * Adds a design and returns the design connection code.<br>
+   * Добавляет дизайн и возвращает код подключения дизайна.
+   * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
+   */
+  get(t, e, a) {
+    if (this.isNone(t, e, a))
+      return this.push(t, e, a), this.getCode(t);
   }
   /**
    * Checks if the styles are already connected.<br>
    * Проверяет, если уже подключены стили.
    * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
    */
-  is(t) {
-    return this.items.indexOf(t) !== -1;
+  isNone(t, e, a) {
+    return !(t in this.items && (e !== this.items[t].id || a !== this.items[t].component));
   }
   /**
    * Returns the style connection code.<br>
@@ -2697,27 +2776,24 @@ class w {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${i.name}/${t}/style';`;
-  }
-  /**
-   * Adds a design and returns the design connection code.<br>
-   * Добавляет дизайн и возвращает код подключения дизайна.
-   * @param design design name /<br>название дизайна
-   */
-  getCodeAndPush(t) {
-    return this.push(t), this.getCode(t);
+    return `import '${l.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
    * Добавление дизайна в список подключенных.
    * @param design design name /<br>название дизайна
+   * @param id file identification /<br>идентификация файла
+   * @param component component name /<br>название компонента
    */
-  push(t) {
-    return this.items.push(t), this;
+  push(t, e, a) {
+    return this.items[t] = {
+      id: e,
+      component: a
+    }, this;
   }
 }
-const H = `// ${i.name}-none`, C = `// ${i.name}-mode-none`;
-class j {
+const F = `// ${l.name}-none`, j = `// ${l.name}-mode-none`;
+class P {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2725,8 +2801,8 @@ class j {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, r = i.designMain) {
-    this.id = t, this.code = e, this.design = r;
+  constructor(t, e, a = l.designMain) {
+    this.id = t, this.code = e, this.design = a;
   }
   /**
    * Initialization of the transformation of all style properties.<br>
@@ -2744,7 +2820,7 @@ class j {
    * Проверяет, нужно ли преобразовывать этот файл.
    */
   is() {
-    return s.isCss(this.id) && !this.code.match(H);
+    return s.isCss(this.id) && !this.code.match(F);
   }
   /**
    * Connects a list of tokens to work with values.<br>
@@ -2752,7 +2828,7 @@ class j {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${i.name}/${this.design}/properties`;
+    const e = `${l.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -2770,9 +2846,9 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initVars(t) {
-    var r;
-    const e = (r = i.vars) == null ? void 0 : r[this.design];
-    return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (o) => e.indexOf(o) !== -1 ? `${this.design}-${o}` : o) : t;
+    var a;
+    const e = (a = l.vars) == null ? void 0 : a[this.design];
+    return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (r) => e.indexOf(r) !== -1 ? `${this.design}-${r}` : r) : t;
   }
   /**
    * Transformation of all properties into non-standard ones used through mixins.<br>
@@ -2780,43 +2856,47 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = i.modificationProperties, r = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = l.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
-]*${C})`, "igm");
-    return t.match(new RegExp(r, "im")) ? t.replace(r, (o, l, g, h) => {
+]*${j})`, "igm");
+    return t.match(new RegExp(a, "im")) ? t.replace(a, (r, i, g, h) => {
       const c = g.trim();
-      return `@include ${e == null ? void 0 : e[l.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${h}`;
+      return `@include ${e == null ? void 0 : e[i.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${h}`;
     }) : t;
   }
 }
-function P(a = {}) {
-  const t = new w(), e = { value: !0 };
-  let r = "production";
+function B(o = {}) {
+  const t = new C(), e = { value: !0 };
+  let a = "production";
   return {
     name: "vite-plugin-vue-ui",
     enforce: "pre",
-    apply(o, l) {
-      return r = l.mode, !0;
+    apply(r, i) {
+      return a = i.mode, !0;
     },
-    transform(o, l) {
-      return e.value && s.isJs(l) && (o = new n(
-        l,
-        o,
+    transform(r, i) {
+      return e.value && s.isJs(i) && (r = new S(
+        i,
         r,
-        a == null ? void 0 : a.api,
-        a == null ? void 0 : a.apiUrl
-      ).init(), o = new x(
-        l,
-        o,
+        o == null ? void 0 : o.flag
+      ).init(), r = new v(
+        i,
         r,
-        a == null ? void 0 : a.translate,
-        a == null ? void 0 : a.translateUrl
-      ).init(), console.log("code", o), e.value = !1), ((a == null ? void 0 : a.importComponents) ?? !0) && (o = new z(t, l, o).init()), (a == null ? void 0 : a.style) !== !1 && (o = new j(l, o, a == null ? void 0 : a.style).init()), {
-        code: o
+        a,
+        o == null ? void 0 : o.translate,
+        o == null ? void 0 : o.translateUrl
+      ).init(), r = new n(
+        i,
+        r,
+        a,
+        o == null ? void 0 : o.api,
+        o == null ? void 0 : o.apiUrl
+      ).init(), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new H(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new P(i, r, o == null ? void 0 : o.style).init()), {
+        code: r
       };
     }
   };
 }
 export {
-  P as default
+  B as default
 };

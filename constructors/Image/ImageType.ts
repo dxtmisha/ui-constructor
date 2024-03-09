@@ -68,6 +68,10 @@ export class ImageType extends CacheItem<ImageTypeItem> {
         return ImageTypeValue.material
       }
 
+      if (image.match(/^flag-[a-z]{2}$/)) {
+        return ImageTypeValue.flag
+      }
+
       const sub = image.match(/^(filled|outlined|round|sharp|two-tone)-/)
 
       if (sub) {
