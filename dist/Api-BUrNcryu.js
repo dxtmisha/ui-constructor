@@ -1,10 +1,10 @@
 var F = Object.defineProperty;
 var j = (n, t, e) => t in n ? F(n, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : n[t] = e;
-var g = (n, t, e) => (j(n, typeof t != "symbol" ? t + "" : t, e), e);
+var h = (n, t, e) => (j(n, typeof t != "symbol" ? t + "" : t, e), e);
 import { e as $ } from "./executeFunction-B6By_8Og.js";
-import { f as b, t as O, i as p } from "./toArray-J4lAhJG7.js";
-import { i as u } from "./isFilled-DV8O9-Ib.js";
-import { G as h, i as d } from "./Geo-BX7ib8U1.js";
+import { f as b, t as O, i as g } from "./toArray-J4lAhJG7.js";
+import { i as c } from "./isFilled-DV8O9-Ib.js";
+import { G as p, i as d } from "./Geo-BX7ib8U1.js";
 import { u as U } from "./DataStorage-DJJVsKIf.js";
 function v(n, t = "=", e = "&") {
   return b(
@@ -40,7 +40,7 @@ const y = [], i = class i {
    * @param api adding a path to the site’s API /<br>добавление пути к API сайта
    */
   static getUrl(t, e = !0) {
-    return `${e ? this.url : ""}${t}`.replace("{locale}", h.getLocation()).replace("{country}", h.getCountry()).replace("{language}", h.getLanguage());
+    return `${e ? this.url : ""}${t}`.replace("{locale}", p.getLocation()).replace("{country}", p.getCountry()).replace("{language}", p.getLanguage());
   }
   /**
    * Getting data for the body.<br>
@@ -49,7 +49,7 @@ const y = [], i = class i {
    * @param method method for request /<br>метод запрос
    */
   static getBody(t = {}, e = "GET") {
-    if (e !== "GET" && u(t))
+    if (e !== "GET" && c(t))
       return t instanceof FormData || d(t) ? t : JSON.stringify(t);
   }
   /**
@@ -61,9 +61,9 @@ const y = [], i = class i {
    */
   static getBodyForGet(t, e = "", s = "GET") {
     if (s === "GET") {
-      const r = e.match(/\?/) ? "&" : "?", o = typeof t == "object" ? v(t) : t;
-      if (u(o))
-        return `${r}${o}`;
+      const r = e.match(/\?/) ? "&" : "?", a = typeof t == "object" ? v(t) : t;
+      if (c(a))
+        return `${r}${a}`;
     }
     return "";
   }
@@ -149,17 +149,13 @@ const y = [], i = class i {
    * @param request data for the request /<br>данные для запроса
    */
   static getResponse(t = "", e, s) {
-    return console.log(
-      t,
-      e,
-      s
-    ), this.response.find((r) => {
+    return this.response.find((r) => {
       if ((r == null ? void 0 : r.disable) !== !0 && t === r.path && e === r.method && y.indexOf(r) === -1) {
-        let o = !1;
-        if (s === (r == null ? void 0 : r.request) && (o = !0), u(s) && u(r.request) && p(s) && p(r.request) && !(s instanceof FormData) && !(r.request instanceof FormData) && Object.values(s).length === Object.values(r.request).length && (o = Object.entries(r.request).reduce(
-          (l, [f, c]) => l && c === (s == null ? void 0 : s[f]),
+        let a = !1;
+        if (s === (r == null ? void 0 : r.request) && (a = !0), c(s) && c(r.request) && g(s) && g(r.request) && !(s instanceof FormData) && !(r.request instanceof FormData) && Object.values(s).length === Object.values(r.request).length && (a = Object.entries(r.request).reduce(
+          (u, [f, l]) => u && l === (s == null ? void 0 : s[f]),
           !0
-        )), console.log("response", o), o)
+        )), a)
           return y.push(r), !0;
       }
       return !1;
@@ -181,32 +177,32 @@ const y = [], i = class i {
     path: e = "",
     pathFull: s = void 0,
     method: r = "GET",
-    request: o = void 0,
-    headers: l = {},
+    request: a = void 0,
+    headers: u = {},
     type: f = "application/json;charset=UTF-8",
-    global: c = r === "GET",
+    global: l = r === "GET",
     init: E = {}
   }) {
-    if (console.log("global", c), c) {
-      const a = this.getResponse(e, r, o);
-      if (a)
-        return $(a.response);
+    if (l) {
+      const o = this.getResponse(e, r, a);
+      if (o)
+        return $(o.response);
     }
     try {
-      const a = s ?? this.getUrl(e, t), G = `${a}${this.getBodyForGet(o, a, r)}`;
+      const o = s ?? this.getUrl(e, t), G = `${o}${this.getBodyForGet(a, o, r)}`;
       return await (await fetch(G, {
         ...E,
         method: r,
-        headers: this.getHeaders(l, f),
-        body: this.getBody(o, r)
+        headers: this.getHeaders(u, f),
+        body: this.getBody(a, r)
       })).json();
-    } catch (a) {
-      console.error(a);
+    } catch (o) {
+      console.error(o);
     }
     return {};
   }
 };
-g(i, "url", U("api", "/")), g(i, "response", []);
+h(i, "url", U("api", "/")), h(i, "response", []);
 let T = i;
 export {
   T as A,

@@ -1,4 +1,4 @@
-import { T as r } from "./Translate-BHmGibMN.js";
+import { T as r } from "./Translate-BsS2t7ia.js";
 const n = async (a) => {
   await r.addNormalOrSync(a);
 };
