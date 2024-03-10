@@ -6,7 +6,7 @@ import { D as B } from "./DesignConstructorAbstract-_dNu1bTO.js";
 import { i as g } from "./Geo-BX7ib8U1.js";
 import { D as w } from "./DesignAsyncAbstract-D-BgPzA9.js";
 import { C as H } from "./GeoIntl-DDtSIJNR.js";
-import { I as y } from "./Icons-eadcmdB-.js";
+import { I as y } from "./Icons-Dmguoz-_.js";
 import { G as j } from "./GeoFlag-bvG_Qgo-.js";
 import { i as A, t as p } from "./toNumber-CJS0fvr_.js";
 import { g as W } from "./getElementId-BUNC3Zxy.js";

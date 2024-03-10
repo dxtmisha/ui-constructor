@@ -36,6 +36,8 @@ export function useApiRef<R> (
       pathFull: undefined
     })
 
+    console.log('response', response)
+
     if (response) {
       if ('data' in response) {
         data.value = response.data as R
@@ -58,7 +60,12 @@ export function useApiRef<R> (
   const data = shallowRef<R>()
   const request: Ref<ApiFetch> = toRefItem(getOptions(options))
 
-  watchEffect(() => reset())
+  console.log('data', data)
+
+  watchEffect(() => {
+    console.log('watchEffect')
+    reset().then()
+  })
 
   return {
     data,

@@ -8,11 +8,11 @@ import { e as Ie } from "./eventStopPropagation-fHm2p5BF.js";
 import { e as Q, i as Le } from "./executeFunction-B6By_8Og.js";
 import { a as C, f as w, t as Pt, i as Te } from "./toArray-J4lAhJG7.js";
 import { g as Ut, a as Bt, f as je } from "./getMouseClientY-BILUOOAB.js";
-import { K as nt, c as V, t as Kt, M as ke, a as Ve, g as $e, d as Ge } from "./MutationDataItem-BDeARiIC.js";
+import { K as nt, c as V, t as Kt, M as ke, a as Ve, g as $e, d as Ge } from "./MutationDataItem-DYV5bcvX.js";
 import { g as Re, i as Fe } from "./getElement-BhVCn14C.js";
 import { g as Pe, r as Ue } from "./getElementId-BUNC3Zxy.js";
 import { E as K, g as Be, i as Ke } from "./EventItem-CYabC4_O.js";
-import { g as Ht, A as Wt, a as He } from "./Api-BUrNcryu.js";
+import { g as Ht, A as Wt, a as He } from "./Api-_iSc-1cD.js";
 import { i as We } from "./inArray-BLmbg9f_.js";
 import { i as qe, t as Qe } from "./toNumber-CJS0fvr_.js";
 import { D as Y, u as qt, a as G, t as _t, E as Ye, i as ze } from "./DataStorage-DJJVsKIf.js";
@@ -22,10 +22,10 @@ import { g as Yt } from "./getBind-CgHMfjrB.js";
 import { g as v, a as ir, D as nr, b as sr, c as or, r as ar, t as cr } from "./DesignConstructorAbstract-_dNu1bTO.js";
 import { C as zt, t as dt, G as Jt } from "./GeoIntl-DDtSIJNR.js";
 import { a as Xt, G as ur } from "./GeoFlag-bvG_Qgo-.js";
-import { I as lr } from "./Icons-eadcmdB-.js";
-import { T as H } from "./Translate-BsS2t7ia.js";
+import { I as lr } from "./Icons-Dmguoz-_.js";
+import { T as H } from "./Translate-BHmGibMN.js";
 import { a as fr, D as hr, b as dr } from "./DesignAsyncAbstract-D-BgPzA9.js";
-import { M as pr, a as gr, b as vr, c as mr } from "./Mutation-CMjNQV_q.js";
+import { M as pr, a as gr, b as vr, c as mr } from "./Mutation-B61LNuq8.js";
 import { createRouter as yr } from "vue-router";
 function _r(e) {
   var t;
@@ -1938,11 +1938,13 @@ function ui(e, t) {
       path: e,
       pathFull: void 0
     });
-    a ? "data" in a ? s.value = a.data : s.value = a : s.value = void 0;
+    console.log("response", a), a ? "data" in a ? s.value = a.data : s.value = a : s.value = void 0;
   }, n = (a) => {
     a && (o.value = r(a)), i().then();
   }, s = D(), o = O(r(t));
-  return Qt(() => i()), {
+  return console.log("data", s), Qt(() => {
+    console.log("watchEffect"), i().then();
+  }), {
     data: s,
     request: o,
     update: n
