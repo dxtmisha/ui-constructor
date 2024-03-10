@@ -20,6 +20,7 @@ const EXPORTS_DEFAULT = {
     require: './dist/vite-plugin-vue-ui.umd.cjs',
     types: './dist/plugins/vite-plugin-vue-ui.d.ts'
   },
+  './components.d.ts': `./dist/${LIBRARY_DIR}/types.d.ts`,
   './styles/*': './styles/*',
   './dist/*': './dist/*',
   './book/*': './book/*',

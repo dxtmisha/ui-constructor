@@ -5,7 +5,7 @@ import {
   LIBRARY_DIR_CLASSES,
   LIBRARY_DIR_COMPOSABLES,
   LIBRARY_DIR_FUNCTIONS,
-  LIBRARY_INDEX,
+  LIBRARY_INDEX, LIBRARY_TYPES,
   LIBRARY_TYPES_COMPONENT
 } from '../../config/library'
 
@@ -28,6 +28,7 @@ export class LibraryIndex {
     this.items.write(
       LIBRARY_INDEX,
       [
+        `import './${LIBRARY_TYPES}.d.ts'`,
         `import './${LIBRARY_TYPES_COMPONENT}.d.ts'`,
         '',
         '// Functions',
