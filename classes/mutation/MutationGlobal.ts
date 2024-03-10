@@ -1,5 +1,8 @@
 import { forEach } from '../../functions/forEach'
 
+import { Api, type ApiResponse } from '../Api'
+import { Translate } from '../Translate'
+
 import {
   type MutationComponent,
   type MutationComponentCache,
@@ -10,7 +13,6 @@ import {
 } from '../../types/mutation'
 
 import { KEY_GLOBAL_PROJECT } from '../../config/mutation'
-import { Translate } from '../Translate'
 
 /**
  * Class for working with global variables.<br>
@@ -177,6 +179,15 @@ export class MutationGlobal {
     forEach(components, (component, name) => {
       this.addComponent(name, component)
     })
+  }
+
+  /**
+   * Adding cached requests.<br>
+   * Добавление кешированных запросов.
+   * @param response data for caching /<br>данные для кеширования
+   */
+  static addResponse (response: ApiResponse | ApiResponse[]): void {
+    Api.addResponse(response)
   }
 
   /**

@@ -58,6 +58,7 @@ export class LibraryMain {
         `;(window as any).${name}_CORE_VUE_ROUTER = vueRouter`,
         `;(window as any).${name}_CORE_VUEX = vuex`,
         `;(window as any).${name}_CORE_UI = ui`,
+        `;(window as any).${this.items.getGlobalAlter()} = ui`,
         '',
         `make${nameCamelCase}Media()`,
         '',

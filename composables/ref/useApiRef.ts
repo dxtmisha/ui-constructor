@@ -1,7 +1,11 @@
-import { Ref, shallowRef, watchEffect } from 'vue'
-import { toRefItem } from '../../functions/ref/toRefItem.ts'
+import { type Ref, shallowRef, watchEffect } from 'vue'
+import { toRefItem } from '../../functions/ref/toRefItem'
 
-import { Api, type ApiFetch, ApiMethodItem } from '../../classes/Api.ts'
+import {
+  Api,
+  type ApiFetch,
+  ApiMethodItem
+} from '../../classes/Api'
 
 /**
  * Returns data for working with requests.<br>
@@ -9,7 +13,7 @@ import { Api, type ApiFetch, ApiMethodItem } from '../../classes/Api.ts'
  * @param path path to request /<br>путь к запрос
  * @param options data for the request /<br>данные для запроса
  */
-export function useApiRef (
+export function useApiRef<R> (
   path: string,
   options?: ApiMethodItem | ApiFetch
 ) {
@@ -34,9 +38,9 @@ export function useApiRef (
 
     if (response) {
       if ('data' in response) {
-        data.value = response.data
+        data.value = response.data as R
       } else {
-        data.value = response
+        data.value = response as R
       }
     } else {
       data.value = undefined
@@ -51,7 +55,7 @@ export function useApiRef (
     reset().then()
   }
 
-  const data = shallowRef<any>()
+  const data = shallowRef<R>()
   const request: Ref<ApiFetch> = toRefItem(getOptions(options))
 
   watchEffect(() => reset())

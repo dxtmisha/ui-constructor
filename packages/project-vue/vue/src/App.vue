@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useTranslateRef } from 'ui'
+import { useApiRef, useTranslateRef } from 'ui'
 
 const route = useRoute()
 const router = useRouter()
@@ -13,6 +13,9 @@ const translate = useTranslateRef([
   'HEADER_MENU_TITLE'
 ] as const)
 
+// Получаем данные запроса
+const { data: user } = useApiRef<{ id: string, name: string }>('user')
+
 const isMain = computed(() => route.path === '/')
 const onClick = () => router.push('/')
 </script>
@@ -20,6 +23,7 @@ const onClick = () => router.push('/')
 <template>
   <!-- Класс c2-system обязательно -->
   <div class="c2-system my-6">
+    <div v-if="user" class="my-8">{{ user.id }} {{ user.name }}</div>
     <div class="flex gap-4">
       <router-link class="c2-link" to="/about">{{ translate.TITLE_COMPANY }}</router-link>
       |

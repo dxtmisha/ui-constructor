@@ -1,3 +1,4 @@
+import { type ApiResponse } from '../Api';
 import { type MutationComponent, type MutationComponentCache, type MutationComponentCallback, type MutationComponentProps, type MutationProject, type MutationProjectItem } from '../../types/mutation';
 /**
  * Class for working with global variables.<br>
@@ -94,6 +95,12 @@ export declare class MutationGlobal {
      * @param components list of components to be added /<br>список добавляемого компонента
      */
     static addComponentList(components: Record<string, any>): void;
+    /**
+     * Adding cached requests.<br>
+     * Добавление кешированных запросов.
+     * @param response data for caching /<br>данные для кеширования
+     */
+    static addResponse(response: ApiResponse | ApiResponse[]): void;
     /**
      * Adds texts in sync mode.<br>
      * Добавляет тексты в режиме синхронизации.

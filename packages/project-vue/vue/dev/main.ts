@@ -16,7 +16,7 @@ import { router } from './../src/router'
 import { createStore } from 'vuex'
 import { store } from './../src/store'
 
-import api from '../src/response'
+import request from '../src/request'
 import translate from '../src/translate'
 
 const app = createApp(App)
@@ -28,7 +28,7 @@ if (isFilled(router.routes)) {
 }
 
 ;(async () => {
-  Api.addResponse(api)
+  Api.addResponse(request)
 
   await init(app)
   await registrationUi(app, {

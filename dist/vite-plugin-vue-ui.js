@@ -1,4 +1,4 @@
-class s {
+class l {
   /**
    * Checks if the id is a user’s file.<br>
    * Проверяет, является ли id файлом пользователя.
@@ -45,7 +45,7 @@ const y = "ui", d = "Ui", m = "library", f = [
   "m3",
   "c1",
   "c2"
-], u = "m3", b = [
+], u = "design", b = [
   {
     name: "M2Button",
     design: "m2",
@@ -2510,7 +2510,7 @@ const y = "ui", d = "Ui", m = "library", f = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, l = {
+}, s = {
   name: y,
   nameFirst: d,
   library: m,
@@ -2545,14 +2545,14 @@ class n {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return s.isJs(this.id) && !!(this.isPath() || this.url);
+    return l.isJs(this.id) && !!(this.isPath() || this.url);
   }
   /**
    * Checks if there is a file with data for developers.<br>
    * Проверяет, есть ли файл с данными для разработчиков.
    */
   isPath() {
-    return !!(this.path && s.isDev(this.mode));
+    return !!(this.path && l.isDev(this.mode));
   }
   /**
    * Returns the path for connecting files.<br>
@@ -2569,7 +2569,7 @@ class n {
    */
   importApi(t) {
     const e = `dev${this.className}User`, a = [
-      `import { ${this.className} } from '${l.name}';`
+      `import { ${this.className} } from '${s.name}';`
     ];
     return this.path && this.isPath() && a.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
@@ -2602,7 +2602,7 @@ class S {
   init() {
     if (this.is()) {
       const t = [
-        `import { ${this.getImports().join(", ")} } from '${l.name}/media';`
+        `import { ${this.getImports().join(", ")} } from '${s.name}/media';`
       ];
       return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
         "",
@@ -2617,21 +2617,21 @@ class S {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return s.isJs(this.id) && !!(this.icon || this.flag);
+    return l.isJs(this.id) && !!(this.icon || this.flag);
   }
   /**
    * Returns the name of the flag function.<br>
    * Возвращает название функции флага.
    */
   getNameFlag() {
-    return `make${l.nameFirst}Flags`;
+    return `make${s.nameFirst}Flags`;
   }
   /**
    * Returns the name of the icon function.<br>
    * Возвращает название функции иконки.
    */
   getNameIcon() {
-    return `make${l.nameFirst}Icons`;
+    return `make${s.nameFirst}Icons`;
   }
   /**
    * Returns data for connecting data.<br>
@@ -2642,7 +2642,7 @@ class S {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const p = `(?<=<)(${l.designs.join("|")})([A-Z0-9-])([^ >\r
+const p = `(?<=<)(${s.designs.join("|")})([A-Z0-9-])([^ >\r
 ]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
 class H {
   /**
@@ -2678,7 +2678,7 @@ class H {
    * Проверяет, подходит ли файл для преобразования.
    */
   is() {
-    return s.isVue(this.id) && !!this.code.match(z);
+    return l.isVue(this.id) && !!this.code.match(z);
   }
   /**
    * Checks if the component was connected.<br>
@@ -2686,7 +2686,7 @@ class H {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${l.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${s.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -2715,7 +2715,7 @@ class H {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return l.components.find(
+    return s.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -2727,7 +2727,7 @@ class H {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${l.name}/${e.name}';`);
+import {${e.name}} from'${s.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -2776,7 +2776,7 @@ class C {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${l.name}/${t}/style';`;
+    return `import '${s.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
@@ -2792,7 +2792,7 @@ class C {
     }, this;
   }
 }
-const F = `// ${l.name}-none`, j = `// ${l.name}-mode-none`;
+const F = `// ${s.name}-none`, j = `// ${s.name}-mode-none`;
 class P {
   /**
    * Constructor
@@ -2801,7 +2801,7 @@ class P {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a = l.designMain) {
+  constructor(t, e, a = s.designMain) {
     this.id = t, this.code = e, this.design = a;
   }
   /**
@@ -2820,7 +2820,7 @@ class P {
    * Проверяет, нужно ли преобразовывать этот файл.
    */
   is() {
-    return s.isCss(this.id) && !this.code.match(F);
+    return l.isCss(this.id) && !this.code.match(F);
   }
   /**
    * Connects a list of tokens to work with values.<br>
@@ -2828,7 +2828,7 @@ class P {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${l.name}/${this.design}/properties`;
+    const e = `${s.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -2847,7 +2847,7 @@ ${t}`;
    */
   initVars(t) {
     var a;
-    const e = (a = l.vars) == null ? void 0 : a[this.design];
+    const e = (a = s.vars) == null ? void 0 : a[this.design];
     return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (r) => e.indexOf(r) !== -1 ? `${this.design}-${r}` : r) : t;
   }
   /**
@@ -2856,7 +2856,7 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = l.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = s.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
 ]*${j})`, "igm");
     return t.match(new RegExp(a, "im")) ? t.replace(a, (r, i, g, h) => {
@@ -2875,7 +2875,7 @@ function B(o = {}) {
       return a = i.mode, !0;
     },
     transform(r, i) {
-      return e.value && s.isJs(i) && (r = new S(
+      return e.value && l.isJs(i) && (r = new S(
         i,
         r,
         o == null ? void 0 : o.flag

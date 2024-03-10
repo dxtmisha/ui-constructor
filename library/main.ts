@@ -22,6 +22,7 @@ MutationGlobal.addComponentList(components)
 ;(window as any).UI_CORE_VUE_ROUTER = vueRouter
 ;(window as any).UI_CORE_VUEX = vuex
 ;(window as any).UI_CORE_UI = ui
+;(window as any).CC = ui
 
 makeUiMedia()
 

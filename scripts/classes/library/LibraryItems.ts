@@ -57,6 +57,14 @@ export class LibraryItems {
   }
 
   /**
+   * Returns the alternative name of the global property.<br>
+   * Возвращает альтернативное название глобального свойства.
+   */
+  getGlobalAlter (): string {
+    return process.env.DESIGNS_ALTER ?? 'AL'
+  }
+
+  /**
    * Returns the name of the main design.<br>
    * Возвращает название главного дизайна.
    */
