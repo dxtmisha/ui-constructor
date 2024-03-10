@@ -84,8 +84,8 @@ export declare const M3Window: {
         contextmenu: boolean;
         dense: boolean;
         disabled: boolean;
-        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         open: boolean;
+        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         flash: boolean;
         axis: "x" | "y" | "on" | undefined;
         indent: number | undefined;
@@ -148,8 +148,8 @@ export declare const M3Window: {
         contextmenu: boolean;
         dense: boolean;
         disabled: boolean;
-        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         open: boolean;
+        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         flash: boolean;
         axis: "x" | "y" | "on" | undefined;
         indent: number | undefined;
@@ -211,8 +211,8 @@ export declare const M3Window: {
     contextmenu: boolean;
     dense: boolean;
     disabled: boolean;
-    adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
     open: boolean;
+    adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
     flash: boolean;
     axis: "x" | "y" | "on" | undefined;
     indent: number | undefined;

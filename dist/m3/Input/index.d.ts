@@ -93,9 +93,9 @@ export declare const M3Input: {
     }, {
         readonly: boolean;
         disabled: boolean;
-        type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
         spellcheck: boolean;
         autofocus: boolean;
+        type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
         autocomplete: AutoFill | undefined;
         required: boolean;
         arrow: boolean;
@@ -153,9 +153,9 @@ export declare const M3Input: {
     }, {}, {}, {}, {
         readonly: boolean;
         disabled: boolean;
-        type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
         spellcheck: boolean;
         autofocus: boolean;
+        type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
         autocomplete: AutoFill | undefined;
         required: boolean;
         arrow: boolean;
@@ -215,9 +215,9 @@ export declare const M3Input: {
 }, string, {
     readonly: boolean;
     disabled: boolean;
-    type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
     spellcheck: boolean;
     autofocus: boolean;
+    type: import("../../constructors/Input/typesBasic").InputTypeName | undefined;
     autocomplete: AutoFill | undefined;
     required: boolean;
     arrow: boolean;

@@ -1,5 +1,6 @@
 import { forEach } from '../../functions/forEach'
 
+import { Global } from '../Global'
 import { Api, type ApiResponse } from '../Api'
 import { Translate } from '../Translate'
 
@@ -179,6 +180,15 @@ export class MutationGlobal {
     forEach(components, (component, name) => {
       this.addComponent(name, component)
     })
+  }
+
+  /**
+   * Adding global data.<br>
+   * Добавление глобальных данных.
+   * @param data data for global data /<br>данные для глобальных данных
+   */
+  static addGlobal (data: Record<string, any>): void {
+    Global.add(data)
   }
 
   /**

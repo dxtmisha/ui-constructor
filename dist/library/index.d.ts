@@ -74,6 +74,7 @@ export * from './../classes/Geo';
 export * from './../classes/GeoFlag';
 export * from './../classes/GeoIntl';
 export * from './../classes/GeoPhone';
+export * from './../classes/Global';
 export * from './../classes/Hash';
 export * from './../classes/Icons';
 export * from './../classes/Loading';

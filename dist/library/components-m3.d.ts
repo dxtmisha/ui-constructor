@@ -609,9 +609,9 @@ export declare const components: {
         }, {
             readonly: boolean;
             disabled: boolean;
-            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
             spellcheck: boolean;
             autofocus: boolean;
+            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
             autocomplete: AutoFill | undefined;
             required: boolean;
             arrow: boolean;
@@ -669,9 +669,9 @@ export declare const components: {
         }, {}, {}, {}, {
             readonly: boolean;
             disabled: boolean;
-            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
             spellcheck: boolean;
             autofocus: boolean;
+            type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
             autocomplete: AutoFill | undefined;
             required: boolean;
             arrow: boolean;
@@ -731,9 +731,9 @@ export declare const components: {
     }, string, {
         readonly: boolean;
         disabled: boolean;
-        type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
         spellcheck: boolean;
         autofocus: boolean;
+        type: import("../constructors/Input/typesBasic").InputTypeName | undefined;
         autocomplete: AutoFill | undefined;
         required: boolean;
         arrow: boolean;
@@ -1360,8 +1360,8 @@ export declare const components: {
             contextmenu: boolean;
             dense: boolean;
             disabled: boolean;
-            adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
             open: boolean;
+            adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
             flash: boolean;
             axis: "x" | "y" | "on" | undefined;
             indent: number | undefined;
@@ -1424,8 +1424,8 @@ export declare const components: {
             contextmenu: boolean;
             dense: boolean;
             disabled: boolean;
-            adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
             open: boolean;
+            adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
             flash: boolean;
             axis: "x" | "y" | "on" | undefined;
             indent: number | undefined;
@@ -1487,8 +1487,8 @@ export declare const components: {
         contextmenu: boolean;
         dense: boolean;
         disabled: boolean;
-        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         open: boolean;
+        adaptive: "menu" | "auto" | "static" | "modal" | "modalDynamic" | "staticSm" | "staticMd" | "staticLg" | undefined;
         flash: boolean;
         axis: "x" | "y" | "on" | undefined;
         indent: number | undefined;

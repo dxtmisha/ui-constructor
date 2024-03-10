@@ -96,6 +96,12 @@ export declare class MutationGlobal {
      */
     static addComponentList(components: Record<string, any>): void;
     /**
+     * Adding global data.<br>
+     * Добавление глобальных данных.
+     * @param data data for global data /<br>данные для глобальных данных
+     */
+    static addGlobal(data: Record<string, any>): void;
+    /**
      * Adding cached requests.<br>
      * Добавление кешированных запросов.
      * @param response data for caching /<br>данные для кеширования

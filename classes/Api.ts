@@ -5,6 +5,7 @@ import { isObjectNotArray } from '../functions/isObjectNotArray'
 import { isString } from '../functions/isString'
 import { toArray } from '../functions/toArray'
 
+import { Loading } from './Loading'
 import { Geo } from './Geo'
 
 import { useEnv } from '../composables/useEnv'
@@ -307,11 +308,15 @@ export class Api {
       }
     }
 
+    let data: T = {} as T
+
+    Loading.show()
+
     try {
       const pathFinal = pathFull ?? this.getUrl(path, api)
       const url = `${pathFinal}${this.getBodyForGet(request, pathFinal, method)}`
 
-      return await (await fetch(url, {
+      data = await (await fetch(url, {
         ...init,
         method,
         headers: this.getHeaders(headers, type),
@@ -321,6 +326,8 @@ export class Api {
       console.error(e)
     }
 
-    return {} as T
+    Loading.hide()
+
+    return data
   }
 }

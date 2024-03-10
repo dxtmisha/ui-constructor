@@ -31,7 +31,7 @@ const onClick = () => router.push('/')
     <div class="pt-12">
       <router-view/>
     </div>
-    <div v-if="user" class="my-8">{{ user.id }} {{ user.name }}</div>
+    <div v-if="user" class="my-8">User: {{ user.id ?? '--' }}/ {{ user.name ?? '--' }}</div>
     <div
       v-if="!isMain"
       class="flex pt-16"
