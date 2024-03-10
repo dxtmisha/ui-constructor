@@ -23,7 +23,6 @@ const onClick = () => router.push('/')
 <template>
   <!-- Класс c2-system обязательно -->
   <div class="c2-system my-6">
-    <div v-if="user" class="my-8">{{ user.id }} {{ user.name }}</div>
     <div class="flex gap-4">
       <router-link class="c2-link" to="/about">{{ translate.TITLE_COMPANY }}</router-link>
       |
@@ -32,6 +31,7 @@ const onClick = () => router.push('/')
     <div class="pt-12">
       <router-view/>
     </div>
+    <div v-if="user" class="my-8">{{ user.id }} {{ user.name }}</div>
     <div
       v-if="!isMain"
       class="flex pt-16"

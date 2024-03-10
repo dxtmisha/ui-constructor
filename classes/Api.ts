@@ -239,11 +239,6 @@ export class Api {
     method: ApiMethod,
     request?: ApiFetch['request']
   ): ApiResponse | undefined {
-    console.log(
-      path,
-      method,
-      request
-    )
     return this.response.find(item => {
       if (
         item?.disable !== true &&
@@ -271,8 +266,6 @@ export class Api {
             true
           )
         }
-
-        console.log('response', response)
 
         if (response) {
           apiFirst.push(item)
@@ -306,7 +299,6 @@ export class Api {
     global = method === ApiMethodItem.get,
     init = {}
   }: ApiFetch): Promise<T> {
-    console.log('global', global)
     if (global) {
       const response = this.getResponse(path, method, request)
 
