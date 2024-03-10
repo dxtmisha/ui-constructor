@@ -1,1 +1,2 @@
-import '../dist/library/types'
+import '../dist/library/types.d.ts'
+import '../dist/library/types-component.d.ts'
