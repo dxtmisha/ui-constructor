@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useApiRef, useTranslateRef } from 'ui'
+import { Global, useApiRef, useTranslateRef } from 'ui'
 
 const route = useRoute()
 const router = useRouter()
+const itemGlobal = Global.get('item')
 
 // Получаем список текстов по их ключам
 const translate = useTranslateRef([
@@ -31,7 +32,8 @@ const onClick = () => router.push('/')
     <div class="pt-12">
       <router-view/>
     </div>
-    <div v-if="user" class="my-8">User: {{ user.id ?? '--' }}/ {{ user.name ?? '--' }}</div>
+    <div v-if="user" class="pt-6">User: {{ user.id ?? '--' }}/ {{ user.name ?? '--' }}</div>
+    <div class="pt-6">Global: {{ itemGlobal }}</div>
     <div
       v-if="!isMain"
       class="flex pt-16"
