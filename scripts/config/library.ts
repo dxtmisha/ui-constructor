@@ -22,6 +22,7 @@ export const LIBRARY_STYLE = 'style'
 export const LIBRARY_STYLE_BASIC = 'style-basic'
 export const LIBRARY_TYPES = 'types'
 export const LIBRARY_TYPES_COMPONENT = 'types-component'
+export const LIBRARY_TYPES_INDEX = 'types-index'
 
 export const LIBRARY_LIST_FILES = [
   LIBRARY_COMPONENTS,
@@ -39,6 +40,7 @@ export const LIBRARY_LIST_FILES = [
   `${LIBRARY_PLUGIN}-m3`,
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_MAIN,
+  LIBRARY_TYPES_INDEX,
   LIBRARY_NUXT,
   LIBRARY_NUXT_PLUGIN,
   `${LIBRARY_STYLE}.scss`,

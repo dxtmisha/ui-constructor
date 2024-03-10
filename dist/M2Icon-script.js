@@ -1,6 +1,6 @@
 import { defineComponent as y, computed as t, openBlock as u, createBlock as h, resolveDynamicComponent as g, unref as B } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
-import { p as T, d as f, I } from "./props-CWYsEy3m.js";
+import { p as T, d as f, I } from "./props-5ohlAg-W.js";
 import { M2Image as x } from "./M2Image.js";
 const e = {
   // :values [!] System label / Системная метка

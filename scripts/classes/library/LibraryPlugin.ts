@@ -1,6 +1,7 @@
 import { toCamelCase } from '../../../functions/toCamelCase'
 import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst'
 
+import { PropertiesFile } from '../properties/PropertiesFile'
 import { LibraryItems } from './LibraryItems'
 
 import {
@@ -13,7 +14,6 @@ import {
   LIBRARY_TRANSLATE,
   LIBRARY_TYPES
 } from '../../config/library'
-import { PropertiesFile } from '../properties/PropertiesFile'
 
 export class LibraryPlugin {
   /**

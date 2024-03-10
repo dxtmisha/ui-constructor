@@ -1,5 +1,5 @@
 import { computed as n } from "vue";
-import { r as c } from "./DesignConstructorAbstract-_dNu1bTO.js";
+import { r as c } from "./DesignConstructorAbstract-pm1V7i1G.js";
 const B = {
   label: [String, Number]
 }, m = function(e, a, u = "is-label") {

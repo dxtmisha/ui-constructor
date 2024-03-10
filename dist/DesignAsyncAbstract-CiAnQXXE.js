@@ -123,7 +123,7 @@ class o extends l {
   }
 }
 export {
-  o as D,
-  l as a,
+  l as D,
+  o as a,
   r as b
 };

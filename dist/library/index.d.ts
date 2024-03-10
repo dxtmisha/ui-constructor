@@ -1,4 +1,3 @@
-import './types.d.ts';
 import './types-component.d.ts';
 export * from './../functions/anyToString';
 export * from './../functions/arrFill';

@@ -1,6 +1,6 @@
 import { defineComponent as d, computed as s, openBlock as u, createBlock as y, resolveDynamicComponent as P, unref as B } from "vue";
 import { i as n } from "./inArray-BLmbg9f_.js";
-import { p as _, d as f, P as C } from "./props-CQP_SSzt.js";
+import { p as _, d as f, P as C } from "./props-CEe0AAEW.js";
 const t = {
   // :values [!] System label / Системная метка
   indeterminate: ["type1", "type2", "type3"],

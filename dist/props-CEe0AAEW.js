@@ -1,10 +1,10 @@
 var g = Object.defineProperty;
 var y = (l, s, e) => s in l ? g(l, s, { enumerable: !0, configurable: !0, writable: !0, value: e }) : l[s] = e;
 var a = (l, s, e) => (y(l, typeof s != "symbol" ? s + "" : s, e), e);
-import { watchEffect as f, computed as h, shallowRef as c, h as u } from "vue";
-import { D as S } from "./DesignConstructorAbstract-_dNu1bTO.js";
+import { watchEffect as f, computed as c, shallowRef as h, h as u } from "vue";
+import { c as S } from "./DesignConstructorAbstract-pm1V7i1G.js";
 import { t as o } from "./toNumber-CJS0fvr_.js";
-import { D as V } from "./DesignAsyncAbstract-D-BgPzA9.js";
+import { a as V } from "./DesignAsyncAbstract-CiAnQXXE.js";
 class x extends V {
   /**
    * Constructor
@@ -138,12 +138,12 @@ class C {
   // eslint-disable-next-line no-useless-constructor
   constructor(s) {
     a(this, "item");
-    a(this, "tag", h(() => this.item.getTag()));
-    a(this, "valueInPercent", h(() => this.item.getValueInPercent()));
-    a(this, "hide", c(!1));
-    a(this, "visible", c(!1));
-    a(this, "classes", c({}));
-    a(this, "styles", h(() => this.item.getStyles()));
+    a(this, "tag", c(() => this.item.getTag()));
+    a(this, "valueInPercent", c(() => this.item.getValueInPercent()));
+    a(this, "hide", h(!1));
+    a(this, "visible", h(!1));
+    a(this, "classes", h({}));
+    a(this, "styles", c(() => this.item.getStyles()));
     this.props = s, this.item = new x(
       s,
       (e) => {

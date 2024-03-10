@@ -1,4 +1,4 @@
-import { I as l } from "./Icons-juH-NCaa.js";
+import { I as l } from "./Icons-D8Q5lReU.js";
 const g = [
   "flag-ad",
   "flag-ae",
@@ -433,7 +433,7 @@ const g = [
 }, o = () => {
   [
     ...f
-  ].forEach((a) => l.addLoad(a)), import("./icons-ChPitvsw.js").then((a) => a.makeIconsC2());
+  ].forEach((a) => l.addLoad(a)), import("./icons-DgclIF9N.js").then((a) => a.makeIconsC2());
 }, t = () => {
   e(), o();
 };

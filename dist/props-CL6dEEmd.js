@@ -2,16 +2,16 @@ var S = Object.defineProperty;
 var z = (s, t, e) => t in s ? S(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
 var a = (s, t, e) => (z(s, typeof t != "symbol" ? t + "" : t, e), e);
 import { computed as l, shallowRef as d, watchEffect as f, onUnmounted as C, watch as x, h as m } from "vue";
-import { D as B } from "./DesignConstructorAbstract-_dNu1bTO.js";
-import { i as g } from "./Geo-D8QhPkzz.js";
-import { D as w } from "./DesignAsyncAbstract-D-BgPzA9.js";
-import { C as H } from "./GeoIntl-BF0u6I_7.js";
-import { I as y } from "./Icons-juH-NCaa.js";
-import { G as j } from "./GeoFlag-C8MjCwS5.js";
+import { c as B } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { i as g } from "./Geo-Ds-bIzF7.js";
+import { a as w } from "./DesignAsyncAbstract-CiAnQXXE.js";
+import { C as H } from "./GeoIntl-eFoGdHRE.js";
+import { I as y } from "./Icons-D8Q5lReU.js";
+import { G as j } from "./GeoFlag-BO2Qlw06.js";
 import { i as A, t as p } from "./toNumber-CJS0fvr_.js";
-import { g as W } from "./getElementId-zTS13VY3.js";
-import { E as F } from "./EventItem-CPq_Pubk.js";
-import { i as E } from "./isFilled-DceQGTNk.js";
+import { g as W } from "./getElementId-Bu6lAB3P.js";
+import { E as F } from "./EventItem-Du_c-sx-.js";
+import { i as E } from "./isFilled-Bci8oox8.js";
 const $ = 1280;
 class k {
   /**
@@ -336,7 +336,7 @@ class R {
     return this.coordinator.is() ? `${this.coordinator.getCoordinator()[0] + this.coordinator.get().height / 2}%` : ((e = (t = this.props) == null ? void 0 : t.y) == null ? void 0 : e.toString()) || "center";
   }
 }
-class D {
+class G {
   /**
    * Constructor
    * @param name group name /<br>название группы
@@ -495,7 +495,7 @@ class u {
    * @param name group name /<br>название группы
    */
   static init(t) {
-    const e = new D(t);
+    const e = new G(t);
     return this.items.push(e), e;
   }
 }
@@ -639,7 +639,7 @@ class h {
   }
 }
 a(h, "objects", []), a(h, "objectsAdaptive", []), a(h, "cache", []), a(h, "event"), a(h, "time");
-const G = "main", b = 512;
+const D = "main", b = 512;
 class N {
   /**
    * Constructor
@@ -695,7 +695,7 @@ class N {
    */
   getGroup() {
     var t;
-    return ((t = this.props) == null ? void 0 : t.adaptiveGroup) ?? G;
+    return ((t = this.props) == null ? void 0 : t.adaptiveGroup) ?? D;
   }
   /**
    * Returns the identifier of the element.<br>

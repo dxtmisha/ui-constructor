@@ -1,6 +1,6 @@
 import { h as l, defineComponent as m, computed as s, openBlock as d, createBlock as g, resolveDynamicComponent as S, unref as b } from "vue";
-import { D as f } from "./DesignConstructorAbstract-_dNu1bTO.js";
-import { b as h, c as x } from "./useEnabled-lA365zge.js";
+import { c as f } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { b as h, c as x } from "./useEnabled-Bzv4aPiz.js";
 class y extends f {
   /**
    * Constructor

@@ -9,7 +9,8 @@ import {
   LIBRARY_PLUGIN,
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_TYPES,
-  LIBRARY_TYPES_COMPONENT
+  LIBRARY_TYPES_COMPONENT,
+  LIBRARY_TYPES_INDEX
 } from '../../config/library'
 
 export class LibraryTypes {
@@ -47,6 +48,13 @@ export class LibraryTypes {
         ...this.initComponentsModule()
       ],
       'd.ts'
+    )
+
+    this.items.write(
+      LIBRARY_TYPES_INDEX,
+      [
+        `import './${LIBRARY_TYPES}.d.ts'`
+      ]
     )
 
     return this

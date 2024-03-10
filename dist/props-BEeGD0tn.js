@@ -3,8 +3,8 @@ var g = (i, t, e) => t in i ? b(i, t, { enumerable: !0, configurable: !0, writab
 var m = (i, t, e) => (g(i, typeof t != "symbol" ? t + "" : t, e), e);
 import { shallowRef as p, resolveComponent as I, computed as v, h as c, Teleport as C } from "vue";
 import { f as E, i as N } from "./toArray-J4lAhJG7.js";
-import { D as S } from "./DesignConstructorAbstract-_dNu1bTO.js";
-import { b as w, c as M, a as y } from "./MutationDataItem-ByUnk_Bo.js";
+import { c as S } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { d as M, M as w, c as y } from "./MutationDataItem-HHGNof-V.js";
 class G {
   /**
    * Constructor
@@ -20,7 +20,7 @@ class G {
     var n;
     this.props = t, t.item && (this.mainElement = t.item.getElement(), this.componentName = t.item.getComponentName(), t.item.registration(e, () => this.update()), this.initComponentItem().then((s) => {
       this.componentItem.value = s;
-    })), (n = t.item) == null || n.setStatus(w.end), this.update();
+    })), (n = t.item) == null || n.setStatus(M.end), this.update();
   }
   /**
    * Data update.<br>
@@ -37,7 +37,7 @@ class G {
    */
   getComponentGlobalItem() {
     var t;
-    return (t = M.getComponentGlobalItem(this.componentName)) == null ? void 0 : t.item;
+    return (t = w.getComponentGlobalItem(this.componentName)) == null ? void 0 : t.item;
   }
   /**
    * Initializes data for the component.<br>

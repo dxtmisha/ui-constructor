@@ -2,7 +2,7 @@ var h = Object.defineProperty;
 var d = (n, t, i) => t in n ? h(n, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : n[t] = i;
 var o = (n, t, i) => (d(n, typeof t != "symbol" ? t + "" : t, i), i);
 import { computed as c, h as l } from "vue";
-import { D as v } from "./DesignConstructorAbstract-_dNu1bTO.js";
+import { c as v } from "./DesignConstructorAbstract-pm1V7i1G.js";
 import { g as p } from "./getBind-CgHMfjrB.js";
 class u {
   /**

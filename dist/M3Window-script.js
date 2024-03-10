@@ -1,13 +1,13 @@
 var $ = Object.defineProperty;
 var O = (o, t, s) => t in o ? $(o, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : o[t] = s;
 var n = (o, t, s) => (O(o, typeof t != "symbol" ? t + "" : t, s), s);
-import { shallowRef as m, watchEffect as x, onUnmounted as T, nextTick as H, h as v, Teleport as E, defineComponent as A, computed as b, openBlock as W, createBlock as R, resolveDynamicComponent as I, unref as D } from "vue";
-import { i as S } from "./isFilled-DceQGTNk.js";
+import { shallowRef as m, watchEffect as x, onUnmounted as T, nextTick as H, h as v, Teleport as E, defineComponent as A, computed as b, openBlock as W, createBlock as R, resolveDynamicComponent as I, unref as F } from "vue";
+import { i as S } from "./isFilled-Bci8oox8.js";
 import { i as p } from "./inArray-BLmbg9f_.js";
-import { D as F } from "./DesignConstructorAbstract-_dNu1bTO.js";
-import { g as P } from "./getElementId-zTS13VY3.js";
-import { g as B } from "./getElement-BR44wGpt.js";
-import { E as M } from "./EventItem-CPq_Pubk.js";
+import { c as D } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { g as P } from "./getElementId-Bu6lAB3P.js";
+import { g as B } from "./getElement-uQ-JTFk-.js";
+import { E as M } from "./EventItem-Du_c-sx-.js";
 import { f as X, g as Y, a as N } from "./getMouseClientY-BILUOOAB.js";
 import { M3Scrollbar as q } from "./M3Scrollbar.js";
 var c = /* @__PURE__ */ ((o) => (o.display = "display", o.preparation = "preparation", o.flash = "flash", o.open = "open", o.hide = "hide", o.close = "close", o))(c || {}), y = /* @__PURE__ */ ((o) => (o.block = "block", o.close = "close", o.static = "static", o.controlStatic = "controlStatic", o))(y || {}), C = /* @__PURE__ */ ((o) => (o.top = "top", o.center = "center", o.bottom = "bottom", o))(C || {});
@@ -1473,7 +1473,7 @@ class nt {
     return this.classes.value = this.window.getClasses(), this.styles.value = this.window.getStyles(), this;
   }
 }
-class ot extends F {
+class ot extends D {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -1734,7 +1734,7 @@ const d = {
         styles: h
       }
     ), l = a.render();
-    return t(a.expose()), (u, g) => (W(), R(I(D(l))));
+    return t(a.expose()), (u, g) => (W(), R(I(F(l))));
   }
 }), Ct = at;
 export {

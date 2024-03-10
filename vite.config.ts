@@ -68,6 +68,7 @@ export default defineConfig(() => {
               'registration-m3',
               'registration-basic',
               'main',
+              'types-index',
               'nuxt',
               'nuxt-plugin'
             ]

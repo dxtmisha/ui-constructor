@@ -1,11 +1,11 @@
 var m = Object.defineProperty;
 var d = (e, t, s) => t in e ? m(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
 var r = (e, t, s) => (d(e, typeof t != "symbol" ? t + "" : t, s), s);
-import { ref as f, watchEffect as g, onMounted as v, nextTick as w, h as y, defineComponent as S, computed as n, openBlock as C, createBlock as x, resolveDynamicComponent as B, unref as D } from "vue";
-import { D as k } from "./DesignConstructorAbstract-_dNu1bTO.js";
-import { c } from "./createElement-CCZ8cpNV.js";
-import { D as E } from "./DataStorage-OPOHkMtN.js";
-import { E as _ } from "./EventItem-CPq_Pubk.js";
+import { ref as f, watchEffect as g, onMounted as v, nextTick as w, h as y, defineComponent as S, computed as n, openBlock as C, createBlock as x, resolveDynamicComponent as B, unref as k } from "vue";
+import { c as D } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { c } from "./createElement-Bvijtmfm.js";
+import { D as E } from "./DataStorage-Ddkxbzl_.js";
+import { E as _ } from "./EventItem-Du_c-sx-.js";
 class a {
   /**
    * Checks whether to enable scroll hiding.<br>
@@ -194,7 +194,7 @@ class M {
     return this.classes.value = await this.scrollbar.getClasses(), this;
   }
 }
-class R extends k {
+class R extends D {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -305,7 +305,7 @@ const F = {
         styles: p
       }
     ), b = l.render();
-    return t(l.expose()), (L, O) => (C(), x(B(D(b))));
+    return t(l.expose()), (L, O) => (C(), x(B(k(b))));
   }
 }), G = q;
 export {
