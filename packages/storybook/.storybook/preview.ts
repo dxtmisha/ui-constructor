@@ -4,7 +4,7 @@ import { decorators } from '../src/decorators'
 
 import { globalTypes } from '../src/config/globalTypes'
 
-import 'ui/dist/plugin.css'
+import 'ui/dist/registration.css'
 import './../src/style.scss'
 
 const preview: Preview = {
