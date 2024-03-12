@@ -11,16 +11,16 @@ import { c2ImageText } from 'ui/book/c2/image';
 <Subtitle children={c2ImageText.main.description.main}/>
 
 ```js
-import { c2Image } from 'ui/c2Image'
+import { C2Image } from 'ui/C2Image'
 ```
 
 <Canvas of={Image.Image}/>
 <Controls of={Image.Image}/>
-<p children={c2ImageText.main.description.use}/>
+Компонент представляет собой `span` с абсолютным позиционированием.
+Поэтому его нужно обернуть в элемент со стилем position, не равным static.
 
-## {c2ImageText.value.title.main}
-
-<p children={c2ImageText.value.description.main}/>
+## Value
+Компонент изображения может отображать встроенные иконки, картины, SVG-файлы и PDF.
 
 ```html
 <c2-image value="[string | File]"/>
@@ -28,9 +28,10 @@ import { c2Image } from 'ui/c2Image'
 
 <Canvas of={Image.Value}/>
 
-### {c2ImageText.value.title.icon}
-
-<p children={c2ImageText.value.description.icon}/>
+### Свои иконки
+Можно подключить дополнительные иконки через метод `Icons.add`.
+Подключенная иконка может быть любым изображением или SVG-файлом.
+При этом цвет изображения будет залит цветом шрифта.
 
 ```js
 // component.vue
@@ -47,15 +48,20 @@ Icons.add('name-icon', 'path')
 
 <Canvas of={Image.ValueIcon}/>
 
-### {c2ImageText.value.title.unloaded}
-
-<p children={c2ImageText.value.description.unloaded.main}/>
+### Загружаемые пользовательские изображения
+Компонент изображения может также принимать значения типа File, загружаемые изображения пользователя.
+Все загружаемые файлы с размером больше 1280 будут сжиматься до 1280 для увеличения производительности.
 <Canvas of={Image.ValueUnloaded}/>
-<p><b children={c2ImageText.value.description.unloaded.attention}></b></p>
+> **Внимание!** Браузер блокирует отображение файлов типа PDF. Поэтому, несмотря на то, что такие
+  файлы будут работать при локальном запуске проекта, они не будут отображаться на сайте.
 
-## {c2ImageText.coordinator.title}
-<p children={c2ImageText.coordinator.description.main}/>
-<p children={c2ImageText.coordinator.description.value}/>
+## Coordinator
+Обычно изображения центрируются, из-за чего иногда они обрезаются неудачно.
+Чтобы исправить это, можно использовать свойство coordinator для изменения центральной части изображения.
+Оно выводит изображения так, чтобы всегда была видна та часть изображения, которая была указана.
+
+Свойство `coordinator` принимает массив из 4 значений, указанных в процентах.
+Каждое значение отвечает за обрезку изображения `[сверху, справа, снизу, слева]`.
 
 ```html
 <c2-image
@@ -67,9 +73,14 @@ Icons.add('name-icon', 'path')
 
 <Canvas of={Image.Coordinator}/>
 
-## {c2ImageText.adaptive.title.main}
-<p children={c2ImageText.adaptive.description.main}/>
-<p children={c2ImageText.adaptive.description.value}/>
+## Adaptive
+Для изображения с продуктами можно выравнивать размеры элементов между собой,
+чтобы продукты на изображении были в одном масштабе.
+Для работы необходимо указать размер продукта, и у изображения не должно быть пустых отступов.
+Сам размер изображения может быть любым и не равен другим.
+
+Для активации адаптивности необходимо включить свойство `adaptive` и один из размеров (высота или ширина) `object-width`/ `object-height`.
+После этого все компоненты с включенным `adaptive` будут выравнивать размер изображения между собой.
 
 ```html
 <c2-image
@@ -82,7 +93,8 @@ Icons.add('name-icon', 'path')
 
 <Canvas of={Image.Adaptive}/>
 
-<p children={c2ImageText.adaptive.description.always}/>
+По умолчанию адаптив останавливается при выходе элемента за пределы экрана.
+Для постоянного отслеживания размера используется свойство `adaptive-always`.
 
 ```html
 <c2-image
@@ -92,10 +104,8 @@ Icons.add('name-icon', 'path')
 />
 ```
 
-<Canvas of={Image.AdaptiveAlways}/>
-
-### {c2ImageText.adaptive.title.group}
-<p children={c2ImageText.adaptive.description.group}/>
+### Разделение на группы
+Адаптация можно разделить на группы черед свойство `adaptive-group`.
 
 ```html
 <c2-image

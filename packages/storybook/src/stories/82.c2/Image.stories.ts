@@ -162,7 +162,7 @@ export const Coordinator: Story = {
           </div>
         </div>
         <div class="p-2 border">
-          <div class="pb-2 text-center">Coordinator</div>
+          <div class="pb-2 text-center">Coordinator: [5,5,5,50]</div>
           <div class="flex flex-wrap items-center justify-center gap-2">
             <div class="relative w-72 h-44">
               <C2Image :value="photo" :coordinator="[5,5,5,50]"/>
@@ -243,33 +243,6 @@ export const Adaptive: Story = {
               <C2Image :value="pad" adaptive object-width="254.3"/>
             </div>
           </div>
-        </div>
-      </div>
-    `
-  })
-}
-
-export const AdaptiveAlways: Story = {
-  name: 'Adaptive/ always',
-  render: () => ({
-    components: { C2Image },
-    setup () {
-      return {
-        galaxyS23p,
-        galaxyZFlip5,
-        galaxyZFold5
-      }
-    },
-    template: `
-      <div class="flex flex-wrap items-center justify-center gap-2">
-        <div class="relative w-48 h-48">
-          <C2Image :value="galaxyS23p" adaptive adaptive-always object-width="76.2"/>
-        </div>
-        <div class="relative w-48 h-48">
-          <C2Image :value="galaxyZFlip5" adaptive adaptive-always object-width="71.9"/>
-        </div>
-        <div class="relative w-48 h-48">
-          <C2Image :value="galaxyZFold5" adaptive adaptive-always object-width="129.9"/>
         </div>
       </div>
     `

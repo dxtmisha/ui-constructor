@@ -11,6 +11,7 @@ import {
 const meta = {
   title: 'M3/Button',
   component: M3Button,
+  tags: ['autodocs'],
   parameters: {
     design: 'm3',
     docs: {

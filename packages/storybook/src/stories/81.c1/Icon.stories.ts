@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { C1Icon } from 'ui/C1Icon'
 import {
   c1IconArgs,
-  c1IconDescription,
+  c1IconText,
   c1IconValues
 } from 'ui/book/c1/icon.ts'
 
@@ -14,9 +14,7 @@ const meta = {
   parameters: {
     design: 'c1',
     docs: {
-      description: {
-        component: c1IconDescription
-      }
+      description: { component: c1IconText.main.description.main }
     }
   },
   argTypes: c1IconArgs,

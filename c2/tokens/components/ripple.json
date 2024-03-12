@@ -1,4 +1,4 @@
 {
-  "background-color": "{st.content.fg.color.neutral.primary}",
+  "background-color": "{st.content.foreground.color.neutral.primary}",
   "background-opacity": "{ot.opacity.25}"
 }

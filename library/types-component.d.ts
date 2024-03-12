@@ -26,6 +26,10 @@ declare module 'ui/M3Button' {
   export { M3Button } from 'ui/m3/Button'
 }
 
+declare module 'ui/M3FieldMessage' {
+  export { M3FieldMessage } from 'ui/m3/FieldMessage'
+}
+
 declare module 'ui/M3Icon' {
   export { M3Icon } from 'ui/m3/Icon'
 }

@@ -144,3 +144,12 @@ export const iconValues: StorybookArgsValue = {
   icon: 'visibility',
   iconActive: 'visibility_off'
 }
+
+export const iconText = {
+  main: {
+    title: 'Icon',
+    description: {
+      main: 'Компонент для работы с иконками и аватарами.'
+    }
+  }
+}

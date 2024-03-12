@@ -44,6 +44,10 @@ export default defineNuxtModule({
       filePath: 'ui/dist/M3Button.vue'
     })
     await addComponent({
+      name: 'M3FieldMessage',
+      filePath: 'ui/dist/M3FieldMessage.vue'
+    })
+    await addComponent({
       name: 'M3Icon',
       filePath: 'ui/dist/M3Icon.vue'
     })

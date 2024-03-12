@@ -2,7 +2,7 @@
 
 @mixin mixinRippleToken {
   // :style [!] System label / Системная метка
-  --c2-ripple-backgroundColor: var(--c2-st-content-fg-color-neutral-primary);
+  --c2-ripple-backgroundColor: var(--c2-st-content-foreground-color-neutral-primary);
   --c2-ripple-backgroundOpacity: var(--c2-ot-opacity-25);
   // :style [!] System label / Системная метка
 }

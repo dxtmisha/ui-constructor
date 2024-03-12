@@ -40,7 +40,7 @@ class s {
     return t === "development";
   }
 }
-const y = "ui", d = "Ui", m = "library", f = [
+const h = "ui", y = "Ui", m = "library", f = [
   "m2",
   "m3",
   "c1",
@@ -81,6 +81,12 @@ const y = "ui", d = "Ui", m = "library", f = [
     design: "m3",
     code: "m3-button",
     path: "m3/Button"
+  },
+  {
+    name: "M3FieldMessage",
+    design: "m3",
+    code: "m3-field-message",
+    path: "m3/FieldMessage"
   },
   {
     name: "M3Icon",
@@ -2049,8 +2055,8 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-global-distance-space-inset-xs",
     "st-global-distance-space-inset-sm",
     "st-global-distance-space-inset-md",
-    "st-global-distance-space-inset-lg",
     "st-global-distance-space-inset-xl",
+    "st-global-distance-space-inset-lg",
     "st-global-distance-space-inset-2xl",
     "st-global-distance-space-inset-3xl",
     "st-global-distance-space-inset-4xl",
@@ -2059,7 +2065,6 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-global-distance-space-inset-7xl",
     "st-global-distance-space-inset-8xl",
     "st-global-distance-space-inset-9xl",
-    "st-global-distance-space-inset-10xl",
     "st-global-distance-space-inline-none",
     "st-global-distance-space-inline-x",
     "st-global-distance-space-inline-xs",
@@ -2108,27 +2113,27 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-elevation-onDark-focus-sm",
     "st-elevation-onDark-focus-xs",
     "st-elevation-onDark-focus-md",
-    "st-content-fg-color-neutral-primary",
-    "st-content-fg-color-neutral-secondary",
-    "st-content-fg-color-neutral-tetriary",
-    "st-content-fg-color-neutral-invert-primary",
-    "st-content-fg-color-neutral-invert-primary-opacity",
-    "st-content-fg-color-neutral-invert-secondary",
-    "st-content-fg-color-neutral-invert-secondary-opacity",
-    "st-content-fg-color-neutral-invert-tetriary",
-    "st-content-fg-color-neutral-invert-tetriary-opacity",
-    "st-content-fg-color-neutral-disable",
-    "st-content-fg-color-neutral-disable-opacity",
-    "st-content-fg-color-info-primary",
-    "st-content-fg-color-info-secondary",
-    "st-content-fg-color-positive-primary",
-    "st-content-fg-color-positive-secondary",
-    "st-content-fg-color-warning-primary",
-    "st-content-fg-color-warning-secondary",
-    "st-content-fg-color-negative-primary",
-    "st-content-fg-color-negative-secondary",
-    "st-content-fg-color-primary-primary",
-    "st-content-fg-color-primary-secondary",
+    "st-content-foreground-color-neutral-primary",
+    "st-content-foreground-color-neutral-secondary",
+    "st-content-foreground-color-neutral-tetriary",
+    "st-content-foreground-color-neutral-invert-primary",
+    "st-content-foreground-color-neutral-invert-primary-opacity",
+    "st-content-foreground-color-neutral-invert-secondary",
+    "st-content-foreground-color-neutral-invert-secondary-opacity",
+    "st-content-foreground-color-neutral-invert-tetriary",
+    "st-content-foreground-color-neutral-invert-tetriary-opacity",
+    "st-content-foreground-color-neutral-disable",
+    "st-content-foreground-color-neutral-disable-opacity",
+    "st-content-foreground-color-info-primary",
+    "st-content-foreground-color-info-secondary",
+    "st-content-foreground-color-positive-primary",
+    "st-content-foreground-color-positive-secondary",
+    "st-content-foreground-color-warning-primary",
+    "st-content-foreground-color-warning-secondary",
+    "st-content-foreground-color-negative-primary",
+    "st-content-foreground-color-negative-secondary",
+    "st-content-foreground-color-primary-primary",
+    "st-content-foreground-color-primary-secondary",
     "st-content-border-color-default-normal",
     "st-content-border-color-default-invert",
     "st-content-border-color-default-invert-opacity",
@@ -2150,170 +2155,170 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-content-border-color-negative-explicit",
     "st-content-border-color-negative-implicit",
     "st-content-border-color-negative-onsubtle",
-    "st-content-bg-color-default-solid-normal",
-    "st-content-bg-color-default-solid-invert",
-    "st-content-bg-color-default-subtle-normal",
-    "st-content-bg-color-default-subtle-normal-opacity",
-    "st-content-bg-color-default-subtle-invert",
-    "st-content-bg-color-default-subtle-invert-opacity",
-    "st-content-bg-color-neutral-explicit",
-    "st-content-bg-color-neutral-mute",
-    "st-content-bg-color-neutral-mute-opacity",
-    "st-content-bg-color-neutral-onsubtle",
-    "st-content-bg-color-neutral-onsubtle-opacity",
-    "st-content-bg-color-neutral-subtle",
-    "st-content-bg-color-neutral-subtle-opacity",
-    "st-content-bg-color-neutral-surface",
-    "st-content-bg-color-neutral-surface-opacity",
-    "st-content-bg-color-neutral-disable",
-    "st-content-bg-color-neutral-disable-opacity",
-    "st-content-bg-color-info-explicit",
-    "st-content-bg-color-info-mute",
-    "st-content-bg-color-info-onsubtle",
-    "st-content-bg-color-info-subtle",
-    "st-content-bg-color-info-surface",
-    "st-content-bg-color-positive-explicit",
-    "st-content-bg-color-positive-mute",
-    "st-content-bg-color-positive-onsubtle",
-    "st-content-bg-color-positive-subtle",
-    "st-content-bg-color-positive-surface",
-    "st-content-bg-color-negative-explicit",
-    "st-content-bg-color-negative-mute",
-    "st-content-bg-color-negative-onsubtle",
-    "st-content-bg-color-negative-subtle",
-    "st-content-bg-color-negative-surface",
-    "st-content-bg-color-warning-explicit",
-    "st-content-bg-color-warning-mute",
-    "st-content-bg-color-warning-onsubtle",
-    "st-content-bg-color-warning-subtle",
-    "st-content-bg-color-warning-surface",
-    "st-action-bg-color-primary-solid-normal",
-    "st-action-bg-color-primary-solid-hover",
-    "st-action-bg-color-primary-solid-active",
-    "st-action-bg-color-primary-solid-select",
-    "st-action-bg-color-primary-subtle-normal",
-    "st-action-bg-color-primary-subtle-normal-opacity",
-    "st-action-bg-color-primary-subtle-hover",
-    "st-action-bg-color-primary-subtle-hover-opacity",
-    "st-action-bg-color-primary-subtle-active",
-    "st-action-bg-color-primary-subtle-active-opacity",
-    "st-action-bg-color-primary-subtle-select",
-    "st-action-bg-color-primary-subtle-select-opacity",
-    "st-action-bg-color-neutral-solid-normal",
-    "st-action-bg-color-neutral-solid-normal-opacity",
-    "st-action-bg-color-neutral-solid-hover",
-    "st-action-bg-color-neutral-solid-hover-opacity",
-    "st-action-bg-color-neutral-solid-active",
-    "st-action-bg-color-neutral-solid-active-opacity",
-    "st-action-bg-color-neutral-solid-select",
-    "st-action-bg-color-neutral-solid-select-opacity",
-    "st-action-bg-color-neutral-invert-normal",
-    "st-action-bg-color-neutral-invert-hover",
-    "st-action-bg-color-neutral-invert-hover-opacity",
-    "st-action-bg-color-neutral-invert-active",
-    "st-action-bg-color-neutral-invert-active-opacity",
-    "st-action-bg-color-neutral-invert-select",
-    "st-action-bg-color-neutral-invert-select-opacity",
-    "st-action-bg-color-neutral-subtle-normal",
-    "st-action-bg-color-neutral-subtle-normal-opacity",
-    "st-action-bg-color-neutral-subtle-hover",
-    "st-action-bg-color-neutral-subtle-hover-opacity",
-    "st-action-bg-color-neutral-subtle-active",
-    "st-action-bg-color-neutral-subtle-active-opacity",
-    "st-action-bg-color-neutral-subtle-select",
-    "st-action-bg-color-neutral-subtle-select-opacity",
-    "st-action-bg-color-neutral-ghost-normal",
-    "st-action-bg-color-neutral-ghost-normal-opacity",
-    "st-action-bg-color-neutral-ghost-hover",
-    "st-action-bg-color-neutral-ghost-hover-opacity",
-    "st-action-bg-color-neutral-ghost-active",
-    "st-action-bg-color-neutral-ghost-active-opacity",
-    "st-action-bg-color-neutral-ghost-select",
-    "st-action-bg-color-neutral-ghost-select-opacity",
-    "st-action-bg-color-neutral-ghost-focus",
-    "st-action-bg-color-neutral-ghost-focus-opacity",
-    "st-action-bg-color-neutral-ghost-invert-hover",
-    "st-action-bg-color-neutral-ghost-invert-hover-opacity",
-    "st-action-bg-color-neutral-ghost-invert-active",
-    "st-action-bg-color-neutral-ghost-invert-active-opacity",
-    "st-action-bg-color-neutral-ghost-invert-select",
-    "st-action-bg-color-neutral-ghost-invert-select-opacity",
-    "st-action-bg-color-neutral-ghost-invert-focus",
-    "st-action-bg-color-neutral-ghost-invert-focus-opacity",
-    "st-action-bg-color-positive-normal",
-    "st-action-bg-color-positive-hover",
-    "st-action-bg-color-positive-active",
-    "st-action-bg-color-positive-select",
-    "st-action-bg-color-positive-subtle-normal",
-    "st-action-bg-color-positive-subtle-normal-opacity",
-    "st-action-bg-color-positive-subtle-hover",
-    "st-action-bg-color-positive-subtle-hover-opacity",
-    "st-action-bg-color-positive-subtle-active",
-    "st-action-bg-color-positive-subtle-active-opacity",
-    "st-action-bg-color-positive-subtle-select",
-    "st-action-bg-color-positive-subtle-select-opacity",
-    "st-action-bg-color-negative-normal",
-    "st-action-bg-color-negative-hover",
-    "st-action-bg-color-negative-active",
-    "st-action-bg-color-negative-select",
-    "st-action-bg-color-negative-subtle-normal",
-    "st-action-bg-color-negative-subtle-normal-opacity",
-    "st-action-bg-color-negative-subtle-hover",
-    "st-action-bg-color-negative-subtle-hover-opacity",
-    "st-action-bg-color-negative-subtle-active",
-    "st-action-bg-color-negative-subtle-active-opacity",
-    "st-action-bg-color-negative-subtle-select",
-    "st-action-bg-color-negative-subtle-select-opacity",
-    "st-action-bg-color-informative-normal",
-    "st-action-bg-color-informative-hover",
-    "st-action-bg-color-informative-active",
-    "st-action-bg-color-informative-select",
-    "st-action-bg-color-informative-subtle-normal",
-    "st-action-bg-color-informative-subtle-normal-opacity",
-    "st-action-bg-color-informative-subtle-hover",
-    "st-action-bg-color-informative-subtle-hover-opacity",
-    "st-action-bg-color-informative-subtle-active",
-    "st-action-bg-color-informative-subtle-active-opacity",
-    "st-action-bg-color-informative-subtle-select",
-    "st-action-bg-color-informative-subtle-select-opacity",
-    "st-action-fg-color-neutral-normal",
-    "st-action-fg-color-neutral-normal-opacity",
-    "st-action-fg-color-neutral-hover",
-    "st-action-fg-color-neutral-hover-opacity",
-    "st-action-fg-color-neutral-active",
-    "st-action-fg-color-neutral-active-opacity",
-    "st-action-fg-color-neutral-select",
-    "st-action-fg-color-neutral-select-opacity",
-    "st-action-fg-color-invert-normal",
-    "st-action-fg-color-invert-hover",
-    "st-action-fg-color-invert-hover-opacity",
-    "st-action-fg-color-invert-active",
-    "st-action-fg-color-invert-active-opacity",
-    "st-action-fg-color-invert-select",
-    "st-action-fg-color-invert-select-opacity",
-    "st-action-fg-color-primary-normal",
-    "st-action-fg-color-primary-hover",
-    "st-action-fg-color-primary-active",
-    "st-action-fg-color-primary-select",
-    "st-action-fg-color-onprimary-normal",
-    "st-action-fg-color-onprimary-normal-opacity",
-    "st-action-fg-color-onprimary-hover",
-    "st-action-fg-color-onprimary-hover-opacity",
-    "st-action-fg-color-onprimary-active",
-    "st-action-fg-color-onprimary-select",
-    "st-action-fg-color-onprimary-select-opacity",
-    "st-action-fg-color-positive-normal",
-    "st-action-fg-color-positive-hover",
-    "st-action-fg-color-positive-active",
-    "st-action-fg-color-positive-select",
-    "st-action-fg-color-negative-normal",
-    "st-action-fg-color-negative-hover",
-    "st-action-fg-color-negative-active",
-    "st-action-fg-color-negative-select",
-    "st-action-fg-color-informative-normal",
-    "st-action-fg-color-informative-hover",
-    "st-action-fg-color-informative-active",
-    "st-action-fg-color-informative-select",
+    "st-content-background-color-default-solid-normal",
+    "st-content-background-color-default-solid-invert",
+    "st-content-background-color-default-subtle-normal",
+    "st-content-background-color-default-subtle-normal-opacity",
+    "st-content-background-color-default-subtle-invert",
+    "st-content-background-color-default-subtle-invert-opacity",
+    "st-content-background-color-neutral-explicit",
+    "st-content-background-color-neutral-mute",
+    "st-content-background-color-neutral-mute-opacity",
+    "st-content-background-color-neutral-onsubtle",
+    "st-content-background-color-neutral-onsubtle-opacity",
+    "st-content-background-color-neutral-subtle",
+    "st-content-background-color-neutral-subtle-opacity",
+    "st-content-background-color-neutral-surface",
+    "st-content-background-color-neutral-surface-opacity",
+    "st-content-background-color-neutral-disable",
+    "st-content-background-color-neutral-disable-opacity",
+    "st-content-background-color-info-explicit",
+    "st-content-background-color-info-mute",
+    "st-content-background-color-info-onsubtle",
+    "st-content-background-color-info-subtle",
+    "st-content-background-color-info-surface",
+    "st-content-background-color-positive-explicit",
+    "st-content-background-color-positive-mute",
+    "st-content-background-color-positive-onsubtle",
+    "st-content-background-color-positive-subtle",
+    "st-content-background-color-positive-surface",
+    "st-content-background-color-negative-explicit",
+    "st-content-background-color-negative-mute",
+    "st-content-background-color-negative-onsubtle",
+    "st-content-background-color-negative-subtle",
+    "st-content-background-color-negative-surface",
+    "st-content-background-color-warning-explicit",
+    "st-content-background-color-warning-mute",
+    "st-content-background-color-warning-onsubtle",
+    "st-content-background-color-warning-subtle",
+    "st-content-background-color-warning-surface",
+    "st-action-background-color-primary-solid-normal",
+    "st-action-background-color-primary-solid-hover",
+    "st-action-background-color-primary-solid-active",
+    "st-action-background-color-primary-solid-select",
+    "st-action-background-color-primary-subtle-normal",
+    "st-action-background-color-primary-subtle-normal-opacity",
+    "st-action-background-color-primary-subtle-hover",
+    "st-action-background-color-primary-subtle-hover-opacity",
+    "st-action-background-color-primary-subtle-active",
+    "st-action-background-color-primary-subtle-active-opacity",
+    "st-action-background-color-primary-subtle-select",
+    "st-action-background-color-primary-subtle-select-opacity",
+    "st-action-background-color-neutral-solid-normal",
+    "st-action-background-color-neutral-solid-normal-opacity",
+    "st-action-background-color-neutral-solid-hover",
+    "st-action-background-color-neutral-solid-hover-opacity",
+    "st-action-background-color-neutral-solid-active",
+    "st-action-background-color-neutral-solid-active-opacity",
+    "st-action-background-color-neutral-solid-select",
+    "st-action-background-color-neutral-solid-select-opacity",
+    "st-action-background-color-neutral-invert-normal",
+    "st-action-background-color-neutral-invert-hover",
+    "st-action-background-color-neutral-invert-hover-opacity",
+    "st-action-background-color-neutral-invert-active",
+    "st-action-background-color-neutral-invert-active-opacity",
+    "st-action-background-color-neutral-invert-select",
+    "st-action-background-color-neutral-invert-select-opacity",
+    "st-action-background-color-neutral-subtle-normal",
+    "st-action-background-color-neutral-subtle-normal-opacity",
+    "st-action-background-color-neutral-subtle-hover",
+    "st-action-background-color-neutral-subtle-hover-opacity",
+    "st-action-background-color-neutral-subtle-active",
+    "st-action-background-color-neutral-subtle-active-opacity",
+    "st-action-background-color-neutral-subtle-select",
+    "st-action-background-color-neutral-subtle-select-opacity",
+    "st-action-background-color-neutral-ghost-normal",
+    "st-action-background-color-neutral-ghost-normal-opacity",
+    "st-action-background-color-neutral-ghost-hover",
+    "st-action-background-color-neutral-ghost-hover-opacity",
+    "st-action-background-color-neutral-ghost-active",
+    "st-action-background-color-neutral-ghost-active-opacity",
+    "st-action-background-color-neutral-ghost-select",
+    "st-action-background-color-neutral-ghost-select-opacity",
+    "st-action-background-color-neutral-ghost-focus",
+    "st-action-background-color-neutral-ghost-focus-opacity",
+    "st-action-background-color-neutral-ghost-invert-hover",
+    "st-action-background-color-neutral-ghost-invert-hover-opacity",
+    "st-action-background-color-neutral-ghost-invert-active",
+    "st-action-background-color-neutral-ghost-invert-active-opacity",
+    "st-action-background-color-neutral-ghost-invert-select",
+    "st-action-background-color-neutral-ghost-invert-select-opacity",
+    "st-action-background-color-neutral-ghost-invert-focus",
+    "st-action-background-color-neutral-ghost-invert-focus-opacity",
+    "st-action-background-color-positive-normal",
+    "st-action-background-color-positive-hover",
+    "st-action-background-color-positive-active",
+    "st-action-background-color-positive-select",
+    "st-action-background-color-positive-subtle-normal",
+    "st-action-background-color-positive-subtle-normal-opacity",
+    "st-action-background-color-positive-subtle-hover",
+    "st-action-background-color-positive-subtle-hover-opacity",
+    "st-action-background-color-positive-subtle-active",
+    "st-action-background-color-positive-subtle-active-opacity",
+    "st-action-background-color-positive-subtle-select",
+    "st-action-background-color-positive-subtle-select-opacity",
+    "st-action-background-color-negative-normal",
+    "st-action-background-color-negative-hover",
+    "st-action-background-color-negative-active",
+    "st-action-background-color-negative-select",
+    "st-action-background-color-negative-subtle-normal",
+    "st-action-background-color-negative-subtle-normal-opacity",
+    "st-action-background-color-negative-subtle-hover",
+    "st-action-background-color-negative-subtle-hover-opacity",
+    "st-action-background-color-negative-subtle-active",
+    "st-action-background-color-negative-subtle-active-opacity",
+    "st-action-background-color-negative-subtle-select",
+    "st-action-background-color-negative-subtle-select-opacity",
+    "st-action-background-color-informative-normal",
+    "st-action-background-color-informative-hover",
+    "st-action-background-color-informative-active",
+    "st-action-background-color-informative-select",
+    "st-action-background-color-informative-subtle-normal",
+    "st-action-background-color-informative-subtle-normal-opacity",
+    "st-action-background-color-informative-subtle-hover",
+    "st-action-background-color-informative-subtle-hover-opacity",
+    "st-action-background-color-informative-subtle-active",
+    "st-action-background-color-informative-subtle-active-opacity",
+    "st-action-background-color-informative-subtle-select",
+    "st-action-background-color-informative-subtle-select-opacity",
+    "st-action-foreground-color-neutral-normal",
+    "st-action-foreground-color-neutral-normal-opacity",
+    "st-action-foreground-color-neutral-hover",
+    "st-action-foreground-color-neutral-hover-opacity",
+    "st-action-foreground-color-neutral-active",
+    "st-action-foreground-color-neutral-active-opacity",
+    "st-action-foreground-color-neutral-select",
+    "st-action-foreground-color-neutral-select-opacity",
+    "st-action-foreground-color-invert-normal",
+    "st-action-foreground-color-invert-hover",
+    "st-action-foreground-color-invert-hover-opacity",
+    "st-action-foreground-color-invert-active",
+    "st-action-foreground-color-invert-active-opacity",
+    "st-action-foreground-color-invert-select",
+    "st-action-foreground-color-invert-select-opacity",
+    "st-action-foreground-color-primary-normal",
+    "st-action-foreground-color-primary-hover",
+    "st-action-foreground-color-primary-active",
+    "st-action-foreground-color-primary-select",
+    "st-action-foreground-color-onprimary-normal",
+    "st-action-foreground-color-onprimary-normal-opacity",
+    "st-action-foreground-color-onprimary-hover",
+    "st-action-foreground-color-onprimary-hover-opacity",
+    "st-action-foreground-color-onprimary-active",
+    "st-action-foreground-color-onprimary-select",
+    "st-action-foreground-color-onprimary-select-opacity",
+    "st-action-foreground-color-positive-normal",
+    "st-action-foreground-color-positive-hover",
+    "st-action-foreground-color-positive-active",
+    "st-action-foreground-color-positive-select",
+    "st-action-foreground-color-negative-normal",
+    "st-action-foreground-color-negative-hover",
+    "st-action-foreground-color-negative-active",
+    "st-action-foreground-color-negative-select",
+    "st-action-foreground-color-informative-normal",
+    "st-action-foreground-color-informative-hover",
+    "st-action-foreground-color-informative-active",
+    "st-action-foreground-color-informative-select",
     "st-action-border-color-neutral-solid-normal",
     "st-action-border-color-neutral-solid-hover",
     "st-action-border-color-neutral-solid-active",
@@ -2326,32 +2331,32 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-action-border-color-neutral-subtle-active-opacity",
     "st-action-border-color-neutral-subtle-select",
     "st-action-border-color-neutral-subtle-select-opacity",
-    "st-interaction-bg-color-ghost-normal",
-    "st-interaction-bg-color-ghost-normal-opacity",
-    "st-interaction-bg-color-ghost-hover",
-    "st-interaction-bg-color-ghost-hover-opacity",
-    "st-interaction-bg-color-ghost-focus",
-    "st-interaction-bg-color-ghost-focus-opacity",
+    "st-interaction-background-color-ghost-normal",
+    "st-interaction-background-color-ghost-normal-opacity",
+    "st-interaction-background-color-ghost-hover",
+    "st-interaction-background-color-ghost-hover-opacity",
+    "st-interaction-background-color-ghost-focus",
+    "st-interaction-background-color-ghost-focus-opacity",
     "st-interaction-border-color-neutral-normal",
     "st-interaction-border-color-neutral-hover",
     "st-interaction-border-color-neutral-select",
     "st-interaction-border-color-negative-normal",
-    "st-asemantic-fg-color-pistachio-primary",
-    "st-asemantic-fg-color-pistachio-secondary",
-    "st-asemantic-fg-color-mint-primary",
-    "st-asemantic-fg-color-mint-secondary",
-    "st-asemantic-fg-color-jade-primary",
-    "st-asemantic-fg-color-jade-secondary",
-    "st-asemantic-fg-color-teal-primary",
-    "st-asemantic-fg-color-teal-secondary",
-    "st-asemantic-fg-color-celestial-primary",
-    "st-asemantic-fg-color-celestial-secondary",
-    "st-asemantic-fg-color-indigo-primary",
-    "st-asemantic-fg-color-indigo-secondary",
-    "st-asemantic-fg-color-orchid-primary",
-    "st-asemantic-fg-color-orchid-secondary",
-    "st-asemantic-fg-color-cerise-primary",
-    "st-asemantic-fg-color-cerise-secondary",
+    "st-asemantic-foreground-color-pistachio-primary",
+    "st-asemantic-foreground-color-pistachio-secondary",
+    "st-asemantic-foreground-color-mint-primary",
+    "st-asemantic-foreground-color-mint-secondary",
+    "st-asemantic-foreground-color-jade-primary",
+    "st-asemantic-foreground-color-jade-secondary",
+    "st-asemantic-foreground-color-teal-primary",
+    "st-asemantic-foreground-color-teal-secondary",
+    "st-asemantic-foreground-color-celestial-primary",
+    "st-asemantic-foreground-color-celestial-secondary",
+    "st-asemantic-foreground-color-indigo-primary",
+    "st-asemantic-foreground-color-indigo-secondary",
+    "st-asemantic-foreground-color-orchid-primary",
+    "st-asemantic-foreground-color-orchid-secondary",
+    "st-asemantic-foreground-color-cerise-primary",
+    "st-asemantic-foreground-color-cerise-secondary",
     "st-asemantic-border-color-pistachio-explicit",
     "st-asemantic-border-color-pistachio-implicit",
     "st-asemantic-border-color-pistachio-onsubtle",
@@ -2376,78 +2381,78 @@ const y = "ui", d = "Ui", m = "library", f = [
     "st-asemantic-border-color-cerise-explicit",
     "st-asemantic-border-color-cerise-implicit",
     "st-asemantic-border-color-cerise-onsubtle",
-    "st-asemantic-bg-color-pistachio-explicit",
-    "st-asemantic-bg-color-pistachio-mute",
-    "st-asemantic-bg-color-pistachio-mute-opacity",
-    "st-asemantic-bg-color-pistachio-onsubtle",
-    "st-asemantic-bg-color-pistachio-onsubtle-opacity",
-    "st-asemantic-bg-color-pistachio-subtile",
-    "st-asemantic-bg-color-pistachio-subtile-opacity",
-    "st-asemantic-bg-color-pistachio-surface",
-    "st-asemantic-bg-color-pistachio-surface-opacity",
-    "st-asemantic-bg-color-mint-explicit",
-    "st-asemantic-bg-color-mint-mute",
-    "st-asemantic-bg-color-mint-mute-opacity",
-    "st-asemantic-bg-color-mint-onsubtle",
-    "st-asemantic-bg-color-mint-onsubtle-opacity",
-    "st-asemantic-bg-color-mint-subtile",
-    "st-asemantic-bg-color-mint-subtile-opacity",
-    "st-asemantic-bg-color-mint-surface",
-    "st-asemantic-bg-color-mint-surface-opacity",
-    "st-asemantic-bg-color-jade-explicit",
-    "st-asemantic-bg-color-jade-mute",
-    "st-asemantic-bg-color-jade-mute-opacity",
-    "st-asemantic-bg-color-jade-onsubtle",
-    "st-asemantic-bg-color-jade-onsubtle-opacity",
-    "st-asemantic-bg-color-jade-subtile",
-    "st-asemantic-bg-color-jade-subtile-opacity",
-    "st-asemantic-bg-color-jade-surface",
-    "st-asemantic-bg-color-jade-surface-opacity",
-    "st-asemantic-bg-color-teal-explicit",
-    "st-asemantic-bg-color-teal-mute",
-    "st-asemantic-bg-color-teal-mute-opacity",
-    "st-asemantic-bg-color-teal-onsubtle",
-    "st-asemantic-bg-color-teal-onsubtle-opacity",
-    "st-asemantic-bg-color-teal-subtile",
-    "st-asemantic-bg-color-teal-subtile-opacity",
-    "st-asemantic-bg-color-teal-surface",
-    "st-asemantic-bg-color-teal-surface-opacity",
-    "st-asemantic-bg-color-celestial-explicit",
-    "st-asemantic-bg-color-celestial-mute",
-    "st-asemantic-bg-color-celestial-mute-opacity",
-    "st-asemantic-bg-color-celestial-onsubtle",
-    "st-asemantic-bg-color-celestial-onsubtle-opacity",
-    "st-asemantic-bg-color-celestial-subtile",
-    "st-asemantic-bg-color-celestial-subtile-opacity",
-    "st-asemantic-bg-color-celestial-surface",
-    "st-asemantic-bg-color-celestial-surface-opacity",
-    "st-asemantic-bg-color-indigo-explicit",
-    "st-asemantic-bg-color-indigo-mute",
-    "st-asemantic-bg-color-indigo-mute-opacity",
-    "st-asemantic-bg-color-indigo-onsubtle",
-    "st-asemantic-bg-color-indigo-onsubtle-opacity",
-    "st-asemantic-bg-color-indigo-subtile",
-    "st-asemantic-bg-color-indigo-subtile-opacity",
-    "st-asemantic-bg-color-indigo-surface",
-    "st-asemantic-bg-color-indigo-surface-opacity",
-    "st-asemantic-bg-color-orchid-explicit",
-    "st-asemantic-bg-color-orchid-mute",
-    "st-asemantic-bg-color-orchid-mute-opacity",
-    "st-asemantic-bg-color-orchid-onsubtle",
-    "st-asemantic-bg-color-orchid-onsubtle-opacity",
-    "st-asemantic-bg-color-orchid-subtile",
-    "st-asemantic-bg-color-orchid-subtile-opacity",
-    "st-asemantic-bg-color-orchid-surface",
-    "st-asemantic-bg-color-orchid-surface-opacity",
-    "st-asemantic-bg-color-cerise-explicit",
-    "st-asemantic-bg-color-cerise-mute",
-    "st-asemantic-bg-color-cerise-mute-opacity",
-    "st-asemantic-bg-color-cerise-onsubtle",
-    "st-asemantic-bg-color-cerise-onsubtle-opacity",
-    "st-asemantic-bg-color-cerise-subtile",
-    "st-asemantic-bg-color-cerise-subtile-opacity",
-    "st-asemantic-bg-color-cerise-surface",
-    "st-asemantic-bg-color-cerise-surface-opacity",
+    "st-asemantic-background-color-pistachio-explicit",
+    "st-asemantic-background-color-pistachio-mute",
+    "st-asemantic-background-color-pistachio-mute-opacity",
+    "st-asemantic-background-color-pistachio-onsubtle",
+    "st-asemantic-background-color-pistachio-onsubtle-opacity",
+    "st-asemantic-background-color-pistachio-subtile",
+    "st-asemantic-background-color-pistachio-subtile-opacity",
+    "st-asemantic-background-color-pistachio-surface",
+    "st-asemantic-background-color-pistachio-surface-opacity",
+    "st-asemantic-background-color-mint-explicit",
+    "st-asemantic-background-color-mint-mute",
+    "st-asemantic-background-color-mint-mute-opacity",
+    "st-asemantic-background-color-mint-onsubtle",
+    "st-asemantic-background-color-mint-onsubtle-opacity",
+    "st-asemantic-background-color-mint-subtile",
+    "st-asemantic-background-color-mint-subtile-opacity",
+    "st-asemantic-background-color-mint-surface",
+    "st-asemantic-background-color-mint-surface-opacity",
+    "st-asemantic-background-color-jade-explicit",
+    "st-asemantic-background-color-jade-mute",
+    "st-asemantic-background-color-jade-mute-opacity",
+    "st-asemantic-background-color-jade-onsubtle",
+    "st-asemantic-background-color-jade-onsubtle-opacity",
+    "st-asemantic-background-color-jade-subtile",
+    "st-asemantic-background-color-jade-subtile-opacity",
+    "st-asemantic-background-color-jade-surface",
+    "st-asemantic-background-color-jade-surface-opacity",
+    "st-asemantic-background-color-teal-explicit",
+    "st-asemantic-background-color-teal-mute",
+    "st-asemantic-background-color-teal-mute-opacity",
+    "st-asemantic-background-color-teal-onsubtle",
+    "st-asemantic-background-color-teal-onsubtle-opacity",
+    "st-asemantic-background-color-teal-subtile",
+    "st-asemantic-background-color-teal-subtile-opacity",
+    "st-asemantic-background-color-teal-surface",
+    "st-asemantic-background-color-teal-surface-opacity",
+    "st-asemantic-background-color-celestial-explicit",
+    "st-asemantic-background-color-celestial-mute",
+    "st-asemantic-background-color-celestial-mute-opacity",
+    "st-asemantic-background-color-celestial-onsubtle",
+    "st-asemantic-background-color-celestial-onsubtle-opacity",
+    "st-asemantic-background-color-celestial-subtile",
+    "st-asemantic-background-color-celestial-subtile-opacity",
+    "st-asemantic-background-color-celestial-surface",
+    "st-asemantic-background-color-celestial-surface-opacity",
+    "st-asemantic-background-color-indigo-explicit",
+    "st-asemantic-background-color-indigo-mute",
+    "st-asemantic-background-color-indigo-mute-opacity",
+    "st-asemantic-background-color-indigo-onsubtle",
+    "st-asemantic-background-color-indigo-onsubtle-opacity",
+    "st-asemantic-background-color-indigo-subtile",
+    "st-asemantic-background-color-indigo-subtile-opacity",
+    "st-asemantic-background-color-indigo-surface",
+    "st-asemantic-background-color-indigo-surface-opacity",
+    "st-asemantic-background-color-orchid-explicit",
+    "st-asemantic-background-color-orchid-mute",
+    "st-asemantic-background-color-orchid-mute-opacity",
+    "st-asemantic-background-color-orchid-onsubtle",
+    "st-asemantic-background-color-orchid-onsubtle-opacity",
+    "st-asemantic-background-color-orchid-subtile",
+    "st-asemantic-background-color-orchid-subtile-opacity",
+    "st-asemantic-background-color-orchid-surface",
+    "st-asemantic-background-color-orchid-surface-opacity",
+    "st-asemantic-background-color-cerise-explicit",
+    "st-asemantic-background-color-cerise-mute",
+    "st-asemantic-background-color-cerise-mute-opacity",
+    "st-asemantic-background-color-cerise-onsubtle",
+    "st-asemantic-background-color-cerise-onsubtle-opacity",
+    "st-asemantic-background-color-cerise-subtile",
+    "st-asemantic-background-color-cerise-subtile-opacity",
+    "st-asemantic-background-color-cerise-surface",
+    "st-asemantic-background-color-cerise-surface-opacity",
     "base-size-icons-lg"
   ]
 }, x = {
@@ -2510,9 +2515,9 @@ const y = "ui", d = "Ui", m = "library", f = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, l = {
-  name: y,
-  nameFirst: d,
+}, c = {
+  name: h,
+  nameFirst: y,
   library: m,
   designs: f,
   designMain: u,
@@ -2530,8 +2535,8 @@ class n {
    * @param url link to the site for the request /<br>ссылка на сайт для запроса
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a, r, i) {
-    this.id = t, this.code = e, this.mode = a, this.path = r, this.url = i, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
+  constructor(t, e, o, r, i) {
+    this.id = t, this.code = e, this.mode = o, this.path = r, this.url = i, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
   }
   /**
    * Initialization of data transformation.<br>
@@ -2568,13 +2573,13 @@ class n {
    * @param code file content /<br>содержимое файла
    */
   importApi(t) {
-    const e = `dev${this.className}User`, a = [
-      `import { ${this.className} } from '${l.name}';`
+    const e = `dev${this.className}User`, o = [
+      `import { ${this.className} } from '${c.name}';`
     ];
-    return this.path && this.isPath() && a.push(
+    return this.path && this.isPath() && o.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
       `${this.className}.${this.methodAdd}(${e});`
-    ), this.url && a.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), a.push("", t), a.join(`\r
+    ), this.url && o.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), o.push("", t), o.join(`\r
 `);
   }
 }
@@ -2592,8 +2597,8 @@ class S {
    * @param flag should the flag be enabled /<br>включить ли флаг
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a, r) {
-    this.id = t, this.code = e, this.icon = a, this.flag = r;
+  constructor(t, e, o, r) {
+    this.id = t, this.code = e, this.icon = o, this.flag = r;
   }
   /**
    * Initialization of data transformation.<br>
@@ -2602,7 +2607,7 @@ class S {
   init() {
     if (this.is()) {
       const t = [
-        `import { ${this.getImports().join(", ")} } from '${l.name}/media';`
+        `import { ${this.getImports().join(", ")} } from '${c.name}/media';`
       ];
       return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
         "",
@@ -2624,14 +2629,14 @@ class S {
    * Возвращает название функции флага.
    */
   getNameFlag() {
-    return `make${l.nameFirst}Flags`;
+    return `make${c.nameFirst}Flags`;
   }
   /**
    * Returns the name of the icon function.<br>
    * Возвращает название функции иконки.
    */
   getNameIcon() {
-    return `make${l.nameFirst}Icons`;
+    return `make${c.nameFirst}Icons`;
   }
   /**
    * Returns data for connecting data.<br>
@@ -2642,7 +2647,7 @@ class S {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const p = `(?<=<)(${l.designs.join("|")})([A-Z0-9-])([^ >\r
+const p = `(?<=<)(${c.designs.join("|")})([A-Z0-9-])([^ >\r
 ]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
 class H {
   /**
@@ -2652,8 +2657,8 @@ class H {
    * @param code file content /<br>содержимое файла
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a) {
-    this.styles = t, this.id = e, this.code = a;
+  constructor(t, e, o) {
+    this.styles = t, this.id = e, this.code = o;
   }
   /**
    * Initializes the data.<br>
@@ -2664,11 +2669,11 @@ class H {
       const t = this.getList();
       if (t) {
         const e = [];
-        let a = this.getCode();
+        let o = this.getCode();
         return t.forEach((r) => {
           const i = this.findComponent(r);
-          i && e.indexOf(i.name) === -1 && !this.isImport(i) && (e.push(i.name), a = this.importComponent(a, i), a = this.importStyle(a, i));
-        }), a;
+          i && e.indexOf(i.name) === -1 && !this.isImport(i) && (e.push(i.name), o = this.importComponent(o, i), o = this.importStyle(o, i));
+        }), o;
       }
     }
     return this.code;
@@ -2686,7 +2691,7 @@ class H {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${l.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${c.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -2715,7 +2720,7 @@ class H {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return l.components.find(
+    return c.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -2727,7 +2732,7 @@ class H {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${l.name}/${e.name}';`);
+import {${e.name}} from'${c.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -2736,13 +2741,13 @@ import {${e.name}} from'${l.name}/${e.name}';`);
    * @param item data on the component /<br>данные по компоненту
    */
   importStyle(t, e) {
-    const a = this.styles.get(
+    const o = this.styles.get(
       e.design,
       this.id,
       e.name
     );
-    return a ? t.replace(/(<script[^>]*>)/, `$1\r
-${a}`) : t;
+    return o ? t.replace(/(<script[^>]*>)/, `$1\r
+${o}`) : t;
   }
 }
 class C {
@@ -2756,9 +2761,9 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  get(t, e, a) {
-    if (this.isNone(t, e, a))
-      return this.push(t, e, a), this.getCode(t);
+  get(t, e, o) {
+    if (this.isNone(t, e, o))
+      return this.push(t, e, o), this.getCode(t);
   }
   /**
    * Checks if the styles are already connected.<br>
@@ -2767,8 +2772,8 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  isNone(t, e, a) {
-    return !(t in this.items && (e !== this.items[t].id || a !== this.items[t].component));
+  isNone(t, e, o) {
+    return !(t in this.items && (e !== this.items[t].id || o !== this.items[t].component));
   }
   /**
    * Returns the style connection code.<br>
@@ -2776,7 +2781,7 @@ class C {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${l.name}/${t}/style';`;
+    return `import '${c.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
@@ -2785,14 +2790,14 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  push(t, e, a) {
+  push(t, e, o) {
     return this.items[t] = {
       id: e,
-      component: a
+      component: o
     }, this;
   }
 }
-const F = `// ${l.name}-none`, j = `// ${l.name}-mode-none`;
+const F = `// ${c.name}-none`, j = `// ${c.name}-mode-none`;
 class P {
   /**
    * Constructor
@@ -2801,8 +2806,8 @@ class P {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a = l.designMain) {
-    this.id = t, this.code = e, this.design = a;
+  constructor(t, e, o = c.designMain) {
+    this.id = t, this.code = e, this.design = o;
   }
   /**
    * Initialization of the transformation of all style properties.<br>
@@ -2828,7 +2833,7 @@ class P {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${l.name}/${this.design}/properties`;
+    const e = `${c.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -2846,8 +2851,8 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initVars(t) {
-    var a;
-    const e = (a = l.vars) == null ? void 0 : a[this.design];
+    var o;
+    const e = (o = c.vars) == null ? void 0 : o[this.design];
     return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (r) => e.indexOf(r) !== -1 ? `${this.design}-${r}` : r) : t;
   }
   /**
@@ -2856,42 +2861,42 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = l.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = c.modificationProperties, o = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
 ]*${j})`, "igm");
-    return t.match(new RegExp(a, "im")) ? t.replace(a, (r, i, g, h) => {
-      const c = g.trim();
-      return `@include ${e == null ? void 0 : e[i.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${h}`;
+    return t.match(new RegExp(o, "im")) ? t.replace(o, (r, i, g, d) => {
+      const l = g.trim();
+      return `@include ${e == null ? void 0 : e[i.trim()]}(${l.match(/[()]/) ? `#{${l}}` : l})${d}`;
     }) : t;
   }
 }
-function B(o = {}) {
+function B(a = {}) {
   const t = new C(), e = { value: !0 };
-  let a = "production";
+  let o = "production";
   return {
     name: "vite-plugin-vue-ui",
     enforce: "pre",
     apply(r, i) {
-      return a = i.mode, !0;
+      return o = i.mode, !0;
     },
     transform(r, i) {
       return e.value && s.isJs(i) && (r = new S(
         i,
         r,
-        o == null ? void 0 : o.flag
+        a == null ? void 0 : a.flag
       ).init(), r = new v(
         i,
         r,
-        a,
-        o == null ? void 0 : o.translate,
-        o == null ? void 0 : o.translateUrl
+        o,
+        a == null ? void 0 : a.translate,
+        a == null ? void 0 : a.translateUrl
       ).init(), r = new n(
         i,
         r,
-        a,
-        o == null ? void 0 : o.api,
-        o == null ? void 0 : o.apiUrl
-      ).init(), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new H(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new P(i, r, o == null ? void 0 : o.style).init()), {
+        o,
+        a == null ? void 0 : a.api,
+        a == null ? void 0 : a.apiUrl
+      ).init(), e.value = !1), ((a == null ? void 0 : a.importComponents) ?? !0) && (r = new H(t, i, r).init()), (a == null ? void 0 : a.style) !== !1 && (r = new P(i, r, a == null ? void 0 : a.style).init()), {
         code: r
       };
     }

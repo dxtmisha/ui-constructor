@@ -4,7 +4,7 @@ import { M3Icon } from 'ui/M3Icon'
 
 import {
   m3IconArgs,
-  m3IconDescription,
+  m3IconText,
   m3IconValues
 } from 'ui/book/m3/icon.ts'
 
@@ -15,7 +15,9 @@ const meta = {
   parameters: {
     design: 'm3',
     docs: {
-      description: { component: m3IconDescription }
+      description: {
+        component: m3IconText.main.description.main
+      }
     }
   },
   argTypes: m3IconArgs,

@@ -4,8 +4,8 @@ var r = (e, t, s) => (d(e, typeof t != "symbol" ? t + "" : t, s), s);
 import { ref as f, watchEffect as g, onMounted as v, nextTick as w, h as y, defineComponent as S, computed as n, openBlock as C, createBlock as x, resolveDynamicComponent as B, unref as k } from "vue";
 import { c as D } from "./DesignConstructorAbstract-pm1V7i1G.js";
 import { c } from "./createElement-Bvijtmfm.js";
-import { D as E } from "./DataStorage-Ddkxbzl_.js";
-import { E as _ } from "./EventItem-Du_c-sx-.js";
+import { D as E } from "./DataStorage-BS0mwKb9.js";
+import { E as _ } from "./EventItem-CNRiCeQO.js";
 class a {
   /**
    * Checks whether to enable scroll hiding.<br>

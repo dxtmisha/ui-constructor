@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     M2Progress: typeof components.M2Progress
     M2Ripple: typeof components.M2Ripple
     M3Button: typeof components.M3Button
+    M3FieldMessage: typeof components.M3FieldMessage
     M3Icon: typeof components.M3Icon
     M3Image: typeof components.M3Image
     M3Input: typeof components.M3Input

@@ -10,6 +10,7 @@ import { M2Image } from '../m2/Image'
 import { M2Progress } from '../m2/Progress'
 import { M2Ripple } from '../m2/Ripple'
 import { M3Button } from '../m3/Button'
+import { M3FieldMessage } from '../m3/FieldMessage'
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
 import { M3Input } from '../m3/Input'
@@ -40,6 +41,7 @@ export const components = {
   M2Progress,
   M2Ripple,
   M3Button,
+  M3FieldMessage,
   M3Icon,
   M3Image,
   M3Input,

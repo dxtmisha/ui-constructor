@@ -9,13 +9,11 @@ import {
   iconArgsOverlay,
   iconArgsRounded,
   iconArgsSize,
-  iconDescription,
+  iconText,
   iconValues
 } from '../components/icon'
 
 import { defaults, propsValues } from '../../m3/Icon/props'
-
-export const m3IconDescription: string = iconDescription
 
 export const m3IconArgs: StorybookArgs = {
   ...iconArgs(propsValues, defaults),
@@ -30,3 +28,5 @@ export const m3IconArgs: StorybookArgs = {
 }
 
 export const m3IconValues: StorybookArgsValue = iconValues
+
+export const m3IconText = iconText

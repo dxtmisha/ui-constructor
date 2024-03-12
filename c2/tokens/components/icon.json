@@ -171,7 +171,7 @@
                   "height": "16px"
                 }
               },
-              "border-radius": "{st.selectable.borderRadius.size.pill}"
+              "border-radius": "1000"
             },
             "20": {
               "width": "auto",
@@ -183,7 +183,7 @@
                   "height": "{ct.selectable.icon.size.md}"
                 }
               },
-              "border-radius": "{st.selectable.borderRadius.size.pill}"
+              "border-radius": "1000"
             },
             "24": {
               "belarus-375-by-blr": {
@@ -194,7 +194,7 @@
                   "height": "{base.size.icons.lg}"
                 }
               },
-              "border-radius": "{st.selectable.borderRadius.size.pill}"
+              "border-radius": "1000"
             },
             "32": {
               "width": "32px",
@@ -207,7 +207,7 @@
                   "height": "32px"
                 }
               },
-              "border-radius": "{st.selectable.borderRadius.size.pill}"
+              "border-radius": "1000"
             }
           }
         },

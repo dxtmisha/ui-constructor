@@ -104,13 +104,13 @@
   },
   "system": {
     "font": "{typography.text.body.md}",
-    "color": "{st.content.fg.color.neutral.primary}",
+    "color": "{st.content.foreground.color.neutral.primary}",
     "_category": "class"
   },
   "main": {
     "font": "{typography.text.body.md}",
-    "color": "{st.content.fg.color.neutral.primary}",
-    "background-color": "{st.content.bg.color.default.solid.normal}",
+    "color": "{st.content.foreground.color.neutral.primary}",
+    "background-color": "{st.content.background.color.default.solid.normal}",
     "_category": "class"
   },
   "font": {

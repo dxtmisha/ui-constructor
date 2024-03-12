@@ -1,0 +1,79 @@
+import { Canvas, Controls, Meta, Subtitle } from '@storybook/blocks';
+
+import * as Icon from './Icon.stories';
+
+import { c2IconText } from 'ui/book/c2/icon';
+
+<Meta of={Icon}/>
+
+# {c2IconText.main.title}
+
+<Subtitle children={c2IconText.main.description.main}/>
+
+```js
+import { C2Icon } from 'ui/C2Icon'
+```
+
+<Canvas of={Icon.Icon}/>
+<Controls of={Icon.Icon}/>
+Компонент является законченным элементом для свободного использования. Элемент компонента - это `span`, с `display: inline-flex`.
+
+## Список иконок
+<Canvas of={Icon.IconList}/>
+
+## Value
+Назначить иконку можно через свойство `icon`.
+
+
+```html
+<c2-icon :icon="[string | ImageProps]" />
+```
+
+Свойство принимает:
+* строку с названием иконки, ссылку на картинку;
+* объект со свойством компонента `Image`.
+
+Также у компонента есть второе свойство `icon-active`.
+Эта вторичная иконка используется, если нужен анимированный переход из одной иконки в другую.
+Принимает все те же значения, что и свойство `icon`.
+
+Для перехода на вторую иконку используется свойство `active`.
+
+```html
+<c2-icon
+  ...
+  :active="[boolean]"
+  :icon="[string | ImageProps]"
+  :icon-active="[string | ImageProps]"
+  ...
+/>
+```
+
+<Canvas of={Icon.IconActive}/>
+
+## Скрытия иконки
+Иконку можно скрыть, используя свойство `hide`. В зависимости от ситуации, анимацию скрытия можно изменить через свойство `animation-type`.
+
+```html
+<c2-icon
+  ...
+  :hide="[boolean]"
+  :animation-type="['type1' | 'type2']"
+  ...
+/>
+```
+
+<Canvas of={Icon.IconAnimationType}/>
+
+## Анимация иконки при появлении в DOM.
+Можно включить анимацию появления иконки в дереве DOM через свойство `animation-show`.
+
+```html
+<c2-icon
+  ...
+  :animation-show="[boolean]"
+  ...
+/>
+```
+
+<Canvas of={Icon.IconAnimationShow}/>

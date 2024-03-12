@@ -1,5 +1,5 @@
 import { defineNuxtModule as t, addImports as e, addComponent as i } from "@nuxt/kit";
-const s = t({
+const n = t({
   meta: {
     name: "ui",
     version: "0.0.0-dev.3"
@@ -28,6 +28,9 @@ const s = t({
     }), await i({
       name: "M3Button",
       filePath: "ui/dist/M3Button.vue"
+    }), await i({
+      name: "M3FieldMessage",
+      filePath: "ui/dist/M3FieldMessage.vue"
     }), await i({
       name: "M3Icon",
       filePath: "ui/dist/M3Icon.vue"
@@ -98,5 +101,5 @@ const s = t({
   }
 });
 export {
-  s as default
+  n as default
 };

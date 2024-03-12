@@ -3,7 +3,7 @@
 @mixin mixinProgressToken {
   // :style [!] System label / Системная метка
   --c2-progress-height: var(--c2-st-global-distance-space-inline-xs);
-  --c2-progress-backgroundColor: var(--c2-st-action-bg-color-primary-solid-normal);
+  --c2-progress-backgroundColor: var(--c2-st-action-background-color-primary-solid-normal);
   --c2-progress-opacity: var(--c2-ot-opacity-25);
   
   &--circular {

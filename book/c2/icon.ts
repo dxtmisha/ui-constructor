@@ -8,14 +8,12 @@ import { StorybookCategory } from '../category'
 import {
   iconArgs,
   iconArgsSize,
-  iconDescription,
+  iconText,
   iconValues
 } from '../components/icon'
 
 import { icons } from '../values'
 import { defaults, propsValues } from '../../c2/Icon/props'
-
-export const c2IconDescription: string = iconDescription
 
 export const c2IconArgs: StorybookArgs = {
   ...iconArgs(propsValues, defaults, icons),
@@ -47,3 +45,5 @@ export const c2IconValues: StorybookArgsValue = {
   icon: 'notification',
   iconActive: 'notification-off'
 }
+
+export const c2IconText = iconText

@@ -4,7 +4,7 @@ import { M2Icon } from 'ui/M2Icon'
 
 import {
   m2IconArgs,
-  m2IconDescription,
+  m2IconText,
   m2IconValues
 } from 'ui/book/m2/icon.ts'
 
@@ -15,9 +15,7 @@ const meta = {
   parameters: {
     design: 'm2',
     docs: {
-      description: {
-        component: m2IconDescription
-      }
+      description: { component: m2IconText.main.description.main }
     }
   },
   argTypes: m2IconArgs,

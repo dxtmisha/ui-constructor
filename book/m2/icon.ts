@@ -9,13 +9,11 @@ import {
   iconArgsOverlay,
   iconArgsRounded,
   iconArgsSize,
-  iconDescription,
+  iconText,
   iconValues
 } from '../components/icon'
 
 import { defaults, propsValues } from '../../m2/Icon/props'
-
-export const m2IconDescription: string = iconDescription
 
 export const m2IconArgs: StorybookArgs = {
   ...iconArgs(propsValues, defaults),
@@ -30,3 +28,5 @@ export const m2IconArgs: StorybookArgs = {
 }
 
 export const m2IconValues: StorybookArgsValue = iconValues
+
+export const m2IconText = iconText
