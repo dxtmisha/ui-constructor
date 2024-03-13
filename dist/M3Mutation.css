@@ -1,1 +1,1 @@
-.m3-mutation{display:none}*[data-ui]:not(.d-mutation--end){display:none}*[data-ui].d-mutation--end{display:unset!important}
+.m3-mutation,[data-ui]:not(.d-mutation--end){display:none}[data-ui].d-mutation--end{display:unset!important}

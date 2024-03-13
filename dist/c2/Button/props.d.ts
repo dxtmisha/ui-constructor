@@ -15,7 +15,6 @@ export type PropsToken = {
     adaptive?: 'icon';
     size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'x';
     outline?: boolean;
-    link?: boolean;
     intent?: 'positive' | 'informative' | 'negative' | 'neutral' | 'default';
     primary?: boolean;
     secondary?: boolean;
@@ -44,7 +43,6 @@ export declare const propsInstruction: {
         default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
     };
     outline: BooleanConstructor;
-    link: BooleanConstructor;
     intent: {
         type: PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
         default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;

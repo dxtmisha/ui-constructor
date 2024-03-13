@@ -4,6 +4,7 @@
   // :style [!] System label / Системная метка
   &--disabled {
     --c2-image-color: var(--c2-st-content-foreground-color-neutral-disable);
+    --c2-image-color-opacity: #{toColorOpacity(var(--c2-st-content-foreground-color-neutral-disable))};
   }
   // :style [!] System label / Системная метка
 }

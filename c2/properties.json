@@ -85,15 +85,15 @@
   "st": {
     "value": {
       "file|import-st": "tokens/_init/st.json#st",
-      "file|import-light": "tokens/_init/theme/light.json#st"
+      "file|import-light": "tokens/_init/theme/light.json#st",
+      "text": {
+        "value": {
+          "file|import-web": "tokens/typography.json#typography.text"
+        }
+      }
     },
     "_type": "var",
     "_category": "root"
-  },
-  "typography": {
-    "value": {
-      "file|import-web": "tokens/typography.json#typography"
-    }
   },
   "base": {
     "value": {
@@ -103,19 +103,19 @@
     "_category": "root"
   },
   "system": {
-    "font": "{typography.text.body.md}",
+    "font": "{st.text.body.md}",
     "color": "{st.content.foreground.color.neutral.primary}",
     "_category": "class"
   },
   "main": {
-    "font": "{typography.text.body.md}",
+    "font": "{st.text.body.md}",
     "color": "{st.content.foreground.color.neutral.primary}",
     "background-color": "{st.content.background.color.default.solid.normal}",
     "_category": "class"
   },
   "font": {
     "value": {
-      "basic": "{typography.text}",
+      "basic": "{st.text}",
       "extras": {
         "caption": {
           "_state": true

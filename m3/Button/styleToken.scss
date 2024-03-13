@@ -4,6 +4,8 @@
   // :style [!] System label / Системная метка
   --m3-button-gap: var(--m3-ref-spacing-2);
   --m3-button-padding: var(--m3-ref-spacing-6);
+  --m3-button-color: var(--m3-sys-palette-primary);
+  --m3-button-backgroundColor: transparent;
   --m3-button-transitionFunction: var(--d-sys-transitionFunction-standard);
   
   font-family: var(--m3-ref-font-family-roboto);
@@ -12,9 +14,6 @@
   @include lineHeight(#{var(--m3-ref-lineHeight-20)});
   letter-spacing: var(--m3-ref-letterSpacing-10);
   
-  @include paletteColor(#{var(--m3-sys-palette-primary)});
-  
-  @include backgroundColor(#{transparent});
   @include gradientOpacity(#{0});
   @include paletteGradient(#{var(--m3-sys-palette-primary)});
   
@@ -42,14 +41,15 @@
   }
   
   @include disabled {
+    --m3-button-color: var(--m3-sys-palette-onSurface);
+    
     @include colorOpacity(#{var(--m3-sys-opacity-disabled)});
-    @include paletteColor(#{var(--m3-sys-palette-onSurface)});
     
     transition-duration: var(--d-sys-transitionDuration-sm);
   }
   
   &--selected {
-    @include paletteColor(#{var(--m3-sys-palette-primaryVariant)});
+    --m3-button-color: var(--m3-sys-palette-primaryVariant);
     
     @include paletteGradient(#{var(--m3-sys-palette-primaryVariant)});
   }

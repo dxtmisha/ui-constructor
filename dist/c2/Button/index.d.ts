@@ -11,7 +11,6 @@ export declare const C2Button: {
             default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         };
         outline: BooleanConstructor;
-        link: BooleanConstructor;
         intent: {
             type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
             default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -60,7 +59,6 @@ export declare const C2Button: {
             default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         };
         outline: BooleanConstructor;
-        link: BooleanConstructor;
         intent: {
             type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
             default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -94,7 +92,6 @@ export declare const C2Button: {
     }, {
         size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         focus: boolean;
-        link: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;
@@ -126,7 +123,6 @@ export declare const C2Button: {
             default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         };
         outline: BooleanConstructor;
-        link: BooleanConstructor;
         intent: {
             type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
             default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -160,7 +156,6 @@ export declare const C2Button: {
     }, {}, {}, {}, {}, {
         size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         focus: boolean;
-        link: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;
@@ -189,7 +184,6 @@ export declare const C2Button: {
         default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
     };
     outline: BooleanConstructor;
-    link: BooleanConstructor;
     intent: {
         type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
         default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -229,7 +223,6 @@ export declare const C2Button: {
 }, string, {
     size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
     focus: boolean;
-    link: boolean;
     selected: boolean;
     iconTurn: boolean;
     iconHide: boolean;

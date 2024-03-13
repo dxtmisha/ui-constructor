@@ -353,6 +353,12 @@ $designsProperties: (
             type: 'var',
             value: 'var(--d-sys-transitionFunction-standard)',
           ),
+          'borderRadius':(
+            index: 'borderRadius',
+            name: 'border-radius',
+            type: 'property',
+            value: 0,
+          ),
           'transitionDuration':(
             index: 'transitionDuration',
             name: 'transition-duration',
@@ -6821,6 +6827,18 @@ $designsProperties: (
             type: 'var',
             value: 'var(--m3-ref-spacing-6)',
           ),
+          'color':(
+            index: 'color',
+            name: '--m3-button-color',
+            type: 'var',
+            value: 'var(--m3-sys-palette-primary)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--m3-button-backgroundColor',
+            type: 'var',
+            value: 'transparent',
+          ),
           'transitionFunction':(
             index: 'transitionFunction',
             name: '--m3-button-transitionFunction',
@@ -6856,18 +6874,6 @@ $designsProperties: (
             name: 'letter-spacing',
             type: 'property',
             value: 'var(--m3-ref-letterSpacing-10)',
-          ),
-          'color':(
-            index: 'color',
-            name: 'palette-color',
-            type: 'property',
-            value: 'var(--m3-sys-palette-primary)',
-          ),
-          'backgroundColor':(
-            index: 'backgroundColor',
-            name: 'background-color',
-            type: 'property',
-            value: 'transparent',
           ),
           'gradientOpacity':(
             index: 'gradientOpacity',
@@ -6989,17 +6995,17 @@ $designsProperties: (
             name: 'disabled',
             type: 'selector',
             value: (
+              'color':(
+                index: 'color',
+                name: '--m3-button-color',
+                type: 'var',
+                value: 'var(--m3-sys-palette-onSurface)',
+              ),
               'colorOpacity':(
                 index: 'colorOpacity',
                 name: 'color-opacity',
                 type: 'property',
                 value: 'var(--m3-sys-opacity-disabled)',
-              ),
-              'color':(
-                index: 'color',
-                name: 'palette-color',
-                type: 'property',
-                value: 'var(--m3-sys-palette-onSurface)',
               ),
               'transitionDuration':(
                 index: 'transitionDuration',
@@ -7016,8 +7022,8 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: 'palette-color',
-                type: 'property',
+                name: '--m3-button-color',
+                type: 'var',
                 value: 'var(--m3-sys-palette-primaryVariant)',
               ),
               'gradient':(

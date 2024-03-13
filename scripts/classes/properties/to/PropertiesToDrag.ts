@@ -197,17 +197,29 @@ export class PropertiesToDrag extends PropertiesToAbstract {
     itemDrag: PropertyItem
   ): boolean {
     const itemDragValue = itemDrag.value
+
     if (
-      isObjectNotArray(item.value) &&
       isObjectNotArray(itemDragValue)
     ) {
-      forEach(item.value, (value, index) => {
-        if (!(index in itemDragValue)) {
-          itemDragValue[index] = value
-        } else if (!isFilled(itemDragValue[index].value)) {
-          itemDragValue[index].value = value.value
+      if (isObjectNotArray(item.value)) {
+        forEach(item.value, (value, index) => {
+          if (!(index in itemDragValue)) {
+            itemDragValue[index] = value
+          } else if (!isFilled(itemDragValue[index].value)) {
+            itemDragValue[index].value = value.value
+          }
+        })
+      } else {
+        const index = item?.[PropertyKey.index]
+
+        if (index) {
+          if (!(index in itemDragValue)) {
+            itemDragValue[index] = item
+          } else if (!isFilled(itemDragValue[index].value)) {
+            itemDragValue[index].value = item.value
+          }
         }
-      })
+      }
 
       return true
     }

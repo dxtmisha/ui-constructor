@@ -1,3 +1,5 @@
+import * as sass from 'sass'
+
 import {
   PropertiesItems,
   type PropertiesItemsItem
@@ -30,8 +32,6 @@ export class StylesRoot {
   init (): string[] {
     const space = StylesTool.addSpace(1)
     const data: string[] = [
-      StylesTool.addImportProperties('../..'),
-      '',
       ':root {'
     ]
 
@@ -41,7 +41,11 @@ export class StylesRoot {
 
     data.push('}')
 
-    return data
+    return [
+      StylesTool.addImportProperties('../..'),
+      '',
+      this.initCalc(data.join('\r\n'))
+    ]
   }
 
   /**
@@ -50,5 +54,45 @@ export class StylesRoot {
    */
   private getList (): PropertiesItemsItem[] {
     return this.items.findCategory(PropertyCategory.root)
+  }
+
+  private getValue (value: string): string {
+    if (value.match(/calc\(/) && !value.match(/var\(/)) {
+      const result = sass.compileString(`a{height: ${value};}`)
+      const read = result.css?.match(/height: ([^;]+);/)?.[1]
+
+      if (read) {
+        return read
+      }
+    }
+
+    return value
+  }
+
+  private initCalc (data: string): string {
+    let update = false
+
+    const list = data.replace(
+      /(?<=calc\(.*?)var\(([^)]+)\)/img,
+      (_: string, value: string) => {
+        const newValue = data.match(new RegExp(`(?<=${value}:)[^;\r\n]+`, 'im'))?.[0].trim()
+
+        if (newValue) {
+          update = true
+          return this.getValue(newValue)
+        }
+
+        return value
+      }
+    )
+
+    if (update) {
+      return this.initCalc(list)
+    }
+
+    return list.replace(
+      /calc\([^;\r\n]+/ig,
+      (value) => this.getValue(value)
+    )
   }
 }

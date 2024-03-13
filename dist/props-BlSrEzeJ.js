@@ -199,10 +199,10 @@ class q extends f {
     var i;
     const n = this.setup(), s = [
       ...n.renderProgress(),
-      o("div", { class: n.classes.value.paddingSpacer }),
       ...n.renderLabel(),
       ...n.renderIcon(),
-      o("div", { class: n.classes.value.paddingSpacer })
+      o("span", { class: n.classes.value.paddingSpacer }),
+      o("span", { class: n.classes.value.paddingSpacer })
     ];
     return n.isEnabled.value && this.components.renderAdd(s, "ripple"), o(((i = this.props) == null ? void 0 : i.tag) || "button", {
       ...this.getAttrs(),

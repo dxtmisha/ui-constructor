@@ -18,7 +18,9 @@
   
   &--webAccentWhite {
     --c1-palette-basic50: var(--c1-ref-palette-webAccentWhite-50);
+    --c1-palette-basic50-opacity: #{toColorOpacity(var(--c1-ref-palette-webAccentWhite-50))};
     --sys-palette: var(--c1-ref-palette-webAccentWhite-50);
+    --sys-palette-opacity: #{toColorOpacity(var(--c1-ref-palette-webAccentWhite-50))};
   }
   
   &--webError {
@@ -28,7 +30,9 @@
   
   &--webGray1 {
     --c1-palette-basic50: var(--c1-ref-palette-webGray1-50);
+    --c1-palette-basic50-opacity: #{toColorOpacity(var(--c1-ref-palette-webGray1-50))};
     --sys-palette: var(--c1-ref-palette-webGray1-50);
+    --sys-palette-opacity: #{toColorOpacity(var(--c1-ref-palette-webGray1-50))};
   }
   
   &--webGray2 {
@@ -88,7 +92,9 @@
   
   &--notification {
     --c1-palette-basic50: var(--c1-ref-palette-notification-50);
+    --c1-palette-basic50-opacity: #{toColorOpacity(var(--c1-ref-palette-notification-50))};
     --sys-palette: var(--c1-ref-palette-notification-50);
+    --sys-palette-opacity: #{toColorOpacity(var(--c1-ref-palette-notification-50))};
   }
   
   &--ripple {
@@ -143,7 +149,9 @@
   
   &--shading {
     --c1-palette-basic50: var(--c1-ref-palette-shading-50);
+    --c1-palette-basic50-opacity: #{toColorOpacity(var(--c1-ref-palette-shading-50))};
     --sys-palette: var(--c1-ref-palette-shading-50);
+    --sys-palette-opacity: #{toColorOpacity(var(--c1-ref-palette-shading-50))};
   }
   
   &--green1 {

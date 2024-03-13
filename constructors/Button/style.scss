@@ -2,6 +2,8 @@
 
 @mixin mixinButton {
   @include initByCustom('padding', 0);
+  @include initByCustom('color', inherit);
+  @include initByCustom('backgroundColor', transparent);
 
   @include flexInlineCenter;
   box-sizing: border-box;
@@ -13,11 +15,10 @@
 
   text-decoration: none;
 
-  background: transparent;
+  @include paletteColor(v('??color'));
+  @include paletteBackground(v('??backgroundColor'));
 
-  border-radius: 0;
   border: none;
-
   cursor: pointer;
 
   @include hover {
@@ -48,6 +49,7 @@
   }
 
   &__paddingSpacer {
+    display: none;
     order: 1;
   }
 
@@ -62,26 +64,35 @@
     @include marginRight(v('??margin'));
   }
 
+  &__label ~ &__paddingSpacer {
+    display: initial;
+  }
+
   &__label ~ &__icon {
     @include marginRight(#{calc(v('??margin') - v('??padding'))});
+  }
+
+  &__label ~ &__icon ~ &__paddingSpacer:not(:last-child) {
+    display: none;
   }
 
   &__label ~ &__trailing {
     @include marginLeft(#{calc(v('??margin') - v('??padding'))});
   }
 
-  &--icon {
-    @include initByCustom('padding', #{calc(var(--sys-height) / 2)});
-    @include subclass('paddingSpacer') {
-      display: none;
-    }
-  }
-
-  &--loading {
-    cursor: default;
+  &__label ~ &__trailing ~ &__paddingSpacer:last-child {
+    display: none;
   }
 
   &__loading#{'.'}#{n('?progress--visible')} ~ * {
     opacity: v('??colorOpacity', 0);
+  }
+
+  &--icon {
+    @include initByCustom('padding', #{calc(var(--sys-height) / 2)});
+  }
+
+  &--loading {
+    cursor: default;
   }
 }

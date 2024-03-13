@@ -13,7 +13,6 @@ export declare const components: {
                 default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
             };
             outline: BooleanConstructor;
-            link: BooleanConstructor;
             intent: {
                 type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
                 default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -62,7 +61,6 @@ export declare const components: {
                 default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
             };
             outline: BooleanConstructor;
-            link: BooleanConstructor;
             intent: {
                 type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
                 default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -96,7 +94,6 @@ export declare const components: {
         }, {
             size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
             focus: boolean;
-            link: boolean;
             selected: boolean;
             iconTurn: boolean;
             iconHide: boolean;
@@ -128,7 +125,6 @@ export declare const components: {
                 default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
             };
             outline: BooleanConstructor;
-            link: BooleanConstructor;
             intent: {
                 type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
                 default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -162,7 +158,6 @@ export declare const components: {
         }, {}, {}, {}, {}, {
             size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
             focus: boolean;
-            link: boolean;
             selected: boolean;
             iconTurn: boolean;
             iconHide: boolean;
@@ -191,7 +186,6 @@ export declare const components: {
             default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         };
         outline: BooleanConstructor;
-        link: BooleanConstructor;
         intent: {
             type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
             default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
@@ -231,7 +225,6 @@ export declare const components: {
     }, string, {
         size: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
         focus: boolean;
-        link: boolean;
         selected: boolean;
         iconTurn: boolean;
         iconHide: boolean;

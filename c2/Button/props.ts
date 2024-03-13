@@ -25,7 +25,6 @@ export type PropsToken = {
   adaptive?: 'icon'
   size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'x'
   outline?: boolean
-  link?: boolean
   intent?: 'positive' | 'informative' | 'negative' | 'neutral' | 'default'
   primary?: boolean
   secondary?: boolean
@@ -72,7 +71,6 @@ export const propsInstruction = {
       default: defaults?.size
     },
     outline: Boolean,
-    link: Boolean,
     intent: {
       type: String as PropType<PropsToken['intent']>,
       default: defaults?.intent

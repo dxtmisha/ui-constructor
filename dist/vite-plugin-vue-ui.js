@@ -1,4 +1,4 @@
-class s {
+class l {
   /**
    * Checks if the id is a user’s file.<br>
    * Проверяет, является ли id файлом пользователя.
@@ -220,7 +220,7 @@ const h = "ui", y = "Ui", m = "library", f = [
     code: "c2-ripple",
     path: "c2/Ripple"
   }
-], k = {
+], x = {
   m2: [
     "ref-background-0",
     "ref-background-1",
@@ -2453,9 +2453,201 @@ const h = "ui", y = "Ui", m = "library", f = [
     "st-asemantic-background-color-cerise-subtile-opacity",
     "st-asemantic-background-color-cerise-surface",
     "st-asemantic-background-color-cerise-surface-opacity",
+    "st-text-label-xxs-fontFamily",
+    "st-text-label-xxs-lineHeight",
+    "st-text-label-xxs-fontSize",
+    "st-text-label-xxs-paragraphSpacing",
+    "st-text-label-xxs-textDecoration",
+    "st-text-label-xxs-textCase",
+    "st-text-label-xxs-fontWeight",
+    "st-text-label-xxs-letterSpacing",
+    "st-text-label-xs-fontFamily",
+    "st-text-label-xs-lineHeight",
+    "st-text-label-xs-fontSize",
+    "st-text-label-xs-paragraphSpacing",
+    "st-text-label-xs-textDecoration",
+    "st-text-label-xs-textCase",
+    "st-text-label-xs-fontWeight",
+    "st-text-label-xs-letterSpacing",
+    "st-text-label-sm-fontFamily",
+    "st-text-label-sm-lineHeight",
+    "st-text-label-sm-fontSize",
+    "st-text-label-sm-paragraphSpacing",
+    "st-text-label-sm-textDecoration",
+    "st-text-label-sm-textCase",
+    "st-text-label-sm-fontWeight",
+    "st-text-label-sm-letterSpacing",
+    "st-text-label-md-fontFamily",
+    "st-text-label-md-lineHeight",
+    "st-text-label-md-fontSize",
+    "st-text-label-md-paragraphSpacing",
+    "st-text-label-md-textDecoration",
+    "st-text-label-md-textCase",
+    "st-text-label-md-fontWeight",
+    "st-text-label-md-letterSpacing",
+    "st-text-label-lg-fontFamily",
+    "st-text-label-lg-lineHeight",
+    "st-text-label-lg-fontSize",
+    "st-text-label-lg-paragraphSpacing",
+    "st-text-label-lg-textDecoration",
+    "st-text-label-lg-textCase",
+    "st-text-label-lg-fontWeight",
+    "st-text-label-lg-letterSpacing",
+    "st-text-body-xs-fontFamily",
+    "st-text-body-xs-lineHeight",
+    "st-text-body-xs-fontSize",
+    "st-text-body-xs-paragraphSpacing",
+    "st-text-body-xs-textDecoration",
+    "st-text-body-xs-textCase",
+    "st-text-body-xs-fontWeight",
+    "st-text-body-xs-letterSpacing",
+    "st-text-body-sm-fontFamily",
+    "st-text-body-sm-lineHeight",
+    "st-text-body-sm-fontSize",
+    "st-text-body-sm-paragraphSpacing",
+    "st-text-body-sm-textDecoration",
+    "st-text-body-sm-textCase",
+    "st-text-body-sm-fontWeight",
+    "st-text-body-sm-letterSpacing",
+    "st-text-body-md-fontFamily",
+    "st-text-body-md-lineHeight",
+    "st-text-body-md-fontSize",
+    "st-text-body-md-paragraphSpacing",
+    "st-text-body-md-textDecoration",
+    "st-text-body-md-textCase",
+    "st-text-body-md-fontWeight",
+    "st-text-body-md-letterSpacing",
+    "st-text-body-lg-fontFamily",
+    "st-text-body-lg-lineHeight",
+    "st-text-body-lg-fontSize",
+    "st-text-body-lg-paragraphSpacing",
+    "st-text-body-lg-textDecoration",
+    "st-text-body-lg-textCase",
+    "st-text-body-lg-fontWeight",
+    "st-text-body-lg-letterSpacing",
+    "st-text-heading-xxs-fontFamily",
+    "st-text-heading-xxs-lineHeight",
+    "st-text-heading-xxs-fontSize",
+    "st-text-heading-xxs-paragraphSpacing",
+    "st-text-heading-xxs-textDecoration",
+    "st-text-heading-xxs-textCase",
+    "st-text-heading-xxs-fontWeight",
+    "st-text-heading-xxs-letterSpacing",
+    "st-text-heading-xs-fontFamily",
+    "st-text-heading-xs-lineHeight",
+    "st-text-heading-xs-fontSize",
+    "st-text-heading-xs-paragraphSpacing",
+    "st-text-heading-xs-textDecoration",
+    "st-text-heading-xs-textCase",
+    "st-text-heading-xs-fontWeight",
+    "st-text-heading-xs-letterSpacing",
+    "st-text-heading-sm-fontFamily",
+    "st-text-heading-sm-lineHeight",
+    "st-text-heading-sm-fontSize",
+    "st-text-heading-sm-paragraphSpacing",
+    "st-text-heading-sm-textDecoration",
+    "st-text-heading-sm-textCase",
+    "st-text-heading-sm-fontWeight",
+    "st-text-heading-sm-letterSpacing",
+    "st-text-heading-md-fontFamily",
+    "st-text-heading-md-lineHeight",
+    "st-text-heading-md-fontSize",
+    "st-text-heading-md-paragraphSpacing",
+    "st-text-heading-md-textDecoration",
+    "st-text-heading-md-textCase",
+    "st-text-heading-md-fontWeight",
+    "st-text-heading-md-letterSpacing",
+    "st-text-heading-lg-fontFamily",
+    "st-text-heading-lg-lineHeight",
+    "st-text-heading-lg-fontSize",
+    "st-text-heading-lg-paragraphSpacing",
+    "st-text-heading-lg-textDecoration",
+    "st-text-heading-lg-textCase",
+    "st-text-heading-lg-fontWeight",
+    "st-text-heading-lg-letterSpacing",
+    "st-text-heading-xl-fontFamily",
+    "st-text-heading-xl-lineHeight",
+    "st-text-heading-xl-fontSize",
+    "st-text-heading-xl-paragraphSpacing",
+    "st-text-heading-xl-textDecoration",
+    "st-text-heading-xl-textCase",
+    "st-text-heading-xl-fontWeight",
+    "st-text-heading-xl-letterSpacing",
+    "st-text-display-xxs-fontFamily",
+    "st-text-display-xxs-lineHeight",
+    "st-text-display-xxs-fontSize",
+    "st-text-display-xxs-paragraphSpacing",
+    "st-text-display-xxs-textDecoration",
+    "st-text-display-xxs-textCase",
+    "st-text-display-xxs-fontWeight",
+    "st-text-display-xxs-letterSpacing",
+    "st-text-display-xs-fontFamily",
+    "st-text-display-xs-lineHeight",
+    "st-text-display-xs-fontSize",
+    "st-text-display-xs-paragraphSpacing",
+    "st-text-display-xs-textDecoration",
+    "st-text-display-xs-textCase",
+    "st-text-display-xs-fontWeight",
+    "st-text-display-xs-letterSpacing",
+    "st-text-display-sm-fontFamily",
+    "st-text-display-sm-lineHeight",
+    "st-text-display-sm-fontSize",
+    "st-text-display-sm-paragraphSpacing",
+    "st-text-display-sm-textDecoration",
+    "st-text-display-sm-textCase",
+    "st-text-display-sm-fontWeight",
+    "st-text-display-sm-letterSpacing",
+    "st-text-display-xl-fontFamily",
+    "st-text-display-xl-lineHeight",
+    "st-text-display-xl-fontSize",
+    "st-text-display-xl-paragraphSpacing",
+    "st-text-display-xl-textDecoration",
+    "st-text-display-xl-textCase",
+    "st-text-display-xl-fontWeight",
+    "st-text-display-xl-letterSpacing",
+    "st-text-strikethrough-xxs-fontFamily",
+    "st-text-strikethrough-xxs-lineHeight",
+    "st-text-strikethrough-xxs-fontSize",
+    "st-text-strikethrough-xxs-paragraphSpacing",
+    "st-text-strikethrough-xxs-textDecoration",
+    "st-text-strikethrough-xxs-textCase",
+    "st-text-strikethrough-xxs-fontWeight",
+    "st-text-strikethrough-xxs-letterSpacing",
+    "st-text-strikethrough-xs-fontFamily",
+    "st-text-strikethrough-xs-lineHeight",
+    "st-text-strikethrough-xs-fontSize",
+    "st-text-strikethrough-xs-paragraphSpacing",
+    "st-text-strikethrough-xs-textDecoration",
+    "st-text-strikethrough-xs-textCase",
+    "st-text-strikethrough-xs-fontWeight",
+    "st-text-strikethrough-xs-letterSpacing",
+    "st-text-strikethrough-sm-fontFamily",
+    "st-text-strikethrough-sm-lineHeight",
+    "st-text-strikethrough-sm-fontSize",
+    "st-text-strikethrough-sm-paragraphSpacing",
+    "st-text-strikethrough-sm-textDecoration",
+    "st-text-strikethrough-sm-textCase",
+    "st-text-strikethrough-sm-fontWeight",
+    "st-text-strikethrough-sm-letterSpacing",
+    "st-text-strikethrough-md-fontFamily",
+    "st-text-strikethrough-md-lineHeight",
+    "st-text-strikethrough-md-fontSize",
+    "st-text-strikethrough-md-paragraphSpacing",
+    "st-text-strikethrough-md-textDecoration",
+    "st-text-strikethrough-md-textCase",
+    "st-text-strikethrough-md-fontWeight",
+    "st-text-strikethrough-md-letterSpacing",
+    "st-text-strikethrough-lg-fontFamily",
+    "st-text-strikethrough-lg-lineHeight",
+    "st-text-strikethrough-lg-fontSize",
+    "st-text-strikethrough-lg-paragraphSpacing",
+    "st-text-strikethrough-lg-textDecoration",
+    "st-text-strikethrough-lg-textCase",
+    "st-text-strikethrough-lg-fontWeight",
+    "st-text-strikethrough-lg-letterSpacing",
     "base-size-icons-lg"
   ]
-}, x = {
+}, k = {
   "flex-position": "flexPosition",
   "flex-dynamic": "flexDynamic",
   "justify-content": "justifyContent",
@@ -2515,17 +2707,17 @@ const h = "ui", y = "Ui", m = "library", f = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, c = {
+}, s = {
   name: h,
   nameFirst: y,
   library: m,
   designs: f,
   designMain: u,
   components: b,
-  vars: k,
-  modificationProperties: x
+  vars: x,
+  modificationProperties: k
 };
-class n {
+class c {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2535,8 +2727,8 @@ class n {
    * @param url link to the site for the request /<br>ссылка на сайт для запроса
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, o, r, i) {
-    this.id = t, this.code = e, this.mode = o, this.path = r, this.url = i, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
+  constructor(t, e, a, r, i) {
+    this.id = t, this.code = e, this.mode = a, this.path = r, this.url = i, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
   }
   /**
    * Initialization of data transformation.<br>
@@ -2550,14 +2742,14 @@ class n {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return s.isJs(this.id) && !!(this.isPath() || this.url);
+    return l.isJs(this.id) && !!(this.isPath() || this.url);
   }
   /**
    * Checks if there is a file with data for developers.<br>
    * Проверяет, есть ли файл с данными для разработчиков.
    */
   isPath() {
-    return !!(this.path && s.isDev(this.mode));
+    return !!(this.path && l.isDev(this.mode));
   }
   /**
    * Returns the path for connecting files.<br>
@@ -2573,22 +2765,22 @@ class n {
    * @param code file content /<br>содержимое файла
    */
   importApi(t) {
-    const e = `dev${this.className}User`, o = [
-      `import { ${this.className} } from '${c.name}';`
+    const e = `dev${this.className}User`, a = [
+      `import { ${this.className} } from '${s.name}';`
     ];
-    return this.path && this.isPath() && o.push(
+    return this.path && this.isPath() && a.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
       `${this.className}.${this.methodAdd}(${e});`
-    ), this.url && o.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), o.push("", t), o.join(`\r
+    ), this.url && a.push(`${this.className}.${this.methodUrl}('${this.getUrl(this.url)}');`), a.push("", t), a.join(`\r
 `);
   }
 }
-class v extends n {
+class S extends c {
   constructor() {
     super(...arguments), this.className = "Translate", this.methodAdd = "addSync";
   }
 }
-class S {
+class v {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2597,8 +2789,8 @@ class S {
    * @param flag should the flag be enabled /<br>включить ли флаг
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, o, r) {
-    this.id = t, this.code = e, this.icon = o, this.flag = r;
+  constructor(t, e, a, r) {
+    this.id = t, this.code = e, this.icon = a, this.flag = r;
   }
   /**
    * Initialization of data transformation.<br>
@@ -2607,7 +2799,7 @@ class S {
   init() {
     if (this.is()) {
       const t = [
-        `import { ${this.getImports().join(", ")} } from '${c.name}/media';`
+        `import { ${this.getImports().join(", ")} } from '${s.name}/media';`
       ];
       return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
         "",
@@ -2622,21 +2814,21 @@ class S {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return s.isJs(this.id) && !!(this.icon || this.flag);
+    return l.isJs(this.id) && !!(this.icon || this.flag);
   }
   /**
    * Returns the name of the flag function.<br>
    * Возвращает название функции флага.
    */
   getNameFlag() {
-    return `make${c.nameFirst}Flags`;
+    return `make${s.nameFirst}Flags`;
   }
   /**
    * Returns the name of the icon function.<br>
    * Возвращает название функции иконки.
    */
   getNameIcon() {
-    return `make${c.nameFirst}Icons`;
+    return `make${s.nameFirst}Icons`;
   }
   /**
    * Returns data for connecting data.<br>
@@ -2647,7 +2839,7 @@ class S {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const p = `(?<=<)(${c.designs.join("|")})([A-Z0-9-])([^ >\r
+const p = `(?<=<)(${s.designs.join("|")})([A-Z0-9-])([^ >\r
 ]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
 class H {
   /**
@@ -2657,8 +2849,8 @@ class H {
    * @param code file content /<br>содержимое файла
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, o) {
-    this.styles = t, this.id = e, this.code = o;
+  constructor(t, e, a) {
+    this.styles = t, this.id = e, this.code = a;
   }
   /**
    * Initializes the data.<br>
@@ -2669,11 +2861,11 @@ class H {
       const t = this.getList();
       if (t) {
         const e = [];
-        let o = this.getCode();
+        let a = this.getCode();
         return t.forEach((r) => {
           const i = this.findComponent(r);
-          i && e.indexOf(i.name) === -1 && !this.isImport(i) && (e.push(i.name), o = this.importComponent(o, i), o = this.importStyle(o, i));
-        }), o;
+          i && e.indexOf(i.name) === -1 && !this.isImport(i) && (e.push(i.name), a = this.importComponent(a, i), a = this.importStyle(a, i));
+        }), a;
       }
     }
     return this.code;
@@ -2683,7 +2875,7 @@ class H {
    * Проверяет, подходит ли файл для преобразования.
    */
   is() {
-    return s.isVue(this.id) && !!this.code.match(z);
+    return l.isVue(this.id) && !!this.code.match(z);
   }
   /**
    * Checks if the component was connected.<br>
@@ -2691,7 +2883,7 @@ class H {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${c.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${s.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -2720,7 +2912,7 @@ class H {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return c.components.find(
+    return s.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -2732,7 +2924,7 @@ class H {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${c.name}/${e.name}';`);
+import {${e.name}} from'${s.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -2741,13 +2933,13 @@ import {${e.name}} from'${c.name}/${e.name}';`);
    * @param item data on the component /<br>данные по компоненту
    */
   importStyle(t, e) {
-    const o = this.styles.get(
+    const a = this.styles.get(
       e.design,
       this.id,
       e.name
     );
-    return o ? t.replace(/(<script[^>]*>)/, `$1\r
-${o}`) : t;
+    return a ? t.replace(/(<script[^>]*>)/, `$1\r
+${a}`) : t;
   }
 }
 class C {
@@ -2761,9 +2953,9 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  get(t, e, o) {
-    if (this.isNone(t, e, o))
-      return this.push(t, e, o), this.getCode(t);
+  get(t, e, a) {
+    if (this.isNone(t, e, a))
+      return this.push(t, e, a), this.getCode(t);
   }
   /**
    * Checks if the styles are already connected.<br>
@@ -2772,8 +2964,8 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  isNone(t, e, o) {
-    return !(t in this.items && (e !== this.items[t].id || o !== this.items[t].component));
+  isNone(t, e, a) {
+    return !(t in this.items && (e !== this.items[t].id || a !== this.items[t].component));
   }
   /**
    * Returns the style connection code.<br>
@@ -2781,7 +2973,7 @@ class C {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${c.name}/${t}/style';`;
+    return `import '${s.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
@@ -2790,15 +2982,15 @@ class C {
    * @param id file identification /<br>идентификация файла
    * @param component component name /<br>название компонента
    */
-  push(t, e, o) {
+  push(t, e, a) {
     return this.items[t] = {
       id: e,
-      component: o
+      component: a
     }, this;
   }
 }
-const F = `// ${c.name}-none`, j = `// ${c.name}-mode-none`;
-class P {
+const F = `// ${s.name}-none`, D = `// ${s.name}-mode-none`;
+class W {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2806,8 +2998,8 @@ class P {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, o = c.designMain) {
-    this.id = t, this.code = e, this.design = o;
+  constructor(t, e, a = s.designMain) {
+    this.id = t, this.code = e, this.design = a;
   }
   /**
    * Initialization of the transformation of all style properties.<br>
@@ -2825,7 +3017,7 @@ class P {
    * Проверяет, нужно ли преобразовывать этот файл.
    */
   is() {
-    return s.isCss(this.id) && !this.code.match(F);
+    return l.isCss(this.id) && !this.code.match(F);
   }
   /**
    * Connects a list of tokens to work with values.<br>
@@ -2833,7 +3025,7 @@ class P {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${c.name}/${this.design}/properties`;
+    const e = `${s.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -2851,8 +3043,8 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initVars(t) {
-    var o;
-    const e = (o = c.vars) == null ? void 0 : o[this.design];
+    var a;
+    const e = (a = s.vars) == null ? void 0 : a[this.design];
     return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (r) => e.indexOf(r) !== -1 ? `${this.design}-${r}` : r) : t;
   }
   /**
@@ -2861,47 +3053,47 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = c.modificationProperties, o = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = s.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
-]*${j})`, "igm");
-    return t.match(new RegExp(o, "im")) ? t.replace(o, (r, i, g, d) => {
-      const l = g.trim();
-      return `@include ${e == null ? void 0 : e[i.trim()]}(${l.match(/[()]/) ? `#{${l}}` : l})${d}`;
+]*${D})`, "igm");
+    return t.match(new RegExp(a, "im")) ? t.replace(a, (r, i, g, d) => {
+      const n = g.trim();
+      return `@include ${e == null ? void 0 : e[i.trim()]}(${n.match(/[()]/) ? `#{${n}}` : n})${d}`;
     }) : t;
   }
 }
-function B(a = {}) {
+function j(o = {}) {
   const t = new C(), e = { value: !0 };
-  let o = "production";
+  let a = "production";
   return {
     name: "vite-plugin-vue-ui",
     enforce: "pre",
     apply(r, i) {
-      return o = i.mode, !0;
+      return a = i.mode, !0;
     },
     transform(r, i) {
-      return e.value && s.isJs(i) && (r = new S(
+      return e.value && l.isJs(i) && (r = new v(
         i,
         r,
-        a == null ? void 0 : a.flag
-      ).init(), r = new v(
+        o == null ? void 0 : o.flag
+      ).init(), r = new S(
         i,
         r,
-        o,
-        a == null ? void 0 : a.translate,
-        a == null ? void 0 : a.translateUrl
-      ).init(), r = new n(
+        a,
+        o == null ? void 0 : o.translate,
+        o == null ? void 0 : o.translateUrl
+      ).init(), r = new c(
         i,
         r,
-        o,
-        a == null ? void 0 : a.api,
-        a == null ? void 0 : a.apiUrl
-      ).init(), e.value = !1), ((a == null ? void 0 : a.importComponents) ?? !0) && (r = new H(t, i, r).init()), (a == null ? void 0 : a.style) !== !1 && (r = new P(i, r, a == null ? void 0 : a.style).init()), {
+        a,
+        o == null ? void 0 : o.api,
+        o == null ? void 0 : o.apiUrl
+      ).init(), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new H(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new W(i, r, o == null ? void 0 : o.style).init()), {
         code: r
       };
     }
   };
 }
 export {
-  B as default
+  j as default
 };

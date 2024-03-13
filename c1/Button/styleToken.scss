@@ -4,6 +4,8 @@
   // :style [!] System label / Системная метка
   --c1-button-gap: var(--c1-ref-spacing-2);
   --c1-button-padding: var(--c1-ref-spacing-4);
+  --c1-button-color: var(--c1-sys-palette-onSurfaceSecondary);
+  --c1-button-color-opacity: #{toColorOpacity(var(--c1-sys-palette-onSurfaceSecondary))};
   --c1-button-transitionFunction: var(--d-sys-transitionFunction-standard);
   
   font-family: var(--c1-ref-font-family-rubik);
@@ -11,8 +13,6 @@
   font-weight: var(--c1-ref-font-weight-500);
   @include lineHeight(#{var(--c1-ref-lineHeight-17)});
   letter-spacing: var(--c1-ref-letterSpacing-none);
-  
-  @include paletteColor(#{var(--c1-sys-palette-onSurfaceSecondary)});
   
   @include gradientOpacity(#{0});
   @include paletteGradient(#{var(--c1-sys-palette-onSurfaceSecondary)});
@@ -41,13 +41,13 @@
   }
   
   @include disabled {
-    @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
+    --c1-button-color: var(--c1-sys-palette-onDisabled);
     
     transition-duration: var(--d-sys-transitionDuration-sm);
   }
   
   &--selected {
-    @include paletteColor(#{var(--c1-sys-palette-primaryVariant)});
+    --c1-button-color: var(--c1-sys-palette-primaryVariant);
     
     @include paletteGradient(#{var(--c1-sys-palette-primaryVariant)});
   }
@@ -131,9 +131,9 @@
   }
   
   &--outlined {
-    @include paletteColor(#{var(--c1-sys-palette-onSecondary)});
-    
-    @include backgroundColor(#{var(--c1-sys-palette-surface)});
+    --c1-button-color: var(--c1-sys-palette-onSecondary);
+    --c1-button-color-opacity: #{toColorOpacity(var(--c1-sys-palette-onSecondary))};
+    --c1-button-backgroundColor: var(--c1-sys-palette-surface);
     
     &::before {
       content: ' ';
@@ -147,9 +147,8 @@
     }
     
     @include disabled('.c1-button') {
-      @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
-      
-      @include backgroundColor(#{var(--c1-sys-palette-disabled)});
+      --c1-button-color: var(--c1-sys-palette-onDisabled);
+      --c1-button-backgroundColor: var(--c1-sys-palette-disabled);
       
       &::before {
         content: ' ';
@@ -167,16 +166,14 @@
   }
   
   &--white {
-    @include paletteColor(#{var(--c1-sys-palette-onSurface)});
-    
-    @include backgroundColor(#{var(--c1-sys-palette-surface)});
+    --c1-button-color: var(--c1-sys-palette-onSurface);
+    --c1-button-backgroundColor: var(--c1-sys-palette-surface);
     
     box-shadow: var(--c1-ref-shadow-2);
     
     @include disabled('.c1-button') {
-      @include paletteColor(#{var(--c1-sys-palette-onDisabled)});
-      
-      @include backgroundColor(#{var(--c1-sys-palette-disabled)});
+      --c1-button-color: var(--c1-sys-palette-onDisabled);
+      --c1-button-backgroundColor: var(--c1-sys-palette-disabled);
       
       box-shadow: none;
     }

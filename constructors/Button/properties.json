@@ -5,6 +5,13 @@
   "padding": {
     "_type": "var"
   },
+  "color": {
+    "_type": "var"
+  },
+  "background-color": {
+    "_type": "var"
+  },
+  "border-radius": "0",
   "transition-property": "background-color, background-image, border, box-shadow",
   "transition-duration": "{d.sys.transitionDuration.lg.close}",
   "transition-function": "{d.sys.transitionFunction.standard}",

@@ -43,6 +43,15 @@ export class StylesToVar extends StylesToAbstract {
       return data
     }
 
+    const { item } = this.property
+
+    if (item?.[PropertyKey.cssColorOpacity]) {
+      return [
+        this.getCode(),
+        this.getCodeColorOpacity()
+      ]
+    }
+
     return [this.getCode()]
   }
 

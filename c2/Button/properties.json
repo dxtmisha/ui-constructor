@@ -12,21 +12,22 @@
     "_settingClone": true
   },
   "gap": {
-    "_type": "property"
+    "_type": "property",
+    "_var": true
   },
   "padding": {
     "_type": "property"
   },
   "padding-spacer": {
-    "width": "{??spacer.padding} + {??spacer.lineContainer.width}"
-  },
-  "color": {
-    "_rename": "palette-color"
-  },
-  "background-color": {
-    "_rename": "palette-background"
+    "width": "{??spacer.padding} + {??spacer.lineContainer.width} - ({??gap} * 2)"
   },
   "container": {
+    "height": {
+      "_drag": "../../label",
+      "_dragSetting": {
+        "label": "{??label}"
+      }
+    },
     "content": {
       "label": {
         "_drag": "../../.."

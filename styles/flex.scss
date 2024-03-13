@@ -39,23 +39,23 @@
 }
 
 @mixin flexInlineX {
-  @include flexX;
   @include flexInline;
+  align-items: center;
 }
 
 @mixin flexInlineY {
-  @include flexY;
-  @include flexInline;
+  @include flexInlineX;
+  flex-flow: column;
 }
 
 @mixin flexInlineCenter {
-  @include flexCenter;
-  @include flexInline;
+  @include flexInlineX;
+  justify-content: center;
 }
 
 @mixin flexInlineBetween {
-  @include flexBetween;
-  @include flexInline;
+  @include flexInlineX;
+  justify-content: space-between;
 }
 
 @mixin flexPosition($value) {

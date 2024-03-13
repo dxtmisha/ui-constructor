@@ -163,10 +163,10 @@ export class ButtonDesign<
     const setup = this.setup()
     const children: any[] = [
       ...setup.renderProgress(),
-      h('div', { class: setup.classes.value.paddingSpacer }),
       ...setup.renderLabel(),
       ...setup.renderIcon(),
-      h('div', { class: setup.classes.value.paddingSpacer })
+      h('span', { class: setup.classes.value.paddingSpacer }),
+      h('span', { class: setup.classes.value.paddingSpacer })
     ]
 
     if (setup.isEnabled.value) {
