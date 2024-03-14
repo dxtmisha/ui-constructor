@@ -143,6 +143,18 @@ const h = "ui", y = "Ui", m = "library", f = [
     path: "m3/Scrollbar"
   },
   {
+    name: "M3Skeleton",
+    design: "m3",
+    code: "m3-skeleton",
+    path: "m3/Skeleton"
+  },
+  {
+    name: "M3SkeletonItem",
+    design: "m3",
+    code: "m3-skeleton-item",
+    path: "m3/SkeletonItem"
+  },
+  {
     name: "M3Window",
     design: "m3",
     code: "m3-window",
@@ -651,12 +663,6 @@ const h = "ui", y = "Ui", m = "library", f = [
     "sys-shade-dark-secondaryVariant"
   ],
   m3: [
-    "ref-background-0",
-    "ref-background-1",
-    "ref-background-2",
-    "ref-background-3",
-    "ref-background-4",
-    "ref-background-5",
     "ref-font-family-roboto",
     "ref-font-size-11",
     "ref-font-size-12",
@@ -916,6 +922,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     "ref-spacing-256",
     "ref-spacing-512",
     "ref-spacing-px",
+    "sys-background-0",
+    "sys-background-1",
+    "sys-background-2",
+    "sys-background-3",
+    "sys-background-4",
+    "sys-background-5",
     "sys-opacity-004",
     "sys-opacity-008",
     "sys-opacity-012",
@@ -2839,8 +2851,7 @@ class v {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const p = `(?<=<)(${s.designs.join("|")})([A-Z0-9-])([^ >\r
-]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
+const p = `(?<=<|'|"\\s)(${s.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
 class H {
   /**
    * Constructor

@@ -1,0 +1,1 @@
+"use strict";class t{constructor(s,e="is-skeleton"){this.props=s,this.className=e}isActive(){return!!this.props.active}getClasses(){return t.getClassesList(this.className)}static getClassesList(s){return{classText:`${s}__text`,classBackground:`${s}__background`,classBorder:`${s}__border`}}}const r="skeleton-status";exports.SKELETON_NAME_STATUS=r;exports.Skeleton=t;

@@ -1,0 +1,1 @@
+"use strict";const r=require("./getElement-BELE3lVa.cjs"),d=require("./isFilled-BySHTEb1.cjs"),s=require("./random-DcaPF-v1.cjs");let i=s.random(1e5,9e5);function l(n,t){const e=r.getElement(n);return e?(d.isFilled(e.id)||e.setAttribute("id",`id-${i++}`),t?`#${e.id}${t}`.trim():e.id):`id-${i++}`}exports.getElementId=l;

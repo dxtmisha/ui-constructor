@@ -1,0 +1,5 @@
+{
+  "color": "{sys.palette.outlineVariant}",
+  "background-color": "{sys.palette.outlineVariant}",
+  "border-color": "{sys.palette.outlineVariant}"
+}

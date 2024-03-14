@@ -61,6 +61,8 @@
   position: relative;
 
   &::after {
+    content: ' ';
     @include absolute($value);
+    @content;
   }
 }

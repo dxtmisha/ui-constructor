@@ -10,7 +10,7 @@ type PluginComponentItem = {
   path: string
 }
 
-const regDesigns = `(?<=<)(${data.designs.join('|')})([A-Z0-9-])([^ >\r\n]+)`
+const regDesigns = `(?<=<|'|"\\s)(${data.designs.join('|')})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`
 const regMatch = new RegExp(regDesigns, 'i')
 const regMatchAll = new RegExp(regDesigns, 'ig')
 

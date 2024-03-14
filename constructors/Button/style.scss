@@ -44,13 +44,13 @@
     gap: v('??gap');
 
     order: 4;
-    padding: 0 v('??padding');
+    @include paddingX(v('??padding'));
     transition: opacity #{v('d.sys.transitionDuration.standard')} linear;
   }
 
   &__paddingSpacer {
     display: none;
-    order: 1;
+    order: 0;
   }
 
   &__paddingSpacer ~ &__paddingSpacer {
@@ -73,7 +73,7 @@
   }
 
   &__label ~ &__icon ~ &__paddingSpacer:not(:last-child) {
-    display: none;
+    // display: none;
   }
 
   &__label ~ &__trailing {
@@ -81,7 +81,7 @@
   }
 
   &__label ~ &__trailing ~ &__paddingSpacer:last-child {
-    display: none;
+    // display: none;
   }
 
   &__loading#{'.'}#{n('?progress--visible')} ~ * {

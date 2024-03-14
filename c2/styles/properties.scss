@@ -1053,6 +1053,48 @@ $designsProperties: (
           ),
         ),
       ),
+      'skeleton':(
+        index: 'skeleton',
+        name: 'd-skeleton',
+        type: 'component',
+        value: (
+          'active':(
+            index: 'active',
+            name: '&--active',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'skeletonItem':(
+        index: 'skeletonItem',
+        name: 'd-skeletonItem',
+        type: 'component',
+        value: (
+          'text':(
+            index: 'text',
+            name: '&--text',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'background':(
+            index: 'background',
+            name: '&--background',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'window':(
         index: 'window',
         name: 'd-window',
@@ -17842,12 +17884,6 @@ $designsProperties: (
             name: '&__label',
             type: 'subclass',
             value: (
-              'height':(
-                index: 'height',
-                name: 'height',
-                type: 'property',
-                value: 'auto',
-              ),
             ),
           ),
           'paddingSpacer':(
@@ -18138,19 +18174,6 @@ $designsProperties: (
                     value: (
                     ),
                   ),
-                  'label':(
-                    index: 'label',
-                    name: '& .c2-button__label',
-                    type: 'subclass',
-                    value: (
-                      'height':(
-                        index: 'height',
-                        name: 'height',
-                        type: 'property',
-                        value: 'var(--c2-base-size-icons-lg)',
-                      ),
-                    ),
-                  ),
                 ),
               ),
               'md':(
@@ -18242,19 +18265,6 @@ $designsProperties: (
                     name: '& .c2-button__icon',
                     type: 'subclass',
                     value: (
-                    ),
-                  ),
-                  'label':(
-                    index: 'label',
-                    name: '& .c2-button__label',
-                    type: 'subclass',
-                    value: (
-                      'height':(
-                        index: 'height',
-                        name: 'height',
-                        type: 'property',
-                        value: 'var(--c2-base-size-icons-lg)',
-                      ),
                     ),
                   ),
                 ),
@@ -18355,11 +18365,11 @@ $designsProperties: (
                     name: '& .c2-button__label',
                     type: 'subclass',
                     value: (
-                      'height':(
-                        index: 'height',
-                        name: 'height',
+                      'padding':(
+                        index: 'padding',
+                        name: 'padding',
                         type: 'property',
-                        value: 'var(--c2-ct-selectable-icon-size-md)',
+                        value: 'var(--c2-st-global-distance-space-inset-x)0',
                       ),
                     ),
                   ),
@@ -18456,19 +18466,6 @@ $designsProperties: (
                     value: (
                     ),
                   ),
-                  'label':(
-                    index: 'label',
-                    name: '& .c2-button__label',
-                    type: 'subclass',
-                    value: (
-                      'height':(
-                        index: 'height',
-                        name: 'height',
-                        type: 'property',
-                        value: 'var(--c2-ct-selectable-icon-size-md)',
-                      ),
-                    ),
-                  ),
                 ),
               ),
               'x':(
@@ -18560,19 +18557,6 @@ $designsProperties: (
                     name: '& .c2-button__icon',
                     type: 'subclass',
                     value: (
-                    ),
-                  ),
-                  'label':(
-                    index: 'label',
-                    name: '& .c2-button__label',
-                    type: 'subclass',
-                    value: (
-                      'height':(
-                        index: 'height',
-                        name: 'height',
-                        type: 'property',
-                        value: 'var(--c2-ct-selectable-icon-size-md)',
-                      ),
                     ),
                   ),
                 ),

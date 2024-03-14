@@ -1,131 +1,135 @@
-import { D as s, a as t, b as o, g as r, c as i, d as n, e as m, f, r as g, s as l, u as p } from "./getClipboardData-C58U0kqa.js";
-import { G as u, c as x, a as C, i as b } from "./Geo-BOuiw8Eo.js";
-import { c as D, g as R, s as d } from "./createElement-Bvijtmfm.js";
-import { e as M } from "./eventStopPropagation-fHm2p5BF.js";
-import { e as I, g as y, i as h, a as F } from "./getElement-uQ-JTFk-.js";
-import { f as O, a as v, i as L, t as N } from "./toArray-J4lAhJG7.js";
-import { f as B, g as T, a as j } from "./getMouseClientY-BILUOOAB.js";
-import { G as q, b as H, c as K, M as _, g as P, t as W, a as z } from "./MutationDataItem-BkaAFILl.js";
-import { g as Y, r as J } from "./getElementId-D4gB7mP1.js";
+import { D as s, a as t, g as o, b as r, c as i, d as n, e as m, r as f, u as g } from "./getClipboardData-2HyTb4n7.js";
+import { a as p, s as c } from "./strFill-CYHpRbDF.js";
+import { G as x, c as b, a as C, i as A } from "./Geo-BOuiw8Eo.js";
+import { c as R, g as d, s as G } from "./createElement-Bvijtmfm.js";
+import { e as E } from "./eventStopPropagation-fHm2p5BF.js";
+import { e as y, g as h, i as F, a as S } from "./getElement-uQ-JTFk-.js";
+import { f as v, a as L, i as N, t as k } from "./toArray-J4lAhJG7.js";
+import { f as T, g as j, a as w } from "./getMouseClientY-BILUOOAB.js";
+import { G as H, b as K, c as _, M as P, g as W, t as z, a as X } from "./MutationDataItem-Bi0TUuxI.js";
+import { g as J } from "./getElementId-DcBzUPo-.js";
 import { E as U, g as V, i as Z } from "./EventItem-CNRiCeQO.js";
-import { C as ee, h as ae, j as se, k as te, D as oe, E as re, l as ie, m as ne, G as me, n as fe, H as ge, M as le, f as pe, g as ce, a as ue, b as xe, i as Ce, c as be, d as Ae, e as De, r as Re, s as de, A as Ge, t as Me, o as Ee, p as Ie, q as ye, w as he, x as Fe, y as Se, z as Oe } from "./index-BoIj40yH.js";
+import { C as ee, h as ae, j as se, k as te, D as oe, E as re, l as ie, m as ne, G as me, n as fe, H as ge, M as le, f as pe, g as ce, a as ue, b as xe, i as be, c as Ce, d as Ae, e as De, r as Re, s as de, A as Ge, t as Me, o as Ee, p as Ie, q as ye, w as he, x as Fe, y as Se, z as Oe } from "./index-DEGPPo8K.js";
 import { A as Le, a as Ne, L as ke, g as Be } from "./Api-DPTFo5Em.js";
 import { i as je } from "./inArray-BLmbg9f_.js";
 import { i as qe } from "./isArray-QlWcxgml.js";
 import { D as Ke, E as _e, i as Pe, t as We, u as ze } from "./DataStorage-BS0mwKb9.js";
 import { i as Ye } from "./isFilled-ClO-1E4U.js";
 import { i as Qe } from "./isNull-CjWwlQS3.js";
-import { D as Ve, c as Ze, a as $e, b as ea, g as aa, r as sa, t as ta } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { g as ra } from "./getBind-CgHMfjrB.js";
-import { C as na, G as ma, t as fa } from "./GeoIntl-DH3GBVnO.js";
-import { t as la } from "./toNumber-eA5ODeva.js";
-import { G as ca, a as ua } from "./GeoFlag-DfvLx1lW.js";
-import { I as Ca } from "./Icons-CdwVzsbE.js";
-import { T as Aa } from "./Translate-uy9VsNDO.js";
-import { D as Ra, a as da, b as Ga } from "./DesignAsyncAbstract-Bi5cMulT.js";
-import { M as Ea, a as Ia, b as ya, c as ha } from "./Mutation-DfMpPPdj.js";
+import { i as Ve } from "./isNumber-B0xyO2hM.js";
+import { r as $e } from "./random-Bem8L1UP.js";
+import { D as aa, c as sa, a as ta, b as oa, g as ra, r as ia, t as na } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { g as fa } from "./getBind-CgHMfjrB.js";
+import { C as la, G as pa, t as ca } from "./GeoIntl-DH3GBVnO.js";
+import { t as xa } from "./toNumber-eA5ODeva.js";
+import { G as Ca, a as Aa } from "./GeoFlag-DfvLx1lW.js";
+import { I as Ra } from "./Icons-CdwVzsbE.js";
+import { T as Ga } from "./Translate-uy9VsNDO.js";
+import { D as Ea, a as Ia, b as ya } from "./DesignAsyncAbstract-Bi5cMulT.js";
+import { M as Fa, a as Sa, b as Oa, c as va } from "./Mutation-CDwPP8V4.js";
 export {
   Le as Api,
   Ne as ApiMethodItem,
   ee as Cache,
-  na as CacheItem,
+  la as CacheItem,
   ae as CacheStatic,
   se as Cookie,
   te as CookieBlock,
   Ke as DataStorage,
   s as Datetime,
   oe as DatetimeRef,
-  Ra as DesignAbstract,
-  da as DesignAsyncAbstract,
-  Ga as DesignChanged,
-  Ve as DesignComponents,
-  Ze as DesignConstructorAbstract,
+  Ea as DesignAbstract,
+  Ia as DesignAsyncAbstract,
+  ya as DesignChanged,
+  aa as DesignComponents,
+  sa as DesignConstructorAbstract,
   _e as Env,
   U as EventItem,
   re as EventRef,
-  ca as GEO_FLAG_ICON_NAME,
-  u as Geo,
-  ua as GeoFlag,
+  Ca as GEO_FLAG_ICON_NAME,
+  x as Geo,
+  Aa as GeoFlag,
   ie as GeoFlagRef,
-  ma as GeoIntl,
+  pa as GeoIntl,
   ne as GeoIntlRef,
   me as GeoPhone,
   fe as GeoRef,
-  q as Global,
+  H as Global,
   ge as Hash,
-  Ca as Icons,
+  Ra as Icons,
   ke as Loading,
-  Ea as Mutation,
-  H as MutationCollect,
-  Ia as MutationData,
-  K as MutationDataItem,
-  _ as MutationGlobal,
+  Fa as Mutation,
+  K as MutationCollect,
+  Sa as MutationData,
+  _ as MutationDataItem,
+  P as MutationGlobal,
   le as MutationGlobalRef,
-  ya as MutationObserverGlobal,
-  ha as MutationObserverItems,
-  Aa as Translate,
+  Oa as MutationObserverGlobal,
+  va as MutationObserverItems,
+  Ga as Translate,
   t as anyToString,
-  o as arrFill,
-  x as copyObject,
-  D as createElement,
-  M as eventStopPropagation,
-  I as executeFunction,
-  O as forEach,
-  B as frame,
-  P as getAttributes,
-  ra as getBind,
+  p as arrFill,
+  b as copyObject,
+  R as createElement,
+  E as eventStopPropagation,
+  y as executeFunction,
+  v as forEach,
+  T as frame,
+  W as getAttributes,
+  fa as getBind,
   pe as getBindRef,
-  $e as getClassName,
-  r as getClipboardData,
-  i as getColumn,
-  y as getElement,
-  Y as getElementId,
-  R as getElementItem,
+  ta as getClassName,
+  o as getClipboardData,
+  r as getColumn,
+  h as getElement,
+  J as getElementId,
+  d as getElementItem,
   V as getElementOrWindow,
-  n as getExp,
-  ea as getIndexForRender,
+  i as getExp,
+  oa as getIndexForRender,
   ce as getKey,
-  m as getLengthOfAllArray,
-  f as getMaxLengthAllArray,
+  n as getLengthOfAllArray,
+  m as getMaxLengthAllArray,
   ue as getMinLengthAllArray,
   xe as getMouseClient,
-  T as getMouseClientX,
-  j as getMouseClientY,
-  aa as getRef,
+  j as getMouseClientX,
+  w as getMouseClientY,
+  ra as getRef,
   Be as getRequestString,
   je as inArray,
-  Ce as intersectKey,
+  be as intersectKey,
   qe as isArray,
-  be as isDifferent,
+  Ce as isDifferent,
   Pe as isDomRuntime,
   Ye as isFilled,
-  h as isFunction,
+  F as isFunction,
   Z as isInDom,
   Ae as isIntegerBetween,
   Qe as isNull,
-  v as isObject,
-  L as isObjectNotArray,
+  Ve as isNumber,
+  L as isObject,
+  N as isObjectNotArray,
   C as isSelected,
   De as isSelectedByList,
-  b as isString,
-  F as isWindow,
-  J as random,
-  sa as render,
-  g as replaceRecursive,
+  A as isString,
+  S as isWindow,
+  $e as random,
+  ia as render,
+  f as replaceRecursive,
   Re as replaceTemplate,
-  d as setElementItem,
+  G as setElementItem,
   de as splice,
-  l as strFill,
+  c as strFill,
   Ge as t,
-  N as toArray,
-  ta as toCamelCase,
-  W as toCamelCaseFirst,
-  fa as toDate,
-  z as toKebabCase,
-  la as toNumber,
+  k as toArray,
+  na as toCamelCase,
+  z as toCamelCaseFirst,
+  ca as toDate,
+  X as toKebabCase,
+  xa as toNumber,
   Me as toRefItem,
   We as transformation,
-  p as uniqueArray,
+  g as uniqueArray,
   Ee as useApiRef,
   Ie as useCookieRef,
   ze as useEnv,

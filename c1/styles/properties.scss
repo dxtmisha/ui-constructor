@@ -881,6 +881,48 @@ $designsProperties: (
           ),
         ),
       ),
+      'skeleton':(
+        index: 'skeleton',
+        name: 'd-skeleton',
+        type: 'component',
+        value: (
+          'active':(
+            index: 'active',
+            name: '&--active',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'skeletonItem':(
+        index: 'skeletonItem',
+        name: 'd-skeletonItem',
+        type: 'component',
+        value: (
+          'text':(
+            index: 'text',
+            name: '&--text',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'background':(
+            index: 'background',
+            name: '&--background',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'window':(
         index: 'window',
         name: 'd-window',

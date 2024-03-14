@@ -82,14 +82,14 @@
         "content": {
           "gap": "{st.global.distance.space.inline.xs}",
           "label": {
-            "font": "{st.text.label.sm}"
+            "font": "{st.text.label.sm}",
+            "padding": "{st.global.distance.space.inset.x}0"
           }
         },
         "right": {
           "width": "{ct.selectable.icon.size.md}",
           "height": "{ct.selectable.icon.size.md}"
-        },
-        "height": "{ct.selectable.icon.size.md}"
+        }
       },
       "icon": {
         "only": {

@@ -1,0 +1,57 @@
+@import "../../styles/properties";
+
+@mixin mixinSkeleton {
+  $this: &;
+
+  @include initByCustom('opacity', .32);
+  @include initByCustom('animation', #{n('??animationType1') v('d.ref.transitionFunction.linear') 2.4s infinite});
+
+  &--active {
+    animation: v('??animation');
+
+    @include absoluteAfter {
+      z-index: 999999;
+    }
+
+    * {
+      color: transparent !important;
+      background: transparent !important;
+      border-color: transparent !important;
+
+      box-shadow: none !important;
+    }
+
+    @include subclass('text') {
+      color: transparent;
+      text-decoration-line: line-through;
+      text-decoration-thickness: var(--sys-font-size);
+      @include color(v('??color'), v('??colorOpacity'), 'text-decoration-color', true);
+    }
+
+    @include subclass('background') {
+      @include backgroundColor(v('??backgroundColor'), v('??backgroundOpacity', 1), true);
+    }
+
+    @include subclass('border') {
+      @include borderColor(v('??borderColor'), v('??borderOpacity', 1), true);
+    }
+  }
+
+  @keyframes #{n('??animationType1')} {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      opacity: v('??opacity');
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,20 +1,21 @@
-import { M as e } from "./MutationDataItem-BkaAFILl.js";
-import { G as d, b as R, c as E, g as I, t as b, a as A } from "./MutationDataItem-BkaAFILl.js";
-import { M as s, v as t, u as a } from "./index-BoIj40yH.js";
-import { C as M, h as w, j as G, k as y, D as U, E as O, l as h, m as _, G as v, n as F, H as S, f as L, g as k, a as B, b as N, i as T, c as j, d as V, e as q, r as H, s as K, A as P, t as W, o as X, p as z, q as Y, w as J, x as Q, y as Z, z as $ } from "./index-BoIj40yH.js";
+import { M as e } from "./MutationDataItem-Bi0TUuxI.js";
+import { G as d, b as R, c as E, g as b, t as I, a as A } from "./MutationDataItem-Bi0TUuxI.js";
+import { M as s, v as t, u as a } from "./index-DEGPPo8K.js";
+import { C as M, h as w, j as G, k as y, D as U, E as O, l as h, m as _, G as v, n as F, H as S, f as L, g as N, a as k, b as B, i as T, c as j, d as V, e as q, r as H, s as K, A as P, t as W, o as X, p as z, q as Y, w as J, x as Q, y as Z, z as $ } from "./index-DEGPPo8K.js";
 import { components as o } from "./components.js";
 import { makeUiMedia as r } from "./media.js";
 import { registrationUiBasic as i } from "./registration-basic.js";
 import * as n from "vue";
 import * as m from "vue-router";
-import { D as ae, a as se, b as te, g as oe, c as re, d as ie, e as ne, f as me, r as fe, s as ge, u as le } from "./getClipboardData-C58U0kqa.js";
-import { G as ue, c as ce, a as xe, i as Ce } from "./Geo-BOuiw8Eo.js";
-import { c as Re, g as Ee, s as Ie } from "./createElement-Bvijtmfm.js";
-import { e as Ae } from "./eventStopPropagation-fHm2p5BF.js";
-import { e as Me, g as we, i as Ge, a as ye } from "./getElement-uQ-JTFk-.js";
-import { f as Oe, a as he, i as _e, t as ve } from "./toArray-J4lAhJG7.js";
-import { f as Se, g as Le, a as ke } from "./getMouseClientY-BILUOOAB.js";
-import { g as Ne, r as Te } from "./getElementId-D4gB7mP1.js";
+import { D as ae, a as se, g as te, b as oe, c as re, d as ie, e as ne, r as me, u as fe } from "./getClipboardData-2HyTb4n7.js";
+import { a as pe, s as le } from "./strFill-CYHpRbDF.js";
+import { G as ce, c as xe, a as Ce, i as de } from "./Geo-BOuiw8Eo.js";
+import { c as Ee, g as be, s as Ie } from "./createElement-Bvijtmfm.js";
+import { e as De } from "./eventStopPropagation-fHm2p5BF.js";
+import { e as we, g as Ge, i as ye, a as Ue } from "./getElement-uQ-JTFk-.js";
+import { f as he, a as _e, i as ve, t as Fe } from "./toArray-J4lAhJG7.js";
+import { f as Le, g as Ne, a as ke } from "./getMouseClientY-BILUOOAB.js";
+import { g as Te } from "./getElementId-DcBzUPo-.js";
 import { E as Ve, g as qe, i as He } from "./EventItem-CNRiCeQO.js";
 import { A as Pe, a as We, L as Xe, g as ze } from "./Api-DPTFo5Em.js";
 import { i as Je } from "./inArray-BLmbg9f_.js";
@@ -22,15 +23,17 @@ import { i as Ze } from "./isArray-QlWcxgml.js";
 import { D as ea, E as aa, i as sa, t as ta, u as oa } from "./DataStorage-BS0mwKb9.js";
 import { i as ia } from "./isFilled-ClO-1E4U.js";
 import { i as ma } from "./isNull-CjWwlQS3.js";
-import { D as ga, c as la, a as pa, b as ua, g as ca, r as xa, t as Ca } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { g as Ra } from "./getBind-CgHMfjrB.js";
-import { C as Ia, G as ba, t as Aa } from "./GeoIntl-DH3GBVnO.js";
-import { t as Ma } from "./toNumber-eA5ODeva.js";
-import { G as Ga, a as ya } from "./GeoFlag-DfvLx1lW.js";
-import { I as Oa } from "./Icons-CdwVzsbE.js";
-import { T as _a } from "./Translate-uy9VsNDO.js";
-import { D as Fa, a as Sa, b as La } from "./DesignAsyncAbstract-Bi5cMulT.js";
-import { M as Ba, a as Na, b as Ta, c as ja } from "./Mutation-DfMpPPdj.js";
+import { i as ga } from "./isNumber-B0xyO2hM.js";
+import { r as la } from "./random-Bem8L1UP.js";
+import { D as ca, c as xa, a as Ca, b as da, g as Ra, r as Ea, t as ba } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { g as Aa } from "./getBind-CgHMfjrB.js";
+import { C as Ma, G as wa, t as Ga } from "./GeoIntl-DH3GBVnO.js";
+import { t as Ua } from "./toNumber-eA5ODeva.js";
+import { G as ha, a as _a } from "./GeoFlag-DfvLx1lW.js";
+import { I as Fa } from "./Icons-CdwVzsbE.js";
+import { T as La } from "./Translate-uy9VsNDO.js";
+import { D as ka, a as Ba, b as Ta } from "./DesignAsyncAbstract-Bi5cMulT.js";
+import { M as Va, a as qa, b as Ha, c as Ka } from "./Mutation-CDwPP8V4.js";
 e.addComponentList(o);
 window.UI = e;
 window.UI_VUE = s;
@@ -45,70 +48,70 @@ export {
   Pe as Api,
   We as ApiMethodItem,
   M as Cache,
-  Ia as CacheItem,
+  Ma as CacheItem,
   w as CacheStatic,
   G as Cookie,
   y as CookieBlock,
   ea as DataStorage,
   ae as Datetime,
   U as DatetimeRef,
-  Fa as DesignAbstract,
-  Sa as DesignAsyncAbstract,
-  La as DesignChanged,
-  ga as DesignComponents,
-  la as DesignConstructorAbstract,
+  ka as DesignAbstract,
+  Ba as DesignAsyncAbstract,
+  Ta as DesignChanged,
+  ca as DesignComponents,
+  xa as DesignConstructorAbstract,
   aa as Env,
   Ve as EventItem,
   O as EventRef,
-  Ga as GEO_FLAG_ICON_NAME,
-  ue as Geo,
-  ya as GeoFlag,
+  ha as GEO_FLAG_ICON_NAME,
+  ce as Geo,
+  _a as GeoFlag,
   h as GeoFlagRef,
-  ba as GeoIntl,
+  wa as GeoIntl,
   _ as GeoIntlRef,
   v as GeoPhone,
   F as GeoRef,
   d as Global,
   S as Hash,
-  Oa as Icons,
+  Fa as Icons,
   Xe as Loading,
-  Ba as Mutation,
+  Va as Mutation,
   R as MutationCollect,
-  Na as MutationData,
+  qa as MutationData,
   E as MutationDataItem,
   e as MutationGlobal,
   s as MutationGlobalRef,
-  Ta as MutationObserverGlobal,
-  ja as MutationObserverItems,
-  _a as Translate,
+  Ha as MutationObserverGlobal,
+  Ka as MutationObserverItems,
+  La as Translate,
   se as anyToString,
-  te as arrFill,
-  ce as copyObject,
-  Re as createElement,
-  Ae as eventStopPropagation,
-  Me as executeFunction,
-  Oe as forEach,
-  Se as frame,
-  I as getAttributes,
-  Ra as getBind,
+  pe as arrFill,
+  xe as copyObject,
+  Ee as createElement,
+  De as eventStopPropagation,
+  we as executeFunction,
+  he as forEach,
+  Le as frame,
+  b as getAttributes,
+  Aa as getBind,
   L as getBindRef,
-  pa as getClassName,
-  oe as getClipboardData,
-  re as getColumn,
-  we as getElement,
-  Ne as getElementId,
-  Ee as getElementItem,
+  Ca as getClassName,
+  te as getClipboardData,
+  oe as getColumn,
+  Ge as getElement,
+  Te as getElementId,
+  be as getElementItem,
   qe as getElementOrWindow,
-  ie as getExp,
-  ua as getIndexForRender,
-  k as getKey,
-  ne as getLengthOfAllArray,
-  me as getMaxLengthAllArray,
-  B as getMinLengthAllArray,
-  N as getMouseClient,
-  Le as getMouseClientX,
+  re as getExp,
+  da as getIndexForRender,
+  N as getKey,
+  ie as getLengthOfAllArray,
+  ne as getMaxLengthAllArray,
+  k as getMinLengthAllArray,
+  B as getMouseClient,
+  Ne as getMouseClientX,
   ke as getMouseClientY,
-  ca as getRef,
+  Ra as getRef,
   ze as getRequestString,
   Je as inArray,
   T as intersectKey,
@@ -116,34 +119,35 @@ export {
   j as isDifferent,
   sa as isDomRuntime,
   ia as isFilled,
-  Ge as isFunction,
+  ye as isFunction,
   He as isInDom,
   V as isIntegerBetween,
   ma as isNull,
-  he as isObject,
-  _e as isObjectNotArray,
-  xe as isSelected,
+  ga as isNumber,
+  _e as isObject,
+  ve as isObjectNotArray,
+  Ce as isSelected,
   q as isSelectedByList,
-  Ce as isString,
-  ye as isWindow,
-  Te as random,
+  de as isString,
+  Ue as isWindow,
+  la as random,
   c as registrationUiMain,
-  xa as render,
-  fe as replaceRecursive,
+  Ea as render,
+  me as replaceRecursive,
   H as replaceTemplate,
   Ie as setElementItem,
   K as splice,
-  ge as strFill,
+  le as strFill,
   P as t,
-  ve as toArray,
-  Ca as toCamelCase,
-  b as toCamelCaseFirst,
-  Aa as toDate,
+  Fe as toArray,
+  ba as toCamelCase,
+  I as toCamelCaseFirst,
+  Ga as toDate,
   A as toKebabCase,
-  Ma as toNumber,
+  Ua as toNumber,
   W as toRefItem,
   ta as transformation,
-  le as uniqueArray,
+  fe as uniqueArray,
   X as useApiRef,
   z as useCookieRef,
   oa as useEnv,

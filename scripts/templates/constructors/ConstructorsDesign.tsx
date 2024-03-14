@@ -126,13 +126,13 @@ export class ConstructorsDesign<
    * Метод для рендеринга.
    */
   protected initRender (): VNode {
-    // const setup = this.setup()
+    const setup = this.setup()
     // const children: any[] = []
 
     return h('div', {
       // ...this.getAttrs(),
       ref: this.element,
-      class: this.classes?.value.main
+      class: setup.classes?.value.main
     })
   }
 }

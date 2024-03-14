@@ -84,6 +84,14 @@ export default defineNuxtModule({
       filePath: 'ui/dist/M3Scrollbar.vue'
     })
     await addComponent({
+      name: 'M3Skeleton',
+      filePath: 'ui/dist/M3Skeleton.vue'
+    })
+    await addComponent({
+      name: 'M3SkeletonItem',
+      filePath: 'ui/dist/M3SkeletonItem.vue'
+    })
+    await addComponent({
       name: 'M3Window',
       filePath: 'ui/dist/M3Window.vue'
     })

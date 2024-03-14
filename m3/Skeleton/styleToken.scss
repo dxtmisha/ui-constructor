@@ -1,0 +1,9 @@
+@import "../../styles/all";
+
+@mixin mixinSkeletonToken {
+  // :style [!] System label / Системная метка
+  --m3-skeleton-color: var(--m3-sys-palette-outlineVariant);
+  --m3-skeleton-backgroundColor: var(--m3-sys-palette-outlineVariant);
+  --m3-skeleton-borderColor: var(--m3-sys-palette-outlineVariant);
+  // :style [!] System label / Системная метка
+}

@@ -4,8 +4,9 @@ var a = (n, t, e) => (A(n, typeof t != "symbol" ? t + "" : t, e), e);
 import { shallowRef as v, watchEffect as K, h as m, defineComponent as R, computed as B, openBlock as $, createBlock as N, resolveDynamicComponent as j, unref as P } from "vue";
 import { i as _ } from "./inArray-BLmbg9f_.js";
 import { c as Y } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { d as q, s as C, D as M, a as I, c as H, r as U, f as G, g as Q } from "./getClipboardData-C58U0kqa.js";
+import { c as q, D as M, a as C, b as H, r as U, e as G, g as Q } from "./getClipboardData-2HyTb4n7.js";
 import { f as S, i as d, a as W, t as z } from "./toArray-J4lAhJG7.js";
+import { s as I } from "./strFill-CYHpRbDF.js";
 import { G as J, C as f } from "./GeoIntl-DH3GBVnO.js";
 import { i as y } from "./isArray-QlWcxgml.js";
 import { a as V, i as w } from "./Geo-BOuiw8Eo.js";
@@ -251,7 +252,7 @@ class rt {
     return S(this.value, (s, i) => {
       e = e.replace(
         q(i, "g", "([:value]+)"),
-        (r) => `${r}${C(i, s)}`
+        (r) => `${r}${I(i, s)}`
       );
     }), e;
   }
@@ -548,7 +549,7 @@ class ct {
    */
   getNumberForString() {
     var r;
-    const t = this.getFraction(), e = C("9", this.rubberItem.getByIndex("n") + 1), s = t ? `.${C("3", t)}` : "", i = this.type.isCurrency() && ((r = this.props) != null && r.currency) ? ` ${this.props.currency}` : "";
+    const t = this.getFraction(), e = I("9", this.rubberItem.getByIndex("n") + 1), s = t ? `.${I("3", t)}` : "", i = this.type.isCurrency() && ((r = this.props) != null && r.currency) ? ` ${this.props.currency}` : "";
     return `${e}${s}${i}`;
   }
 }
@@ -749,7 +750,7 @@ function x(n, t = "check") {
     input: e,
     pattern: n,
     check(s) {
-      return e.value = I(s), {
+      return e.value = C(s), {
         group: t,
         input: e,
         status: e.checkValidity(),
@@ -2299,7 +2300,7 @@ class xt {
       this.validation,
       this.emit,
       this.data
-    ), t != null && t.value && (this.oldValue = I(t == null ? void 0 : t.value), this.data.reset(this.oldValue));
+    ), t != null && t.value && (this.oldValue = C(t == null ? void 0 : t.value), this.data.reset(this.oldValue));
   }
   /**
    * Receiving basic standard values.<br>
@@ -2337,7 +2338,7 @@ class xt {
    * @param value new values /<br>новые значения
    */
   reset(t) {
-    const e = I(t);
+    const e = C(t);
     return this.oldValue !== e ? (this.oldValue = e, this.data.reset(e), this.emit.set("reset", {}).go(), !0) : !1;
   }
 }
@@ -2620,7 +2621,7 @@ const o = {
     ), c = u.render();
     return t(u.expose()), (l, g) => ($(), N(j(P(c))));
   }
-}), Gt = Ft;
+}), Qt = Ft;
 export {
-  Gt as M3Mask
+  Qt as M3Mask
 };

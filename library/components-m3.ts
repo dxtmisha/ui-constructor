@@ -15,6 +15,8 @@ import { M3MutationItem } from '../m3/MutationItem'
 import { M3Progress } from '../m3/Progress'
 import { M3Ripple } from '../m3/Ripple'
 import { M3Scrollbar } from '../m3/Scrollbar'
+import { M3Skeleton } from '../m3/Skeleton'
+import { M3SkeletonItem } from '../m3/SkeletonItem'
 import { M3Window } from '../m3/Window'
 
 export const components = {
@@ -29,6 +31,8 @@ export const components = {
   M3Progress,
   M3Ripple,
   M3Scrollbar,
+  M3Skeleton,
+  M3SkeletonItem,
   M3Window
 }
 

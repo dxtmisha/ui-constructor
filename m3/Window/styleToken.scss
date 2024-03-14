@@ -12,7 +12,7 @@
   &__body {
     z-index: var(--m3-ref-index-4);
     
-    background: var(--m3-ref-background-4);
+    background: var(--m3-sys-background-4);
     
     border-radius: var(--m3-sys-rounded-2xl);
     
@@ -93,7 +93,7 @@
         max-width: calc(100dvw - (var(--m3-window-padding) * 2));
         max-height: calc(100dvh - (var(--m3-window-padding) * 2));
         
-        background: var(--m3-ref-background-2);
+        background: var(--m3-sys-background-2);
         
         border-radius: var(--m3-sys-rounded-sm);
         
@@ -152,7 +152,7 @@
           max-width: calc(100dvw - (var(--m3-window-padding) * 2));
           max-height: calc(100dvh - (var(--m3-window-padding) * 2));
           
-          background: var(--m3-ref-background-2);
+          background: var(--m3-sys-background-2);
           
           border-radius: var(--m3-sys-rounded-sm);
           

@@ -924,6 +924,48 @@ $designsProperties: (
           ),
         ),
       ),
+      'skeleton':(
+        index: 'skeleton',
+        name: 'd-skeleton',
+        type: 'component',
+        value: (
+          'active':(
+            index: 'active',
+            name: '&--active',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'skeletonItem':(
+        index: 'skeletonItem',
+        name: 'd-skeletonItem',
+        type: 'component',
+        value: (
+          'text':(
+            index: 'text',
+            name: '&--text',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'background':(
+            index: 'background',
+            name: '&--background',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'window':(
         index: 'window',
         name: 'd-window',
@@ -1357,49 +1399,6 @@ $designsProperties: (
         name: 'ref',
         type: 'var',
         value: (
-          'background':(
-            index: 'background',
-            name: 'background',
-            type: 'var',
-            value: (
-              '0':(
-                index: '0',
-                name: '--m3-ref-background-0',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surface))',
-              ),
-              '1':(
-                index: '1',
-                name: '--m3-ref-background-1',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surfaceContainerLow))',
-              ),
-              '2':(
-                index: '2',
-                name: '--m3-ref-background-2',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surfaceContainer))',
-              ),
-              '3':(
-                index: '3',
-                name: '--m3-ref-background-3',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surfaceContainerHigh))',
-              ),
-              '4':(
-                index: '4',
-                name: '--m3-ref-background-4',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surfaceContainerHigh))',
-              ),
-              '5':(
-                index: '5',
-                name: '--m3-ref-background-5',
-                type: 'var',
-                value: 'rgb(var(--m3-sys-palette-surfaceContainerHighest))',
-              ),
-            ),
-          ),
           'font':(
             index: 'font',
             name: 'font',
@@ -3115,6 +3114,49 @@ $designsProperties: (
         name: 'sys',
         type: 'var',
         value: (
+          'background':(
+            index: 'background',
+            name: 'background',
+            type: 'var',
+            value: (
+              '0':(
+                index: '0',
+                name: '--m3-sys-background-0',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surface))',
+              ),
+              '1':(
+                index: '1',
+                name: '--m3-sys-background-1',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surfaceContainerLow))',
+              ),
+              '2':(
+                index: '2',
+                name: '--m3-sys-background-2',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surfaceContainer))',
+              ),
+              '3':(
+                index: '3',
+                name: '--m3-sys-background-3',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surfaceContainerHigh))',
+              ),
+              '4':(
+                index: '4',
+                name: '--m3-sys-background-4',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surfaceContainerHigh))',
+              ),
+              '5':(
+                index: '5',
+                name: '--m3-sys-background-5',
+                type: 'var',
+                value: 'rgb(var(--m3-sys-palette-surfaceContainerHighest))',
+              ),
+            ),
+          ),
           'opacity':(
             index: 'opacity',
             name: 'opacity',
@@ -5091,7 +5133,7 @@ $designsProperties: (
             index: 'background',
             name: 'background',
             type: 'property',
-            value: 'var(--m3-ref-background-0)',
+            value: 'var(--m3-sys-background-0)',
           ),
         ),
       ),
@@ -5115,7 +5157,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-0)',
+                value: 'var(--m3-sys-background-0)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -5140,7 +5182,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-1)',
+                value: 'var(--m3-sys-background-1)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -5165,7 +5207,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-2)',
+                value: 'var(--m3-sys-background-2)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -5190,7 +5232,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-3)',
+                value: 'var(--m3-sys-background-3)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -5215,7 +5257,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-4)',
+                value: 'var(--m3-sys-background-4)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -5240,7 +5282,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-5)',
+                value: 'var(--m3-sys-background-5)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -8748,6 +8790,66 @@ $designsProperties: (
           ),
         ),
       ),
+      'skeleton':(
+        index: 'skeleton',
+        name: 'm3-skeleton',
+        type: 'component',
+        value: (
+          'color':(
+            index: 'color',
+            name: '--m3-skeleton-color',
+            type: 'var',
+            value: 'var(--m3-sys-palette-outlineVariant)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--m3-skeleton-backgroundColor',
+            type: 'var',
+            value: 'var(--m3-sys-palette-outlineVariant)',
+          ),
+          'borderColor':(
+            index: 'borderColor',
+            name: '--m3-skeleton-borderColor',
+            type: 'var',
+            value: 'var(--m3-sys-palette-outlineVariant)',
+          ),
+          'active':(
+            index: 'active',
+            name: '&--active',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
+      'skeletonItem':(
+        index: 'skeletonItem',
+        name: 'm3-skeletonItem',
+        type: 'component',
+        value: (
+          'text':(
+            index: 'text',
+            name: '&--text',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'background':(
+            index: 'background',
+            name: '&--background',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'window':(
         index: 'window',
         name: 'm3-window',
@@ -8798,7 +8900,7 @@ $designsProperties: (
                 index: 'background',
                 name: 'background',
                 type: 'property',
-                value: 'var(--m3-ref-background-4)',
+                value: 'var(--m3-sys-background-4)',
               ),
               'borderRadius':(
                 index: 'borderRadius',
@@ -9097,7 +9199,7 @@ $designsProperties: (
                         index: 'background',
                         name: 'background',
                         type: 'property',
-                        value: 'var(--m3-ref-background-2)',
+                        value: 'var(--m3-sys-background-2)',
                       ),
                       'borderRadius':(
                         index: 'borderRadius',
@@ -9331,7 +9433,7 @@ $designsProperties: (
                             index: 'background',
                             name: 'background',
                             type: 'property',
-                            value: 'var(--m3-ref-background-2)',
+                            value: 'var(--m3-sys-background-2)',
                           ),
                           'borderRadius':(
                             index: 'borderRadius',

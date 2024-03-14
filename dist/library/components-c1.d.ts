@@ -19,7 +19,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -63,7 +63,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -122,7 +122,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -178,7 +178,7 @@ export declare const components: {
         outlined: BooleanConstructor;
         white: BooleanConstructor;
         text: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+        palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;

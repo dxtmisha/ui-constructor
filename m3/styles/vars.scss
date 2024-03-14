@@ -32,12 +32,6 @@
   --d-sys-transitionFunction-emphasized: var(--d-ref-transitionFunction-e40i40);
   --d-sys-transitionFunction-acceleration: var(--d-ref-transitionFunction-e40i0);
   --d-sys-transitionFunction-deceleration: var(--d-ref-transitionFunction-e0i80);
-  --m3-ref-background-0: rgb(var(--m3-sys-palette-surface));
-  --m3-ref-background-1: rgb(var(--m3-sys-palette-surfaceContainerLow));
-  --m3-ref-background-2: rgb(var(--m3-sys-palette-surfaceContainer));
-  --m3-ref-background-3: rgb(var(--m3-sys-palette-surfaceContainerHigh));
-  --m3-ref-background-4: rgb(var(--m3-sys-palette-surfaceContainerHigh));
-  --m3-ref-background-5: rgb(var(--m3-sys-palette-surfaceContainerHighest));
   --m3-ref-font-family-roboto: Roboto;
   --m3-ref-font-size-11: 0.6875rem;
   --m3-ref-font-size-12: 0.75rem;
@@ -297,6 +291,12 @@
   --m3-ref-spacing-256: 64rem;
   --m3-ref-spacing-512: 128rem;
   --m3-ref-spacing-px: 0.0625rem;
+  --m3-sys-background-0: rgb(var(--m3-sys-palette-surface));
+  --m3-sys-background-1: rgb(var(--m3-sys-palette-surfaceContainerLow));
+  --m3-sys-background-2: rgb(var(--m3-sys-palette-surfaceContainer));
+  --m3-sys-background-3: rgb(var(--m3-sys-palette-surfaceContainerHigh));
+  --m3-sys-background-4: rgb(var(--m3-sys-palette-surfaceContainerHigh));
+  --m3-sys-background-5: rgb(var(--m3-sys-palette-surfaceContainerHighest));
   --m3-sys-opacity-004: var(--m3-ref-opacity-4);
   --m3-sys-opacity-008: var(--m3-ref-opacity-8);
   --m3-sys-opacity-012: var(--m3-ref-opacity-12);

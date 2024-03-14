@@ -26,10 +26,6 @@
   transition-duration: var(--d-sys-transitionDuration-lg-close);
   transition-property: background-color, background-image, border, box-shadow;
   
-  &__label {
-    @include height(#{auto});
-  }
-  
   &__paddingSpacer {
     @include width(#{calc(var(--c2-button-spacer-padding) + var(--c2-button-spacer-lineContainer-width) - (var(--c2-button-gap) * 2))});
   }
@@ -92,10 +88,6 @@
       @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
       border-radius: var(--c2-st-selectable-borderRadius-size-lg);
-      
-      & .c2-button__label {
-        @include height(#{var(--c2-base-size-icons-lg)});
-      }
     }
     
     &--md {
@@ -115,10 +107,6 @@
       @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
       border-radius: var(--c2-st-selectable-borderRadius-size-md);
-      
-      & .c2-button__label {
-        @include height(#{var(--c2-base-size-icons-lg)});
-      }
     }
     
     &--sm {
@@ -140,7 +128,7 @@
       border-radius: var(--c2-st-selectable-borderRadius-size-sm);
       
       & .c2-button__label {
-        @include height(#{var(--c2-ct-selectable-icon-size-md)});
+        padding: var(--c2-st-global-distance-space-inset-x)0;
       }
     }
     
@@ -161,10 +149,6 @@
       @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
       border-radius: var(--c2-st-selectable-borderRadius-size-sm);
-      
-      & .c2-button__label {
-        @include height(#{var(--c2-ct-selectable-icon-size-md)});
-      }
     }
     
     &--x {
@@ -184,10 +168,6 @@
       @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
       border-radius: var(--c2-st-selectable-borderRadius-size-xs);
-      
-      & .c2-button__label {
-        @include height(#{var(--c2-ct-selectable-icon-size-md)});
-      }
     }
   }
   

@@ -22,14 +22,14 @@
     "width": "{??spacer.padding} + {??spacer.lineContainer.width} - ({??gap} * 2)"
   },
   "container": {
-    "height": {
-      "_drag": "../../label",
-      "_dragSetting": {
-        "label": "{??label}"
-      }
-    },
     "content": {
       "label": {
+        "padding": {
+          "_drag": "../../../../label",
+          "_dragSetting": {
+            "label": "{??label}"
+          }
+        },
         "_drag": "../../.."
       },
       "_drag": "../.."

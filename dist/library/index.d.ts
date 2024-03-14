@@ -33,6 +33,7 @@ export * from './../functions/isFunction';
 export * from './../functions/isInDom';
 export * from './../functions/isIntegerBetween';
 export * from './../functions/isNull';
+export * from './../functions/isNumber';
 export * from './../functions/isObject';
 export * from './../functions/isObjectNotArray';
 export * from './../functions/isSelected';

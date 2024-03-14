@@ -2001,6 +2001,98 @@ export declare const components: {
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Scrollbar/types").ScrollbarSlots> & import("../constructors/Scrollbar/types").ScrollbarSlots;
     });
+    M3Skeleton: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            active: BooleanConstructor;
+        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            active: BooleanConstructor;
+        }>>, {
+            active: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            active: BooleanConstructor;
+        }>>, {}, {}, {}, {}, {
+            active: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        active: BooleanConstructor;
+    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+        active: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/Skeleton/types").SkeletonSlots> & import("../constructors/Skeleton/types").SkeletonSlots;
+    });
+    M3SkeletonItem: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+            text: BooleanConstructor;
+            background: BooleanConstructor;
+            border: BooleanConstructor;
+            tag: import("vue").PropType<any>;
+            props: import("vue").PropType<Record<string, any> | undefined>;
+            label: import("vue").PropType<string | undefined>;
+            length: import("vue").PropType<string | number | [number, number] | undefined>;
+            skeleton: import("vue").PropType<boolean | undefined>;
+        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            text: BooleanConstructor;
+            background: BooleanConstructor;
+            border: BooleanConstructor;
+            tag: import("vue").PropType<any>;
+            props: import("vue").PropType<Record<string, any> | undefined>;
+            label: import("vue").PropType<string | undefined>;
+            length: import("vue").PropType<string | number | [number, number] | undefined>;
+            skeleton: import("vue").PropType<boolean | undefined>;
+        }>>, {
+            text: boolean;
+            border: boolean;
+            background: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            text: BooleanConstructor;
+            background: BooleanConstructor;
+            border: BooleanConstructor;
+            tag: import("vue").PropType<any>;
+            props: import("vue").PropType<Record<string, any> | undefined>;
+            label: import("vue").PropType<string | undefined>;
+            length: import("vue").PropType<string | number | [number, number] | undefined>;
+            skeleton: import("vue").PropType<boolean | undefined>;
+        }>>, {}, {}, {}, {}, {
+            text: boolean;
+            border: boolean;
+            background: boolean;
+        }>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+        text: BooleanConstructor;
+        background: BooleanConstructor;
+        border: BooleanConstructor;
+        tag: import("vue").PropType<any>;
+        props: import("vue").PropType<Record<string, any> | undefined>;
+        label: import("vue").PropType<string | undefined>;
+        length: import("vue").PropType<string | number | [number, number] | undefined>;
+        skeleton: import("vue").PropType<boolean | undefined>;
+    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+        text: boolean;
+        border: boolean;
+        background: boolean;
+    }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/SkeletonItem/types").SkeletonItemSlots> & import("../constructors/SkeletonItem/types").SkeletonItemSlots;
+    });
     M3Window: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             width: import("vue").PropType<string | undefined>;
@@ -2247,7 +2339,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -2291,7 +2383,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -2350,7 +2442,7 @@ export declare const components: {
             outlined: BooleanConstructor;
             white: BooleanConstructor;
             text: BooleanConstructor;
-            palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+            palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -2406,7 +2498,7 @@ export declare const components: {
         outlined: BooleanConstructor;
         white: BooleanConstructor;
         text: BooleanConstructor;
-        palette: import("vue").PropType<"error" | "ripple" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "background" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
+        palette: import("vue").PropType<"error" | "ripple" | "background" | "webText" | "webWhite" | "webAccent" | "webAccentWhite" | "webError" | "webGray1" | "webGray2" | "webGray3" | "webGray4" | "webGlue1" | "webGlue2" | "webGlue3" | "accent" | "success" | "notification" | "backgroundImage" | "backgroundNotificationInfo" | "backgroundNotificationWarning" | "backgroundError" | "gray1" | "gray2" | "gray3" | "gray4" | "shading" | "green1" | "green2" | "yellow1" | "yellow2" | "yellow3" | "blue1" | "extra1" | "extra2" | "extra3" | "extra4" | "extra5" | "extra6" | "extra7" | "extra8" | "extra9" | "extra10" | "extra11" | "extra12" | "extra13" | "extra14" | "extra15" | "extra16" | "extra17" | "extra18" | "extra19" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
