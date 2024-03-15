@@ -1,4 +1,5 @@
 import { toCamelCase } from '../../../functions/toCamelCase'
+import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
 
 import { PropertiesFile } from '../properties/PropertiesFile'
 import { LibraryItems } from './LibraryItems'
@@ -9,7 +10,6 @@ import {
   LIBRARY_PLUGIN_BASIC,
   LIBRARY_STYLE
 } from '../../config/library'
-import { toCamelCaseFirst } from '../../../functions/toCamelCaseFirst.ts'
 
 export class LibraryNuxt {
   /**
@@ -44,6 +44,8 @@ export class LibraryNuxt {
 
   private makeModule (): void {
     const main = PropertiesFile.readFile<Record<string, any>>('package.json')
+    const globalName = toCamelCase(this.items.getGlobalName())
+    const designMain = toCamelCase(this.items.getDesignMain())
     const components = this.items.getComponentList()
     const data: string[] = []
 
@@ -61,6 +63,7 @@ export class LibraryNuxt {
         LIBRARY_NUXT,
         [
           'import { addComponent, addImports, defineNuxtModule } from \'@nuxt/kit\'',
+          `import ${globalName}VitePlugin from '${main.name}/vite-plugin-vue-ui'`,
           '',
           'export default defineNuxtModule({',
           '  meta: {',
@@ -72,6 +75,21 @@ export class LibraryNuxt {
           '    nuxt.options.build.transpile = [',
           `      /${main.name}\\/dist\\/(${this.items.getDesigns().join('|')})/i`,
           '    ]',
+          '',
+          '    nuxt.hook(\'vite:extendConfig\', (config) => {',
+          '      const options = {',
+          '        importComponents: false,',
+          '        icon: true,',
+          '        flag: true,',
+          `        style: '${designMain}'`,
+          '      }',
+          '      console.log(config)',
+          '      if (config?.plugins) {',
+          '        config.plugins.push(uiVitePlugin(options))',
+          '      } else {',
+          '        config.plugins = [uiVitePlugin(options)]',
+          '      }',
+          '    })',
           '',
           '    addImports({',
           `      name: '${toCamelCase(`${main.name}-${LIBRARY_PLUGIN_BASIC}`)}',`,

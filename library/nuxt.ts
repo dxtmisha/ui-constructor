@@ -2,6 +2,7 @@
 // Этот файл генерируется скриптом, не редактировать.
 
 import { addComponent, addImports, defineNuxtModule } from '@nuxt/kit'
+import uiVitePlugin from 'ui/vite-plugin-vue-ui'
 
 export default defineNuxtModule({
   meta: {
@@ -13,6 +14,21 @@ export default defineNuxtModule({
     nuxt.options.build.transpile = [
       /ui\/dist\/(m2|m3|c1|c2)/i
     ]
+
+    nuxt.hook('vite:extendConfig', (config) => {
+      const options = {
+        importComponents: false,
+        icon: true,
+        flag: true,
+        style: 'm3'
+      }
+      console.log(config)
+      if (config?.plugins) {
+        config.plugins.push(uiVitePlugin(options))
+      } else {
+        config.plugins = [uiVitePlugin(options)]
+      }
+    })
 
     addImports({
       name: 'uiRegistrationBasic',

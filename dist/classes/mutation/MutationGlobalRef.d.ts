@@ -1,3 +1,4 @@
+/// <reference path="../../dist/types/vuex.d.ts" />
 /// <reference path="../../types/vuex.d.ts" />
 import { type RouterOptions } from 'vue-router';
 import { StoreOptions } from 'vuex';

@@ -43,6 +43,8 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
         first.value &&
         PluginTool.isJs(id)
       ) {
+        console.log('code', code)
+
         code = new PluginMedia(
           id,
           code,
