@@ -77,6 +77,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     path: "m2/Ripple"
   },
   {
+    name: "M2Skeleton",
+    design: "m2",
+    code: "m2-skeleton",
+    path: "m2/Skeleton"
+  },
+  {
     name: "M3Button",
     design: "m3",
     code: "m3-button",
@@ -231,6 +237,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     design: "c2",
     code: "c2-ripple",
     path: "c2/Ripple"
+  },
+  {
+    name: "C2Skeleton",
+    design: "c2",
+    code: "c2-skeleton",
+    path: "c2/Skeleton"
   }
 ], x = {
   m2: [

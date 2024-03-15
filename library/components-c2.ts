@@ -11,6 +11,7 @@ import { C2Mutation } from '../c2/Mutation'
 import { C2MutationItem } from '../c2/MutationItem'
 import { C2Progress } from '../c2/Progress'
 import { C2Ripple } from '../c2/Ripple'
+import { C2Skeleton } from '../c2/Skeleton'
 
 export const components = {
   C2Button,
@@ -19,7 +20,8 @@ export const components = {
   C2Mutation,
   C2MutationItem,
   C2Progress,
-  C2Ripple
+  C2Ripple,
+  C2Skeleton
 }
 
 export const uiC2ComponentsPlugin = {

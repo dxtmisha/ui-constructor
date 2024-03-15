@@ -9981,5 +9981,55 @@ $designsProperties: (
           ),
         ),
       ),
+      'skeleton':(
+        index: 'skeleton',
+        name: 'm2-skeleton',
+        type: 'component',
+        value: (
+          'color':(
+            index: 'color',
+            name: '--m2-skeleton-color',
+            type: 'var',
+            value: 'var(--m2-sys-palette-disabled)',
+          ),
+          'colorOpacity':(
+            index: 'colorOpacity',
+            name: '--m2-skeleton-colorOpacity',
+            type: 'var',
+            value: 'var(--m2-sys-opacity-primary-disabled)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--m2-skeleton-backgroundColor',
+            type: 'var',
+            value: 'var(--m2-sys-palette-disabled)',
+          ),
+          'backgroundOpacity':(
+            index: 'backgroundOpacity',
+            name: '--m2-skeleton-backgroundOpacity',
+            type: 'var',
+            value: 'var(--m2-sys-opacity-primary-disabled)',
+          ),
+          'borderColor':(
+            index: 'borderColor',
+            name: '--m2-skeleton-borderColor',
+            type: 'var',
+            value: 'var(--m2-sys-palette-disabled)',
+          ),
+          'borderOpacity':(
+            index: 'borderOpacity',
+            name: '--m2-skeleton-borderOpacity',
+            type: 'var',
+            value: 'var(--m2-sys-opacity-primary-disabled)',
+          ),
+          'active':(
+            index: 'active',
+            name: '&--active',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
     ),
   ),);

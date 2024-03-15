@@ -1,5 +1,5 @@
-import { defineNuxtModule as t, addImports as e, addComponent as i } from "@nuxt/kit";
-const s = t({
+import { defineNuxtModule as e, addImports as t, addComponent as i } from "@nuxt/kit";
+const s = e({
   meta: {
     name: "ui",
     version: "0.0.0-dev.3"
@@ -7,7 +7,7 @@ const s = t({
   async setup(u, a) {
     a.options.css.push("ui/style.css"), a.options.build.transpile = [
       /ui\/dist\/(m2|m3|c1|c2)/i
-    ], e({
+    ], t({
       name: "uiRegistrationBasic",
       from: "ui/registration-basic"
     }), await i({
@@ -25,6 +25,9 @@ const s = t({
     }), await i({
       name: "M2Ripple",
       filePath: "ui/dist/M2Ripple.vue"
+    }), await i({
+      name: "M2Skeleton",
+      filePath: "ui/dist/M2Skeleton.vue"
     }), await i({
       name: "M3Button",
       filePath: "ui/dist/M3Button.vue"
@@ -103,6 +106,9 @@ const s = t({
     }), await i({
       name: "C2Ripple",
       filePath: "ui/dist/C2Ripple.vue"
+    }), await i({
+      name: "C2Skeleton",
+      filePath: "ui/dist/C2Skeleton.vue"
     });
   }
 });

@@ -4,6 +4,9 @@ import { makeIconsC2 } from '../c2/icons'
 
 makeIconsC2()
 
+export const imageLink1: string = 'https://drscdn.500px.org/photo/294267357/q%3D80_m%3D2000/v2?sig=03989c1970e5921d8ab67b23e03e79b8db13b7e7d3bc3f72829cc9eecbb42cf4'
+export const imageLink2: string = 'https://drscdn.500px.org/photo/292683549/q%3D80_m%3D2000/v2?sig=bcf16bbbd7b11052a17012bf2be91a0c95edb8d0a45f2928ab72b027ca30fb85'
+
 export const image: Record<string, string> = {
   Search: 'search',
   Home: 'home',
@@ -15,8 +18,8 @@ export const image: Record<string, string> = {
   Delete: 'delete',
   Visibility: 'visibility',
   'Visibility (off)': 'visibility_off',
-  'Image (1)': 'https://drscdn.500px.org/photo/294267357/q%3D80_m%3D2000/v2?sig=03989c1970e5921d8ab67b23e03e79b8db13b7e7d3bc3f72829cc9eecbb42cf4',
-  'Image (2)': 'https://drscdn.500px.org/photo/292683549/q%3D80_m%3D2000/v2?sig=bcf16bbbd7b11052a17012bf2be91a0c95edb8d0a45f2928ab72b027ca30fb85'
+  'Image (1)': imageLink1,
+  'Image (2)': imageLink2
 }
 
 export const icons = Icons.getNameList()

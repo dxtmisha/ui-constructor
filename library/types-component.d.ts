@@ -22,6 +22,10 @@ declare module 'ui/M2Ripple' {
   export { M2Ripple } from 'ui/m2/Ripple'
 }
 
+declare module 'ui/M2Skeleton' {
+  export { M2Skeleton } from 'ui/m2/Skeleton'
+}
+
 declare module 'ui/M3Button' {
   export { M3Button } from 'ui/m3/Button'
 }
@@ -124,4 +128,8 @@ declare module 'ui/C2Progress' {
 
 declare module 'ui/C2Ripple' {
   export { C2Ripple } from 'ui/c2/Ripple'
+}
+
+declare module 'ui/C2Skeleton' {
+  export { C2Skeleton } from 'ui/c2/Skeleton'
 }

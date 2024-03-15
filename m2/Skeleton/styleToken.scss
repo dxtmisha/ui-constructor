@@ -1,0 +1,12 @@
+@import "../../styles/all";
+
+@mixin mixinSkeletonToken {
+  // :style [!] System label / Системная метка
+  --m2-skeleton-color: var(--m2-sys-palette-disabled);
+  --m2-skeleton-colorOpacity: var(--m2-sys-opacity-primary-disabled);
+  --m2-skeleton-backgroundColor: var(--m2-sys-palette-disabled);
+  --m2-skeleton-backgroundOpacity: var(--m2-sys-opacity-primary-disabled);
+  --m2-skeleton-borderColor: var(--m2-sys-palette-disabled);
+  --m2-skeleton-borderOpacity: var(--m2-sys-opacity-primary-disabled);
+  // :style [!] System label / Системная метка
+}

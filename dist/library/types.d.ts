@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     M2Image: typeof components.M2Image
     M2Progress: typeof components.M2Progress
     M2Ripple: typeof components.M2Ripple
+    M2Skeleton: typeof components.M2Skeleton
     M3Button: typeof components.M3Button
     M3FieldMessage: typeof components.M3FieldMessage
     M3Icon: typeof components.M3Icon
@@ -37,5 +38,6 @@ declare module '@vue/runtime-core' {
     C2MutationItem: typeof components.C2MutationItem
     C2Progress: typeof components.C2Progress
     C2Ripple: typeof components.C2Ripple
+    C2Skeleton: typeof components.C2Skeleton
   }
 }

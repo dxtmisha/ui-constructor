@@ -1,0 +1,15 @@
+@import "../../styles/all";
+
+@mixin mixinSkeletonToken {
+  // :style [!] System label / Системная метка
+  --c2-skeleton-color: var(--c2-st-content-foreground-color-neutral-disable);
+  --c2-skeleton-color-opacity: #{toColorOpacity(var(--c2-st-content-foreground-color-neutral-disable))};
+  --c2-skeleton-colorOpacity: var(--c2-st-content-foreground-color-neutral-disable-opacity);
+  --c2-skeleton-backgroundColor: var(--c2-st-content-background-color-neutral-disable);
+  --c2-skeleton-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-content-background-color-neutral-disable))};
+  --c2-skeleton-backgroundOpacity: var(--c2-st-content-background-color-neutral-disable-opacity);
+  --c2-skeleton-borderColor: var(--c2-st-content-background-color-neutral-disable);
+  --c2-skeleton-borderColor-opacity: #{toColorOpacity(var(--c2-st-content-background-color-neutral-disable))};
+  --c2-skeleton-borderOpacity: var(--c2-st-content-background-color-neutral-disable-opacity);
+  // :style [!] System label / Системная метка
+}

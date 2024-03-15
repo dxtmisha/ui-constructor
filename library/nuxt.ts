@@ -40,6 +40,10 @@ export default defineNuxtModule({
       filePath: 'ui/dist/M2Ripple.vue'
     })
     await addComponent({
+      name: 'M2Skeleton',
+      filePath: 'ui/dist/M2Skeleton.vue'
+    })
+    await addComponent({
       name: 'M3Button',
       filePath: 'ui/dist/M3Button.vue'
     })
@@ -142,6 +146,10 @@ export default defineNuxtModule({
     await addComponent({
       name: 'C2Ripple',
       filePath: 'ui/dist/C2Ripple.vue'
+    })
+    await addComponent({
+      name: 'C2Skeleton',
+      filePath: 'ui/dist/C2Skeleton.vue'
     })
   }
 })

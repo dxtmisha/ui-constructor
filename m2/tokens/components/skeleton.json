@@ -1,0 +1,8 @@
+{
+  "color": "{sys.palette.disabled}",
+  "color-opacity": "{sys.opacity.primary.disabled}",
+  "background-color": "{sys.palette.disabled}",
+  "background-opacity": "{sys.opacity.primary.disabled}",
+  "border-color": "{sys.palette.disabled}",
+  "border-opacity": "{sys.opacity.primary.disabled}"
+}
