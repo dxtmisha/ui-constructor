@@ -1,4 +1,4 @@
-import { eventStopPropagation } from '../../functions/eventStopPropagation.ts'
+import { eventStopPropagation } from '../../functions/eventStopPropagation'
 import { getClipboardData } from '../../functions/getClipboardData'
 
 import { MaskBuffer } from './MaskBuffer'

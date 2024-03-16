@@ -61,7 +61,6 @@ export declare const propsInstruction: {
     to: StringConstructor;
     value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
     detail: ObjectConstructor[];
-    progress: PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
     iconTrailing: PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
     icon: PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
     iconTurn: BooleanConstructor;

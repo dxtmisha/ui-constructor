@@ -24,7 +24,7 @@ export type UseProgressProp = {
 }
 
 export const usePropsProgress = {
-  progress: [Boolean, Object] as PropType<UseProgressProp['loading']>
+  loading: [Boolean, Object] as PropType<UseProgressProp['loading']>
 }
 
 /**

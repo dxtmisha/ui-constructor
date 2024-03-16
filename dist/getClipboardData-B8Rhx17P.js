@@ -1,15 +1,12 @@
 var d = Object.defineProperty;
-var m = (e, t, s) => t in e ? d(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
-var h = (e, t, s) => (m(e, typeof t != "symbol" ? t + "" : t, s), s);
-import { a, f as l } from "./toArray-J4lAhJG7.js";
-import { i as g, G as v, c as u } from "./Geo-BOuiw8Eo.js";
-import { t as c, G as D } from "./GeoIntl-DH3GBVnO.js";
-function C(e) {
-  return g(e) ? e : a(e) ? JSON.stringify(e) : (e == null ? void 0 : e.toString()) ?? "";
-}
-function L(e, t = "ig", s = ":value") {
-  const r = e.replace(/([[\]\\^$.?*+()])/g, "\\$1");
-  return new RegExp(s.replaceAll(":value", r), t);
+var m = (s, t, e) => t in s ? d(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
+var h = (s, t, e) => (m(s, typeof t != "symbol" ? t + "" : t, e), e);
+import { t as c, G as g } from "./GeoIntl-DH3GBVnO.js";
+import { G as v, c as u } from "./Geo-BOuiw8Eo.js";
+import { f as l, a as i } from "./toArray-J4lAhJG7.js";
+function B(s, t = "ig", e = ":value") {
+  const r = s.replace(/([[\]\\^$.?*+()])/g, "\\$1");
+  return new RegExp(e.replaceAll(":value", r), t);
 }
 class y {
   /**
@@ -18,18 +15,18 @@ class y {
    * @param type type of date format for output /<br>тип формата даты вывода
    * @param code country and language code /<br>код страны и языка
    */
-  constructor(t, s = "date", r = v.getLocation()) {
+  constructor(t, e = "date", r = v.getLocation()) {
     h(this, "date");
     h(this, "hour24", !1);
     h(this, "watch");
-    this.type = s, this.code = r, this.date = c(t);
+    this.type = e, this.code = r, this.date = c(t);
   }
   /**
    * Returns an object for working with formatting.<br>
    * Возвращает объект для работы с форматированием.
    */
   getIntl() {
-    return new D(this.code);
+    return new g(this.code);
   }
   /**
    * Returns a Date object.<br>
@@ -76,17 +73,17 @@ class y {
    * @param style the style of the returned data /<br>стиль возвращаемых данных
    */
   getTimeZone(t) {
-    const s = this.getTimeZoneOffset();
+    const e = this.getTimeZoneOffset();
     if (t === "minute")
-      return s.toString();
-    const r = s / 60 * -1;
+      return e.toString();
+    const r = e / 60 * -1;
     if (t === "hour")
       return this.getIntl().number(Math.trunc(r), { signDisplay: "always" });
     const n = this.getIntl().number(Math.trunc(r), {
       signDisplay: "always",
       minimumIntegerDigits: 2
-    }), i = r.toString().match(/.\d+/) ? "30" : "00";
-    return t === "RFC" ? `${n}${i}` : `${n}:${i}`;
+    }), o = r.toString().match(/.\d+/) ? "30" : "00";
+    return t === "RFC" ? `${n}${o}` : `${n}:${o}`;
   }
   /**
    * Returns the code of the first day of the week.<br>
@@ -153,11 +150,11 @@ class y {
    * @param type type of date format for output /<br>тип формата даты вывода
    * @param styleOptions the representation of the month /<br>представление месяца
    */
-  locale(t = this.type, s) {
+  locale(t = this.type, e) {
     return this.getIntl().date(
       this.date,
       t,
-      s,
+      e,
       this.hour24
     );
   }
@@ -215,13 +212,13 @@ class y {
    * @param timeZone add time zone /<br>добавить временную зону
    */
   standard(t = !0) {
-    const s = new y(this.date, this.type, "en-GB"), r = [];
+    const e = new y(this.date, this.type, "en-GB"), r = [];
     let n;
-    return s.setHour24(!0), this.type === "hour-minute" ? n = s.locale(this.type, {
+    return e.setHour24(!0), this.type === "hour-minute" ? n = e.locale(this.type, {
       year: "numeric",
       month: "2-digit",
       hour12: !1
-    }) : (["full", "datetime", "date", "year-month", "year", "month", "day"].indexOf(this.type) !== -1 && (r.push(s.localeYear()), r.push(s.localeMonth("2-digit"))), ["full", "datetime", "date", "year", "month", "day"].indexOf(this.type) !== -1 && r.push(s.localeDay("2-digit")), ["full", "datetime", "time", "hour", "minute", "second"].indexOf(this.type) !== -1 && (n = s.locale("time"))), `${r.join("-")}${n ? `T${n}${t ? s.getTimeZone() : ""}` : ""}`;
+    }) : (["full", "datetime", "date", "year-month", "year", "month", "day"].indexOf(this.type) !== -1 && (r.push(e.localeYear()), r.push(e.localeMonth("2-digit"))), ["full", "datetime", "date", "year", "month", "day"].indexOf(this.type) !== -1 && r.push(e.localeDay("2-digit")), ["full", "datetime", "time", "hour", "minute", "second"].indexOf(this.type) !== -1 && (n = e.locale("time"))), `${r.join("-")}${n ? `T${n}${t ? e.getTimeZone() : ""}` : ""}`;
   }
   /**
    * Change the date completely.<br>
@@ -395,9 +392,9 @@ class y {
    * Переводить на первый день недели.
    */
   moveWeekdayFirst() {
-    const t = this.date.getDay(), s = this.getFirstDayCode();
+    const t = this.date.getDay(), e = this.getFirstDayCode();
     return this.moveByDay(
-      (s === 6 ? -1 : s) - t
+      (e === 6 ? -1 : e) - t
     ), this;
   }
   /**
@@ -593,44 +590,43 @@ class y {
     ), this;
   }
 }
-function S(e, t) {
-  return l(e, (s) => s == null ? void 0 : s[t]);
+function C(s, t) {
+  return l(s, (e) => e == null ? void 0 : e[t]);
 }
-function M(e) {
-  return [...new Set(e)];
+function D(s) {
+  return [...new Set(s)];
 }
-function f(e, t, s = !0) {
-  const r = u(e);
-  return a(e) && a(t) && l(
+function M(s, t, e = !0) {
+  const r = u(s);
+  return i(s) && i(t) && l(
     t,
-    (n, i) => {
-      const o = e == null ? void 0 : e[i];
-      a(o) && a(n) ? s && Array.isArray(o) && Array.isArray(n) ? r[i] = u(M([...o, ...n])) : r[i] = f(
-        Array.isArray(o) ? { ...o } : o,
+    (n, o) => {
+      const a = s == null ? void 0 : s[o];
+      i(a) && i(n) ? e && Array.isArray(a) && Array.isArray(n) ? r[o] = u(D([...a, ...n])) : r[o] = M(
+        Array.isArray(a) ? { ...a } : a,
         n,
-        s
-      ) : r[i] = a(n) ? u(n) : n;
+        e
+      ) : r[o] = i(n) ? u(n) : n;
     }
   ), r;
 }
-function p(e) {
-  return l(e, (t) => t.length);
+function p(s) {
+  return l(s, (t) => t.length);
 }
-function x(e) {
-  return Math.max(...p(e));
+function L(s) {
+  return Math.max(...p(s));
 }
-async function w(e) {
+async function x(s) {
   var t;
-  return ((t = e == null ? void 0 : e.clipboardData) == null ? void 0 : t.getData("text")) ?? (await navigator.clipboard.readText() || "");
+  return ((t = s == null ? void 0 : s.clipboardData) == null ? void 0 : t.getData("text")) ?? (await navigator.clipboard.readText() || "");
 }
 export {
   y as D,
   C as a,
-  S as b,
-  L as c,
-  p as d,
-  x as e,
-  w as g,
-  f as r,
-  M as u
+  B as b,
+  p as c,
+  L as d,
+  x as g,
+  M as r,
+  D as u
 };

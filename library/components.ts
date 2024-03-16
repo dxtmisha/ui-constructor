@@ -11,6 +11,7 @@ import { M2Progress } from '../m2/Progress'
 import { M2Ripple } from '../m2/Ripple'
 import { M2Skeleton } from '../m2/Skeleton'
 import { M3Button } from '../m3/Button'
+import { M3Checkbox } from '../m3/Checkbox'
 import { M3FieldMessage } from '../m3/FieldMessage'
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
@@ -46,6 +47,7 @@ export const components = {
   M2Ripple,
   M2Skeleton,
   M3Button,
+  M3Checkbox,
   M3FieldMessage,
   M3Icon,
   M3Image,

@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     M2Ripple: typeof components.M2Ripple
     M2Skeleton: typeof components.M2Skeleton
     M3Button: typeof components.M3Button
+    M3Checkbox: typeof components.M3Checkbox
     M3FieldMessage: typeof components.M3FieldMessage
     M3Icon: typeof components.M3Icon
     M3Image: typeof components.M3Image

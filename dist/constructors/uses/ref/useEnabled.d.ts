@@ -13,7 +13,7 @@ export type UseEnabledProps = {
     disabled?: boolean;
 };
 export declare const usePropsEnabled: {
-    progress: PropType<boolean | ProgressProps | undefined>;
+    loading: PropType<boolean | ProgressProps | undefined>;
     readonly: BooleanConstructor;
     disabled: BooleanConstructor;
 };

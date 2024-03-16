@@ -7,14 +7,25 @@ import {
   type UseLabelSlots
 } from '../uses/ref/useLabel'
 import { type UseEnabledSetup } from '../uses/ref/useEnabled'
+import {
+  type UseProgressComponent,
+  type UseProgressSetup
+} from '../Progress/useProgressRef'
+import {
+  type UseFieldMessageComponent,
+  type UseFieldMessageSetup
+} from '../FieldMessage/useFieldMessageRef'
 
 /**
  * Interface for describing which components need to be connected for work.<br>
  * Интерфейс для описания, какие компоненты надо подключить для работы.
  */
-export type InputComponents = {
-  icon: object
-}
+export type InputComponents =
+  UseProgressComponent &
+  UseFieldMessageComponent &
+  {
+    icon: object
+  }
 
 /**
  * Type describing available events.<br>
@@ -40,8 +51,13 @@ export type InputEmits = {
 export type InputSetup<V = string> =
   UseLabelSetup &
   UseEnabledSetup &
+  UseProgressSetup &
+  UseFieldMessageSetup &
   {
     value: ShallowRef<V | undefined>
+
+    checkValidity: () => boolean
+    validationMessage: ShallowRef<string>
 
     onInput (event: InputEvent | Event): void
   }
@@ -52,6 +68,9 @@ export type InputSetup<V = string> =
  */
 export type InputExpose = {
   value: InputSetup['value']
+
+  checkValidity: InputSetup['checkValidity']
+  validationMessage: InputSetup['validationMessage']
 }
 
 /**

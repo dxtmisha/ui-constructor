@@ -35,9 +35,11 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onInput (event: InputEvent): void {
-    this.validation.set(event)
-    this.value.setByEvent(event)
-    this.on(event)
+    if (this.isEnabled()) {
+      this.validation.set(event)
+      this.value.setByEvent(event)
+      this.on(event)
+    }
   }
 
   /**
@@ -46,7 +48,9 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onChange (event?: InputEvent | Event): void {
-    this.on(event, 'change')
+    if (this.isEnabled()) {
+      this.on(event, 'change')
+    }
   }
 
   /**
@@ -55,11 +59,13 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onSelect (event: Event): void {
-    this.value.setByEvent(event)
+    if (this.isEnabled()) {
+      this.value.setByEvent(event)
 
-    this
-      .on(event)
-      .onChange(event)
+      this
+        .on(event)
+        .onChange(event)
+    }
   }
 
   /**
@@ -68,11 +74,13 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onChecked (event: Event): void {
-    this.value.setByChecked(event)
+    if (this.isEnabled()) {
+      this.value.setByChecked(event)
 
-    this
-      .on(event)
-      .onChange(event)
+      this
+        .on(event)
+        .onChange(event)
+    }
   }
 
   /**
@@ -81,11 +89,13 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onRadio (event: Event): void {
-    this.value.setByRadio(event)
+    if (this.isEnabled()) {
+      this.value.setByRadio(event)
 
-    this
-      .on(event)
-      .onChange(event)
+      this
+        .on(event)
+        .onChange(event)
+    }
   }
 
   /**
@@ -94,11 +104,13 @@ export class InputEventItem {
    * @param event event object /<br>объект события
    */
   onClear (event: MouseEvent): void {
-    this.value.clear()
+    if (this.isEnabled()) {
+      this.value.clear()
 
-    this
-      .on(event)
-      .onChange(event)
+      this
+        .on(event)
+        .onChange(event)
+    }
   }
 
   /**
@@ -135,6 +147,16 @@ export class InputEventItem {
     type: string & keyof InputEmits
   ): boolean {
     return Boolean(type && ['input', 'change'].indexOf(type) >= 0)
+  }
+
+  /**
+   * Checks if it is possible to change the value.<br>
+   * Проверяет, возможно ли изменение значения.
+   */
+  protected isEnabled (): boolean {
+    return this.props.loading !== true &&
+      this.props.readonly !== true &&
+      this.props.disabled !== true
   }
 
   /**

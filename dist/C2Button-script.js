@@ -1,6 +1,6 @@
 import { defineComponent as m, computed as s, openBlock as g, createBlock as y, resolveDynamicComponent as B, unref as b } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
-import { p as f, d as v, B as h } from "./props-BlSrEzeJ.js";
+import { p as f, d as v, B as h } from "./props-DUVaV4I8.js";
 import { C2Icon as z } from "./C2Icon.js";
 import { C2Progress as x } from "./C2Progress.js";
 const n = {

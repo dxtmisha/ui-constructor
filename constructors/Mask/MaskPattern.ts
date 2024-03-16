@@ -1,5 +1,5 @@
-import { forEach } from '../../functions/forEach.ts'
-import { isObjectNotArray } from '../../functions/isObjectNotArray.ts'
+import { forEach } from '../../functions/forEach'
+import { isObjectNotArray } from '../../functions/isObjectNotArray'
 
 import { CacheItem } from '../../classes/CacheItem'
 

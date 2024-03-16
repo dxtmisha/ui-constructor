@@ -18,7 +18,7 @@ export type UseEnabledProps = {
 }
 
 export const usePropsEnabled = {
-  progress: [Object, Boolean] as PropType<UseEnabledProps['loading']>,
+  loading: [Object, Boolean] as PropType<UseEnabledProps['loading']>,
   readonly: Boolean,
   disabled: Boolean
 }

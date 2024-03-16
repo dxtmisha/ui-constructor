@@ -5,7 +5,15 @@
     "paletteColor": "{sys.palette.onSurfaceVariant}",
     "icon": {
       "size": "{ref.spacing.px} * 18",
-      "backgroundOpacity": "0"
+      "color": "{??comp.palette}",
+      "backgroundOpacity": "0",
+      "borderOpacity": "1"
+    },
+    "checked": {
+      "icon": {
+        "backgroundOpacity": "1",
+        "borderOpacity": "0"
+      }
     },
     "required": {
       "color": "{sys.palette.error}"
@@ -30,12 +38,13 @@
     "icon": {
       "circle": "{??comp.icon.size}",
       "font": "{font.bodySmall}",
-      "color": "{sys.palette.onPrimary}",
+      "color": "{??comp.icon.color}",
       "background-color": "{??comp.palette}",
       "background-opacity": "{??comp.icon.backgroundOpacity}",
       "border-radius": "{ref.spacing.px} * 2",
       "border-width": "{ref.spacing.px} * 2",
       "border-color": "{??comp.paletteColor}",
+      "border-opacity": "{??comp.icon.borderOpacity}",
       "border-style": "solid"
     },
     "focus": {
@@ -52,14 +61,35 @@
   },
   "info": {
     "padding-top": "{??comp.padding} + ({??comp.icon.size} / 2) - (var(--sys-line-height) / 2)",
-    "padding-left": "{ref.spacing.4}"
+    "padding-left": "{ref.spacing.3}"
   },
   "checked": {
     "comp": {
       "palette": "{sys.palette.primary}",
       "paletteColor": "{sys.palette.primary}",
       "icon": {
-        "backgroundOpacity": "1"
+        "color": "{sys.palette.onPrimary}"
+      }
+    },
+    "item": {
+      "icon": {
+        "backgroundOpacity": "{??comp.checked.icon.backgroundOpacity}",
+        "borderOpacity": "{??comp.checked.icon.borderOpacity}"
+      }
+    }
+  },
+  "disabled": {
+    "comp": {
+      "palette": "{sys.palette.onSurface}",
+      "paletteColor": "{sys.palette.onSurface}",
+      "icon": {
+        "borderOpacity": "{sys.opacity.disabled}"
+      },
+      "checked": {
+        "icon": {
+          "backgroundOpacity": "{sys.opacity.disabled}",
+          "borderOpacity": "0"
+        }
       }
     }
   }

@@ -1,18 +1,28 @@
 var p = Object.defineProperty;
-var d = (i, e, s) => e in i ? p(i, e, { enumerable: !0, configurable: !0, writable: !0, value: s }) : i[e] = s;
-var t = (i, e, s) => (d(i, typeof e != "symbol" ? e + "" : e, s), s);
+var d = (i, s, e) => s in i ? p(i, s, { enumerable: !0, configurable: !0, writable: !0, value: e }) : i[s] = e;
+var t = (i, s, e) => (d(i, typeof s != "symbol" ? s + "" : s, e), e);
 import { computed as r, h as o, defineComponent as M, openBlock as f, createBlock as C, resolveDynamicComponent as v, unref as x } from "vue";
 import { c as F } from "./DesignConstructorAbstract-pm1V7i1G.js";
 import { i as c } from "./isFilled-ClO-1E4U.js";
 import { t as l } from "./toNumber-eA5ODeva.js";
-class S {
+const S = {
+  // Status
+  disabled: Boolean,
+  // Values
+  counter: [String, Number],
+  maxlength: [String, Number],
+  // Message
+  helperMessage: String,
+  validationMessage: String
+};
+class b {
   /**
    * Constructor
    * @param props input data /<br>входные данные
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e) {
-    this.props = e;
+  constructor(s) {
+    this.props = s;
   }
   /**
    * Checks if there is text.<br>
@@ -26,29 +36,29 @@ class S {
    * Проверяет, есть ли ошибка.
    */
   isValidation() {
-    var e;
-    return c((e = this.props) == null ? void 0 : e.validationMessage);
+    var s;
+    return c((s = this.props) == null ? void 0 : s.validationMessage);
   }
   /**
    * Returns text.<br>
    * Возвращает текст.
    */
   get() {
-    var e;
+    var s;
     if (this.isValidation())
       return this.props.validationMessage;
-    if (c((e = this.props) == null ? void 0 : e.helperMessage))
+    if (c((s = this.props) == null ? void 0 : s.helperMessage))
       return this.props.helperMessage;
   }
 }
-class b {
+class k {
   /**
    * Constructor
    * @param props input data /<br>входные данные
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e) {
-    this.props = e;
+  constructor(s) {
+    this.props = s;
   }
   /**
    * Checks if it is necessary to display the number of input characters.<br>
@@ -76,35 +86,35 @@ class b {
    * Возвращает количество вводимых символов.
    */
   getCounter() {
-    var e;
-    return l(((e = this.props) == null ? void 0 : e.counter) ?? 0);
+    var s;
+    return l(((s = this.props) == null ? void 0 : s.counter) ?? 0);
   }
   /**
    * Returns the maximum available input number.<br>
    * Возвращает максимально доступное вводимое число.
    */
   getMax() {
-    var e;
-    return l(((e = this.props) == null ? void 0 : e.maxlength) ?? 0);
+    var s;
+    return l(((s = this.props) == null ? void 0 : s.maxlength) ?? 0);
   }
 }
-class k {
+class y {
   /**
    * Constructor
    * @param props input data /<br>входные данные
    */
-  constructor(e) {
+  constructor(s) {
     t(this, "message");
     t(this, "counter");
-    this.props = e, this.message = new S(e), this.counter = new b(e);
+    this.props = s, this.message = new b(s), this.counter = new k(s);
   }
   /**
    * Checks if there are values for outputting the element.<br>
    * Проверяет, есть ли значения для вывода элемента.
    */
   is() {
-    var e;
-    return !((e = this.props) != null && e.disabled) && (this.message.is() || this.counter.is());
+    var s;
+    return !((s = this.props) != null && s.disabled) && (this.message.is() || this.counter.is());
   }
   /**
    * Returns data for the main style class.<br>
@@ -116,12 +126,12 @@ class k {
     };
   }
 }
-class y {
+class V {
   /**
    * Constructor
    * @param props input data /<br>входные данные
    */
-  constructor(e) {
+  constructor(s) {
     t(this, "item");
     t(this, "is", r(() => this.item.is()));
     t(this, "isMessage", r(() => this.item.message.is()));
@@ -131,19 +141,19 @@ class y {
     t(this, "message", r(() => this.item.message.get()));
     t(this, "counter", r(() => this.item.counter.get()));
     t(this, "classes", r(() => this.item.classes()));
-    this.item = new k(e);
+    this.item = new y(s);
   }
 }
-class V extends F {
+class _ extends F {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(s, n, a) {
+  constructor(e, n, a) {
     super(
-      s,
+      e,
       n,
       a
     );
@@ -153,11 +163,11 @@ class V extends F {
      * Рендеринг текста.
      */
     t(this, "renderInfo", () => {
-      const s = this.setup();
+      const e = this.setup();
       return o("div", {
         key: "message",
-        class: s.classes.value.info,
-        innerHTML: s.message.value
+        class: e.classes.value.info,
+        innerHTML: e.message.value
       });
     });
     /**
@@ -165,14 +175,14 @@ class V extends F {
      * Рендеринг введенного количества символов.
      */
     t(this, "renderCounter", () => {
-      const s = this.setup();
+      const e = this.setup();
       return o("div", {
         key: "counter",
-        class: s.classes.value.counter,
-        innerHTML: s.counter.value
+        class: e.classes.value.counter,
+        innerHTML: e.counter.value
       });
     });
-    this.message = new y(n), this.init();
+    this.message = new V(n), this.init();
   }
   /**
    * Initialization of basic options.<br>
@@ -231,33 +241,24 @@ class V extends F {
    * Метод для рендеринга.
    */
   initRender() {
-    const s = this.setup(), n = [];
-    if (s.isMessage.value && n.push(s.renderInfo()), s.isCounter.value && n.push(s.renderCounter()), s.is.value)
+    const e = this.setup(), n = [];
+    if (e.isMessage.value && n.push(e.renderInfo()), e.isCounter.value && n.push(e.renderCounter()), e.is.value)
       return o("div", {
         ...this.getAttrs(),
         ref: this.element,
         key: "main",
-        class: s.classes.value.main
+        class: e.classes.value.main
       }, n);
   }
 }
-const _ = {
-  // Status
-  disabled: Boolean,
-  // Values
-  counter: [String, Number],
-  maxlength: [String, Number],
-  // Message
-  helperMessage: String,
-  validationMessage: String
-}, w = {
-  ..._
+const w = {
+  ...S
 }, I = /* @__PURE__ */ M({
   name: "M3FieldMessage",
   __name: "M3FieldMessage",
   props: { ...w },
-  setup(i, { expose: e, emit: s }) {
-    const n = s, a = i, g = r(() => ({
+  setup(i, { expose: s, emit: e }) {
+    const n = e, a = i, g = r(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "m3-fieldMessage": !0
@@ -266,7 +267,7 @@ const _ = {
     })), h = r(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), u = new V(
+    })), u = new _(
       "m3.fieldMessage",
       a,
       {
@@ -275,9 +276,10 @@ const _ = {
         styles: h
       }
     ), m = u.render();
-    return e(u.expose()), (B, N) => (f(), C(v(x(m))));
+    return s(u.expose()), (B, N) => (f(), C(v(x(m))));
   }
 }), R = I;
 export {
-  R as M3FieldMessage
+  R as M,
+  S as p
 };

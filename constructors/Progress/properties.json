@@ -17,8 +17,7 @@
   },
   "circular": {
     "inset": {
-      "value": "0px",
-      "_var": true
+      "_type": "var"
     },
     "width": {
       "_type": "var"

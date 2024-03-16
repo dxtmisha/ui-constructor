@@ -89,6 +89,7 @@ export class Input<V = string> {
     this.validation = new InputValidation<V>(
       props,
       this.element,
+      this.change,
       this.value,
       this.code,
       this.match

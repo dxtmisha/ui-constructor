@@ -648,6 +648,96 @@ $designsProperties: (
           ),
         ),
       ),
+      'checkbox':(
+        index: 'checkbox',
+        name: 'd-checkbox',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--d-checkbox-comp-required-color',
+                    type: 'var',
+                    value: 'red',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+              'info':(
+                index: 'info',
+                name: '& .d-checkbox__info',
+                type: 'subclass',
+                value: (
+                  'label':(
+                    index: 'label',
+                    name: '&__label',
+                    type: 'subclass',
+                    value: (
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       'fieldMessage':(
         index: 'fieldMessage',
         name: 'd-fieldMessage',
@@ -916,13 +1006,6 @@ $designsProperties: (
             name: '&--circular',
             type: 'state',
             value: (
-              'inset':(
-                index: 'inset',
-                name: 'inset',
-                type: 'property',
-                value: 0px,
-                var: true,
-              ),
             ),
           ),
           'indeterminate':(
@@ -21532,18 +21615,17 @@ $designsProperties: (
             name: '&--circular',
             type: 'state',
             value: (
+              'inset':(
+                index: 'inset',
+                name: '--c2-progress-inset',
+                type: 'var',
+                value: 'var(--c2-st-global-distance-space-inline-md)',
+              ),
               'width':(
                 index: 'width',
                 name: '--c2-progress-width',
                 type: 'var',
                 value: 'var(--c2-ot-dimension-300)',
-              ),
-              'inset':(
-                index: 'inset',
-                name: 'inset',
-                type: 'property',
-                value: 'var(--c2-st-global-distance-space-inline-md)',
-                var: true,
               ),
             ),
           ),

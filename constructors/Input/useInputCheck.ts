@@ -1,9 +1,9 @@
 import { anyToString } from '../../functions/anyToString'
 import { createElement } from '../../functions/createElement'
-import { executeFunction } from '../../functions/executeFunction.ts'
-import { isFilled } from '../../functions/isFilled.ts'
-import { isObjectNotArray } from '../../functions/isObjectNotArray.ts'
-import { isString } from '../../functions/isString.ts'
+import { executeFunction } from '../../functions/executeFunction'
+import { isFilled } from '../../functions/isFilled'
+import { isObjectNotArray } from '../../functions/isObjectNotArray'
+import { isString } from '../../functions/isString'
 
 import {
   type InputPatternElement,
@@ -37,7 +37,14 @@ export function useInputCheck<V> (
     input,
     pattern,
     check<V> (value: V): InputValidationItem<V> {
-      input.value = anyToString(value)
+      if (
+        input.type === 'checkbox' ||
+        input.type === 'radio'
+      ) {
+        input.checked = Boolean(value)
+      } else {
+        input.value = anyToString(value)
+      }
 
       return {
         group: groupName,

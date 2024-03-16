@@ -1,0 +1,1 @@
+"use strict";const t=require("./toArray-h-YFi-Q9.cjs"),i=require("./Geo-VVc_JzGu.cjs");function n(r){return i.isString(r)?r:t.isObject(r)?JSON.stringify(r):(r==null?void 0:r.toString())??""}exports.anyToString=n;

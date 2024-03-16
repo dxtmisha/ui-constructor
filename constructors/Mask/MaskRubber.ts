@@ -1,8 +1,8 @@
-import { getColumn } from '../../functions/getColumn.ts'
-import { isArray } from '../../functions/isArray.ts'
-import { isSelected } from '../../functions/isSelected.ts'
-import { isString } from '../../functions/isString.ts'
-import { replaceRecursive } from '../../functions/replaceRecursive.ts'
+import { getColumn } from '../../functions/getColumn'
+import { isArray } from '../../functions/isArray'
+import { isSelected } from '../../functions/isSelected'
+import { isString } from '../../functions/isString'
+import { replaceRecursive } from '../../functions/replaceRecursive'
 
 import { CacheItem } from '../../classes/CacheItem'
 

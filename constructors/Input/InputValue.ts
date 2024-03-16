@@ -1,6 +1,6 @@
-import { isArray } from '../../functions/isArray.ts'
-import { isFilled } from '../../functions/isFilled.ts'
-import { isObject } from '../../functions/isObject.ts'
+import { isArray } from '../../functions/isArray'
+import { isFilled } from '../../functions/isFilled'
+import { isObject } from '../../functions/isObject'
 
 import { InputElement } from './InputElement'
 
@@ -132,9 +132,11 @@ export class InputValue<V = any> {
    * @param value changeable value /<br>изменяемое значение
    */
   set (value: V | undefined): this {
-    if (this.value !== value) {
+    if (
+      this.value !== value
+    ) {
       this.value = value
-      this.change.set(this.getOriginal() !== value)
+      this.change.set(true)
       this.callback()
     }
 

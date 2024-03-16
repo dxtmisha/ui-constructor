@@ -90,6 +90,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     path: "m3/Button"
   },
   {
+    name: "M3Checkbox",
+    design: "m3",
+    code: "m3-checkbox",
+    path: "m3/Checkbox"
+  },
+  {
     name: "M3FieldMessage",
     design: "m3",
     code: "m3-field-message",
@@ -3096,7 +3102,7 @@ function p(r = {}) {
       return a = s.mode, !0;
     },
     transform(i, s) {
-      return e.value && l.isJs(s) && (i = new H(
+      return e.value && l.isJs(s) && (console.log("code", i), i = new H(
         s,
         i,
         r == null ? void 0 : r.flag
@@ -3158,6 +3164,9 @@ const B = y({
     }), await o({
       name: "M3Button",
       filePath: "ui/dist/M3Button.vue"
+    }), await o({
+      name: "M3Checkbox",
+      filePath: "ui/dist/M3Checkbox.vue"
     }), await o({
       name: "M3FieldMessage",
       filePath: "ui/dist/M3FieldMessage.vue"

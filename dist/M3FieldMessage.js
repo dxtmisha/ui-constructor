@@ -1,2 +1,4 @@
-import './M3FieldMessage.css';
-export {M3FieldMessage} from './M3FieldMessage-script.js';
+import { M } from "./index-DeS7TDNN.js";
+export {
+  M as M3FieldMessage
+};

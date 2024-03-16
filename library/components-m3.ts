@@ -5,6 +5,7 @@ import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
 import { M3Button } from '../m3/Button'
+import { M3Checkbox } from '../m3/Checkbox'
 import { M3FieldMessage } from '../m3/FieldMessage'
 import { M3Icon } from '../m3/Icon'
 import { M3Image } from '../m3/Image'
@@ -21,6 +22,7 @@ import { M3Window } from '../m3/Window'
 
 export const components = {
   M3Button,
+  M3Checkbox,
   M3FieldMessage,
   M3Icon,
   M3Image,

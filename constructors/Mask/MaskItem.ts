@@ -1,4 +1,4 @@
-import { getMaxLengthAllArray } from '../../functions/getMaxLengthAllArray.ts'
+import { getMaxLengthAllArray } from '../../functions/getMaxLengthAllArray'
 import { isArray } from '../../functions/isArray'
 
 import { CacheItem } from '../../classes/CacheItem'

@@ -73,6 +73,11 @@ export declare class InputEventItem {
      */
     protected isValue(type: string & keyof InputEmits): boolean;
     /**
+     * Checks if it is possible to change the value.<br>
+     * Проверяет, возможно ли изменение значения.
+     */
+    protected isEnabled(): boolean;
+    /**
      * Returns input data.<br>
      * Возвращает данные об вводе.
      */

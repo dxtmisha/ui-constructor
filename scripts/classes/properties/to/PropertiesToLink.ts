@@ -17,8 +17,8 @@ type PropertiesLinkItem = {
   properties: PropertyList
 }
 
-const MAX = 24
-const MAX_PARENT = 12
+const MAX = 32
+const MAX_PARENT = 24
 const USED_TYPE: PropertyType[] = [
   PropertyType.link,
   PropertyType.var,

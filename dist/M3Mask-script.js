@@ -1,20 +1,20 @@
-var O = Object.defineProperty;
-var A = (n, t, e) => t in n ? O(n, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : n[t] = e;
-var a = (n, t, e) => (A(n, typeof t != "symbol" ? t + "" : t, e), e);
-import { shallowRef as v, watchEffect as K, h as m, defineComponent as R, computed as B, openBlock as $, createBlock as N, resolveDynamicComponent as j, unref as P } from "vue";
-import { i as _ } from "./inArray-BLmbg9f_.js";
-import { c as Y } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { c as q, D as M, a as C, b as H, r as U, e as G, g as Q } from "./getClipboardData-2HyTb4n7.js";
-import { f as S, i as d, a as W, t as z } from "./toArray-J4lAhJG7.js";
-import { s as I } from "./strFill-CYHpRbDF.js";
-import { G as J, C as f } from "./GeoIntl-DH3GBVnO.js";
+var F = Object.defineProperty;
+var O = (n, t, e) => t in n ? F(n, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : n[t] = e;
+var a = (n, t, e) => (O(n, typeof t != "symbol" ? t + "" : t, e), e);
+import { shallowRef as k, watchEffect as A, h as m, defineComponent as K, computed as S, openBlock as R, createBlock as $, resolveDynamicComponent as N, unref as j } from "vue";
+import { i as P } from "./inArray-BLmbg9f_.js";
+import { c as _ } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { a as w } from "./anyToString-CIkiJNFY.js";
+import { f as I, i as v, a as Y, t as q } from "./toArray-J4lAhJG7.js";
+import { b as H, D as x, a as U, r as G, d as Q, g as W } from "./getClipboardData-B8Rhx17P.js";
+import { s as C } from "./strFill-CYHpRbDF.js";
+import { G as z, C as f } from "./GeoIntl-DH3GBVnO.js";
 import { i as y } from "./isArray-QlWcxgml.js";
-import { a as V, i as w } from "./Geo-BOuiw8Eo.js";
-import { c as X } from "./createElement-Bvijtmfm.js";
-import { e as Z } from "./getElement-uQ-JTFk-.js";
-import { i as T } from "./isFilled-ClO-1E4U.js";
-import { e as tt } from "./eventStopPropagation-fHm2p5BF.js";
-class et {
+import { a as M, i as V } from "./Geo-BOuiw8Eo.js";
+import { u as B } from "./useInputCheck-DS0d910p.js";
+import { i as J } from "./isFilled-ClO-1E4U.js";
+import { e as X } from "./eventStopPropagation-fHm2p5BF.js";
+class Z {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -94,7 +94,7 @@ class et {
     return this.isDate() ? this.get() : "date";
   }
 }
-class st {
+class tt {
   constructor() {
     a(this, "chars", []);
     a(this, "start", !1);
@@ -151,7 +151,7 @@ class st {
     return this.chars = [], this;
   }
 }
-class it {
+class et {
   // eslint-disable-next-line no-useless-constructor
   constructor(t) {
     a(this, "value", !1);
@@ -179,7 +179,7 @@ class it {
     this.value = !1, this.buffer.reset();
   }
 }
-class rt {
+class st {
   constructor() {
     a(this, "value", {});
   }
@@ -249,15 +249,15 @@ class rt {
    */
   expandMask(t) {
     let e = t;
-    return S(this.value, (s, i) => {
+    return I(this.value, (s, i) => {
       e = e.replace(
-        q(i, "g", "([:value]+)"),
-        (r) => `${r}${I(i, s)}`
+        H(i, "g", "([:value]+)"),
+        (r) => `${r}${C(i, s)}`
       );
     }), e;
   }
 }
-class at {
+class it {
   constructor() {
     a(this, "char", "");
   }
@@ -299,7 +299,7 @@ class at {
     return this.set("");
   }
 }
-class nt {
+class rt {
   constructor() {
     a(this, "length", 0);
   }
@@ -326,7 +326,7 @@ class nt {
     return this.length = t, this;
   }
 }
-const ht = {
+const at = {
   Y: "[0-9]{4}",
   M: {
     type: "number",
@@ -338,7 +338,7 @@ const ht = {
     return {
       type: "number",
       min: "1",
-      max: new M(`${((e = n == null ? void 0 : n.Y) == null ? void 0 : e.value) ?? "2000"}-${((s = n == null ? void 0 : n.M) == null ? void 0 : s.value) ?? "01"}-01`).getMaxDay().toString()
+      max: new x(`${((e = n == null ? void 0 : n.Y) == null ? void 0 : e.value) ?? "2000"}-${((s = n == null ? void 0 : n.M) == null ? void 0 : s.value) ?? "01"}-01`).getMaxDay().toString()
     };
   },
   h: {
@@ -357,7 +357,7 @@ const ht = {
     max: "59"
   }
 };
-class ut {
+class nt {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -374,7 +374,7 @@ class ut {
    */
   getDatetime(t) {
     var e;
-    return new M(t ?? "1987-12-18T10:20:30", this.type.getByDate(), (e = this.props) == null ? void 0 : e.language);
+    return new x(t ?? "1987-12-18T10:20:30", this.type.getByDate(), (e = this.props) == null ? void 0 : e.language);
   }
   /**
    * Returns a mask for filling in the date.<br>
@@ -407,7 +407,7 @@ class ut {
    * Возвращает шаблон проверки для даты.
    */
   getPattern() {
-    return ht;
+    return at;
   }
   /**
    * Returns a list of symbols for output by group name.<br>
@@ -433,7 +433,7 @@ class ut {
     };
   }
 }
-class ct {
+class ht {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -457,7 +457,7 @@ class ct {
    */
   getIntl() {
     var t;
-    return new J((t = this.props) == null ? void 0 : t.language);
+    return new z((t = this.props) == null ? void 0 : t.language);
   }
   /**
    * Getting the number of digits in the remainder.<br>
@@ -549,11 +549,11 @@ class ct {
    */
   getNumberForString() {
     var r;
-    const t = this.getFraction(), e = I("9", this.rubberItem.getByIndex("n") + 1), s = t ? `.${I("3", t)}` : "", i = this.type.isCurrency() && ((r = this.props) != null && r.currency) ? ` ${this.props.currency}` : "";
+    const t = this.getFraction(), e = C("9", this.rubberItem.getByIndex("n") + 1), s = t ? `.${C("3", t)}` : "", i = this.type.isCurrency() && ((r = this.props) != null && r.currency) ? ` ${this.props.currency}` : "";
     return `${e}${s}${i}`;
   }
 }
-class ot extends f {
+class ut extends f {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -580,7 +580,7 @@ class ot extends f {
    */
   isTransitionChar(t, e) {
     const s = this.getTransitionChar(t);
-    return s ? V(e, s) : !1;
+    return s ? M(e, s) : !1;
   }
   /**
    * Checks if the special character is only 1.<br>
@@ -666,7 +666,7 @@ class ot extends f {
    */
   getRubberList() {
     const t = {}, e = this.getSpecial();
-    return d(e) && S(e, (s, i) => {
+    return v(e) && I(e, (s, i) => {
       s != null && s.rubber && (t[i] = s);
     }), t;
   }
@@ -685,7 +685,7 @@ class ot extends f {
    */
   getSpecialItem(t) {
     const e = this.getSpecial();
-    if (d(e) && t in e)
+    if (v(e) && t in e)
       return e[t];
   }
   /**
@@ -700,11 +700,11 @@ class ot extends f {
     if (this.type.isDate())
       return ["Y", "M", "D"];
     const t = this.getSpecial();
-    return y(t) ? t : W(t) ? Object.keys(t) : [t];
+    return y(t) ? t : Y(t) ? Object.keys(t) : [t];
   }
 }
 const L = /[0-9]/;
-class lt {
+class ct {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -722,7 +722,7 @@ class lt {
    */
   is(t, e) {
     const s = this.get(e);
-    return s instanceof RegExp ? !!t.match(s) : w(s) ? !!t.match(new RegExp(s)) : !!t.match(L);
+    return s instanceof RegExp ? !!t.match(s) : V(s) ? !!t.match(new RegExp(s)) : !!t.match(L);
   }
   /**
    * Returns the value of the regular expression for checking.<br>
@@ -743,36 +743,7 @@ class lt {
     return t.split("").filter((s) => e.find((i) => this.is(s, i)));
   }
 }
-function x(n, t = "check") {
-  const e = X(void 0, "input", gt(n));
-  return {
-    group: t,
-    input: e,
-    pattern: n,
-    check(s) {
-      return e.value = C(s), {
-        group: t,
-        input: e,
-        status: e.checkValidity(),
-        validationMessage: e.validationMessage,
-        validity: e.validity,
-        pattern: n,
-        value: s
-      };
-    }
-  };
-}
-function gt(n) {
-  if (T(n)) {
-    const t = Z(n);
-    if (w(n))
-      return { pattern: n };
-    if (d(t))
-      return t;
-  }
-  return {};
-}
-class ft {
+class ot {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -809,7 +780,7 @@ class ft {
     const t = this.getByType();
     for (const e in t) {
       const s = this.getPattern(e);
-      d(s) && d(t[e]) && Object.assign(t[e], s);
+      v(s) && v(t[e]) && Object.assign(t[e], s);
     }
     return t;
   }
@@ -868,12 +839,12 @@ class ft {
    */
   initInput() {
     const t = {}, e = this.getCheck();
-    return S(this.getList(), (s, i) => {
-      t[i] = x(s, i);
-    }), e && (t.check = x(e)), t;
+    return I(this.getList(), (s, i) => {
+      t[i] = B(s, i);
+    }), e && (t.check = B(e)), t;
   }
 }
-class pt {
+class lt {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -900,7 +871,7 @@ class pt {
     return ((t = this.props) == null ? void 0 : t.right) || this.isEnd();
   }
 }
-class mt extends f {
+class gt extends f {
   /**
    * Constructor
    * @param props base data /<br>базовые данные
@@ -966,9 +937,9 @@ class mt extends f {
    * Получение списка символов перехода.
    */
   getTransitionList() {
-    return H(
+    return U(
       Object.values(this.getList()).filter(
-        (t) => "transitionChar" in t && (w(t.transitionChar) || y(t.transitionChar))
+        (t) => "transitionChar" in t && (V(t.transitionChar) || y(t.transitionChar))
       ),
       "transitionChar"
     ).flat();
@@ -982,7 +953,7 @@ class mt extends f {
    */
   update(t, e, s) {
     const i = this.get(e), r = t == null ? void 0 : t[e];
-    return i && r ? V(s, i == null ? void 0 : i.transitionChar) || i != null && i.maxLength && (i == null ? void 0 : i.maxLength) <= (r == null ? void 0 : r.maxLength) ? (this.rubberTransition.set(e), !1) : (r.end && this.match.is(s, e) && !this.rubberTransition.isChar(e) && (this.rubberItem.add(e), this.rubberTransition.reset()), !0) : !1;
+    return i && r ? M(s, i == null ? void 0 : i.transitionChar) || i != null && i.maxLength && (i == null ? void 0 : i.maxLength) <= (r == null ? void 0 : r.maxLength) ? (this.rubberTransition.set(e), !1) : (r.end && this.match.is(s, e) && !this.rubberTransition.isChar(e) && (this.rubberItem.add(e), this.rubberTransition.reset()), !0) : !1;
   }
   /**
    * Reduces the length of the entered symbol by its group.<br>
@@ -1005,13 +976,13 @@ class mt extends f {
    */
   initList() {
     const t = this.special.getRubberList();
-    return this.type.isCurrencyOrNumber() ? U(
+    return this.type.isCurrencyOrNumber() ? G(
       this.format.getRubber(),
       t
     ) : t;
   }
 }
-class dt extends f {
+class ft extends f {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -1084,7 +1055,7 @@ class dt extends f {
    */
   getMaxLength() {
     const e = this.getMask();
-    return y(e) ? G(e) : this.getList().length;
+    return y(e) ? Q(e) : this.getList().length;
   }
   /**
    * Returns the length of only special characters.<br>
@@ -1178,7 +1149,7 @@ class dt extends f {
     }), e;
   }
 }
-class bt {
+class pt {
   /**
    * Constructor
    * @param special
@@ -1313,8 +1284,8 @@ class bt {
     return this.mask.getLength();
   }
 }
-const b = "~";
-class kt {
+const d = "~";
+class mt {
   /**
    * Constructor
    * @param rubberItem
@@ -1342,7 +1313,7 @@ class kt {
    */
   isCharDelete() {
     const t = this.selection.get();
-    return t in this.value && this.value[t] === b;
+    return t in this.value && this.value[t] === d;
   }
   /**
    * Getting input characters.<br>
@@ -1386,7 +1357,7 @@ class kt {
    */
   pop() {
     const t = this.selection.get() - 1;
-    return this.isSpecialNextAnother() ? this.value[t] = b : (this.value.splice(t, 1), this.updateLength()), this.selection.goBack().resetImmediate(), this;
+    return this.isSpecialNextAnother() ? this.value[t] = d : (this.value.splice(t, 1), this.updateLength()), this.selection.goBack().resetImmediate(), this;
   }
   /**
    * Resets the values to the initial values.<br>
@@ -1430,7 +1401,7 @@ class kt {
     return this.characterLength.set(this.value.length), this;
   }
 }
-class vt extends f {
+class dt extends f {
   constructor(t, e, s, i) {
     super(() => this.initValue()), this.rubberTransition = t, this.mask = e, this.special = s, this.character = i;
   }
@@ -1485,7 +1456,7 @@ class vt extends f {
     return e.join("");
   }
 }
-class yt {
+class bt {
   /**
    * Constructor
    * @param type
@@ -1608,7 +1579,7 @@ class yt {
     return this.mask.getList().forEach((s, i) => {
       if (this.special.isSpecial(s)) {
         const r = this.add(e, s);
-        this.isStandard(i) && t[i] !== b && r.chars.push(t[i]), r.maxLength++, r.value = r.full ? r.chars.join("") : "", r.full = this.special.isDefault(s) || r.maxLength === r.chars.length, r.end = r.maxLength === r.chars.length;
+        this.isStandard(i) && t[i] !== d && r.chars.push(t[i]), r.maxLength++, r.value = r.full ? r.chars.join("") : "", r.full = this.special.isDefault(s) || r.maxLength === r.chars.length, r.end = r.maxLength === r.chars.length;
       }
     }), e;
   }
@@ -1625,7 +1596,7 @@ class yt {
     return s;
   }
 }
-class Ct {
+class kt {
   /**
    * Constructor
    * @param pattern
@@ -1699,8 +1670,8 @@ class Ct {
     };
   }
 }
-const It = "_";
-class St {
+const vt = "_";
+class yt {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -1739,7 +1710,7 @@ class St {
   getInput() {
     const t = [], e = this.mask.getList();
     return this.valueBasic.get().split("").forEach((s, i) => {
-      s === b ? t.push(
+      s === d ? t.push(
         this.getSpecialToView((e == null ? void 0 : e[i]) ?? "") ?? s
       ) : t.push(s);
     }), t.join("");
@@ -1750,7 +1721,7 @@ class St {
    * @param value input values /<br>вводимые значения
    */
   isValue(t) {
-    return !!(t && t !== b);
+    return !!(t && t !== d);
   }
   /**
    * Returns the status by the entered symbol and the location.<br>
@@ -1777,7 +1748,7 @@ class St {
    */
   getSpecialToView(t) {
     var e;
-    return this.special.isSpecial(t) ? this.getViewChar(t) ?? this.special.getView(t) ?? ((e = this.props) == null ? void 0 : e.view) ?? It : t;
+    return this.special.isSpecial(t) ? this.getViewChar(t) ?? this.special.getView(t) ?? ((e = this.props) == null ? void 0 : e.view) ?? vt : t;
   }
   /**
    * Returns a special symbol by symbol.<br>
@@ -1791,7 +1762,7 @@ class St {
       return this.format.getView();
   }
 }
-class wt {
+class Ct {
   /**
    * Constructor
    * @param validation
@@ -1868,7 +1839,7 @@ class wt {
     return this.event = void 0, this;
   }
 }
-class Bt {
+class It {
   /**
    * Constructor
    * @param type
@@ -1888,8 +1859,8 @@ class Bt {
    * @param element input element /<br>элемент ввода
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, s, i, r, h, u, c, l, g, p, k, D, E, F) {
-    this.type = t, this.buffer = e, this.focus = s, this.rubberTransition = i, this.date = r, this.special = h, this.match = u, this.rubber = c, this.mask = l, this.selection = g, this.character = p, this.valueBasic = k, this.value = D, this.emit = E, this.element = F;
+  constructor(t, e, s, i, r, h, u, c, l, g, p, b, T, D, E) {
+    this.type = t, this.buffer = e, this.focus = s, this.rubberTransition = i, this.date = r, this.special = h, this.match = u, this.rubber = c, this.mask = l, this.selection = g, this.character = p, this.valueBasic = b, this.value = T, this.emit = D, this.element = E;
   }
   /**
    * Adding new characters that can be entered by the user.<br>
@@ -1900,7 +1871,7 @@ class Bt {
    */
   add(t, e, s = !0) {
     let i = !1;
-    return this.selection.setByMask(t, s), this.rubberTransition.reset(), z(e).forEach((r) => {
+    return this.selection.setByMask(t, s), this.rubberTransition.reset(), q(e).forEach((r) => {
       const h = this.character.getFocus(), u = this.character.getImmediate();
       this.selection.setShift(
         this.rubber.update(this.value.getInfo(), u, r)
@@ -1934,7 +1905,7 @@ class Bt {
    * @param value new values /<br>новые значения
    */
   reset(t = "") {
-    if (this.character.reset(), this.rubber.reset(), T(t)) {
+    if (this.character.reset(), this.rubber.reset(), J(t)) {
       const e = this.type.isDate() ? this.date.getValue(t) : t;
       this.add(0, this.extra(e.split("")));
     }
@@ -1961,9 +1932,9 @@ class Bt {
         } else if (l.match(i)) {
           let g = !1;
           for (let p = r; p < s.length; p++) {
-            const k = s[p];
-            if (r++, k.match(i)) {
-              l === k ? (s.splice(p, 1), r--) : g = !0;
+            const b = s[p];
+            if (r++, b.match(i)) {
+              l === b ? (s.splice(p, 1), r--) : g = !0;
               break;
             }
           }
@@ -1993,7 +1964,7 @@ class Bt {
     return this.buffer.is() ? (this.add(this.selection.getShift(), this.buffer.get()), this.buffer.resetChars(), !0) : (this.buffer.reset(), this.emit.go(), !1);
   }
 }
-class Lt {
+class St {
   /**
    * Constructor
    * @param buffer
@@ -2059,7 +2030,7 @@ class Lt {
    * @param event invoked event /<br>вызываемое событие
    */
   onBeforeinput(t) {
-    this.emit.set("beforeinput", t).go(), this.unidentified || (this.makeChange(t), tt(t));
+    this.emit.set("beforeinput", t).go(), this.unidentified || (this.makeChange(t), X(t));
   }
   /**
    * Intercepting the event during data modification.
@@ -2082,7 +2053,7 @@ class Lt {
       start: e,
       end: s
     } = this.getSelectionInfo(t);
-    Q(t).then((i) => {
+    W(t).then((i) => {
       const r = i.split("");
       e === s ? this.data.add(e, this.data.extra(r)) : this.data.pop(e, s).add(this.selection.getShift(), this.data.extra(r)), this.change = !0, this.emit.set("paste", t).go();
     }).catch((i) => console.error("getClipboardData", i));
@@ -2170,7 +2141,7 @@ class Lt {
     i < e && (s.selectionStart = e, s.selectionEnd = e);
   }
 }
-class xt {
+class wt {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -2203,23 +2174,23 @@ class xt {
     a(this, "data");
     a(this, "event");
     a(this, "oldValue", "");
-    this.type = new et(t), this.buffer = new st(), this.focus = new it(this.buffer), this.rubberItem = new rt(), this.rubberTransition = new at(), this.characterLength = new nt(), this.date = new ut(t, this.type), this.format = new ct(
+    this.type = new Z(t), this.buffer = new tt(), this.focus = new et(this.buffer), this.rubberItem = new st(), this.rubberTransition = new it(), this.characterLength = new rt(), this.date = new nt(t, this.type), this.format = new ht(
       t,
       this.type,
       this.rubberItem
-    ), this.special = new ot(
+    ), this.special = new ut(
       t,
       this.type,
       this.format
-    ), this.match = new lt(t, this.special), this.pattern = new ft(
+    ), this.match = new ct(t, this.special), this.pattern = new ot(
       t,
       this.type,
       this.date,
       this.special
-    ), this.right = new pt(
+    ), this.right = new lt(
       t,
       this.type
-    ), this.rubber = new mt(
+    ), this.rubber = new gt(
       t,
       this.type,
       this.rubberItem,
@@ -2227,7 +2198,7 @@ class xt {
       this.special,
       this.match,
       this.format
-    ), this.item = new dt(
+    ), this.item = new ft(
       t,
       this.type,
       this.rubberItem,
@@ -2235,32 +2206,32 @@ class xt {
       this.date,
       this.format,
       this.special
-    ), this.selection = new bt(
+    ), this.selection = new pt(
       this.special,
       this.item
-    ), this.character = new kt(
+    ), this.character = new mt(
       this.rubberItem,
       this.characterLength,
       this.special,
       this.rubber,
       this.item,
       this.selection
-    ), this.valueBasic = new vt(
+    ), this.valueBasic = new dt(
       this.rubberTransition,
       this.item,
       this.special,
       this.character
-    ), this.value = new yt(
+    ), this.value = new bt(
       this.type,
       this.date,
       this.format,
       this.item,
       this.special,
       this.valueBasic
-    ), this.validation = new Ct(
+    ), this.validation = new kt(
       this.pattern,
       this.value
-    ), this.view = new St(
+    ), this.view = new yt(
       t,
       this.type,
       this.date,
@@ -2271,10 +2242,10 @@ class xt {
       this.valueBasic,
       this.validation,
       i
-    ), this.emit = new wt(
+    ), this.emit = new Ct(
       this.validation,
       s
-    ), this.data = new Bt(
+    ), this.data = new It(
       this.type,
       this.buffer,
       this.focus,
@@ -2290,7 +2261,7 @@ class xt {
       this.value,
       this.emit,
       e
-    ), this.event = new Lt(
+    ), this.event = new St(
       this.buffer,
       this.focus,
       this.characterLength,
@@ -2300,7 +2271,7 @@ class xt {
       this.validation,
       this.emit,
       this.data
-    ), t != null && t.value && (this.oldValue = C(t == null ? void 0 : t.value), this.data.reset(this.oldValue));
+    ), t != null && t.value && (this.oldValue = w(t == null ? void 0 : t.value), this.data.reset(this.oldValue));
   }
   /**
    * Receiving basic standard values.<br>
@@ -2338,11 +2309,11 @@ class xt {
    * @param value new values /<br>новые значения
    */
   reset(t) {
-    const e = C(t);
+    const e = w(t);
     return this.oldValue !== e ? (this.oldValue = e, this.data.reset(e), this.emit.set("reset", {}).go(), !0) : !1;
   }
 }
-class Mt {
+class Bt {
   /**
    * Constructor
    * @param props base data /<br>базовые данные
@@ -2352,10 +2323,10 @@ class Mt {
    */
   constructor(t, e, s, i = "is-character") {
     a(this, "mask");
-    a(this, "valueBasic", v(""));
-    a(this, "value", v(""));
-    a(this, "view", v([]));
-    a(this, "classes", v({}));
+    a(this, "valueBasic", k(""));
+    a(this, "value", k(""));
+    a(this, "view", k([]));
+    a(this, "classes", k({}));
     a(this, "onFocus", (t) => this.mask.event.onFocus(t));
     a(this, "onBlur", (t) => this.mask.event.onBlur(t));
     a(this, "onKeydown", (t) => this.mask.event.onKeydown(t));
@@ -2365,14 +2336,14 @@ class Mt {
     a(this, "onChange", (t) => this.mask.event.onChange(t));
     a(this, "onPaste", (t) => this.mask.event.onPaste(t));
     a(this, "onClick", (t) => this.mask.event.onClick(t));
-    this.mask = new xt(
+    this.mask = new wt(
       t,
       e,
       (r, h, u) => {
         r === "input" && this.updateValue(), s(r, h, u);
       },
       i
-    ), K(() => {
+    ), A(() => {
       this.mask.reset(t == null ? void 0 : t.value), this.updateValue();
     });
   }
@@ -2385,7 +2356,7 @@ class Mt {
     return this.valueBasic.value = t, this.value.value = this.mask.value.get(), this.view.value = this.mask.view.get(), e && this.mask.goSelection(), this.classes.value = this.mask.getClasses(), this;
   }
 }
-class Vt extends Y {
+class Lt extends _ {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -2399,7 +2370,7 @@ class Vt extends Y {
       i
     );
     a(this, "mask");
-    this.mask = new Mt(
+    this.mask = new Bt(
       s,
       this.element,
       (r, h, u) => {
@@ -2551,7 +2522,7 @@ const o = {
   match: /[0-9]/,
   type: "text",
   view: "_"
-}, Tt = {
+}, xt = {
   // Values
   type: {
     type: String,
@@ -2582,35 +2553,35 @@ const o = {
   visible: Boolean,
   right: Boolean,
   dir: String
-}, Dt = {
+}, Mt = {
   // :values [!] System label / Системная метка
   dir: ["ltr", "rtl"]
   // :values [!] System label / Системная метка
-}, Et = {
-  ...Tt,
+}, Vt = {
+  ...xt,
   // :prop [!] System label / Системная метка
   visible: Boolean,
   right: Boolean,
   dir: String
-}, Ft = /* @__PURE__ */ R({
+}, Tt = /* @__PURE__ */ K({
   name: "M3Mask",
   __name: "M3Mask",
-  props: { ...Et },
+  props: { ...Vt },
   emits: ["focus", "blur", "keydown", "keyup", "beforeinput", "input", "change", "paste", "reset"],
   setup(n, { expose: t, emit: e }) {
-    const s = e, i = n, r = B(() => ({
+    const s = e, i = n, r = S(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "m3-mask": !0,
         "m3-mask--visible": i.visible,
         "m3-mask--right": i.right,
-        [`m3-mask--dir--${i.dir}`]: _(Dt.dir, i.dir)
+        [`m3-mask--dir--${i.dir}`]: P(Mt.dir, i.dir)
         // :classes-values [!] System label / Системная метка
       }
-    })), h = B(() => ({
+    })), h = S(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), u = new Vt(
+    })), u = new Lt(
       "m3.mask",
       i,
       {
@@ -2619,9 +2590,9 @@ const o = {
         styles: h
       }
     ), c = u.render();
-    return t(u.expose()), (l, g) => ($(), N(j(P(c))));
+    return t(u.expose()), (l, g) => (R(), $(N(j(c))));
   }
-}), Qt = Ft;
+}), Ht = Tt;
 export {
-  Qt as M3Mask
+  Ht as M3Mask
 };

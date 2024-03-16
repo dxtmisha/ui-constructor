@@ -25,7 +25,6 @@ export declare const C1Button: {
         to: StringConstructor;
         value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
         detail: ObjectConstructor[];
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         iconTrailing: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         icon: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         iconTurn: BooleanConstructor;
@@ -69,7 +68,6 @@ export declare const C1Button: {
         to: StringConstructor;
         value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
         detail: ObjectConstructor[];
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         iconTrailing: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         icon: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         iconTurn: BooleanConstructor;
@@ -128,7 +126,6 @@ export declare const C1Button: {
         to: StringConstructor;
         value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
         detail: ObjectConstructor[];
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         iconTrailing: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         icon: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
         iconTurn: BooleanConstructor;
@@ -184,7 +181,6 @@ export declare const C1Button: {
     to: StringConstructor;
     value: (ObjectConstructor | StringConstructor | NumberConstructor)[];
     detail: ObjectConstructor[];
-    progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
     iconTrailing: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
     icon: import("vue").PropType<string | import("../../constructors/Icon/props").IconProps | undefined>;
     iconTurn: BooleanConstructor;

@@ -10,7 +10,7 @@
   background-size: cover;
   border-radius: inherit;
 
-  transition-property: background-size, filter, opacity, transform;
+  transition-property: background-size, filter, opacity, transform, clip-path;
   transition-duration: v('d.sys.transitionDuration.standard');
   transform: none;
 

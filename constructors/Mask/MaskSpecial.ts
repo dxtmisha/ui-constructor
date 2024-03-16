@@ -1,8 +1,8 @@
-import { forEach } from '../../functions/forEach.ts'
-import { isArray } from '../../functions/isArray.ts'
-import { isObject } from '../../functions/isObject.ts'
-import { isObjectNotArray } from '../../functions/isObjectNotArray.ts'
-import { isSelected } from '../../functions/isSelected.ts'
+import { forEach } from '../../functions/forEach'
+import { isArray } from '../../functions/isArray'
+import { isObject } from '../../functions/isObject'
+import { isObjectNotArray } from '../../functions/isObjectNotArray'
+import { isSelected } from '../../functions/isSelected'
 
 import { CacheItem } from '../../classes/CacheItem'
 

@@ -519,6 +519,96 @@ $designsProperties: (
           ),
         ),
       ),
+      'checkbox':(
+        index: 'checkbox',
+        name: 'd-checkbox',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--d-checkbox-comp-required-color',
+                    type: 'var',
+                    value: 'red',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+              'info':(
+                index: 'info',
+                name: '& .d-checkbox__info',
+                type: 'subclass',
+                value: (
+                  'label':(
+                    index: 'label',
+                    name: '&__label',
+                    type: 'subclass',
+                    value: (
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       'fieldMessage':(
         index: 'fieldMessage',
         name: 'd-fieldMessage',
@@ -787,13 +877,6 @@ $designsProperties: (
             name: '&--circular',
             type: 'state',
             value: (
-              'inset':(
-                index: 'inset',
-                name: 'inset',
-                type: 'property',
-                value: 0px,
-                var: true,
-              ),
             ),
           ),
           'indeterminate':(
@@ -7815,6 +7898,540 @@ $designsProperties: (
           ),
         ),
       ),
+      'checkbox':(
+        index: 'checkbox',
+        name: 'm3-checkbox',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--m3-checkbox-comp-required-color',
+                    type: 'var',
+                    value: 'var(--m3-sys-palette-error)',
+                  ),
+                ),
+              ),
+              'padding':(
+                index: 'padding',
+                name: '--m3-checkbox-comp-padding',
+                type: 'var',
+                value: 'calc(var(--m3-ref-spacing-px) * 11)',
+              ),
+              'palette':(
+                index: 'palette',
+                name: '--m3-checkbox-comp-palette',
+                type: 'var',
+                value: 'var(--m3-sys-palette-onSurface)',
+              ),
+              'paletteColor':(
+                index: 'paletteColor',
+                name: '--m3-checkbox-comp-paletteColor',
+                type: 'var',
+                value: 'var(--m3-sys-palette-onSurfaceVariant)',
+              ),
+              'icon':(
+                index: 'icon',
+                name: 'icon',
+                type: 'var',
+                value: (
+                  'size':(
+                    index: 'size',
+                    name: '--m3-checkbox-comp-icon-size',
+                    type: 'var',
+                    value: 'calc(var(--m3-ref-spacing-px) * 18)',
+                  ),
+                  'color':(
+                    index: 'color',
+                    name: '--m3-checkbox-comp-icon-color',
+                    type: 'var',
+                    value: 'var(--m3-checkbox-comp-palette)',
+                  ),
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: '--m3-checkbox-comp-icon-backgroundOpacity',
+                    type: 'var',
+                    value: 0,
+                  ),
+                  'borderOpacity':(
+                    index: 'borderOpacity',
+                    name: '--m3-checkbox-comp-icon-borderOpacity',
+                    type: 'var',
+                    value: 1,
+                  ),
+                ),
+              ),
+              'checked':(
+                index: 'checked',
+                name: 'checked',
+                type: 'var',
+                value: (
+                  'icon':(
+                    index: 'icon',
+                    name: 'icon',
+                    type: 'var',
+                    value: (
+                      'backgroundOpacity':(
+                        index: 'backgroundOpacity',
+                        name: '--m3-checkbox-comp-checked-icon-backgroundOpacity',
+                        type: 'var',
+                        value: 1,
+                      ),
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: '--m3-checkbox-comp-checked-icon-borderOpacity',
+                        type: 'var',
+                        value: 0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'padding':(
+            index: 'padding',
+            name: 'padding',
+            type: 'property',
+            value: 'var(--m3-ref-spacing-1)',
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: 'padding',
+                type: 'property',
+                value: 'var(--m3-checkbox-comp-padding)',
+              ),
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--m3-checkbox-comp-palette)',
+              ),
+              'backgroundOpacity':(
+                index: 'backgroundOpacity',
+                name: 'background-opacity',
+                type: 'property',
+                value: 0,
+              ),
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'palette-background',
+                type: 'property',
+                value: 'var(--m3-checkbox-comp-palette)',
+              ),
+              'before':(
+                index: 'before',
+                name: 'before',
+                type: 'virtual',
+                value: (
+                  'position':(
+                    index: 'position',
+                    name: 'position',
+                    type: 'property',
+                    value: 'absolute',
+                  ),
+                  'inset':(
+                    index: 'inset',
+                    name: 'inset',
+                    type: 'property',
+                    value: 0px,
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'inherit',
+                  ),
+                  'borderWidth':(
+                    index: 'borderWidth',
+                    name: 'border-width',
+                    type: 'property',
+                    value: 'var(--m3-ref-spacing-px)',
+                  ),
+                  'borderStyle':(
+                    index: 'borderStyle',
+                    name: 'border-style',
+                    type: 'property',
+                    value: 'solid',
+                  ),
+                  'borderOpacity':(
+                    index: 'borderOpacity',
+                    name: 'border-opacity',
+                    type: 'property',
+                    value: 0,
+                  ),
+                  'borderColor':(
+                    index: 'borderColor',
+                    name: 'palette-border',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-palette)',
+                  ),
+                  'transition':(
+                    index: 'transition',
+                    name: 'transition',
+                    type: 'property',
+                    value: 'inherit',
+                  ),
+                ),
+              ),
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                  'circle':(
+                    index: 'circle',
+                    name: 'circle',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-icon-size)',
+                  ),
+                  'fontFamily':(
+                    index: 'fontFamily',
+                    name: 'font-family',
+                    type: 'property',
+                    value: 'var(--m3-ref-font-family-roboto)',
+                  ),
+                  'fontSize':(
+                    index: 'fontSize',
+                    name: 'font-size',
+                    type: 'property',
+                    value: 'var(--m3-ref-font-size-12)',
+                  ),
+                  'fontWeight':(
+                    index: 'fontWeight',
+                    name: 'font-weight',
+                    type: 'property',
+                    value: 'var(--m3-ref-font-weight-400)',
+                  ),
+                  'lineHeight':(
+                    index: 'lineHeight',
+                    name: 'line-height',
+                    type: 'property',
+                    value: 'var(--m3-ref-lineHeight-16)',
+                  ),
+                  'letterSpacing':(
+                    index: 'letterSpacing',
+                    name: 'letter-spacing',
+                    type: 'property',
+                    value: 'var(--m3-ref-letterSpacing-40)',
+                  ),
+                  'color':(
+                    index: 'color',
+                    name: 'color',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-icon-color)',
+                  ),
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: 'background-opacity',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-icon-backgroundOpacity)',
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'palette-background',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-palette)',
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'calc(var(--m3-ref-spacing-px) * 2)',
+                  ),
+                  'borderWidth':(
+                    index: 'borderWidth',
+                    name: 'border-width',
+                    type: 'property',
+                    value: 'calc(var(--m3-ref-spacing-px) * 2)',
+                  ),
+                  'borderStyle':(
+                    index: 'borderStyle',
+                    name: 'border-style',
+                    type: 'property',
+                    value: 'solid',
+                  ),
+                  'borderOpacity':(
+                    index: 'borderOpacity',
+                    name: 'border-opacity',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-icon-borderOpacity)',
+                  ),
+                  'borderColor':(
+                    index: 'borderColor',
+                    name: 'palette-border',
+                    type: 'property',
+                    value: 'var(--m3-checkbox-comp-paletteColor)',
+                  ),
+                ),
+              ),
+              'focus':(
+                index: 'focus',
+                name: 'focus',
+                type: 'selector',
+                value: (
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: 'background-opacity',
+                    type: 'property',
+                    value: 'var(--m3-sys-opacity-012)',
+                  ),
+                ),
+              ),
+              'hover':(
+                index: 'hover',
+                name: 'hover',
+                type: 'selector',
+                value: (
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: 'background-opacity',
+                    type: 'property',
+                    value: 'var(--m3-sys-opacity-008)',
+                  ),
+                ),
+              ),
+              'active':(
+                index: 'active',
+                name: 'active',
+                type: 'selector',
+                value: (
+                  'before':(
+                    index: 'before',
+                    name: 'before',
+                    type: 'virtual',
+                    value: (
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: 'border-opacity',
+                        type: 'property',
+                        value: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'paddingTop':(
+                index: 'paddingTop',
+                name: 'padding-top',
+                type: 'property',
+                value: 'calc(var(--m3-checkbox-comp-padding) + (var(--m3-checkbox-comp-icon-size) / 2) - (var(--sys-line-height) / 2))',
+              ),
+              'paddingLeft':(
+                index: 'paddingLeft',
+                name: 'padding-left',
+                type: 'property',
+                value: 'var(--m3-ref-spacing-3)',
+              ),
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: 'padding',
+                type: 'property',
+                value: 'calc(var(--m3-checkbox-comp-padding) + var(--m3-ref-spacing-px) * 3)',
+              ),
+              'color':(
+                index: 'color',
+                name: 'color',
+                type: 'property',
+                value: 'var(--m3-checkbox-comp-icon-color)',
+              ),
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+              'info':(
+                index: 'info',
+                name: '& .m3-checkbox__info',
+                type: 'subclass',
+                value: (
+                  'label':(
+                    index: 'label',
+                    name: '&__label',
+                    type: 'subclass',
+                    value: (
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'comp':(
+                index: 'comp',
+                name: 'comp',
+                type: 'var',
+                value: (
+                  'palette':(
+                    index: 'palette',
+                    name: '--m3-checkbox-comp-palette',
+                    type: 'var',
+                    value: 'var(--m3-sys-palette-primary)',
+                  ),
+                  'paletteColor':(
+                    index: 'paletteColor',
+                    name: '--m3-checkbox-comp-paletteColor',
+                    type: 'var',
+                    value: 'var(--m3-sys-palette-primary)',
+                  ),
+                  'icon':(
+                    index: 'icon',
+                    name: 'icon',
+                    type: 'var',
+                    value: (
+                      'color':(
+                        index: 'color',
+                        name: '--m3-checkbox-comp-icon-color',
+                        type: 'var',
+                        value: 'var(--m3-sys-palette-onPrimary)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'item':(
+                index: 'item',
+                name: '& .m3-checkbox__item',
+                type: 'subclass',
+                value: (
+                  'icon':(
+                    index: 'icon',
+                    name: '&__icon',
+                    type: 'subclass',
+                    value: (
+                      'backgroundOpacity':(
+                        index: 'backgroundOpacity',
+                        name: 'background-opacity',
+                        type: 'property',
+                        value: 'var(--m3-checkbox-comp-checked-icon-backgroundOpacity)',
+                      ),
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: 'border-opacity',
+                        type: 'property',
+                        value: 'var(--m3-checkbox-comp-checked-icon-borderOpacity)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'comp':(
+                index: 'comp',
+                name: 'comp',
+                type: 'var',
+                value: (
+                  'palette':(
+                    index: 'palette',
+                    name: '--m3-checkbox-comp-palette',
+                    type: 'var',
+                    value: 'var(--m3-sys-palette-onSurface)',
+                  ),
+                  'paletteColor':(
+                    index: 'paletteColor',
+                    name: '--m3-checkbox-comp-paletteColor',
+                    type: 'var',
+                    value: 'var(--m3-sys-palette-onSurface)',
+                  ),
+                  'icon':(
+                    index: 'icon',
+                    name: 'icon',
+                    type: 'var',
+                    value: (
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: '--m3-checkbox-comp-icon-borderOpacity',
+                        type: 'var',
+                        value: 'var(--m3-sys-opacity-disabled)',
+                      ),
+                    ),
+                  ),
+                  'checked':(
+                    index: 'checked',
+                    name: 'checked',
+                    type: 'var',
+                    value: (
+                      'icon':(
+                        index: 'icon',
+                        name: 'icon',
+                        type: 'var',
+                        value: (
+                          'backgroundOpacity':(
+                            index: 'backgroundOpacity',
+                            name: '--m3-checkbox-comp-checked-icon-backgroundOpacity',
+                            type: 'var',
+                            value: 'var(--m3-sys-opacity-disabled)',
+                          ),
+                          'borderOpacity':(
+                            index: 'borderOpacity',
+                            name: '--m3-checkbox-comp-checked-icon-borderOpacity',
+                            type: 'var',
+                            value: 0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       'fieldMessage':(
         index: 'fieldMessage',
         name: 'm3-fieldMessage',
@@ -8575,18 +9192,17 @@ $designsProperties: (
             name: '&--circular',
             type: 'state',
             value: (
+              'inset':(
+                index: 'inset',
+                name: '--m3-progress-inset',
+                type: 'var',
+                value: 'var(--m3-ref-spacing-1)',
+              ),
               'width':(
                 index: 'width',
                 name: '--m3-progress-width',
                 type: 'var',
                 value: 'var(--m3-ref-spacing-12)',
-              ),
-              'inset':(
-                index: 'inset',
-                name: 'inset',
-                type: 'property',
-                value: 'var(--m3-ref-spacing-1)',
-                var: true,
               ),
             ),
           ),
@@ -9645,351 +10261,6 @@ $designsProperties: (
                 type: 'state',
                 value: (
                 ),
-              ),
-            ),
-          ),
-        ),
-      ),
-      'checkbox':(
-        index: 'checkbox',
-        name: 'm3-checkbox',
-        type: 'component',
-        value: (
-          'padding':(
-            index: 'padding',
-            name: 'padding',
-            type: 'property',
-            value: 'var(--m3-ref-spacing-1)',
-          ),
-          'checked':(
-            index: 'checked',
-            name: 'checked',
-            type: 'selector',
-            value: (
-              'comp':(
-                index: 'comp',
-                name: '&.m3-checkbox--comp',
-                type: 'state',
-                value: (
-                  'palette':(
-                    index: 'palette',
-                    name: 'palette',
-                    type: 'property',
-                    value: 'var(--m3-sys-palette-primary)',
-                  ),
-                  'paletteColor':(
-                    index: 'paletteColor',
-                    name: 'palette-color',
-                    type: 'property',
-                    value: 'var(--m3-sys-palette-primary)',
-                  ),
-                  'icon':(
-                    index: 'icon',
-                    name: '&--icon',
-                    type: 'state',
-                    value: (
-                      'backgroundOpacity':(
-                        index: 'backgroundOpacity',
-                        name: 'background-opacity',
-                        type: 'property',
-                        value: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          'comp':(
-            index: 'comp',
-            name: '&--comp',
-            type: 'state',
-            value: (
-              'padding':(
-                index: 'padding',
-                name: 'padding',
-                type: 'property',
-                value: 'calc(var(--m3-ref-spacing-px) * 11)',
-              ),
-              'palette':(
-                index: 'palette',
-                name: 'palette',
-                type: 'property',
-                value: 'var(--m3-sys-palette-onSurface)',
-              ),
-              'paletteColor':(
-                index: 'paletteColor',
-                name: 'palette-color',
-                type: 'property',
-                value: 'var(--m3-sys-palette-onSurfaceVariant)',
-              ),
-              'required':(
-                index: 'required',
-                name: 'required',
-                type: 'selector',
-                value: (
-                  'color':(
-                    index: 'color',
-                    name: 'color',
-                    type: 'property',
-                    value: 'var(--m3-sys-palette-error)',
-                  ),
-                ),
-              ),
-              'icon':(
-                index: 'icon',
-                name: '&--icon',
-                type: 'state',
-                value: (
-                  'size':(
-                    index: 'size',
-                    name: '--m3-checkbox-size',
-                    type: 'var',
-                    value: 'calc(var(--m3-ref-spacing-px) * 18)',
-                  ),
-                  'backgroundOpacity':(
-                    index: 'backgroundOpacity',
-                    name: 'background-opacity',
-                    type: 'property',
-                    value: 0,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          'item':(
-            index: 'item',
-            name: '&--item',
-            type: 'state',
-            value: (
-              'padding':(
-                index: 'padding',
-                name: 'padding',
-                type: 'property',
-                value: 'var(--m3-checkbox-comp-padding)',
-              ),
-              'color':(
-                index: 'color',
-                name: 'color',
-                type: 'property',
-                value: 'var(--m3-checkbox-comp-palette)',
-              ),
-              'backgroundColor':(
-                index: 'backgroundColor',
-                name: 'background-color',
-                type: 'property',
-                value: 'var(--m3-checkbox-comp-palette)',
-              ),
-              'backgroundOpacity':(
-                index: 'backgroundOpacity',
-                name: 'background-opacity',
-                type: 'property',
-                value: 0,
-              ),
-              'before':(
-                index: 'before',
-                name: 'before',
-                type: 'virtual',
-                value: (
-                  'position':(
-                    index: 'position',
-                    name: 'position',
-                    type: 'property',
-                    value: 'absolute',
-                  ),
-                  'inset':(
-                    index: 'inset',
-                    name: 'inset',
-                    type: 'property',
-                    value: 0px,
-                  ),
-                  'borderRadius':(
-                    index: 'borderRadius',
-                    name: 'border-radius',
-                    type: 'property',
-                    value: 'inherit',
-                  ),
-                  'borderWidth':(
-                    index: 'borderWidth',
-                    name: 'border-width',
-                    type: 'property',
-                    value: 'var(--m3-ref-spacing-px)',
-                  ),
-                  'borderStyle':(
-                    index: 'borderStyle',
-                    name: 'border-style',
-                    type: 'property',
-                    value: 'solid',
-                  ),
-                  'borderColor':(
-                    index: 'borderColor',
-                    name: 'border-color',
-                    type: 'property',
-                    value: 'var(--m3-checkbox-comp-palette)',
-                  ),
-                  'borderOpacity':(
-                    index: 'borderOpacity',
-                    name: 'border-opacity',
-                    type: 'property',
-                    value: 0,
-                  ),
-                  'transition':(
-                    index: 'transition',
-                    name: 'transition',
-                    type: 'property',
-                    value: 'inherit',
-                  ),
-                ),
-              ),
-              'focus':(
-                index: 'focus',
-                name: 'focus',
-                type: 'selector',
-                value: (
-                  'backgroundOpacity':(
-                    index: 'backgroundOpacity',
-                    name: 'background-opacity',
-                    type: 'property',
-                    value: 'var(--m3-sys-opacity-012)',
-                  ),
-                ),
-              ),
-              'hover':(
-                index: 'hover',
-                name: 'hover',
-                type: 'selector',
-                value: (
-                  'backgroundOpacity':(
-                    index: 'backgroundOpacity',
-                    name: 'background-opacity',
-                    type: 'property',
-                    value: 'var(--m3-sys-opacity-008)',
-                  ),
-                ),
-              ),
-              'active':(
-                index: 'active',
-                name: 'active',
-                type: 'selector',
-                value: (
-                  'before':(
-                    index: 'before',
-                    name: 'before',
-                    type: 'virtual',
-                    value: (
-                      'borderOpacity':(
-                        index: 'borderOpacity',
-                        name: 'border-opacity',
-                        type: 'property',
-                        value: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              'icon':(
-                index: 'icon',
-                name: '&--icon',
-                type: 'state',
-                value: (
-                  'circle':(
-                    index: 'circle',
-                    name: 'circle',
-                    type: 'property',
-                    value: 'var(--m3-checkbox-comp-icon-size)',
-                  ),
-                  'fontFamily':(
-                    index: 'fontFamily',
-                    name: 'font-family',
-                    type: 'property',
-                    value: 'var(--m3-ref-font-family-roboto)',
-                  ),
-                  'fontSize':(
-                    index: 'fontSize',
-                    name: 'font-size',
-                    type: 'property',
-                    value: 'var(--m3-ref-font-size-12)',
-                  ),
-                  'fontWeight':(
-                    index: 'fontWeight',
-                    name: 'font-weight',
-                    type: 'property',
-                    value: 'var(--m3-ref-font-weight-400)',
-                  ),
-                  'lineHeight':(
-                    index: 'lineHeight',
-                    name: 'line-height',
-                    type: 'property',
-                    value: 'var(--m3-ref-lineHeight-16)',
-                  ),
-                  'letterSpacing':(
-                    index: 'letterSpacing',
-                    name: 'letter-spacing',
-                    type: 'property',
-                    value: 'var(--m3-ref-letterSpacing-40)',
-                  ),
-                  'color':(
-                    index: 'color',
-                    name: 'color',
-                    type: 'property',
-                    value: 'var(--m3-sys-palette-onPrimary)',
-                  ),
-                  'backgroundColor':(
-                    index: 'backgroundColor',
-                    name: 'background-color',
-                    type: 'property',
-                    value: 'var(--m3-checkbox-comp-palette)',
-                  ),
-                  'backgroundOpacity':(
-                    index: 'backgroundOpacity',
-                    name: 'background-opacity',
-                    type: 'property',
-                    value: 'var(--m3-checkbox-comp-icon-backgroundOpacity)',
-                  ),
-                  'borderRadius':(
-                    index: 'borderRadius',
-                    name: 'border-radius',
-                    type: 'property',
-                    value: 'calc(var(--m3-ref-spacing-px) * 2)',
-                  ),
-                  'borderWidth':(
-                    index: 'borderWidth',
-                    name: 'border-width',
-                    type: 'property',
-                    value: 'calc(var(--m3-ref-spacing-px) * 2)',
-                  ),
-                  'borderStyle':(
-                    index: 'borderStyle',
-                    name: 'border-style',
-                    type: 'property',
-                    value: 'solid',
-                  ),
-                  'borderColor':(
-                    index: 'borderColor',
-                    name: 'border-color',
-                    type: 'property',
-                    value: 'var(--m3-checkbox-comp-paletteColor)',
-                  ),
-                ),
-              ),
-            ),
-          ),
-          'info':(
-            index: 'info',
-            name: '&--info',
-            type: 'state',
-            value: (
-              'paddingTop':(
-                index: 'paddingTop',
-                name: 'padding-top',
-                type: 'property',
-                value: 'calc(var(--m3-checkbox-comp-padding) + (var(--m3-checkbox-comp-icon-size) / 2) - (var(--sys-line-height) / 2))',
-              ),
-              'paddingLeft':(
-                index: 'paddingLeft',
-                name: 'padding-left',
-                type: 'property',
-                value: 'var(--m3-ref-spacing-4)',
               ),
             ),
           ),

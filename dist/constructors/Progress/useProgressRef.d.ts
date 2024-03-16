@@ -12,7 +12,7 @@ export type UseProgressProp = {
     loading?: boolean | ProgressProps;
 };
 export declare const usePropsProgress: {
-    progress: PropType<boolean | ProgressProps | undefined>;
+    loading: PropType<boolean | ProgressProps | undefined>;
 };
 /**
  * The function returns data for working with the Progress component.<br>

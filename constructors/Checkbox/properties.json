@@ -1,0 +1,24 @@
+{
+  "inset": {
+    "_type": "var"
+  },
+  "comp": {
+    "required": {
+      "color": "red"
+    },
+    "_type": "var"
+  },
+  "#input": {},
+  "#item": {
+    "#icon": {}
+  },
+  "#info": {
+    "#label": {}
+  },
+  "#loading": {},
+  "~required": {
+    "#info": {
+      "#label": {}
+    }
+  }
+}

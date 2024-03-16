@@ -1,7 +1,7 @@
-import { h as l, defineComponent as m, computed as s, openBlock as d, createBlock as g, resolveDynamicComponent as S, unref as b } from "vue";
-import { c as f } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { b as h, c as x } from "./useEnabled-Bzv4aPiz.js";
-class y extends f {
+import { h as a, defineComponent as m, computed as o, openBlock as l, createBlock as d, resolveDynamicComponent as f, unref as h } from "vue";
+import { c as x } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { p as I } from "./props-DjNqoww2.js";
+class _ extends x {
   /**
    * Constructor
    * @param name class name /<br>название класса
@@ -67,86 +67,42 @@ class y extends f {
    */
   initRender() {
     var e;
-    return l("div", {
+    return a("div", {
       // ...this.getAttrs(),
       ref: this.element,
       class: (e = this.classes) == null ? void 0 : e.value.main
     });
   }
 }
-const i = {
-  type: "text",
-  autocomplete: "off"
-}, v = {
-  ...h,
-  ...x,
-  // Values
-  name: String,
-  value: String,
-  modelValue: String,
-  detail: Object,
-  // Input
-  type: {
-    type: String,
-    default: i.type
-  },
-  inputmode: String,
-  spellcheck: Boolean,
-  required: Boolean,
-  pattern: String,
-  match: [String, Object],
-  arrow: Boolean,
-  step: [String, Number],
-  min: [String, Number],
-  max: [String, Number],
-  minlength: [String, Number],
-  maxlength: [String, Number],
-  autofocus: Boolean,
-  autocomplete: {
-    type: String,
-    default: i.autocomplete
-  },
-  input: Object,
-  // Messages & Validation
-  placeholder: String,
-  helperMessage: String,
-  validationMessage: String,
-  validationCode: [String, Object],
-  // On
-  on: Object,
-  "onUpdate:value": Function,
-  "onUpdate:modelValue": Function
-}, I = {
-  ...v
-}, B = {
+const k = {
   ...I
-}, k = /* @__PURE__ */ m({
+}, g = /* @__PURE__ */ m({
   name: "M3Input",
   __name: "M3Input",
-  props: { ...B },
+  props: { ...k },
   emits: ["input", "update:value", "update:modelValue", "change"],
-  setup(o, { expose: e, emit: t }) {
-    const n = t, a = o, p = s(() => ({
+  setup(s, { expose: e, emit: t }) {
+    const n = t, i = s, p = o(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "m3-input": !0
         // :classes-values [!] System label / Системная метка
       }
-    })), u = s(() => ({
+    })), c = o(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), r = new y(
+    })), r = new _(
       "m3.input",
-      a,
+      i,
       {
         emits: n,
         classes: p,
-        styles: u
+        styles: c
       }
-    ), c = r.render();
-    return e(r.expose()), (O, _) => (d(), g(S(b(c))));
+    ), u = r.render();
+    return e(r.expose()), (v, y) => (l(), d(f(h(u))));
   }
-}), N = k;
+}), B = g;
 export {
-  N as M3Input
+  B as M3Input
 };

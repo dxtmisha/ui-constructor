@@ -32,7 +32,7 @@ export declare const M3Input: {
         on: ObjectConstructor;
         'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
         'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
+        loading: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         readonly: BooleanConstructor;
         disabled: BooleanConstructor;
         label: (StringConstructor | NumberConstructor)[];
@@ -43,6 +43,8 @@ export declare const M3Input: {
         "onUpdate:modelValue"?: ((value: any) => any) | undefined;
     }, {
         value: import("vue").ShallowRef<string | undefined>;
+        checkValidity: () => boolean;
+        validationMessage: import("vue").ShallowRef<string>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         change: (event: Event | InputEvent, value: import("../../constructors/Input/typesBasic").InputValidationItem) => void;
         input: (event: Event | InputEvent, value: import("../../constructors/Input/typesBasic").InputValidationItem) => void;
@@ -81,7 +83,7 @@ export declare const M3Input: {
         on: ObjectConstructor;
         'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
         'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
+        loading: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         readonly: BooleanConstructor;
         disabled: BooleanConstructor;
         label: (StringConstructor | NumberConstructor)[];
@@ -139,7 +141,7 @@ export declare const M3Input: {
         on: ObjectConstructor;
         'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
         'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
-        progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
+        loading: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
         readonly: BooleanConstructor;
         disabled: BooleanConstructor;
         label: (StringConstructor | NumberConstructor)[];
@@ -150,6 +152,8 @@ export declare const M3Input: {
         "onUpdate:modelValue"?: ((value: any) => any) | undefined;
     }, {
         value: import("vue").ShallowRef<string | undefined>;
+        checkValidity: () => boolean;
+        validationMessage: import("vue").ShallowRef<string>;
     }, {}, {}, {}, {
         readonly: boolean;
         disabled: boolean;
@@ -196,7 +200,7 @@ export declare const M3Input: {
     on: ObjectConstructor;
     'onUpdate:value': import("vue").PropType<((value: any) => void) | undefined>;
     'onUpdate:modelValue': import("vue").PropType<((value: any) => void) | undefined>;
-    progress: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
+    loading: import("vue").PropType<boolean | import("../../constructors/Progress/props").ProgressProps | undefined>;
     readonly: BooleanConstructor;
     disabled: BooleanConstructor;
     label: (StringConstructor | NumberConstructor)[];
@@ -207,6 +211,8 @@ export declare const M3Input: {
     "onUpdate:modelValue"?: ((value: any) => any) | undefined;
 }, {
     value: import("vue").ShallowRef<string | undefined>;
+    checkValidity: () => boolean;
+    validationMessage: import("vue").ShallowRef<string>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     change: (event: Event | InputEvent, value: import("../../constructors/Input/typesBasic").InputValidationItem) => void;
     input: (event: Event | InputEvent, value: import("../../constructors/Input/typesBasic").InputValidationItem) => void;

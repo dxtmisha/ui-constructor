@@ -1,41 +1,43 @@
 import { f as t } from "./toArray-J4lAhJG7.js";
 import { M3Button as i } from "./M3Button.js";
-import { M3FieldMessage as p } from "./M3FieldMessage.js";
+import { M3Checkbox as p } from "./M3Checkbox.js";
+import { M } from "./index-DeS7TDNN.js";
 import { M3Icon as n } from "./M3Icon.js";
-import { M3Image as M } from "./M3Image.js";
-import { M3Input as f } from "./M3Input.js";
-import { M3Mask as e } from "./M3Mask.js";
-import { M3Mutation as s } from "./M3Mutation.js";
-import { M3MutationItem as a } from "./M3MutationItem.js";
+import { M3Image as f } from "./M3Image.js";
+import { M3Input as e } from "./M3Input.js";
+import { M3Mask as s } from "./M3Mask.js";
+import { M3Mutation as a } from "./M3Mutation.js";
+import { M3MutationItem as c } from "./M3MutationItem.js";
 import { M3Progress as l } from "./M3Progress.js";
-import { M3Ripple as c } from "./M3Ripple.js";
-import { M3Scrollbar as u } from "./M3Scrollbar.js";
-import { M3Skeleton as I } from "./M3Skeleton.js";
-import { M3SkeletonItem as g } from "./M3SkeletonItem.js";
-import { M3Window as k } from "./M3Window.js";
-const S = {
+import { M3Ripple as u } from "./M3Ripple.js";
+import { M3Scrollbar as I } from "./M3Scrollbar.js";
+import { M3Skeleton as g } from "./M3Skeleton.js";
+import { M3SkeletonItem as k } from "./M3SkeletonItem.js";
+import { M3Window as S } from "./M3Window.js";
+const b = {
   M3Button: i,
-  M3FieldMessage: p,
+  M3Checkbox: p,
+  M3FieldMessage: M,
   M3Icon: n,
-  M3Image: M,
-  M3Input: f,
-  M3Mask: e,
-  M3Mutation: s,
-  M3MutationItem: a,
+  M3Image: f,
+  M3Input: e,
+  M3Mask: s,
+  M3Mutation: a,
+  M3MutationItem: c,
   M3Progress: l,
-  M3Ripple: c,
-  M3Scrollbar: u,
-  M3Skeleton: I,
-  M3SkeletonItem: g,
-  M3Window: k
-}, v = {
+  M3Ripple: u,
+  M3Scrollbar: I,
+  M3Skeleton: g,
+  M3SkeletonItem: k,
+  M3Window: S
+}, A = {
   install: async (o) => {
-    t(S, (m, r) => {
+    t(b, (m, r) => {
       o.component(r, m);
     });
   }
 };
 export {
-  S as components,
-  v as uiM3ComponentsPlugin
+  b as components,
+  A as uiM3ComponentsPlugin
 };

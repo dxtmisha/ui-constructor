@@ -89,6 +89,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     path: "m3/Button"
   },
   {
+    name: "M3Checkbox",
+    design: "m3",
+    code: "m3-checkbox",
+    path: "m3/Checkbox"
+  },
+  {
     name: "M3FieldMessage",
     design: "m3",
     code: "m3-field-message",
@@ -2864,7 +2870,7 @@ class v {
   }
 }
 const p = `(?<=<|'|"\\s)(${s.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
-class H {
+class C {
   /**
    * Constructor
    * @param styles object for working with style connection /<br>объект для работы с подключением стилей
@@ -2965,7 +2971,7 @@ import {${e.name}} from'${s.name}/${e.name}';`);
 ${a}`) : t;
   }
 }
-class C {
+class H {
   constructor() {
     this.items = {};
   }
@@ -3086,7 +3092,7 @@ ${t}`;
   }
 }
 function j(o = {}) {
-  const t = new C(), e = { value: !0 };
+  const t = new H(), e = { value: !0 };
   let a = "production";
   return {
     name: "vite-plugin-vue-ui",
@@ -3095,7 +3101,7 @@ function j(o = {}) {
       return a = i.mode, !0;
     },
     transform(r, i) {
-      return e.value && l.isJs(i) && (r = new v(
+      return e.value && l.isJs(i) && (console.log("code", r), r = new v(
         i,
         r,
         o == null ? void 0 : o.flag
@@ -3111,7 +3117,7 @@ function j(o = {}) {
         a,
         o == null ? void 0 : o.api,
         o == null ? void 0 : o.apiUrl
-      ).init(), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new H(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new W(i, r, o == null ? void 0 : o.style).init()), {
+      ).init(), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new C(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new W(i, r, o == null ? void 0 : o.style).init()), {
         code: r
       };
     }

@@ -2,11 +2,12 @@ import { type PropType } from 'vue';
 import type { InputMatch, InputMode, InputTypeName, InputValidityCode } from './typesBasic';
 import { type UseLabelProps } from '../uses/ref/useLabel';
 import { type UseEnabledProps } from '../uses/ref/useEnabled';
+import { type UseProgressProp } from '../Progress/useProgressRef';
 /**
  * Type describing incoming properties.<br>
  * Тип, описывающий входящие свойства.
  */
-export type InputBasicProps<V = any> = UseLabelProps & UseEnabledProps & {
+export type InputBasicProps<V = any> = UseLabelProps & UseEnabledProps & UseProgressProp & {
     selected?: boolean;
     name?: string;
     value?: V;
@@ -78,7 +79,7 @@ export declare const propsBasicInput: {
     on: ObjectConstructor;
     'onUpdate:value': PropType<((value: any) => void) | undefined>;
     'onUpdate:modelValue': PropType<((value: any) => void) | undefined>;
-    progress: PropType<boolean | import("../Progress/props").ProgressProps | undefined>;
+    loading: PropType<boolean | import("../Progress/props").ProgressProps | undefined>;
     readonly: BooleanConstructor;
     disabled: BooleanConstructor;
     label: (StringConstructor | NumberConstructor)[];
@@ -116,7 +117,7 @@ export declare const propsInput: {
     on: ObjectConstructor;
     'onUpdate:value': PropType<((value: any) => void) | undefined>;
     'onUpdate:modelValue': PropType<((value: any) => void) | undefined>;
-    progress: PropType<boolean | import("../Progress/props").ProgressProps | undefined>;
+    loading: PropType<boolean | import("../Progress/props").ProgressProps | undefined>;
     readonly: BooleanConstructor;
     disabled: BooleanConstructor;
     label: (StringConstructor | NumberConstructor)[];

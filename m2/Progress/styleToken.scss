@@ -7,10 +7,8 @@
   --m2-progress-opacity: var(--m2-sys-opacity-pressed);
   
   &--circular {
-    --m2-progress-width: var(--m2-ref-spacing-12);
-    
     --m2-progress-inset: var(--m2-ref-spacing-1);
-    @include inset(#{var(--m2-ref-spacing-1)});
+    --m2-progress-width: var(--m2-ref-spacing-12);
   }
   // :style [!] System label / Системная метка
 }

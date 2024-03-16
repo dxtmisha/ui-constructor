@@ -16,6 +16,10 @@ import {
   type UseEnabledProps,
   usePropsEnabled
 } from '../uses/ref/useEnabled'
+import {
+  type UseProgressProp,
+  usePropsProgress
+} from '../Progress/useProgressRef'
 
 /**
  * Type describing incoming properties.<br>
@@ -24,6 +28,7 @@ import {
 export type InputBasicProps<V = any> =
   UseLabelProps &
   UseEnabledProps &
+  UseProgressProp &
   {
     // Status
     selected?: boolean
@@ -97,6 +102,7 @@ export const defaultsInput: InputBasicProps = {
 export const propsBasicInput = {
   ...usePropsLabel,
   ...usePropsEnabled,
+  ...usePropsProgress,
 
   // Values
   name: String,

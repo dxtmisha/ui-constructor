@@ -1,5 +1,5 @@
 import { type PropType } from 'vue'
-import { type ElementOrString } from '../../types/basic.ts'
+import { type ElementOrString } from '../../types/basic'
 
 /**
  * Type describing incoming properties.<br>

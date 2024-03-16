@@ -30,6 +30,10 @@ declare module 'ui/M3Button' {
   export { M3Button } from 'ui/m3/Button'
 }
 
+declare module 'ui/M3Checkbox' {
+  export { M3Checkbox } from 'ui/m3/Checkbox'
+}
+
 declare module 'ui/M3FieldMessage' {
   export { M3FieldMessage } from 'ui/m3/FieldMessage'
 }
