@@ -2,6 +2,7 @@ export declare const M3Input: {
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         name: StringConstructor;
         value: StringConstructor;
+        valueVariant: StringConstructor;
         modelValue: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
@@ -53,6 +54,7 @@ export declare const M3Input: {
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         name: StringConstructor;
         value: StringConstructor;
+        valueVariant: StringConstructor;
         modelValue: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
@@ -111,6 +113,7 @@ export declare const M3Input: {
     }, Readonly<import("vue").ExtractPropTypes<{
         name: StringConstructor;
         value: StringConstructor;
+        valueVariant: StringConstructor;
         modelValue: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
@@ -170,6 +173,7 @@ export declare const M3Input: {
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
     name: StringConstructor;
     value: StringConstructor;
+    valueVariant: StringConstructor;
     modelValue: StringConstructor;
     detail: import("vue").PropType<Record<string, any> | undefined>;
     type: {

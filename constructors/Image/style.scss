@@ -62,7 +62,7 @@
 
   &--hide {
     opacity: 0;
-    scale: .8;
+    @include scale(.8);
   }
 
   &.material-icons {

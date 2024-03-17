@@ -1,0 +1,7 @@
+{
+  "item": {
+    "icon": {
+      "border-radius": "{st.selectable.borderRadius.size.pill}"
+    }
+  }
+}

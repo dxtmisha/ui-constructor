@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { C2Checkbox } from '../c2/Checkbox'
+import { C2Radio } from '../c2/Radio'
 
 const checkbox = ref()
 const loading = ref(false)
 const v = ref('error')
 
-const onInput = () => {
-  loading.value = !loading.value
+const onInput = (_: Event, value: any) => {
+  console.log('value', value)
 }
 </script>
 
@@ -16,13 +17,33 @@ const onInput = () => {
     <div>
       <input v-model="v">
       {{ v }}
-      <c2-checkbox
+      <c2-radio
         :loading="loading"
         ref="checkbox"
         name="test"
         label="Label"
+        value-variant="variant1"
         required
         :validation-message="v"
+        @input="onInput"
+      />
+      <c2-radio
+        :loading="loading"
+        ref="checkbox"
+        name="test"
+        label="Label"
+        value-variant="variant2"
+        required
+        @input="onInput"
+      />
+      <c2-radio
+        :loading="loading"
+        ref="checkbox"
+        name="test"
+        label="Label"
+        value-variant="variant3"
+        required
+        @input="onInput"
       />
     </div>
     <div>

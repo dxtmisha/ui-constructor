@@ -36,6 +36,7 @@ export type InputBasicProps<V = any> =
     // Values
     name?: string
     value?: V
+    valueVariant?: string
     modelValue?: V
     detail?: Record<string, any>
 
@@ -107,6 +108,7 @@ export const propsBasicInput = {
   // Values
   name: String,
   value: String,
+  valueVariant: String,
   modelValue: String,
   detail: Object as PropType<InputBasicProps['detail']>,
 

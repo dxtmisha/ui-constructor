@@ -172,6 +172,10 @@ export default defineNuxtModule({
       filePath: 'ui/dist/C2Progress.vue'
     })
     await addComponent({
+      name: 'C2Radio',
+      filePath: 'ui/dist/C2Radio.vue'
+    })
+    await addComponent({
       name: 'C2Ripple',
       filePath: 'ui/dist/C2Ripple.vue'
     })

@@ -252,6 +252,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     path: "c2/Progress"
   },
   {
+    name: "C2Radio",
+    design: "c2",
+    code: "c2-radio",
+    path: "c2/Radio"
+  },
+  {
     name: "C2Ripple",
     design: "c2",
     code: "c2-ripple",
@@ -3257,6 +3263,9 @@ const B = y({
     }), await o({
       name: "C2Progress",
       filePath: "ui/dist/C2Progress.vue"
+    }), await o({
+      name: "C2Radio",
+      filePath: "ui/dist/C2Radio.vue"
     }), await o({
       name: "C2Ripple",
       filePath: "ui/dist/C2Ripple.vue"

@@ -251,6 +251,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     path: "c2/Progress"
   },
   {
+    name: "C2Radio",
+    design: "c2",
+    code: "c2-radio",
+    path: "c2/Radio"
+  },
+  {
     name: "C2Ripple",
     design: "c2",
     code: "c2-ripple",

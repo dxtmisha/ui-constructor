@@ -1098,6 +1098,121 @@ $designsProperties: (
           ),
         ),
       ),
+      'radio':(
+        index: 'radio',
+        name: 'd-radio',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--d-radio-comp-required-color',
+                    type: 'var',
+                    value: 'red',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'linkfocus':(
+                index: 'linkfocus',
+                name: '--d-radio-linkfocus',
+                type: 'var',
+                value: 'var(--d-radio-focus)',
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'linkchecked':(
+                index: 'linkchecked',
+                name: '--d-radio-linkchecked',
+                type: 'var',
+                value: 'var(--d-radio-checked)',
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'linkdisabled':(
+                index: 'linkdisabled',
+                name: '--d-radio-linkdisabled',
+                type: 'var',
+                value: 'var(--d-radio-disabled)',
+              ),
+            ),
+          ),
+        ),
+      ),
       'ripple':(
         index: 'ripple',
         name: 'd-ripple',
@@ -22345,6 +22460,524 @@ $designsProperties: (
           ),
         ),
       ),
+      'radio':(
+        index: 'radio',
+        name: 'c2-radio',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--c2-radio-comp-required-color',
+                    type: 'var',
+                    value: 'var(--c2-st-content-foreground-color-negative-secondary)',
+                  ),
+                ),
+              ),
+              'size':(
+                index: 'size',
+                name: '--c2-radio-comp-size',
+                type: 'var',
+                value: 'var(--c2-ot-dimension-150)',
+              ),
+              'color':(
+                index: 'color',
+                name: '--c2-radio-comp-color',
+                type: 'var',
+                value: 'var(--c2-st-interaction-border-color-neutral-normal)',
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'color':(
+                index: 'color',
+                name: 'color',
+                type: 'property',
+                value: 'var(--c2-radio-comp-color)',
+              ),
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                  'circle':(
+                    index: 'circle',
+                    name: 'circle',
+                    type: 'property',
+                    value: 'var(--c2-radio-comp-size)',
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c2-st-interaction-background-color-ghost-normal)',
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'var(--c2-st-selectable-borderRadius-size-pill)',
+                  ),
+                  'borderWidth':(
+                    index: 'borderWidth',
+                    name: 'border-width',
+                    type: 'property',
+                    value: 'var(--c2-ot-dimension-12)',
+                  ),
+                  'borderStyle':(
+                    index: 'borderStyle',
+                    name: 'border-style',
+                    type: 'property',
+                    value: 'solid',
+                  ),
+                  'borderColor':(
+                    index: 'borderColor',
+                    name: 'border-color',
+                    type: 'property',
+                    value: 'var(--c2-radio-comp-color)',
+                  ),
+                  'hover':(
+                    index: 'hover',
+                    name: 'hover',
+                    type: 'selector',
+                    value: (
+                      'backgroundColor':(
+                        index: 'backgroundColor',
+                        name: 'background-color',
+                        type: 'property',
+                        value: 'var(--c2-st-interaction-background-color-ghost-hover)',
+                      ),
+                      'borderColor':(
+                        index: 'borderColor',
+                        name: 'border-color',
+                        type: 'property',
+                        value: 'var(--c2-st-interaction-border-color-neutral-hover)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: 'padding',
+                type: 'property',
+                value: 'var(--c2-ot-dimension-12)',
+              ),
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'size':(
+            index: 'size',
+            name: '&--size',
+            type: 'state',
+            value: (
+              'sm':(
+                index: 'sm',
+                name: '&--sm',
+                type: 'state',
+                value: (
+                  'comp':(
+                    index: 'comp',
+                    name: 'comp',
+                    type: 'var',
+                    value: (
+                      'size':(
+                        index: 'size',
+                        name: '--c2-radio-comp-size',
+                        type: 'var',
+                        value: 'var(--c2-ot-dimension-125)',
+                      ),
+                    ),
+                  ),
+                  'gap':(
+                    index: 'gap',
+                    name: 'gap',
+                    type: 'property',
+                    value: 'var(--c2-st-global-distance-space-inline-md)',
+                  ),
+                  'info':(
+                    index: 'info',
+                    name: '& .c2-radio__info',
+                    type: 'subclass',
+                    value: (
+                      'label':(
+                        index: 'label',
+                        name: '&__label',
+                        type: 'subclass',
+                        value: (
+                          'fontFamily':(
+                            index: 'fontFamily',
+                            name: 'font-family',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontFamily-base)',
+                          ),
+                          'fontSize':(
+                            index: 'fontSize',
+                            name: 'font-size',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontSize-size-scale-87)',
+                          ),
+                          'fontWeight':(
+                            index: 'fontWeight',
+                            name: 'font-weight',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontWeight-400)',
+                          ),
+                          'lineHeight':(
+                            index: 'lineHeight',
+                            name: 'line-height',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-lineHeight-125)',
+                          ),
+                          'letterSpacing':(
+                            index: 'letterSpacing',
+                            name: 'letter-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-tracking-lg)',
+                          ),
+                          'textCase':(
+                            index: 'textCase',
+                            name: 'text-case',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textCase-none)',
+                          ),
+                          'textDecoration':(
+                            index: 'textDecoration',
+                            name: 'text-decoration',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textDecoration-none)',
+                          ),
+                          'paragraphSpacing':(
+                            index: 'paragraphSpacing',
+                            name: 'paragraph-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-paragraphSpacing-size-scale-75)',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'md':(
+                index: 'md',
+                name: '&--md',
+                type: 'state',
+                value: (
+                  'gap':(
+                    index: 'gap',
+                    name: 'gap',
+                    type: 'property',
+                    value: 'var(--c2-st-global-distance-space-inline-lg)',
+                  ),
+                  'info':(
+                    index: 'info',
+                    name: '& .c2-radio__info',
+                    type: 'subclass',
+                    value: (
+                      'label':(
+                        index: 'label',
+                        name: '&__label',
+                        type: 'subclass',
+                        value: (
+                          'fontFamily':(
+                            index: 'fontFamily',
+                            name: 'font-family',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontFamily-base)',
+                          ),
+                          'fontSize':(
+                            index: 'fontSize',
+                            name: 'font-size',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontSize-size-scale-100)',
+                          ),
+                          'fontWeight':(
+                            index: 'fontWeight',
+                            name: 'font-weight',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontWeight-400)',
+                          ),
+                          'lineHeight':(
+                            index: 'lineHeight',
+                            name: 'line-height',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-lineHeight-150)',
+                          ),
+                          'letterSpacing':(
+                            index: 'letterSpacing',
+                            name: 'letter-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-tracking-lg)',
+                          ),
+                          'textCase':(
+                            index: 'textCase',
+                            name: 'text-case',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textCase-none)',
+                          ),
+                          'textDecoration':(
+                            index: 'textDecoration',
+                            name: 'text-decoration',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textDecoration-none)',
+                          ),
+                          'paragraphSpacing':(
+                            index: 'paragraphSpacing',
+                            name: 'paragraph-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-paragraphSpacing-size-scale-75)',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'lg':(
+                index: 'lg',
+                name: '&--lg',
+                type: 'state',
+                value: (
+                  'gap':(
+                    index: 'gap',
+                    name: 'gap',
+                    type: 'property',
+                    value: 'var(--c2-st-global-distance-space-inline-xl)',
+                  ),
+                  'item':(
+                    index: 'item',
+                    name: '& .c2-radio__item',
+                    type: 'subclass',
+                    value: (
+                      'paddingTop':(
+                        index: 'paddingTop',
+                        name: 'padding-top',
+                        type: 'property',
+                        value: 'var(--c2-ot-dimension-12)',
+                      ),
+                    ),
+                  ),
+                  'info':(
+                    index: 'info',
+                    name: '& .c2-radio__info',
+                    type: 'subclass',
+                    value: (
+                      'label':(
+                        index: 'label',
+                        name: '&__label',
+                        type: 'subclass',
+                        value: (
+                          'fontFamily':(
+                            index: 'fontFamily',
+                            name: 'font-family',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontFamily-base)',
+                          ),
+                          'fontSize':(
+                            index: 'fontSize',
+                            name: 'font-size',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontSize-size-scale-112)',
+                          ),
+                          'fontWeight':(
+                            index: 'fontWeight',
+                            name: 'font-weight',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-fontWeight-400)',
+                          ),
+                          'lineHeight':(
+                            index: 'lineHeight',
+                            name: 'line-height',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-lineHeight-175)',
+                          ),
+                          'letterSpacing':(
+                            index: 'letterSpacing',
+                            name: 'letter-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-tracking-lg)',
+                          ),
+                          'textCase':(
+                            index: 'textCase',
+                            name: 'text-case',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textCase-none)',
+                          ),
+                          'textDecoration':(
+                            index: 'textDecoration',
+                            name: 'text-decoration',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-textDecoration-none)',
+                          ),
+                          'paragraphSpacing':(
+                            index: 'paragraphSpacing',
+                            name: 'paragraph-spacing',
+                            type: 'property',
+                            value: 'var(--c2-ot-typography-paragraphSpacing-size-scale-75)',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'item':(
+                index: 'item',
+                name: '& .c2-radio__item',
+                type: 'subclass',
+                value: (
+                  'icon':(
+                    index: 'icon',
+                    name: '&__icon',
+                    type: 'subclass',
+                    value: (
+                      'backgroundColor':(
+                        index: 'backgroundColor',
+                        name: 'background-color',
+                        type: 'property',
+                        value: 'var(--c2-st-interaction-background-color-ghost-focus)',
+                      ),
+                      'boxShadow':(
+                        index: 'boxShadow',
+                        name: 'box-shadow',
+                        type: 'property',
+                        value: 'var(--c2-st-elevation-onLight-focus-md)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'comp':(
+                index: 'comp',
+                name: 'comp',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--c2-radio-comp-color',
+                    type: 'var',
+                    value: 'var(--c2-st-action-foreground-color-onprimary-normal)',
+                  ),
+                ),
+              ),
+              'item':(
+                index: 'item',
+                name: '& .c2-radio__item',
+                type: 'subclass',
+                value: (
+                  'icon':(
+                    index: 'icon',
+                    name: '&__icon',
+                    type: 'subclass',
+                    value: (
+                      'backgroundColor':(
+                        index: 'backgroundColor',
+                        name: 'background-color',
+                        type: 'property',
+                        value: 'var(--c2-st-action-background-color-primary-solid-normal)',
+                      ),
+                      'borderOpacity':(
+                        index: 'borderOpacity',
+                        name: 'border-opacity',
+                        type: 'property',
+                        value: 0,
+                      ),
+                      'hover':(
+                        index: 'hover',
+                        name: 'hover',
+                        type: 'selector',
+                        value: (
+                          'backgroundColor':(
+                            index: 'backgroundColor',
+                            name: 'background-color',
+                            type: 'property',
+                            value: 'var(--c2-st-action-background-color-primary-solid-hover)',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'opacity':(
+                index: 'opacity',
+                name: 'opacity',
+                type: 'property',
+                value: 'var(--c2-ot-opacity-50)',
+              ),
+            ),
+          ),
+        ),
+      ),
       'ripple':(
         index: 'ripple',
         name: 'c2-ripple',
@@ -22417,6 +23050,33 @@ $designsProperties: (
             name: '&--active',
             type: 'state',
             value: (
+            ),
+          ),
+        ),
+      ),
+      'checkboxRadio':(
+        index: 'checkboxRadio',
+        name: 'c2-checkboxRadio',
+        type: 'component',
+        value: (
+          'item':(
+            index: 'item',
+            name: '&--item',
+            type: 'state',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&--icon',
+                type: 'state',
+                value: (
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'var(--c2-st-selectable-borderRadius-size-pill)',
+                  ),
+                ),
+              ),
             ),
           ),
         ),

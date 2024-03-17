@@ -11,6 +11,7 @@ export type InputBasicProps<V = any> = UseLabelProps & UseEnabledProps & UseProg
     selected?: boolean;
     name?: string;
     value?: V;
+    valueVariant?: string;
     modelValue?: V;
     detail?: Record<string, any>;
     type?: InputTypeName;
@@ -49,6 +50,7 @@ export declare const defaultsInput: InputBasicProps;
 export declare const propsBasicInput: {
     name: StringConstructor;
     value: StringConstructor;
+    valueVariant: StringConstructor;
     modelValue: StringConstructor;
     detail: PropType<Record<string, any> | undefined>;
     type: {
@@ -87,6 +89,7 @@ export declare const propsBasicInput: {
 export declare const propsInput: {
     name: StringConstructor;
     value: StringConstructor;
+    valueVariant: StringConstructor;
     modelValue: StringConstructor;
     detail: PropType<Record<string, any> | undefined>;
     type: {

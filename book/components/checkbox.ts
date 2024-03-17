@@ -10,9 +10,9 @@ import {
   fieldMessageValues
 } from './fieldMessage'
 
-import { icons } from '../values.ts'
+import { image } from '../values.ts'
 
-export const checkboxArgs = (iconsValue: string[] = icons): StorybookArgs => {
+export const checkboxArgs = (iconsValue: any = image): StorybookArgs => {
   return {
     // Status
     loading: {
@@ -86,7 +86,6 @@ export const checkboxValues: StorybookArgsValue = {
   disabled: false,
   icon: undefined,
   label: 'Label',
-  name: 'checkbox',
   helperMessage: fieldMessageValues.helperMessage
 }
 

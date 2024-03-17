@@ -48,6 +48,7 @@ export class CheckboxDesign<
 > {
   protected readonly checkbox: CheckboxRef
   protected readonly classesSkeleton: SkeletonClassesList
+  protected type: string = 'checkbox'
 
   /**
    * Constructor
@@ -218,10 +219,11 @@ export class CheckboxDesign<
     return h('input', {
       class: setup.classes.value.input,
       name: this.props.name,
-      type: 'checkbox',
+      type: this.type,
       checked: setup.value.value,
       readonly: this.props.readonly,
       disabled: setup.isDisabled.value,
+      value: this.props?.valueVariant ?? '1',
       on: this.props.on,
       onInput: setup.onInput
     })

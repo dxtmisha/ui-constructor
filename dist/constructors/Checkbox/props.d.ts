@@ -37,6 +37,7 @@ export declare const propsCheckbox: {
     helperMessage: StringConstructor;
     validationMessage: StringConstructor;
     name: StringConstructor;
+    valueVariant: StringConstructor;
     detail: PropType<Record<string, any> | undefined>;
     type: {
         type: PropType<import("../Input/typesBasic").InputTypeName | undefined>;

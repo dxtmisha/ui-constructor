@@ -42,6 +42,7 @@ export declare const propsInstruction: {
     helperMessage: StringConstructor;
     validationMessage: StringConstructor;
     name: StringConstructor;
+    valueVariant: StringConstructor;
     detail: PropType<Record<string, any> | undefined>;
     type: {
         type: PropType<import("../../constructors/Input/typesBasic").InputTypeName | undefined>;

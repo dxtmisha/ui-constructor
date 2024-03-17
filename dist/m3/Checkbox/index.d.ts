@@ -18,6 +18,7 @@ export declare const M3Checkbox: {
         helperMessage: StringConstructor;
         validationMessage: StringConstructor;
         name: StringConstructor;
+        valueVariant: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
             type: import("vue").PropType<import("../../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -80,6 +81,7 @@ export declare const M3Checkbox: {
         helperMessage: StringConstructor;
         validationMessage: StringConstructor;
         name: StringConstructor;
+        valueVariant: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
             type: import("vue").PropType<import("../../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -155,6 +157,7 @@ export declare const M3Checkbox: {
         helperMessage: StringConstructor;
         validationMessage: StringConstructor;
         name: StringConstructor;
+        valueVariant: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
             type: import("vue").PropType<import("../../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -231,6 +234,7 @@ export declare const M3Checkbox: {
     helperMessage: StringConstructor;
     validationMessage: StringConstructor;
     name: StringConstructor;
+    valueVariant: StringConstructor;
     detail: import("vue").PropType<Record<string, any> | undefined>;
     type: {
         type: import("vue").PropType<import("../../constructors/Input/typesBasic").InputTypeName | undefined>;

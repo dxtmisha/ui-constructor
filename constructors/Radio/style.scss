@@ -1,0 +1,9 @@
+@import "../../styles/properties";
+@import "../Checkbox/style";
+
+@mixin mixinRadio {
+  @include mixinCheckbox;
+
+  @include initByCustom('iconClip', #{inset(0 0 0 0)});
+  @include initByCustom('iconScale', .8);
+}

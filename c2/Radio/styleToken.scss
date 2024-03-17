@@ -1,0 +1,124 @@
+@import "../../styles/all";
+
+@mixin mixinRadioToken {
+  // :style [!] System label / Системная метка
+  --c2-radio-comp-required-color: var(--c2-st-content-foreground-color-negative-secondary);
+  --c2-radio-comp-size: var(--c2-ot-dimension-150);
+  --c2-radio-comp-color: var(--c2-st-interaction-border-color-neutral-normal);
+  
+  &__item {
+    @include color(#{var(--c2-radio-comp-color)});
+    
+    &__icon {
+      @include circle(#{var(--c2-radio-comp-size)});
+      
+      @include backgroundColor(#{var(--c2-st-interaction-background-color-ghost-normal)});
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-pill);
+      border-width: var(--c2-ot-dimension-12);
+      border-style: solid;
+      @include borderColor(#{var(--c2-radio-comp-color)});
+      
+      @include hover('.c2-radio') {
+        @include backgroundColor(#{var(--c2-st-interaction-background-color-ghost-hover)});
+        
+        @include borderColor(#{var(--c2-st-interaction-border-color-neutral-hover)});
+      }
+    }
+  }
+  
+  &__loading {
+    padding: var(--c2-ot-dimension-12);
+  }
+  
+  &--size {
+    &--sm {
+      --c2-radio-comp-size: var(--c2-ot-dimension-125);
+      
+      gap: var(--c2-st-global-distance-space-inline-md);
+      
+      & .c2-radio__info {
+        &__label {
+          font-family: var(--c2-ot-typography-fontFamily-base);
+          @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
+          font-weight: var(--c2-ot-typography-fontWeight-400);
+          @include lineHeight(#{var(--c2-ot-typography-lineHeight-125)});
+          letter-spacing: var(--c2-ot-typography-tracking-lg);
+          @include textCase(#{var(--c2-ot-typography-textCase-none)});
+          text-decoration: var(--c2-ot-typography-textDecoration-none);
+          @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+        }
+      }
+    }
+    
+    &--md {
+      gap: var(--c2-st-global-distance-space-inline-lg);
+      
+      & .c2-radio__info {
+        &__label {
+          font-family: var(--c2-ot-typography-fontFamily-base);
+          @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-100)});
+          font-weight: var(--c2-ot-typography-fontWeight-400);
+          @include lineHeight(#{var(--c2-ot-typography-lineHeight-150)});
+          letter-spacing: var(--c2-ot-typography-tracking-lg);
+          @include textCase(#{var(--c2-ot-typography-textCase-none)});
+          text-decoration: var(--c2-ot-typography-textDecoration-none);
+          @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+        }
+      }
+    }
+    
+    &--lg {
+      gap: var(--c2-st-global-distance-space-inline-xl);
+      
+      & .c2-radio__item {
+        padding-top: var(--c2-ot-dimension-12);
+      }
+      
+      & .c2-radio__info {
+        &__label {
+          font-family: var(--c2-ot-typography-fontFamily-base);
+          @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-112)});
+          font-weight: var(--c2-ot-typography-fontWeight-400);
+          @include lineHeight(#{var(--c2-ot-typography-lineHeight-175)});
+          letter-spacing: var(--c2-ot-typography-tracking-lg);
+          @include textCase(#{var(--c2-ot-typography-textCase-none)});
+          text-decoration: var(--c2-ot-typography-textDecoration-none);
+          @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+        }
+      }
+    }
+  }
+  
+  &__input:focus ~ * {
+    & .c2-radio__item {
+      &__icon {
+        @include backgroundColor(#{var(--c2-st-interaction-background-color-ghost-focus)});
+        
+        box-shadow: var(--c2-st-elevation-onLight-focus-md);
+      }
+    }
+  }
+  
+  &__input:checked ~ * {
+    --c2-radio-comp-color: var(--c2-st-action-foreground-color-onprimary-normal);
+    --c2-radio-comp-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-onprimary-normal))};
+    
+    & .c2-radio__item {
+      &__icon {
+        @include backgroundColor(#{var(--c2-st-action-background-color-primary-solid-normal)});
+        
+        @include borderOpacity(#{0});
+        
+        @include hover('.c2-radio') {
+          @include backgroundColor(#{var(--c2-st-action-background-color-primary-solid-hover)});
+        }
+      }
+    }
+  }
+  
+  &__input:disabled ~ * {
+    opacity: var(--c2-ot-opacity-50);
+  }
+  // :style [!] System label / Системная метка
+}

@@ -9,7 +9,7 @@ import {
   type InputSlots
 } from '../Input/types'
 
-import { type SkeletonClassesList } from '../Skeleton/Skeleton.ts'
+import { type SkeletonClassesList } from '../Skeleton/Skeleton'
 
 /**
  * Interface for describing which components need to be connected for work.<br>

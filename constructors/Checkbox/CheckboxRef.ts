@@ -47,7 +47,16 @@ export class CheckboxRef {
     watchEffect(() => this.update())
   }
 
-  readonly onInput = (event: Event) => this.checkbox.event.onChecked(event)
+  readonly onInput = (event: Event) => {
+    switch ((event.target as HTMLInputElement).type) {
+      case 'checkbox':
+        this.checkbox.event.onChecked(event)
+        break
+      case 'radio':
+        this.checkbox.event.onRadio(event)
+        break
+    }
+  }
 
   /**
    * Data update.<br>

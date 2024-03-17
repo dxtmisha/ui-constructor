@@ -244,6 +244,7 @@ export declare const components: {
             helperMessage: StringConstructor;
             validationMessage: StringConstructor;
             name: StringConstructor;
+            valueVariant: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
                 type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -306,6 +307,7 @@ export declare const components: {
             helperMessage: StringConstructor;
             validationMessage: StringConstructor;
             name: StringConstructor;
+            valueVariant: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
                 type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -381,6 +383,7 @@ export declare const components: {
             helperMessage: StringConstructor;
             validationMessage: StringConstructor;
             name: StringConstructor;
+            valueVariant: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
                 type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -457,6 +460,7 @@ export declare const components: {
         helperMessage: StringConstructor;
         validationMessage: StringConstructor;
         name: StringConstructor;
+        valueVariant: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {
             type: import("vue").PropType<import("../constructors/Input/typesBasic").InputTypeName | undefined>;
@@ -853,6 +857,7 @@ export declare const components: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             name: StringConstructor;
             value: StringConstructor;
+            valueVariant: StringConstructor;
             modelValue: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
@@ -904,6 +909,7 @@ export declare const components: {
         }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             name: StringConstructor;
             value: StringConstructor;
+            valueVariant: StringConstructor;
             modelValue: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
@@ -962,6 +968,7 @@ export declare const components: {
         }, Readonly<import("vue").ExtractPropTypes<{
             name: StringConstructor;
             value: StringConstructor;
+            valueVariant: StringConstructor;
             modelValue: StringConstructor;
             detail: import("vue").PropType<Record<string, any> | undefined>;
             type: {
@@ -1021,6 +1028,7 @@ export declare const components: {
     } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
         name: StringConstructor;
         value: StringConstructor;
+        valueVariant: StringConstructor;
         modelValue: StringConstructor;
         detail: import("vue").PropType<Record<string, any> | undefined>;
         type: {

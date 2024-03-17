@@ -7,9 +7,10 @@ import { C2Image as f } from "./C2Image.js";
 import { C2Mutation as C } from "./C2Mutation.js";
 import { C2MutationItem as s } from "./C2MutationItem.js";
 import { C2Progress as a } from "./C2Progress.js";
-import { C2Ripple as c } from "./C2Ripple.js";
-import { C2Skeleton as l } from "./C2Skeleton.js";
-const u = {
+import { C2Radio as c } from "./C2Radio.js";
+import { C2Ripple as l } from "./C2Ripple.js";
+import { C2Skeleton as u } from "./C2Skeleton.js";
+const g = {
   C2Button: i,
   C2Checkbox: p,
   C2FieldMessage: n,
@@ -18,16 +19,17 @@ const u = {
   C2Mutation: C,
   C2MutationItem: s,
   C2Progress: a,
-  C2Ripple: c,
-  C2Skeleton: l
-}, E = {
+  C2Radio: c,
+  C2Ripple: l,
+  C2Skeleton: u
+}, F = {
   install: async (o) => {
-    t(u, (m, r) => {
+    t(g, (m, r) => {
       o.component(r, m);
     });
   }
 };
 export {
-  u as components,
-  E as uiC2ComponentsPlugin
+  g as components,
+  F as uiC2ComponentsPlugin
 };

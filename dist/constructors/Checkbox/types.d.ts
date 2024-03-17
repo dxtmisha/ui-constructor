@@ -2,7 +2,7 @@ import { type ComputedRef, type VNode } from 'vue';
 import { type ConstrClass } from '../../types/constructor';
 import { type ImageProps } from '../Image/props';
 import { type InputComponents, type InputEmits, type InputExpose, type InputSetup, type InputSlots } from '../Input/types';
-import { type SkeletonClassesList } from '../Skeleton/Skeleton.ts';
+import { type SkeletonClassesList } from '../Skeleton/Skeleton';
 /**
  * Interface for describing which components need to be connected for work.<br>
  * Интерфейс для описания, какие компоненты надо подключить для работы.

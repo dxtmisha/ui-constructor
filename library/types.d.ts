@@ -40,6 +40,7 @@ declare module '@vue/runtime-core' {
     C2Mutation: typeof components.C2Mutation
     C2MutationItem: typeof components.C2MutationItem
     C2Progress: typeof components.C2Progress
+    C2Radio: typeof components.C2Radio
     C2Ripple: typeof components.C2Ripple
     C2Skeleton: typeof components.C2Skeleton
   }

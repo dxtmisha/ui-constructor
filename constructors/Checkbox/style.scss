@@ -3,6 +3,7 @@
 @mixin mixinCheckbox {
   @include initByCustom('iconOpacity', 0);
   @include initByCustom('iconClip', #{inset(0 100% 0 0)});
+  @include initByCustom('iconScale', 1);
 
   display: inline-flex;
   align-items: flex-start;
@@ -34,6 +35,7 @@
       > * {
         opacity: v('??iconOpacity');
         clip-path: v('??iconClip');
+        @include scale(v('??iconScale'));
         transition: inherit;
       }
     }
@@ -56,6 +58,7 @@
   input:checked ~ * {
     @include initByCustom('iconOpacity', 1);
     @include initByCustom('iconClip', #{inset(0 0 0 0)});
+    @include initByCustom('iconScale', 1);
     transition-property: background-color, border-color, clip-path;
   }
 

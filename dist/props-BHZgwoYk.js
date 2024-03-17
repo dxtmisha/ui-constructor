@@ -1,7 +1,7 @@
 var x = Object.defineProperty;
 var I = (i, e, t) => e in i ? x(i, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[e] = t;
 var n = (i, e, t) => (I(i, typeof e != "symbol" ? e + "" : e, t), t);
-import { shallowRef as u, watchEffect as d, computed as C, h as c } from "vue";
+import { shallowRef as u, watchEffect as d, computed as C, h as o } from "vue";
 import { S as y } from "./Skeleton-u-yv2rzv.js";
 import { g as B, c as M } from "./DesignConstructorAbstract-pm1V7i1G.js";
 import { i as v } from "./isArray-QlWcxgml.js";
@@ -10,9 +10,9 @@ import { a as b } from "./toArray-J4lAhJG7.js";
 import { g as S } from "./getBind-CgHMfjrB.js";
 import { u as k } from "./useInputCheck-DS0d910p.js";
 import { d as E, c as V, e as w } from "./useEnabled-BTR3ciPG.js";
-import { a as O } from "./props-DjNqoww2.js";
+import { a as O } from "./props-CY0MFBQ3.js";
 import { p as g } from "./FieldMessageDesign-BdZzFt32.js";
-class q {
+class R {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -47,7 +47,7 @@ class q {
    * Возвращает данные для проверки.
    */
   getPattern() {
-    var e, t, s, a, r, h, l, o, m, f;
+    var e, t, s, a, r, h, c, l, m, f;
     return {
       name: (e = this.props) == null ? void 0 : e.name,
       type: (t = this.type) == null ? void 0 : t.get(),
@@ -55,8 +55,8 @@ class q {
       pattern: (a = this.pattern) == null ? void 0 : a.get(),
       step: (r = this.props) == null ? void 0 : r.step,
       min: (h = this.props) == null ? void 0 : h.min,
-      max: (l = this.props) == null ? void 0 : l.max,
-      minlength: (o = this.props) == null ? void 0 : o.minlength,
+      max: (c = this.props) == null ? void 0 : c.max,
+      minlength: (l = this.props) == null ? void 0 : l.minlength,
       maxlength: (m = this.props) == null ? void 0 : m.maxlength,
       ...((f = this.props) == null ? void 0 : f.input) ?? {}
     };
@@ -90,7 +90,7 @@ class q {
     return e && "clear" in e && ((t = e.clear) == null || t.call(e)), this;
   }
 }
-class R extends q {
+class q extends R {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -364,12 +364,12 @@ class j {
    * @param callback callback function /<br>функция обратного вызова
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e, t, s, a, r, h, l) {
+  constructor(e, t, s, a, r, h, c) {
     n(this, "item");
     n(this, "validation");
     n(this, "cache");
     n(this, "cacheValue");
-    this.props = e, this.element = t, this.change = s, this.value = a, this.code = r, this.match = h, this.callback = l, this.item = k(this.element.getPattern());
+    this.props = e, this.element = t, this.change = s, this.value = a, this.code = r, this.match = h, this.callback = c, this.item = k(this.element.getPattern());
   }
   /**
    * Checks if there is an error.<br>
@@ -579,7 +579,7 @@ class H {
     n(this, "code");
     n(this, "validation");
     n(this, "event");
-    this.element = new R(
+    this.element = new q(
       e,
       t
     ), this.change = new D(), this.value = new F(
@@ -628,7 +628,16 @@ class N {
     n(this, "iconBind", u({}));
     n(this, "checkValidity");
     n(this, "validationMessage", u(""));
-    n(this, "onInput", (e) => this.checkbox.event.onChecked(e));
+    n(this, "onInput", (e) => {
+      switch (e.target.type) {
+        case "checkbox":
+          this.checkbox.event.onChecked(e);
+          break;
+        case "radio":
+          this.checkbox.event.onRadio(e);
+          break;
+      }
+    });
     this.checkbox = new H(
       e,
       t,
@@ -685,19 +694,22 @@ class te extends M {
     );
     n(this, "checkbox");
     n(this, "classesSkeleton");
+    n(this, "type", "checkbox");
     /**
      * Rendering of the main input.<br>
      * Рендеринг главного input.
      */
     n(this, "renderInput", () => {
+      var s;
       const t = this.setup();
-      return c("input", {
+      return o("input", {
         class: t.classes.value.input,
         name: this.props.name,
-        type: "checkbox",
+        type: this.type,
         checked: t.value.value,
         readonly: this.props.readonly,
         disabled: t.isDisabled.value,
+        value: ((s = this.props) == null ? void 0 : s.valueVariant) ?? "1",
         on: this.props.on,
         onInput: t.onInput
       });
@@ -706,7 +718,7 @@ class te extends M {
      * Rendering of the hidden input.<br>
      * Рендеринг скрытого input.
      */
-    n(this, "renderInputHidden", () => c("input", {
+    n(this, "renderInputHidden", () => o("input", {
       name: this.props.name,
       type: "hidden",
       value: "0"
@@ -718,7 +730,7 @@ class te extends M {
     n(this, "renderChecked", () => {
       const t = this.setup(), s = [
         t.renderProgress(),
-        c("span", {
+        o("span", {
           class: [
             t.classes.value.itemIcon,
             t.classesSkeleton.classBackgroundVariant
@@ -736,7 +748,7 @@ class te extends M {
         {
           disabled: t.isDisabled.value
         }
-      ), c("span", {
+      ), o("span", {
         class: t.classes.value.item
       }, s);
     });
@@ -749,20 +761,20 @@ class te extends M {
         ...t.renderLabel(),
         ...t.renderFieldMessage()
       ];
-      return c("span", {
+      return o("span", {
         class: t.classes.value.info
       }, s);
     });
     this.checkbox = new N(
       s,
       this.element,
-      (r, h, l) => {
-        var o;
-        (o = this.emits) == null || o.call(
+      (r, h, c) => {
+        var l;
+        (l = this.emits) == null || l.call(
           this,
           r,
           h,
-          l
+          c
         );
       }
     ), this.classesSkeleton = y.getClassesListByDesign(this.name[0]), this.init();
@@ -861,7 +873,7 @@ class te extends M {
       t.renderInput(),
       t.renderChecked()
     ];
-    return t.isLabel.value && s.push(t.renderInfo()), c("label", {
+    return t.isLabel.value && s.push(t.renderInfo()), o("label", {
       ...this.getAttrs(),
       ref: this.element,
       class: t.classes.value.main

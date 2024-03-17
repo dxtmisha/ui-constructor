@@ -15,11 +15,11 @@ import { M3Mask as g } from "./M3Mask.js";
 import { M3Mutation as u } from "./M3Mutation.js";
 import { M3MutationItem as k } from "./M3MutationItem.js";
 import { M3Progress as P } from "./M3Progress.js";
-import { M3Ripple as S } from "./M3Ripple.js";
-import { M3Scrollbar as B } from "./M3Scrollbar.js";
-import { M3Skeleton as R } from "./M3Skeleton.js";
-import { M3SkeletonItem as b } from "./M3SkeletonItem.js";
-import { M3Window as d } from "./M3Window.js";
+import { M3Ripple as R } from "./M3Ripple.js";
+import { M3Scrollbar as S } from "./M3Scrollbar.js";
+import { M3Skeleton as d } from "./M3Skeleton.js";
+import { M3SkeletonItem as B } from "./M3SkeletonItem.js";
+import { M3Window as b } from "./M3Window.js";
 import { C1Button as h } from "./C1Button.js";
 import { C1Icon as x } from "./C1Icon.js";
 import { C1Image as F } from "./C1Image.js";
@@ -33,9 +33,10 @@ import { C2Image as v } from "./C2Image.js";
 import { C2Mutation as z } from "./C2Mutation.js";
 import { C2MutationItem as A } from "./C2MutationItem.js";
 import { C2Progress as D } from "./C2Progress.js";
-import { C2Ripple as G } from "./C2Ripple.js";
-import { C2Skeleton as H } from "./C2Skeleton.js";
-const J = {
+import { C2Radio as G } from "./C2Radio.js";
+import { C2Ripple as H } from "./C2Ripple.js";
+import { C2Skeleton as J } from "./C2Skeleton.js";
+const K = {
   M2Button: i,
   M2Icon: p,
   M2Image: f,
@@ -52,11 +53,11 @@ const J = {
   M3Mutation: u,
   M3MutationItem: k,
   M3Progress: P,
-  M3Ripple: S,
-  M3Scrollbar: B,
-  M3Skeleton: R,
-  M3SkeletonItem: b,
-  M3Window: d,
+  M3Ripple: R,
+  M3Scrollbar: S,
+  M3Skeleton: d,
+  M3SkeletonItem: B,
+  M3Window: b,
   C1Button: h,
   C1Icon: x,
   C1Image: F,
@@ -70,16 +71,17 @@ const J = {
   C2Mutation: z,
   C2MutationItem: A,
   C2Progress: D,
-  C2Ripple: G,
-  C2Skeleton: H
-}, ho = {
+  C2Radio: G,
+  C2Ripple: H,
+  C2Skeleton: J
+}, Fo = {
   install: async (o) => {
-    t(J, (r, m) => {
+    t(K, (r, m) => {
       o.component(m, r);
     });
   }
 };
 export {
-  J as components,
-  ho as uiComponentsPlugin
+  K as components,
+  Fo as uiComponentsPlugin
 };

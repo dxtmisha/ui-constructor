@@ -11,6 +11,7 @@ import { type CheckboxClasses, type CheckboxComponents, type CheckboxEmits, type
 export declare class CheckboxDesign<COMP extends CheckboxComponents, SETUP extends CheckboxSetup, EXPOSE extends CheckboxExpose, CLASSES extends CheckboxClasses, P extends CheckboxProps> extends DesignConstructorAbstract<HTMLLabelElement, COMP, CheckboxEmits, SETUP, EXPOSE, CheckboxSlots, CLASSES, P> {
     protected readonly checkbox: CheckboxRef;
     protected readonly classesSkeleton: SkeletonClassesList;
+    protected type: string;
     /**
      * Constructor
      * @param name class name /<br>название класса

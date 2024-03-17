@@ -1,14 +1,15 @@
-import { u as t, a as n, b as o } from "./useEnabled-BTR3ciPG.js";
+import { u as t, a as n, b as a } from "./useEnabled-BTR3ciPG.js";
 const e = {
   type: "text",
   autocomplete: "off"
-}, a = {
+}, o = {
   ...t,
   ...n,
-  ...o,
+  ...a,
   // Values
   name: String,
   value: String,
+  valueVariant: String,
   modelValue: String,
   detail: Object,
   // Input
@@ -43,9 +44,9 @@ const e = {
   "onUpdate:value": Function,
   "onUpdate:modelValue": Function
 }, i = {
-  ...a
+  ...o
 };
 export {
-  a,
+  o as a,
   i as p
 };

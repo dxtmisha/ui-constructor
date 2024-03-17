@@ -16,15 +16,31 @@
 }
 
 @mixin scale($value) {
-  @include translateInit;
-  --sys-transform-scale: #{$value};
+  scale: #{$value};
+
+  @supports not (scale: #{$value}) {
+    @include transformInit;
+    --sys-transform-scale: #{$value};
+  }
 }
 
 @mixin rotate($value) {
-  @include translateInit;
-  --sys-transform-rotate: #{$value};
+  rotate: #{$value};
+
+  @supports not (rotate: #{$value}) {
+    @include transformInit;
+    --sys-transform-rotate: #{$value};
+  }
+}
+
+@mixin transformInit {
+  transform: translateX(#{calc(var(--sys-transform-translateX, 0px) * var(--d-dir))}) translateY(var(--sys-transform-translateY, 0px)) scale(var(--sys-transform-scale, 1)) rotate(var(--sys-transform-rotate, 0));
 }
 
 @mixin translateInit {
-  transform: translateX(#{calc(var(--sys-transform-translateX, 0px) * var(--d-dir))}) translateY(var(--sys-transform-translateY, 0px)) scale(var(--sys-transform-scale, 1)) rotate(var(--sys-transform-rotate, 0));
+  translate: var(--sys-transform-translateX) var(--sys-transform-translateY);
+
+  @supports not (translate: var(--sys-transform-translateX) var(--sys-transform-translateY)) {
+    @include transformInit;
+  }
 }

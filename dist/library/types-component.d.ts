@@ -138,6 +138,10 @@ declare module 'ui/C2Progress' {
   export { C2Progress } from 'ui/c2/Progress'
 }
 
+declare module 'ui/C2Radio' {
+  export { C2Radio } from 'ui/c2/Radio'
+}
+
 declare module 'ui/C2Ripple' {
   export { C2Ripple } from 'ui/c2/Ripple'
 }
