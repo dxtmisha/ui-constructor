@@ -1,4 +1,7 @@
 import { type ConstrClass } from '../../types/constructor'
+
+import { type SkeletonClassesList } from '../Skeleton/Skeleton'
+
 import {
   type UseLabelSetup,
   type UseLabelSlots
@@ -43,7 +46,10 @@ export type ButtonSetup =
   UseIconSetup &
   UseProgressSetup &
   UseEnabledSetup &
-  UseEventClickSetup
+  UseEventClickSetup &
+  {
+    classesSkeleton: SkeletonClassesList
+  }
 
 /**
  * Type describing available properties.<br>

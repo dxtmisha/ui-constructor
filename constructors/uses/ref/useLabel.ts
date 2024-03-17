@@ -28,7 +28,7 @@ export const usePropsLabel = {
 export const useLabel = function (
   props: Readonly<UseLabelProps>,
   slots?: UseLabelSlots,
-  className = 'is-label'
+  className: string | string[] = 'is-label'
 ): UseLabelSetup {
   const is = computed(() =>
     Boolean(

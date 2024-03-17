@@ -1,4 +1,5 @@
 import { type ConstrClass } from '../../types/constructor';
+import { type SkeletonClassesList } from '../Skeleton/Skeleton';
 import { type UseLabelSetup, type UseLabelSlots } from '../uses/ref/useLabel';
 import { type UseIconComponent, type UseIconSetup } from '../Icon/useIconRef';
 import { type UseProgressComponent, type UseProgressSetup } from '../Progress/useProgressRef';
@@ -20,7 +21,9 @@ export type ButtonEmits = UseEventClickEmits;
  * Interface for describing what property setup returns.<br>
  * Интерфейс для описания, какое свойство возвращает setup.
  */
-export type ButtonSetup = UseLabelSetup & UseIconSetup & UseProgressSetup & UseEnabledSetup & UseEventClickSetup;
+export type ButtonSetup = UseLabelSetup & UseIconSetup & UseProgressSetup & UseEnabledSetup & UseEventClickSetup & {
+    classesSkeleton: SkeletonClassesList;
+};
 /**
  * Type describing available properties.<br>
  * Тип, описывающий доступные свойства.

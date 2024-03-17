@@ -9,6 +9,8 @@ import {
   type InputSlots
 } from '../Input/types'
 
+import { type SkeletonClassesList } from '../Skeleton/Skeleton.ts'
+
 /**
  * Interface for describing which components need to be connected for work.<br>
  * Интерфейс для описания, какие компоненты надо подключить для работы.
@@ -33,6 +35,8 @@ export type CheckboxSetup =
   InputSetup<boolean> &
   {
     iconBind: ComputedRef<ImageProps>
+
+    classesSkeleton: SkeletonClassesList
 
     renderInput: () => VNode
     renderInputHidden: () => VNode

@@ -9,14 +9,9 @@ import { type ConstrItem } from '../../types/constructor'
 
 import { SKELETON_NAME_STATUS } from './typesBasic'
 
-export type UseSkeletonItem = {
-  isSkeleton: ComputedRef<boolean>
-  classSkeleton: ComputedRef<ConstrItem>
-  classesList: SkeletonClassesList
-}
-
 export type UseSkeletonSetup = {
   isSkeleton: ComputedRef<boolean>
+  classesSkeleton: SkeletonClassesList
 }
 
 export type UseSkeletonProps = {
@@ -27,30 +22,45 @@ export const usePropsSkeleton = {
   skeleton: [Boolean] as PropType<UseSkeletonProps['skeleton']>
 }
 
+export type UseSkeletonItem = {
+  isSkeleton: ComputedRef<boolean>
+  classSkeleton: ComputedRef<ConstrItem>
+  classesSkeleton: SkeletonClassesList
+  setup: UseSkeletonSetup
+}
+
 /**
  * Returns the property for implementing the select.<br>
  * Возвращает свойство для внедрения селекта.
  * @param props input data /<br>входные данные
- * @param name design names /<br>названия дизайна
  * @param className class name /<br>название класса
  */
 export const useSkeletonRef = function (
   props: UseSkeletonProps,
-  name: string = 'd',
-  className: string = 'is-skeleton'
+  className: string = 'd'
 ): UseSkeletonItem {
-  const status = inject<ComputedRef<boolean>>(SKELETON_NAME_STATUS)
+  const name = `${className}-skeleton`
+  const status = inject<ComputedRef<boolean> | undefined>(
+    SKELETON_NAME_STATUS,
+    undefined
+  )
   const isSkeleton = computed(() => {
     return Boolean((status && status.value) || props?.skeleton)
   })
+
+  const classesSkeleton = Skeleton.getClassesList(name)
 
   return {
     isSkeleton,
     classSkeleton: computed(() => {
       return {
-        [`${className}--skeleton`]: isSkeleton.value
+        [`${name}--active`]: isSkeleton.value
       }
     }),
-    classesList: Skeleton.getClassesList(`${name}-skeleton`)
+    classesSkeleton,
+    setup: {
+      isSkeleton,
+      classesSkeleton
+    }
   }
 }

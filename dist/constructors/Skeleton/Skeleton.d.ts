@@ -2,7 +2,9 @@ import { type SkeletonProps } from './props';
 export type SkeletonClassesList = {
     classText: string;
     classBackground: string;
+    classBackgroundVariant: string;
     classBorder: string;
+    classBorderVariant: string;
 };
 /**
  * Class for working with the skeleton.<br>
@@ -30,6 +32,13 @@ export declare class Skeleton {
     /**
      * Returns the list of available classes.<br>
      * Возвращает список доступных классов.
+     * @param className class name /<br>название класса
      */
     static getClassesList(className: string): SkeletonClassesList;
+    /**
+     * Returns a list of available classes by design name.<br>
+     * Возвращает список доступных классов по названию дизайна.
+     * @param design design name /<br>названия дизайна
+     */
+    static getClassesListByDesign(design: string): SkeletonClassesList;
 }

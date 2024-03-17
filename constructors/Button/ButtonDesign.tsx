@@ -2,6 +2,8 @@ import { h, type VNode } from 'vue'
 
 import { DesignConstructorAbstract } from '../../classes/design/DesignConstructorAbstract'
 
+import { Skeleton, SkeletonClassesList } from '../Skeleton/Skeleton'
+
 import { useLabel } from '../uses/ref/useLabel'
 import { useIconRef, type UseIconSetup } from '../Icon/useIconRef'
 import { useProgressRef } from '../Progress/useProgressRef'
@@ -45,6 +47,7 @@ export class ButtonDesign<
   P
 > {
   protected readonly icons: UseIconSetup
+  protected readonly classesSkeleton: SkeletonClassesList
 
   /**
    * Constructor
@@ -69,6 +72,8 @@ export class ButtonDesign<
       this.getSubClass('icon'),
       this.getSubClass('trailing')
     )
+
+    this.classesSkeleton = Skeleton.getClassesListByDesign(this.name[0])
 
     this.init()
   }
@@ -112,7 +117,9 @@ export class ButtonDesign<
         this.props,
         enabled,
         this.emits
-      )
+      ),
+
+      classesSkeleton: this.classesSkeleton
     } as SETUP
   }
 
@@ -133,7 +140,8 @@ export class ButtonDesign<
   protected initClasses (): Partial<CLASSES> {
     return {
       main: {
-        [this.getStatusClass('icon')]: this.icons.isIcon.value
+        [this.getStatusClass('icon')]: this.icons.isIcon.value,
+        [this.classesSkeleton.classBackground]: true
       },
       ...{
         // :classes [!] System label / Системная метка

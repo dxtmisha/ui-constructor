@@ -58,7 +58,7 @@ export class SkeletonItemDesign<
       options
     )
 
-    this.item = new SkeletonItemRef(props, this.name[0], this.getName())
+    this.item = new SkeletonItemRef(props, this.name[0])
 
     this.init()
   }
@@ -78,6 +78,7 @@ export class SkeletonItemDesign<
   protected initSetup (): SETUP {
     return {
       isSkeleton: this.item.isSkeleton,
+      classesSkeleton: this.item.classesSkeleton,
 
       label: this.item.label
     } as SETUP
@@ -98,13 +99,15 @@ export class SkeletonItemDesign<
    * Доработка полученного списка классов.
    */
   protected initClasses (): Partial<CLASSES> {
-    const classesList = this.item.classesList
+    const classesList = this.item.classesSkeleton
 
     return {
       main: {
         [classesList.classText]: this.props.text,
         [classesList.classBackground]: this.props.background,
-        [classesList.classBorder]: this.props.border
+        [classesList.classBackgroundVariant]: this.props.backgroundVariant,
+        [classesList.classBorder]: this.props.border,
+        [classesList.classBorderVariant]: this.props.borderVariant
       },
       ...{
         // :classes [!] System label / Системная метка

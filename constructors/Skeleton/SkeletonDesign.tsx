@@ -87,9 +87,11 @@ export class SkeletonDesign<
    * Инициализация всех необходимых свойств для работы.
    */
   protected initExpose (): EXPOSE {
-    // const setup = this.setup()
+    const setup = this.setup()
 
-    return {} as EXPOSE
+    return {
+      isActive: setup.isActive
+    } as EXPOSE
   }
 
   /**

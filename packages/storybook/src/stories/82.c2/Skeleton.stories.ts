@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
 import { C2Button } from 'ui/C2Button'
+import { C2Checkbox } from 'ui/C2Checkbox'
 import { C2Image } from 'ui/C2Image'
 import { C2Skeleton } from 'ui/C2Skeleton'
 
@@ -36,6 +37,7 @@ export const Skeleton: Story = {
   render: (args: any) => ({
     components: {
       C2Button,
+      C2Checkbox,
       C2Image,
       C2Skeleton
     },
@@ -60,9 +62,12 @@ export const Skeleton: Story = {
               <div :class="classText" class="pt-2">
                 a spoken or written representation or account of a person.
               </div>
+              <div :class="classText" class="pt-6">
+                <c2-checkbox label="Checkbox"/>
+              </div>
             </div>
             <div class="flex justify-end gap-2 p-4">
-              <c2-button :class="classBackground" icon="home" label="Label"/>
+              <c2-button icon="home" label="Button"/>
             </div>
           </div>
         </template>

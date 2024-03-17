@@ -33,7 +33,9 @@ const classesToken = computed<ConstrClasses>(() => ({
     'm3-skeletonItem': true,
     'm3-skeletonItem--text': props.text,
     'm3-skeletonItem--background': props.background,
-    'm3-skeletonItem--border': props.border
+    'm3-skeletonItem--backgroundVariant': props.backgroundVariant,
+    'm3-skeletonItem--border': props.border,
+    'm3-skeletonItem--borderVariant': props.borderVariant
     // :classes-values [!] System label / Системная метка
   }
 }))

@@ -5,8 +5,8 @@ class t {
    * @param className class name /<br>название класса
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(s, e = "is-skeleton") {
-    this.props = s, this.className = e;
+  constructor(s, r = "is-skeleton") {
+    this.props = s, this.className = r;
   }
   /**
    * Checks if the loading mode is enabled.<br>
@@ -25,17 +25,26 @@ class t {
   /**
    * Returns the list of available classes.<br>
    * Возвращает список доступных классов.
+   * @param className class name /<br>название класса
    */
   static getClassesList(s) {
     return {
       classText: `${s}__text`,
       classBackground: `${s}__background`,
-      classBorder: `${s}__border`
+      classBackgroundVariant: `${s}__backgroundVariant`,
+      classBorder: `${s}__border`,
+      classBorderVariant: `${s}__borderVariant`
     };
   }
+  /**
+   * Returns a list of available classes by design name.<br>
+   * Возвращает список доступных классов по названию дизайна.
+   * @param design design name /<br>названия дизайна
+   */
+  static getClassesListByDesign(s) {
+    return this.getClassesList(`${s}-skeleton`);
+  }
 }
-const r = "skeleton-status";
 export {
-  t as S,
-  r as a
+  t as S
 };

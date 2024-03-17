@@ -12,12 +12,11 @@ export declare class SkeletonItemRef {
     protected readonly skeleton: UseSkeletonItem;
     readonly label: ComputedRef<string>;
     readonly isSkeleton: ComputedRef<boolean>;
-    readonly classesList: SkeletonClassesList;
+    readonly classesSkeleton: SkeletonClassesList;
     /**
      * Constructor
      * @param props input data /<br>входные данные
      * @param name design names /<br>названия дизайна
-     * @param className class name /<br>название класса
      */
-    constructor(props: SkeletonItemProps, name?: string, className?: string);
+    constructor(props: SkeletonItemProps, name?: string);
 }

@@ -1,5 +1,7 @@
 import { h, type VNode } from 'vue'
 
+import { Skeleton, type SkeletonClassesList } from '../Skeleton/Skeleton'
+
 import { DesignConstructorAbstract } from '../../classes/design/DesignConstructorAbstract'
 import { CheckboxRef } from './CheckboxRef'
 
@@ -44,7 +46,8 @@ export class CheckboxDesign<
   CLASSES,
   P
 > {
-  protected checkbox: CheckboxRef
+  protected readonly checkbox: CheckboxRef
+  protected readonly classesSkeleton: SkeletonClassesList
 
   /**
    * Constructor
@@ -74,6 +77,8 @@ export class CheckboxDesign<
         )
       }
     )
+
+    this.classesSkeleton = Skeleton.getClassesListByDesign(this.name[0])
 
     this.init()
   }
@@ -108,7 +113,10 @@ export class CheckboxDesign<
       ...useLabel(
         this.props,
         this.slots,
-        this.getSubClass(['info', 'label'])
+        [
+          this.getSubClass(['info', 'label']),
+          this.classesSkeleton.classText
+        ]
       ),
 
       ...useEnabled(this.props),
@@ -128,7 +136,9 @@ export class CheckboxDesign<
         this.props,
         this.components,
         this.checkbox.validationMessage
-      )
+      ),
+
+      classesSkeleton: this.classesSkeleton
     } as SETUP
   }
 
@@ -238,7 +248,10 @@ export class CheckboxDesign<
     const children: any[] = [
       setup.renderProgress(),
       h('span', {
-        class: setup.classes.value.itemIcon
+        class: [
+          setup.classes.value.itemIcon,
+          setup.classesSkeleton.classBackgroundVariant
+        ]
       }, [
         this.components.renderOne(
           'icon',

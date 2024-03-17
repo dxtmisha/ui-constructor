@@ -16,24 +16,22 @@ export class SkeletonItemRef {
 
   readonly label: ComputedRef<string>
   readonly isSkeleton: ComputedRef<boolean>
-  readonly classesList: SkeletonClassesList
+  readonly classesSkeleton: SkeletonClassesList
 
   /**
    * Constructor
    * @param props input data /<br>входные данные
    * @param name design names /<br>названия дизайна
-   * @param className class name /<br>название класса
    */
   constructor (
     props: SkeletonItemProps,
-    name: string = 'd',
-    className: string = 'is-skeleton'
+    name: string = 'd'
   ) {
     this.item = new SkeletonItem(props)
-    this.skeleton = useSkeletonRef(props, name, className)
+    this.skeleton = useSkeletonRef(props, name)
 
     this.label = computed(() => (this.skeleton.isSkeleton.value && this.item.getLabel()) || '&nbsp;')
     this.isSkeleton = this.skeleton.isSkeleton
-    this.classesList = this.skeleton.classesList
+    this.classesSkeleton = this.skeleton.classesSkeleton
   }
 }

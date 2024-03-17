@@ -1,23 +1,24 @@
-var v = Object.defineProperty;
-var S = (e, n, t) => n in e ? v(e, n, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[n] = t;
-var h = (e, n, t) => (S(e, typeof n != "symbol" ? n + "" : n, t), t);
-import { computed as l, h as o } from "vue";
-import { c as C } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { c as f, d as m, e as y, u as B, b as T, a as P } from "./useEnabled-BTR3ciPG.js";
+var S = Object.defineProperty;
+var v = (e, n, t) => n in e ? S(e, n, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[n] = t;
+var c = (e, n, t) => (v(e, typeof n != "symbol" ? n + "" : n, t), t);
+import { computed as o, h as u } from "vue";
+import { c as m } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { S as C } from "./Skeleton-u-yv2rzv.js";
+import { c as f, d as B, e as k, u as y, b as T, a as P } from "./useEnabled-BTR3ciPG.js";
 import { g as b } from "./getBind-CgHMfjrB.js";
-import { e as k } from "./eventStopPropagation-fHm2p5BF.js";
-const E = {
+import { e as E } from "./eventStopPropagation-fHm2p5BF.js";
+const I = {
   // Values
   icon: [String, Object],
   // Status
   selected: Boolean,
   iconTurn: Boolean,
   iconHide: Boolean
-}, I = {
-  ...E,
+}, O = {
+  ...I,
   iconTrailing: [String, Object]
-}, O = function(e, n, t = "is-icon", s = "is-icon-trailing") {
-  const i = l(() => b(
+}, A = function(e, n, t = "is-icon", a = "is-icon-trailing") {
+  const i = o(() => b(
     e == null ? void 0 : e.icon,
     {
       class: t,
@@ -29,77 +30,78 @@ const E = {
       "data-event-type": "icon"
     },
     "icon"
-  )), a = "iconTrailing" in e ? l(() => b(
+  )), s = "iconTrailing" in e ? o(() => b(
     e.iconTrailing,
     {
-      class: s,
+      class: a,
       turn: e == null ? void 0 : e.iconTurn,
       end: !0,
       high: !0,
       "data-event-type": "icon-trailing"
     },
     "icon"
-  )) : void 0, d = l(() => !!(e != null && e.icon || e != null && e.iconTrailing));
+  )) : void 0, d = o(() => !!(e != null && e.icon || e != null && e.iconTrailing));
   return {
     iconBind: i,
-    trailingBind: a,
+    trailingBind: s,
     isIcon: d,
     renderIcon() {
-      const c = [];
+      const l = [];
       return n && (e != null && e.icon && n.renderAdd(
-        c,
+        l,
         "icon",
         i.value,
         void 0,
         "icon"
-      ), a && (e != null && e.iconTrailing) && n.renderAdd(
-        c,
+      ), s && (e != null && e.iconTrailing) && n.renderAdd(
+        l,
         "icon",
-        a.value,
+        s.value,
         void 0,
         "iconTrailing"
-      )), c;
+      )), l;
     }
   };
-}, A = {
+}, j = {
   to: String,
   value: [String, Number, Object],
   detail: [Object]
-}, j = function(e, n, t) {
-  const s = (a) => {
-    var c, r, g;
+}, L = function(e, n, t) {
+  const a = (s) => {
+    var l, g, h;
     return {
-      type: ((g = (r = (c = a.target) == null ? void 0 : c.closest("[data-event-type]")) == null ? void 0 : r.dataset) == null ? void 0 : g.eventType) ?? "click",
+      type: ((h = (g = (l = s.target) == null ? void 0 : l.closest("[data-event-type]")) == null ? void 0 : g.dataset) == null ? void 0 : h.eventType) ?? "click",
       value: e == null ? void 0 : e.value,
       detail: e == null ? void 0 : e.detail
     };
   }, i = () => !1;
   return {
-    onClick(a) {
-      n.isEnabled.value && !i() ? t == null || t("click", a, s(a)) : k(a);
+    onClick(s) {
+      n.isEnabled.value && !i() ? t == null || t("click", s, a(s)) : E(s);
     }
   };
 };
-class q extends C {
+class z extends m {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(t, s, i) {
+  constructor(t, a, i) {
     super(
       t,
-      s,
+      a,
       i
     );
-    h(this, "icons");
-    this.icons = O(
+    c(this, "icons");
+    c(this, "classesSkeleton");
+    this.icons = A(
       this.props,
       this.components,
       this.getSubClass("icon"),
       this.getSubClass("trailing")
-    ), this.init();
+    ), this.classesSkeleton = C.getClassesListByDesign(this.name[0]), this.init();
   }
   /**
    * Initialization of basic options.<br>
@@ -115,13 +117,13 @@ class q extends C {
   initSetup() {
     const t = f(this.props);
     return {
-      ...m(
+      ...B(
         this.props,
         this.slots,
         this.getSubClass("label")
       ),
       ...this.icons,
-      ...y(
+      ...k(
         this.props,
         this.components,
         this.getSubClass("loading"),
@@ -131,11 +133,12 @@ class q extends C {
         }
       ),
       ...t,
-      ...j(
+      ...L(
         this.props,
         t,
         this.emits
-      )
+      ),
+      classesSkeleton: this.classesSkeleton
     };
   }
   /**
@@ -152,7 +155,8 @@ class q extends C {
   initClasses() {
     return {
       main: {
-        [this.getStatusClass("icon")]: this.icons.isIcon.value
+        [this.getStatusClass("icon")]: this.icons.isIcon.value,
+        [this.classesSkeleton.classBackground]: !0
       },
       // :classes [!] System label / Системная метка
       label: this.getSubClass("label"),
@@ -175,35 +179,35 @@ class q extends C {
    */
   initRender() {
     var i;
-    const t = this.setup(), s = [
+    const t = this.setup(), a = [
       ...t.renderProgress(),
       ...t.renderLabel(),
       ...t.renderIcon(),
-      o("span", { class: t.classes.value.paddingSpacer }),
-      o("span", { class: t.classes.value.paddingSpacer })
+      u("span", { class: t.classes.value.paddingSpacer }),
+      u("span", { class: t.classes.value.paddingSpacer })
     ];
-    return t.isEnabled.value && this.components.renderAdd(s, "ripple"), o(((i = this.props) == null ? void 0 : i.tag) || "button", {
+    return t.isEnabled.value && this.components.renderAdd(a, "ripple"), u(((i = this.props) == null ? void 0 : i.tag) || "button", {
       ...this.getAttrs(),
       ref: this.element,
       class: t.classes.value.main,
       style: t.styles.value,
       disabled: t.disabledBind.value,
       onClick: t.onClick
-    }, s);
+    }, a);
   }
 }
-const u = {
+const r = {
   tag: "button"
-}, w = {
-  ...B,
-  ...I,
+}, F = {
+  ...y,
+  ...O,
   ...T,
   ...P,
-  ...A,
+  ...j,
   // Options
   tag: {
     type: String,
-    default: u == null ? void 0 : u.tag
+    default: r == null ? void 0 : r.tag
   },
   // :prop [!] System label / Системная метка
   disabled: Boolean,
@@ -212,7 +216,7 @@ const u = {
   readonly: Boolean
 };
 export {
-  q as B,
-  u as d,
-  w as p
+  z as B,
+  r as d,
+  F as p
 };

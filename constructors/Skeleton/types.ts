@@ -33,7 +33,7 @@ export type SkeletonSetup = {
  * Тип, описывающий доступные свойства.
  */
 export type SkeletonExpose = {
-  // none
+  isActive: SkeletonSetup['isActive']
 }
 
 /**

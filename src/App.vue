@@ -27,7 +27,6 @@ const onInput = () => {
     </div>
     <div>
       <c2-checkbox
-        ref="checkbox"
         name="test"
         label="Label"
         required
@@ -37,7 +36,6 @@ const onInput = () => {
     </div>
     <div>
       <c2-checkbox
-        ref="checkbox"
         name="test"
         label="Label"
         required
@@ -47,7 +45,6 @@ const onInput = () => {
     </div>
     <div>
       <c2-checkbox
-        ref="checkbox"
         name="test"
         label="Label"
         required
@@ -58,7 +55,6 @@ const onInput = () => {
     <div>
       <c2-checkbox
         :loading="loading"
-        ref="checkbox"
         name="test"
         label="Readonly"
         required
@@ -69,7 +65,6 @@ const onInput = () => {
     <div>
       <c2-checkbox
         :loading="loading"
-        ref="checkbox"
         name="test"
         label="Disabled"
         required
@@ -79,7 +74,6 @@ const onInput = () => {
     <div>
       <c2-checkbox
         :loading="loading"
-        ref="checkbox"
         name="test"
         label="Disabled"
         required

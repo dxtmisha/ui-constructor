@@ -1,10 +1,11 @@
-var c = Object.defineProperty;
-var u = (e, s, t) => s in e ? c(e, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[s] = t;
-var o = (e, s, t) => (u(e, typeof s != "symbol" ? s + "" : s, t), t);
-import { computed as h, provide as k, h as p } from "vue";
-import { c as m } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { S, a as f } from "./typesBasic-gH1C25pW.js";
-class v {
+var u = Object.defineProperty;
+var h = (i, s, t) => s in i ? u(i, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[s] = t;
+var o = (i, s, t) => (h(i, typeof s != "symbol" ? s + "" : s, t), t);
+import { inject as p, computed as k, provide as m, h as v } from "vue";
+import { c as A } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { S } from "./Skeleton-u-yv2rzv.js";
+import { S as a } from "./typesBasic-Ds2oAucF.js";
+class f {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -13,7 +14,11 @@ class v {
   constructor(s, t = "is-skeleton") {
     o(this, "skeleton");
     o(this, "isActive");
-    this.skeleton = new S(s, t), this.isActive = h(() => this.skeleton.isActive()), k(f, this.isActive);
+    const e = p(
+      a,
+      void 0
+    );
+    this.skeleton = new S(s, t), this.isActive = k(() => e && e.value || this.skeleton.isActive()), m(a, this.isActive);
   }
   /**
    * Returns the list of available classes.<br>
@@ -23,21 +28,21 @@ class v {
     return this.skeleton.getClasses();
   }
 }
-class D extends m {
+class x extends A {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(t, i, n) {
+  constructor(t, e, n) {
     super(
       t,
-      i,
+      e,
       n
     );
     o(this, "skeleton");
-    this.skeleton = new v(i, this.getName()), this.init();
+    this.skeleton = new f(e, this.getName()), this.init();
   }
   /**
    * Initialization of basic options.<br>
@@ -61,7 +66,9 @@ class D extends m {
    * Инициализация всех необходимых свойств для работы.
    */
   initExpose() {
-    return {};
+    return {
+      isActive: this.setup().isActive
+    };
   }
   /**
    * Improvement of the obtained list of classes.<br>
@@ -84,20 +91,20 @@ class D extends m {
    * Метод для рендеринга.
    */
   initRender() {
-    var n, l, r, a;
-    const t = this.setup(), i = [];
-    return (n = this.slots) != null && n.default && i.push((r = (l = this.slots).default) == null ? void 0 : r.call(l, t.slotDefault)), p("div", {
+    var n, r, l, c;
+    const t = this.setup(), e = [];
+    return (n = this.slots) != null && n.default && e.push((l = (r = this.slots).default) == null ? void 0 : l.call(r, t.slotDefault)), v("div", {
       ...this.getAttrs(),
       ref: this.element,
-      class: (a = t.classes) == null ? void 0 : a.value.main
-    }, i);
+      class: (c = t.classes) == null ? void 0 : c.value.main
+    }, e);
   }
 }
-const E = {
+const N = {
   // :prop [!] System label / Системная метка
   active: Boolean
 };
 export {
-  D as S,
-  E as p
+  x as S,
+  N as p
 };

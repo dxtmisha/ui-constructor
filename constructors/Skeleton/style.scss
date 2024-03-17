@@ -32,8 +32,16 @@
       @include backgroundColor(v('??backgroundColor'), v('??backgroundOpacity', 1), true);
     }
 
+    @include subclass('backgroundVariant') {
+      @include backgroundColor(v('??color'), v('??colorOpacity', 1), true);
+    }
+
     @include subclass('border') {
       @include borderColor(v('??borderColor'), v('??borderOpacity', 1), true);
+    }
+
+    @include subclass('borderVariant') {
+      @include backgroundColor(v('??color'), v('??colorOpacity', 1), true);
     }
   }
 

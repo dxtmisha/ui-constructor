@@ -1,5 +1,5 @@
 import { defineComponent as l, computed as n, openBlock as u, createBlock as k, resolveDynamicComponent as h, unref as x } from "vue";
-import { p as o, d as b, C as f } from "./props-DhY_D9YO.js";
+import { p as o, d as b, C as f } from "./props-CzcOXFoA.js";
 import { M3Image as C } from "./M3Image.js";
 import { M3Ripple as g } from "./M3Ripple.js";
 import { M3Progress as M } from "./M3Progress.js";

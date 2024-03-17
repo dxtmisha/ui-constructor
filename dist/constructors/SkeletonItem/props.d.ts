@@ -11,7 +11,9 @@ export type SkeletonItemProps = UseSkeletonProps & {
     length?: string | number | [number, number];
     text?: boolean;
     background?: boolean;
+    backgroundVariant?: boolean;
     border?: boolean;
+    borderVariant?: boolean;
 };
 /**
  * Default value for property.<br>
@@ -25,7 +27,9 @@ export declare const defaultsSkeletonItem: SkeletonItemProps;
 export declare const propsSkeletonItem: {
     text: BooleanConstructor;
     background: BooleanConstructor;
+    backgroundVariant: BooleanConstructor;
     border: BooleanConstructor;
+    borderVariant: BooleanConstructor;
     tag: PropType<any>;
     props: PropType<Record<string, any> | undefined>;
     label: PropType<string | undefined>;

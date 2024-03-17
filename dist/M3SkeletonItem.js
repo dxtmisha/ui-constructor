@@ -1,14 +1,15 @@
 var S = Object.defineProperty;
-var f = (n, e, t) => e in n ? S(n, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : n[e] = t;
-var i = (n, e, t) => (f(n, typeof e != "symbol" ? e + "" : e, t), t);
-import { inject as g, computed as a, h, defineComponent as I, openBlock as L, createBlock as x, resolveDynamicComponent as B, unref as _ } from "vue";
-import { c as v } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { i as y } from "./isArray-QlWcxgml.js";
-import { i as T } from "./isNumber-B0xyO2hM.js";
-import { r as b } from "./random-Bem8L1UP.js";
-import { s as j } from "./strFill-CYHpRbDF.js";
-import { t as d } from "./toNumber-eA5ODeva.js";
-import { a as A, S as N } from "./typesBasic-gH1C25pW.js";
+var g = (o, e, t) => e in o ? S(o, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : o[e] = t;
+var i = (o, e, t) => (g(o, typeof e != "symbol" ? e + "" : e, t), t);
+import { inject as f, computed as l, h as d, defineComponent as B, openBlock as I, createBlock as x, resolveDynamicComponent as V, unref as v } from "vue";
+import { c as L } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { i as _ } from "./isArray-QlWcxgml.js";
+import { i as y } from "./isNumber-B0xyO2hM.js";
+import { r as h } from "./random-Bem8L1UP.js";
+import { s as T } from "./strFill-CYHpRbDF.js";
+import { t as b } from "./toNumber-eA5ODeva.js";
+import { S as j } from "./Skeleton-u-yv2rzv.js";
+import { S as A } from "./typesBasic-Ds2oAucF.js";
 class R {
   /**
    * Constructor
@@ -32,10 +33,10 @@ class R {
    * @param max maximum word /<br>максимальное слово
    */
   getRandom(e, t) {
-    const s = b(e, t), o = [];
-    for (let r = 0; r < s; r++)
-      o.push(j("#", b(2, 8)));
-    return o.join(" ");
+    const n = h(e, t), s = [];
+    for (let r = 0; r < n; r++)
+      s.push(T("#", h(2, 8)));
+    return s.join(" ");
   }
   /**
    * Generates text for output.<br>
@@ -43,58 +44,64 @@ class R {
    */
   initLabel() {
     const e = this.props.length;
-    return y(e) ? this.getRandom(
+    return _(e) ? this.getRandom(
       (e == null ? void 0 : e[0]) ?? 2,
       (e == null ? void 0 : e[1]) ?? 6
-    ) : T(e) ? this.getRandom(
-      d(e),
-      d(e)
+    ) : y(e) ? this.getRandom(
+      b(e),
+      b(e)
     ) : String(this.props.length) ?? "";
   }
 }
 const C = {
   skeleton: [Boolean]
-}, M = function(n, e = "d", t = "is-skeleton") {
-  const s = g(A), o = a(() => !!(s && s.value || n != null && n.skeleton));
+}, M = function(o, e = "d") {
+  const t = `${e}-skeleton`, n = f(
+    A,
+    void 0
+  ), s = l(() => !!(n && n.value || o != null && o.skeleton)), r = j.getClassesList(t);
   return {
-    isSkeleton: o,
-    classSkeleton: a(() => ({
-      [`${t}--skeleton`]: o.value
+    isSkeleton: s,
+    classSkeleton: l(() => ({
+      [`${t}--active`]: s.value
     })),
-    classesList: N.getClassesList(`${e}-skeleton`)
+    classesSkeleton: r,
+    setup: {
+      isSkeleton: s,
+      classesSkeleton: r
+    }
   };
 };
-class O {
+class N {
   /**
    * Constructor
    * @param props input data /<br>входные данные
    * @param name design names /<br>названия дизайна
-   * @param className class name /<br>название класса
    */
-  constructor(e, t = "d", s = "is-skeleton") {
+  constructor(e, t = "d") {
     i(this, "item");
     i(this, "skeleton");
     i(this, "label");
     i(this, "isSkeleton");
-    i(this, "classesList");
-    this.item = new R(e), this.skeleton = M(e, t, s), this.label = a(() => this.skeleton.isSkeleton.value && this.item.getLabel() || "&nbsp;"), this.isSkeleton = this.skeleton.isSkeleton, this.classesList = this.skeleton.classesList;
+    i(this, "classesSkeleton");
+    this.item = new R(e), this.skeleton = M(e, t), this.label = l(() => this.skeleton.isSkeleton.value && this.item.getLabel() || "&nbsp;"), this.isSkeleton = this.skeleton.isSkeleton, this.classesSkeleton = this.skeleton.classesSkeleton;
   }
 }
-class E extends v {
+class O extends L {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(t, s, o) {
+  constructor(t, n, s) {
     super(
       t,
-      s,
-      o
+      n,
+      s
     );
     i(this, "item");
-    this.item = new O(s, this.name[0], this.getName()), this.init();
+    this.item = new N(n, this.name[0]), this.init();
   }
   /**
    * Initialization of basic options.<br>
@@ -110,6 +117,7 @@ class E extends v {
   initSetup() {
     return {
       isSkeleton: this.item.isSkeleton,
+      classesSkeleton: this.item.classesSkeleton,
       label: this.item.label
     };
   }
@@ -125,12 +133,14 @@ class E extends v {
    * Доработка полученного списка классов.
    */
   initClasses() {
-    const t = this.item.classesList;
+    const t = this.item.classesSkeleton;
     return {
       main: {
         [t.classText]: this.props.text,
         [t.classBackground]: this.props.background,
-        [t.classBorder]: this.props.border
+        [t.classBackgroundVariant]: this.props.backgroundVariant,
+        [t.classBorder]: this.props.border,
+        [t.classBorderVariant]: this.props.borderVariant
       }
     };
   }
@@ -146,20 +156,20 @@ class E extends v {
    * Метод для рендеринга.
    */
   initRender() {
-    var l, m, u, p, k;
-    const t = this.setup(), s = [], o = typeof this.props.tag == "object", r = this.props.tag ?? "div", c = {
+    var a, m, u, k, p;
+    const t = this.setup(), n = [], s = typeof this.props.tag == "object", r = this.props.tag ?? "div", c = {
       ...this.getAttrs(),
       ...this.props.props ?? {},
       ref: this.element,
-      class: (l = t.classes) == null ? void 0 : l.value.main
+      class: (a = t.classes) == null ? void 0 : a.value.main
     };
-    return (m = this.slots) != null && m.default && s.push((p = (u = this.slots).default) == null ? void 0 : p.call(u, {})), o || (k = this.slots) != null && k.default ? h(r, c, o ? () => s : s) : h(r, {
+    return (m = this.slots) != null && m.default && n.push((k = (u = this.slots).default) == null ? void 0 : k.call(u, {})), s || (p = this.slots) != null && p.default ? d(r, c, s ? () => n : n) : d(r, {
       ...c,
       innerHTML: t.label.value
     });
   }
 }
-const w = {
+const E = {
   ...C,
   tag: [String, Object],
   props: Object,
@@ -168,42 +178,48 @@ const w = {
   // :prop [!] System label / Системная метка
   text: Boolean,
   background: Boolean,
-  border: Boolean
-}, D = {
-  ...w,
+  backgroundVariant: Boolean,
+  border: Boolean,
+  borderVariant: Boolean
+}, w = {
+  ...E,
   // :prop [!] System label / Системная метка
   text: Boolean,
   background: Boolean,
-  border: Boolean
-}, $ = /* @__PURE__ */ I({
+  backgroundVariant: Boolean,
+  border: Boolean,
+  borderVariant: Boolean
+}, D = /* @__PURE__ */ B({
   name: "M3SkeletonItem",
   __name: "M3SkeletonItem",
-  props: { ...D },
-  setup(n, { expose: e, emit: t }) {
-    const s = t, o = n, r = a(() => ({
+  props: { ...w },
+  setup(o, { expose: e, emit: t }) {
+    const n = t, s = o, r = l(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "m3-skeletonItem": !0,
-        "m3-skeletonItem--text": o.text,
-        "m3-skeletonItem--background": o.background,
-        "m3-skeletonItem--border": o.border
+        "m3-skeletonItem--text": s.text,
+        "m3-skeletonItem--background": s.background,
+        "m3-skeletonItem--backgroundVariant": s.backgroundVariant,
+        "m3-skeletonItem--border": s.border,
+        "m3-skeletonItem--borderVariant": s.borderVariant
         // :classes-values [!] System label / Системная метка
       }
-    })), c = a(() => ({
+    })), c = l(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), l = new E(
+    })), a = new O(
       "m3.skeletonItem",
-      o,
+      s,
       {
-        emits: s,
+        emits: n,
         classes: r,
         styles: c
       }
-    ), m = l.render();
-    return e(l.expose()), (u, p) => (L(), x(B(_(m))));
+    ), m = a.render();
+    return e(a.expose()), (u, k) => (I(), x(V(v(m))));
   }
-}), Q = $;
+}), Q = D;
 export {
   Q as M3SkeletonItem
 };

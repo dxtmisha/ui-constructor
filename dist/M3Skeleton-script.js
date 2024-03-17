@@ -1,5 +1,5 @@
 import { defineComponent as a, computed as n, openBlock as i, createBlock as k, resolveDynamicComponent as u, unref as S } from "vue";
-import { p as _, S as d } from "./props-b_fM9Z8V.js";
+import { p as _, S as d } from "./props-fg8QRK0U.js";
 const f = {
   ..._,
   // :prop [!] System label / Системная метка

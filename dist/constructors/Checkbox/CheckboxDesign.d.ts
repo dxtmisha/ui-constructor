@@ -1,4 +1,5 @@
 import { type VNode } from 'vue';
+import { type SkeletonClassesList } from '../Skeleton/Skeleton';
 import { DesignConstructorAbstract } from '../../classes/design/DesignConstructorAbstract';
 import { CheckboxRef } from './CheckboxRef';
 import { type ConstrOptions, type ConstrStyles } from '../../types/constructor';
@@ -8,7 +9,8 @@ import { type CheckboxClasses, type CheckboxComponents, type CheckboxEmits, type
  * CheckboxDesign
  */
 export declare class CheckboxDesign<COMP extends CheckboxComponents, SETUP extends CheckboxSetup, EXPOSE extends CheckboxExpose, CLASSES extends CheckboxClasses, P extends CheckboxProps> extends DesignConstructorAbstract<HTMLLabelElement, COMP, CheckboxEmits, SETUP, EXPOSE, CheckboxSlots, CLASSES, P> {
-    protected checkbox: CheckboxRef;
+    protected readonly checkbox: CheckboxRef;
+    protected readonly classesSkeleton: SkeletonClassesList;
     /**
      * Constructor
      * @param name class name /<br>название класса

@@ -15,7 +15,9 @@ export type PropsToken = {
   // :type [!] System label / Системная метка
   text?: boolean
   background?: boolean
+  backgroundVariant?: boolean
   border?: boolean
+  borderVariant?: boolean
   // :type [!] System label / Системная метка
 }
 
@@ -45,7 +47,9 @@ export const propsInstruction = {
     // :prop [!] System label / Системная метка
     text: Boolean,
     background: Boolean,
-    border: Boolean
+    backgroundVariant: Boolean,
+    border: Boolean,
+    borderVariant: Boolean
     // :prop [!] System label / Системная метка
   }
 }

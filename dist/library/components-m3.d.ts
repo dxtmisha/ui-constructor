@@ -1618,7 +1618,9 @@ export declare const components: {
     M3Skeleton: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             active: BooleanConstructor;
-        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+        }>>, {
+            isActive: import("vue").ComputedRef<boolean>;
+        }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             active: BooleanConstructor;
         }>>, {
             active: boolean;
@@ -1631,7 +1633,9 @@ export declare const components: {
             Defaults: {};
         }, Readonly<import("vue").ExtractPropTypes<{
             active: BooleanConstructor;
-        }>>, {}, {}, {}, {}, {
+        }>>, {
+            isActive: import("vue").ComputedRef<boolean>;
+        }, {}, {}, {}, {
             active: boolean;
         }>;
         __isFragment?: undefined;
@@ -1639,7 +1643,9 @@ export declare const components: {
         __isSuspense?: undefined;
     } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
         active: BooleanConstructor;
-    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+    }>>, {
+        isActive: import("vue").ComputedRef<boolean>;
+    }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
         active: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/Skeleton/types").SkeletonSlots> & import("../constructors/Skeleton/types").SkeletonSlots;
@@ -1648,7 +1654,9 @@ export declare const components: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             text: BooleanConstructor;
             background: BooleanConstructor;
+            backgroundVariant: BooleanConstructor;
             border: BooleanConstructor;
+            borderVariant: BooleanConstructor;
             tag: import("vue").PropType<any>;
             props: import("vue").PropType<Record<string, any> | undefined>;
             label: import("vue").PropType<string | undefined>;
@@ -1657,7 +1665,9 @@ export declare const components: {
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             text: BooleanConstructor;
             background: BooleanConstructor;
+            backgroundVariant: BooleanConstructor;
             border: BooleanConstructor;
+            borderVariant: BooleanConstructor;
             tag: import("vue").PropType<any>;
             props: import("vue").PropType<Record<string, any> | undefined>;
             label: import("vue").PropType<string | undefined>;
@@ -1667,6 +1677,8 @@ export declare const components: {
             text: boolean;
             border: boolean;
             background: boolean;
+            backgroundVariant: boolean;
+            borderVariant: boolean;
         }, true, {}, {}, {
             P: {};
             B: {};
@@ -1677,7 +1689,9 @@ export declare const components: {
         }, Readonly<import("vue").ExtractPropTypes<{
             text: BooleanConstructor;
             background: BooleanConstructor;
+            backgroundVariant: BooleanConstructor;
             border: BooleanConstructor;
+            borderVariant: BooleanConstructor;
             tag: import("vue").PropType<any>;
             props: import("vue").PropType<Record<string, any> | undefined>;
             label: import("vue").PropType<string | undefined>;
@@ -1687,6 +1701,8 @@ export declare const components: {
             text: boolean;
             border: boolean;
             background: boolean;
+            backgroundVariant: boolean;
+            borderVariant: boolean;
         }>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
@@ -1694,7 +1710,9 @@ export declare const components: {
     } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
         text: BooleanConstructor;
         background: BooleanConstructor;
+        backgroundVariant: BooleanConstructor;
         border: BooleanConstructor;
+        borderVariant: BooleanConstructor;
         tag: import("vue").PropType<any>;
         props: import("vue").PropType<Record<string, any> | undefined>;
         label: import("vue").PropType<string | undefined>;
@@ -1704,6 +1722,8 @@ export declare const components: {
         text: boolean;
         border: boolean;
         background: boolean;
+        backgroundVariant: boolean;
+        borderVariant: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/SkeletonItem/types").SkeletonItemSlots> & import("../constructors/SkeletonItem/types").SkeletonItemSlots;
     });

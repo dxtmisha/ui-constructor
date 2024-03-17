@@ -19,4 +19,4 @@ export declare const usePropsLabel: {
  * @param slots object for working with slots /<br>объект для работы со слотами
  * @param className class name /<br>название класса
  */
-export declare const useLabel: (props: Readonly<UseLabelProps>, slots?: UseLabelSlots, className?: string) => UseLabelSetup;
+export declare const useLabel: (props: Readonly<UseLabelProps>, slots?: UseLabelSlots, className?: string | string[]) => UseLabelSetup;

@@ -23,7 +23,9 @@ export type SkeletonSetup = {
  * Type describing available properties.<br>
  * Тип, описывающий доступные свойства.
  */
-export type SkeletonExpose = {};
+export type SkeletonExpose = {
+    isActive: SkeletonSetup['isActive'];
+};
 /**
  * Type describing available slots.<br>
  * Тип, описывающий доступные слоты.

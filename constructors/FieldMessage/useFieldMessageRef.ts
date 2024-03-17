@@ -60,10 +60,6 @@ export const useFieldMessageRef = function <
   validationMessage?: RefOrNormal<string>
 ): UseFieldMessageSetup {
   const messageBind = computed(() => {
-    console.log(
-      props?.validationMessage,
-      isFilled(props?.validationMessage) ? props.validationMessage : getRef(validationMessage)
-    )
     return {
       disabled: props?.disabled,
       counter: props?.counter,
