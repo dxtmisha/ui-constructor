@@ -5,6 +5,8 @@ import { type App } from 'vue'
 import { forEach } from '../functions/forEach'
 
 import { C2Button } from '../c2/Button'
+import { C2Checkbox } from '../c2/Checkbox'
+import { C2FieldMessage } from '../c2/FieldMessage'
 import { C2Icon } from '../c2/Icon'
 import { C2Image } from '../c2/Image'
 import { C2Mutation } from '../c2/Mutation'
@@ -15,6 +17,8 @@ import { C2Skeleton } from '../c2/Skeleton'
 
 export const components = {
   C2Button,
+  C2Checkbox,
+  C2FieldMessage,
   C2Icon,
   C2Image,
   C2Mutation,

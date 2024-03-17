@@ -1,7 +1,7 @@
 import { f as t } from "./toArray-J4lAhJG7.js";
 import { M3Button as i } from "./M3Button.js";
 import { M3Checkbox as p } from "./M3Checkbox.js";
-import { M } from "./index-DeS7TDNN.js";
+import { M3FieldMessage as M } from "./M3FieldMessage.js";
 import { M3Icon as n } from "./M3Icon.js";
 import { M3Image as f } from "./M3Image.js";
 import { M3Input as e } from "./M3Input.js";

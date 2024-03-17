@@ -110,6 +110,14 @@ declare module 'ui/C2Button' {
   export { C2Button } from 'ui/c2/Button'
 }
 
+declare module 'ui/C2Checkbox' {
+  export { C2Checkbox } from 'ui/c2/Checkbox'
+}
+
+declare module 'ui/C2FieldMessage' {
+  export { C2FieldMessage } from 'ui/c2/FieldMessage'
+}
+
 declare module 'ui/C2Icon' {
   export { C2Icon } from 'ui/c2/Icon'
 }

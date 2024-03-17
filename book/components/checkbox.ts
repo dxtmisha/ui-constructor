@@ -10,69 +10,83 @@ import {
   fieldMessageValues
 } from './fieldMessage'
 
-export const checkboxArgs: StorybookArgs = {
-  // Status
-  loading: {
-    control: StorybookControl.boolean,
-    table: {
-      category: StorybookCategory.status,
-      defaultValue: { summary: 'false' },
-      type: { summary: 'boolean' }
-    }
-  },
-  readonly: {
-    control: StorybookControl.boolean,
-    table: {
-      category: StorybookCategory.status,
-      defaultValue: { summary: 'false' },
-      type: { summary: 'boolean' }
-    }
-  },
-  disabled: {
-    control: StorybookControl.boolean,
-    table: {
-      category: StorybookCategory.status,
-      defaultValue: { summary: 'false' },
-      type: { summary: 'boolean' }
-    }
-  },
+import { icons } from '../values.ts'
 
-  // Values
-  label: {
-    control: StorybookControl.text,
-    table: {
-      category: StorybookCategory.value,
-      type: { summary: 'string' }
-    }
-  },
-  value: {
-    control: StorybookControl.boolean,
-    table: {
-      category: StorybookCategory.value,
-      defaultValue: { summary: 'false' },
-      type: { summary: 'boolean' }
-    }
-  },
+export const checkboxArgs = (iconsValue: string[] = icons): StorybookArgs => {
+  return {
+    // Status
+    loading: {
+      control: StorybookControl.boolean,
+      table: {
+        category: StorybookCategory.status,
+        defaultValue: { summary: 'false' },
+        type: { summary: 'boolean' }
+      }
+    },
+    readonly: {
+      control: StorybookControl.boolean,
+      table: {
+        category: StorybookCategory.status,
+        defaultValue: { summary: 'false' },
+        type: { summary: 'boolean' }
+      }
+    },
+    disabled: {
+      control: StorybookControl.boolean,
+      table: {
+        category: StorybookCategory.status,
+        defaultValue: { summary: 'false' },
+        type: { summary: 'boolean' }
+      }
+    },
 
-  // Input
-  required: {
-    control: StorybookControl.boolean,
-    table: {
-      category: 'Input',
-      type: { summary: 'boolean' }
-    }
-  },
+    // Values
+    icon: {
+      control: StorybookControl.select,
+      options: iconsValue,
+      table: {
+        category: StorybookCategory.value,
+        type: { summary: 'string' }
+      }
+    },
+    label: {
+      control: StorybookControl.text,
+      table: {
+        category: StorybookCategory.value,
+        type: { summary: 'string' }
+      }
+    },
+    value: {
+      control: StorybookControl.boolean,
+      table: {
+        category: StorybookCategory.value,
+        defaultValue: { summary: 'false' },
+        type: { summary: 'boolean' }
+      }
+    },
 
-  // Message
-  helperMessage: fieldMessageArgs.helperMessage,
-  validationMessage: fieldMessageArgs.validationMessage
+    // Input
+    required: {
+      control: StorybookControl.boolean,
+      table: {
+        category: 'Input',
+        type: { summary: 'boolean' }
+      }
+    },
+
+    // Message
+    helperMessage: fieldMessageArgs.helperMessage,
+    validationMessage: fieldMessageArgs.validationMessage
+  }
 }
 
 export const checkboxValues: StorybookArgsValue = {
   loading: false,
   readonly: false,
   disabled: false,
+  icon: undefined,
   label: 'Label',
+  name: 'checkbox',
   helperMessage: fieldMessageValues.helperMessage
 }
 

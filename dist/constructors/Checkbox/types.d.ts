@@ -44,7 +44,7 @@ export type CheckboxClasses = {
     input: string;
     item: string;
     itemIcon: string;
+    loading: string;
     info: string;
     infoLabel: string;
-    loading: string;
 };

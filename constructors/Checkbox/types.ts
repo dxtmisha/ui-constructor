@@ -62,8 +62,8 @@ export type CheckboxClasses = {
   input: string
   item: string
   itemIcon: string
+  loading: string
   info: string
   infoLabel: string
-  loading: string
   // :classes [!] System label / Системная метка
 }

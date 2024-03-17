@@ -74,15 +74,19 @@
     }
   }
   
+  &__loading {
+    padding: calc(var(--m3-checkbox-comp-padding) + var(--m3-ref-spacing-px) * 3);
+    
+    @include color(#{var(--m3-checkbox-comp-icon-color)});
+  }
+  
   &__info {
     padding-top: calc(var(--m3-checkbox-comp-padding) + (var(--m3-checkbox-comp-icon-size) / 2) - (var(--sys-line-height) / 2));
     @include paddingLeft(#{var(--m3-ref-spacing-3)});
   }
   
-  &__loading {
-    padding: calc(var(--m3-checkbox-comp-padding) + var(--m3-ref-spacing-px) * 3);
-    
-    @include color(#{var(--m3-checkbox-comp-icon-color)});
+  &__input:focus ~ * {
+    --m3-checkbox-linkfocus: var(--m3-checkbox-focus);
   }
   
   &__input:checked ~ * {

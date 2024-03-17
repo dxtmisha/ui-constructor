@@ -9,7 +9,7 @@ import {
   checkboxText
 } from '../components/checkbox.ts'
 
-export const m3CheckboxArgs: StorybookArgs = checkboxArgs
+export const m3CheckboxArgs: StorybookArgs = checkboxArgs()
 
 export const m3CheckboxValues: StorybookArgsValue = checkboxValues
 

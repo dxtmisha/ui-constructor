@@ -1,0 +1,8 @@
+{
+  "gap": "{ot.dimension.50}",
+  "font": "{st.text.label.xs}",
+  "color": "{st.content.foreground.color.neutral.secondary}",
+  "validation": {
+    "color": "{st.content.foreground.color.negative.secondary}"
+  }
+}

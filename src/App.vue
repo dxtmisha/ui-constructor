@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { M3Checkbox } from '../m3/Checkbox'
+import { C2Checkbox } from '../c2/Checkbox'
 
 const checkbox = ref()
 const loading = ref(false)
-const v = ref('1')
+const v = ref('error')
 
 const onInput = () => {
   loading.value = !loading.value
@@ -16,7 +16,7 @@ const onInput = () => {
     <div>
       <input v-model="v">
       {{ v }}
-      <m3-checkbox
+      <c2-checkbox
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -26,7 +26,37 @@ const onInput = () => {
       />
     </div>
     <div>
-      <m3-checkbox
+      <c2-checkbox
+        ref="checkbox"
+        name="test"
+        label="Label"
+        required
+        size="sm"
+        helper-message="helper message"
+      />
+    </div>
+    <div>
+      <c2-checkbox
+        ref="checkbox"
+        name="test"
+        label="Label"
+        required
+        size="md"
+        helper-message="helper message"
+      />
+    </div>
+    <div>
+      <c2-checkbox
+        ref="checkbox"
+        name="test"
+        label="Label"
+        required
+        size="lg"
+        helper-message="helper message"
+      />
+    </div>
+    <div>
+      <c2-checkbox
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -37,7 +67,7 @@ const onInput = () => {
       />
     </div>
     <div>
-      <m3-checkbox
+      <c2-checkbox
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -47,7 +77,7 @@ const onInput = () => {
       />
     </div>
     <div>
-      <m3-checkbox
+      <c2-checkbox
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -58,7 +88,7 @@ const onInput = () => {
       />
     </div>
     <div>
-      <m3-checkbox
+      <c2-checkbox
         comp
         loading
         label="Label"

@@ -43,9 +43,8 @@ export class CheckboxRef {
     this.checkValidity = () => this.checkbox.validation.checkValidity()
 
     watchEffect(() => this.checkbox.value.update())
-    watchEffect(() => {
-      this.update()
-    })
+    watchEffect(() => this.checkbox.validation.update())
+    watchEffect(() => this.update())
   }
 
   readonly onInput = (event: Event) => this.checkbox.event.onChecked(event)

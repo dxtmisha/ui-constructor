@@ -565,6 +565,13 @@ $designsProperties: (
               ),
             ),
           ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'info':(
             index: 'info',
             name: '&__info',
@@ -579,31 +586,49 @@ $designsProperties: (
               ),
             ),
           ),
-          'loading':(
-            index: 'loading',
-            name: '&__loading',
-            type: 'subclass',
-            value: (
-            ),
-          ),
           'required':(
             index: 'required',
             name: '&--required',
             type: 'state',
             value: (
-              'info':(
-                index: 'info',
-                name: '& .d-checkbox__info',
-                type: 'subclass',
-                value: (
-                  'label':(
-                    index: 'label',
-                    name: '&__label',
-                    type: 'subclass',
-                    value: (
-                    ),
-                  ),
-                ),
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'linkfocus':(
+                index: 'linkfocus',
+                name: '--d-checkbox-linkfocus',
+                type: 'var',
+                value: 'var(--d-checkbox-focus)',
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'linkchecked':(
+                index: 'linkchecked',
+                name: '--d-checkbox-linkchecked',
+                type: 'var',
+                value: 'var(--d-checkbox-checked)',
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'linkdisabled':(
+                index: 'linkdisabled',
+                name: '--d-checkbox-linkdisabled',
+                type: 'var',
+                value: 'var(--d-checkbox-disabled)',
               ),
             ),
           ),
@@ -8234,6 +8259,25 @@ $designsProperties: (
               ),
             ),
           ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: 'padding',
+                type: 'property',
+                value: 'calc(var(--m3-checkbox-comp-padding) + var(--m3-ref-spacing-px) * 3)',
+              ),
+              'color':(
+                index: 'color',
+                name: 'color',
+                type: 'property',
+                value: 'var(--m3-checkbox-comp-icon-color)',
+              ),
+            ),
+          ),
           'info':(
             index: 'info',
             name: '&__info',
@@ -8260,43 +8304,23 @@ $designsProperties: (
               ),
             ),
           ),
-          'loading':(
-            index: 'loading',
-            name: '&__loading',
-            type: 'subclass',
-            value: (
-              'padding':(
-                index: 'padding',
-                name: 'padding',
-                type: 'property',
-                value: 'calc(var(--m3-checkbox-comp-padding) + var(--m3-ref-spacing-px) * 3)',
-              ),
-              'color':(
-                index: 'color',
-                name: 'color',
-                type: 'property',
-                value: 'var(--m3-checkbox-comp-icon-color)',
-              ),
-            ),
-          ),
           'required':(
             index: 'required',
             name: '&--required',
             type: 'state',
             value: (
-              'info':(
-                index: 'info',
-                name: '& .m3-checkbox__info',
-                type: 'subclass',
-                value: (
-                  'label':(
-                    index: 'label',
-                    name: '&__label',
-                    type: 'subclass',
-                    value: (
-                    ),
-                  ),
-                ),
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'linkfocus':(
+                index: 'linkfocus',
+                name: '--m3-checkbox-linkfocus',
+                type: 'var',
+                value: 'var(--m3-checkbox-focus)',
               ),
             ),
           ),

@@ -1,0 +1,22 @@
+@import "../../styles/all";
+
+@mixin mixinFieldMessageToken {
+  // :style [!] System label / Системная метка
+  gap: var(--c2-ot-dimension-50);
+  
+  font-family: var(--c2-ot-typography-fontFamily-base);
+  @include fontSize(#{var(--c2-ot-typography-fontSize-size-enum-13)});
+  font-weight: var(--c2-ot-typography-fontWeight-500);
+  @include lineHeight(#{var(--c2-ot-typography-lineHeight-100)});
+  letter-spacing: var(--c2-ot-typography-tracking-lg);
+  @include textCase(#{var(--c2-ot-typography-textCase-none)});
+  text-decoration: var(--c2-ot-typography-textDecoration-none);
+  @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+  
+  @include color(#{var(--c2-st-content-foreground-color-neutral-secondary)});
+  
+  &--validation {
+    @include color(#{var(--c2-st-content-foreground-color-negative-secondary)});
+  }
+  // :style [!] System label / Системная метка
+}

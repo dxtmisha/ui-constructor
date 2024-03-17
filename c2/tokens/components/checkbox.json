@@ -1,0 +1,85 @@
+{
+  "comp": {
+    "size": "{ot.dimension.150}",
+    "color": "{st.interaction.border.color.neutral.normal}",
+    "required": {
+      "color": "{st.content.foreground.color.negative.secondary}"
+    }
+  },
+  "item": {
+    "color": "{??comp.color}",
+    "icon": {
+      "circle": "{??comp.size}",
+      "background-color": "{st.interaction.background.color.ghost.normal}",
+      "border-radius": "{st.selectable.borderRadius.size.sm}",
+      "border-width": "{ot.dimension.12}",
+      "border-color": "{??comp.color}",
+      "border-style": "solid",
+      "hover": {
+        "background-color": "{st.interaction.background.color.ghost.hover}",
+        "border-color": "{st.interaction.border.color.neutral.hover}"
+      }
+    }
+  },
+  "loading": {
+    "padding": "{ot.dimension.12}"
+  },
+  "focus": {
+    "item": {
+      "icon": {
+        "background-color": "{st.interaction.background.color.ghost.focus}",
+        "box-shadow": "{st.elevation.onLight.focus.md}"
+      }
+    }
+  },
+  "checked": {
+    "comp": {
+      "color": "{st.action.foreground.color.onprimary.normal}"
+    },
+    "item": {
+      "icon": {
+        "background-color": "{st.action.background.color.primary.solid.normal}",
+        "border-opacity": "0",
+        "hover": {
+          "background-color": "{st.action.background.color.primary.solid.hover}"
+        }
+      }
+    }
+  },
+  "disabled": {
+    "opacity": "{ot.opacity.50}"
+  },
+  "size": {
+    "sm": {
+      "comp": {
+        "size": "{ot.dimension.125}"
+      },
+      "gap": "{st.global.distance.space.inline.md}",
+      "info": {
+        "label": {
+          "font": "{st.text.body.sm}"
+        }
+      }
+    },
+    "md": {
+      "gap": "{st.global.distance.space.inline.lg}",
+      "info": {
+        "label": {
+          "font": "{st.text.body.md}"
+        }
+      }
+    },
+    "lg": {
+      "gap": "{st.global.distance.space.inline.xl}",
+      "item": {
+        "padding-top": "{ot.dimension.12}"
+      },
+      "info": {
+        "label": {
+          "font": "{st.text.body.lg}"
+        }
+      }
+    },
+    "_default": "md"
+  }
+}

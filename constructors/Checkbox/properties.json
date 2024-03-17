@@ -6,19 +6,40 @@
     "required": {
       "color": "red"
     },
-    "_type": "var"
+    "_type": "var",
+    "_settingClone": true
   },
   "#input": {},
   "#item": {
-    "#icon": {}
-  },
-  "#info": {
-    "#label": {}
+    "#icon": {
+      "_settingClone": true
+    },
+    "_settingClone": true
   },
   "#loading": {},
-  "~required": {
-    "#info": {
-      "#label": {}
-    }
+  "#info": {
+    "#label": {
+      "_settingClone": true
+    },
+    "_settingClone": true
+  },
+  "focus": {
+    "_type": "none"
+  },
+  "checked": {
+    "_type": "none"
+  },
+  "disabled": {
+    "_type": "none"
+  },
+  "~required": {},
+  "&__input:focus ~ *": {
+    "link:focus": "{??focus}"
+  },
+  "&__input:checked ~ *": {
+    "link:checked": "{??checked}"
+  },
+  "&__input:disabled ~ *": {
+    "link:disabled": "{??disabled}"
   }
 }

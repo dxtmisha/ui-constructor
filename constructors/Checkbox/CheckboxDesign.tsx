@@ -159,9 +159,9 @@ export class CheckboxDesign<
         input: this.getSubClass('input'),
         item: this.getSubClass('item'),
         itemIcon: this.getSubClass('item__icon'),
+        loading: this.getSubClass('loading'),
         info: this.getSubClass('info'),
-        infoLabel: this.getSubClass('info__label'),
-        loading: this.getSubClass('loading')
+        infoLabel: this.getSubClass('info__label')
         // :classes [!] System label / Системная метка
       }
     } as Partial<CLASSES>

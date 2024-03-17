@@ -154,9 +154,7 @@ export class InputEventItem {
    * Проверяет, возможно ли изменение значения.
    */
   protected isEnabled (): boolean {
-    return this.props.loading !== true &&
-      this.props.readonly !== true &&
-      this.props.disabled !== true
+    return this.props?.disabled !== true
   }
 
   /**

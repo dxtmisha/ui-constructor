@@ -1,11 +1,11 @@
-var p = Object.defineProperty;
-var d = (i, s, e) => s in i ? p(i, s, { enumerable: !0, configurable: !0, writable: !0, value: e }) : i[s] = e;
-var t = (i, s, e) => (d(i, typeof s != "symbol" ? s + "" : s, e), e);
-import { computed as r, h as o, defineComponent as M, openBlock as f, createBlock as C, resolveDynamicComponent as v, unref as x } from "vue";
-import { c as F } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { i as c } from "./isFilled-ClO-1E4U.js";
-import { t as l } from "./toNumber-eA5ODeva.js";
-const S = {
+var h = Object.defineProperty;
+var l = (i, s, e) => s in i ? h(i, s, { enumerable: !0, configurable: !0, writable: !0, value: e }) : i[s] = e;
+var t = (i, s, e) => (l(i, typeof s != "symbol" ? s + "" : s, e), e);
+import { computed as r, h as a } from "vue";
+import { c as m } from "./DesignConstructorAbstract-pm1V7i1G.js";
+import { i as o } from "./isFilled-ClO-1E4U.js";
+import { t as u } from "./toNumber-eA5ODeva.js";
+const b = {
   // Status
   disabled: Boolean,
   // Values
@@ -15,7 +15,7 @@ const S = {
   helperMessage: String,
   validationMessage: String
 };
-class b {
+class c {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -37,7 +37,7 @@ class b {
    */
   isValidation() {
     var s;
-    return c((s = this.props) == null ? void 0 : s.validationMessage);
+    return o((s = this.props) == null ? void 0 : s.validationMessage);
   }
   /**
    * Returns text.<br>
@@ -47,11 +47,11 @@ class b {
     var s;
     if (this.isValidation())
       return this.props.validationMessage;
-    if (c((s = this.props) == null ? void 0 : s.helperMessage))
+    if (o((s = this.props) == null ? void 0 : s.helperMessage))
       return this.props.helperMessage;
   }
 }
-class k {
+class d {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -87,7 +87,7 @@ class k {
    */
   getCounter() {
     var s;
-    return l(((s = this.props) == null ? void 0 : s.counter) ?? 0);
+    return u(((s = this.props) == null ? void 0 : s.counter) ?? 0);
   }
   /**
    * Returns the maximum available input number.<br>
@@ -95,10 +95,10 @@ class k {
    */
   getMax() {
     var s;
-    return l(((s = this.props) == null ? void 0 : s.maxlength) ?? 0);
+    return u(((s = this.props) == null ? void 0 : s.maxlength) ?? 0);
   }
 }
-class y {
+class p {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -106,7 +106,7 @@ class y {
   constructor(s) {
     t(this, "message");
     t(this, "counter");
-    this.props = s, this.message = new b(s), this.counter = new k(s);
+    this.props = s, this.message = new c(s), this.counter = new d(s);
   }
   /**
    * Checks if there are values for outputting the element.<br>
@@ -126,7 +126,7 @@ class y {
     };
   }
 }
-class V {
+class M {
   /**
    * Constructor
    * @param props input data /<br>входные данные
@@ -141,21 +141,21 @@ class V {
     t(this, "message", r(() => this.item.message.get()));
     t(this, "counter", r(() => this.item.counter.get()));
     t(this, "classes", r(() => this.item.classes()));
-    this.item = new y(s);
+    this.item = new p(s);
   }
 }
-class _ extends F {
+class F extends m {
   /**
    * Constructor
    * @param name class name /<br>название класса
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(e, n, a) {
+  constructor(e, n, g) {
     super(
       e,
       n,
-      a
+      g
     );
     t(this, "message");
     /**
@@ -164,7 +164,7 @@ class _ extends F {
      */
     t(this, "renderInfo", () => {
       const e = this.setup();
-      return o("div", {
+      return a("div", {
         key: "message",
         class: e.classes.value.info,
         innerHTML: e.message.value
@@ -176,13 +176,13 @@ class _ extends F {
      */
     t(this, "renderCounter", () => {
       const e = this.setup();
-      return o("div", {
+      return a("div", {
         key: "counter",
         class: e.classes.value.counter,
         innerHTML: e.counter.value
       });
     });
-    this.message = new V(n), this.init();
+    this.message = new M(n), this.init();
   }
   /**
    * Initialization of basic options.<br>
@@ -243,7 +243,7 @@ class _ extends F {
   initRender() {
     const e = this.setup(), n = [];
     if (e.isMessage.value && n.push(e.renderInfo()), e.isCounter.value && n.push(e.renderCounter()), e.is.value)
-      return o("div", {
+      return a("div", {
         ...this.getAttrs(),
         ref: this.element,
         key: "main",
@@ -251,35 +251,7 @@ class _ extends F {
       }, n);
   }
 }
-const w = {
-  ...S
-}, I = /* @__PURE__ */ M({
-  name: "M3FieldMessage",
-  __name: "M3FieldMessage",
-  props: { ...w },
-  setup(i, { expose: s, emit: e }) {
-    const n = e, a = i, g = r(() => ({
-      main: {
-        // :classes-values [!] System label / Системная метка
-        "m3-fieldMessage": !0
-        // :classes-values [!] System label / Системная метка
-      }
-    })), h = r(() => ({
-      // :styles-values [!] System label / Системная метка
-      // :styles-values [!] System label / Системная метка
-    })), u = new _(
-      "m3.fieldMessage",
-      a,
-      {
-        emits: n,
-        classes: g,
-        styles: h
-      }
-    ), m = u.render();
-    return s(u.expose()), (B, N) => (f(), C(v(x(m))));
-  }
-}), R = I;
 export {
-  R as M,
-  S as p
+  F,
+  b as p
 };

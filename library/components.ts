@@ -31,6 +31,8 @@ import { C1Image } from '../c1/Image'
 import { C1Progress } from '../c1/Progress'
 import { C1Ripple } from '../c1/Ripple'
 import { C2Button } from '../c2/Button'
+import { C2Checkbox } from '../c2/Checkbox'
+import { C2FieldMessage } from '../c2/FieldMessage'
 import { C2Icon } from '../c2/Icon'
 import { C2Image } from '../c2/Image'
 import { C2Mutation } from '../c2/Mutation'
@@ -67,6 +69,8 @@ export const components = {
   C1Progress,
   C1Ripple,
   C2Button,
+  C2Checkbox,
+  C2FieldMessage,
   C2Icon,
   C2Image,
   C2Mutation,
