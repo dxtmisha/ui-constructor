@@ -54,7 +54,9 @@
       "comp": {
         "size": "{ot.dimension.125}"
       },
-      "gap": "{st.global.distance.space.inline.md}",
+      "body": {
+        "gap": "{st.global.distance.space.inline.md}"
+      },
       "info": {
         "label": {
           "font": "{st.text.body.sm}"
@@ -62,7 +64,9 @@
       }
     },
     "md": {
-      "gap": "{st.global.distance.space.inline.lg}",
+      "body": {
+        "gap": "{st.global.distance.space.inline.lg}"
+      },
       "info": {
         "label": {
           "font": "{st.text.body.md}"
@@ -70,7 +74,9 @@
       }
     },
     "lg": {
-      "gap": "{st.global.distance.space.inline.xl}",
+      "body": {
+        "gap": "{st.global.distance.space.inline.xl}"
+      },
       "item": {
         "padding-top": "{ot.dimension.12}"
       },

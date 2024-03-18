@@ -35,7 +35,9 @@
     &--sm {
       --c2-checkbox-comp-size: var(--c2-ot-dimension-125);
       
-      gap: var(--c2-st-global-distance-space-inline-md);
+      & .c2-checkbox__body {
+        gap: var(--c2-st-global-distance-space-inline-md);
+      }
       
       & .c2-checkbox__info {
         &__label {
@@ -52,7 +54,9 @@
     }
     
     &--md {
-      gap: var(--c2-st-global-distance-space-inline-lg);
+      & .c2-checkbox__body {
+        gap: var(--c2-st-global-distance-space-inline-lg);
+      }
       
       & .c2-checkbox__info {
         &__label {
@@ -69,7 +73,9 @@
     }
     
     &--lg {
-      gap: var(--c2-st-global-distance-space-inline-xl);
+      & .c2-checkbox__body {
+        gap: var(--c2-st-global-distance-space-inline-xl);
+      }
       
       & .c2-checkbox__item {
         padding-top: var(--c2-ot-dimension-12);

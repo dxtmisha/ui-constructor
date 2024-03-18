@@ -15,6 +15,7 @@ import { C2Progress } from '../c2/Progress'
 import { C2Radio } from '../c2/Radio'
 import { C2Ripple } from '../c2/Ripple'
 import { C2Skeleton } from '../c2/Skeleton'
+import { C2Switch } from '../c2/Switch'
 
 export const components = {
   C2Button,
@@ -27,7 +28,8 @@ export const components = {
   C2Progress,
   C2Radio,
   C2Ripple,
-  C2Skeleton
+  C2Skeleton,
+  C2Switch
 }
 
 export const uiC2ComponentsPlugin = {

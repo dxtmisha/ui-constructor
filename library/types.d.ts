@@ -43,5 +43,6 @@ declare module '@vue/runtime-core' {
     C2Radio: typeof components.C2Radio
     C2Ripple: typeof components.C2Ripple
     C2Skeleton: typeof components.C2Skeleton
+    C2Switch: typeof components.C2Switch
   }
 }

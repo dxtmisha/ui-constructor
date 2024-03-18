@@ -15,6 +15,7 @@ export const propsValues = {
 export type PropsToken = {
   // :type [!] System label / Системная метка
   required?: boolean
+  right?: boolean
   size?: 'sm' | 'md' | 'lg'
   focus?: boolean
   disabled?: boolean
@@ -61,6 +62,7 @@ export const propsInstruction = {
   ...{
     // :prop [!] System label / Системная метка
     required: Boolean,
+    right: Boolean,
     size: {
       type: String as PropType<PropsToken['size']>,
       default: defaults?.size

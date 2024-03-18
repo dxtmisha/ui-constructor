@@ -5,6 +5,7 @@ import { type CheckboxProps } from '../Checkbox/props';
  */
 export type RadioProps = CheckboxProps & {
     required?: boolean;
+    right?: boolean;
     focus?: boolean;
     disabled?: boolean;
 };
@@ -19,6 +20,7 @@ export declare const defaultsRadio: RadioProps;
  */
 export declare const propsRadio: {
     required: BooleanConstructor;
+    right: BooleanConstructor;
     focus: BooleanConstructor;
     disabled: BooleanConstructor;
     value: BooleanConstructor;

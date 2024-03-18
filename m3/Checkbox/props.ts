@@ -14,6 +14,7 @@ export const propsValues = {
 export type PropsToken = {
   // :type [!] System label / Системная метка
   required?: boolean
+  right?: boolean
   focus?: boolean
   disabled?: boolean
   // :type [!] System label / Системная метка
@@ -58,6 +59,7 @@ export const propsInstruction = {
   ...{
     // :prop [!] System label / Системная метка
     required: Boolean,
+    right: Boolean,
     focus: Boolean,
     disabled: Boolean
     // :prop [!] System label / Системная метка

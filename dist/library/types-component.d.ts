@@ -149,3 +149,7 @@ declare module 'ui/C2Ripple' {
 declare module 'ui/C2Skeleton' {
   export { C2Skeleton } from 'ui/c2/Skeleton'
 }
+
+declare module 'ui/C2Switch' {
+  export { C2Switch } from 'ui/c2/Switch'
+}

@@ -226,9 +226,6 @@ export class PropertiesToLink extends PropertiesToAbstract {
           data,
           name
         ) as PropertyList
-        if (name === 'linkcheckbox') {
-          console.log('name', name, properties.item?.value, data?.item?.value)
-        }
       })
     }
   }

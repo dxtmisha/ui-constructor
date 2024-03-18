@@ -40,6 +40,7 @@ export type CheckboxSetup =
 
     renderInput: () => VNode
     renderInputHidden: () => VNode
+    renderBody: () => VNode
     renderChecked: () => VNode
     renderInfo: () => VNode
   }
@@ -64,6 +65,7 @@ export type CheckboxClasses = {
   main: ConstrClass
   // :classes [!] System label / Системная метка
   input: string
+  body: string
   item: string
   itemIcon: string
   loading: string

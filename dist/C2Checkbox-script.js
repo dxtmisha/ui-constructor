@@ -1,10 +1,10 @@
-import { defineComponent as u, computed as n, openBlock as l, createBlock as k, resolveDynamicComponent as x, unref as b } from "vue";
-import { i as h } from "./inArray-BLmbg9f_.js";
-import { p as c, d as C, C as f } from "./props-BHZgwoYk.js";
+import { defineComponent as h, computed as n, openBlock as l, createBlock as u, resolveDynamicComponent as k, unref as x } from "vue";
+import { i as b } from "./inArray-BLmbg9f_.js";
+import { p as c, d as C, C as f } from "./props-DTzsiaKN.js";
 import { C2Image as g } from "./C2Image.js";
 import { C2Progress as z } from "./C2Progress.js";
 import { C2FieldMessage as y } from "./C2FieldMessage.js";
-const I = {
+const B = {
   // :values [!] System label / Системная метка
   size: ["sm", "md", "lg"]
   // :values [!] System label / Системная метка
@@ -14,7 +14,7 @@ const I = {
   iconIndeterminate: "minus-md",
   // :default [!] System label / Системная метка
   size: "md"
-}, _ = {
+}, I = {
   ...c,
   iconCheckbox: {
     type: c.iconCheckbox,
@@ -26,24 +26,26 @@ const I = {
   },
   // :prop [!] System label / Системная метка
   required: Boolean,
+  right: Boolean,
   size: {
     type: String,
     default: o == null ? void 0 : o.size
   },
   focus: Boolean,
   disabled: Boolean
-}, B = /* @__PURE__ */ u({
+}, _ = /* @__PURE__ */ h({
   name: "C2Checkbox",
   __name: "C2Checkbox",
-  props: { ..._ },
+  props: { ...I },
   emits: ["input", "update:value", "update:modelValue", "change"],
   setup(t, { expose: i, emit: r }) {
-    const m = r, e = t, a = n(() => ({
+    const a = r, e = t, m = n(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "c2-checkbox": !0,
         "c2-checkbox--required": e.required,
-        [`c2-checkbox--size--${e.size}`]: h(I.size, e.size),
+        "c2-checkbox--right": e.right,
+        [`c2-checkbox--size--${e.size}`]: b(B.size, e.size),
         "c2-checkbox--focus": e.focus,
         "c2-checkbox--disabled": e.disabled
         // :classes-values [!] System label / Системная метка
@@ -55,19 +57,19 @@ const I = {
       "c2.checkbox",
       e,
       {
-        emits: m,
+        emits: a,
         components: {
           icon: g,
           progress: z,
           message: y
         },
-        classes: a,
+        classes: m,
         styles: p
       }
     ), d = s.render();
-    return i(s.expose()), (q, v) => (l(), k(x(b(d))));
+    return i(s.expose()), (q, v) => (l(), u(k(x(d))));
   }
-}), M = B;
+}), M = _;
 export {
   M as C2Checkbox
 };

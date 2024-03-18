@@ -24,6 +24,7 @@ export type CheckboxSetup = InputSetup<boolean> & {
     classesSkeleton: SkeletonClassesList;
     renderInput: () => VNode;
     renderInputHidden: () => VNode;
+    renderBody: () => VNode;
     renderChecked: () => VNode;
     renderInfo: () => VNode;
 };
@@ -44,6 +45,7 @@ export type CheckboxSlots = InputSlots;
 export type CheckboxClasses = {
     main: ConstrClass;
     input: string;
+    body: string;
     item: string;
     itemIcon: string;
     loading: string;

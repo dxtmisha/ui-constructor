@@ -16,6 +16,7 @@ export type RadioProps =
     // Tokens
     // :type [!] System label / Системная метка
     required?: boolean
+    right?: boolean
     focus?: boolean
     disabled?: boolean
     // :type [!] System label / Системная метка
@@ -45,6 +46,7 @@ export const propsRadio = {
   ...{
     // :prop [!] System label / Системная метка
     required: Boolean,
+    right: Boolean,
     focus: Boolean,
     disabled: Boolean
     // :prop [!] System label / Системная метка

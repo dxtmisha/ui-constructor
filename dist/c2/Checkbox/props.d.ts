@@ -5,6 +5,7 @@ export declare const propsValues: {
 };
 export type PropsToken = {
     required?: boolean;
+    right?: boolean;
     size?: 'sm' | 'md' | 'lg';
     focus?: boolean;
     disabled?: boolean;
@@ -21,6 +22,7 @@ export type Props = PropsToken & Omit<CheckboxProps, keyof PropsToken>;
 export declare const defaults: Props;
 export declare const propsInstruction: {
     required: BooleanConstructor;
+    right: BooleanConstructor;
     size: {
         type: PropType<"sm" | "md" | "lg" | undefined>;
         default: "sm" | "md" | "lg" | undefined;

@@ -551,6 +551,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -589,6 +596,13 @@ $designsProperties: (
           'required':(
             index: 'required',
             name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
             type: 'state',
             value: (
             ),
@@ -1001,6 +1015,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -1039,6 +1060,13 @@ $designsProperties: (
           'required':(
             index: 'required',
             name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
             type: 'state',
             value: (
             ),
@@ -1199,6 +1227,173 @@ $designsProperties: (
             name: '&--borderVariant',
             type: 'state',
             value: (
+            ),
+          ),
+        ),
+      ),
+      'switch':(
+        index: 'switch',
+        name: 'd-switch',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--d-switch-comp-required-color',
+                    type: 'var',
+                    value: 'red',
+                  ),
+                ),
+              ),
+              'width':(
+                index: 'width',
+                name: '--d-switch-comp-width',
+                type: 'var',
+                value: 34px,
+              ),
+              'height':(
+                index: 'height',
+                name: '--d-switch-comp-height',
+                type: 'var',
+                value: 16px,
+              ),
+              'item':(
+                index: 'item',
+                name: 'item',
+                type: 'var',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--d-switch-comp-item-width',
+                    type: 'var',
+                    value: 40px,
+                  ),
+                  'height':(
+                    index: 'height',
+                    name: '--d-switch-comp-item-height',
+                    type: 'var',
+                    value: 40px,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'track':(
+            index: 'track',
+            name: '&__track',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
+            type: 'state',
+            value: (
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'linkfocus':(
+                index: 'linkfocus',
+                name: '--d-switch-linkfocus',
+                type: 'var',
+                value: 'var(--d-switch-focus)',
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'linkchecked':(
+                index: 'linkchecked',
+                name: '--d-switch-linkchecked',
+                type: 'var',
+                value: 'var(--d-switch-checked)',
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'linkdisabled':(
+                index: 'linkdisabled',
+                name: '--d-switch-linkdisabled',
+                type: 'var',
+                value: 'var(--d-switch-disabled)',
+              ),
             ),
           ),
         ),
@@ -8165,6 +8360,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -8436,6 +8638,13 @@ $designsProperties: (
           'required':(
             index: 'required',
             name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
             type: 'state',
             value: (
             ),

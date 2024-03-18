@@ -183,5 +183,9 @@ export default defineNuxtModule({
       name: 'C2Skeleton',
       filePath: 'ui/dist/C2Skeleton.vue'
     })
+    await addComponent({
+      name: 'C2Switch',
+      filePath: 'ui/dist/C2Switch.vue'
+    })
   }
 })

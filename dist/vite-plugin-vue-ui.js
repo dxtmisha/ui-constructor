@@ -267,6 +267,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     design: "c2",
     code: "c2-skeleton",
     path: "c2/Skeleton"
+  },
+  {
+    name: "C2Switch",
+    design: "c2",
+    code: "c2-switch",
+    path: "c2/Switch"
   }
 ], x = {
   m2: [

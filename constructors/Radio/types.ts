@@ -46,6 +46,7 @@ export type RadioClasses = {
   main: ConstrClass
   // :classes [!] System label / Системная метка
   input: string
+  body: string
   item: string
   itemIcon: string
   loading: string

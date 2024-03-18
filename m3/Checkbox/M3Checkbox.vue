@@ -37,6 +37,7 @@ const classesToken = computed<ConstrClasses>(() => ({
     // :classes-values [!] System label / Системная метка
     'm3-checkbox': true,
     'm3-checkbox--required': props.required,
+    'm3-checkbox--right': props.right,
     'm3-checkbox--focus': props.focus,
     'm3-checkbox--disabled': props.disabled
     // :classes-values [!] System label / Системная метка

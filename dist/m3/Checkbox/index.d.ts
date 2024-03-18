@@ -1,6 +1,7 @@
 export declare const M3Checkbox: {
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         focus: BooleanConstructor;
         disabled: BooleanConstructor;
         iconCheckbox: {
@@ -64,6 +65,7 @@ export declare const M3Checkbox: {
         "update:modelValue": (value: any) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         focus: BooleanConstructor;
         disabled: BooleanConstructor;
         iconCheckbox: {
@@ -117,6 +119,7 @@ export declare const M3Checkbox: {
         "onUpdate:value"?: ((value: any) => any) | undefined;
         "onUpdate:modelValue"?: ((value: any) => any) | undefined;
     }, {
+        right: boolean;
         focus: boolean;
         value: boolean;
         indeterminate: boolean;
@@ -140,6 +143,7 @@ export declare const M3Checkbox: {
         Defaults: {};
     }, Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         focus: BooleanConstructor;
         disabled: BooleanConstructor;
         iconCheckbox: {
@@ -197,6 +201,7 @@ export declare const M3Checkbox: {
         checkValidity: () => boolean;
         validationMessage: import("vue").ShallowRef<string>;
     }, {}, {}, {}, {
+        right: boolean;
         focus: boolean;
         value: boolean;
         indeterminate: boolean;
@@ -217,6 +222,7 @@ export declare const M3Checkbox: {
     __isSuspense?: undefined;
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
     required: BooleanConstructor;
+    right: BooleanConstructor;
     focus: BooleanConstructor;
     disabled: BooleanConstructor;
     iconCheckbox: {
@@ -279,6 +285,7 @@ export declare const M3Checkbox: {
     "update:value": (value: any) => void;
     "update:modelValue": (value: any) => void;
 }, string, {
+    right: boolean;
     focus: boolean;
     value: boolean;
     indeterminate: boolean;

@@ -1,7 +1,4 @@
 {
-  "inset": {
-    "_type": "var"
-  },
   "comp": {
     "required": {
       "color": "red"
@@ -10,6 +7,9 @@
     "_settingClone": true
   },
   "#input": {},
+  "#body": {
+    "_settingClone": true
+  },
   "#item": {
     "#icon": {
       "_settingClone": true
@@ -33,6 +33,7 @@
     "_type": "none"
   },
   "~required": {},
+  "~right": {},
   "&__input:focus ~ *": {
     "link:focus": "{??focus}"
   },

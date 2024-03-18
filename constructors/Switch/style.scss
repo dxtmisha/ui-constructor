@@ -1,0 +1,86 @@
+@import "../../styles/properties";
+
+@mixin mixinSwitch {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__body {
+    display: inline-flex;
+    align-items: flex-start;
+
+    transition-timing-function: linear;
+    transition-duration: v('d.sys.transitionDuration.sm');
+    transition-property: background-color, border-color, opacity, transform;
+  }
+
+  &__track {
+    width: v('??comp.width');
+    height: v('??comp.height');
+
+    transition: inherit;
+  }
+
+  &__item {
+    @include flexCenter;
+    position: relative;
+
+    width: v('??comp.item.width');
+    height: v('??comp.item.height');
+
+    border-radius: 100%;
+
+    transform: translate(
+                    calc(#{(v('??comp.height') / 2) - (v('??comp.item.width') / 2)}),
+                    calc(#{(v('??comp.height') / 2) - (v('??comp.item.height') / 2)})
+    );
+    transition: inherit;
+
+    &__icon {
+      box-sizing: border-box;
+      @include flexCenter;
+      position: relative;
+
+      transition: inherit;
+    }
+  }
+
+  &__info {
+    &__label {
+      display: block;
+    }
+  }
+
+  input:checked ~ * {
+    @include subclass('item') {
+      transform: translate(
+                      calc(#{(v('??comp.width') - v('??comp.height') / 2) - (v('??comp.item.width') / 2)}),
+                      calc(#{(v('??comp.height') / 2) - (v('??comp.item.height') / 2)})
+      );
+    }
+  }
+
+  &--required {
+    @include subclass('info') {
+      &__label {
+        &:after {
+          content: "*";
+          @include color(v('??comp.required.color'));
+        }
+      }
+    }
+  }
+
+  &--right {
+    @include subclass('track') {
+      order: 4;
+    }
+
+    @include subclass('info') {
+      order: 2;
+    }
+  }
+}

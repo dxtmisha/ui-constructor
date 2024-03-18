@@ -227,6 +227,7 @@ export declare const components: {
     M3Checkbox: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             required: BooleanConstructor;
+            right: BooleanConstructor;
             focus: BooleanConstructor;
             disabled: BooleanConstructor;
             iconCheckbox: {
@@ -290,6 +291,7 @@ export declare const components: {
             "update:modelValue": (value: any) => void;
         }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             required: BooleanConstructor;
+            right: BooleanConstructor;
             focus: BooleanConstructor;
             disabled: BooleanConstructor;
             iconCheckbox: {
@@ -343,6 +345,7 @@ export declare const components: {
             "onUpdate:value"?: ((value: any) => any) | undefined;
             "onUpdate:modelValue"?: ((value: any) => any) | undefined;
         }, {
+            right: boolean;
             focus: boolean;
             value: boolean;
             indeterminate: boolean;
@@ -366,6 +369,7 @@ export declare const components: {
             Defaults: {};
         }, Readonly<import("vue").ExtractPropTypes<{
             required: BooleanConstructor;
+            right: BooleanConstructor;
             focus: BooleanConstructor;
             disabled: BooleanConstructor;
             iconCheckbox: {
@@ -423,6 +427,7 @@ export declare const components: {
             checkValidity: () => boolean;
             validationMessage: import("vue").ShallowRef<string>;
         }, {}, {}, {}, {
+            right: boolean;
             focus: boolean;
             value: boolean;
             indeterminate: boolean;
@@ -443,6 +448,7 @@ export declare const components: {
         __isSuspense?: undefined;
     } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         focus: BooleanConstructor;
         disabled: BooleanConstructor;
         iconCheckbox: {
@@ -505,6 +511,7 @@ export declare const components: {
         "update:value": (value: any) => void;
         "update:modelValue": (value: any) => void;
     }, string, {
+        right: boolean;
         focus: boolean;
         value: boolean;
         indeterminate: boolean;

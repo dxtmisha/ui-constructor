@@ -1,6 +1,7 @@
 export declare const C2Radio: {
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         size: {
             type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
             default: "sm" | "md" | "lg" | undefined;
@@ -68,6 +69,7 @@ export declare const C2Radio: {
         "update:modelValue": (value: any) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         size: {
             type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
             default: "sm" | "md" | "lg" | undefined;
@@ -125,6 +127,7 @@ export declare const C2Radio: {
         "onUpdate:value"?: ((value: any) => any) | undefined;
         "onUpdate:modelValue"?: ((value: any) => any) | undefined;
     }, {
+        right: boolean;
         size: "sm" | "md" | "lg" | undefined;
         focus: boolean;
         value: boolean;
@@ -149,6 +152,7 @@ export declare const C2Radio: {
         Defaults: {};
     }, Readonly<import("vue").ExtractPropTypes<{
         required: BooleanConstructor;
+        right: BooleanConstructor;
         size: {
             type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
             default: "sm" | "md" | "lg" | undefined;
@@ -210,6 +214,7 @@ export declare const C2Radio: {
         checkValidity: () => boolean;
         validationMessage: import("vue").ShallowRef<string>;
     }, {}, {}, {}, {
+        right: boolean;
         size: "sm" | "md" | "lg" | undefined;
         focus: boolean;
         value: boolean;
@@ -231,6 +236,7 @@ export declare const C2Radio: {
     __isSuspense?: undefined;
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
     required: BooleanConstructor;
+    right: BooleanConstructor;
     size: {
         type: import("vue").PropType<"sm" | "md" | "lg" | undefined>;
         default: "sm" | "md" | "lg" | undefined;
@@ -297,6 +303,7 @@ export declare const C2Radio: {
     "update:value": (value: any) => void;
     "update:modelValue": (value: any) => void;
 }, string, {
+    right: boolean;
     size: "sm" | "md" | "lg" | undefined;
     focus: boolean;
     value: boolean;

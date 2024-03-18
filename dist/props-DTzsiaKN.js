@@ -1,12 +1,12 @@
 var x = Object.defineProperty;
-var I = (i, e, t) => e in i ? x(i, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[e] = t;
-var n = (i, e, t) => (I(i, typeof e != "symbol" ? e + "" : e, t), t);
-import { shallowRef as u, watchEffect as d, computed as C, h as o } from "vue";
-import { S as y } from "./Skeleton-u-yv2rzv.js";
+var y = (i, e, t) => e in i ? x(i, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[e] = t;
+var a = (i, e, t) => (y(i, typeof e != "symbol" ? e + "" : e, t), t);
+import { shallowRef as u, watchEffect as d, computed as I, h } from "vue";
+import { S as C } from "./Skeleton-u-yv2rzv.js";
 import { g as B, c as M } from "./DesignConstructorAbstract-pm1V7i1G.js";
-import { i as v } from "./isArray-QlWcxgml.js";
+import { i as f } from "./isArray-QlWcxgml.js";
 import { i as p } from "./isFilled-ClO-1E4U.js";
-import { a as b } from "./toArray-J4lAhJG7.js";
+import { a as v } from "./toArray-J4lAhJG7.js";
 import { g as S } from "./getBind-CgHMfjrB.js";
 import { u as k } from "./useInputCheck-DS0d910p.js";
 import { d as E, c as V, e as w } from "./useEnabled-BTR3ciPG.js";
@@ -22,8 +22,8 @@ class R {
    * объект для работы с проверкой по регулярным выражениям
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e, t, s, a) {
-    this.props = e, this.element = t, this.type = s, this.pattern = a;
+  constructor(e, t, s, n) {
+    this.props = e, this.element = t, this.type = s, this.pattern = n;
   }
   /**
    * Returns the input element.<br>
@@ -47,18 +47,18 @@ class R {
    * Возвращает данные для проверки.
    */
   getPattern() {
-    var e, t, s, a, r, h, c, l, m, f;
+    var e, t, s, n, r, o, c, l, m, b;
     return {
       name: (e = this.props) == null ? void 0 : e.name,
       type: (t = this.type) == null ? void 0 : t.get(),
       required: (s = this.props) == null ? void 0 : s.required,
-      pattern: (a = this.pattern) == null ? void 0 : a.get(),
+      pattern: (n = this.pattern) == null ? void 0 : n.get(),
       step: (r = this.props) == null ? void 0 : r.step,
-      min: (h = this.props) == null ? void 0 : h.min,
+      min: (o = this.props) == null ? void 0 : o.min,
       max: (c = this.props) == null ? void 0 : c.max,
       minlength: (l = this.props) == null ? void 0 : l.minlength,
       maxlength: (m = this.props) == null ? void 0 : m.maxlength,
-      ...((f = this.props) == null ? void 0 : f.input) ?? {}
+      ...((b = this.props) == null ? void 0 : b.input) ?? {}
     };
   }
   /**
@@ -67,10 +67,10 @@ class R {
    * @param nameSelectors element name or selector /<br>название элемента или селектор
    */
   findByName(e) {
-    var a;
+    var n;
     if (e instanceof Element)
       return e;
-    const t = (a = this.get()) == null ? void 0 : a.form;
+    const t = (n = this.get()) == null ? void 0 : n.form;
     if (t) {
       const r = t.querySelector(`[name="${e}"]`);
       if (r)
@@ -116,7 +116,7 @@ class q extends R {
 }
 class D {
   constructor() {
-    n(this, "change", !1);
+    a(this, "change", !1);
   }
   /**
    * Returns values.<br>
@@ -157,10 +157,10 @@ class F {
    * @param callback callback function /<br>функция обратного вызова
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e, t, s, a) {
-    n(this, "value");
-    n(this, "valueIs", !1);
-    this.props = e, this.element = t, this.change = s, this.callback = a, this.value = this.getOriginal();
+  constructor(e, t, s, n) {
+    a(this, "value");
+    a(this, "valueIs", !1);
+    this.props = e, this.element = t, this.change = s, this.callback = n, this.value = this.getOriginal();
   }
   /**
    * Checks if there are any values.<br>
@@ -184,7 +184,7 @@ class F {
   getString() {
     var t;
     const e = this.get();
-    return v(e) ? e.join(", ") : b(e) ? JSON.stringify(e) : e === !0 ? "1" : e === !1 ? "0" : p(e) ? ((t = e == null ? void 0 : e.toString) == null ? void 0 : t.call(e)) ?? "" : "";
+    return f(e) ? e.join(", ") : v(e) ? JSON.stringify(e) : e === !0 ? "1" : e === !1 ? "0" : p(e) ? ((t = e == null ? void 0 : e.toString) == null ? void 0 : t.call(e)) ?? "" : "";
   }
   /**
    * Returns the current value, converted to a number.<br>
@@ -214,7 +214,7 @@ class F {
    */
   getLength() {
     const e = this.get();
-    return v(e) ? e.length : b(e) ? Object.keys(e).length : this.getString().length ?? 0;
+    return f(e) ? e.length : v(e) ? Object.keys(e).length : this.getString().length ?? 0;
   }
   /**
    * Changes the value.<br>
@@ -335,9 +335,9 @@ class L {
       if (typeof t == "string")
         return t;
       {
-        const a = this.getIndex(e);
-        if (a && a in t)
-          return t[a];
+        const n = this.getIndex(e);
+        if (n && n in t)
+          return t[n];
       }
     }
   }
@@ -364,12 +364,12 @@ class j {
    * @param callback callback function /<br>функция обратного вызова
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e, t, s, a, r, h, c) {
-    n(this, "item");
-    n(this, "validation");
-    n(this, "cache");
-    n(this, "cacheValue");
-    this.props = e, this.element = t, this.change = s, this.value = a, this.code = r, this.match = h, this.callback = c, this.item = k(this.element.getPattern());
+  constructor(e, t, s, n, r, o, c) {
+    a(this, "item");
+    a(this, "validation");
+    a(this, "cache");
+    a(this, "cacheValue");
+    this.props = e, this.element = t, this.change = s, this.value = n, this.code = r, this.match = o, this.callback = c, this.item = k(this.element.getPattern());
   }
   /**
    * Checks if there is an error.<br>
@@ -461,8 +461,8 @@ class A {
    * @param callbackEmit the function is called when an event is triggered /<br>функция вызывается, когда срабатывает событие
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(e, t, s, a, r) {
-    this.props = e, this.change = t, this.value = s, this.validation = a, this.callbackEmit = r;
+  constructor(e, t, s, n, r) {
+    this.props = e, this.change = t, this.value = s, this.validation = n, this.callbackEmit = r;
   }
   /**
    * Call of data change event.<br>
@@ -571,14 +571,14 @@ class H {
    * @param callback callback function /<br>функция обратного вызова
    * @param callbackEmit the function is called when an event is triggered /<br>функция вызывается, когда срабатывает событие
    */
-  constructor(e, t, s, a) {
-    n(this, "element");
-    n(this, "change");
-    n(this, "value");
-    n(this, "icon");
-    n(this, "code");
-    n(this, "validation");
-    n(this, "event");
+  constructor(e, t, s, n) {
+    a(this, "element");
+    a(this, "change");
+    a(this, "value");
+    a(this, "icon");
+    a(this, "code");
+    a(this, "validation");
+    a(this, "event");
     this.element = new q(
       e,
       t
@@ -603,7 +603,7 @@ class H {
       this.change,
       this.value,
       this.validation,
-      a
+      n
     );
   }
   /**
@@ -623,12 +623,12 @@ class N {
    */
   // eslint-disable-next-line no-useless-constructor
   constructor(e, t, s) {
-    n(this, "checkbox");
-    n(this, "value", u(!1));
-    n(this, "iconBind", u({}));
-    n(this, "checkValidity");
-    n(this, "validationMessage", u(""));
-    n(this, "onInput", (e) => {
+    a(this, "checkbox");
+    a(this, "value", u(!1));
+    a(this, "iconBind", u({}));
+    a(this, "checkValidity");
+    a(this, "validationMessage", u(""));
+    a(this, "onInput", (e) => {
       switch (e.target.type) {
         case "checkbox":
           this.checkbox.event.onChecked(e);
@@ -660,7 +660,7 @@ const _ = {
   helperMessage: g.helperMessage,
   validationMessage: g.validationMessage
 }, T = function(i, e, t) {
-  const s = C(() => ({
+  const s = I(() => ({
     disabled: i == null ? void 0 : i.disabled,
     counter: i == null ? void 0 : i.counter,
     maxlength: i == null ? void 0 : i.maxlength,
@@ -670,12 +670,12 @@ const _ = {
   return {
     messageBind: s,
     renderFieldMessage() {
-      const a = [];
+      const n = [];
       return e && e.renderAdd(
-        a,
+        n,
         "message",
         s.value
-      ), a;
+      ), n;
     }
   };
 };
@@ -686,98 +686,110 @@ class te extends M {
    * @param props properties /<br>свойства
    * @param options list of additional parameters /<br>список дополнительных параметров
    */
-  constructor(t, s, a) {
+  constructor(t, s, n) {
     super(
       t,
       s,
-      a
+      n
     );
-    n(this, "checkbox");
-    n(this, "classesSkeleton");
-    n(this, "type", "checkbox");
-    /**
-     * Rendering of the main input.<br>
-     * Рендеринг главного input.
-     */
-    n(this, "renderInput", () => {
-      var s;
-      const t = this.setup();
-      return o("input", {
-        class: t.classes.value.input,
-        name: this.props.name,
-        type: this.type,
-        checked: t.value.value,
-        readonly: this.props.readonly,
-        disabled: t.isDisabled.value,
-        value: ((s = this.props) == null ? void 0 : s.valueVariant) ?? "1",
-        on: this.props.on,
-        onInput: t.onInput
-      });
-    });
-    /**
-     * Rendering of the hidden input.<br>
-     * Рендеринг скрытого input.
-     */
-    n(this, "renderInputHidden", () => o("input", {
-      name: this.props.name,
-      type: "hidden",
-      value: "0"
-    }));
-    /**
-     * Rendering of the checkbox element.<br>
-     * Рендеринг элемента checkbox.
-     */
-    n(this, "renderChecked", () => {
-      const t = this.setup(), s = [
-        t.renderProgress(),
-        o("span", {
-          class: [
-            t.classes.value.itemIcon,
-            t.classesSkeleton.classBackgroundVariant
-          ]
-        }, [
-          this.components.renderOne(
-            "icon",
-            t.iconBind.value
-          )
-        ])
-      ];
-      return this.components.renderAdd(
-        s,
-        "ripple",
-        {
-          disabled: t.isDisabled.value
-        }
-      ), o("span", {
-        class: t.classes.value.item
-      }, s);
-    });
-    /**
-     * Rendering of the informational text element.<br>
-     * Рендеринг элемента информационного текста.
-     */
-    n(this, "renderInfo", () => {
-      const t = this.setup(), s = [
-        ...t.renderLabel(),
-        ...t.renderFieldMessage()
-      ];
-      return o("span", {
-        class: t.classes.value.info
-      }, s);
-    });
+    a(this, "checkbox");
+    a(this, "classesSkeleton");
+    a(this, "type", "checkbox");
     this.checkbox = new N(
       s,
       this.element,
-      (r, h, c) => {
+      (r, o, c) => {
         var l;
         (l = this.emits) == null || l.call(
           this,
           r,
-          h,
+          o,
           c
         );
       }
-    ), this.classesSkeleton = y.getClassesListByDesign(this.name[0]), this.init();
+    ), this.classesSkeleton = C.getClassesListByDesign(this.name[0]), this.init();
+  }
+  /**
+   * Rendering of the main input.<br>
+   * Рендеринг главного input.
+   */
+  renderInput() {
+    var s;
+    const t = this.setup();
+    return h("input", {
+      class: t.classes.value.input,
+      name: this.props.name,
+      type: this.type,
+      checked: t.value.value,
+      readonly: this.props.readonly,
+      disabled: t.isDisabled.value,
+      value: ((s = this.props) == null ? void 0 : s.valueVariant) ?? "1",
+      on: this.props.on,
+      onInput: t.onInput
+    });
+  }
+  /**
+   * Rendering of the hidden input.<br>
+   * Рендеринг скрытого input.
+   */
+  renderInputHidden() {
+    return h("input", {
+      name: this.props.name,
+      type: "hidden",
+      value: "0"
+    });
+  }
+  /**
+   * Rendering of the main body.<br>
+   * Рендеринг главного body.
+   */
+  renderBody() {
+    const t = this.setup(), s = [t.renderChecked()];
+    return t.isLabel.value && s.push(t.renderInfo()), h("span", {
+      class: t.classes.value.body
+    }, s);
+  }
+  /**
+   * Rendering of the checkbox element.<br>
+   * Рендеринг элемента checkbox.
+   */
+  renderChecked() {
+    const t = this.setup(), s = [
+      t.renderProgress(),
+      h("span", {
+        class: [
+          t.classes.value.itemIcon,
+          t.classesSkeleton.classBackgroundVariant
+        ]
+      }, [
+        this.components.renderOne(
+          "icon",
+          t.iconBind.value
+        )
+      ])
+    ];
+    return this.components.renderAdd(
+      s,
+      "ripple",
+      {
+        disabled: t.isDisabled.value
+      }
+    ), h("span", {
+      class: t.classes.value.item
+    }, s);
+  }
+  /**
+   * Rendering of the informational text element.<br>
+   * Рендеринг элемента информационного текста.
+   */
+  renderInfo() {
+    const t = this.setup(), s = [
+      ...t.renderLabel(),
+      ...t.renderFieldMessage()
+    ];
+    return h("span", {
+      class: t.classes.value.info
+    }, s);
   }
   /**
    * Initialization of basic options.<br>
@@ -796,10 +808,11 @@ class te extends M {
       iconBind: this.checkbox.iconBind,
       checkValidity: this.checkbox.checkValidity,
       validationMessage: this.checkbox.validationMessage,
-      renderInput: this.renderInput,
-      renderInputHidden: this.renderInputHidden,
-      renderChecked: this.renderChecked,
-      renderInfo: this.renderInfo,
+      renderInput: () => this.renderInput(),
+      renderInputHidden: () => this.renderInputHidden(),
+      renderBody: () => this.renderBody(),
+      renderChecked: () => this.renderChecked(),
+      renderInfo: () => this.renderInfo(),
       onInput: this.checkbox.onInput,
       ...E(
         this.props,
@@ -849,6 +862,7 @@ class te extends M {
       main: {},
       // :classes [!] System label / Системная метка
       input: this.getSubClass("input"),
+      body: this.getSubClass("body"),
       item: this.getSubClass("item"),
       itemIcon: this.getSubClass("item__icon"),
       loading: this.getSubClass("loading"),
@@ -871,9 +885,9 @@ class te extends M {
     const t = this.setup(), s = [
       t.renderInputHidden(),
       t.renderInput(),
-      t.renderChecked()
+      t.renderBody()
     ];
-    return t.isLabel.value && s.push(t.renderInfo()), o("label", {
+    return h("label", {
       ...this.getAttrs(),
       ref: this.element,
       class: t.classes.value.main
@@ -893,6 +907,7 @@ const se = {}, ie = {
   iconIndeterminate: String,
   // :prop [!] System label / Системная метка
   required: Boolean,
+  right: Boolean,
   focus: Boolean,
   disabled: Boolean
 };

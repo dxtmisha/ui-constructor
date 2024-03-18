@@ -1,0 +1,77 @@
+@import "../../styles/all";
+
+@mixin mixinSwitchToken {
+  // :style [!] System label / Системная метка
+  --c2-switch-comp-required-color: var(--c2-st-content-foreground-color-negative-secondary);
+  --c2-switch-comp-width: var(--c2-ot-dimension-350);
+  --c2-switch-comp-height: var(--c2-ot-dimension-200);
+  --c2-switch-comp-item-width: var(--c2-ot-dimension-175);
+  --c2-switch-comp-item-height: var(--c2-ot-dimension-175);
+  
+  &__body {
+    gap: var(--c2-st-global-distance-space-inline-xl);
+  }
+  
+  &__item {
+    &__icon {
+      @include width(#{100%});
+      @include height(#{100%});
+      
+      @include backgroundColor(#{var(--c2-st-action-foreground-color-onprimary-normal)});
+      
+      border-radius: var(--c2-st-selectable-borderRadius-size-pill);
+      
+      box-shadow: var(--c2-st-elevation-onLight-down-xs);
+    }
+  }
+  
+  &__loading {
+    padding: var(--c2-ot-dimension-12);
+  }
+  
+  &__info {
+    &__label {
+      padding-top: var(--c2-ot-dimension-12);
+      
+      font-family: var(--c2-ot-typography-fontFamily-base);
+      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-112)});
+      font-weight: var(--c2-ot-typography-fontWeight-400);
+      @include lineHeight(#{var(--c2-ot-typography-lineHeight-175)});
+      letter-spacing: var(--c2-ot-typography-tracking-lg);
+      @include textCase(#{var(--c2-ot-typography-textCase-none)});
+      text-decoration: var(--c2-ot-typography-textDecoration-none);
+      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+    }
+  }
+  
+  &__track {
+    @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-hover)});
+    
+    border-radius: var(--c2-st-selectable-borderRadius-size-pill);
+    
+    @include hover('.c2-switch') {
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-active)});
+    }
+  }
+  
+  &__input:focus ~ * {
+    & .c2-switch__track {
+      box-shadow: var(--c2-st-elevation-onLight-focus-md);
+    }
+  }
+  
+  &__input:checked ~ * {
+    & .c2-switch__track {
+      @include backgroundColor(#{var(--c2-st-action-background-color-primary-solid-normal)});
+      
+      @include hover('.c2-switch') {
+        @include backgroundColor(#{var(--c2-st-action-background-color-primary-solid-hover)});
+      }
+    }
+  }
+  
+  &__input:disabled ~ * {
+    opacity: var(--c2-ot-opacity-50);
+  }
+  // :style [!] System label / Системная метка
+}

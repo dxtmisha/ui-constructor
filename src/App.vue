@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { C2Checkbox } from '../c2/Checkbox'
-import { C2Radio } from '../c2/Radio'
+import { C2Switch } from '../c2/Switch'
 
 const checkbox = ref()
 const loading = ref(false)
@@ -17,7 +16,7 @@ const onInput = (_: Event, value: any) => {
     <div>
       <input v-model="v">
       {{ v }}
-      <c2-radio
+      <c2-switch
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -27,7 +26,7 @@ const onInput = (_: Event, value: any) => {
         :validation-message="v"
         @input="onInput"
       />
-      <c2-radio
+      <c2-switch
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -36,7 +35,7 @@ const onInput = (_: Event, value: any) => {
         required
         @input="onInput"
       />
-      <c2-radio
+      <c2-switch
         :loading="loading"
         ref="checkbox"
         name="test"
@@ -47,16 +46,17 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         name="test"
         label="Label"
         required
         size="sm"
+        icon="arrow-right-lg"
         helper-message="helper message"
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         name="test"
         label="Label"
         required
@@ -65,7 +65,7 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         name="test"
         label="Label"
         required
@@ -74,7 +74,7 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         :loading="loading"
         name="test"
         label="Readonly"
@@ -84,7 +84,7 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         :loading="loading"
         name="test"
         label="Disabled"
@@ -93,7 +93,7 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         :loading="loading"
         name="test"
         label="Disabled"
@@ -103,7 +103,7 @@ const onInput = (_: Event, value: any) => {
       />
     </div>
     <div>
-      <c2-checkbox
+      <c2-switch
         comp
         loading
         label="Label"

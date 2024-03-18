@@ -36,6 +36,7 @@ const classesToken = computed<ConstrClasses>(() => ({
     // :classes-values [!] System label / Системная метка
     'c2-checkbox': true,
     'c2-checkbox--required': props.required,
+    'c2-checkbox--right': props.right,
     [`c2-checkbox--size--${props.size}`]: inArray(propsValues.size, props.size),
     'c2-checkbox--focus': props.focus,
     'c2-checkbox--disabled': props.disabled

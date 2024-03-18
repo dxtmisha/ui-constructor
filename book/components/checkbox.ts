@@ -76,7 +76,16 @@ export const checkboxArgs = (iconsValue: any = image): StorybookArgs => {
 
     // Message
     helperMessage: fieldMessageArgs.helperMessage,
-    validationMessage: fieldMessageArgs.validationMessage
+    validationMessage: fieldMessageArgs.validationMessage,
+
+    // Style
+    right: {
+      control: StorybookControl.boolean,
+      table: {
+        category: StorybookCategory.style,
+        type: { summary: 'boolean' }
+      }
+    }
   }
 }
 

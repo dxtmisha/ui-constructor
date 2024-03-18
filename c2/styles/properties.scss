@@ -680,6 +680,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -718,6 +725,13 @@ $designsProperties: (
           'required':(
             index: 'required',
             name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
             type: 'state',
             value: (
             ),
@@ -1130,6 +1144,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -1168,6 +1189,13 @@ $designsProperties: (
           'required':(
             index: 'required',
             name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
             type: 'state',
             value: (
             ),
@@ -1328,6 +1356,173 @@ $designsProperties: (
             name: '&--borderVariant',
             type: 'state',
             value: (
+            ),
+          ),
+        ),
+      ),
+      'switch':(
+        index: 'switch',
+        name: 'd-switch',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--d-switch-comp-required-color',
+                    type: 'var',
+                    value: 'red',
+                  ),
+                ),
+              ),
+              'width':(
+                index: 'width',
+                name: '--d-switch-comp-width',
+                type: 'var',
+                value: 34px,
+              ),
+              'height':(
+                index: 'height',
+                name: '--d-switch-comp-height',
+                type: 'var',
+                value: 16px,
+              ),
+              'item':(
+                index: 'item',
+                name: 'item',
+                type: 'var',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--d-switch-comp-item-width',
+                    type: 'var',
+                    value: 40px,
+                  ),
+                  'height':(
+                    index: 'height',
+                    name: '--d-switch-comp-item-height',
+                    type: 'var',
+                    value: 40px,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'track':(
+            index: 'track',
+            name: '&__track',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
+            type: 'state',
+            value: (
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'linkfocus':(
+                index: 'linkfocus',
+                name: '--d-switch-linkfocus',
+                type: 'var',
+                value: 'var(--d-switch-focus)',
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'linkchecked':(
+                index: 'linkchecked',
+                name: '--d-switch-linkchecked',
+                type: 'var',
+                value: 'var(--d-switch-checked)',
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'linkdisabled':(
+                index: 'linkdisabled',
+                name: '--d-switch-linkdisabled',
+                type: 'var',
+                value: 'var(--d-switch-disabled)',
+              ),
             ),
           ),
         ),
@@ -20670,6 +20865,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -20779,6 +20981,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'right':(
+            index: 'right',
+            name: '&--right',
+            type: 'state',
+            value: (
+            ),
+          ),
           'size':(
             index: 'size',
             name: '&--size',
@@ -20802,11 +21011,18 @@ $designsProperties: (
                       ),
                     ),
                   ),
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-md)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-checkbox__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-md)',
+                      ),
+                    ),
                   ),
                   'info':(
                     index: 'info',
@@ -20877,11 +21093,18 @@ $designsProperties: (
                 name: '&--md',
                 type: 'state',
                 value: (
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-lg)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-checkbox__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-lg)',
+                      ),
+                    ),
                   ),
                   'info':(
                     index: 'info',
@@ -20952,11 +21175,18 @@ $designsProperties: (
                 name: '&--lg',
                 type: 'state',
                 value: (
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-xl)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-checkbox__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-xl)',
+                      ),
+                    ),
                   ),
                   'item':(
                     index: 'item',
@@ -22504,6 +22734,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+            ),
+          ),
           'item':(
             index: 'item',
             name: '&__item',
@@ -22613,6 +22850,13 @@ $designsProperties: (
             value: (
             ),
           ),
+          'right':(
+            index: 'right',
+            name: '&--right',
+            type: 'state',
+            value: (
+            ),
+          ),
           'size':(
             index: 'size',
             name: '&--size',
@@ -22636,11 +22880,18 @@ $designsProperties: (
                       ),
                     ),
                   ),
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-md)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-radio__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-md)',
+                      ),
+                    ),
                   ),
                   'info':(
                     index: 'info',
@@ -22711,11 +22962,18 @@ $designsProperties: (
                 name: '&--md',
                 type: 'state',
                 value: (
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-lg)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-radio__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-lg)',
+                      ),
+                    ),
                   ),
                   'info':(
                     index: 'info',
@@ -22786,11 +23044,18 @@ $designsProperties: (
                 name: '&--lg',
                 type: 'state',
                 value: (
-                  'gap':(
-                    index: 'gap',
-                    name: 'gap',
-                    type: 'property',
-                    value: 'var(--c2-st-global-distance-space-inline-xl)',
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-radio__body',
+                    type: 'subclass',
+                    value: (
+                      'gap':(
+                        index: 'gap',
+                        name: 'gap',
+                        type: 'property',
+                        value: 'var(--c2-st-global-distance-space-inline-xl)',
+                      ),
+                    ),
                   ),
                   'item':(
                     index: 'item',
@@ -23050,6 +23315,321 @@ $designsProperties: (
             name: '&--active',
             type: 'state',
             value: (
+            ),
+          ),
+        ),
+      ),
+      'switch':(
+        index: 'switch',
+        name: 'c2-switch',
+        type: 'component',
+        value: (
+          'comp':(
+            index: 'comp',
+            name: 'comp',
+            type: 'var',
+            value: (
+              'required':(
+                index: 'required',
+                name: 'required',
+                type: 'var',
+                value: (
+                  'color':(
+                    index: 'color',
+                    name: '--c2-switch-comp-required-color',
+                    type: 'var',
+                    value: 'var(--c2-st-content-foreground-color-negative-secondary)',
+                  ),
+                ),
+              ),
+              'width':(
+                index: 'width',
+                name: '--c2-switch-comp-width',
+                type: 'var',
+                value: 'var(--c2-ot-dimension-350)',
+              ),
+              'height':(
+                index: 'height',
+                name: '--c2-switch-comp-height',
+                type: 'var',
+                value: 'var(--c2-ot-dimension-200)',
+              ),
+              'item':(
+                index: 'item',
+                name: 'item',
+                type: 'var',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-switch-comp-item-width',
+                    type: 'var',
+                    value: 'var(--c2-ot-dimension-175)',
+                  ),
+                  'height':(
+                    index: 'height',
+                    name: '--c2-switch-comp-item-height',
+                    type: 'var',
+                    value: 'var(--c2-ot-dimension-175)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'input':(
+            index: 'input',
+            name: '&__input',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+              'gap':(
+                index: 'gap',
+                name: 'gap',
+                type: 'property',
+                value: 'var(--c2-st-global-distance-space-inline-xl)',
+              ),
+            ),
+          ),
+          'item':(
+            index: 'item',
+            name: '&__item',
+            type: 'subclass',
+            value: (
+              'icon':(
+                index: 'icon',
+                name: '&__icon',
+                type: 'subclass',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: 'width',
+                    type: 'property',
+                    value: 100%,
+                  ),
+                  'height':(
+                    index: 'height',
+                    name: 'height',
+                    type: 'property',
+                    value: 100%,
+                  ),
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c2-st-action-foreground-color-onprimary-normal)',
+                  ),
+                  'borderRadius':(
+                    index: 'borderRadius',
+                    name: 'border-radius',
+                    type: 'property',
+                    value: 'var(--c2-st-selectable-borderRadius-size-pill)',
+                  ),
+                  'boxShadow':(
+                    index: 'boxShadow',
+                    name: 'box-shadow',
+                    type: 'property',
+                    value: 'var(--c2-st-elevation-onLight-down-xs)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'loading':(
+            index: 'loading',
+            name: '&__loading',
+            type: 'subclass',
+            value: (
+              'padding':(
+                index: 'padding',
+                name: 'padding',
+                type: 'property',
+                value: 'var(--c2-ot-dimension-12)',
+              ),
+            ),
+          ),
+          'info':(
+            index: 'info',
+            name: '&__info',
+            type: 'subclass',
+            value: (
+              'label':(
+                index: 'label',
+                name: '&__label',
+                type: 'subclass',
+                value: (
+                  'paddingTop':(
+                    index: 'paddingTop',
+                    name: 'padding-top',
+                    type: 'property',
+                    value: 'var(--c2-ot-dimension-12)',
+                  ),
+                  'fontFamily':(
+                    index: 'fontFamily',
+                    name: 'font-family',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-fontFamily-base)',
+                  ),
+                  'fontSize':(
+                    index: 'fontSize',
+                    name: 'font-size',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-fontSize-size-scale-112)',
+                  ),
+                  'fontWeight':(
+                    index: 'fontWeight',
+                    name: 'font-weight',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-fontWeight-400)',
+                  ),
+                  'lineHeight':(
+                    index: 'lineHeight',
+                    name: 'line-height',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-lineHeight-175)',
+                  ),
+                  'letterSpacing':(
+                    index: 'letterSpacing',
+                    name: 'letter-spacing',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-tracking-lg)',
+                  ),
+                  'textCase':(
+                    index: 'textCase',
+                    name: 'text-case',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-textCase-none)',
+                  ),
+                  'textDecoration':(
+                    index: 'textDecoration',
+                    name: 'text-decoration',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-textDecoration-none)',
+                  ),
+                  'paragraphSpacing':(
+                    index: 'paragraphSpacing',
+                    name: 'paragraph-spacing',
+                    type: 'property',
+                    value: 'var(--c2-ot-typography-paragraphSpacing-size-scale-75)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'track':(
+            index: 'track',
+            name: '&__track',
+            type: 'subclass',
+            value: (
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'background-color',
+                type: 'property',
+                value: 'var(--c2-st-action-background-color-neutral-subtle-hover)',
+              ),
+              'borderRadius':(
+                index: 'borderRadius',
+                name: 'border-radius',
+                type: 'property',
+                value: 'var(--c2-st-selectable-borderRadius-size-pill)',
+              ),
+              'hover':(
+                index: 'hover',
+                name: 'hover',
+                type: 'selector',
+                value: (
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c2-st-action-background-color-neutral-subtle-active)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'required':(
+            index: 'required',
+            name: '&--required',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'right':(
+            index: 'right',
+            name: '&--right',
+            type: 'state',
+            value: (
+            ),
+          ),
+          '&__input:focus ~ *':(
+            index: '&__input:focus ~ *',
+            name: '&__input:focus ~ *',
+            type: 'scss',
+            value: (
+              'track':(
+                index: 'track',
+                name: '& .c2-switch__track',
+                type: 'subclass',
+                value: (
+                  'boxShadow':(
+                    index: 'boxShadow',
+                    name: 'box-shadow',
+                    type: 'property',
+                    value: 'var(--c2-st-elevation-onLight-focus-md)',
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:checked ~ *':(
+            index: '&__input:checked ~ *',
+            name: '&__input:checked ~ *',
+            type: 'scss',
+            value: (
+              'track':(
+                index: 'track',
+                name: '& .c2-switch__track',
+                type: 'subclass',
+                value: (
+                  'backgroundColor':(
+                    index: 'backgroundColor',
+                    name: 'background-color',
+                    type: 'property',
+                    value: 'var(--c2-st-action-background-color-primary-solid-normal)',
+                  ),
+                  'hover':(
+                    index: 'hover',
+                    name: 'hover',
+                    type: 'selector',
+                    value: (
+                      'backgroundColor':(
+                        index: 'backgroundColor',
+                        name: 'background-color',
+                        type: 'property',
+                        value: 'var(--c2-st-action-background-color-primary-solid-hover)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          '&__input:disabled ~ *':(
+            index: '&__input:disabled ~ *',
+            name: '&__input:disabled ~ *',
+            type: 'scss',
+            value: (
+              'opacity':(
+                index: 'opacity',
+                name: 'opacity',
+                type: 'property',
+                value: 'var(--c2-ot-opacity-50)',
+              ),
             ),
           ),
         ),

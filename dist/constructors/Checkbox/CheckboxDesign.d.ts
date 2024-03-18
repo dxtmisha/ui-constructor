@@ -20,6 +20,31 @@ export declare class CheckboxDesign<COMP extends CheckboxComponents, SETUP exten
      */
     constructor(name: string, props: Readonly<P>, options?: ConstrOptions<COMP, CheckboxEmits, P>);
     /**
+     * Rendering of the main input.<br>
+     * Рендеринг главного input.
+     */
+    renderInput(): VNode;
+    /**
+     * Rendering of the hidden input.<br>
+     * Рендеринг скрытого input.
+     */
+    renderInputHidden(): VNode;
+    /**
+     * Rendering of the main body.<br>
+     * Рендеринг главного body.
+     */
+    renderBody(): VNode;
+    /**
+     * Rendering of the checkbox element.<br>
+     * Рендеринг элемента checkbox.
+     */
+    renderChecked(): VNode;
+    /**
+     * Rendering of the informational text element.<br>
+     * Рендеринг элемента информационного текста.
+     */
+    renderInfo(): VNode;
+    /**
      * Initialization of basic options.<br>
      * Инициализация базовых опций.
      */
@@ -49,24 +74,4 @@ export declare class CheckboxDesign<COMP extends CheckboxComponents, SETUP exten
      * Метод для рендеринга.
      */
     protected initRender(): VNode;
-    /**
-     * Rendering of the main input.<br>
-     * Рендеринг главного input.
-     */
-    protected renderInput: () => VNode;
-    /**
-     * Rendering of the hidden input.<br>
-     * Рендеринг скрытого input.
-     */
-    protected renderInputHidden: () => VNode;
-    /**
-     * Rendering of the checkbox element.<br>
-     * Рендеринг элемента checkbox.
-     */
-    protected renderChecked: () => VNode;
-    /**
-     * Rendering of the informational text element.<br>
-     * Рендеринг элемента информационного текста.
-     */
-    protected renderInfo: () => VNode;
 }

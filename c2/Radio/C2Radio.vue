@@ -36,6 +36,7 @@ const classesToken = computed<ConstrClasses>(() => ({
     // :classes-values [!] System label / Системная метка
     'c2-radio': true,
     'c2-radio--required': props.required,
+    'c2-radio--right': props.right,
     [`c2-radio--size--${props.size}`]: inArray(propsValues.size, props.size),
     'c2-radio--focus': props.focus,
     'c2-radio--disabled': props.disabled

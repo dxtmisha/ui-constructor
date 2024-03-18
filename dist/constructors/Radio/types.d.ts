@@ -32,6 +32,7 @@ export type RadioSlots = CheckboxSlots;
 export type RadioClasses = {
     main: ConstrClass;
     input: string;
+    body: string;
     item: string;
     itemIcon: string;
     loading: string;

@@ -5,16 +5,20 @@
   @include initByCustom('iconClip', #{inset(0 100% 0 0)});
   @include initByCustom('iconScale', 1);
 
-  display: inline-flex;
-  align-items: flex-start;
-
-  transition-timing-function: linear;
-  transition-duration: v('d.sys.transitionDuration.standard');
-  transition-property: background-color, border-color, opacity;
+  position: relative;
 
   &__input {
     position: absolute;
     visibility: hidden;
+  }
+
+  &__body {
+    display: inline-flex;
+    align-items: flex-start;
+
+    transition-timing-function: linear;
+    transition-duration: v('d.sys.transitionDuration.sm');
+    transition-property: background-color, border-color, opacity;
   }
 
   &__item {
@@ -70,6 +74,16 @@
           @include color(v('??comp.required.color'));
         }
       }
+    }
+  }
+
+  &--right {
+    @include subclass('item') {
+      order: 4;
+    }
+
+    @include subclass('info') {
+      order: 2;
     }
   }
 }

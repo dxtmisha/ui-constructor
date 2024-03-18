@@ -268,6 +268,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     design: "c2",
     code: "c2-skeleton",
     path: "c2/Skeleton"
+  },
+  {
+    name: "C2Switch",
+    design: "c2",
+    code: "c2-switch",
+    path: "c2/Switch"
   }
 ], w = {
   m2: [
@@ -3272,6 +3278,9 @@ const B = y({
     }), await o({
       name: "C2Skeleton",
       filePath: "ui/dist/C2Skeleton.vue"
+    }), await o({
+      name: "C2Switch",
+      filePath: "ui/dist/C2Switch.vue"
     });
   }
 });

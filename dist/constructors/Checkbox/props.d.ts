@@ -12,6 +12,7 @@ export type CheckboxProps = Omit<InputBasicProps, 'type' | 'inputmode' | 'spellc
     iconCheckbox?: string;
     iconIndeterminate?: string;
     required?: boolean;
+    right?: boolean;
     focus?: boolean;
     disabled?: boolean;
 };
@@ -26,6 +27,7 @@ export declare const defaultsCheckbox: CheckboxProps;
  */
 export declare const propsCheckbox: {
     required: BooleanConstructor;
+    right: BooleanConstructor;
     focus: BooleanConstructor;
     disabled: BooleanConstructor;
     value: BooleanConstructor;

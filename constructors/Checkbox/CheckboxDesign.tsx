@@ -85,6 +85,105 @@ export class CheckboxDesign<
   }
 
   /**
+   * Rendering of the main input.<br>
+   * Рендеринг главного input.
+   */
+  renderInput (): VNode {
+    const setup = this.setup()
+
+    return h('input', {
+      class: setup.classes.value.input,
+      name: this.props.name,
+      type: this.type,
+      checked: setup.value.value,
+      readonly: this.props.readonly,
+      disabled: setup.isDisabled.value,
+      value: this.props?.valueVariant ?? '1',
+      on: this.props.on,
+      onInput: setup.onInput
+    })
+  }
+
+  /**
+   * Rendering of the hidden input.<br>
+   * Рендеринг скрытого input.
+   */
+  renderInputHidden (): VNode {
+    return h('input', {
+      name: this.props.name,
+      type: 'hidden',
+      value: '0'
+    })
+  }
+
+  /**
+   * Rendering of the main body.<br>
+   * Рендеринг главного body.
+   */
+  renderBody (): VNode {
+    const setup = this.setup()
+    const children: any[] = [setup.renderChecked()]
+
+    if (setup.isLabel.value) {
+      children.push(setup.renderInfo())
+    }
+
+    return h('span', {
+      class: setup.classes.value.body
+    }, children)
+  }
+
+  /**
+   * Rendering of the checkbox element.<br>
+   * Рендеринг элемента checkbox.
+   */
+  renderChecked (): VNode {
+    const setup = this.setup()
+    const children: any[] = [
+      setup.renderProgress(),
+      h('span', {
+        class: [
+          setup.classes.value.itemIcon,
+          setup.classesSkeleton.classBackgroundVariant
+        ]
+      }, [
+        this.components.renderOne(
+          'icon',
+          setup.iconBind.value
+        )
+      ])
+    ]
+
+    this.components.renderAdd(
+      children,
+      'ripple',
+      {
+        disabled: setup.isDisabled.value
+      }
+    )
+
+    return h('span', {
+      class: setup.classes.value.item
+    }, children)
+  }
+
+  /**
+   * Rendering of the informational text element.<br>
+   * Рендеринг элемента информационного текста.
+   */
+  renderInfo (): VNode {
+    const setup = this.setup()
+    const children: any[] = [
+      ...setup.renderLabel(),
+      ...setup.renderFieldMessage()
+    ]
+
+    return h('span', {
+      class: setup.classes.value.info
+    }, children)
+  }
+
+  /**
    * Initialization of basic options.<br>
    * Инициализация базовых опций.
    */
@@ -104,10 +203,11 @@ export class CheckboxDesign<
       checkValidity: this.checkbox.checkValidity,
       validationMessage: this.checkbox.validationMessage,
 
-      renderInput: this.renderInput,
-      renderInputHidden: this.renderInputHidden,
-      renderChecked: this.renderChecked,
-      renderInfo: this.renderInfo,
+      renderInput: () => this.renderInput(),
+      renderInputHidden: () => this.renderInputHidden(),
+      renderBody: () => this.renderBody(),
+      renderChecked: () => this.renderChecked(),
+      renderInfo: () => this.renderInfo(),
 
       onInput: this.checkbox.onInput,
 
@@ -168,6 +268,7 @@ export class CheckboxDesign<
       ...{
         // :classes [!] System label / Системная метка
         input: this.getSubClass('input'),
+        body: this.getSubClass('body'),
         item: this.getSubClass('item'),
         itemIcon: this.getSubClass('item__icon'),
         loading: this.getSubClass('loading'),
@@ -195,99 +296,13 @@ export class CheckboxDesign<
     const children: any[] = [
       setup.renderInputHidden(),
       setup.renderInput(),
-      setup.renderChecked()
+      setup.renderBody()
     ]
-
-    if (setup.isLabel.value) {
-      children.push(setup.renderInfo())
-    }
 
     return h('label', {
       ...this.getAttrs(),
       ref: this.element,
       class: setup.classes.value.main
-    }, children)
-  }
-
-  /**
-   * Rendering of the main input.<br>
-   * Рендеринг главного input.
-   */
-  protected renderInput = (): VNode => {
-    const setup = this.setup()
-
-    return h('input', {
-      class: setup.classes.value.input,
-      name: this.props.name,
-      type: this.type,
-      checked: setup.value.value,
-      readonly: this.props.readonly,
-      disabled: setup.isDisabled.value,
-      value: this.props?.valueVariant ?? '1',
-      on: this.props.on,
-      onInput: setup.onInput
-    })
-  }
-
-  /**
-   * Rendering of the hidden input.<br>
-   * Рендеринг скрытого input.
-   */
-  protected renderInputHidden = (): VNode => {
-    return h('input', {
-      name: this.props.name,
-      type: 'hidden',
-      value: '0'
-    })
-  }
-
-  /**
-   * Rendering of the checkbox element.<br>
-   * Рендеринг элемента checkbox.
-   */
-  protected renderChecked = (): VNode => {
-    const setup = this.setup()
-    const children: any[] = [
-      setup.renderProgress(),
-      h('span', {
-        class: [
-          setup.classes.value.itemIcon,
-          setup.classesSkeleton.classBackgroundVariant
-        ]
-      }, [
-        this.components.renderOne(
-          'icon',
-          setup.iconBind.value
-        )
-      ])
-    ]
-
-    this.components.renderAdd(
-      children,
-      'ripple',
-      {
-        disabled: setup.isDisabled.value
-      }
-    )
-
-    return h('span', {
-      class: setup.classes.value.item
-    }, children)
-  }
-
-  /**
-   * Rendering of the informational text element.<br>
-   * Рендеринг элемента информационного текста.
-   */
-  protected renderInfo = (): VNode => {
-    const setup = this.setup()
-    const children: any[] = [
-      ...setup.renderLabel(),
-      ...setup.renderFieldMessage()
-    ]
-
-    return h('span', {
-      class: setup.classes.value.info
     }, children)
   }
 }

@@ -1,0 +1,57 @@
+{
+  "comp": {
+    "width": "{ot.dimension.350}",
+    "height": "{ot.dimension.200}",
+    "item": {
+      "width": "{ot.dimension.175}",
+      "height": "{ot.dimension.175}"
+    },
+    "required": {
+      "color": "{st.content.foreground.color.negative.secondary}"
+    }
+  },
+  "body": {
+    "gap": "{st.global.distance.space.inline.xl}"
+  },
+  "track": {
+    "background-color": "{st.action.background.color.neutral.subtle.hover}",
+    "border-radius": "{st.selectable.borderRadius.size.pill}",
+    "hover": {
+      "background-color": "{st.action.background.color.neutral.subtle.active}"
+    }
+  },
+  "item": {
+    "icon": {
+      "width": "100%",
+      "height": "100%",
+      "background-color": "{st.action.foreground.color.onprimary.normal}",
+      "border-radius": "{st.selectable.borderRadius.size.pill}",
+      "box-shadow": "{st.elevation.onLight.down.xs}"
+    }
+  },
+  "loading": {
+    "padding": "{ot.dimension.12}"
+  },
+  "info": {
+    "label": {
+      "padding-top": "{ot.dimension.12}",
+      "font": "{st.text.body.lg}"
+    }
+  },
+  "focus": {
+    "track": {
+      "box-shadow": "{st.elevation.onLight.focus.md}"
+    }
+  },
+  "checked": {
+    "track": {
+      "backgroundColor": "{st.action.background.color.primary.solid.normal}",
+      "hover": {
+        "backgroundColor": "{st.action.background.color.primary.solid.hover}"
+      }
+    }
+  },
+  "disabled": {
+    "opacity": "{ot.opacity.50}"
+  }
+}

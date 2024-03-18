@@ -45,6 +45,7 @@ export type CheckboxProps =
     // Tokens
     // :type [!] System label / Системная метка
     required?: boolean
+    right?: boolean
     focus?: boolean
     disabled?: boolean
     // :type [!] System label / Системная метка
@@ -83,6 +84,7 @@ export const propsCheckbox = {
   ...{
     // :prop [!] System label / Системная метка
     required: Boolean,
+    right: Boolean,
     focus: Boolean,
     disabled: Boolean
     // :prop [!] System label / Системная метка
