@@ -3312,7 +3312,7 @@ function p(r = {}) {
         a,
         r == null ? void 0 : r.api,
         r == null ? void 0 : r.apiUrl
-      ).init(), e.value = !1), ((r == null ? void 0 : r.importComponents) ?? !0) && (i = new P(t, n, i).init()), (r == null ? void 0 : r.style) !== !1 && (i = new j(n, i, r == null ? void 0 : r.style).init()), {
+      ).init(), console.log("code", i), e.value = !1), ((r == null ? void 0 : r.importComponents) ?? !0) && (i = new P(t, n, i).init()), (r == null ? void 0 : r.style) !== !1 && (i = new j(n, i, r == null ? void 0 : r.style).init(), console.log("style", i)), {
         code: i
       };
     }

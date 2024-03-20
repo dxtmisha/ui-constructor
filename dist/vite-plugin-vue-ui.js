@@ -3311,7 +3311,7 @@ function j(o = {}) {
         a,
         o == null ? void 0 : o.api,
         o == null ? void 0 : o.apiUrl
-      ).init(), console.log("code", r), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new C(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new W(i, r, o == null ? void 0 : o.style).init(), console.log("style", r)), {
+      ).init(), console.log("code", r), e.value = !1), ((o == null ? void 0 : o.importComponents) ?? !0) && (r = new C(t, i, r).init()), (o == null ? void 0 : o.style) !== !1 && (r = new W(i, r, o == null ? void 0 : o.style).init()), {
         code: r
       };
     }
