@@ -77,8 +77,6 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
 
       if (options?.style !== false) {
         code = new PluginStyles(id, code, options?.style).init()
-
-        console.log('style', code)
       }
 
       return {
