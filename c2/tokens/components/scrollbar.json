@@ -1,0 +1,12 @@
+{
+  "size": "{ot.dimension.50}",
+  "background": "transparent",
+  "thumb": {
+    "background": "{st.content.background.color.neutral.mute}",
+    "rounded": "{st.selectable.borderRadius.size.pill}"
+  },
+  "outline": {
+    "width": "1px",
+    "color": "{st.content.border.color.neutral.onsubtle}"
+  }
+}

@@ -15,8 +15,10 @@ import { C2MutationItem } from '../c2/MutationItem'
 import { C2Progress } from '../c2/Progress'
 import { C2Radio } from '../c2/Radio'
 import { C2Ripple } from '../c2/Ripple'
+import { C2Scrollbar } from '../c2/Scrollbar'
 import { C2Skeleton } from '../c2/Skeleton'
 import { C2Switch } from '../c2/Switch'
+import { C2Window } from '../c2/Window'
 
 export const components = {
   C2Button,
@@ -30,8 +32,10 @@ export const components = {
   C2Progress,
   C2Radio,
   C2Ripple,
+  C2Scrollbar,
   C2Skeleton,
-  C2Switch
+  C2Switch,
+  C2Window
 }
 
 export const uiC2ComponentsPlugin = {

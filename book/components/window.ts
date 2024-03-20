@@ -202,3 +202,12 @@ export const windowArgs: StorybookArgs = {
 }
 
 export const windowValues: StorybookArgsValue = {}
+
+export const windowText = {
+  main: {
+    title: 'Window',
+    description: {
+      main: 'Базовый компонент для работы с окном. Используется в меню, модальных окнах и подобных элементах.'
+    }
+  }
+}

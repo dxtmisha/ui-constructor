@@ -314,6 +314,17 @@
   --c2-ot-typography-strikethrough-lg-textCase: var(--c2-ot-typography-textCase-none);
   --c2-ot-typography-strikethrough-lg-fontWeight: var(--c2-ot-typography-fontWeight-500);
   --c2-ot-typography-strikethrough-lg-letterSpacing: var(--c2-ot-typography-tracking-lg);
+  --c2-ot-screen-sm: 640px;
+  --c2-ot-screen-md: 768px;
+  --c2-ot-screen-lg: 1024px;
+  --c2-ot-screen-xl: 1280px;
+  --c2-ot-screen-2xl: 1536px;
+  --c2-ot-index-0: 0;
+  --c2-ot-index-1: 100;
+  --c2-ot-index-2: 200;
+  --c2-ot-index-3: 300;
+  --c2-ot-index-4: 400;
+  --c2-ot-index-5: 500;
   --c2-ot-light-semantic-color-carmine-0: #{toColorRbg(#fffaf9)};
   --c2-ot-light-semantic-color-carmine-20: #{toColorRbg(#fff6f5)};
   --c2-ot-light-semantic-color-carmine-40: #{toColorRbg(#feeeeb)};

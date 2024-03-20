@@ -43,7 +43,9 @@ declare module '@vue/runtime-core' {
     C2Progress: typeof components.C2Progress
     C2Radio: typeof components.C2Radio
     C2Ripple: typeof components.C2Ripple
+    C2Scrollbar: typeof components.C2Scrollbar
     C2Skeleton: typeof components.C2Skeleton
     C2Switch: typeof components.C2Switch
+    C2Window: typeof components.C2Window
   }
 }

@@ -150,10 +150,18 @@ declare module 'ui/C2Ripple' {
   export { C2Ripple } from 'ui/c2/Ripple'
 }
 
+declare module 'ui/C2Scrollbar' {
+  export { C2Scrollbar } from 'ui/c2/Scrollbar'
+}
+
 declare module 'ui/C2Skeleton' {
   export { C2Skeleton } from 'ui/c2/Skeleton'
 }
 
 declare module 'ui/C2Switch' {
   export { C2Switch } from 'ui/c2/Switch'
+}
+
+declare module 'ui/C2Window' {
+  export { C2Window } from 'ui/c2/Window'
 }

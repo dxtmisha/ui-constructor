@@ -1,0 +1,13 @@
+@import "../../styles/all";
+
+@mixin mixinScrollbarToken {
+  // :style [!] System label / Системная метка
+  --c2-scrollbar-size: var(--c2-ot-dimension-50);
+  --c2-scrollbar-background: transparent;
+  --c2-scrollbar-thumb-background: var(--c2-st-content-background-color-neutral-mute);
+  --c2-scrollbar-thumb-background-opacity: #{toColorOpacity(var(--c2-st-content-background-color-neutral-mute))};
+  --c2-scrollbar-thumb-rounded: var(--c2-st-selectable-borderRadius-size-pill);
+  --c2-scrollbar-outline-width: 1px;
+  --c2-scrollbar-outline-color: var(--c2-st-content-border-color-neutral-onsubtle);
+  // :style [!] System label / Системная метка
+}

@@ -15,18 +15,18 @@ import { M3Mask as g } from "./M3Mask.js";
 import { M3Mutation as u } from "./M3Mutation.js";
 import { M3MutationItem as k } from "./M3MutationItem.js";
 import { M3Progress as S } from "./M3Progress.js";
-import { M3Ripple as h } from "./M3Ripple.js";
-import { M3Scrollbar as P } from "./M3Scrollbar.js";
-import { M3Skeleton as R } from "./M3Skeleton.js";
-import { M3SkeletonItem as d } from "./M3SkeletonItem.js";
-import { M3Window as B } from "./M3Window.js";
-import { C1Button as b } from "./C1Button.js";
-import { C1Icon as x } from "./C1Icon.js";
-import { C1Image as w } from "./C1Image.js";
+import { M3Ripple as d } from "./M3Ripple.js";
+import { M3Scrollbar as h } from "./M3Scrollbar.js";
+import { M3Skeleton as P } from "./M3Skeleton.js";
+import { M3SkeletonItem as R } from "./M3SkeletonItem.js";
+import { M3Window as b } from "./M3Window.js";
+import { C1Button as B } from "./C1Button.js";
+import { C1Icon as w } from "./C1Icon.js";
+import { C1Image as x } from "./C1Image.js";
 import { C1Progress as F } from "./C1Progress.js";
-import { C1Ripple as y } from "./C1Ripple.js";
-import { C2Button as E } from "./C2Button.js";
-import { C2Checkbox as W } from "./C2Checkbox.js";
+import { C1Ripple as W } from "./C1Ripple.js";
+import { C2Button as y } from "./C2Button.js";
+import { C2Checkbox as E } from "./C2Checkbox.js";
 import { C2Chip as j } from "./C2Chip.js";
 import { C2FieldMessage as q } from "./C2FieldMessage.js";
 import { C2Icon as v } from "./C2Icon.js";
@@ -36,9 +36,11 @@ import { C2MutationItem as D } from "./C2MutationItem.js";
 import { C2Progress as G } from "./C2Progress.js";
 import { C2Radio as H } from "./C2Radio.js";
 import { C2Ripple as J } from "./C2Ripple.js";
-import { C2Skeleton as K } from "./C2Skeleton.js";
-import { C2Switch as L } from "./C2Switch.js";
-const N = {
+import { C2Scrollbar as K } from "./C2Scrollbar.js";
+import { C2Skeleton as L } from "./C2Skeleton.js";
+import { C2Switch as N } from "./C2Switch.js";
+import { C2Window as O } from "./C2Window.js";
+const Q = {
   M2Button: i,
   M2Icon: p,
   M2Image: f,
@@ -55,18 +57,18 @@ const N = {
   M3Mutation: u,
   M3MutationItem: k,
   M3Progress: S,
-  M3Ripple: h,
-  M3Scrollbar: P,
-  M3Skeleton: R,
-  M3SkeletonItem: d,
-  M3Window: B,
-  C1Button: b,
-  C1Icon: x,
-  C1Image: w,
+  M3Ripple: d,
+  M3Scrollbar: h,
+  M3Skeleton: P,
+  M3SkeletonItem: R,
+  M3Window: b,
+  C1Button: B,
+  C1Icon: w,
+  C1Image: x,
   C1Progress: F,
-  C1Ripple: y,
-  C2Button: E,
-  C2Checkbox: W,
+  C1Ripple: W,
+  C2Button: y,
+  C2Checkbox: E,
   C2Chip: j,
   C2FieldMessage: q,
   C2Icon: v,
@@ -76,16 +78,18 @@ const N = {
   C2Progress: G,
   C2Radio: H,
   C2Ripple: J,
-  C2Skeleton: K,
-  C2Switch: L
-}, Wo = {
+  C2Scrollbar: K,
+  C2Skeleton: L,
+  C2Switch: N,
+  C2Window: O
+}, zo = {
   install: async (o) => {
-    t(N, (r, m) => {
+    t(Q, (r, m) => {
       o.component(m, r);
     });
   }
 };
 export {
-  N as components,
-  Wo as uiComponentsPlugin
+  Q as components,
+  zo as uiComponentsPlugin
 };

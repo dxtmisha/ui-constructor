@@ -1,0 +1,31 @@
+{
+  "z-index": "{ot.index.4}",
+  "padding": "{ot.dimension.100}",
+  "width": {
+    "sm": "{ot.dimension.base} * 512",
+    "md": "{ot.dimension.base} * 768",
+    "lg": "{ot.dimension.base} * 1024"
+  },
+  "height": {
+    "sm": "{ot.dimension.base} * 256",
+    "md": "{ot.dimension.base} * 384",
+    "lg": "{ot.dimension.base} * 512"
+  },
+  "background-color": "{st.content.background.color.default.solid.normal}",
+  "background-opacity": "{ot.opacity.50}",
+  "body": {
+    "background-color": "{st.content.background.color.default.solid.normal}",
+    "background-opacity": "{ot.opacity.100}",
+    "box-shadow": "0px 2px 8px -2px rgba(0, 80, 178, 0.06), 0px 8px 16px -4px rgba(4, 51, 103, 0.11)",
+    "border-radius": "{st.selectable.borderRadius.size.md}"
+  },
+  "adaptive": {
+    "menu": {
+      "body": {
+        "background-color": "{st.content.background.color.default.solid.normal}",
+        "background-opacity": "{ot.opacity.100}",
+        "z-index": "{ot.index.2}"
+      }
+    }
+  }
+}

@@ -10,7 +10,12 @@ $designsRoot: (
   'c2.ot',
   'c2.st',
   'c2.base',);
-$designsMedia: ();
+$designsMedia: (
+  'c2-sm': 640px,
+  'c2-md': 768px,
+  'c2-lg': 1024px,
+  'c2-xl': 1280px,
+  'c2-2xl': 1536px,);
 $designsClasses: (
   'c2.dark',
   'c2.system',
@@ -303,6 +308,7 @@ $designsPalette: (
   '--c2-radio-comp-required-color': ('--c2-palette-basic400'),
   '--c2-radio-comp-color': ('--c2-palette-basic100'),
   '--c2-ripple-backgroundColor': ('--c2-palette-basic700'),
+  '--c2-scrollbar-outline-color': ('--c2-palette-basic60'),
   '--c2-switch-comp-required-color': ('--c2-palette-basic400'),);
 $designsShade: (
   'c2': (0,20,40,60,80,100,200,300,400,500,600,700,800,900),);
@@ -4054,6 +4060,86 @@ $designsProperties: (
                     ),
                   ),
                 ),
+              ),
+            ),
+          ),
+          'screen':(
+            index: 'screen',
+            name: 'screen',
+            type: 'var',
+            value: (
+              'sm':(
+                index: 'sm',
+                name: '--c2-ot-screen-sm',
+                type: 'var',
+                value: 640px,
+              ),
+              'md':(
+                index: 'md',
+                name: '--c2-ot-screen-md',
+                type: 'var',
+                value: 768px,
+              ),
+              'lg':(
+                index: 'lg',
+                name: '--c2-ot-screen-lg',
+                type: 'var',
+                value: 1024px,
+              ),
+              'xl':(
+                index: 'xl',
+                name: '--c2-ot-screen-xl',
+                type: 'var',
+                value: 1280px,
+              ),
+              '2xl':(
+                index: '2xl',
+                name: '--c2-ot-screen-2xl',
+                type: 'var',
+                value: 1536px,
+              ),
+            ),
+          ),
+          'index':(
+            index: 'index',
+            name: 'index',
+            type: 'var',
+            value: (
+              '0':(
+                index: '0',
+                name: '--c2-ot-index-0',
+                type: 'var',
+                value: 0,
+              ),
+              '1':(
+                index: '1',
+                name: '--c2-ot-index-1',
+                type: 'var',
+                value: 100,
+              ),
+              '2':(
+                index: '2',
+                name: '--c2-ot-index-2',
+                type: 'var',
+                value: 200,
+              ),
+              '3':(
+                index: '3',
+                name: '--c2-ot-index-3',
+                type: 'var',
+                value: 300,
+              ),
+              '4':(
+                index: '4',
+                name: '--c2-ot-index-4',
+                type: 'var',
+                value: 400,
+              ),
+              '5':(
+                index: '5',
+                name: '--c2-ot-index-5',
+                type: 'var',
+                value: 500,
               ),
             ),
           ),
@@ -23657,6 +23743,91 @@ $designsProperties: (
           ),
         ),
       ),
+      'scrollbar':(
+        index: 'scrollbar',
+        name: 'c2-scrollbar',
+        type: 'component',
+        value: (
+          'size':(
+            index: 'size',
+            name: '--c2-scrollbar-size',
+            type: 'var',
+            value: 'var(--c2-ot-dimension-50)',
+          ),
+          'background':(
+            index: 'background',
+            name: '--c2-scrollbar-background',
+            type: 'var',
+            value: 'transparent',
+          ),
+          'thumb':(
+            index: 'thumb',
+            name: 'thumb',
+            type: 'var',
+            value: (
+              'background':(
+                index: 'background',
+                name: '--c2-scrollbar-thumb-background',
+                type: 'var',
+                value: 'var(--c2-st-content-background-color-neutral-mute)',
+              ),
+              'rounded':(
+                index: 'rounded',
+                name: '--c2-scrollbar-thumb-rounded',
+                type: 'var',
+                value: 'var(--c2-st-selectable-borderRadius-size-pill)',
+              ),
+              'hover':(
+                index: 'hover',
+                name: 'hover',
+                type: 'var',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'outline':(
+            index: 'outline',
+            name: 'outline',
+            type: 'var',
+            value: (
+              'width':(
+                index: 'width',
+                name: '--c2-scrollbar-outline-width',
+                type: 'var',
+                value: 1px,
+              ),
+              'color':(
+                index: 'color',
+                name: '--c2-scrollbar-outline-color',
+                type: 'var',
+                value: 'var(--c2-st-content-border-color-neutral-onsubtle)',
+              ),
+            ),
+          ),
+          'visible':(
+            index: 'visible',
+            name: '&--visible',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'border':(
+            index: 'border',
+            name: '&--border',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'inverse':(
+            index: 'inverse',
+            name: '&--inverse',
+            type: 'state',
+            value: (
+            ),
+          ),
+        ),
+      ),
       'skeleton':(
         index: 'skeleton',
         name: 'c2-skeleton',
@@ -24017,6 +24188,794 @@ $designsProperties: (
                 name: 'opacity',
                 type: 'property',
                 value: 'var(--c2-ot-opacity-50)',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'window':(
+        index: 'window',
+        name: 'c2-window',
+        type: 'component',
+        value: (
+          'menuSizeMultiplier':(
+            index: 'menuSizeMultiplier',
+            name: '--c2-window-menuSizeMultiplier',
+            type: 'var',
+            value: 1,
+          ),
+          'padding':(
+            index: 'padding',
+            name: '--c2-window-padding',
+            type: 'var',
+            value: 'var(--c2-ot-dimension-100)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: '--c2-window-backgroundColor',
+            type: 'var',
+            value: 'var(--c2-st-content-background-color-default-solid-normal)',
+          ),
+          'backgroundOpacity':(
+            index: 'backgroundOpacity',
+            name: '--c2-window-backgroundOpacity',
+            type: 'var',
+            value: 'var(--c2-ot-opacity-50)',
+          ),
+          'zIndex':(
+            index: 'zIndex',
+            name: 'z-index',
+            type: 'property',
+            value: 'var(--c2-ot-index-4)',
+          ),
+          'body':(
+            index: 'body',
+            name: '&__body',
+            type: 'subclass',
+            value: (
+              'backgroundColor':(
+                index: 'backgroundColor',
+                name: 'background-color',
+                type: 'property',
+                value: 'var(--c2-st-content-background-color-default-solid-normal)',
+              ),
+              'backgroundOpacity':(
+                index: 'backgroundOpacity',
+                name: 'background-opacity',
+                type: 'property',
+                value: 'var(--c2-ot-opacity-100)',
+              ),
+              'borderRadius':(
+                index: 'borderRadius',
+                name: 'border-radius',
+                type: 'property',
+                value: 'var(--c2-st-selectable-borderRadius-size-md)',
+              ),
+              'boxShadow':(
+                index: 'boxShadow',
+                name: 'box-shadow',
+                type: 'property',
+                value: '0px 2px 8px -2px rgba(0, 80, 178, 0.06), 0px 8px 16px -4px rgba(4, 51, 103, 0.11)',
+              ),
+              'context':(
+                index: 'context',
+                name: '&__context',
+                type: 'subclass',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'control':(
+            index: 'control',
+            name: '&__control',
+            type: 'subclass',
+            value: (
+            ),
+          ),
+          'width':(
+            index: 'width',
+            name: '&--width',
+            type: 'state',
+            value: (
+              'auto':(
+                index: 'auto',
+                name: '&--auto',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 'auto',
+                  ),
+                ),
+              ),
+              'max':(
+                index: 'max',
+                name: '&--max',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 100%,
+                  ),
+                ),
+              ),
+              'sm':(
+                index: 'sm',
+                name: '&--sm',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 512)',
+                  ),
+                ),
+              ),
+              'md':(
+                index: 'md',
+                name: '&--md',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 768)',
+                  ),
+                ),
+              ),
+              'lg':(
+                index: 'lg',
+                name: '&--lg',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 1024)',
+                  ),
+                ),
+              ),
+              'custom':(
+                index: 'custom',
+                name: '&--custom',
+                type: 'state',
+                value: (
+                  'width':(
+                    index: 'width',
+                    name: '--c2-window-width',
+                    type: 'var',
+                    value: 'var(--c2-window-sys-width)',
+                  ),
+                ),
+              ),
+            ),
+            var: true,
+          ),
+          'height':(
+            index: 'height',
+            name: '&--height',
+            type: 'state',
+            value: (
+              'auto':(
+                index: 'auto',
+                name: '&--auto',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 'auto',
+                  ),
+                ),
+              ),
+              'max':(
+                index: 'max',
+                name: '&--max',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 100%,
+                  ),
+                ),
+              ),
+              'sm':(
+                index: 'sm',
+                name: '&--sm',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 256)',
+                  ),
+                ),
+              ),
+              'md':(
+                index: 'md',
+                name: '&--md',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 384)',
+                  ),
+                ),
+              ),
+              'lg':(
+                index: 'lg',
+                name: '&--lg',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 'calc(var(--c2-ot-dimension-base) * 512)',
+                  ),
+                ),
+              ),
+              'custom':(
+                index: 'custom',
+                name: '&--custom',
+                type: 'state',
+                value: (
+                  'height':(
+                    index: 'height',
+                    name: '--c2-window-height',
+                    type: 'var',
+                    value: 'var(--c2-window-sys-height)',
+                  ),
+                ),
+              ),
+            ),
+            var: true,
+          ),
+          'adaptive':(
+            index: 'adaptive',
+            name: '&--adaptive',
+            type: 'state',
+            value: (
+              'menu':(
+                index: 'menu',
+                name: '&--menu',
+                type: 'state',
+                value: (
+                  'menuSizeMultiplier':(
+                    index: 'menuSizeMultiplier',
+                    name: '--c2-window-menuSizeMultiplier',
+                    type: 'var',
+                    value: 0.5,
+                  ),
+                  'backgroundOpacity':(
+                    index: 'backgroundOpacity',
+                    name: '--c2-window-backgroundOpacity',
+                    type: 'var',
+                    value: 0,
+                  ),
+                  'transformOrigin':(
+                    index: 'transformOrigin',
+                    name: '--c2-window-transformOrigin',
+                    type: 'var',
+                    value: 'var(--c2-window-origin-x) var(--c2-window-origin-y)',
+                  ),
+                  'top':(
+                    index: 'top',
+                    name: 'top',
+                    type: 'property',
+                    value: 'var(--c2-window-sys-inset-y)',
+                  ),
+                  'right':(
+                    index: 'right',
+                    name: 'right',
+                    type: 'property',
+                    value: 'auto',
+                  ),
+                  'bottom':(
+                    index: 'bottom',
+                    name: 'bottom',
+                    type: 'property',
+                    value: 'auto',
+                  ),
+                  'left':(
+                    index: 'left',
+                    name: 'left',
+                    type: 'property',
+                    value: 'var(--c2-window-sys-inset-x)',
+                  ),
+                  'padding':(
+                    index: 'padding',
+                    name: 'padding',
+                    type: 'property',
+                    value: 0,
+                  ),
+                  'content':(
+                    index: 'content',
+                    name: 'content',
+                    type: 'property',
+                    value: ''--MENU--'',
+                  ),
+                  'body':(
+                    index: 'body',
+                    name: '& .c2-window__body',
+                    type: 'subclass',
+                    value: (
+                      'zIndex':(
+                        index: 'zIndex',
+                        name: 'z-index',
+                        type: 'property',
+                        value: 'var(--c2-ot-index-2)',
+                      ),
+                      'top':(
+                        index: 'top',
+                        name: 'top',
+                        type: 'property',
+                        value: 'auto',
+                      ),
+                      'maxWidth':(
+                        index: 'maxWidth',
+                        name: 'max-width',
+                        type: 'property',
+                        value: 'calc(100dvw - (var(--c2-window-padding) * 2))',
+                      ),
+                      'maxHeight':(
+                        index: 'maxHeight',
+                        name: 'max-height',
+                        type: 'property',
+                        value: 'calc(100dvh - (var(--c2-window-padding) * 2))',
+                      ),
+                      'backgroundColor':(
+                        index: 'backgroundColor',
+                        name: 'background-color',
+                        type: 'property',
+                        value: 'var(--c2-st-content-background-color-default-solid-normal)',
+                      ),
+                      'backgroundOpacity':(
+                        index: 'backgroundOpacity',
+                        name: 'background-opacity',
+                        type: 'property',
+                        value: 'var(--c2-ot-opacity-100)',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'modal':(
+                index: 'modal',
+                name: '&--modal',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'modalDynamic':(
+                index: 'modalDynamic',
+                name: '&--modalDynamic',
+                type: 'state',
+                value: (
+                  '&.??--location':(
+                    index: '&.??--location',
+                    name: '&.c2-window--location',
+                    type: 'scss',
+                    value: (
+                      'center':(
+                        index: 'center',
+                        name: '&--center',
+                        type: 'state',
+                        value: (
+                        ),
+                      ),
+                      'top':(
+                        index: 'top',
+                        name: '&--top',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-start',
+                          ),
+                        ),
+                      ),
+                      'bottom':(
+                        index: 'bottom',
+                        name: '&--bottom',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-end',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'static':(
+                index: 'static',
+                name: '&--static',
+                type: 'state',
+                value: (
+                  'content':(
+                    index: 'content',
+                    name: 'content',
+                    type: 'property',
+                    value: ''--STATIC--'',
+                  ),
+                ),
+              ),
+              'auto':(
+                index: 'auto',
+                name: '&--auto',
+                type: 'state',
+                value: (
+                  'paddingTop':(
+                    index: 'paddingTop',
+                    name: 'padding-top',
+                    type: 'property',
+                    value: 'var(--c2-ot-dimension-300)',
+                  ),
+                  'paddingBottom':(
+                    index: 'paddingBottom',
+                    name: 'padding-bottom',
+                    type: 'property',
+                    value: 'var(--c2-ot-dimension-300)',
+                  ),
+                  '&.??--location':(
+                    index: '&.??--location',
+                    name: '&.c2-window--location',
+                    type: 'scss',
+                    value: (
+                      'center':(
+                        index: 'center',
+                        name: '&--center',
+                        type: 'state',
+                        value: (
+                        ),
+                      ),
+                      'top':(
+                        index: 'top',
+                        name: '&--top',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-start',
+                          ),
+                        ),
+                      ),
+                      'bottom':(
+                        index: 'bottom',
+                        name: '&--bottom',
+                        type: 'state',
+                        value: (
+                          'alignItems':(
+                            index: 'alignItems',
+                            name: 'align-items',
+                            type: 'property',
+                            value: 'flex-end',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  'mediaSm':(
+                    index: 'mediaSm',
+                    name: '(min-width: 640px)',
+                    type: 'media',
+                    value: (
+                      'menuSizeMultiplier':(
+                        index: 'menuSizeMultiplier',
+                        name: '--c2-window-menuSizeMultiplier',
+                        type: 'var',
+                        value: 0.5,
+                      ),
+                      'backgroundOpacity':(
+                        index: 'backgroundOpacity',
+                        name: '--c2-window-backgroundOpacity',
+                        type: 'var',
+                        value: 0,
+                      ),
+                      'transformOrigin':(
+                        index: 'transformOrigin',
+                        name: '--c2-window-transformOrigin',
+                        type: 'var',
+                        value: 'var(--c2-window-origin-x) var(--c2-window-origin-y)',
+                      ),
+                      'top':(
+                        index: 'top',
+                        name: 'top',
+                        type: 'property',
+                        value: 'var(--c2-window-sys-inset-y)',
+                      ),
+                      'right':(
+                        index: 'right',
+                        name: 'right',
+                        type: 'property',
+                        value: 'auto',
+                      ),
+                      'bottom':(
+                        index: 'bottom',
+                        name: 'bottom',
+                        type: 'property',
+                        value: 'auto',
+                      ),
+                      'left':(
+                        index: 'left',
+                        name: 'left',
+                        type: 'property',
+                        value: 'var(--c2-window-sys-inset-x)',
+                      ),
+                      'padding':(
+                        index: 'padding',
+                        name: 'padding',
+                        type: 'property',
+                        value: 0,
+                      ),
+                      'content':(
+                        index: 'content',
+                        name: 'content',
+                        type: 'property',
+                        value: ''--MENU--'',
+                      ),
+                      'body':(
+                        index: 'body',
+                        name: '& .c2-window__body',
+                        type: 'subclass',
+                        value: (
+                          'zIndex':(
+                            index: 'zIndex',
+                            name: 'z-index',
+                            type: 'property',
+                            value: 'var(--c2-ot-index-2)',
+                          ),
+                          'top':(
+                            index: 'top',
+                            name: 'top',
+                            type: 'property',
+                            value: 'auto',
+                          ),
+                          'maxWidth':(
+                            index: 'maxWidth',
+                            name: 'max-width',
+                            type: 'property',
+                            value: 'calc(100dvw - (var(--c2-window-padding) * 2))',
+                          ),
+                          'maxHeight':(
+                            index: 'maxHeight',
+                            name: 'max-height',
+                            type: 'property',
+                            value: 'calc(100dvh - (var(--c2-window-padding) * 2))',
+                          ),
+                          'backgroundColor':(
+                            index: 'backgroundColor',
+                            name: 'background-color',
+                            type: 'property',
+                            value: 'var(--c2-st-content-background-color-default-solid-normal)',
+                          ),
+                          'backgroundOpacity':(
+                            index: 'backgroundOpacity',
+                            name: 'background-opacity',
+                            type: 'property',
+                            value: 'var(--c2-ot-opacity-100)',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'staticSm':(
+                index: 'staticSm',
+                name: '&--staticSm',
+                type: 'state',
+                value: (
+                  'mediaSm':(
+                    index: 'mediaSm',
+                    name: '(min-width: 640px)',
+                    type: 'media',
+                    value: (
+                      'content':(
+                        index: 'content',
+                        name: 'content',
+                        type: 'property',
+                        value: ''--STATIC--'',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'staticMd':(
+                index: 'staticMd',
+                name: '&--staticMd',
+                type: 'state',
+                value: (
+                  'mediaMd':(
+                    index: 'mediaMd',
+                    name: '(min-width: 768px)',
+                    type: 'media',
+                    value: (
+                      'content':(
+                        index: 'content',
+                        name: 'content',
+                        type: 'property',
+                        value: ''--STATIC--'',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              'staticLg':(
+                index: 'staticLg',
+                name: '&--staticLg',
+                type: 'state',
+                value: (
+                  'mediaLg':(
+                    index: 'mediaLg',
+                    name: '(min-width: 1024px)',
+                    type: 'media',
+                    value: (
+                      'content':(
+                        index: 'content',
+                        name: 'content',
+                        type: 'property',
+                        value: ''--STATIC--'',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'overscroll':(
+            index: 'overscroll',
+            name: '&--overscroll',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'dense':(
+            index: 'dense',
+            name: '&--dense',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'fullscreen':(
+            index: 'fullscreen',
+            name: '&--fullscreen',
+            type: 'state',
+            value: (
+            ),
+          ),
+          'alignment':(
+            index: 'alignment',
+            name: '&--alignment',
+            type: 'state',
+            value: (
+              'center':(
+                index: 'center',
+                name: '&--center',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'right':(
+                index: 'right',
+                name: '&--right',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'left':(
+                index: 'left',
+                name: '&--left',
+                type: 'state',
+                value: (
+                ),
+              ),
+            ),
+          ),
+          'origin':(
+            index: 'origin',
+            name: '&--origin',
+            type: 'state',
+            value: (
+              'center':(
+                index: 'center',
+                name: '&--center',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'top':(
+                index: 'top',
+                name: '&--top',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'right':(
+                index: 'right',
+                name: '&--right',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottom':(
+                index: 'bottom',
+                name: '&--bottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'left':(
+                index: 'left',
+                name: '&--left',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'topToBottom':(
+                index: 'topToBottom',
+                name: '&--topToBottom',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'rightToLeft':(
+                index: 'rightToLeft',
+                name: '&--rightToLeft',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'bottomToTop':(
+                index: 'bottomToTop',
+                name: '&--bottomToTop',
+                type: 'state',
+                value: (
+                ),
+              ),
+              'leftToRight':(
+                index: 'leftToRight',
+                name: '&--leftToRight',
+                type: 'state',
+                value: (
+                ),
               ),
             ),
           ),

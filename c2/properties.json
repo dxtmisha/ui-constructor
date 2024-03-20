@@ -31,6 +31,13 @@
           }
         }
       },
+      "screen": {
+        "file|screen": "tokens/screen.json",
+        "_category": "media"
+      },
+      "index": {
+        "file|index": "tokens/index.json"
+      },
       "file|ot": "tokens/_init/ot.json#ot",
       "shade": {
         "value": {

@@ -269,6 +269,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     path: "c2/Ripple"
   },
   {
+    name: "C2Scrollbar",
+    design: "c2",
+    code: "c2-scrollbar",
+    path: "c2/Scrollbar"
+  },
+  {
     name: "C2Skeleton",
     design: "c2",
     code: "c2-skeleton",
@@ -279,6 +285,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     design: "c2",
     code: "c2-switch",
     path: "c2/Switch"
+  },
+  {
+    name: "C2Window",
+    design: "c2",
+    code: "c2-window",
+    path: "c2/Window"
   }
 ], x = {
   m2: [
@@ -1539,6 +1551,17 @@ const h = "ui", y = "Ui", m = "library", f = [
     "ot-typography-strikethrough-lg-textCase",
     "ot-typography-strikethrough-lg-fontWeight",
     "ot-typography-strikethrough-lg-letterSpacing",
+    "ot-screen-sm",
+    "ot-screen-md",
+    "ot-screen-lg",
+    "ot-screen-xl",
+    "ot-screen-2xl",
+    "ot-index-0",
+    "ot-index-1",
+    "ot-index-2",
+    "ot-index-3",
+    "ot-index-4",
+    "ot-index-5",
     "ot-light-semantic-color-carmine-0",
     "ot-light-semantic-color-carmine-20",
     "ot-light-semantic-color-carmine-40",
@@ -3271,9 +3294,10 @@ function j(o = {}) {
       return a = i.mode, !0;
     },
     transform(r, i) {
-      return e.value && s.isJs(i) && (console.log("code", r), r = new S(
+      return e.value && s.isJs(i) && (r = new S(
         i,
         r,
+        o == null ? void 0 : o.icon,
         o == null ? void 0 : o.flag
       ).init(), r = new v(
         i,

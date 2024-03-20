@@ -216,6 +216,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     path: "c2/Checkbox"
   },
   {
+    name: "C2Chip",
+    design: "c2",
+    code: "c2-chip",
+    path: "c2/Chip"
+  },
+  {
     name: "C2FieldMessage",
     design: "c2",
     code: "c2-field-message",
@@ -264,6 +270,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     path: "c2/Ripple"
   },
   {
+    name: "C2Scrollbar",
+    design: "c2",
+    code: "c2-scrollbar",
+    path: "c2/Scrollbar"
+  },
+  {
     name: "C2Skeleton",
     design: "c2",
     code: "c2-skeleton",
@@ -274,6 +286,12 @@ const u = "ui", b = "Ui", x = "library", k = [
     design: "c2",
     code: "c2-switch",
     path: "c2/Switch"
+  },
+  {
+    name: "C2Window",
+    design: "c2",
+    code: "c2-window",
+    path: "c2/Window"
   }
 ], w = {
   m2: [
@@ -1534,6 +1552,17 @@ const u = "ui", b = "Ui", x = "library", k = [
     "ot-typography-strikethrough-lg-textCase",
     "ot-typography-strikethrough-lg-fontWeight",
     "ot-typography-strikethrough-lg-letterSpacing",
+    "ot-screen-sm",
+    "ot-screen-md",
+    "ot-screen-lg",
+    "ot-screen-xl",
+    "ot-screen-2xl",
+    "ot-index-0",
+    "ot-index-1",
+    "ot-index-2",
+    "ot-index-3",
+    "ot-index-4",
+    "ot-index-5",
     "ot-light-semantic-color-carmine-0",
     "ot-light-semantic-color-carmine-20",
     "ot-light-semantic-color-carmine-40",
@@ -1832,6 +1861,76 @@ const u = "ui", b = "Ui", x = "library", k = [
     "ot-light-asemantic-color-cerise-700",
     "ot-light-asemantic-color-cerise-800",
     "ot-light-asemantic-color-cerise-900",
+    "ot-light-intent-informative-0",
+    "ot-light-intent-informative-20",
+    "ot-light-intent-informative-40",
+    "ot-light-intent-informative-60",
+    "ot-light-intent-informative-80",
+    "ot-light-intent-informative-100",
+    "ot-light-intent-informative-200",
+    "ot-light-intent-informative-300",
+    "ot-light-intent-informative-400",
+    "ot-light-intent-informative-500",
+    "ot-light-intent-informative-600",
+    "ot-light-intent-informative-700",
+    "ot-light-intent-informative-800",
+    "ot-light-intent-informative-900",
+    "ot-light-intent-positive-0",
+    "ot-light-intent-positive-20",
+    "ot-light-intent-positive-40",
+    "ot-light-intent-positive-60",
+    "ot-light-intent-positive-80",
+    "ot-light-intent-positive-100",
+    "ot-light-intent-positive-200",
+    "ot-light-intent-positive-300",
+    "ot-light-intent-positive-400",
+    "ot-light-intent-positive-500",
+    "ot-light-intent-positive-600",
+    "ot-light-intent-positive-700",
+    "ot-light-intent-positive-800",
+    "ot-light-intent-positive-900",
+    "ot-light-intent-negative-0",
+    "ot-light-intent-negative-20",
+    "ot-light-intent-negative-40",
+    "ot-light-intent-negative-60",
+    "ot-light-intent-negative-80",
+    "ot-light-intent-negative-100",
+    "ot-light-intent-negative-200",
+    "ot-light-intent-negative-300",
+    "ot-light-intent-negative-400",
+    "ot-light-intent-negative-500",
+    "ot-light-intent-negative-600",
+    "ot-light-intent-negative-700",
+    "ot-light-intent-negative-800",
+    "ot-light-intent-negative-900",
+    "ot-light-intent-neutral-0",
+    "ot-light-intent-neutral-0-opacity",
+    "ot-light-intent-neutral-20",
+    "ot-light-intent-neutral-20-opacity",
+    "ot-light-intent-neutral-40",
+    "ot-light-intent-neutral-40-opacity",
+    "ot-light-intent-neutral-60",
+    "ot-light-intent-neutral-60-opacity",
+    "ot-light-intent-neutral-80",
+    "ot-light-intent-neutral-80-opacity",
+    "ot-light-intent-neutral-100",
+    "ot-light-intent-neutral-100-opacity",
+    "ot-light-intent-neutral-200",
+    "ot-light-intent-neutral-200-opacity",
+    "ot-light-intent-neutral-300",
+    "ot-light-intent-neutral-300-opacity",
+    "ot-light-intent-neutral-400",
+    "ot-light-intent-neutral-400-opacity",
+    "ot-light-intent-neutral-500",
+    "ot-light-intent-neutral-500-opacity",
+    "ot-light-intent-neutral-600",
+    "ot-light-intent-neutral-600-opacity",
+    "ot-light-intent-neutral-700",
+    "ot-light-intent-neutral-700-opacity",
+    "ot-light-intent-neutral-800",
+    "ot-light-intent-neutral-800-opacity",
+    "ot-light-intent-neutral-900",
+    "ot-light-intent-neutral-900-opacity",
     "ot-dark-semantic-color-carmine-0",
     "ot-dark-semantic-color-carmine-20",
     "ot-dark-semantic-color-carmine-40",
@@ -2042,6 +2141,76 @@ const u = "ui", b = "Ui", x = "library", k = [
     "ot-dark-asemantic-color-cerise-700",
     "ot-dark-asemantic-color-cerise-800",
     "ot-dark-asemantic-color-cerise-900",
+    "ot-dark-intent-informative-0",
+    "ot-dark-intent-informative-20",
+    "ot-dark-intent-informative-40",
+    "ot-dark-intent-informative-60",
+    "ot-dark-intent-informative-80",
+    "ot-dark-intent-informative-100",
+    "ot-dark-intent-informative-200",
+    "ot-dark-intent-informative-300",
+    "ot-dark-intent-informative-400",
+    "ot-dark-intent-informative-500",
+    "ot-dark-intent-informative-600",
+    "ot-dark-intent-informative-700",
+    "ot-dark-intent-informative-800",
+    "ot-dark-intent-informative-900",
+    "ot-dark-intent-positive-0",
+    "ot-dark-intent-positive-20",
+    "ot-dark-intent-positive-40",
+    "ot-dark-intent-positive-60",
+    "ot-dark-intent-positive-80",
+    "ot-dark-intent-positive-100",
+    "ot-dark-intent-positive-200",
+    "ot-dark-intent-positive-300",
+    "ot-dark-intent-positive-400",
+    "ot-dark-intent-positive-500",
+    "ot-dark-intent-positive-600",
+    "ot-dark-intent-positive-700",
+    "ot-dark-intent-positive-800",
+    "ot-dark-intent-positive-900",
+    "ot-dark-intent-negative-0",
+    "ot-dark-intent-negative-20",
+    "ot-dark-intent-negative-40",
+    "ot-dark-intent-negative-60",
+    "ot-dark-intent-negative-80",
+    "ot-dark-intent-negative-100",
+    "ot-dark-intent-negative-200",
+    "ot-dark-intent-negative-300",
+    "ot-dark-intent-negative-400",
+    "ot-dark-intent-negative-500",
+    "ot-dark-intent-negative-600",
+    "ot-dark-intent-negative-700",
+    "ot-dark-intent-negative-800",
+    "ot-dark-intent-negative-900",
+    "ot-dark-intent-neutral-0",
+    "ot-dark-intent-neutral-0-opacity",
+    "ot-dark-intent-neutral-20",
+    "ot-dark-intent-neutral-20-opacity",
+    "ot-dark-intent-neutral-40",
+    "ot-dark-intent-neutral-40-opacity",
+    "ot-dark-intent-neutral-60",
+    "ot-dark-intent-neutral-60-opacity",
+    "ot-dark-intent-neutral-80",
+    "ot-dark-intent-neutral-80-opacity",
+    "ot-dark-intent-neutral-100",
+    "ot-dark-intent-neutral-100-opacity",
+    "ot-dark-intent-neutral-200",
+    "ot-dark-intent-neutral-200-opacity",
+    "ot-dark-intent-neutral-300",
+    "ot-dark-intent-neutral-300-opacity",
+    "ot-dark-intent-neutral-400",
+    "ot-dark-intent-neutral-400-opacity",
+    "ot-dark-intent-neutral-500",
+    "ot-dark-intent-neutral-500-opacity",
+    "ot-dark-intent-neutral-600",
+    "ot-dark-intent-neutral-600-opacity",
+    "ot-dark-intent-neutral-700",
+    "ot-dark-intent-neutral-700-opacity",
+    "ot-dark-intent-neutral-800",
+    "ot-dark-intent-neutral-800-opacity",
+    "ot-dark-intent-neutral-900",
+    "ot-dark-intent-neutral-900-opacity",
     "ot-dimension-0",
     "ot-dimension-6",
     "ot-dimension-12",
@@ -2096,76 +2265,6 @@ const u = "ui", b = "Ui", x = "library", k = [
     "ot-shade-700",
     "ot-shade-800",
     "ot-shade-900",
-    "ot-intent-informative-0",
-    "ot-intent-informative-20",
-    "ot-intent-informative-40",
-    "ot-intent-informative-60",
-    "ot-intent-informative-80",
-    "ot-intent-informative-100",
-    "ot-intent-informative-200",
-    "ot-intent-informative-300",
-    "ot-intent-informative-400",
-    "ot-intent-informative-500",
-    "ot-intent-informative-600",
-    "ot-intent-informative-700",
-    "ot-intent-informative-800",
-    "ot-intent-informative-900",
-    "ot-intent-positive-0",
-    "ot-intent-positive-20",
-    "ot-intent-positive-40",
-    "ot-intent-positive-60",
-    "ot-intent-positive-80",
-    "ot-intent-positive-100",
-    "ot-intent-positive-200",
-    "ot-intent-positive-300",
-    "ot-intent-positive-400",
-    "ot-intent-positive-500",
-    "ot-intent-positive-600",
-    "ot-intent-positive-700",
-    "ot-intent-positive-800",
-    "ot-intent-positive-900",
-    "ot-intent-negative-0",
-    "ot-intent-negative-20",
-    "ot-intent-negative-40",
-    "ot-intent-negative-60",
-    "ot-intent-negative-80",
-    "ot-intent-negative-100",
-    "ot-intent-negative-200",
-    "ot-intent-negative-300",
-    "ot-intent-negative-400",
-    "ot-intent-negative-500",
-    "ot-intent-negative-600",
-    "ot-intent-negative-700",
-    "ot-intent-negative-800",
-    "ot-intent-negative-900",
-    "ot-intent-neutral-0",
-    "ot-intent-neutral-0-opacity",
-    "ot-intent-neutral-20",
-    "ot-intent-neutral-20-opacity",
-    "ot-intent-neutral-40",
-    "ot-intent-neutral-40-opacity",
-    "ot-intent-neutral-60",
-    "ot-intent-neutral-60-opacity",
-    "ot-intent-neutral-80",
-    "ot-intent-neutral-80-opacity",
-    "ot-intent-neutral-100",
-    "ot-intent-neutral-100-opacity",
-    "ot-intent-neutral-200",
-    "ot-intent-neutral-200-opacity",
-    "ot-intent-neutral-300",
-    "ot-intent-neutral-300-opacity",
-    "ot-intent-neutral-400",
-    "ot-intent-neutral-400-opacity",
-    "ot-intent-neutral-500",
-    "ot-intent-neutral-500-opacity",
-    "ot-intent-neutral-600",
-    "ot-intent-neutral-600-opacity",
-    "ot-intent-neutral-700",
-    "ot-intent-neutral-700-opacity",
-    "ot-intent-neutral-800",
-    "ot-intent-neutral-800-opacity",
-    "ot-intent-neutral-900",
-    "ot-intent-neutral-900-opacity",
     "st-selectable-borderRadius-size-none",
     "st-selectable-borderRadius-size-x",
     "st-selectable-borderRadius-size-xs",
@@ -2832,7 +2931,7 @@ const u = "ui", b = "Ui", x = "library", k = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, n = {
+}, s = {
   name: u,
   nameFirst: b,
   library: x,
@@ -2852,8 +2951,8 @@ class g {
    * @param url link to the site for the request /<br>ссылка на сайт для запроса
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a, i, s) {
-    this.id = t, this.code = e, this.mode = a, this.path = i, this.url = s, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
+  constructor(t, e, a, i, n) {
+    this.id = t, this.code = e, this.mode = a, this.path = i, this.url = n, this.className = "Api", this.methodAdd = "addResponse", this.methodUrl = "setUrl";
   }
   /**
    * Initialization of data transformation.<br>
@@ -2891,7 +2990,7 @@ class g {
    */
   importApi(t) {
     const e = `dev${this.className}User`, a = [
-      `import { ${this.className} } from '${n.name}';`
+      `import { ${this.className} } from '${s.name}';`
     ];
     return this.path && this.isPath() && a.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
@@ -2924,7 +3023,7 @@ class H {
   init() {
     if (this.is()) {
       const t = [
-        `import { ${this.getImports().join(", ")} } from '${n.name}/media';`
+        `import { ${this.getImports().join(", ")} } from '${s.name}/media';`
       ];
       return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
         "",
@@ -2946,14 +3045,14 @@ class H {
    * Возвращает название функции флага.
    */
   getNameFlag() {
-    return `make${n.nameFirst}Flags`;
+    return `make${s.nameFirst}Flags`;
   }
   /**
    * Returns the name of the icon function.<br>
    * Возвращает название функции иконки.
    */
   getNameIcon() {
-    return `make${n.nameFirst}Icons`;
+    return `make${s.nameFirst}Icons`;
   }
   /**
    * Returns data for connecting data.<br>
@@ -2964,7 +3063,7 @@ class H {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const d = `(?<=<|'|"\\s)(${n.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, M = new RegExp(d, "i"), F = new RegExp(d, "ig");
+const d = `(?<=<|'|"\\s)(${s.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, M = new RegExp(d, "i"), F = new RegExp(d, "ig");
 class P {
   /**
    * Constructor
@@ -2987,8 +3086,8 @@ class P {
         const e = [];
         let a = this.getCode();
         return t.forEach((i) => {
-          const s = this.findComponent(i);
-          s && e.indexOf(s.name) === -1 && !this.isImport(s) && (e.push(s.name), a = this.importComponent(a, s), a = this.importStyle(a, s));
+          const n = this.findComponent(i);
+          n && e.indexOf(n.name) === -1 && !this.isImport(n) && (e.push(n.name), a = this.importComponent(a, n), a = this.importStyle(a, n));
         }), a;
       }
     }
@@ -3007,7 +3106,7 @@ class P {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${n.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${s.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -3036,7 +3135,7 @@ class P {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return n.components.find(
+    return s.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -3048,7 +3147,7 @@ class P {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${n.name}/${e.name}';`);
+import {${e.name}} from'${s.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -3097,7 +3196,7 @@ class D {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${n.name}/${t}/style';`;
+    return `import '${s.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
@@ -3113,7 +3212,7 @@ class D {
     }, this;
   }
 }
-const W = `// ${n.name}-none`, I = `// ${n.name}-mode-none`;
+const W = `// ${s.name}-none`, I = `// ${s.name}-mode-none`;
 class j {
   /**
    * Constructor
@@ -3122,7 +3221,7 @@ class j {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a = n.designMain) {
+  constructor(t, e, a = s.designMain) {
     this.id = t, this.code = e, this.design = a;
   }
   /**
@@ -3149,7 +3248,7 @@ class j {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${n.name}/${this.design}/properties`;
+    const e = `${s.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -3168,7 +3267,7 @@ ${t}`;
    */
   initVars(t) {
     var e;
-    const a = (e = n.vars) == null ? void 0 : e[this.design];
+    const a = (e = s.vars) == null ? void 0 : e[this.design];
     return a && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (i) => a.indexOf(i) !== -1 ? `${this.design}-${i}` : i) : t;
   }
   /**
@@ -3177,12 +3276,12 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = n.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = s.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
 ]*${I})`, "igm");
-    return t.match(new RegExp(a, "im")) ? t.replace(a, (i, s, h, m) => {
+    return t.match(new RegExp(a, "im")) ? t.replace(a, (i, n, h, m) => {
       const c = h.trim();
-      return `@include ${e == null ? void 0 : e[s.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${m}`;
+      return `@include ${e == null ? void 0 : e[n.trim()]}(${c.match(/[()]/) ? `#{${c}}` : c})${m}`;
     }) : t;
   }
 }
@@ -3192,27 +3291,28 @@ function p(r = {}) {
   return {
     name: "vite-plugin-vue-ui",
     enforce: "pre",
-    apply(i, s) {
-      return a = s.mode, !0;
+    apply(i, n) {
+      return a = n.mode, !0;
     },
-    transform(i, s) {
-      return e.value && l.isJs(s) && (console.log("code", i), i = new H(
-        s,
+    transform(i, n) {
+      return e.value && l.isJs(n) && (i = new H(
+        n,
         i,
+        r == null ? void 0 : r.icon,
         r == null ? void 0 : r.flag
       ).init(), i = new C(
-        s,
+        n,
         i,
         a,
         r == null ? void 0 : r.translate,
         r == null ? void 0 : r.translateUrl
       ).init(), i = new g(
-        s,
+        n,
         i,
         a,
         r == null ? void 0 : r.api,
         r == null ? void 0 : r.apiUrl
-      ).init(), e.value = !1), ((r == null ? void 0 : r.importComponents) ?? !0) && (i = new P(t, s, i).init()), (r == null ? void 0 : r.style) !== !1 && (i = new j(s, i, r == null ? void 0 : r.style).init()), {
+      ).init(), e.value = !1), ((r == null ? void 0 : r.importComponents) ?? !0) && (i = new P(t, n, i).init()), (r == null ? void 0 : r.style) !== !1 && (i = new j(n, i, r == null ? void 0 : r.style).init()), {
         code: i
       };
     }
@@ -3349,11 +3449,17 @@ const B = y({
       name: "C2Ripple",
       filePath: "ui/dist/C2Ripple.vue"
     }), await o({
+      name: "C2Scrollbar",
+      filePath: "ui/dist/C2Scrollbar.vue"
+    }), await o({
       name: "C2Skeleton",
       filePath: "ui/dist/C2Skeleton.vue"
     }), await o({
       name: "C2Switch",
       filePath: "ui/dist/C2Switch.vue"
+    }), await o({
+      name: "C2Window",
+      filePath: "ui/dist/C2Window.vue"
     });
   }
 });

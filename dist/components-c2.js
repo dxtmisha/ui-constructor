@@ -10,9 +10,11 @@ import { C2MutationItem as a } from "./C2MutationItem.js";
 import { C2Progress as c } from "./C2Progress.js";
 import { C2Radio as l } from "./C2Radio.js";
 import { C2Ripple as u } from "./C2Ripple.js";
-import { C2Skeleton as g } from "./C2Skeleton.js";
-import { C2Switch as h } from "./C2Switch.js";
-const I = {
+import { C2Scrollbar as g } from "./C2Scrollbar.js";
+import { C2Skeleton as h } from "./C2Skeleton.js";
+import { C2Switch as d } from "./C2Switch.js";
+import { C2Window as I } from "./C2Window.js";
+const M = {
   C2Button: i,
   C2Checkbox: p,
   C2Chip: C,
@@ -24,16 +26,18 @@ const I = {
   C2Progress: c,
   C2Radio: l,
   C2Ripple: u,
-  C2Skeleton: g,
-  C2Switch: h
-}, q = {
+  C2Scrollbar: g,
+  C2Skeleton: h,
+  C2Switch: d,
+  C2Window: I
+}, A = {
   install: async (o) => {
-    t(I, (m, r) => {
-      o.component(r, m);
+    t(M, (r, m) => {
+      o.component(m, r);
     });
   }
 };
 export {
-  I as components,
-  q as uiC2ComponentsPlugin
+  M as components,
+  A as uiC2ComponentsPlugin
 };

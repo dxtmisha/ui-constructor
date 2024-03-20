@@ -1,0 +1,176 @@
+@import "../../styles/all";
+
+@mixin mixinWindowToken {
+  // :style [!] System label / Системная метка
+  --c2-window-menuSizeMultiplier: 1;
+  --c2-window-padding: var(--c2-ot-dimension-100);
+  --c2-window-backgroundColor: var(--c2-st-content-background-color-default-solid-normal);
+  --c2-window-backgroundOpacity: var(--c2-ot-opacity-50);
+  
+  z-index: var(--c2-ot-index-4);
+  
+  &__body {
+    @include backgroundColor(#{var(--c2-st-content-background-color-default-solid-normal)});
+    @include backgroundOpacity(#{var(--c2-ot-opacity-100)});
+    
+    border-radius: var(--c2-st-selectable-borderRadius-size-md);
+    
+    box-shadow: 0px 2px 8px -2px rgba(0, 80, 178, 0.06), 0px 8px 16px -4px rgba(4, 51, 103, 0.11);
+  }
+  
+  &--width {
+    &--auto {
+      --c2-window-width: auto;
+    }
+    
+    &--max {
+      --c2-window-width: 100%;
+    }
+    
+    &--sm {
+      --c2-window-width: calc(var(--c2-ot-dimension-base) * 512);
+    }
+    
+    &--md {
+      --c2-window-width: calc(var(--c2-ot-dimension-base) * 768);
+    }
+    
+    &--lg {
+      --c2-window-width: calc(var(--c2-ot-dimension-base) * 1024);
+    }
+    
+    &--custom {
+      --c2-window-width: var(--c2-window-sys-width);
+    }
+  }
+  
+  &--height {
+    &--auto {
+      --c2-window-height: auto;
+    }
+    
+    &--max {
+      --c2-window-height: 100%;
+    }
+    
+    &--sm {
+      --c2-window-height: calc(var(--c2-ot-dimension-base) * 256);
+    }
+    
+    &--md {
+      --c2-window-height: calc(var(--c2-ot-dimension-base) * 384);
+    }
+    
+    &--lg {
+      --c2-window-height: calc(var(--c2-ot-dimension-base) * 512);
+    }
+    
+    &--custom {
+      --c2-window-height: var(--c2-window-sys-height);
+    }
+  }
+  
+  &--adaptive {
+    &--menu {
+      --c2-window-menuSizeMultiplier: 0.5;
+      --c2-window-backgroundOpacity: 0;
+      --c2-window-transformOrigin: var(--c2-window-origin-x) var(--c2-window-origin-y);
+      
+      top: var(--c2-window-sys-inset-y);
+      @include right(#{auto});
+      bottom: auto;
+      @include left(#{var(--c2-window-sys-inset-x)});
+      
+      padding: 0;
+      
+      content: '--MENU--';
+      
+      & .c2-window__body {
+        z-index: var(--c2-ot-index-2);
+        top: auto;
+        
+        max-width: calc(100dvw - (var(--c2-window-padding) * 2));
+        max-height: calc(100dvh - (var(--c2-window-padding) * 2));
+        
+        @include backgroundColor(#{var(--c2-st-content-background-color-default-solid-normal)});
+        @include backgroundOpacity(#{var(--c2-ot-opacity-100)});
+      }
+    }
+    
+    &--modalDynamic {
+      &.c2-window--location {
+        &--top {
+          align-items: flex-start;
+        }
+        
+        &--bottom {
+          align-items: flex-end;
+        }
+      }
+    }
+    
+    &--static {
+      content: '--STATIC--';
+    }
+    
+    &--auto {
+      padding-top: var(--c2-ot-dimension-300);
+      padding-bottom: var(--c2-ot-dimension-300);
+      
+      &.c2-window--location {
+        &--top {
+          align-items: flex-start;
+        }
+        
+        &--bottom {
+          align-items: flex-end;
+        }
+      }
+      
+      @media screen and (min-width: 640px) {
+        --c2-window-menuSizeMultiplier: 0.5;
+        --c2-window-backgroundOpacity: 0;
+        --c2-window-transformOrigin: var(--c2-window-origin-x) var(--c2-window-origin-y);
+        
+        top: var(--c2-window-sys-inset-y);
+        @include right(#{auto});
+        bottom: auto;
+        @include left(#{var(--c2-window-sys-inset-x)});
+        
+        padding: 0;
+        
+        content: '--MENU--';
+        
+        & .c2-window__body {
+          z-index: var(--c2-ot-index-2);
+          top: auto;
+          
+          max-width: calc(100dvw - (var(--c2-window-padding) * 2));
+          max-height: calc(100dvh - (var(--c2-window-padding) * 2));
+          
+          @include backgroundColor(#{var(--c2-st-content-background-color-default-solid-normal)});
+          @include backgroundOpacity(#{var(--c2-ot-opacity-100)});
+        }
+      }
+    }
+    
+    &--staticSm {
+      @media screen and (min-width: 640px) {
+        content: '--STATIC--';
+      }
+    }
+    
+    &--staticMd {
+      @media screen and (min-width: 768px) {
+        content: '--STATIC--';
+      }
+    }
+    
+    &--staticLg {
+      @media screen and (min-width: 1024px) {
+        content: '--STATIC--';
+      }
+    }
+  }
+  // :style [!] System label / Системная метка
+}

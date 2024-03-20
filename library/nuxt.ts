@@ -184,12 +184,20 @@ export default defineNuxtModule({
       filePath: 'ui/dist/C2Ripple.vue'
     })
     await addComponent({
+      name: 'C2Scrollbar',
+      filePath: 'ui/dist/C2Scrollbar.vue'
+    })
+    await addComponent({
       name: 'C2Skeleton',
       filePath: 'ui/dist/C2Skeleton.vue'
     })
     await addComponent({
       name: 'C2Switch',
       filePath: 'ui/dist/C2Switch.vue'
+    })
+    await addComponent({
+      name: 'C2Window',
+      filePath: 'ui/dist/C2Window.vue'
     })
   }
 })
