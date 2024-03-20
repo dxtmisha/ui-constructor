@@ -148,6 +148,10 @@ export default defineNuxtModule({
       filePath: 'ui/dist/C2Checkbox.vue'
     })
     await addComponent({
+      name: 'C2Chip',
+      filePath: 'ui/dist/C2Chip.vue'
+    })
+    await addComponent({
       name: 'C2FieldMessage',
       filePath: 'ui/dist/C2FieldMessage.vue'
     })

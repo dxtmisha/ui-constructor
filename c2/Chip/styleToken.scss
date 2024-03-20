@@ -1,0 +1,7 @@
+@import "../../styles/all";
+
+@mixin mixinChipToken {
+  // :style [!] System label / Системная метка
+  --c2-chip-main: var(--d-chip);
+  // :style [!] System label / Системная метка
+}

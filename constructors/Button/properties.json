@@ -1,14 +1,5 @@
 {
-  "gap": {
-    "_type": "var"
-  },
   "padding": {
-    "_type": "var"
-  },
-  "color": {
-    "_type": "var"
-  },
-  "background-color": {
     "_type": "var"
   },
   "border-radius": "0",

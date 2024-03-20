@@ -576,5 +576,92 @@
       --c2-palette-dark900: var(--c2-ot-dark-asemantic-color-cerise-900);
       --sys-palette: var(--c2-ot-dark-asemantic-color-cerise-300);
     }
+    
+    &--informative {
+      --c2-palette-dark0: var(--c2-ot-light-intent-informative-0);
+      --c2-palette-dark20: var(--c2-ot-light-intent-informative-20);
+      --c2-palette-dark40: var(--c2-ot-light-intent-informative-40);
+      --c2-palette-dark60: var(--c2-ot-light-intent-informative-60);
+      --c2-palette-dark80: var(--c2-ot-light-intent-informative-80);
+      --c2-palette-dark100: var(--c2-ot-light-intent-informative-100);
+      --c2-palette-dark200: var(--c2-ot-light-intent-informative-200);
+      --c2-palette-dark300: var(--c2-ot-light-intent-informative-300);
+      --c2-palette-dark400: var(--c2-ot-light-intent-informative-400);
+      --c2-palette-dark500: var(--c2-ot-light-intent-informative-500);
+      --c2-palette-dark600: var(--c2-ot-light-intent-informative-600);
+      --c2-palette-dark700: var(--c2-ot-light-intent-informative-700);
+      --c2-palette-dark800: var(--c2-ot-light-intent-informative-800);
+      --c2-palette-dark900: var(--c2-ot-light-intent-informative-900);
+      --sys-palette: var(--c2-ot-light-intent-informative-300);
+    }
+    
+    &--positive {
+      --c2-palette-dark0: var(--c2-ot-light-intent-positive-0);
+      --c2-palette-dark20: var(--c2-ot-light-intent-positive-20);
+      --c2-palette-dark40: var(--c2-ot-light-intent-positive-40);
+      --c2-palette-dark60: var(--c2-ot-light-intent-positive-60);
+      --c2-palette-dark80: var(--c2-ot-light-intent-positive-80);
+      --c2-palette-dark100: var(--c2-ot-light-intent-positive-100);
+      --c2-palette-dark200: var(--c2-ot-light-intent-positive-200);
+      --c2-palette-dark300: var(--c2-ot-light-intent-positive-300);
+      --c2-palette-dark400: var(--c2-ot-light-intent-positive-400);
+      --c2-palette-dark500: var(--c2-ot-light-intent-positive-500);
+      --c2-palette-dark600: var(--c2-ot-light-intent-positive-600);
+      --c2-palette-dark700: var(--c2-ot-light-intent-positive-700);
+      --c2-palette-dark800: var(--c2-ot-light-intent-positive-800);
+      --c2-palette-dark900: var(--c2-ot-light-intent-positive-900);
+      --sys-palette: var(--c2-ot-light-intent-positive-300);
+    }
+    
+    &--negative {
+      --c2-palette-dark0: var(--c2-ot-light-intent-negative-0);
+      --c2-palette-dark20: var(--c2-ot-light-intent-negative-20);
+      --c2-palette-dark40: var(--c2-ot-light-intent-negative-40);
+      --c2-palette-dark60: var(--c2-ot-light-intent-negative-60);
+      --c2-palette-dark80: var(--c2-ot-light-intent-negative-80);
+      --c2-palette-dark100: var(--c2-ot-light-intent-negative-100);
+      --c2-palette-dark200: var(--c2-ot-light-intent-negative-200);
+      --c2-palette-dark300: var(--c2-ot-light-intent-negative-300);
+      --c2-palette-dark400: var(--c2-ot-light-intent-negative-400);
+      --c2-palette-dark500: var(--c2-ot-light-intent-negative-500);
+      --c2-palette-dark600: var(--c2-ot-light-intent-negative-600);
+      --c2-palette-dark700: var(--c2-ot-light-intent-negative-700);
+      --c2-palette-dark800: var(--c2-ot-light-intent-negative-800);
+      --c2-palette-dark900: var(--c2-ot-light-intent-negative-900);
+      --sys-palette: var(--c2-ot-light-intent-negative-300);
+    }
+    
+    &--neutral {
+      --c2-palette-dark0: var(--c2-ot-light-intent-neutral-0);
+      --c2-palette-dark0-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-0))};
+      --c2-palette-dark20: var(--c2-ot-light-intent-neutral-20);
+      --c2-palette-dark20-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-20))};
+      --c2-palette-dark40: var(--c2-ot-light-intent-neutral-40);
+      --c2-palette-dark40-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-40))};
+      --c2-palette-dark60: var(--c2-ot-light-intent-neutral-60);
+      --c2-palette-dark60-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-60))};
+      --c2-palette-dark80: var(--c2-ot-light-intent-neutral-80);
+      --c2-palette-dark80-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-80))};
+      --c2-palette-dark100: var(--c2-ot-light-intent-neutral-100);
+      --c2-palette-dark100-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-100))};
+      --c2-palette-dark200: var(--c2-ot-light-intent-neutral-200);
+      --c2-palette-dark200-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-200))};
+      --c2-palette-dark300: var(--c2-ot-light-intent-neutral-300);
+      --c2-palette-dark300-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-300))};
+      --c2-palette-dark400: var(--c2-ot-light-intent-neutral-400);
+      --c2-palette-dark400-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-400))};
+      --c2-palette-dark500: var(--c2-ot-light-intent-neutral-500);
+      --c2-palette-dark500-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-500))};
+      --c2-palette-dark600: var(--c2-ot-light-intent-neutral-600);
+      --c2-palette-dark600-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-600))};
+      --c2-palette-dark700: var(--c2-ot-light-intent-neutral-700);
+      --c2-palette-dark700-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-700))};
+      --c2-palette-dark800: var(--c2-ot-light-intent-neutral-800);
+      --c2-palette-dark800-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-800))};
+      --c2-palette-dark900: var(--c2-ot-light-intent-neutral-900);
+      --c2-palette-dark900-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-900))};
+      --sys-palette: var(--c2-ot-light-intent-neutral-300);
+      --sys-palette-opacity: #{toColorOpacity(var(--c2-ot-light-intent-neutral-300))};
+    }
   }
 }

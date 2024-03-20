@@ -12,12 +12,10 @@ import {
   c2ButtonDescription,
   c2ButtonDescriptionGhost,
   c2ButtonDescriptionHierarchy,
-  c2ButtonDescriptionIntent,
   c2ButtonDescriptionOutline,
   c2ButtonDescriptionPrimary,
   c2ButtonDescriptionSecondary,
   c2ButtonNameHierarchy,
-  c2ButtonNameIntent,
   c2ButtonNameSize
 } from 'ui/book/c2/button.ts'
 import { propsValues } from 'ui/c2/Button/props.ts'
@@ -179,56 +177,6 @@ export const ButtonSize: Story = {
       style: {
         display: 'flex',
         alignItems: 'center',
-        gap: '16px'
-      }
-    }, children)
-  }
-}
-
-export const ButtonIntent: Story = {
-  name: c2ButtonNameIntent,
-  parameters: {
-    docs: {
-      description: {
-        story: c2ButtonDescriptionIntent
-      }
-    }
-  },
-  render () {
-    const children: VNode[] = []
-    const styleItem = {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '16px'
-    }
-
-    c2ButtonStyles.forEach(item => {
-      const intents: VNode[] = []
-
-      ;[
-        undefined,
-        ...propsValues.intent
-      ].forEach(intent => intents.push(
-        h(C2Button, {
-          ...item.props,
-          label: intent ?? c2ButtonValues.label,
-          icon: 'home',
-          intent
-        })
-      ))
-
-      children.push(
-        h('div', { class: 'c2-font--label--sm' }, item.name),
-        h('div', {
-          style: styleItem
-        }, intents)
-      )
-    })
-
-    return () => h('div', {
-      style: {
-        display: 'flex',
-        flexDirection: 'column',
         gap: '16px'
       }
     }, children)

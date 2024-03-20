@@ -1,34 +1,32 @@
 @import "../../styles/all";
+@import "../styles/style";
 
 @mixin mixinButtonToken {
   // :style [!] System label / Системная метка
-  --c2-button-color: var(--c2-st-action-foreground-color-primary-normal);
   --c2-button-transitionFunction: var(--d-sys-transitionFunction-standard);
-  --c2-button-spacer-padding: calc(5px * 2);
-  --c2-button-spacer-lineContainer-width: 2px;
   
-  --c2-button-gap: var(--c2-st-global-distance-space-inline-md);
-  gap: var(--c2-st-global-distance-space-inline-md);
+  gap: var(--c2-st-global-distance-space-inline-xs);
   
-  padding: var(--c2-st-global-distance-space-inset-2xl);
+  padding: var(--c2-st-global-distance-space-inset-lg) var(--c2-st-global-distance-space-inset-2xl);
+  
+  box-sizing: content-box;
+  min-height: var(--c2-st-global-distance-space-inset-4xl);
   
   font-family: var(--c2-ot-typography-fontFamily-base);
-  @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-112)});
+  @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-100)});
   font-weight: var(--c2-ot-typography-fontWeight-500);
-  @include lineHeight(#{var(--c2-ot-typography-lineHeight-150)});
+  @include lineHeight(#{var(--c2-ot-typography-lineHeight-125)});
   letter-spacing: var(--c2-ot-typography-tracking-lg);
   @include textCase(#{var(--c2-ot-typography-textCase-none)});
   text-decoration: var(--c2-ot-typography-textDecoration-none);
   @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
   
-  border-radius: var(--c2-st-selectable-borderRadius-size-xl);
+  @include paletteColor(#{var(--c2-st-action-foreground-color-primary-normal)});
+  
+  border-radius: 0;
   
   transition-duration: var(--d-sys-transitionDuration-lg-close);
   transition-property: background-color, background-image, border, box-shadow;
-  
-  &__paddingSpacer {
-    @include width(#{calc(var(--c2-button-spacer-padding) + var(--c2-button-spacer-lineContainer-width) - (var(--c2-button-gap) * 2))});
-  }
   
   &:link {
     & .c2-button__label {
@@ -36,20 +34,30 @@
     }
   }
   
+  @include focus {
+    box-shadow: var(--c2-st-elevation-onLight-focus-md);
+  }
+  
   @include hover {
+    @include paletteColor(#{var(--c2-st-action-foreground-color-primary-hover)});
+    
     transition-duration: var(--d-sys-transitionDuration-sm);
   }
   
   @include active {
+    @include paletteColor(#{var(--c2-st-action-foreground-color-primary-active)});
+    
     transition-duration: var(--d-sys-transitionDuration-sm);
   }
   
   @include disabled {
+    opacity: 0.5;
+    
     transition-duration: var(--d-sys-transitionDuration-sm);
   }
   
   &--selected {
-    --c2-button-color: var(--c2-st-action-foreground-color-primary-select);
+    @include paletteColor(#{var(--c2-st-action-foreground-color-primary-select)});
   }
   
   &--adaptive {
@@ -70,93 +78,236 @@
     }
   }
   
-  &--size {
-    &--lg {
-      --c2-button-spacer-padding: 0 3px;
+  &--primary {
+    @include color(#{var(--c2-st-action-foreground-color-onprimary-normal)});
+    
+    @include paletteBackground(#{var(--c2-st-action-background-color-primary-solid-normal)});
+    
+    @include hover('.c2-button') {
+      @include color(#{var(--c2-st-action-foreground-color-onprimary-hover)});
       
-      gap: var(--c2-st-global-distance-space-inline-sm);
-      
-      padding: var(--c2-st-global-distance-space-inset-xl);
-      
-      font-family: var(--c2-ot-typography-fontFamily-base);
-      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-100)});
-      font-weight: var(--c2-ot-typography-fontWeight-500);
-      @include lineHeight(#{var(--c2-ot-typography-lineHeight-125)});
-      letter-spacing: var(--c2-ot-typography-tracking-lg);
-      @include textCase(#{var(--c2-ot-typography-textCase-none)});
-      text-decoration: var(--c2-ot-typography-textDecoration-none);
-      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
-      
-      border-radius: var(--c2-st-selectable-borderRadius-size-lg);
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-solid-hover)});
     }
     
-    &--md {
-      --c2-button-spacer-padding: 0 3px;
+    @include active('.c2-button') {
+      @include color(#{var(--c2-st-action-foreground-color-onprimary-active)});
       
-      gap: var(--c2-st-global-distance-space-inline-xs);
-      
-      padding: var(--c2-st-global-distance-space-inset-lg);
-      
-      font-family: var(--c2-ot-typography-fontFamily-base);
-      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-100)});
-      font-weight: var(--c2-ot-typography-fontWeight-500);
-      @include lineHeight(#{var(--c2-ot-typography-lineHeight-125)});
-      letter-spacing: var(--c2-ot-typography-tracking-lg);
-      @include textCase(#{var(--c2-ot-typography-textCase-none)});
-      text-decoration: var(--c2-ot-typography-textDecoration-none);
-      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
-      
-      border-radius: var(--c2-st-selectable-borderRadius-size-md);
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-solid-active)});
     }
     
-    &--sm {
-      --c2-button-spacer-padding: 0 2px;
+    &.c2-button--selected {
+      @include color(#{var(--c2-st-action-foreground-color-onprimary-select)});
       
-      gap: var(--c2-st-global-distance-space-inline-xs);
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-solid-select)});
+    }
+    
+    &.c2-palette--neutral {
+      @include color(#{var(--c2-st-action-background-color-neutral-invert-normal)});
       
-      padding: var(--c2-st-global-distance-space-inset-lg);
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-solid-normal)});
       
-      font-family: var(--c2-ot-typography-fontFamily-base);
-      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
-      font-weight: var(--c2-ot-typography-fontWeight-500);
-      @include lineHeight(#{var(--c2-ot-typography-lineHeight-100)});
-      letter-spacing: var(--c2-ot-typography-tracking-lg);
-      @include textCase(#{var(--c2-ot-typography-textCase-none)});
-      text-decoration: var(--c2-ot-typography-textDecoration-none);
-      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+      @include hover('.c2-button') {
+        @include color(#{var(--c2-st-action-background-color-neutral-invert-hover)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-solid-hover)});
+      }
       
-      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
+      @include active('.c2-button') {
+        @include color(#{var(--c2-st-action-background-color-neutral-invert-active)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-solid-active)});
+      }
       
-      & .c2-button__label {
-        padding: var(--c2-st-global-distance-space-inset-x)0;
+      &.c2-button--selected {
+        @include color(#{var(--c2-st-action-background-color-neutral-invert-select)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-solid-select)});
+      }
+    }
+  }
+  
+  &--secondary {
+    @include paletteBackground(#{var(--c2-st-action-background-color-primary-subtle-normal)});
+    
+    @include hover('.c2-button') {
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-subtle-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-subtle-active)});
+    }
+    
+    &.c2-button--selected {
+      @include paletteBackground(#{var(--c2-st-action-background-color-primary-subtle-select)});
+    }
+    
+    &.c2-palette--neutral {
+      @include color(#{var(--c2-st-action-foreground-color-neutral-normal)});
+      
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-normal)});
+      
+      @include hover('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-hover)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-hover)});
+      }
+      
+      @include active('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-active)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-active)});
+      }
+      
+      &.c2-button--selected {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-select)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-subtle-select)});
+      }
+    }
+  }
+  
+  &--outline {
+    --c2-button-borderStyle: solid;
+    --c2-button-borderWidth: 1px;
+    
+    @include paletteColor(#{var(--c2-st-action-foreground-color-neutral-normal)});
+    
+    @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-normal)});
+    
+    @include paletteBorder(#{var(--c2-st-action-border-color-neutral-subtle-normal)});
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      @include inset(#{0px});
+      
+      border-radius: inherit;
+      border: var(--c2-button-borderWidth) var(--c2-button-borderStyle);
+      @include paletteBorder(#{inherit});
+    }
+    
+    @include hover('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-foreground-color-neutral-hover)});
+      
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-hover)});
+      
+      @include paletteBorder(#{var(--c2-st-action-border-color-neutral-subtle-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include paletteColor(#{var(--c2-st-action-foreground-color-neutral-active)});
+      
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-active)});
+      
+      @include paletteBorder(#{var(--c2-st-action-border-color-neutral-subtle-active)});
+    }
+    
+    &.c2-button--selected {
+      @include paletteColor(#{var(--c2-st-action-foreground-color-neutral-select)});
+      
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-select)});
+      
+      @include paletteBorder(#{var(--c2-st-action-border-color-neutral-subtle-select)});
+    }
+    
+    &.c2-palette {
+      @include paletteColor(#{var(--c2-st-action-foreground-color-primary-normal)});
+      
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
+      
+      @include paletteBorder(#{var(--c2-st-action-foreground-color-primary-normal)});
+      
+      @include hover('.c2-button') {
+        @include paletteColor(#{var(--c2-st-action-foreground-color-primary-hover)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
+        
+        @include paletteBorder(#{var(--c2-st-action-foreground-color-primary-hover)});
+      }
+      
+      @include active('.c2-button') {
+        @include paletteColor(#{var(--c2-st-action-foreground-color-primary-active)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
+        
+        @include paletteBorder(#{var(--c2-st-action-foreground-color-primary-active)});
+      }
+      
+      &.c2-button--selected {
+        @include paletteColor(#{var(--c2-st-action-foreground-color-primary-selected)});
+        
+        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
+        
+        @include paletteBorder(#{var(--c2-st-action-foreground-color-primary-selected)});
       }
     }
     
-    &--xs {
-      --c2-button-spacer-padding: 0 1px;
+    &.c2-palette--neutral {
+      @include color(#{var(--c2-st-action-foreground-color-neutral-normal)});
       
-      gap: var(--c2-st-global-distance-space-inline-xs);
+      @include borderColor(#{var(--c2-st-action-foreground-color-neutral-normal)});
       
-      padding: var(--c2-st-global-distance-space-inset-md);
+      @include hover('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-hover)});
+        
+        @include borderColor(#{var(--c2-st-action-foreground-color-neutral-hover)});
+      }
       
-      font-family: var(--c2-ot-typography-fontFamily-base);
-      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
-      font-weight: var(--c2-ot-typography-fontWeight-500);
-      @include lineHeight(#{var(--c2-ot-typography-lineHeight-100)});
-      letter-spacing: var(--c2-ot-typography-tracking-lg);
-      @include textCase(#{var(--c2-ot-typography-textCase-none)});
-      text-decoration: var(--c2-ot-typography-textDecoration-none);
-      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
+      @include active('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-active)});
+        
+        @include borderColor(#{var(--c2-st-action-foreground-color-neutral-active)});
+      }
       
-      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
+      &.c2-button--selected {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-selected)});
+        
+        @include borderColor(#{var(--c2-st-action-foreground-color-neutral-selected)});
+      }
+    }
+  }
+  
+  &--ghost {
+    @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
+    
+    @include focus('.c2-button') {
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-focus)});
     }
     
+    @include hover('.c2-button') {
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-hover)});
+    }
+    
+    @include active('.c2-button') {
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-active)});
+    }
+    
+    &.c2-button--selected {
+      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-select)});
+    }
+    
+    &.c2-palette--neutral {
+      @include color(#{var(--c2-st-action-foreground-color-neutral-normal)});
+      
+      @include hover('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-hover)});
+      }
+      
+      @include active('.c2-button') {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-active)});
+      }
+      
+      &.c2-button--selected {
+        @include color(#{var(--c2-st-action-foreground-color-neutral-selected)});
+      }
+    }
+  }
+  
+  &--size {
     &--x {
-      --c2-button-spacer-padding: 0 1px;
+      padding: var(--c2-st-global-distance-space-inset-sm) var(--c2-st-global-distance-space-inset-lg);
       
-      gap: var(--c2-st-global-distance-space-inline-xs);
-      
-      padding: var(--c2-st-global-distance-space-inset-sm);
+      min-height: var(--c2-st-global-distance-space-inset-3xl);
       
       font-family: var(--c2-ot-typography-fontFamily-base);
       @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
@@ -169,519 +320,66 @@
       
       border-radius: var(--c2-st-selectable-borderRadius-size-xs);
     }
-  }
-  
-  &--outline {
-    --c2-button-borderWidth: 1px;
-    --c2-button-borderStyle: solid;
-    --c2-button-color: var(--c2-st-action-foreground-color-neutral-normal);
-    --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-normal))};
     
-    @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-normal)});
-    
-    @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-normal)});
-    
-    &::before {
-      content: ' ';
-      position: absolute;
-      @include inset(#{0px});
+    &--xs {
+      padding: var(--c2-st-global-distance-space-inset-md) var(--c2-st-global-distance-space-inset-xl);
       
-      border-radius: inherit;
-      border: var(--c2-button-borderWidth) var(--c2-button-borderStyle);
-      @include borderColor(#{inherit});
-    }
-    
-    @include focus('.c2-button') {
-      box-shadow: var(--c2-st-elevation-onLight-focus-md);
-    }
-    
-    @include hover('.c2-button') {
-      --c2-button-color: var(--c2-st-action-foreground-color-neutral-hover);
-      --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-hover))};
+      min-height: var(--c2-st-global-distance-space-inset-3xl);
       
-      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-hover)});
+      font-family: var(--c2-ot-typography-fontFamily-base);
+      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
+      font-weight: var(--c2-ot-typography-fontWeight-500);
+      @include lineHeight(#{var(--c2-ot-typography-lineHeight-100)});
+      letter-spacing: var(--c2-ot-typography-tracking-lg);
+      @include textCase(#{var(--c2-ot-typography-textCase-none)});
+      text-decoration: var(--c2-ot-typography-textDecoration-none);
+      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
-      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-hover)});
+      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
     }
     
-    @include active('.c2-button') {
-      --c2-button-color: var(--c2-st-action-foreground-color-neutral-active);
-      --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-active))};
+    &--sm {
+      min-height: var(--c2-st-global-distance-space-inset-3xl);
       
-      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-active)});
+      font-family: var(--c2-ot-typography-fontFamily-base);
+      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-87)});
+      font-weight: var(--c2-ot-typography-fontWeight-500);
+      @include lineHeight(#{var(--c2-ot-typography-lineHeight-100)});
+      letter-spacing: var(--c2-ot-typography-tracking-lg);
+      @include textCase(#{var(--c2-ot-typography-textCase-none)});
+      text-decoration: var(--c2-ot-typography-textDecoration-none);
+      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
-      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-active)});
+      border-radius: var(--c2-st-selectable-borderRadius-size-sm);
     }
     
-    @include disabled('.c2-button') {
-      opacity: 0.5;
+    &--md {
+      border-radius: var(--c2-st-selectable-borderRadius-size-md);
     }
     
-    &.c2-button--selected {
-      --c2-button-color: var(--c2-st-action-foreground-color-neutral-select);
-      --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-select))};
+    &--lg {
+      gap: var(--c2-st-global-distance-space-inline-sm);
       
-      @include backgroundColor(#{var(--c2-st-action-background-color-neutral-invert-select)});
+      padding: var(--c2-st-global-distance-space-inset-xl) var(--c2-st-global-distance-space-inset-3xl);
       
-      @include borderColor(#{var(--c2-st-action-border-color-neutral-subtle-select)});
+      border-radius: var(--c2-st-selectable-borderRadius-size-lg);
     }
     
-    &.c2-button--intent {
-      &--positive {
-        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
-        
-        @include borderColor(#{var(--c2-st-action-foreground-color-positive-normal)});
-        
-        @include focus('.c2-button') {
-          @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-invert-focus)});
-        }
-        
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-hover);
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-positive-hover)});
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-active);
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-positive-active)});
-        }
-        
-        &.c2-button--selected {
-          @include borderColor(#{var(--c2-st-action-foreground-color-positive-select)});
-        }
-      }
+    &--xl {
+      gap: var(--c2-st-global-distance-space-inline-md);
       
-      &--informative {
-        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
-        
-        @include borderColor(#{var(--c2-st-action-background-color-informative-normal)});
-        
-        @include focus('.c2-button') {
-          @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-invert-focus)});
-        }
-        
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-background-color-informative-hover);
-          
-          @include borderColor(#{var(--c2-st-action-background-color-informative-hover)});
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-background-color-informative-active);
-          
-          @include borderColor(#{var(--c2-st-action-background-color-informative-active)});
-        }
-        
-        &.c2-button--selected {
-          @include borderColor(#{var(--c2-st-action-background-color-informative-select)});
-        }
-      }
+      padding: var(--c2-st-global-distance-space-inset-2xl) var(--c2-st-global-distance-space-inset-5xl);
       
-      &--negative {
-        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
-        
-        @include borderColor(#{var(--c2-st-action-foreground-color-negative-normal)});
-        
-        @include focus('.c2-button') {
-          @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-invert-focus)});
-        }
-        
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-hover);
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-negative-hover)});
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-active);
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-negative-active)});
-        }
-        
-        &.c2-button--selected {
-          @include borderColor(#{var(--c2-st-action-foreground-color-negative-select)});
-        }
-      }
+      font-family: var(--c2-ot-typography-fontFamily-base);
+      @include fontSize(#{var(--c2-ot-typography-fontSize-size-scale-112)});
+      font-weight: var(--c2-ot-typography-fontWeight-500);
+      @include lineHeight(#{var(--c2-ot-typography-lineHeight-150)});
+      letter-spacing: var(--c2-ot-typography-tracking-lg);
+      @include textCase(#{var(--c2-ot-typography-textCase-none)});
+      text-decoration: var(--c2-ot-typography-textDecoration-none);
+      @include paragraphSpacing(#{var(--c2-ot-typography-paragraphSpacing-size-scale-75)});
       
-      &--neutral {
-        @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-normal)});
-        
-        @include borderColor(#{var(--c2-st-action-foreground-color-neutral-normal)});
-        
-        @include focus('.c2-button') {
-          @include backgroundColor(#{var(--c2-st-action-background-color-neutral-ghost-invert-focus)});
-        }
-        
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-hover);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-hover))};
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-neutral-hover)});
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-active);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-active))};
-          
-          @include borderColor(#{var(--c2-st-action-foreground-color-neutral-active)});
-        }
-        
-        &.c2-button--selected {
-          @include borderColor(#{var(--c2-st-action-foreground-color-neutral-select)});
-        }
-      }
-    }
-  }
-  
-  &--intent {
-    &--positive {
-      --c2-button-color: var(--c2-st-action-foreground-color-positive-normal);
-      
-      &.c2-button--selected {
-        --c2-button-color: var(--c2-st-action-foreground-color-positive-select);
-      }
-    }
-    
-    &--negative {
-      --c2-button-color: var(--c2-st-action-foreground-color-negative-normal);
-      
-      &.c2-button--selected {
-        --c2-button-color: var(--c2-st-action-foreground-color-negative-select);
-      }
-    }
-    
-    &--neutral {
-      --c2-button-color: var(--c2-st-action-foreground-color-neutral-normal);
-      --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-normal))};
-      
-      &.c2-button--selected {
-        --c2-button-color: var(--c2-st-action-foreground-color-neutral-select);
-        --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-select))};
-      }
-    }
-    
-    &--informative {
-      --c2-button-color: var(--c2-st-action-background-color-informative-normal);
-      
-      &.c2-button--selected {
-        --c2-button-color: var(--c2-st-action-background-color-informative-select);
-      }
-    }
-  }
-  
-  &--primary {
-    --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-solid-normal);
-    
-    @include color(#{var(--c2-st-action-foreground-color-onprimary-normal)});
-    
-    @include focus('.c2-button') {
-      box-shadow: var(--c2-st-elevation-onLight-focus-md);
-    }
-    
-    @include hover('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-solid-hover);
-      
-      @include color(#{var(--c2-st-action-foreground-color-onprimary-hover)});
-    }
-    
-    @include active('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-solid-active);
-      
-      @include color(#{var(--c2-st-action-foreground-color-onprimary-active)});
-    }
-    
-    @include disabled('.c2-button') {
-      opacity: 0.5;
-    }
-    
-    &.c2-button--selected {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-solid-select);
-      
-      @include color(#{var(--c2-st-action-foreground-color-onprimary-select)});
-    }
-    
-    &.c2-button--intent {
-      &--positive {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-normal);
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-select);
-        }
-      }
-      
-      &--informative {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-normal);
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-select);
-        }
-      }
-      
-      &--negative {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-normal);
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-select);
-        }
-      }
-      
-      &--neutral {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-solid-normal);
-        --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-solid-normal))};
-        
-        @include color(#{var(--c2-st-action-background-color-neutral-invert-normal)});
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-solid-hover);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-solid-hover))};
-          
-          @include color(#{var(--c2-st-action-background-color-neutral-invert-hover)});
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-solid-active);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-solid-active))};
-          
-          @include color(#{var(--c2-st-action-background-color-neutral-invert-active)});
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-solid-select);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-solid-select))};
-          
-          @include color(#{var(--c2-st-action-background-color-neutral-invert-select)});
-        }
-      }
-    }
-  }
-  
-  &--secondary {
-    --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-subtle-normal);
-    --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-primary-subtle-normal))};
-    
-    @include focus('.c2-button') {
-      box-shadow: var(--c2-st-elevation-onLight-focus-md);
-    }
-    
-    @include hover('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-subtle-hover);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-primary-subtle-hover))};
-      --c2-button-color: var(--c2-st-action-foreground-color-primary-hover);
-    }
-    
-    @include active('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-subtle-active);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-primary-subtle-active))};
-      --c2-button-color: var(--c2-st-action-foreground-color-primary-active);
-    }
-    
-    @include disabled('.c2-button') {
-      opacity: 0.5;
-    }
-    
-    &.c2-button--selected {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-primary-subtle-select);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-primary-subtle-select))};
-    }
-    
-    &.c2-button--intent {
-      &--positive {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-subtle-normal);
-        --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-positive-subtle-normal))};
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-subtle-hover);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-positive-subtle-hover))};
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-subtle-active);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-positive-subtle-active))};
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-positive-subtle-select);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-positive-subtle-select))};
-        }
-      }
-      
-      &--informative {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-subtle-normal);
-        --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-informative-subtle-normal))};
-        --c2-button-color: var(--c2-st-action-foreground-color-informative-normal);
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-subtle-hover);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-informative-subtle-hover))};
-          --c2-button-color: var(--c2-st-action-foreground-color-informative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-subtle-active);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-informative-subtle-active))};
-          --c2-button-color: var(--c2-st-action-foreground-color-informative-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-informative-subtle-select);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-informative-subtle-select))};
-        }
-        
-        &.c2-button--loading {
-          --c2-button-color: var(--c2-st-action-fg-color-informative-normal);
-        }
-      }
-      
-      &--negative {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-subtle-normal);
-        --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-negative-subtle-normal))};
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-subtle-hover);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-negative-subtle-hover))};
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-subtle-active);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-negative-subtle-active))};
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-active);
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-negative-subtle-select);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-negative-subtle-select))};
-        }
-      }
-      
-      &--neutral {
-        --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-subtle-normal);
-        --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-subtle-normal))};
-        
-        @include hover('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-subtle-hover);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-subtle-hover))};
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-hover);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-hover))};
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-subtle-active);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-subtle-active))};
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-active);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-active))};
-        }
-        
-        &.c2-button--selected {
-          --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-subtle-select);
-          --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-subtle-select))};
-        }
-      }
-    }
-  }
-  
-  &--ghost {
-    --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-ghost-normal);
-    --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-ghost-normal))};
-    
-    @include focus('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-ghost-focus);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-ghost-focus))};
-      
-      box-shadow: var(--c2-st-elevation-onLight-focus-md);
-    }
-    
-    @include hover('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-ghost-hover);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-ghost-hover))};
-      --c2-button-color: var(--c2-st-action-foreground-color-primary-hover);
-    }
-    
-    @include active('.c2-button') {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-ghost-active);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-ghost-active))};
-      --c2-button-color: var(--c2-st-action-foreground-color-primary-active);
-    }
-    
-    @include disabled('.c2-button') {
-      opacity: 0.5;
-    }
-    
-    &.c2-button--selected {
-      --c2-button-backgroundColor: var(--c2-st-action-background-color-neutral-ghost-select);
-      --c2-button-backgroundColor-opacity: #{toColorOpacity(var(--c2-st-action-background-color-neutral-ghost-select))};
-    }
-    
-    &.c2-button--intent {
-      &--neutral {
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-hover);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-hover))};
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-neutral-active);
-          --c2-button-color-opacity: #{toColorOpacity(var(--c2-st-action-foreground-color-neutral-active))};
-        }
-      }
-      
-      &--positive {
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-positive-active);
-        }
-      }
-      
-      &--informative {
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-background-color-informative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-background-color-informative-active);
-        }
-      }
-      
-      &--negative {
-        @include hover('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-hover);
-        }
-        
-        @include active('.c2-button') {
-          --c2-button-color: var(--c2-st-action-foreground-color-negative-active);
-        }
-      }
+      border-radius: var(--c2-st-selectable-borderRadius-size-xl);
     }
   }
   // :style [!] System label / Системная метка

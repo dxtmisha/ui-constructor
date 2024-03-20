@@ -3405,22 +3405,19 @@ export declare const components: {
             loading: BooleanConstructor;
             readonly: BooleanConstructor;
             adaptive: import("vue").PropType<"icon" | undefined>;
-            size: {
-                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-            };
-            outline: BooleanConstructor;
-            intent: {
-                type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-                default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-            };
+            intent: BooleanConstructor;
             primary: {
                 type: BooleanConstructor;
                 default: boolean | undefined;
             };
             secondary: BooleanConstructor;
+            outline: BooleanConstructor;
             ghost: BooleanConstructor;
-            palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+            size: {
+                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+            };
+            palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -3452,22 +3449,19 @@ export declare const components: {
             loading: BooleanConstructor;
             readonly: BooleanConstructor;
             adaptive: import("vue").PropType<"icon" | undefined>;
-            size: {
-                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-            };
-            outline: BooleanConstructor;
-            intent: {
-                type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-                default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-            };
+            intent: BooleanConstructor;
             primary: {
                 type: BooleanConstructor;
                 default: boolean | undefined;
             };
             secondary: BooleanConstructor;
+            outline: BooleanConstructor;
             ghost: BooleanConstructor;
-            palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+            size: {
+                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+            };
+            palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -3498,8 +3492,8 @@ export declare const components: {
             disabled: boolean;
             primary: boolean;
             secondary: boolean;
+            intent: boolean;
             outline: boolean;
-            intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
             ghost: boolean;
         }, true, {}, {}, {
             P: {};
@@ -3515,22 +3509,19 @@ export declare const components: {
             loading: BooleanConstructor;
             readonly: BooleanConstructor;
             adaptive: import("vue").PropType<"icon" | undefined>;
-            size: {
-                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-            };
-            outline: BooleanConstructor;
-            intent: {
-                type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-                default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-            };
+            intent: BooleanConstructor;
             primary: {
                 type: BooleanConstructor;
                 default: boolean | undefined;
             };
             secondary: BooleanConstructor;
+            outline: BooleanConstructor;
             ghost: BooleanConstructor;
-            palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+            size: {
+                type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+                default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+            };
+            palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
             tag: {
                 type: import("vue").PropType<string | undefined>;
                 default: string | undefined;
@@ -3561,8 +3552,8 @@ export declare const components: {
             disabled: boolean;
             primary: boolean;
             secondary: boolean;
+            intent: boolean;
             outline: boolean;
-            intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
             ghost: boolean;
         }>;
         __isFragment?: undefined;
@@ -3575,22 +3566,19 @@ export declare const components: {
         loading: BooleanConstructor;
         readonly: BooleanConstructor;
         adaptive: import("vue").PropType<"icon" | undefined>;
-        size: {
-            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-        };
-        outline: BooleanConstructor;
-        intent: {
-            type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-            default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-        };
+        intent: BooleanConstructor;
         primary: {
             type: BooleanConstructor;
             default: boolean | undefined;
         };
         secondary: BooleanConstructor;
+        outline: BooleanConstructor;
         ghost: BooleanConstructor;
-        palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+        size: {
+            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+        };
+        palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -3627,8 +3615,8 @@ export declare const components: {
         disabled: boolean;
         primary: boolean;
         secondary: boolean;
+        intent: boolean;
         outline: boolean;
-        intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
         ghost: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;
@@ -3956,6 +3944,35 @@ export declare const components: {
         iconIndeterminate: string;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: Readonly<import("../constructors/uses/ref/useLabel").UseLabelSlots> & import("../constructors/uses/ref/useLabel").UseLabelSlots;
+    });
+    C2Chip: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
+            [x: string]: unknown;
+        }>>>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<readonly string[] | import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
+            [x: string]: unknown;
+        }>>>>, {
+            readonly [x: number]: string;
+        } | {}, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
+            [x: string]: unknown;
+        }>>>>, {}, {}, {}, {}, {
+            readonly [x: number]: string;
+        } | {}>;
+        __isFragment?: undefined;
+        __isTeleport?: undefined;
+        __isSuspense?: undefined;
+    } & import("vue").ComponentOptionsBase<readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
+        [x: string]: unknown;
+    }>>>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+        readonly [x: number]: string;
+    } | {}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: Readonly<import("../constructors/Chip/types").ChipSlots>;
     });
     C2FieldMessage: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{

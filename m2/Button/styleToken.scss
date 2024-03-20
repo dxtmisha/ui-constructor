@@ -2,11 +2,10 @@
 
 @mixin mixinButtonToken {
   // :style [!] System label / Системная метка
-  --m2-button-gap: var(--m2-ref-spacing-2);
   --m2-button-padding: var(--m2-ref-spacing-4);
-  --m2-button-color: var(--m2-sys-palette-primary);
-  --m2-button-backgroundColor: transparent;
   --m2-button-transitionFunction: var(--d-sys-transitionFunction-standard);
+  
+  gap: var(--m2-ref-spacing-2);
   
   font-family: var(--m2-ref-font-family-roboto);
   @include fontSize(#{var(--m2-ref-font-size-md)});
@@ -16,7 +15,9 @@
   text-transform: uppercase;
   
   @include colorOpacity(#{var(--m2-sys-opacity-surface-high)});
+  @include paletteColor(#{var(--m2-sys-palette-primary)});
   
+  @include backgroundColor(#{transparent});
   @include gradientOpacity(#{0});
   @include paletteGradient(#{var(--m2-sys-palette-primary)});
   
@@ -48,9 +49,8 @@
   }
   
   @include disabled {
-    --m2-button-color: var(--m2-sys-palette-disabled);
-    
     @include colorOpacity(#{var(--m2-sys-opacity-surface-disabled)});
+    @include paletteColor(#{var(--m2-sys-palette-disabled)});
     
     box-shadow: none;
     
@@ -58,7 +58,7 @@
   }
   
   &--selected {
-    --m2-button-color: var(--m2-sys-palette-primaryVariant);
+    @include paletteColor(#{var(--m2-sys-palette-primaryVariant)});
     
     @include paletteGradient(#{var(--m2-sys-palette-primaryVariant)});
   }

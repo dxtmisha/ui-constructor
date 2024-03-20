@@ -2,8 +2,6 @@
 
 @mixin mixinButton {
   @include initByCustom('padding', 0);
-  @include initByCustom('color', inherit);
-  @include initByCustom('backgroundColor', transparent);
 
   @include flexInlineCenter;
   box-sizing: border-box;
@@ -14,9 +12,6 @@
   min-width: var(--sys-height, 0);
 
   text-decoration: none;
-
-  @include paletteColor(v('??color'));
-  @include paletteBackground(v('??backgroundColor'));
 
   border: none;
   cursor: pointer;
@@ -41,7 +36,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: v('??gap');
 
     order: 4;
     @include paddingX(v('??padding'));

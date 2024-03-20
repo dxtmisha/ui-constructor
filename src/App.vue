@@ -1,115 +1,67 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { C2Switch } from '../c2/Switch'
-
-const checkbox = ref()
-const loading = ref(false)
-const v = ref('error')
-
-const onInput = (_: Event, value: any) => {
-  console.log('value', value)
-}
+import { C2Button } from '../c2/Button'
 </script>
 
 <template>
   <div>
     <div>
-      <input v-model="v">
-      {{ v }}
-      <c2-switch
-        :loading="loading"
-        ref="checkbox"
-        name="test"
-        label="Label"
-        value-variant="variant1"
-        required
-        :validation-message="v"
-        @input="onInput"
-      />
-      <c2-switch
-        :loading="loading"
-        ref="checkbox"
-        name="test"
-        label="Label"
-        value-variant="variant2"
-        required
-        @input="onInput"
-      />
-      <c2-switch
-        :loading="loading"
-        ref="checkbox"
-        name="test"
-        label="Label"
-        value-variant="variant3"
-        required
-        @input="onInput"
-      />
+      <div>
+        <c2-button icon="camera" label="Label"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button icon="camera"/>
+      </div>
     </div>
     <div>
-      <c2-switch
-        name="test"
-        label="Label"
-        required
-        size="sm"
-        icon="arrow-right-lg"
-        helper-message="helper message"
-      />
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="x"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="xs"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="sm"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="md"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="lg"/>
+      </div>
+      <div style="padding-top: 8px;">
+        <c2-button label="Label" size="xl"/>
+      </div>
     </div>
-    <div>
-      <c2-switch
-        name="test"
-        label="Label"
-        required
-        size="md"
-        helper-message="helper message"
-      />
+    <div style="display: flex; gap: 16px; padding-top: 8px;">
+      <c2-button label="Label"/>
+      <c2-button label="Label" palette="informative"/>
+      <c2-button label="Label" palette="positive"/>
+      <c2-button label="Label" palette="negative"/>
+      <c2-button label="Label" palette="neutral"/>
     </div>
-    <div>
-      <c2-switch
-        name="test"
-        label="Label"
-        required
-        size="lg"
-        helper-message="helper message"
-      />
+    <div style="display: flex; gap: 16px; padding-top: 8px;">
+      <c2-button secondary label="Label"/>
+      <c2-button secondary label="Label" palette="informative"/>
+      <c2-button secondary label="Label" palette="positive"/>
+      <c2-button secondary label="Label" palette="negative"/>
+      <c2-button secondary label="Label" palette="neutral"/>
     </div>
-    <div>
-      <c2-switch
-        :loading="loading"
-        name="test"
-        label="Readonly"
-        required
-        readonly
-        :value="true"
-      />
+    <div style="display: flex; gap: 16px; padding-top: 8px;">
+      <c2-button outline label="Label"/>
+      <c2-button outline label="Label" palette="informative"/>
+      <c2-button outline label="Label" palette="positive"/>
+      <c2-button outline label="Label" palette="negative"/>
+      <c2-button outline label="Label" palette="neutral"/>
     </div>
-    <div>
-      <c2-switch
-        :loading="loading"
-        name="test"
-        label="Disabled"
-        required
-        disabled
-      />
-    </div>
-    <div>
-      <c2-switch
-        :loading="loading"
-        name="test"
-        label="Disabled"
-        required
-        disabled
-        :value="true"
-      />
-    </div>
-    <div>
-      <c2-switch
-        comp
-        loading
-        label="Label"
-        required
-        @input="onInput"
-      />
+    <div style="display: flex; gap: 16px; padding-top: 8px;">
+      <c2-button ghost label="Label"/>
+      <c2-button ghost label="Label" palette="informative"/>
+      <c2-button ghost label="Label" palette="positive"/>
+      <c2-button ghost label="Label" palette="negative"/>
+      <c2-button ghost label="Label" palette="neutral"/>
     </div>
   </div>
 </template>

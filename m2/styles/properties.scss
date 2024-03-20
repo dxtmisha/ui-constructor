@@ -31,7 +31,8 @@ $designsPalette: (
   '--m2-sys-palette-secondaryVariant': ('--m2-palette-basic700', '--m2-palette-dark200'),
   '--m2-sys-palette-success': ('--m2-palette-basic700', '--m2-palette-dark700'),
   '--m2-sys-palette-warning': ('--m2-palette-basic700', '--m2-palette-dark700'),
-  '--m2-sys-palette-error': ('--m2-palette-basic700', '--m2-palette-dark700'),);
+  '--m2-sys-palette-error': ('--m2-palette-basic700', '--m2-palette-dark700'),
+  '--m2-progress-backgroundColor': ('--m2-palette-basic500'),);
 $designsShade: (
   'm2': (50,100,200,300,400,500,600,700,800,900),);
 $designsProperties: (
@@ -8965,35 +8966,23 @@ $designsProperties: (
         name: 'm2-button',
         type: 'component',
         value: (
-          'gap':(
-            index: 'gap',
-            name: '--m2-button-gap',
-            type: 'var',
-            value: 'var(--m2-ref-spacing-2)',
-          ),
           'padding':(
             index: 'padding',
             name: '--m2-button-padding',
             type: 'var',
             value: 'var(--m2-ref-spacing-4)',
           ),
-          'color':(
-            index: 'color',
-            name: '--m2-button-color',
-            type: 'var',
-            value: 'var(--m2-sys-palette-primary)',
-          ),
-          'backgroundColor':(
-            index: 'backgroundColor',
-            name: '--m2-button-backgroundColor',
-            type: 'var',
-            value: 'transparent',
-          ),
           'transitionFunction':(
             index: 'transitionFunction',
             name: '--m2-button-transitionFunction',
             type: 'var',
             value: 'var(--d-sys-transitionFunction-standard)',
+          ),
+          'gap':(
+            index: 'gap',
+            name: 'gap',
+            type: 'property',
+            value: 'var(--m2-ref-spacing-2)',
           ),
           'fontFamily':(
             index: 'fontFamily',
@@ -9036,6 +9025,18 @@ $designsProperties: (
             name: 'color-opacity',
             type: 'property',
             value: 'var(--m2-sys-opacity-surface-high)',
+          ),
+          'color':(
+            index: 'color',
+            name: 'palette-color',
+            type: 'property',
+            value: 'var(--m2-sys-palette-primary)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: 'background-color',
+            type: 'property',
+            value: 'transparent',
           ),
           'gradientOpacity':(
             index: 'gradientOpacity',
@@ -9163,17 +9164,17 @@ $designsProperties: (
             name: 'disabled',
             type: 'selector',
             value: (
-              'color':(
-                index: 'color',
-                name: '--m2-button-color',
-                type: 'var',
-                value: 'var(--m2-sys-palette-disabled)',
-              ),
               'colorOpacity':(
                 index: 'colorOpacity',
                 name: 'color-opacity',
                 type: 'property',
                 value: 'var(--m2-sys-opacity-surface-disabled)',
+              ),
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--m2-sys-palette-disabled)',
               ),
               'boxShadow':(
                 index: 'boxShadow',
@@ -9196,8 +9197,8 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--m2-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--m2-sys-palette-primaryVariant)',
               ),
               'gradient':(

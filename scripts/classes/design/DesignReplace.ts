@@ -562,7 +562,7 @@ export class DesignReplace {
       }
 
       if (this.isString(value)) {
-        templates.push(`[\`${newParent}--\${${index}}\`]: inArray(propsValues.${name}, ${index})`)
+        templates.push(`[\`${newParent.match(/-palette$/) ? `${newParent} ` : ''}${newParent}--\${${index}}\`]: inArray(propsValues.${name}, ${index})`)
       }
     })
 

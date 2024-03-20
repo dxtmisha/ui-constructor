@@ -58,7 +58,7 @@ const n = {
         "m3-button--text": t.text,
         "m3-button--elevated": t.elevated,
         "m3-button--tonal": t.tonal,
-        [`m3-palette--${t.palette}`]: o(n.palette, t.palette)
+        [`m3-palette m3-palette--${t.palette}`]: o(n.palette, t.palette)
         // :classes-values [!] System label / Системная метка
       }
     })), p = l(() => ({

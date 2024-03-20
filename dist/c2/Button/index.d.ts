@@ -6,22 +6,19 @@ export declare const C2Button: {
         loading: BooleanConstructor;
         readonly: BooleanConstructor;
         adaptive: import("vue").PropType<"icon" | undefined>;
-        size: {
-            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-        };
-        outline: BooleanConstructor;
-        intent: {
-            type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-            default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-        };
+        intent: BooleanConstructor;
         primary: {
             type: BooleanConstructor;
             default: boolean | undefined;
         };
         secondary: BooleanConstructor;
+        outline: BooleanConstructor;
         ghost: BooleanConstructor;
-        palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+        size: {
+            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+        };
+        palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -53,22 +50,19 @@ export declare const C2Button: {
         loading: BooleanConstructor;
         readonly: BooleanConstructor;
         adaptive: import("vue").PropType<"icon" | undefined>;
-        size: {
-            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-        };
-        outline: BooleanConstructor;
-        intent: {
-            type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-            default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-        };
+        intent: BooleanConstructor;
         primary: {
             type: BooleanConstructor;
             default: boolean | undefined;
         };
         secondary: BooleanConstructor;
+        outline: BooleanConstructor;
         ghost: BooleanConstructor;
-        palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+        size: {
+            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+        };
+        palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -99,8 +93,8 @@ export declare const C2Button: {
         disabled: boolean;
         primary: boolean;
         secondary: boolean;
+        intent: boolean;
         outline: boolean;
-        intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
         ghost: boolean;
     }, true, {}, {}, {
         P: {};
@@ -116,22 +110,19 @@ export declare const C2Button: {
         loading: BooleanConstructor;
         readonly: BooleanConstructor;
         adaptive: import("vue").PropType<"icon" | undefined>;
-        size: {
-            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-        };
-        outline: BooleanConstructor;
-        intent: {
-            type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-            default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-        };
+        intent: BooleanConstructor;
         primary: {
             type: BooleanConstructor;
             default: boolean | undefined;
         };
         secondary: BooleanConstructor;
+        outline: BooleanConstructor;
         ghost: BooleanConstructor;
-        palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+        size: {
+            type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+            default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+        };
+        palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
         tag: {
             type: import("vue").PropType<string | undefined>;
             default: string | undefined;
@@ -162,8 +153,8 @@ export declare const C2Button: {
         disabled: boolean;
         primary: boolean;
         secondary: boolean;
+        intent: boolean;
         outline: boolean;
-        intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
         ghost: boolean;
     }>;
     __isFragment?: undefined;
@@ -176,22 +167,19 @@ export declare const C2Button: {
     loading: BooleanConstructor;
     readonly: BooleanConstructor;
     adaptive: import("vue").PropType<"icon" | undefined>;
-    size: {
-        type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-        default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-    };
-    outline: BooleanConstructor;
-    intent: {
-        type: import("vue").PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-        default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-    };
+    intent: BooleanConstructor;
     primary: {
         type: BooleanConstructor;
         default: boolean | undefined;
     };
     secondary: BooleanConstructor;
+    outline: BooleanConstructor;
     ghost: BooleanConstructor;
-    palette: import("vue").PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+    size: {
+        type: import("vue").PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+        default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+    };
+    palette: import("vue").PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
     tag: {
         type: import("vue").PropType<string | undefined>;
         default: string | undefined;
@@ -228,8 +216,8 @@ export declare const C2Button: {
     disabled: boolean;
     primary: boolean;
     secondary: boolean;
+    intent: boolean;
     outline: boolean;
-    intent: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
     ghost: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Readonly<import("../../constructors/uses/ref/useLabel").UseLabelSlots> & import("../../constructors/uses/ref/useLabel").UseLabelSlots;

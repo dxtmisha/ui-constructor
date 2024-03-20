@@ -57,7 +57,7 @@ const n = {
         "c1-button--outlined": e.outlined,
         "c1-button--white": e.white,
         "c1-button--text": e.text,
-        [`c1-palette--${e.palette}`]: o(n.palette, e.palette)
+        [`c1-palette c1-palette--${e.palette}`]: o(n.palette, e.palette)
         // :classes-values [!] System label / Системная метка
       }
     })), u = r(() => ({

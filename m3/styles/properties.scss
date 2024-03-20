@@ -77,7 +77,22 @@ $designsPalette: (
   '--m3-sys-palette-inverseOnSurface': ('--m3-palette-basic95', '--m3-palette-dark20'),
   '--m3-sys-palette-inversePrimary': ('--m3-palette-basic80', '--m3-palette-dark40'),
   '--m3-sys-palette-scrim': ('--m3-palette-basic0', '--m3-palette-dark0'),
-  '--m3-sys-palette-shadow': ('--m3-palette-basic0', '--m3-palette-dark0'),);
+  '--m3-sys-palette-shadow': ('--m3-palette-basic0', '--m3-palette-dark0'),
+  '--m3-checkbox-comp-required-color': ('--m3-palette-basic40'),
+  '--m3-checkbox-comp-palette': ('--m3-palette-basic10', '--m3-palette-basic40', '--m3-palette-basic10', '--m3-palette-basic40', '--m3-palette-basic10'),
+  '--m3-checkbox-comp-paletteColor': ('--m3-palette-basic30', '--m3-palette-basic40', '--m3-palette-basic10', '--m3-palette-basic40', '--m3-palette-basic10'),
+  '--m3-checkbox-comp-icon-color': ('--m3-palette-basic10', '--m3-palette-basic100', '--m3-palette-basic100'),
+  '--m3-image-color': ('--m3-palette-basic10'),
+  '--m3-mask-color': ('--m3-palette-basic10'),
+  '--m3-progress-backgroundColor': ('--m3-palette-basic40'),
+  '--m3-ripple-backgroundColor': ('--m3-palette-basic10'),
+  '--m3-scrollbar-background': ('--m3-palette-basic80'),
+  '--m3-scrollbar-thumb-background': ('--m3-palette-basic80'),
+  '--m3-scrollbar-outline-color': ('--m3-palette-basic80'),
+  '--m3-skeleton-color': ('--m3-palette-basic80'),
+  '--m3-skeleton-backgroundColor': ('--m3-palette-basic80'),
+  '--m3-skeleton-borderColor': ('--m3-palette-basic80'),
+  '--m3-window-backgroundColor': ('--m3-palette-basic0'),);
 $designsShade: (
   'm3': (0,10,20,30,40,50,60,70,80,90,92,95,96,99,100),);
 $designsProperties: (
@@ -7289,35 +7304,23 @@ $designsProperties: (
         name: 'm3-button',
         type: 'component',
         value: (
-          'gap':(
-            index: 'gap',
-            name: '--m3-button-gap',
-            type: 'var',
-            value: 'var(--m3-ref-spacing-2)',
-          ),
           'padding':(
             index: 'padding',
             name: '--m3-button-padding',
             type: 'var',
             value: 'var(--m3-ref-spacing-6)',
           ),
-          'color':(
-            index: 'color',
-            name: '--m3-button-color',
-            type: 'var',
-            value: 'var(--m3-sys-palette-primary)',
-          ),
-          'backgroundColor':(
-            index: 'backgroundColor',
-            name: '--m3-button-backgroundColor',
-            type: 'var',
-            value: 'transparent',
-          ),
           'transitionFunction':(
             index: 'transitionFunction',
             name: '--m3-button-transitionFunction',
             type: 'var',
             value: 'var(--d-sys-transitionFunction-standard)',
+          ),
+          'gap':(
+            index: 'gap',
+            name: 'gap',
+            type: 'property',
+            value: 'var(--m3-ref-spacing-2)',
           ),
           'fontFamily':(
             index: 'fontFamily',
@@ -7348,6 +7351,18 @@ $designsProperties: (
             name: 'letter-spacing',
             type: 'property',
             value: 'var(--m3-ref-letterSpacing-10)',
+          ),
+          'color':(
+            index: 'color',
+            name: 'palette-color',
+            type: 'property',
+            value: 'var(--m3-sys-palette-primary)',
+          ),
+          'backgroundColor':(
+            index: 'backgroundColor',
+            name: 'background-color',
+            type: 'property',
+            value: 'transparent',
           ),
           'gradientOpacity':(
             index: 'gradientOpacity',
@@ -7469,17 +7484,17 @@ $designsProperties: (
             name: 'disabled',
             type: 'selector',
             value: (
-              'color':(
-                index: 'color',
-                name: '--m3-button-color',
-                type: 'var',
-                value: 'var(--m3-sys-palette-onSurface)',
-              ),
               'colorOpacity':(
                 index: 'colorOpacity',
                 name: 'color-opacity',
                 type: 'property',
                 value: 'var(--m3-sys-opacity-disabled)',
+              ),
+              'color':(
+                index: 'color',
+                name: 'palette-color',
+                type: 'property',
+                value: 'var(--m3-sys-palette-onSurface)',
               ),
               'transitionDuration':(
                 index: 'transitionDuration',
@@ -7496,8 +7511,8 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--m3-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--m3-sys-palette-primaryVariant)',
               ),
               'gradient':(

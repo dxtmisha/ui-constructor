@@ -86,15 +86,6 @@ export const c2ButtonArgs: StorybookArgs = {
   outline: buttonArgsOutlined,
   ghost: buttonArgsText,
   size: buttonArgsSize(propsValues, defaults),
-  intent: {
-    control: StorybookControl.select,
-    options: propsValues?.intent,
-    table: {
-      category: StorybookCategory.token,
-      defaultValue: { summary: defaults?.intent },
-      type: { summary: propsValues?.intent.join(' | ') }
-    }
-  },
   palette: buttonArgsPalette(propsValues, defaults)
 }
 

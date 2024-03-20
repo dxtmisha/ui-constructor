@@ -34,6 +34,8 @@ $designsPalette: (
   '--c1-sys-palette-onDisabled': ('--c1-palette-basic50'),
   '--c1-sys-palette-outline': ('--c1-palette-basic50'),
   '--c1-sys-palette-overlay': ('--c1-palette-basic50'),
+  '--c1-image-color': ('--c1-palette-basic50'),
+  '--c1-progress-backgroundColor': ('--c1-palette-basic50'),
   '--c1-ripple-backgroundColor': ('--c1-palette-basic50'),);
 $designsShade: (
   'c1': (50),);
@@ -5118,29 +5120,23 @@ $designsProperties: (
         name: 'c1-button',
         type: 'component',
         value: (
-          'gap':(
-            index: 'gap',
-            name: '--c1-button-gap',
-            type: 'var',
-            value: 'var(--c1-ref-spacing-2)',
-          ),
           'padding':(
             index: 'padding',
             name: '--c1-button-padding',
             type: 'var',
             value: 'var(--c1-ref-spacing-4)',
           ),
-          'color':(
-            index: 'color',
-            name: '--c1-button-color',
-            type: 'var',
-            value: 'var(--c1-sys-palette-onSurfaceSecondary)',
-          ),
           'transitionFunction':(
             index: 'transitionFunction',
             name: '--c1-button-transitionFunction',
             type: 'var',
             value: 'var(--d-sys-transitionFunction-standard)',
+          ),
+          'gap':(
+            index: 'gap',
+            name: 'gap',
+            type: 'property',
+            value: 'var(--c1-ref-spacing-2)',
           ),
           'fontFamily':(
             index: 'fontFamily',
@@ -5171,6 +5167,12 @@ $designsProperties: (
             name: 'letter-spacing',
             type: 'property',
             value: 'var(--c1-ref-letterSpacing-none)',
+          ),
+          'color':(
+            index: 'color',
+            name: 'palette-color',
+            type: 'property',
+            value: 'var(--c1-sys-palette-onSurfaceSecondary)',
           ),
           'gradientOpacity':(
             index: 'gradientOpacity',
@@ -5294,8 +5296,8 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--c1-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-onDisabled)',
               ),
               'transitionDuration':(
@@ -5313,8 +5315,8 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--c1-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-primaryVariant)',
               ),
               'gradient':(
@@ -5629,14 +5631,14 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--c1-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-onSecondary)',
               ),
               'backgroundColor':(
                 index: 'backgroundColor',
-                name: '--c1-button-backgroundColor',
-                type: 'var',
+                name: 'background-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-surface)',
               ),
               'before':(
@@ -5689,14 +5691,14 @@ $designsProperties: (
                 value: (
                   'color':(
                     index: 'color',
-                    name: '--c1-button-color',
-                    type: 'var',
+                    name: 'palette-color',
+                    type: 'property',
                     value: 'var(--c1-sys-palette-onDisabled)',
                   ),
                   'backgroundColor':(
                     index: 'backgroundColor',
-                    name: '--c1-button-backgroundColor',
-                    type: 'var',
+                    name: 'background-color',
+                    type: 'property',
                     value: 'var(--c1-sys-palette-disabled)',
                   ),
                   'before':(
@@ -5759,14 +5761,14 @@ $designsProperties: (
             value: (
               'color':(
                 index: 'color',
-                name: '--c1-button-color',
-                type: 'var',
+                name: 'palette-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-onSurface)',
               ),
               'backgroundColor':(
                 index: 'backgroundColor',
-                name: '--c1-button-backgroundColor',
-                type: 'var',
+                name: 'background-color',
+                type: 'property',
                 value: 'var(--c1-sys-palette-surface)',
               ),
               'boxShadow':(
@@ -5782,14 +5784,14 @@ $designsProperties: (
                 value: (
                   'color':(
                     index: 'color',
-                    name: '--c1-button-color',
-                    type: 'var',
+                    name: 'palette-color',
+                    type: 'property',
                     value: 'var(--c1-sys-palette-onDisabled)',
                   ),
                   'backgroundColor':(
                     index: 'backgroundColor',
-                    name: '--c1-button-backgroundColor',
-                    type: 'var',
+                    name: 'background-color',
+                    type: 'property',
                     value: 'var(--c1-sys-palette-disabled)',
                   ),
                   'boxShadow':(

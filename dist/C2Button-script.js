@@ -1,4 +1,4 @@
-import { defineComponent as m, computed as s, openBlock as g, createBlock as y, resolveDynamicComponent as B, unref as b } from "vue";
+import { defineComponent as m, computed as a, openBlock as g, createBlock as y, resolveDynamicComponent as B, unref as b } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
 import { p as f, d as v, B as h } from "./props-CpUbgiGH.js";
 import { C2Icon as z } from "./C2Icon.js";
@@ -6,16 +6,14 @@ import { C2Progress as x } from "./C2Progress.js";
 const n = {
   // :values [!] System label / Системная метка
   adaptive: ["icon"],
-  size: ["xl", "lg", "md", "sm", "xs", "x"],
-  intent: ["positive", "informative", "negative", "neutral", "default"],
-  palette: ["carmine", "iris", "redfish", "goldenrod", "asparagus", "slate", "gray", "alpha", "pistachio", "mint", "jade", "teal", "celestial", "indigo", "orchid", "cerise"]
+  size: ["x", "xs", "sm", "md", "lg", "xl"],
+  palette: ["carmine", "iris", "redfish", "goldenrod", "asparagus", "slate", "gray", "alpha", "pistachio", "mint", "jade", "teal", "celestial", "indigo", "orchid", "cerise", "informative", "positive", "negative", "neutral"]
   // :values [!] System label / Системная метка
 }, e = {
   ...v,
   // :default [!] System label / Системная метка
-  size: "md",
-  intent: "default",
-  primary: !0
+  primary: !0,
+  size: "md"
 }, C = {
   ...f,
   // :prop [!] System label / Системная метка
@@ -25,29 +23,26 @@ const n = {
   loading: Boolean,
   readonly: Boolean,
   adaptive: String,
-  size: {
-    type: String,
-    default: e == null ? void 0 : e.size
-  },
-  outline: Boolean,
-  intent: {
-    type: String,
-    default: e == null ? void 0 : e.intent
-  },
+  intent: Boolean,
   primary: {
     type: Boolean,
     default: e == null ? void 0 : e.primary
   },
   secondary: Boolean,
+  outline: Boolean,
   ghost: Boolean,
+  size: {
+    type: String,
+    default: e == null ? void 0 : e.size
+  },
   palette: String
 }, _ = /* @__PURE__ */ m({
   name: "C2Button",
   __name: "C2Button",
   props: { ...C },
   emits: ["click"],
-  setup(a, { expose: r, emit: c }) {
-    const l = c, t = a, p = s(() => ({
+  setup(i, { expose: r, emit: c }) {
+    const l = c, t = i, p = a(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "c2-button": !0,
@@ -57,19 +52,19 @@ const n = {
         "c2-button--loading": t.loading,
         "c2-button--readonly": t.readonly,
         [`c2-button--adaptive--${t.adaptive}`]: o(n.adaptive, t.adaptive),
-        [`c2-button--size--${t.size}`]: o(n.size, t.size),
-        "c2-button--outline": t.outline,
-        [`c2-button--intent--${t.intent}`]: o(n.intent, t.intent),
-        "c2-button--primary": t.primary && !t.outline && !t.secondary && !t.ghost,
+        "c2-button--intent": t.intent,
+        "c2-button--primary": t.primary && !t.secondary && !t.outline && !t.ghost,
         "c2-button--secondary": t.secondary,
+        "c2-button--outline": t.outline,
         "c2-button--ghost": t.ghost,
-        [`c2-palette--${t.palette}`]: o(n.palette, t.palette)
+        [`c2-button--size--${t.size}`]: o(n.size, t.size),
+        [`c2-palette c2-palette--${t.palette}`]: o(n.palette, t.palette)
         // :classes-values [!] System label / Системная метка
       }
-    })), d = s(() => ({
+    })), d = a(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), i = new h(
+    })), s = new h(
       "c2.button",
       t,
       {
@@ -81,8 +76,8 @@ const n = {
         classes: p,
         styles: d
       }
-    ), u = i.render();
-    return r(i.expose()), (k, S) => (g(), y(B(b(u))));
+    ), u = s.render();
+    return r(s.expose()), (k, S) => (g(), y(B(b(u))));
   }
 }), w = _;
 export {

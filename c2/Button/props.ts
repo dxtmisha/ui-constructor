@@ -9,9 +9,8 @@ import {
 export const propsValues = {
   // :values [!] System label / Системная метка
   adaptive: ['icon'],
-  size: ['xl', 'lg', 'md', 'sm', 'xs', 'x'],
-  intent: ['positive', 'informative', 'negative', 'neutral', 'default'],
-  palette: ['carmine', 'iris', 'redfish', 'goldenrod', 'asparagus', 'slate', 'gray', 'alpha', 'pistachio', 'mint', 'jade', 'teal', 'celestial', 'indigo', 'orchid', 'cerise']
+  size: ['x', 'xs', 'sm', 'md', 'lg', 'xl'],
+  palette: ['carmine', 'iris', 'redfish', 'goldenrod', 'asparagus', 'slate', 'gray', 'alpha', 'pistachio', 'mint', 'jade', 'teal', 'celestial', 'indigo', 'orchid', 'cerise', 'informative', 'positive', 'negative', 'neutral']
   // :values [!] System label / Системная метка
 }
 
@@ -23,13 +22,13 @@ export type PropsToken = {
   loading?: boolean
   readonly?: boolean
   adaptive?: 'icon'
-  size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'x'
-  outline?: boolean
-  intent?: 'positive' | 'informative' | 'negative' | 'neutral' | 'default'
+  intent?: boolean
   primary?: boolean
   secondary?: boolean
+  outline?: boolean
   ghost?: boolean
-  palette?: 'carmine' | 'iris' | 'redfish' | 'goldenrod' | 'asparagus' | 'slate' | 'gray' | 'alpha' | 'pistachio' | 'mint' | 'jade' | 'teal' | 'celestial' | 'indigo' | 'orchid' | 'cerise'
+  size?: 'x' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  palette?: 'carmine' | 'iris' | 'redfish' | 'goldenrod' | 'asparagus' | 'slate' | 'gray' | 'alpha' | 'pistachio' | 'mint' | 'jade' | 'teal' | 'celestial' | 'indigo' | 'orchid' | 'cerise' | 'informative' | 'positive' | 'negative' | 'neutral'
   // :type [!] System label / Системная метка
 }
 
@@ -47,9 +46,8 @@ export const defaults: Props = {
   ...defaultsButton as Props,
   ...{
     // :default [!] System label / Системная метка
-    size: 'md',
-    intent: 'default',
-    primary: true
+    primary: true,
+    size: 'md'
     // :default [!] System label / Системная метка
   }
 }
@@ -66,21 +64,18 @@ export const propsInstruction = {
     loading: Boolean,
     readonly: Boolean,
     adaptive: String as PropType<PropsToken['adaptive']>,
-    size: {
-      type: String as PropType<PropsToken['size']>,
-      default: defaults?.size
-    },
-    outline: Boolean,
-    intent: {
-      type: String as PropType<PropsToken['intent']>,
-      default: defaults?.intent
-    },
+    intent: Boolean,
     primary: {
       type: Boolean,
       default: defaults?.primary
     },
     secondary: Boolean,
+    outline: Boolean,
     ghost: Boolean,
+    size: {
+      type: String as PropType<PropsToken['size']>,
+      default: defaults?.size
+    },
     palette: String as PropType<PropsToken['palette']>
     // :prop [!] System label / Системная метка
   }

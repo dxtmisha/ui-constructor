@@ -114,6 +114,10 @@ declare module 'ui/C2Checkbox' {
   export { C2Checkbox } from 'ui/c2/Checkbox'
 }
 
+declare module 'ui/C2Chip' {
+  export { C2Chip } from 'ui/c2/Chip'
+}
+
 declare module 'ui/C2FieldMessage' {
   export { C2FieldMessage } from 'ui/c2/FieldMessage'
 }

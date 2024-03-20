@@ -45,7 +45,7 @@ const classesToken = computed<ConstrClasses>(() => ({
     'm3-button--text': props.text,
     'm3-button--elevated': props.elevated,
     'm3-button--tonal': props.tonal,
-    [`m3-palette--${props.palette}`]: inArray(propsValues.palette, props.palette)
+    [`m3-palette m3-palette--${props.palette}`]: inArray(propsValues.palette, props.palette)
     // :classes-values [!] System label / Системная метка
   }
 }))

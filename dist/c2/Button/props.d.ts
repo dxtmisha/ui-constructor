@@ -3,7 +3,6 @@ import { ButtonProps } from '../../constructors/Button/props';
 export declare const propsValues: {
     adaptive: string[];
     size: string[];
-    intent: string[];
     palette: string[];
 };
 export type PropsToken = {
@@ -13,13 +12,13 @@ export type PropsToken = {
     loading?: boolean;
     readonly?: boolean;
     adaptive?: 'icon';
-    size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'x';
-    outline?: boolean;
-    intent?: 'positive' | 'informative' | 'negative' | 'neutral' | 'default';
+    intent?: boolean;
     primary?: boolean;
     secondary?: boolean;
+    outline?: boolean;
     ghost?: boolean;
-    palette?: 'carmine' | 'iris' | 'redfish' | 'goldenrod' | 'asparagus' | 'slate' | 'gray' | 'alpha' | 'pistachio' | 'mint' | 'jade' | 'teal' | 'celestial' | 'indigo' | 'orchid' | 'cerise';
+    size?: 'x' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    palette?: 'carmine' | 'iris' | 'redfish' | 'goldenrod' | 'asparagus' | 'slate' | 'gray' | 'alpha' | 'pistachio' | 'mint' | 'jade' | 'teal' | 'celestial' | 'indigo' | 'orchid' | 'cerise' | 'informative' | 'positive' | 'negative' | 'neutral';
 };
 /**
  * Type describing incoming properties.<br>
@@ -38,22 +37,19 @@ export declare const propsInstruction: {
     loading: BooleanConstructor;
     readonly: BooleanConstructor;
     adaptive: PropType<"icon" | undefined>;
-    size: {
-        type: PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
-        default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
-    };
-    outline: BooleanConstructor;
-    intent: {
-        type: PropType<"default" | "neutral" | "positive" | "informative" | "negative" | undefined>;
-        default: "default" | "neutral" | "positive" | "informative" | "negative" | undefined;
-    };
+    intent: BooleanConstructor;
     primary: {
         type: BooleanConstructor;
         default: boolean | undefined;
     };
     secondary: BooleanConstructor;
+    outline: BooleanConstructor;
     ghost: BooleanConstructor;
-    palette: PropType<"indigo" | "teal" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | undefined>;
+    size: {
+        type: PropType<"sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined>;
+        default: "sm" | "x" | "md" | "lg" | "xl" | "xs" | undefined;
+    };
+    palette: PropType<"indigo" | "teal" | "neutral" | "carmine" | "iris" | "redfish" | "goldenrod" | "asparagus" | "slate" | "gray" | "alpha" | "pistachio" | "mint" | "jade" | "celestial" | "orchid" | "cerise" | "informative" | "positive" | "negative" | undefined>;
     tag: {
         type: PropType<string | undefined>;
         default: string | undefined;

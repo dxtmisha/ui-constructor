@@ -74,6 +74,77 @@
               "dark": "300"
             }
           }
+        },
+        "intent": {
+          "informative": {
+            "0": "{ot.light.semantic.color.iris.0}",
+            "20": "{ot.light.semantic.color.iris.20}",
+            "40": "{ot.light.semantic.color.iris.40}",
+            "60": "{ot.light.semantic.color.iris.60}",
+            "80": "{ot.light.semantic.color.iris.80}",
+            "100": "{ot.light.semantic.color.iris.100}",
+            "200": "{ot.light.semantic.color.iris.200}",
+            "300": "{ot.light.semantic.color.iris.300}",
+            "400": "{ot.light.semantic.color.iris.400}",
+            "500": "{ot.light.semantic.color.iris.500}",
+            "600": "{ot.light.semantic.color.iris.600}",
+            "700": "{ot.light.semantic.color.iris.700}",
+            "800": "{ot.light.semantic.color.iris.800}",
+            "900": "{ot.light.semantic.color.iris.900}"
+          },
+          "positive": {
+            "0": "{ot.light.semantic.color.asparagus.0}",
+            "20": "{ot.light.semantic.color.asparagus.20}",
+            "40": "{ot.light.semantic.color.asparagus.40}",
+            "60": "{ot.light.semantic.color.asparagus.60}",
+            "80": "{ot.light.semantic.color.asparagus.80}",
+            "100": "{ot.light.semantic.color.asparagus.100}",
+            "200": "{ot.light.semantic.color.asparagus.200}",
+            "300": "{ot.light.semantic.color.asparagus.300}",
+            "400": "{ot.light.semantic.color.asparagus.400}",
+            "500": "{ot.light.semantic.color.asparagus.500}",
+            "600": "{ot.light.semantic.color.asparagus.600}",
+            "700": "{ot.light.semantic.color.asparagus.700}",
+            "800": "{ot.light.semantic.color.asparagus.800}",
+            "900": "{ot.light.semantic.color.asparagus.900}"
+          },
+          "negative": {
+            "0": "{ot.light.semantic.color.redfish.0}",
+            "20": "{ot.light.semantic.color.redfish.20}",
+            "40": "{ot.light.semantic.color.redfish.40}",
+            "60": "{ot.light.semantic.color.redfish.60}",
+            "80": "{ot.light.semantic.color.redfish.80}",
+            "100": "{ot.light.semantic.color.redfish.100}",
+            "200": "{ot.light.semantic.color.redfish.200}",
+            "300": "{ot.light.semantic.color.redfish.300}",
+            "400": "{ot.light.semantic.color.redfish.400}",
+            "500": "{ot.light.semantic.color.redfish.500}",
+            "600": "{ot.light.semantic.color.redfish.600}",
+            "700": "{ot.light.semantic.color.redfish.700}",
+            "800": "{ot.light.semantic.color.redfish.800}",
+            "900": "{ot.light.semantic.color.redfish.900}"
+          },
+          "neutral": {
+            "0": "{ot.light.semantic.color.alpha.slate.0}",
+            "20": "{ot.light.semantic.color.alpha.slate.20}",
+            "40": "{ot.light.semantic.color.alpha.slate.40}",
+            "60": "{ot.light.semantic.color.alpha.slate.60}",
+            "80": "{ot.light.semantic.color.alpha.slate.80}",
+            "100": "{ot.light.semantic.color.alpha.slate.100}",
+            "200": "{ot.light.semantic.color.alpha.slate.200}",
+            "300": "{ot.light.semantic.color.alpha.slate.300}",
+            "400": "{ot.light.semantic.color.alpha.slate.400}",
+            "500": "{ot.light.semantic.color.alpha.slate.500}",
+            "600": "{ot.light.semantic.color.alpha.slate.600}",
+            "700": "{ot.light.semantic.color.alpha.slate.700}",
+            "800": "{ot.light.semantic.color.alpha.slate.800}",
+            "900": "{ot.light.semantic.color.alpha.slate.900}"
+          },
+          "_category": "palette",
+          "_default": {
+            "basic": "300",
+            "dark": "300"
+          }
         }
       },
       "dark": {
@@ -95,6 +166,15 @@
               "basic": "300",
               "dark": "300"
             }
+          }
+        },
+        "intent": {
+          "link:color:intent": "{ot.light.intent}",
+          "_category": "palette",
+          "_theme": "dark",
+          "_default": {
+            "basic": "300",
+            "dark": "300"
           }
         }
       }

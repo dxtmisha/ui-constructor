@@ -1,4 +1,4 @@
-import { defineComponent as u, computed as a, openBlock as g, createBlock as h, resolveDynamicComponent as b, unref as B } from "vue";
+import { defineComponent as u, computed as i, openBlock as g, createBlock as h, resolveDynamicComponent as b, unref as B } from "vue";
 import { i as o } from "./inArray-BLmbg9f_.js";
 import { p as y, d as f, B as k } from "./props-CpUbgiGH.js";
 import { M2Icon as x } from "./M2Icon.js";
@@ -40,8 +40,8 @@ const n = {
   __name: "M2Button",
   props: { ..._ },
   emits: ["click"],
-  setup(r, { expose: l, emit: s }) {
-    const p = s, e = r, m = a(() => ({
+  setup(l, { expose: r, emit: s }) {
+    const p = s, e = l, m = i(() => ({
       main: {
         // :classes-values [!] System label / Системная метка
         "m2-button": !0,
@@ -55,13 +55,13 @@ const n = {
         "m2-button--contained": e.contained && !e.outlined && !e.text,
         "m2-button--outlined": e.outlined,
         "m2-button--text": e.text,
-        [`m2-palette--${e.palette}`]: o(n.palette, e.palette)
+        [`m2-palette m2-palette--${e.palette}`]: o(n.palette, e.palette)
         // :classes-values [!] System label / Системная метка
       }
-    })), c = a(() => ({
+    })), c = i(() => ({
       // :styles-values [!] System label / Системная метка
       // :styles-values [!] System label / Системная метка
-    })), i = new k(
+    })), a = new k(
       "m2.button",
       e,
       {
@@ -74,8 +74,8 @@ const n = {
         classes: m,
         styles: c
       }
-    ), d = i.render();
-    return l(i.expose()), (S, $) => (g(), h(b(B(d))));
+    ), d = a.render();
+    return r(a.expose()), (S, $) => (g(), h(b(B(d))));
   }
 }), G = w;
 export {

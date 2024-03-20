@@ -1,4 +1,4 @@
-class l {
+class s {
   /**
    * Checks if the id is a user’s file.<br>
    * Проверяет, является ли id файлом пользователя.
@@ -213,6 +213,12 @@ const h = "ui", y = "Ui", m = "library", f = [
     design: "c2",
     code: "c2-checkbox",
     path: "c2/Checkbox"
+  },
+  {
+    name: "C2Chip",
+    design: "c2",
+    code: "c2-chip",
+    path: "c2/Chip"
   },
   {
     name: "C2FieldMessage",
@@ -1831,6 +1837,76 @@ const h = "ui", y = "Ui", m = "library", f = [
     "ot-light-asemantic-color-cerise-700",
     "ot-light-asemantic-color-cerise-800",
     "ot-light-asemantic-color-cerise-900",
+    "ot-light-intent-informative-0",
+    "ot-light-intent-informative-20",
+    "ot-light-intent-informative-40",
+    "ot-light-intent-informative-60",
+    "ot-light-intent-informative-80",
+    "ot-light-intent-informative-100",
+    "ot-light-intent-informative-200",
+    "ot-light-intent-informative-300",
+    "ot-light-intent-informative-400",
+    "ot-light-intent-informative-500",
+    "ot-light-intent-informative-600",
+    "ot-light-intent-informative-700",
+    "ot-light-intent-informative-800",
+    "ot-light-intent-informative-900",
+    "ot-light-intent-positive-0",
+    "ot-light-intent-positive-20",
+    "ot-light-intent-positive-40",
+    "ot-light-intent-positive-60",
+    "ot-light-intent-positive-80",
+    "ot-light-intent-positive-100",
+    "ot-light-intent-positive-200",
+    "ot-light-intent-positive-300",
+    "ot-light-intent-positive-400",
+    "ot-light-intent-positive-500",
+    "ot-light-intent-positive-600",
+    "ot-light-intent-positive-700",
+    "ot-light-intent-positive-800",
+    "ot-light-intent-positive-900",
+    "ot-light-intent-negative-0",
+    "ot-light-intent-negative-20",
+    "ot-light-intent-negative-40",
+    "ot-light-intent-negative-60",
+    "ot-light-intent-negative-80",
+    "ot-light-intent-negative-100",
+    "ot-light-intent-negative-200",
+    "ot-light-intent-negative-300",
+    "ot-light-intent-negative-400",
+    "ot-light-intent-negative-500",
+    "ot-light-intent-negative-600",
+    "ot-light-intent-negative-700",
+    "ot-light-intent-negative-800",
+    "ot-light-intent-negative-900",
+    "ot-light-intent-neutral-0",
+    "ot-light-intent-neutral-0-opacity",
+    "ot-light-intent-neutral-20",
+    "ot-light-intent-neutral-20-opacity",
+    "ot-light-intent-neutral-40",
+    "ot-light-intent-neutral-40-opacity",
+    "ot-light-intent-neutral-60",
+    "ot-light-intent-neutral-60-opacity",
+    "ot-light-intent-neutral-80",
+    "ot-light-intent-neutral-80-opacity",
+    "ot-light-intent-neutral-100",
+    "ot-light-intent-neutral-100-opacity",
+    "ot-light-intent-neutral-200",
+    "ot-light-intent-neutral-200-opacity",
+    "ot-light-intent-neutral-300",
+    "ot-light-intent-neutral-300-opacity",
+    "ot-light-intent-neutral-400",
+    "ot-light-intent-neutral-400-opacity",
+    "ot-light-intent-neutral-500",
+    "ot-light-intent-neutral-500-opacity",
+    "ot-light-intent-neutral-600",
+    "ot-light-intent-neutral-600-opacity",
+    "ot-light-intent-neutral-700",
+    "ot-light-intent-neutral-700-opacity",
+    "ot-light-intent-neutral-800",
+    "ot-light-intent-neutral-800-opacity",
+    "ot-light-intent-neutral-900",
+    "ot-light-intent-neutral-900-opacity",
     "ot-dark-semantic-color-carmine-0",
     "ot-dark-semantic-color-carmine-20",
     "ot-dark-semantic-color-carmine-40",
@@ -2041,6 +2117,76 @@ const h = "ui", y = "Ui", m = "library", f = [
     "ot-dark-asemantic-color-cerise-700",
     "ot-dark-asemantic-color-cerise-800",
     "ot-dark-asemantic-color-cerise-900",
+    "ot-dark-intent-informative-0",
+    "ot-dark-intent-informative-20",
+    "ot-dark-intent-informative-40",
+    "ot-dark-intent-informative-60",
+    "ot-dark-intent-informative-80",
+    "ot-dark-intent-informative-100",
+    "ot-dark-intent-informative-200",
+    "ot-dark-intent-informative-300",
+    "ot-dark-intent-informative-400",
+    "ot-dark-intent-informative-500",
+    "ot-dark-intent-informative-600",
+    "ot-dark-intent-informative-700",
+    "ot-dark-intent-informative-800",
+    "ot-dark-intent-informative-900",
+    "ot-dark-intent-positive-0",
+    "ot-dark-intent-positive-20",
+    "ot-dark-intent-positive-40",
+    "ot-dark-intent-positive-60",
+    "ot-dark-intent-positive-80",
+    "ot-dark-intent-positive-100",
+    "ot-dark-intent-positive-200",
+    "ot-dark-intent-positive-300",
+    "ot-dark-intent-positive-400",
+    "ot-dark-intent-positive-500",
+    "ot-dark-intent-positive-600",
+    "ot-dark-intent-positive-700",
+    "ot-dark-intent-positive-800",
+    "ot-dark-intent-positive-900",
+    "ot-dark-intent-negative-0",
+    "ot-dark-intent-negative-20",
+    "ot-dark-intent-negative-40",
+    "ot-dark-intent-negative-60",
+    "ot-dark-intent-negative-80",
+    "ot-dark-intent-negative-100",
+    "ot-dark-intent-negative-200",
+    "ot-dark-intent-negative-300",
+    "ot-dark-intent-negative-400",
+    "ot-dark-intent-negative-500",
+    "ot-dark-intent-negative-600",
+    "ot-dark-intent-negative-700",
+    "ot-dark-intent-negative-800",
+    "ot-dark-intent-negative-900",
+    "ot-dark-intent-neutral-0",
+    "ot-dark-intent-neutral-0-opacity",
+    "ot-dark-intent-neutral-20",
+    "ot-dark-intent-neutral-20-opacity",
+    "ot-dark-intent-neutral-40",
+    "ot-dark-intent-neutral-40-opacity",
+    "ot-dark-intent-neutral-60",
+    "ot-dark-intent-neutral-60-opacity",
+    "ot-dark-intent-neutral-80",
+    "ot-dark-intent-neutral-80-opacity",
+    "ot-dark-intent-neutral-100",
+    "ot-dark-intent-neutral-100-opacity",
+    "ot-dark-intent-neutral-200",
+    "ot-dark-intent-neutral-200-opacity",
+    "ot-dark-intent-neutral-300",
+    "ot-dark-intent-neutral-300-opacity",
+    "ot-dark-intent-neutral-400",
+    "ot-dark-intent-neutral-400-opacity",
+    "ot-dark-intent-neutral-500",
+    "ot-dark-intent-neutral-500-opacity",
+    "ot-dark-intent-neutral-600",
+    "ot-dark-intent-neutral-600-opacity",
+    "ot-dark-intent-neutral-700",
+    "ot-dark-intent-neutral-700-opacity",
+    "ot-dark-intent-neutral-800",
+    "ot-dark-intent-neutral-800-opacity",
+    "ot-dark-intent-neutral-900",
+    "ot-dark-intent-neutral-900-opacity",
     "ot-dimension-0",
     "ot-dimension-6",
     "ot-dimension-12",
@@ -2761,7 +2907,7 @@ const h = "ui", y = "Ui", m = "library", f = [
   "translate-y": "translateY",
   scale: "scale",
   rotate: "rotate"
-}, s = {
+}, n = {
   name: h,
   nameFirst: y,
   library: m,
@@ -2796,14 +2942,14 @@ class c {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return l.isJs(this.id) && !!(this.isPath() || this.url);
+    return s.isJs(this.id) && !!(this.isPath() || this.url);
   }
   /**
    * Checks if there is a file with data for developers.<br>
    * Проверяет, есть ли файл с данными для разработчиков.
    */
   isPath() {
-    return !!(this.path && l.isDev(this.mode));
+    return !!(this.path && s.isDev(this.mode));
   }
   /**
    * Returns the path for connecting files.<br>
@@ -2820,7 +2966,7 @@ class c {
    */
   importApi(t) {
     const e = `dev${this.className}User`, a = [
-      `import { ${this.className} } from '${s.name}';`
+      `import { ${this.className} } from '${n.name}';`
     ];
     return this.path && this.isPath() && a.push(
       `import ${e} from '${this.getUrl(this.path)}';`,
@@ -2829,12 +2975,12 @@ class c {
 `);
   }
 }
-class S extends c {
+class v extends c {
   constructor() {
     super(...arguments), this.className = "Translate", this.methodAdd = "addSync";
   }
 }
-class v {
+class S {
   /**
    * Constructor
    * @param id file identification /<br>идентификация файла
@@ -2853,7 +2999,7 @@ class v {
   init() {
     if (this.is()) {
       const t = [
-        `import { ${this.getImports().join(", ")} } from '${s.name}/media';`
+        `import { ${this.getImports().join(", ")} } from '${n.name}/media';`
       ];
       return (this.flag ?? !0) && t.push(`${this.getNameFlag()}();`), (this.icon ?? !0) && t.push(`${this.getNameIcon()}();`), t.push(
         "",
@@ -2868,21 +3014,21 @@ class v {
    * Проверяет, подходят ли условия для работы с этим файлом.
    */
   is() {
-    return l.isJs(this.id) && !!(this.icon || this.flag);
+    return s.isJs(this.id) && !!(this.icon || this.flag);
   }
   /**
    * Returns the name of the flag function.<br>
    * Возвращает название функции флага.
    */
   getNameFlag() {
-    return `make${s.nameFirst}Flags`;
+    return `make${n.nameFirst}Flags`;
   }
   /**
    * Returns the name of the icon function.<br>
    * Возвращает название функции иконки.
    */
   getNameIcon() {
-    return `make${s.nameFirst}Icons`;
+    return `make${n.nameFirst}Icons`;
   }
   /**
    * Returns data for connecting data.<br>
@@ -2893,7 +3039,7 @@ class v {
     return this.flag && t.push(this.getNameFlag()), this.icon && t.push(this.getNameIcon()), t;
   }
 }
-const p = `(?<=<|'|"\\s)(${s.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
+const p = `(?<=<|'|"\\s)(${n.designs.join("|")})([A-Z0-9-])([^ >'"\\(\\r\\n]+)`, z = new RegExp(p, "i"), w = new RegExp(p, "ig");
 class C {
   /**
    * Constructor
@@ -2928,7 +3074,7 @@ class C {
    * Проверяет, подходит ли файл для преобразования.
    */
   is() {
-    return l.isVue(this.id) && !!this.code.match(z);
+    return s.isVue(this.id) && !!this.code.match(z);
   }
   /**
    * Checks if the component was connected.<br>
@@ -2936,7 +3082,7 @@ class C {
    * @param item data on the component /<br>данные по компоненту
    */
   isImport(t) {
-    return !!this.code.match(new RegExp(`from ?['"]${s.name}\\/(${t.name}|${t.code})['"]`, "i"));
+    return !!this.code.match(new RegExp(`from ?['"]${n.name}\\/(${t.name}|${t.code})['"]`, "i"));
   }
   /**
    * Checks if there is a script element.<br>
@@ -2965,7 +3111,7 @@ class C {
    * @param name component name /<br>название компонента
    */
   findComponent(t) {
-    return s.components.find(
+    return n.components.find(
       (e) => e.name === t || e.code === t
     );
   }
@@ -2977,7 +3123,7 @@ class C {
    */
   importComponent(t, e) {
     return t.replace(/(<script[^>]*>)/, `$1\r
-import {${e.name}} from'${s.name}/${e.name}';`);
+import {${e.name}} from'${n.name}/${e.name}';`);
   }
   /**
    * Checks if it is necessary to import files with styles.<br>
@@ -3026,7 +3172,7 @@ class H {
    * @param design design name /<br>название дизайна
    */
   getCode(t) {
-    return `import '${s.name}/${t}/style';`;
+    return `import '${n.name}/${t}/style';`;
   }
   /**
    * Adding a design to the list of connected ones.<br>
@@ -3042,7 +3188,7 @@ class H {
     }, this;
   }
 }
-const F = `// ${s.name}-none`, D = `// ${s.name}-mode-none`;
+const F = `// ${n.name}-none`, D = `// ${n.name}-mode-none`;
 class W {
   /**
    * Constructor
@@ -3051,7 +3197,7 @@ class W {
    * @param design design names /<br>названия дизайна
    */
   // eslint-disable-next-line no-useless-constructor
-  constructor(t, e, a = s.designMain) {
+  constructor(t, e, a = n.designMain) {
     this.id = t, this.code = e, this.design = a;
   }
   /**
@@ -3070,7 +3216,7 @@ class W {
    * Проверяет, нужно ли преобразовывать этот файл.
    */
   is() {
-    return l.isCss(this.id) && !this.code.match(F);
+    return s.isCss(this.id) && !this.code.match(F);
   }
   /**
    * Connects a list of tokens to work with values.<br>
@@ -3078,7 +3224,7 @@ class W {
    * @param code file content /<br>содержимое файла
    */
   importDesign(t) {
-    const e = `${s.name}/${this.design}/properties`;
+    const e = `${n.name}/${this.design}/properties`;
     return t.match(e) ? t : `@import '${e}';\r
 ${t}`;
   }
@@ -3097,7 +3243,7 @@ ${t}`;
    */
   initVars(t) {
     var a;
-    const e = (a = s.vars) == null ? void 0 : a[this.design];
+    const e = (a = n.vars) == null ? void 0 : a[this.design];
     return e && t.match(/var\([^)]+\)/) ? t.replace(new RegExp("(?<=var\\(--)([^,) ]+)(?=[,) ])", "ig"), (r) => e.indexOf(r) !== -1 ? `${this.design}-${r}` : r) : t;
   }
   /**
@@ -3106,12 +3252,12 @@ ${t}`;
    * @param code file content /<br>содержимое файла
    */
   initProperties(t) {
-    const e = s.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
+    const e = n.modificationProperties, a = new RegExp(`(?<=^\\s*)(${Object.keys(e).join("|")}):([^;\r
 ]+)(;*)(?![^\r
 ]*${D})`, "igm");
     return t.match(new RegExp(a, "im")) ? t.replace(a, (r, i, g, d) => {
-      const n = g.trim();
-      return `@include ${e == null ? void 0 : e[i.trim()]}(${n.match(/[()]/) ? `#{${n}}` : n})${d}`;
+      const l = g.trim();
+      return `@include ${e == null ? void 0 : e[i.trim()]}(${l.match(/[()]/) ? `#{${l}}` : l})${d}`;
     }) : t;
   }
 }
@@ -3125,11 +3271,11 @@ function j(o = {}) {
       return a = i.mode, !0;
     },
     transform(r, i) {
-      return e.value && l.isJs(i) && (console.log("code", r), r = new v(
+      return e.value && s.isJs(i) && (console.log("code", r), r = new S(
         i,
         r,
         o == null ? void 0 : o.flag
-      ).init(), r = new S(
+      ).init(), r = new v(
         i,
         r,
         a,

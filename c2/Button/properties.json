@@ -1,41 +1,10 @@
 {
   "main": "{d.button}",
-  "spacer": {
-    "padding": {
-      "_type": "var",
-      "_replace": {
-        "pattern": "^(.*?) (.*?)$",
-        "replace": "$2 * 2"
-      }
-    },
-    "_type": "var",
-    "_settingClone": true
-  },
-  "gap": {
-    "_type": "property",
-    "_var": true
-  },
   "padding": {
     "_type": "property"
   },
-  "padding-spacer": {
-    "width": "{??spacer.padding} + {??spacer.lineContainer.width} - ({??gap} * 2)"
-  },
-  "container": {
-    "content": {
-      "label": {
-        "padding": {
-          "_drag": "../../../../label",
-          "_dragSetting": {
-            "label": "{??label}"
-          }
-        },
-        "_drag": "../../.."
-      },
-      "_drag": "../.."
-    },
-    "_type": "none",
-    "_settingClone": true
+  "color": {
+    "_rename": "palette-color"
   },
   "icon": {
     "left": {
@@ -58,27 +27,6 @@
     "_remove": true,
     "_settingClone": true
   },
-  "size": {
-    "_default": "md"
-  },
-  "outline": {
-    "background-color": {
-      "_rename": "background-color"
-    },
-    "border-width": {
-      "_type": "var"
-    },
-    "border-style": {
-      "_type": "var"
-    },
-    "before": {
-      "position": "absolute",
-      "inset": "0px",
-      "border-radius": "inherit",
-      "border": "{??borderWidth} {??borderStyle}",
-      "border-color": "inherit"
-    }
-  },
   "link": {
     "container": {
       "content": {
@@ -99,7 +47,36 @@
   "primary": {
     "color": {
       "_rename": "color"
+    },
+    "background-color": {
+      "_rename": "palette-background"
     }
+  },
+  "secondary": {
+    "background-color": {
+      "_rename": "palette-background"
+    }
+  },
+  "outline": {
+    "border-style": {
+      "_type": "var"
+    },
+    "border-width": {
+      "_type": "var"
+    },
+    "border-color": {
+      "_rename": "palette-border"
+    },
+    "before": {
+      "position": "absolute",
+      "inset": "0px",
+      "border-radius": "inherit",
+      "border": "{??borderWidth} {??borderStyle}",
+      "border-color": "inherit"
+    }
+  },
+  "ghost": {
+
   },
   "@@palette": "{palette}"
 }
