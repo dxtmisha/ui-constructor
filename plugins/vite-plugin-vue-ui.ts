@@ -66,6 +66,8 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
           options?.apiUrl
         ).init()
 
+        console.log('code', code)
+
         first.value = false
       }
 
@@ -75,6 +77,8 @@ export default function uiVitePlugin (options: UiPluginsOptions = {}): vite.Plug
 
       if (options?.style !== false) {
         code = new PluginStyles(id, code, options?.style).init()
+
+        console.log('style', code)
       }
 
       return {

@@ -1,0 +1,1 @@
+var s=(e=>(e.text="text",e.boolean="boolean",e.number="number",e.select="select",e.object="object",e))(s||{}),n=(e=>(e.event="Events",e.icon="Icons",e.option="Options",e.status="Status",e.style="Styles",e.token="Tokens",e.value="Values",e))(n||{});export{s as S,n as a};

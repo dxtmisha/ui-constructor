@@ -1,0 +1,1 @@
+function r(t){return t instanceof Function||typeof t=="function"}function o(t){return r(t)?t():t}function n(t){return t===window}function e(t){if(n(t))return document.body;if(typeof t=="string")try{return document.querySelector(t)??void 0}catch{return}return t}export{o as i,n as o,e as r};

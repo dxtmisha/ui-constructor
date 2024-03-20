@@ -1,0 +1,1 @@
+import{f as u}from"./DesignConstructorAbstract-pm1V7i1G-DKYGky5W.js";function i(n,o={},p="value"){const r=typeof o=="string",e=r?o:p,f=r?{}:o;return n?n&&u(n)&&e in n?{...f,...n}:{...f,[e]:n}:{}}export{i as e};
